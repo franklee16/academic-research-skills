@@ -1,0 +1,19 @@
+{
+  "name": "商务汇报",
+  "name_en": "Business Report",
+  "description": "适合产品介绍、项目汇报的现代商务模板",
+  "description_en": "Modern business template for product demos and reports",
+  "category": "business",
+  "pages": [
+    {"type": "title", "name": "封面", "name_en": "Title Page", "required": true},
+    {"type": "agenda", "name": "议程", "name_en": "Agenda", "required": true},
+    {"type": "content", "name": "内容页", "name_en": "Content", "required": true},
+    {"type": "chart", "name": "数据展示页", "name_en": "Data Visualization", "required": false},
+    {"type": "final", "name": "结束页", "name_en": "Closing", "required": true}
+  ],
+  "default_theme": "metropolis",
+  "default_color_theme": "default",
+  "aspect_ratio": "169",
+  "font_size": "12pt",
+  "recommended_for": ["产品发布", "项目汇报", "商业路演"]
+}

@@ -1,0 +1,26 @@
+% Layout: Comparison Table (Special)
+% Description: Side-by-side comparison of multiple options - perfect for feature comparison, pros/cons analysis, or option evaluation
+% Placeholders: {{TITLE}}, {{HEADERS}}, {{ROWS}}
+% Note: Adjust column count in tabular based on your needs
+
+\begin{frame}{{{TITLE}}}
+    \begin{table}
+        \centering
+        \renewcommand{\arraystretch}{1.3}
+        \begin{tabular}{lccc}
+            \toprule
+            {{HEADERS}}
+            \midrule
+            {{ROWS}}
+            \bottomrule
+        \end{tabular}
+    \end{table}
+\end{frame}
+
+% Example HEADERS:
+% \textbf{特性} & \textbf{方案A} & \textbf{方案B} & \textbf{方案C} \\
+
+% Example ROWS:
+% 成本 & 低 & 中 & 高 \\
+% 性能 & 一般 & 良好 & 优秀 \\
+% 易用性 & 优秀 & 良好 & 一般 \\

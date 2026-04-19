@@ -1,0 +1,266 @@
+% Course Lecture Template Sample
+% 课程讲座模板样板
+% 适用于：大学课程、企业培训、在线教学、技术分享
+
+\documentclass[aspectratio=43,12pt]{beamer}
+
+% ========== 基础包 ==========
+\usepackage[fontset=fandol,space=true,scheme=plain]{ctex}
+\usetheme{Madrid}
+\usecolortheme{crane}
+
+% ========== 额外包 ==========
+\usepackage{graphicx}
+\usepackage{amsmath,amssymb}
+\usepackage{tikz}
+\usetikzlibrary{shapes,arrows,positioning}
+\usepackage{listings}
+\usepackage{xcolor}
+
+% ========== 代码高亮设置 ==========
+\lstset{
+    language=Python,
+    basicstyle=\ttfamily\small,
+    keywordstyle=\color{blue},
+    commentstyle=\color{green!60!black},
+    stringstyle=\color{red},
+    numbers=left,
+    numberstyle=\tiny\color{gray},
+    frame=single,
+    breaklines=true
+}
+
+% ========== 文档信息 ==========
+\title{\textbf{Python 编程基础}}
+\subtitle{第 1 课：变量与数据类型}
+\author{讲师姓名}
+\institute{XX大学计算机学院}
+\date{\today}
+
+% ========== 开始文档 ==========
+\begin{document}
+
+% ---------- 封面 ----------
+\begin{frame}
+    \titlepage
+\end{frame}
+
+% ---------- 课程概述 ----------
+\begin{frame}{课程概述}
+    本课程是 Python 编程的入门课程，共 12 课时。
+    
+    \vspace{0.5em}
+    \textbf{主要内容：}
+    \begin{itemize}
+        \item Python 基础语法
+        \item 数据类型与结构
+        \item 流程控制语句
+        \item 函数与模块
+        \item 文件操作与异常处理
+        \item 面向对象编程基础
+    \end{itemize}
+    
+    \vspace{0.5em}
+    \textbf{考核方式：}平时作业 40\% + 期末项目 60\%
+\end{frame}
+
+% ---------- 学习目标 ----------
+\begin{frame}{本节课学习目标}
+    学完本节课后，你将能够：
+    \begin{enumerate}
+        \item 理解什么是变量以及变量的作用
+        \item 掌握 Python 的基本数据类型（整数、浮点数、字符串、布尔值）
+        \item 学会正确的变量命名规则
+        \item 完成简单的输入输出操作
+    \end{enumerate}
+    
+    \vspace{1em}
+    \begin{block}{预计时长}
+        45 分钟讲解 + 15 分钟练习
+    \end{block}
+\end{frame}
+
+% ---------- 知识点：什么是变量 ----------
+\begin{frame}{什么是变量}
+    \begin{block}{定义}
+        变量是用于存储数据的容器。可以将变量想象成一个贴有标签的盒子，
+        盒子里装着数据，标签就是变量名。
+    \end{block}
+    
+    \vspace{1em}
+    \textbf{类比理解：}
+    \begin{itemize}
+        \item 变量名 = 标签（如"年龄"、"分数"）
+        \item 变量值 = 盒子里的内容（如 20、95.5）
+        \item 数据类型 = 盒子的类型（装数字的、装文字的）
+    \end{itemize}
+\end{frame}
+
+% ---------- 知识点：数据类型 ----------
+\begin{frame}{Python 的基本数据类型}
+    \begin{columns}[T]
+        \begin{column}{0.48\textwidth}
+            \textbf{数值类型}
+            \begin{itemize}
+                \item \texttt{int} - 整数\\
+                例：\texttt{age = 20}
+                \item \texttt{float} - 浮点数\\
+                例：\texttt{score = 95.5}
+                \item \texttt{complex} - 复数\\
+                例：\texttt{x = 3 + 4j}
+            \end{itemize}
+        \end{column}
+        \begin{column}{0.48\textwidth}
+            \textbf{其他类型}
+            \begin{itemize}
+                \item \texttt{str} - 字符串\\
+                例：\texttt{name = "张三"}
+                \item \texttt{bool} - 布尔值\\
+                例：\texttt{passed = True}
+                \item \texttt{None} - 空值\\
+                例：\texttt{result = None}
+            \end{itemize}
+        \end{column}
+    \end{columns}
+\end{frame}
+
+% ---------- 示例演示 ----------
+\begin{frame}[fragile]{示例：变量定义与使用}
+    \begin{lstlisting}
+# 定义变量
+name = "张三"       # 字符串
+age = 20           # 整数
+score = 95.5       # 浮点数
+is_student = True  # 布尔值
+
+# 查看变量类型
+print(type(name))   # <class 'str'>
+print(type(age))    # <class 'int'>
+print(type(score))  # <class 'float'>
+
+# 使用变量
+print(name, "的年龄是", age)
+print("成绩:", score)
+    \end{lstlisting}
+\end{frame}
+
+% ---------- 命名规则 ----------
+\begin{frame}{变量命名规则}
+    \begin{columns}[T]
+        \begin{column}{0.55\textwidth}
+            \textbf{必须遵守的规则：}
+            \begin{enumerate}
+                \item 只能包含字母、数字、下划线
+                \item 不能以数字开头
+                \item 不能是 Python 关键字
+                \item 区分大小写
+            \end{enumerate}
+            
+            \vspace{0.5em}
+            \textbf{建议遵守的规范：}
+            \begin{itemize}
+                \item 使用有意义的名称
+                \item 小写字母加下划线
+            \end{itemize}
+        \end{column}
+        \begin{column}{0.43\textwidth}
+            \begin{exampleblock}{命名示例}
+                \textcolor{green!60!black}{\cmark} \texttt{user\_name}\\
+                \textcolor{green!60!black}{\cmark} \texttt{score2024}\\
+                \textcolor{green!60!black}{\cmark} \texttt{\_temp}\\
+                \vspace{0.3em}
+                \textcolor{red}{\xmark} \texttt{2nd\_name}\\
+                \textcolor{red}{\xmark} \texttt{my-name}\\
+                \textcolor{red}{\xmark} \texttt{class}
+            \end{exampleblock}
+        \end{column}
+    \end{columns}
+\end{frame}
+
+% ---------- 课堂练习 ----------
+\begin{frame}{课堂练习}
+    \begin{exampleblock}{练习题}
+        请写出以下代码的输出结果：
+        \begin{lstlisting}
+x = 10
+y = 20
+print(x + y)
+print(x * y)
+        \end{lstlisting}
+    \end{exampleblock}
+    
+    \pause
+    \vspace{1em}
+    \textbf{答案：}
+    \begin{itemize}
+        \item \texttt{30} （10 + 20 的结果）
+        \item \texttt{200} （10 × 20 的结果）
+    \end{itemize}
+\end{frame}
+
+% ---------- 小结 ----------
+\begin{frame}{本节课小结}
+    \begin{columns}[T]
+        \begin{column}{0.31\textwidth}
+            \textbf{变量}
+            \begin{itemize}
+                \item 存储数据的容器
+                \item 变量名 + 变量值
+                \item 命名有规则
+            \end{itemize}
+        \end{column}
+        \begin{column}{0.31\textwidth}
+            \textbf{数据类型}
+            \begin{itemize}
+                \item int - 整数
+                \item float - 小数
+                \item str - 字符串
+                \item bool - 布尔值
+            \end{itemize}
+        \end{column}
+        \begin{column}{0.31\textwidth}
+            \textbf{输入输出}
+            \begin{itemize}
+                \item \texttt{print()} 输出
+                \item \texttt{input()} 输入
+                \item \texttt{type()} 查类型
+            \end{itemize}
+        \end{column}
+    \end{columns}
+\end{frame}
+
+% ---------- 作业布置 ----------
+\begin{frame}{课后作业}
+    \textbf{必做题：}
+    \begin{enumerate}
+        \item 定义三个变量分别存储你的姓名、年龄和爱好，并打印出来
+        \item 编写程序计算圆的面积（半径 5）
+        \item 指出以下变量名的正误：\texttt{my-var}、\texttt{\_name}、\texttt{2nd}
+    \end{enumerate}
+    
+    \vspace{1em}
+    \textbf{选做题：}
+    \begin{itemize}
+        \item 探索 Python 的其他数据类型（list、dict、tuple）
+        \item 尝试使用 \texttt{input()} 实现交互式程序
+    \end{itemize}
+    
+    \vspace{0.5em}
+    \textbf{提交截止时间：}下周上课前
+\end{frame}
+
+% ---------- 结束页 ----------
+\begin{frame}
+    \centering
+    \Huge{\textbf{谢谢！}}
+    
+    \vspace{2em}
+    \large{Q \& A}
+    
+    \vspace{1em}
+    \normalsize
+    如有问题，请联系：\\
+    \texttt{teacher@university.edu.cn}
+\end{frame}
+
+\end{document}

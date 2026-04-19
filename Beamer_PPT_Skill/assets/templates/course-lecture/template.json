@@ -1,0 +1,22 @@
+{
+  "name": "课程讲座",
+  "name_en": "Course Lecture",
+  "description": "适合教学课件、培训课程的模板，支持逐步展示和互动环节",
+  "description_en": "Template for educational courses and training with progressive disclosure and interactive elements",
+  "category": "education",
+  "pages": [
+    {"type": "title", "name": "封面", "name_en": "Title Page", "required": true},
+    {"type": "overview", "name": "课程概述", "name_en": "Course Overview", "required": true},
+    {"type": "objective", "name": "学习目标", "name_en": "Learning Objectives", "required": true},
+    {"type": "content", "name": "知识点讲解", "name_en": "Content Explanation", "required": true},
+    {"type": "example", "name": "示例演示", "name_en": "Example Demo", "required": false},
+    {"type": "exercise", "name": "课堂练习", "name_en": "Exercise", "required": false},
+    {"type": "summary", "name": "小结", "name_en": "Summary", "required": true},
+    {"type": "final", "name": "结束页", "name_en": "Closing", "required": true}
+  ],
+  "default_theme": "Madrid",
+  "default_color_theme": "crane",
+  "aspect_ratio": "43",
+  "font_size": "12pt",
+  "recommended_for": ["大学课程", "企业培训", "在线教学", "技术分享"]
+}

@@ -1,0 +1,24 @@
+% Layout: Timeline (Special)
+% Description: Horizontal timeline showing chronological progression - ideal for milestones, project phases, or historical development
+% Placeholders: {{TITLE}}, {{TIMELINE_ITEMS}}
+% Note: TIMELINE_ITEMS should be formatted as: \item[YEAR] Description
+
+\begin{frame}{{{TITLE}}}
+    \begin{tikzpicture}[
+        node distance=2.5cm,
+        milestone/.style={circle,fill=primary!80,minimum size=0.8cm,inner sep=0pt,text=white,font=\small\bfseries},
+        label/.style={text width=2.2cm,align=center,font=\small},
+        desc/.style={text width=2.2cm,align=left,font=\footnotesize}
+    ]
+        % Timeline line
+        \draw[thick,->,primary!60] (0,0) -- (11,0);
+        
+        % Timeline items will be placed here
+        {{TIMELINE_ITEMS}}
+    \end{tikzpicture}
+\end{frame}
+
+% Example usage for TIMELINE_ITEMS:
+% \node[milestone] at (1,0) {2020};
+% \node[label,above=0.5cm of {(1,0)}] {启动};
+% \node[desc,below=0.5cm of {(1,0)}] {项目立项\\团队组建};

@@ -1,0 +1,15 @@
+% Layout: Full Image (Special)
+% Description: Full-screen image slide for impact - perfect for title transitions, dramatic reveals, or showcasing a single visual
+% Placeholders: {{IMAGE}}, {{OVERLAY_TEXT}} (optional), {{OVERLAY_POSITION}} (top/bottom/center)
+
+\begin{frame}[plain]
+    \begin{tikzpicture}[remember picture,overlay]
+        % Full-screen image
+        \node at (current page.center) {
+            \includegraphics[width=\paperwidth,height=\paperheight,keepaspectratio]{{{{IMAGE}}}}
+        };
+        
+        % Optional overlay text
+        {{OVERLAY_TEXT}}
+    \end{tikzpicture}
+\end{frame}

@@ -1,0 +1,19 @@
+% ============================================
+% Layout: Two Column - Image Left
+% Description: Left image (45%), right text
+% Placeholders:
+%   {{TITLE}}       - Frame title
+%   {{IMAGE_PATH}}  - Path to image file
+%   {{IMAGE_WIDTH}} - Image width (default: 0.45\textwidth)
+%   {{TEXT}}        - Text content (can include itemize, etc.)
+% ============================================
+
+\begin{frame}{{{TITLE}}}
+\begin{columns}[T]
+\column{0.5\textwidth}
+\includegraphics[width={{IMAGE_WIDTH}}]{{{IMAGE_PATH}}}
+
+\column{0.5\textwidth}
+{{TEXT}}
+\end{columns}
+\end{frame}

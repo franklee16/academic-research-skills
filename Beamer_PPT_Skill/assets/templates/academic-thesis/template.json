@@ -1,0 +1,19 @@
+{
+  "name": "学术论文答辩",
+  "name_en": "Academic Thesis Defense",
+  "description": "适合硕士/博士论文答辩的正式学术模板",
+  "description_en": "Formal academic template for thesis defense",
+  "category": "academic",
+  "pages": [
+    {"type": "title", "name": "封面", "name_en": "Title Page", "required": true},
+    {"type": "toc", "name": "目录", "name_en": "Outline", "required": true},
+    {"type": "section", "name": "章节分隔页", "name_en": "Section Divider", "required": false},
+    {"type": "content", "name": "内容页", "name_en": "Content", "required": true},
+    {"type": "final", "name": "致谢", "name_en": "Acknowledgments", "required": true}
+  ],
+  "default_theme": "metropolis",
+  "default_color_theme": "seahorse",
+  "aspect_ratio": "169",
+  "font_size": "11pt",
+  "recommended_for": ["学位论文答辩", "开题报告", "学术报告"]
+}

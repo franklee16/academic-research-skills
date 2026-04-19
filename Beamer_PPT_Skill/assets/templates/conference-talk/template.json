@@ -1,0 +1,22 @@
+{
+  "name": "会议演讲",
+  "name_en": "Conference Talk",
+  "description": "适合学术会议、技术峰会的紧凑演讲模板，强调核心观点和数据可视化",
+  "description_en": "Compact presentation template for conferences and tech talks, emphasizing key points and data visualization",
+  "category": "conference",
+  "pages": [
+    {"type": "title", "name": "封面", "name_en": "Title Page", "required": true},
+    {"type": "intro", "name": "自我介绍", "name_en": "Introduction", "required": false},
+    {"type": "problem", "name": "问题背景", "name_en": "Problem Statement", "required": true},
+    {"type": "solution", "name": "解决方案", "name_en": "Solution", "required": true},
+    {"type": "demo", "name": "演示/案例", "name_en": "Demo/Case Study", "required": false},
+    {"type": "results", "name": "结果展示", "name_en": "Results", "required": true},
+    {"type": "impact", "name": "影响与价值", "name_en": "Impact & Value", "required": true},
+    {"type": "final", "name": "总结与致谢", "name_en": "Conclusion & Thanks", "required": true}
+  ],
+  "default_theme": "metropolis",
+  "default_color_theme": "default",
+  "aspect_ratio": "169",
+  "font_size": "11pt",
+  "recommended_for": ["学术会议", "技术峰会", "TED风格演讲", "闪电演讲"]
+}

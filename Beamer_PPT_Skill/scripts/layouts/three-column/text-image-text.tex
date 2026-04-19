@@ -1,0 +1,32 @@
+% Layout: Text-Image-Text (Three Column)
+% Description: Image in the center with text on both sides - excellent for showing a process where left explains input, center shows transformation, right explains output
+% Placeholders: {{TITLE}}, {{LEFT_TITLE}}, {{LEFT_CONTENT}}, {{IMAGE}}, {{IMAGE_CAPTION}}, {{RIGHT_TITLE}}, {{RIGHT_CONTENT}}
+
+\begin{frame}{{{TITLE}}}
+    \begin{columns}[T]
+        % Left Column - Text (30%)
+        \begin{column}{0.30\textwidth}
+            \textbf{{LEFT_TITLE}}
+            
+            \vspace{0.5em}
+            {{LEFT_CONTENT}}
+        \end{column}
+        
+        % Center Column - Image (38%)
+        \begin{column}{0.38\textwidth}
+            \centering
+            \includegraphics[width=\textwidth,height=0.6\textheight,keepaspectratio]{{{{IMAGE}}}}
+            
+            \vspace{0.3em}
+            {\small {{IMAGE_CAPTION}}}
+        \end{column}
+        
+        % Right Column - Text (30%)
+        \begin{column}{0.30\textwidth}
+            \textbf{{RIGHT_TITLE}}
+            
+            \vspace{0.5em}
+            {{RIGHT_CONTENT}}
+        \end{column}
+    \end{columns}
+\end{frame}

@@ -1,0 +1,62 @@
+# LaTeX compilation artifacts
+*.aux
+*.log
+*.out
+*.toc
+*.nav
+*.snm
+*.vrb
+*.fdb_latexmk
+*.fls
+*.synctex.gz
+*.bbl
+*.blg
+*.run.xml
+*.bcf
+*.acn
+*.acr
+*.alg
+*.glg
+*.glo
+*.gls
+*.ist
+*.lof
+*.lot
+
+# Compiled PDFs (uncomment if you want to ignore PDFs)
+# *.pdf
+
+# Beamer skill working files
+.beamer-skill/
+*.beamer-skill.json
+
+# Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# OS files
+Thumbs.db
+
+# Python cache (for helper scripts)
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+.pytest_cache/
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+
+# Preview images
+preview/*.png
+preview/*.jpg
+
+# Backup files
+*.bak
+*.backup

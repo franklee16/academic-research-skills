@@ -1,0 +1,31 @@
+% Layout: Three Text Blocks (Three Column)
+% Description: Three equal text columns - ideal for showing three parallel concepts, steps, or features
+% Placeholders: {{TITLE}}, {{LEFT_TITLE}}, {{LEFT_CONTENT}}, {{CENTER_TITLE}}, {{CENTER_CONTENT}}, {{RIGHT_TITLE}}, {{RIGHT_CONTENT}}
+
+\begin{frame}{{{TITLE}}}
+    \begin{columns}[T]
+        % Left Column
+        \begin{column}{0.31\textwidth}
+            \textbf{{LEFT_TITLE}}
+            
+            \vspace{0.5em}
+            {{LEFT_CONTENT}}
+        \end{column}
+        
+        % Center Column
+        \begin{column}{0.31\textwidth}
+            \textbf{{CENTER_TITLE}}
+            
+            \vspace{0.5em}
+            {{CENTER_CONTENT}}
+        \end{column}
+        
+        % Right Column
+        \begin{column}{0.31\textwidth}
+            \textbf{{RIGHT_TITLE}}
+            
+            \vspace{0.5em}
+            {{RIGHT_CONTENT}}
+        \end{column}
+    \end{columns}
+\end{frame}

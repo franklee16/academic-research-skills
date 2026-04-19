@@ -1,0 +1,30 @@
+% Layout: Image-Text-Image (Three Column)
+% Description: Two images on sides with text in the middle - perfect for comparing two visuals with a summary
+% Placeholders: {{TITLE}}, {{LEFT_IMAGE}}, {{LEFT_CAPTION}}, {{CENTER_TEXT}}, {{RIGHT_IMAGE}}, {{RIGHT_CAPTION}}
+
+\begin{frame}{{{TITLE}}}
+    \begin{columns}[T]
+        % Left Column - Image
+        \begin{column}{0.30\textwidth}
+            \centering
+            \includegraphics[width=\textwidth,height=0.55\textheight,keepaspectratio]{{{{LEFT_IMAGE}}}}
+            
+            \vspace{0.3em}
+            {\small {{LEFT_CAPTION}}}
+        \end{column}
+        
+        % Center Column - Text
+        \begin{column}{0.38\textwidth}
+            {{CENTER_TEXT}}
+        \end{column}
+        
+        % Right Column - Image
+        \begin{column}{0.30\textwidth}
+            \centering
+            \includegraphics[width=\textwidth,height=0.55\textheight,keepaspectratio]{{{{RIGHT_IMAGE}}}}
+            
+            \vspace{0.3em}
+            {\small {{RIGHT_CAPTION}}}
+        \end{column}
+    \end{columns}
+\end{frame}

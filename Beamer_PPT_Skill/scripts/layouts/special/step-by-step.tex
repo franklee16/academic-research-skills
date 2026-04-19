@@ -1,0 +1,33 @@
+% Layout: Step-by-Step (Special)
+% Description: Progressive disclosure of steps - perfect for algorithms, procedures, or sequential explanations with reveal animation
+% Placeholders: {{TITLE}}, {{STEPS}}
+% Note: Each step should include \pause or use \item<<+> for automatic progression
+
+\begin{frame}{{{TITLE}}}
+    \begin{enumerate}
+        {{STEPS}}
+    \end{enumerate}
+\end{frame}
+
+% Example STEPS with manual pauses:
+% \item 初始化参数和数据结构
+% \pause
+% \item 加载输入数据并进行预处理
+% \pause
+% \item 执行核心算法迭代
+% \pause
+% \item 验证结果并输出
+
+% Example STEPS with automatic progression using <+>:
+% \item<<+> 初始化参数和数据结构
+% \item<<+> 加载输入数据并进行预处理
+% \item<<+> 执行核心算法迭代
+% \item<<+> 验证结果并输出
+
+% Example with sub-steps:
+% \item<<+> 数据预处理
+%   \begin{itemize}
+%     \item<<.-> 清洗数据
+%     \item<<.-> 标准化格式
+%   \end{itemize}
+% \item<<+> 模型训练

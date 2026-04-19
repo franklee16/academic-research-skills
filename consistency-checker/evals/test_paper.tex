@@ -1,0 +1,113 @@
+\documentclass[12pt]{article}
+\usepackage[left=1.0in,right=1.0in,top=1.0in,bottom=1.0in]{geometry}
+
+\title{Test Paper for Consistency Checking}
+\author{Test Author}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+This paper tests the consistency checker. Our sample comprises 45,320 firm-year observations from 1990 to 2020.
+\end{abstract}
+
+\section{Introduction}
+\label{sec:intro}
+
+This paper examines the effect of paid sick leave on analyst coverage. As shown in Table \ref{tab:main_results}, the coefficient on PAID\_SICK\_LEAVE is 0.034 and significant at the 1\% level.
+
+We also find robust results in Table \ref{tab:robustness}. The results are consistent across different specifications.
+
+\section{Data}
+\label{sec:data}
+
+Our sample consists of 45,320 firm-year observations from Compustat. Table \ref{tab:descriptive} presents descriptive statistics.
+
+\begin{table}[htbp]
+\centering
+\caption{Main Results}
+\label{tab:main_results}
+\begin{tabular}{lcc}
+\hline
+Variable & (1) & (2) \\
+\hline
+PAID\_SICK\_LEAVE & 0.034** & 0.031* \\
+ & (0.015) & (0.016) \\
+SIZE & 0.021 & 0.019 \\
+ & (0.008) & (0.009) \\
+\hline
+N & 45,320 & 45,320 \\
+R$^2$ & 0.145 & 0.152 \\
+\hline
+\end{tabular}
+\begin{tablenotes}
+\small
+\item ** p<0.05, * p<0.10
+\end{tablenotes}
+\end{table}
+
+\begin{table}[htbp]
+\centering
+\caption{Descriptive Statistics}
+\label{tab:descriptive}
+\begin{tabular}{lccc}
+\hline
+Variable & Mean & Std Dev & N \\
+\hline
+PAID\_SICK\_LEAVE & 0.52 & 0.50 & 45,320 \\
+SIZE & 5.84 & 1.92 & 45,320 \\
+ROA & 0.04 & 0.12 & 45,320 \\
+\hline
+\end{tabular}
+\end{table}
+
+\section{Results}
+\label{sec:results}
+
+The main results in Table \ref{tab:main_results} show that PAID\_SICK\_LEAVE has a positive effect. The coefficient is 0.034 and significant at the 1\% level in Column 1.
+
+As discussed in Section \ref{sec:robustness}, our results are robust to alternative specifications. Figure \ref{fig:timeline} shows the event study results.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.8\textwidth]{timeline.pdf}
+\caption{Event Study Results}
+\label{fig:timeline}
+\end{figure}
+
+We also conduct robustness tests shown in Table \ref{tab:robustness}.
+
+\section{Conclusion}
+\label{sec:conclusion}
+
+This paper demonstrates the consistency checker. Future research could extend this analysis.
+
+\appendix
+
+\section{Additional Tables}
+\label{app:additional}
+
+Table \ref{tab:appendix_a} shows additional results.
+
+\begin{table}[htbp]
+\centering
+\caption{Appendix Results}
+\label{tab:appendix_a}
+\begin{tabular}{lc}
+\hline
+Variable & (1) \\
+\hline
+PAID\_SICK\_LEAVE & 0.028 \\
+ & (0.018) \\
+\hline
+N & 42,150 \\
+\hline
+\end{tabular}
+\end{table}
+
+\bibliographystyle{aer}
+\bibliography{references}
+
+\end{document}

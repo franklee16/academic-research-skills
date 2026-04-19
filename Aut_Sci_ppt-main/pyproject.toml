@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "aut-sci-ppt"
+version = "0.1.0"
+description = "Scientific PPT Generator with LaTeX rendering and academic semantic parsing."
+authors = [
+    {name = "ShuoClaw", email = "author@example.com"}
+]
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "python-pptx",
+    "matplotlib",
+    "requests",
+    "pillow",
+    "pypdf"
+]
+
+[project.scripts]
+aut-sci-ppt = "aut_sci_ppt.main:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["aut_sci_ppt*"]

@@ -1,0 +1,33 @@
+% Layout: Text-Text-Image (Three Column)
+% Description: Two text blocks on the left, image on the right - perfect for explaining context before showing the result
+% Placeholders: {{TITLE}}, {{TOP_TEXT_TITLE}}, {{TOP_TEXT_CONTENT}}, {{BOTTOM_TEXT_TITLE}}, {{BOTTOM_TEXT_CONTENT}}, {{IMAGE}}, {{IMAGE_CAPTION}}
+
+\begin{frame}{{{TITLE}}}
+    \begin{columns}[T]
+        % Left Side - Two Text Blocks (62%)
+        \begin{column}{0.62\textwidth}
+            % Top Text Block
+            \textbf{{TOP_TEXT_TITLE}}
+            
+            \vspace{0.3em}
+            {{TOP_TEXT_CONTENT}}
+            
+            \vspace{1em}
+            
+            % Bottom Text Block
+            \textbf{{BOTTOM_TEXT_TITLE}}
+            
+            \vspace{0.3em}
+            {{BOTTOM_TEXT_CONTENT}}
+        \end{column}
+        
+        % Right Column - Image (35%)
+        \begin{column}{0.35\textwidth}
+            \centering
+            \includegraphics[width=\textwidth,height=0.7\textheight,keepaspectratio]{{{{IMAGE}}}}
+            
+            \vspace{0.3em}
+            {\small {{IMAGE_CAPTION}}}
+        \end{column}
+    \end{columns}
+\end{frame}

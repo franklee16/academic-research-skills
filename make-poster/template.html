@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PAPER_TITLE - CONF_NAME Poster</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+<script crossorigin src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+<style>
+  /* ============================================================
+     CUSTOMIZE: Update colors to match the reference poster style
+     ============================================================ */
+  :root {
+    --blue: #2d7fc1; --blue-light: #e3f0fa;
+    --orange: #e8943a; --orange-light: #fdf0e0;
+    --teal: #2aaa8a; --purple: #7c5cbf; --red: #d94f4f;
+    --text: #222; --text-light: #555;
+    --bg: #f0ece6; --card-bg: #fff;
+    --gap: 3mm; --pad: 10mm;
+    --font-scale: 1.3;
+  }
+
+  /* ============================================================
+     CUSTOMIZE: Update poster dimensions (e.g. A1 landscape = 841mm 594mm)
+     ============================================================ */
+  @page { size: 841mm 594mm; margin: 0; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { font-family: 'Nunito', sans-serif; color: var(--text); -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  body { width: 841mm; height: 594mm; background: var(--bg); overflow: hidden; transform-origin: top left; }
+  #root { width: 100%; height: 100%; display: grid; grid-template-rows: auto 1fr; }
+  @media screen { html { background:#bbb; overflow:hidden; width:100vw; height:100vh; } body { position:absolute; box-shadow:0 4px 30px rgba(0,0,0,.3); border-radius:4px; } }
+  @media print { html { background:none; } body { position:static; transform:none!important; box-shadow:none; border-radius:0; } .toolbar,.divider,.swap-handle,.drop-zone{display:none!important;} }
+  body.preview .divider, body.preview .swap-handle, body.preview .drop-zone { display:none!important; }
+
+  /* === HEADER === */
+  .header { background: linear-gradient(135deg,#1b4f7a,#2d7fc1 50%,#45a0e0); padding:6mm var(--pad) 5mm; display:flex; align-items:center; gap:8mm; }
+  .header-left { flex:1; }
+  .header h1 { font-size:34pt; font-weight:900; line-height:1.1; color:#fff; margin-bottom:2mm; }
+  .header h1 .m { color:#ffd060; }
+  .header .authors { font-size:18pt; color:rgba(255,255,255,.9); font-weight:700; }
+  .header .authors sup { font-size:11pt; color:#ffd060; }
+  .header .aff { font-size:15pt; color:rgba(255,255,255,.7); margin-top:1.5mm; }
+  .header .aff sup { color:#ffd060; font-size:10pt; }
+  .header-logos { display:flex; align-items:center; justify-content:center; gap:10mm; flex-shrink:0; }
+  .header-logos img { height:28mm; object-fit:contain; filter:brightness(0) invert(1); opacity:.85; }
+  .header-right { display:flex; flex-direction:row; align-items:center; gap:6mm; }
+  .badge { font-size:16pt; font-weight:900; color:#fff; background:rgba(255,255,255,.2); border:2px solid rgba(255,255,255,.5); padding:1.5mm 6mm; border-radius:2mm; }
+  .header-right .qr img { width:24mm; height:24mm; border-radius:1.5mm; background:#fff; padding:.8mm; }
+  .header-right .ql { font-size:8pt; color:#ffd060; font-weight:800; text-align:center; }
+  .header-right .qr { text-align:center; }
+
+  /* === POSTER COLUMNS === */
+  .poster { display:flex; gap:var(--gap); padding:var(--gap) var(--pad); min-height:0; flex:1; overflow:hidden; }
+  .col { display:flex; flex-direction:column; gap:var(--gap); min-height:0; overflow:hidden; }
+
+  /* === CARD === */
+  .card { background:var(--card-bg); border-radius:2.5mm; padding:3mm 4mm; box-shadow:0 1px 3px rgba(0,0,0,.08); border-top:2.5px solid var(--blue); display:flex; flex-direction:column; overflow:hidden; min-height:0; flex:0 0 auto; position:relative; transition: outline .15s; }
+  .card.grow { flex:1 1 0; }
+  .card.orange { border-top-color:var(--orange); }
+  .card.teal   { border-top-color:var(--teal); }
+  .card.purple { border-top-color:var(--purple); }
+  .card.red    { border-top-color:var(--red); }
+
+  .card h2 { font-size:calc(11pt * var(--font-scale)); font-weight:800; margin-bottom:1.5mm; flex-shrink:0; color:var(--blue); }
+  .card.orange h2{color:var(--orange);} .card.teal h2{color:var(--teal);} .card.purple h2{color:var(--purple);} .card.red h2{color:var(--red);}
+  .card p,.card li { font-size:calc(9.5pt * var(--font-scale)); line-height:1.3; }
+  .card ul,.card ol { padding-left:5mm; flex-shrink:0; }
+  .card li { margin-bottom:.8mm; }
+  .card li::marker { font-weight:700; }
+
+  /* Highlight box */
+  .hl { background:var(--blue-light); border-left:2.5px solid var(--blue); padding:2.5mm 3.5mm; border-radius:0 1.5mm 1.5mm 0; margin-bottom:1.5mm; flex-shrink:0; }
+  .hl p { font-size:calc(9.5pt * var(--font-scale)); line-height:1.35; font-weight:600; }
+
+  /* Figure — MUST use width/height 100% + object-fit:contain for zero whitespace */
+  .fig { flex:1; display:flex; flex-direction:column; min-height:0; margin:1mm 0; }
+  .fig-wrap { flex:1; display:flex; align-items:center; justify-content:center; min-height:0; overflow:hidden; }
+  .fig-wrap img { width:100%; height:100%; object-fit:contain; border-radius:1.5mm; display:block; }
+  .fig .cap { font-size:calc(7.5pt * var(--font-scale)); color:var(--text-light); margin-top:.8mm; line-height:1.2; flex-shrink:0; }
+  .fig .cap b { color:var(--text); }
+
+  /* Tables */
+  table { width:100%; border-collapse:collapse; font-size:calc(9pt * var(--font-scale)); margin:1.5mm 0; }
+  thead th { background:var(--blue); color:#fff; padding:1.5mm 2.5mm; text-align:left; font-weight:700; font-size:calc(8.5pt * var(--font-scale)); }
+  tbody td { padding:1.2mm 2.5mm; border-bottom:1px solid #eee; }
+  tbody tr:nth-child(even) { background:#f8f9fb; }
+  .best { font-weight:800; color:var(--orange); }
+
+  /* Math */
+  .katex { font-size:calc(10pt * var(--font-scale))!important; }
+  .eq { background:var(--orange-light); border:1px solid var(--orange); border-radius:1.5mm; padding:1.5mm 2.5mm; margin:1.5mm 0; text-align:center; flex-shrink:0; }
+
+  /* Links */
+  .links { display:flex; align-items:center; gap:3mm; background:var(--blue-light); padding:2.5mm 3.5mm; border-radius:1.5mm; margin-top:2mm; flex-shrink:0; }
+  .links .ll { font-size:calc(8.5pt * var(--font-scale)); line-height:1.5; }
+  .links .ll b { color:var(--blue); }
+
+  /* === TOOLBAR === */
+  .toolbar { position:fixed; top:8px; right:8px; z-index:1000; display:flex; gap:6px; align-items:center; }
+  .toolbar button { font-family:'Nunito'; font-size:11px; font-weight:700; padding:5px 12px; border-radius:6px; border:none; cursor:pointer; background:#eee; color:#555; }
+  .toolbar button:hover { background:#ddd; }
+
+  /* Swap handles */
+  .card .swap-handle { position:absolute; top:1.5mm; right:1.5mm; width:8mm; height:8mm; background:var(--blue); color:#fff; border-radius:1.5mm; font-size:9pt; text-align:center; line-height:8mm; cursor:pointer; z-index:10; user-select:none; opacity:.4; transition: opacity .15s, background .15s, transform .15s; }
+  .card .swap-handle:hover { opacity:.8; transform:scale(1.15); }
+  .card.swap-selected { outline:3px solid var(--orange); outline-offset:-1px; }
+  .card.swap-selected .swap-handle { background:var(--orange); opacity:1; transform:scale(1.2); }
+
+  /* Dividers (same style for column and row) */
+  .divider { position:relative; z-index:50; flex-shrink:0; }
+  .divider::after { content:''; position:absolute; background:rgba(45,127,193,.12); border-radius:1.5mm; transition:background .15s; }
+  .divider:hover::after, .divider.active::after { background:rgba(45,127,193,.5); }
+  .col-resize { width:6mm; cursor:col-resize; margin:0 -3mm; }
+  .col-resize::after { top:0; bottom:0; left:1.5mm; width:3mm; }
+  .row-resize { height:6mm; cursor:row-resize; margin:-3mm 0; }
+  .row-resize::after { left:0; right:0; top:1.5mm; height:3mm; }
+
+  /* Drop zones */
+  .drop-zone { height:0; position:relative; z-index:60; transition: height .15s; }
+  .drop-zone.visible { height:5mm; }
+  .drop-zone-inner { position:absolute; left:2mm; right:2mm; top:0; bottom:0; border-radius:1.5mm; background:rgba(232,148,58,.15); border:2px dashed var(--orange); transition: background .15s; cursor:pointer; }
+  .drop-zone-inner:hover { background:rgba(232,148,58,.35); }
+</style>
+</head>
+<body>
+<div id="root"></div>
+
+<script type="text/babel">
+const { useState, useRef, useEffect, useCallback } = React;
+const MM = 3.7795275591;
+/* CUSTOMIZE: poster dimensions in mm */
+const POSTER_W_MM = 841;
+const POSTER_H_MM = 594;
+
+/* ================================================================
+   CUSTOMIZE: Card content — one entry per poster section
+   Each card has: title, color (null|'orange'|'teal'|'purple'|'red'),
+   grow (true = fills remaining column space), body (JSX)
+   ================================================================ */
+const CARD_REGISTRY = {
+  tldr: {
+    title: 'TL;DR',
+    color: null,
+    grow: false,
+    body: (
+      <>
+        <div className="hl"><p>FILL_IN: One-sentence summary of the paper.</p></div>
+        <ul>
+          <li><b>Contribution 1</b></li>
+          <li><b>Contribution 2</b></li>
+          <li><b>Contribution 3</b></li>
+        </ul>
+      </>
+    ),
+  },
+  method: {
+    title: 'Method',
+    color: 'teal',
+    grow: true,
+    body: (
+      <>
+        <div className="fig"><div className="fig-wrap"><img src="architecture.png" alt="Method" /></div></div>
+        <ul>
+          <li>FILL_IN: Method detail 1</li>
+          <li>FILL_IN: Method detail 2</li>
+        </ul>
+        <div className="eq">{'$FILL\\_IN: key\\_equation$'}</div>
+      </>
+    ),
+  },
+  results: {
+    title: 'Results',
+    color: 'purple',
+    grow: true,
+    body: (
+      <div className="fig"><div className="fig-wrap"><img src="results.png" alt="Results" /></div>
+      <div className="cap"><b>FILL_IN:</b> Caption describing the results figure.</div></div>
+    ),
+  },
+  quant: {
+    title: 'Quantitative Results',
+    color: 'orange',
+    grow: false,
+    body: (
+      <table>
+        <thead><tr><th>Method</th><th>Metric 1</th><th>Metric 2</th></tr></thead>
+        <tbody>
+          <tr><td>Baseline</td><td>0.00</td><td>0.00</td></tr>
+          <tr><td><b>Ours</b></td><td className="best">0.00</td><td className="best">0.00</td></tr>
+        </tbody>
+      </table>
+    ),
+  },
+  concl: {
+    title: 'Conclusion & Links',
+    color: 'red',
+    grow: false,
+    body: (
+      <>
+        <ul>
+          <li>FILL_IN: Takeaway 1</li>
+          <li>FILL_IN: Takeaway 2</li>
+        </ul>
+        <div className="links">
+          <div className="ll"><b>Project:</b> FILL_IN<br /><b>Code:</b> FILL_IN</div>
+        </div>
+      </>
+    ),
+  },
+};
+
+/* ================================================================
+   CUSTOMIZE: Default layout — column widths and card ordering
+   Assign cards to columns based on image aspect ratios:
+   - Wide images (>2:1) → widest column
+   - Square images (~1:1) → narrow columns
+   - Portrait images (<1:1) → narrowest column
+   Set widthMm to null for the flexible (center) column.
+   ================================================================ */
+const DEFAULT_LAYOUT = {
+  columns: [
+    { id: 'col1', widthMm: 280, cards: ['tldr', 'method'] },
+    { id: 'col2', widthMm: null, cards: ['results'] },
+    { id: 'col3', widthMm: 220, cards: ['quant', 'concl'] },
+  ],
+};
+const DEFAULT_CARD_HEIGHTS = {};
+const DEFAULT_FONT_SCALE = 1.3;
+
+/* CUSTOMIZE: Logos — save files to poster/logos/ */
+const DEFAULT_LOGOS = [
+  /* { src: 'logos/institution.png', alt: 'Institution', heightMm: 28 }, */
+];
+
+/* ================================================================
+   FRAMEWORK CODE — generally don't need to modify below this line
+   ================================================================ */
+
+function cloneLayout(layout) {
+  return { columns: layout.columns.map(c => ({ id: c.id, widthMm: c.widthMm, cards: [...c.cards] })) };
+}
+
+const LS_KEY = 'posterConfig';
+function getFullConfig(layout, cardHeights, fontScale, logos) {
+  return { columns: layout.columns, cardHeights, fontScale, logos };
+}
+function loadInitialConfig() {
+  try { const s = localStorage.getItem(LS_KEY); if (s) return JSON.parse(s); } catch(e) {}
+  return null;
+}
+const INIT_CONFIG = loadInitialConfig();
+
+function PosterApp() {
+  const [layout, setLayout] = useState(INIT_CONFIG ? cloneLayout({columns: INIT_CONFIG.columns}) : cloneLayout(DEFAULT_LAYOUT));
+  const [selectedCard, setSelectedCard] = useState(null);
+  const [cardHeights, setCardHeights] = useState(INIT_CONFIG?.cardHeights || {...DEFAULT_CARD_HEIGHTS});
+  const [preview, setPreview] = useState(false);
+  const [logos, setLogos] = useState(INIT_CONFIG?.logos || DEFAULT_LOGOS);
+  const [fontScale, setFontScaleState] = useState(INIT_CONFIG?.fontScale || DEFAULT_FONT_SCALE);
+  const currentScaleRef = useRef(1);
+  const posterRef = useRef(null);
+
+  useEffect(() => { const cfg = getFullConfig(layout, cardHeights, fontScale, logos); localStorage.setItem(LS_KEY, JSON.stringify(cfg)); }, [layout, cardHeights, fontScale, logos]);
+  useEffect(() => { document.documentElement.style.setProperty('--font-scale', fontScale); }, [fontScale]);
+  useEffect(() => { document.body.classList.toggle('preview', preview); }, [preview]);
+
+  const fit = useCallback(() => {
+    if (window.matchMedia('print').matches) return;
+    const pW = POSTER_W_MM * MM, pH = POSTER_H_MM * MM;
+    const scale = Math.min(window.innerWidth / pW, window.innerHeight / pH);
+    currentScaleRef.current = scale;
+    const left = (window.innerWidth - pW * scale) / 2;
+    const top = (window.innerHeight - pH * scale) / 2;
+    document.body.style.transform = 'translate(' + left + 'px,' + top + 'px) scale(' + scale + ')';
+  }, []);
+  useEffect(() => { fit(); window.addEventListener('resize', fit); return () => window.removeEventListener('resize', fit); }, [fit]);
+
+  useEffect(() => { if (typeof renderMathInElement === 'function') renderMathInElement(document.body, {delimiters: [{left:'$$',right:'$$',display:true},{left:'$',right:'$',display:false}]}); });
+
+  useEffect(() => {
+    function handler(e) { if (selectedCard && !e.target.closest('.swap-handle') && !e.target.closest('.drop-zone')) setSelectedCard(null); }
+    document.addEventListener('click', handler); return () => document.removeEventListener('click', handler);
+  }, [selectedCard]);
+
+  function swapCards(id1, id2) {
+    if (id1 === id2) return false;
+    setLayout(prev => { const next = cloneLayout(prev); let l1, l2; for (const c of next.columns) { const i1 = c.cards.indexOf(id1); if (i1!==-1) l1={col:c,idx:i1}; const i2 = c.cards.indexOf(id2); if (i2!==-1) l2={col:c,idx:i2}; } if (!l1||!l2) return prev; l1.col.cards[l1.idx]=id2; l2.col.cards[l2.idx]=id1; return next; });
+    setCardHeights(prev => { const n={...prev}; delete n[id1]; delete n[id2]; return n; });
+    return true;
+  }
+  function moveCard(cardId, targetColId, position) {
+    setLayout(prev => { const next = cloneLayout(prev); for (const c of next.columns) { const i = c.cards.indexOf(cardId); if (i!==-1) { c.cards.splice(i,1); break; } } const tc = next.columns.find(c=>c.id===targetColId); if (!tc) return prev; tc.cards.splice(Math.max(0,Math.min(position,tc.cards.length)),0,cardId); return next; });
+    setCardHeights(prev => { const n={...prev}; delete n[cardId]; return n; });
+  }
+  function setColumnWidth(colId, widthMm) { setLayout(prev => { const next = cloneLayout(prev); const c = next.columns.find(c=>c.id===colId); if (!c) return prev; c.widthMm = widthMm; return next; }); }
+  function setCardHeight(cardId, heightMm) { setCardHeights(prev => ({...prev, [cardId]: heightMm})); }
+  function getWaste() { let total=0; const details=[]; document.querySelectorAll('.fig-wrap').forEach(fw => { const img=fw.querySelector('img'); if(!img)return; const fr=fw.getBoundingClientRect(),ir=img.getBoundingClientRect(); const wH=Math.abs(fr.height-ir.height),wW=Math.abs(fr.width-ir.width); total+=wH+wW; details.push({card:fw.closest('.card')?.dataset.id,wasteH:Math.round(wH),wasteW:Math.round(wW),pct:Math.round((wH+wW)/(fr.height+fr.width)*100)}); }); return {total:Math.round(total),details}; }
+  function getLayout() { const s=currentScaleRef.current; const r=[]; document.querySelectorAll('#poster > .col').forEach(col => { const cards=[]; col.querySelectorAll('.card').forEach(c => { const b=c.getBoundingClientRect(); cards.push({id:c.dataset.id,height:Math.round(b.height/s),heightMm:Math.round(b.height/s/MM),grow:c.classList.contains('grow')}); }); r.push({colId:col.id,widthPx:Math.round(col.getBoundingClientRect().width/s),widthMm:Math.round(col.getBoundingClientRect().width/s/MM),cards}); }); return r; }
+
+  function resetLayout() { setLayout(cloneLayout(DEFAULT_LAYOUT)); setCardHeights({...DEFAULT_CARD_HEIGHTS}); setFontScaleState(DEFAULT_FONT_SCALE); setLogos([...DEFAULT_LOGOS]); setSelectedCard(null); localStorage.removeItem(LS_KEY); }
+  function saveConfig() { const cfg=getFullConfig(layout,cardHeights,fontScale,logos); const b=new Blob([JSON.stringify(cfg,null,2)+'\n'],{type:'application/json'}); const u=URL.createObjectURL(b); const a=document.createElement('a'); a.href=u; a.download='poster-config.json'; a.click(); URL.revokeObjectURL(u); }
+  function copyConfig() { navigator.clipboard.writeText(JSON.stringify(getFullConfig(layout,cardHeights,fontScale,logos),null,2)).then(()=>alert('Config copied! Paste it to Claude.')); }
+  function setFontScale(s) { setFontScaleState(parseFloat(s)||1.3); }
+
+  useEffect(() => { window.posterAPI = { swapCards, moveCard, setColumnWidth, setCardHeight, setFontScale, getWaste, getLayout, getConfig:()=>getFullConfig(layout,cardHeights,fontScale,logos), resetLayout, saveConfig, copyConfig }; });
+
+  function handleSwapClick(cardId, e) { e.stopPropagation(); if (!selectedCard) setSelectedCard(cardId); else if (selectedCard===cardId) setSelectedCard(null); else { swapCards(selectedCard, cardId); setSelectedCard(null); } }
+  function handleDropZone(targetColId, position, e) { e.stopPropagation(); if (!selectedCard) return; moveCard(selectedCard, targetColId, position); setSelectedCard(null); }
+
+  function handleColResize(dividerIdx, e) {
+    e.preventDefault(); const handle=e.currentTarget; handle.classList.add('active');
+    const targetColIdx=dividerIdx===0?0:2; const invert=dividerIdx===0?1:-1;
+    const targetEl=document.getElementById(layout.columns[targetColIdx].id);
+    const startX=e.clientX; const scale=currentScaleRef.current;
+    const startW=targetEl.getBoundingClientRect().width/scale;
+    function onMove(ev) { const dx=(ev.clientX-startX)/scale*invert; const newW=Math.max(120,(startW+dx)/MM); setLayout(prev => { const next=cloneLayout(prev); next.columns[targetColIdx].widthMm=Math.round(newW); return next; }); }
+    function onUp() { document.removeEventListener('mousemove',onMove); document.removeEventListener('mouseup',onUp); handle.classList.remove('active'); document.body.style.cursor=''; }
+    document.body.style.cursor='col-resize'; document.addEventListener('mousemove',onMove); document.addEventListener('mouseup',onUp);
+  }
+
+  function handleRowResize(colId, cardAboveIdx, e) {
+    e.preventDefault(); const handle=e.currentTarget; handle.classList.add('active');
+    const col=layout.columns.find(c=>c.id===colId); const aboveId=col.cards[cardAboveIdx];
+    const aboveEl=document.querySelector('[data-id="'+aboveId+'"]'); if(!aboveEl)return;
+    const startY=e.clientY; const scale=currentScaleRef.current; const startH=aboveEl.getBoundingClientRect().height/scale;
+    setCardHeights(prev=>({...prev,[aboveId]:startH/MM}));
+    function onMove(ev) { const dy=(ev.clientY-startY)/scale; setCardHeights(prev=>({...prev,[aboveId]:Math.max(20,(startH+dy)/MM)})); }
+    function onUp() { document.removeEventListener('mousemove',onMove); document.removeEventListener('mouseup',onUp); handle.classList.remove('active'); document.body.style.cursor=''; }
+    document.body.style.cursor='row-resize'; document.addEventListener('mousemove',onMove); document.addEventListener('mouseup',onUp);
+  }
+
+  function isCardGrow(cardId) {
+    if (cardHeights[cardId] != null) return false;
+    for (const col of layout.columns) {
+      const idx = col.cards.indexOf(cardId); if (idx===-1) continue;
+      const hasGrower = col.cards.some(cid => CARD_REGISTRY[cid]?.grow && cardHeights[cid]==null);
+      if (hasGrower) return CARD_REGISTRY[cardId]?.grow || false;
+      const lastFlexible = [...col.cards].reverse().find(cid => cardHeights[cid]==null);
+      return cardId === lastFlexible;
+    }
+    return false;
+  }
+
+  function renderCard(cardId) {
+    const card = CARD_REGISTRY[cardId]; if (!card) return null;
+    const classes = ['card']; if (card.color) classes.push(card.color); if (isCardGrow(cardId)) classes.push('grow'); if (selectedCard===cardId) classes.push('swap-selected');
+    const style = {}; if (cardHeights[cardId]!=null) style.flex='0 0 '+cardHeights[cardId]+'mm';
+    return (<div key={cardId} className={classes.join(' ')} data-id={cardId} style={style}><div className="swap-handle" onClick={(e)=>handleSwapClick(cardId,e)}>&#x2725;</div><h2>{card.title}</h2>{card.body}</div>);
+  }
+
+  function renderDropZone(colId, position) {
+    const visible = selectedCard !== null;
+    return (<div key={'dz-'+colId+'-'+position} className={'drop-zone'+(visible?' visible':'')} onClick={(e)=>handleDropZone(colId,position,e)}>{visible && <div className="drop-zone-inner" />}</div>);
+  }
+
+  function renderColumn(col) {
+    const style = col.widthMm != null ? {flex:'0 0 '+col.widthMm+'mm'} : {flex:'1.5'};
+    const children = [renderDropZone(col.id, 0)];
+    col.cards.forEach((cardId, i) => {
+      children.push(renderCard(cardId));
+      if (i < col.cards.length - 1) children.push(<div key={'row-'+col.id+'-'+i} className="divider row-resize" onMouseDown={(e)=>handleRowResize(col.id,i,e)} />);
+      children.push(renderDropZone(col.id, i + 1));
+    });
+    return (<div key={col.id} className="col" id={col.id} style={style}>{children}</div>);
+  }
+
+  return (
+    <>
+      <div className="toolbar">
+        <button onClick={()=>setPreview(!preview)} style={preview?{background:'#2d7fc1',color:'#fff'}:{}}>{preview?'Edit':'Preview'}</button>
+        {!preview && <>
+          <button onClick={()=>setFontScale(Math.max(0.8,fontScale-0.1))}>A-</button>
+          <button onClick={()=>setFontScale(fontScale+0.1)}>A+</button>
+          <button onClick={saveConfig} title="Download poster-config.json">Save</button>
+          <button onClick={copyConfig} title="Copy config JSON to clipboard">Copy Config</button>
+          <button onClick={resetLayout}>Reset</button>
+        </>}
+      </div>
+
+      {/* CUSTOMIZE: Header content */}
+      <div className="header">
+        <div className="header-left">
+          <h1><span className="m">METHOD_NAME:</span> PAPER_TITLE</h1>
+          <div className="authors">FILL_IN_AUTHORS</div>
+          <div className="aff">FILL_IN_AFFILIATIONS</div>
+        </div>
+        {logos.length > 0 && (
+          <div className="header-logos">
+            {logos.map((logo, i) => (<img key={i} src={logo.src} alt={logo.alt} style={{height:(logo.heightMm||28)+'mm'}} />))}
+          </div>
+        )}
+        <div className="header-right">
+          <div className="badge">CONF 2026</div>
+          <div className="qr"><img src="qr.png" alt="QR" /><div className="ql">Project page</div></div>
+          <div className="qr"><img src="qr-posterskill.png" alt="Posterskill" /><div className="ql">Poster made with my Claude skill</div></div>
+        </div>
+      </div>
+
+      <div className="poster" id="poster" ref={posterRef}>
+        {layout.columns.map((col, colIdx) => {
+          const elements = [];
+          if (colIdx > 0) elements.push(<div key={'col-div-'+colIdx} className="divider col-resize" onMouseDown={(e)=>handleColResize(colIdx-1,e)} />);
+          elements.push(renderColumn(col));
+          return elements;
+        })}
+      </div>
+    </>
+  );
+}
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(<PosterApp />);
+</script>
+</body>
+</html>

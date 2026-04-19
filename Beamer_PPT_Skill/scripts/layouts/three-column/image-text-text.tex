@@ -1,0 +1,33 @@
+% Layout: Image-Text-Text (Three Column)
+% Description: Image on the left, two text blocks on the right - great for image with detailed explanation split into two parts
+% Placeholders: {{TITLE}}, {{IMAGE}}, {{IMAGE_CAPTION}}, {{TOP_TEXT_TITLE}}, {{TOP_TEXT_CONTENT}}, {{BOTTOM_TEXT_TITLE}}, {{BOTTOM_TEXT_CONTENT}}
+
+\begin{frame}{{{TITLE}}}
+    \begin{columns}[T]
+        % Left Column - Image (35%)
+        \begin{column}{0.35\textwidth}
+            \centering
+            \includegraphics[width=\textwidth,height=0.7\textheight,keepaspectratio]{{{{IMAGE}}}}
+            
+            \vspace{0.3em}
+            {\small {{IMAGE_CAPTION}}}
+        \end{column}
+        
+        % Right Side - Two Text Blocks (62%)
+        \begin{column}{0.62\textwidth}
+            % Top Text Block
+            \textbf{{TOP_TEXT_TITLE}}
+            
+            \vspace{0.3em}
+            {{TOP_TEXT_CONTENT}}
+            
+            \vspace{1em}
+            
+            % Bottom Text Block
+            \textbf{{BOTTOM_TEXT_TITLE}}
+            
+            \vspace{0.3em}
+            {{BOTTOM_TEXT_CONTENT}}
+        \end{column}
+    \end{columns}
+\end{frame}
