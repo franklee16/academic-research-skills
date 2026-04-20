@@ -109,9 +109,7 @@ Contributions are welcome! Please feel free to submit issues or pull requests.
 
 Individual skills may have their own licenses. Please check each skill's LICENSE file for details.
 
-## Author
 
-Weikai Li - Professor of Finance, City University of Hong Kong
 
 ## Repository
 
