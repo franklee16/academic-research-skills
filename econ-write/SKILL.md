@@ -304,7 +304,7 @@ AI-assisted writing often has telltale patterns. Eliminate these:
 - **Banned words** (in addition to the phrases listed under Phrases to Delete above): Never use "delve", "landscape", "multifaceted", "notably", "leverage" (as verb meaning "use"), "robust" (outside its statistical meaning), "pivotal", "groundbreaking", "shed light on", "pave the way"
 - **Vary sentence length**: Mix short sentences (8-12 words) with longer ones (15-25 words). AI tends toward uniform medium-length sentences
 - **Use field-specific vocabulary naturally**: "extensive margin" in labor, "pass-through" in IO, "treatment on the treated" in program evaluation. Generic phrasing signals AI
-- **Include parenthetical asides and em-dashes** -- real academics use these for qualifications and side notes
+- **Avoid em-dashes and en-dashes** -- LLMs overuse dashes as parenthetical interrupters, so their frequent appearance is now itself an AI tell. Use periods, commas, parentheses, colons, or semicolons instead. If a thought needs setting off, prefer a new sentence
 - **Allow natural roughness**: Not every transition needs to be perfectly smooth. Real papers have some friction between sections. A period and a new topic sentence is fine
 - **Be specific about institutions**: Name the actual dataset, agency, policy, or country. AI defaults to generic placeholder language
 - **Avoid perfect parallel structure in every list**: Vary your constructions. Real writing is slightly irregular
