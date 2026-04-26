@@ -17,7 +17,7 @@ Each skill folder contains a `SKILL.md` file with YAML frontmatter defining:
 
 ### Common Skill Patterns
 
-**Reference-based skills** contain only a `SKILL.md` with embedded knowledge (e.g., `academic-writing`, `econ-write`, `peer-review`). These provide methodology guidance without code.
+**Reference-based skills** contain only a `SKILL.md` with embedded knowledge (e.g., `writing/academic-writing`, `writing/econ-write`, `peer-review/peer-review`). These provide methodology guidance without code.
 
 **Code-based skills** include supporting files:
 - `references/` - Additional documentation and rules
@@ -28,20 +28,28 @@ Each skill folder contains a `SKILL.md` file with YAML frontmatter defining:
 
 ### Skill Categories
 
-| Category | Skills |
-|----------|--------|
-| Writing | `academic-writing`, `scientific-writing`, `econ-write` |
-| Data Analysis | `r-analyst`, `stata-analyst`, `data-analysis`, `exploratory-data-analysis` |
-| Literature | `lit-review`, `literature-review`, `academic-researcher` |
-| Peer Review | `peer-review`, `referee2`, `scholarpeer-econ`, `paper-self-review` |
-| Presentations | `beamer-presentation`, `scientific-slides`, `Aut_Sci_ppt-main` |
-| Visualization | `matplotlib`, `scientific-visualization`, `econ-visualization` |
+Skills are organized into 12 category subdirectories following the academic research workflow:
+
+| Category | Count | Description |
+|----------|-------|-------------|
+| `writing/` | 8 | Academic writing, drafting, revision, response letters |
+| `literature-review/` | 9 | Literature search, deep research, paper discovery |
+| `data-analysis/` | 14 | R, Stata, Python analysis, panel data, cleaning |
+| `visualization/` | 6 | Publication figures, matplotlib, TikZ, econ charts |
+| `peer-review/` | 10 | Review, referee, quality checks, fact-checking |
+| `presentations/` | 8 | Beamer, PPT, scientific slides, slide decks |
+| `citations/` | 2 | Reference management, CrossRef, BibTeX |
+| `grants/` | 1 | Grant proposals (NSF, NIH, NSTC) |
+| `brainstorming/` | 4 | Hypothesis generation, ideation, prompt optimization |
+| `data-sourcing/` | 3 | FRED, SEC EDGAR, API data fetching |
+| `output-tools/` | 10 | Posters, web, LaTeX tools, case writing, diagrams |
+| `project-management/` | 4 | Project scaffolding, PDF tools, strategic analysis |
 
 ## Working with Skills
 
 ### Adding a New Skill
 
-1. Create a folder with the skill name (use lowercase, hyphens for spaces)
+1. Create a folder inside the appropriate category (e.g., `writing/my-new-skill/`)
 2. Add `SKILL.md` with required frontmatter
 3. Add supporting files as needed (`references/`, `phases/`, `techniques/`)
 4. If the skill has Python code, include `requirements.txt` or `pyproject.toml`
@@ -70,17 +78,29 @@ pip install -r requirements.txt
 
 ```
 academic-research-skills/
-├── SKILL.md files        # Main skill definitions (each folder is a skill)
-├── references/           # Supporting documentation
-├── phases/               # Workflow stage definitions
-├── techniques/           # Specific method implementations
-├── src/                  # Python code (code-based skills only)
-└── requirements.txt      # Python dependencies
+├── writing/              # 8 skills — academic writing, econ-write, revision
+├── literature-review/    # 9 skills — lit search, deep research, discovery
+├── data-analysis/        # 14 skills — R, Stata, Python, panel data, cleaning
+├── visualization/        # 6 skills — matplotlib, TikZ, econ charts
+├── peer-review/          # 10 skills — review, referee, fact-checking, consistency
+├── presentations/        # 8 skills — Beamer, PPT, scientific slides
+├── citations/            # 2 skills — reference management, CrossRef
+├── grants/               # 1 skill — NSF/NIH/NSTC grant proposals
+├── brainstorming/        # 4 skills — hypothesis generation, ideation
+├── data-sourcing/        # 3 skills — FRED, SEC EDGAR, API fetching
+├── output-tools/         # 10 skills — posters, web, LaTeX tools, diagrams
+├── project-management/   # 4 skills — scaffolding, PDF tools, strategic analysis
+├── CLAUDE.md
+└── README.md
 ```
+
+Each skill folder contains a `SKILL.md` file with YAML frontmatter. Code-based skills may also include `src/`, `references/`, `phases/`, or `techniques/` subdirectories.
 
 ## Key Skill Examples
 
-- `econ-write/` - Comprehensive economics writing guidance with embedded rules
-- `peer-review/` - Systematic manuscript evaluation workflow
-- `Aut_Sci_ppt-main/` - Full Python package for PDF-to-PPTX conversion
-- `r-analyst/` - R analysis workflows with phases and techniques
+- `writing/econ-write/` - Comprehensive economics writing guidance with embedded rules
+- `peer-review/peer-review/` - Systematic manuscript evaluation workflow (note: skill inside category dir)
+- `presentations/Aut_Sci_ppt-main/` - Full Python package for PDF-to-PPTX conversion
+- `data-analysis/r-analyst/` - R analysis workflows with phases and techniques
+- `literature-review/deep-research/` - Multi-source research synthesis
+- `visualization/scientific-visualization/` - Publication-ready figure generation
