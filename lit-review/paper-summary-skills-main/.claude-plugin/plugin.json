@@ -1,0 +1,9 @@
+{
+  "name": "paper-summary",
+  "version": "1.0.0",
+  "description": "科研文献归档、打标签与问答检索技能包：summary_note 主技能按意图调度 summary_archiving / summary_grouping / summary_answering。",
+  "author": {
+    "name": "Yingyan Chen"
+  },
+  "keywords": ["paper", "literature", "summary", "docx", "excel", "research"]
+}

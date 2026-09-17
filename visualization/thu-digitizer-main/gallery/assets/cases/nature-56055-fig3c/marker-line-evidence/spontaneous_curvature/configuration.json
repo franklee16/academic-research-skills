@@ -1,0 +1,222 @@
+{
+  "algorithm_version": "marker_line_global_path_v0.2.0-candidate",
+  "implementation_sha256": "fb87387d08e7969806baaf3d9574b92527c1fc24f0a5de4067073e7d53a94d18",
+  "source_sha256": "fd5fe57633c5535eedd61619cd4d60c7ca5136a523f08655a4b8c19ad8cb0078",
+  "image_size": [
+    1495,
+    1278
+  ],
+  "plot_bounds": [
+    150,
+    75,
+    1377,
+    436
+  ],
+  "x_axis": {
+    "scale": "linear",
+    "anchors": [
+      {
+        "pixel": 150.0,
+        "value": 0.0
+      },
+      {
+        "pixel": 239.5,
+        "value": 10.0
+      },
+      {
+        "pixel": 328.0,
+        "value": 20.0
+      },
+      {
+        "pixel": 417.0,
+        "value": 30.0
+      },
+      {
+        "pixel": 505.5,
+        "value": 40.0
+      },
+      {
+        "pixel": 594.5,
+        "value": 50.0
+      },
+      {
+        "pixel": 683.5,
+        "value": 60.0
+      },
+      {
+        "pixel": 772.5,
+        "value": 70.0
+      },
+      {
+        "pixel": 861.5,
+        "value": 80.0
+      },
+      {
+        "pixel": 950.5,
+        "value": 90.0
+      },
+      {
+        "pixel": 1039.0,
+        "value": 100.0
+      },
+      {
+        "pixel": 1128.0,
+        "value": 110.0
+      },
+      {
+        "pixel": 1216.5,
+        "value": 120.0
+      },
+      {
+        "pixel": 1305.5,
+        "value": 130.0
+      }
+    ],
+    "pixel_slope": 0.11251928243613901,
+    "transformed_intercept": -16.910019067707907,
+    "residuals_pixels": [
+      0.2855217487303899,
+      -0.34082225656880155,
+      0.032833738132040054,
+      -0.09351026716715065,
+      0.2801457275336594,
+      0.15380172223440555,
+      0.027457716935341155,
+      -0.09888628836384954,
+      -0.22523029366304023,
+      -0.3515742989622309,
+      0.022081695738515962,
+      -0.10426230956067474,
+      0.26939368514007217,
+      0.14304967984088146
+    ],
+    "rmse_transformed": 0.023272367342395864,
+    "max_abs_residual_transformed": 0.03955888784221884,
+    "pixel_uncertainty": 0.5,
+    "fit": "robust_huber_affine_in_transformed_value_space"
+  },
+  "y_axis": {
+    "scale": "linear",
+    "anchors": [
+      {
+        "pixel": 115.5,
+        "value": 3.7
+      },
+      {
+        "pixel": 195.5,
+        "value": 3.6
+      },
+      {
+        "pixel": 275.5,
+        "value": 3.5
+      },
+      {
+        "pixel": 355.5,
+        "value": 3.4
+      },
+      {
+        "pixel": 435.5,
+        "value": 3.3
+      }
+    ],
+    "pixel_slope": -0.001250000000000004,
+    "transformed_intercept": 3.844374999999999,
+    "residuals_pixels": [
+      -1.421085471520196e-12,
+      -1.421085471520196e-12,
+      -1.7763568394002448e-12,
+      -1.7763568394002448e-12,
+      -2.1316282072802937e-12
+    ],
+    "rmse_transformed": 2.1573778854906178e-15,
+    "max_abs_residual_transformed": 2.6645352591003757e-15,
+    "pixel_uncertainty": 0.5,
+    "fit": "robust_huber_affine_in_transformed_value_space"
+  },
+  "sample_values": [
+    0.0,
+    2.5,
+    5.0,
+    7.5,
+    10.0,
+    12.5,
+    15.0,
+    17.5,
+    20.0,
+    22.5,
+    25.0,
+    27.5,
+    30.0,
+    32.5,
+    35.0,
+    37.5,
+    40.0,
+    42.5,
+    45.0,
+    47.5,
+    50.0,
+    52.5,
+    55.0,
+    57.5,
+    60.0,
+    62.5,
+    65.0,
+    67.5,
+    70.0,
+    72.5,
+    75.0,
+    77.5,
+    80.0,
+    82.5,
+    85.0,
+    87.5,
+    90.0,
+    92.5,
+    95.0,
+    97.5,
+    100.0,
+    102.5,
+    105.0,
+    107.5,
+    110.0,
+    112.5,
+    115.0,
+    117.5,
+    120.0,
+    122.5,
+    125.0,
+    127.5,
+    130.0,
+    132.5,
+    135.0,
+    137.5
+  ],
+  "series": [
+    {
+      "name": "spontaneous_curvature",
+      "colours_rgb": [
+        [
+          251,
+          129,
+          119
+        ],
+        [
+          252,
+          106,
+          98
+        ]
+      ]
+    }
+  ],
+  "parameters": {
+    "color_tolerance": 12.0,
+    "sample_radius": 8,
+    "marker_radius_min": 3,
+    "reference_lines": [
+      3.556
+    ],
+    "transition_weight": 0.08,
+    "curvature_weight": 0.03,
+    "confidence_threshold": 0.55
+  }
+}

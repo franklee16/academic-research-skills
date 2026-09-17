@@ -1,0 +1,66 @@
+{
+  "skill": "relative-vs-absolute",
+  "version": "0.1.0",
+  "source_book": "Survey Curious? Start-Up Guide — Bergman, Chinco, Hartzmark, Sussman (2020)",
+  "darwin_compatible": true,
+  "test_cases": [
+    {
+      "id": "should-trigger-01",
+      "type": "should_trigger",
+      "prompt": "My survey shows that 32% of investors say they'll buy Stock XYZ in the next month. Can I claim this as the population prevalence?",
+      "expected_behavior": "Activate relative-vs-absolute. Refuse the level claim by default. Run the three robustness checks (wording, pool, sensitivity). Recommend benchmark items needed to upgrade relative→absolute, or downgrade to a comparative claim.",
+      "notes": "Direct level claim on probability-elicited survey = primary signal."
+    },
+    {
+      "id": "should-trigger-02",
+      "type": "should_trigger",
+      "prompt": "I see significant differences when I reword the question. Is my survey result real?",
+      "expected_behavior": "Activate relative-vs-absolute. Diagnosis: rewording moving results = levels are fragile. Recommend: only claim the *comparison* across conditions that used identical wording, not the level.",
+      "notes": "Rewording-sensitivity = level fragility."
+    },
+    {
+      "id": "should-trigger-03",
+      "type": "should_trigger",
+      "prompt": "My survey treatment vs. control shows a 5pp difference. Is this interpretable?",
+      "expected_behavior": "Activate relative-vs-absolute. The 5pp difference is a comparison — robust if randomization was done. But also check `selective-attrition-audit` for drop-out symmetry to confirm internal validity. Recommend reporting the comparison but not the level.",
+      "notes": "Treatment-comparison is closer to relative-vs-absolute interpretable, but check attrition."
+    },
+    {
+      "id": "should-trigger-04",
+      "type": "should_trigger",
+      "prompt": "I'm worried that order in which I asked the questions is affecting my numerical results.",
+      "expected_behavior": "Activate relative-vs-absolute (with order-effects emphasis). Order-fragility = level-fragility. Recommend randomization across participants; claim only comparisons that hold across orderings.",
+      "notes": "Order effects = canonical trigger."
+    },
+    {
+      "id": "should-not-trigger-01",
+      "type": "should_not_trigger",
+      "prompt": "How do I pre-register my survey analysis?",
+      "expected_behavior": "Do NOT activate relative-vs-absolute. This is a methodology/process question. Defer to research-strategy or pre-analysis-plan skills.",
+      "notes": "Trap: 'interpretation' word adjacency; this is pre-registration."
+    },
+    {
+      "id": "should-not-trigger-02",
+      "type": "should_not_trigger",
+      "prompt": "I rewrote a question and now it's clearer. Should I rerun the survey?",
+      "expected_behavior": "Do NOT activate relative-vs-absolute. The user is asking about clarity fix → re-run decision. Defer to clarity-concreteness / pilot-protocol.",
+      "notes": "Trap: 'I rewrote' looks like sensitivity testing; this is a re-run decision."
+    },
+    {
+      "id": "should-not-trigger-03",
+      "type": "should_not_trigger",
+      "prompt": "My treatment arm had 30% drop-out, my control arm had 8%. Is that a problem?",
+      "expected_behavior": "Do NOT activate relative-vs-absolute. This is condition-asymmetric attrition. Defer to selective-attrition-audit.",
+      "notes": "Trap: 'is my result valid?' language, but the specific concern is attrition, not level-vs-comparison."
+    },
+    {
+      "id": "edge-01",
+      "type": "edge_case",
+      "prompt": "I have a result that's robust across multiple rewording and orderings. Can I claim an absolute level?",
+      "expected_behavior": "Edge: yes, with conditions. Recommend benchmark-item check (does the survey register expectedly on a known construct?). Also recommend the result be replicated by an independent team. Don't fully endorse the level claim even with rewording robustness — the literature shows levels are fragile in subtle ways.",
+      "notes": "Edge: how much robustness is enough for a level claim."
+    }
+  ],
+  "minimum_pass_rate": 0.85,
+  "notes": "Trap: 'is my number real' is too general — fires on attrition, statistical-power, sample-size, all kinds. Filter: only fire when the concern is *level vs. comparison* given framing/ordering, not internal validity."
+}

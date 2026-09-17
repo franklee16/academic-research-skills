@@ -1,0 +1,54 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/SuperJayLiu/research-defense-radar/assets/OBSERVATION_SCHEMA.json",
+  "title": "Research Defense Radar observations",
+  "type": "object",
+  "required": ["observations"],
+  "properties": {
+    "observations": {
+      "type": "array",
+      "items": {"$ref": "#/$defs/observation"}
+    }
+  },
+  "additionalProperties": false,
+  "$defs": {
+    "observation": {
+      "type": "object",
+      "required": ["title", "category", "evidence_level", "verified_at", "confidence"],
+      "properties": {
+        "title": {"type": "string", "minLength": 1},
+        "authors": {"type": "array", "items": {"type": "string"}},
+        "doi": {"type": ["string", "null"]},
+        "repository_id": {"type": ["string", "null"]},
+        "canonical_url": {"type": ["string", "null"], "format": "uri"},
+        "source_urls": {"type": "array", "items": {"type": "string", "format": "uri"}},
+        "versions": {"type": "array", "items": {"type": "object"}},
+        "category": {"enum": ["A", "B", "C", "D", "E"]},
+        "secondary_tags": {"type": "array", "items": {"type": "string"}},
+        "evidence_level": {"enum": ["M", "A", "F"]},
+        "verified_at": {"type": "string", "format": "date"},
+        "confidence": {"enum": ["low", "medium", "high"]},
+        "earliest_public_date": {"type": ["string", "null"], "format": "date"},
+        "earliest_public_date_provenance": {"enum": ["user_stated", "public_record", "unknown", null]},
+        "earliest_public_record_url": {"type": ["string", "null"], "format": "uri"},
+        "chronology_relation": {"enum": ["pre_disclosure", "same_day", "post_disclosure", "unknown", null]},
+        "priority_effect": {"enum": ["assess_as_prior_work", "chronology_uncertain_same_day", "no_preemption_post_disclosure", "uncertain", null]},
+        "overlap_dimensions": {
+          "type": ["object", "null"],
+          "additionalProperties": {"enum": [0, 0.25, 0.5, 0.75, 1, null]}
+        },
+        "overlap_score": {"type": ["number", "null"], "minimum": 0, "maximum": 100},
+        "change_kind": {
+          "enum": ["identity_update", "metadata_update", "evidence_upgrade", "substantive_revision", "novelty_impact_change", null]
+        }
+      },
+      "anyOf": [
+        {"required": ["doi"]},
+        {"required": ["repository_id"]},
+        {"required": ["canonical_url"]},
+        {"required": ["title", "authors"]}
+      ],
+      "additionalProperties": true
+    }
+  }
+}

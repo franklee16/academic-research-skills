@@ -1,0 +1,391 @@
+<!doctype html>
+<html lang="zh-Hans">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>年度数据 — Lieflat 报告模板 · 编辑部书脊</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Fraunces:opsz,wght@9..144,600;9..144,800;9..144,900&family=Noto+Serif+SC:wght@600;700;900&family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  /* ═══════════════════════════════════════════════════════════════
+     LIEFLAT 报告模板 03 · 年度数据海报（中文版）
+     场景：个人 / 独立开发者年度数据海报（build in public 年终盘点、
+           社媒长图、博客年报）
+     排版参考："2019 Website Traffic" 蜜桃海报（左侧竖排书脊大标题、
+               粗双线分区、胖衬线标题 + 三栏底部模块）—— 只学排版和
+               字体，蜜桃底色不学。
+     中西混排：数字与拉丁走 Fraunces / Inter，汉字走 Noto。
+               书脊竖排用 writing-mode，汉字直立、数字横转。
+     色板正本 = color-presets.js 的 WIRE 一套，不新增色值。
+       灰阶承载数据，荧光橙 #F5572F 每张图只标一个主角。
+     图表正本 = lieflat gallery：
+       图A  F1  rung bars（三面板小倍数）· basics-gallery.html
+       图B  L10 radial patchwork · lupi-gallery.html "A quarter of deploys, overlaid"
+       图C  F5  tick rows   · basics-gallery.html
+       图D  F11 tick gauge  · basics-gallery.html
+     WIRE 属 mono+accent：灰阶密度规则同 Mono，无需 ×1.8 加墨。
+     ═══════════════════════════════════════════════════════════════ */
+  :root{
+    /* WIRE preset roles */
+    --bg:#F0F0EE; --txt:#1F1E1C;
+    --mut:rgba(31,30,28,.60); --lab:rgba(31,30,28,.72);
+    --faint:rgba(31,30,28,.32); --quiet:rgba(31,30,28,.15);
+    --grid:rgba(31,30,28,.16);
+    --data:#22211F; --data2:#8F8E86; --hero:#F5572F; --faintdata:#C0BFB7;
+    --fat:'Fraunces','Noto Serif SC','Songti SC',serif;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{background:var(--bg);color:var(--txt);font-family:'Inter','Noto Sans SC',sans-serif;
+    -webkit-font-smoothing:antialiased;font-variant-numeric:tabular-nums lining-nums;
+    display:flex;justify-content:center;padding:56px 24px}
+  .sheet{width:1080px;max-width:1080px;display:grid;grid-template-columns:104px 1fr;gap:0}
+
+  /* ── 书脊：竖排大标题（学参考图3）── */
+  .spine{position:relative;border-right:3px double var(--txt)}
+  .spine .t{position:absolute;top:0;left:10px;
+    writing-mode:vertical-rl;
+    font-family:var(--fat);font-weight:900;font-size:56px;
+    line-height:1.05;letter-spacing:.08em;white-space:nowrap}
+  .spine .t .yr{color:var(--hero);letter-spacing:.02em}
+  .spine .b{position:absolute;bottom:0;left:36px;writing-mode:vertical-rl;
+    font-size:9.5px;font-weight:700;letter-spacing:.3em;color:var(--mut)}
+
+  .content{padding-left:44px}
+
+  /* ── 顶注（学参考图3 的黑条 source 行）── */
+  .topbar{display:flex;justify-content:space-between;background:var(--data);color:var(--bg);
+    font-size:9.5px;font-weight:600;letter-spacing:.1em;
+    padding:7px 14px;margin-bottom:34px}
+  .topbar b{color:#F5572F}
+
+  /* ── 三面板小倍数（一张图，三个 panel）── */
+  .panels{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+  .panel .growth{font-size:20px;font-weight:800;letter-spacing:-.02em}
+  .panel .growth .pct{color:var(--hero)}
+  .panel .growth .dots{color:var(--faint);font-weight:600;font-size:12px}
+  .panel .glabel{font-size:9.5px;font-weight:600;letter-spacing:.08em;
+    color:var(--mut);margin-top:2px}
+  .panel h3{font-family:var(--fat);font-size:19px;font-weight:800;text-align:center;
+    margin-top:6px;letter-spacing:.04em}
+  .fig svg{width:100%;height:auto;display:block}
+  svg text{font-family:'Inter','Noto Sans SC',sans-serif}
+
+  /* ── 粗双线分隔（学参考图3）── */
+  .double{border-top:1px solid var(--txt);border-bottom:3px solid var(--txt);height:6px;
+    margin:38px 0 0}
+
+  /* ── 中带：最忙一天（callout，不占图额度）── */
+  .midband{display:grid;grid-template-columns:1fr 1.1fr 1fr;gap:30px;align-items:center;
+    padding:26px 0 30px}
+  .midband .l{font-size:15px;font-weight:800;line-height:1.6}
+  .midband .c{font-family:var(--fat);font-size:30px;font-weight:800;line-height:1.3;
+    color:var(--hero);text-align:center}
+  .midband .r .row{display:flex;justify-content:space-between;font-size:11.5px;font-weight:700;
+    padding:7px 0;border-bottom:1px dotted var(--faint)}
+  .midband .r .row:last-child{border-bottom:0}
+  .midband .r .row span:last-child{font-weight:800}
+
+  /* ── 底部三栏 ── */
+  .bottom{display:grid;grid-template-columns:1fr 1.15fr 1fr;gap:34px;padding-top:30px}
+  .bottom h3{font-family:var(--fat);font-size:20px;font-weight:800;text-align:center;
+    color:var(--txt);margin-bottom:4px;letter-spacing:.04em}
+  .srcline{font-size:8.5px;font-weight:600;letter-spacing:.1em;
+    color:var(--faint);margin-top:8px;text-align:center}
+
+  .foot{margin-top:44px;border-top:3px double var(--txt);padding-top:12px;
+    display:flex;justify-content:space-between;font-size:9px;font-weight:600;
+    letter-spacing:.12em;color:var(--mut)}
+
+  /* ── 动画（mono-tokens MOTION.css 原样）── */
+  .pop{transform-box:fill-box;transform-origin:center;animation:pop .5s cubic-bezier(.2,.7,.3,1.3) both}
+  @keyframes pop{from{transform:scale(0)}to{transform:none}}
+  .fade{animation:fade .9s ease both}
+  @keyframes fade{from{opacity:0}}
+  .draw{stroke-dasharray:1;stroke-dashoffset:1;animation:draw 1s cubic-bezier(.4,0,.2,1) both}
+  @keyframes draw{to{stroke-dashoffset:0}}
+  @media(max-width:640px){body{padding:24px 10px}}
+  @media (prefers-reduced-motion:reduce){
+    .pop,.fade{animation:none}
+    .draw{animation:none;stroke-dasharray:none;stroke-dashoffset:0}
+  }
+</style>
+</head>
+<body>
+<div class="sheet">
+
+  <!-- ══ 书脊 ══ -->
+  <div class="spine">
+    <div class="t"><span class="yr">2026</span> 年度数据</div>
+    <div class="b">BUILD IN PUBLIC · 年报</div>
+  </div>
+
+  <div class="content">
+    <div class="topbar"><span>全部数据来自 PLAUSIBLE.IO + STRIPE</span><span><b>@你的账号</b></span></div>
+
+    <!-- ══ 图A · F1 rung bars 三面板小倍数：同一把尺子看三个指标三年 ══
+         模板：basics-gallery.html · "Revenue by plan, rung by rung"
+         一个面板 = 一组 rung bars（2024/25/26 三柱），三个面板共用一图 -->
+    <div class="panels">
+      <div class="panel">
+        <div class="growth"><span class="pct">+92%</span> <span class="dots">·········</span> 3.5k</div>
+        <div class="glabel">较 2025 年增长</div>
+        <div class="fig"><svg id="p0" viewBox="0 0 200 190" preserveAspectRatio="xMidYMid meet"></svg></div>
+        <h3>访客</h3>
+      </div>
+      <div class="panel">
+        <div class="growth"><span class="pct">+122%</span> <span class="dots">·······</span> 2.9k</div>
+        <div class="glabel">较 2025 年增长</div>
+        <div class="fig"><svg id="p1" viewBox="0 0 200 190" preserveAspectRatio="xMidYMid meet"></svg></div>
+        <h3>注册</h3>
+      </div>
+      <div class="panel">
+        <div class="growth"><span class="pct">+121%</span> <span class="dots">·······</span> 12.3k</div>
+        <div class="glabel">较 2025 年增长</div>
+        <div class="fig"><svg id="p2" viewBox="0 0 200 190" preserveAspectRatio="xMidYMid meet"></svg></div>
+        <h3>浏览量</h3>
+      </div>
+    </div>
+    <div class="srcline">RUNG BARS 小倍数 · 一档 = 100（访客、注册）/ 400（浏览量）· 橙 = 2026</div>
+
+    <div class="double"></div>
+
+    <!-- ══ 中带 callout ══ -->
+    <div class="midband">
+      <div class="l">三年 build in public，<br>最忙的一天</div>
+      <div class="c">2026 年 7 月 6 日<br>星期一</div>
+      <div class="r">
+        <div class="row"><span>访客</span><span>66</span></div>
+        <div class="row"><span>注册</span><span>55</span></div>
+        <div class="row"><span>浏览量</span><span>241</span></div>
+      </div>
+    </div>
+
+    <div class="double" style="margin-top:0"></div>
+
+    <!-- ══ 底部三栏 ══ -->
+    <div class="bottom">
+      <div>
+        <h3>几点动手</h3>
+        <!-- 图B · L10 radial patchwork · lupi-gallery.html "A quarter of deploys, overlaid" -->
+        <div class="fig"><svg id="patchwork" viewBox="0 0 400 340" preserveAspectRatio="xMidYMid meet"></svg></div>
+        <div class="srcline">RADIAL PATCHWORK · 一瓦 = 一次上线 · 角度 = 时刻 · 半径 = 声量 · 叠色越重 = 越扎堆 · 橙框 = 冲上 HN 首页</div>
+      </div>
+      <div>
+        <h3>读者从哪来</h3>
+        <!-- 图C · F5 tick rows · basics-gallery.html -->
+        <div class="fig"><svg id="rows" viewBox="0 0 268 210" preserveAspectRatio="xMidYMid meet"></svg></div>
+        <div class="srcline">TICK ROWS · 一格 = 10 次访问 · 橙 = 赢家渠道</div>
+      </div>
+      <div>
+        <h3>访问 → 注册</h3>
+        <!-- 图D · F11 tick gauge · basics-gallery.html -->
+        <div class="fig"><svg id="gauge" viewBox="0 0 200 210" preserveAspectRatio="xMidYMid meet"></svg></div>
+        <div class="srcline">TICK GAUGE · 一格 = 每 100 次访问中的 1 次</div>
+      </div>
+    </div>
+
+    <div class="foot">
+      <span>yoursite.com · 2026 年度数字</span>
+      <span>LIEFLAT CHARTS 出品</span>
+    </div>
+  </div>
+</div>
+
+<script>
+/* ── mono-tokens 内联（几何/工具函数与正本一致）── */
+const NS='http://www.w3.org/2000/svg';
+const el=(p,t,a)=>{const n=document.createElementNS(NS,t);for(const k in a)n.setAttribute(k,a[k]);p.appendChild(n);return n};
+const txt=(p,a,s)=>{const n=el(p,'text',a);n.textContent=s;return n};
+const tip=(n,s)=>{const t=document.createElementNS(NS,'title');t.textContent=s;n.appendChild(t)};
+const rnd=(i,k)=>Math.abs(((i*73856093)^(k*19349663))%1000)/1000;
+const D2R=Math.PI/180;
+const pol=(cx,cy,r,deg)=>[cx+r*Math.cos(deg*D2R),cy+r*Math.sin(deg*D2R)];
+const sect=(cx,cy,r0,r1,a0,a1)=>{
+  const big=a1-a0>180?1:0;
+  const [xa,ya]=pol(cx,cy,r1,a0),[xb,yb]=pol(cx,cy,r1,a1);
+  const [xc,yc]=pol(cx,cy,r0,a1),[xd,yd]=pol(cx,cy,r0,a0);
+  return `M${xa} ${ya} A${r1} ${r1} 0 ${big} 1 ${xb} ${yb} L${xc} ${yc} A${r0} ${r0} 0 ${big} 0 ${xd} ${yd} Z`;
+};
+const obsReveal=(id,fn)=>{
+  const n=document.getElementById(id);
+  const go=()=>{n.innerHTML='';fn(n)};
+  const io=new IntersectionObserver(es=>{if(es[0].isIntersecting){go();io.disconnect()}},{threshold:.3});
+  io.observe(n); n.style.cursor='pointer'; n.addEventListener('click',go);
+};
+
+/* ── WIRE preset（color-presets.js 原值）── */
+const W={BG:'#F0F0EE',TXT:'#1F1E1C',DATA:'#22211F',DATA2:'#8F8E86',HERO:'#F5572F',
+  FAINTDATA:'#C0BFB7',MUT:'rgba(31,30,28,.60)',FAINT:'rgba(31,30,28,.32)',
+  GRID:'rgba(31,30,28,.16)'};
+
+/* ════ 图A · F1 rung bars（三面板小倍数）════
+   结构照搬 basics-gallery "rung bars"：柱身 = 一格格横档，可数。
+   每面板 3 柱 = 2024/2025/2026。橙 = 2026（每面板唯一主角）。 */
+(()=>{
+const PANELS=[
+  {id:'p0',unit:100,years:[['2024',6],['2025',18],['2026',35]]},   // 访客 ×100
+  {id:'p1',unit:100,years:[['2024',3],['2025',13],['2026',29]]},   // 注册 ×100
+  {id:'p2',unit:400,years:[['2024',4],['2025',14],['2026',31]]},   // 浏览量 ×400
+];
+PANELS.forEach(({id,unit,years})=>{
+  obsReveal(id,s=>{
+    const x0=i=>44+i*58,base=152,step=3.6,HW=13;
+    years.forEach(([yr,v],i)=>{
+      const x=x0(i),is26=yr==='2026';
+      for(let k=0;k<v;k++){
+        const y=base-k*step,w=HW-1.5+rnd(k+1,i+2)*3;
+        el(s,'line',{x1:x-w,y1:y,x2:x+w,y2:y,stroke:is26?W.HERO:W.DATA,'stroke-width':1,
+          opacity:(is26?.75:.5)+rnd(k+2,i+4)*.25,class:'fade',
+          style:`animation-delay:${i*.08+k*.012}s`});
+        if(k%5===4)el(s,'circle',{cx:x+HW+4,cy:y,r:.8,fill:W.FAINTDATA,
+          class:'fade',style:`animation-delay:${i*.08+k*.012}s`});
+      }
+      const topY=base-(v-1)*step;
+      const num=txt(s,{x,y:topY-8,'font-size':10,'font-weight':800,
+        fill:is26?W.HERO:W.DATA,'text-anchor':'middle',
+        class:'fade',style:`animation-delay:${.4+i*.08}s`},(v*unit>=1000?(v*unit/1000)+'k':v*unit));
+      tip(num,`${yr} 年 —— ${v*unit}`);
+      txt(s,{x,y:base+16,'font-size':7.5,'font-weight':700,fill:W.MUT,'text-anchor':'middle',
+        'letter-spacing':'.08em',class:'fade',style:`animation-delay:${i*.08}s`},yr);
+    });
+    el(s,'line',{x1:14,y1:base+4,x2:186,y2:base+4,stroke:W.GRID,'stroke-width':.8,class:'fade'});
+    txt(s,{x:100,y:184,'font-size':7,'font-weight':600,fill:W.FAINT,'text-anchor':'middle',
+      'letter-spacing':'.08em',class:'fade',style:'animation-delay:.9s'},
+      '一档 = '+unit);
+  });
+});
+})();
+
+/* ════ 图B · L10 radial patchwork ════
+   结构照搬 lupi-gallery "radial patchwork"：每瓦 = 一次上线/发帖，
+   角度 = 当天时刻，半径 = 声量，透明度叠加出扎堆密度——
+   这是「一律实心」铁律唯一的例外，透明度本身就是数据。
+   主簇在上班前与下班后，午后只有零星几次（周末）——有正职的独立开发者作息。
+   底注不画在图内：12 点刻度就在那个位置，正本 gallery 两者相撞。
+   HERO 只框 3 次冲上 HN 首页的发布——本图橙色唯一的窄角色。 */
+(()=>{
+const CX=200,CY=168,N=40;
+obsReveal('patchwork',s=>{
+  // 24 小时刻度环
+  for(let h=0;h<96;h++){
+    const a=-90+h*3.75,[x1,y1]=pol(CX,CY,140,a),[x2,y2]=pol(CX,CY,h%4===0?146:143,a);
+    el(s,'line',{x1,y1,x2,y2,stroke:W.GRID,'stroke-width':h%4===0?1:.5,
+      class:'fade',style:`animation-delay:${h*.006}s`});
+  }
+  [0,6,12,18].forEach(h=>{
+    const [x,y]=pol(CX,CY,157,-90+h*15);
+    txt(s,{x,y:y+3,'font-size':8,'font-weight':700,fill:W.MUT,'text-anchor':'middle',
+      class:'fade'},String(h).padStart(2,'0'));
+  });
+  // 每瓦一次「上线/发帖」：早班（上班前）与夜班（下班后）两簇
+  const wedges=[];
+  for(let i=0;i<N;i++){
+    const peak=i%13===5?14:(rnd(i+1,2)>.5?7:22);
+    const hour=(peak+(rnd(i+1,3)-.5)*6+24)%24;
+    const a0=-90+hour*15,sw=10+rnd(i+1,4)*34;
+    const r1=34+rnd(i+1,5)*100;
+    wedges.push([a0,sw,r1,hour,i]);
+  }
+  wedges.forEach(([a0,sw,r1,hour,i])=>{
+    const col=hour<8?W.FAINTDATA:hour<19?W.DATA2:W.DATA;
+    const w=el(s,'path',{d:sect(CX,CY,16,r1,a0,a0+sw),fill:col,
+      'fill-opacity':.17+rnd(i+1,6)*.15,class:'fade',
+      style:`animation-delay:${.2+i*.022}s`});
+    tip(w,`第 ${i+1} 次上线/发帖 — ${String(Math.floor(hour)).padStart(2,'0')}:${String(Math.floor(hour%1*60)).padStart(2,'0')}`);
+  });
+  // 三次冲上 Hacker News 首页的发布
+  [0,8,26].forEach((i,k)=>{
+    const [a0,sw,r1]=wedges[i];
+    const w=el(s,'path',{d:sect(CX,CY,16,r1,a0,a0+sw),fill:'none',
+      stroke:W.HERO,'stroke-width':1.5,class:'fade',style:`animation-delay:${1.2+k*.15}s`});
+    tip(w,`第 ${i+1} 次上线/发帖 — 冲上了 Hacker News 首页`);
+  });
+  el(s,'circle',{cx:CX,cy:CY,r:3,fill:W.DATA,class:'pop',style:'animation-delay:1.3s'});
+});
+})();
+
+/* ════ 图C · F5 tick rows ════
+   结构照搬 basics-gallery "tick rows"。1 tick = 10 次访问。
+   HERO 只给赢家渠道那一行。 */
+(()=>{
+const D=[['TWITTER / X',77],['GOOGLE',34],['邮件通讯',22],['GITHUB',13],['其他',9]];
+obsReveal('rows',s=>{
+  const y0=i=>34+i*36,X0=76,PX=1.9;
+  D.forEach(([name,v],i)=>{
+    const y=y0(i),hero=i===0;
+    txt(s,{x:68,y:y+3,'font-size':7.5,'font-weight':700,fill:W.MUT,'text-anchor':'end',
+      'letter-spacing':'.04em',class:'fade',style:`animation-delay:${i*.08}s`},name);
+    el(s,'line',{x1:X0,y1:y+8,x2:X0+80*PX,y2:y+8,stroke:W.GRID,'stroke-width':.6,
+      class:'fade',style:`animation-delay:${i*.08}s`});
+    for(let k=0;k<v;k++){
+      const x=X0+k*PX+PX/2,h=7+rnd(k+1,i+2)*5;
+      el(s,'line',{x1:x,y1:y+8,x2:x,y2:y+8-h,stroke:hero?W.HERO:W.DATA,'stroke-width':.9,
+        opacity:.55+rnd(k+3,i+5)*.45,class:'fade',style:`animation-delay:${i*.08+k*.008}s`});
+      if(k%10===9)el(s,'circle',{cx:x,cy:y+11.5,r:.7,fill:W.FAINTDATA,
+        class:'fade',style:`animation-delay:${i*.08+k*.008}s`});
+    }
+    const lab=txt(s,{x:X0+v*PX+8,y:y+3,'font-size':9.5,'font-weight':800,
+      fill:hero?W.HERO:W.DATA,class:'fade',style:`animation-delay:${.4+i*.08}s`},
+      (v*10>=1000?(v*10/1000).toFixed(1)+'k':v*10));
+    tip(lab,`${name} —— ${v*10} 次访问`);
+  });
+  txt(s,{x:134,y:204,'font-size':7,'font-weight':600,fill:W.FAINT,'text-anchor':'middle',
+    'letter-spacing':'.08em',class:'fade',style:'animation-delay:.9s'},
+    '一格 = 10 次访问 · 每一百次一个圆点');
+});
+})();
+
+/* ════ 图D · F11 tick gauge ════
+   结构照搬 basics-gallery "tick gauge"：一格 = 每 100 次访问中的 1 次。
+   9% 转化上墨，HERO 只给尖端珠 + 大数。 */
+(()=>{
+const GOAL=9;
+obsReveal('gauge',s=>{
+  const cx=100,cy=128,R0=62,A0=-195,SW=210;
+  for(let k=0;k<100;k++){
+    const a=A0+k/100*SW,inked=k<GOAL;
+    const len=inked?11+rnd(k+1,3)*5:4+rnd(k+1,7)*2;
+    const [x1,y1]=pol(cx,cy,R0,a),[x2,y2]=pol(cx,cy,R0+len,a);
+    el(s,'line',{x1,y1,x2,y2,stroke:inked?W.DATA:W.FAINTDATA,'stroke-width':inked?1:.6,
+      class:'fade',style:`animation-delay:${k*.012}s`});
+  }
+  [25,50,75,100].forEach(m=>{
+    const a=A0+m/100*SW,[dx,dy]=pol(cx,cy,R0-6,a),[tx2,ty2]=pol(cx,cy,R0-16,a);
+    el(s,'circle',{cx:dx,cy:dy,r:.9,fill:W.DATA2,class:'fade',style:'animation-delay:.8s'});
+    txt(s,{x:tx2,y:ty2+2.5,'font-size':6,'font-weight':600,fill:W.FAINT,'text-anchor':'middle',
+      class:'fade',style:'animation-delay:.85s'},m);
+  });
+  const aT=A0+GOAL/100*SW,[ex,ey]=pol(cx,cy,R0+17,aT);
+  el(s,'circle',{cx:ex,cy:ey,r:2.4,fill:W.HERO,class:'pop',style:'animation-delay:1.1s'});
+  const num=txt(s,{x:cx,y:cy-2,'font-size':26,'font-weight':800,fill:W.HERO,'text-anchor':'middle',
+    class:'fade',style:'animation-delay:1s'},'9%');
+  tip(num,'每 100 位访客中有 9 位完成注册');
+  txt(s,{x:cx,y:cy+13,'font-size':7,'font-weight':600,fill:W.MUT,'text-anchor':'middle',
+    'letter-spacing':'.08em',class:'fade',style:'animation-delay:1.05s'},'转化率');
+  txt(s,{x:100,y:202,'font-size':7,'font-weight':600,fill:W.FAINT,'text-anchor':'middle',
+    'letter-spacing':'.08em',class:'fade',style:'animation-delay:1.2s'},
+    '一格 = 每 100 次访问中的 1 次 · 上墨 = 已转化');
+});
+})();
+
+</script>
+<script>
+/* ── fit-width：视口比版心窄时整页等比缩小，不重排 ──
+   报告是一张版面，不是响应式网页。窄屏塌成单栏会得到一个
+   设计时不存在的版式；等比缩小则保留构图，跟 PDF 的「适合宽度」一致。
+   机制同模板 11。 */
+(()=>{
+  const sheet=document.querySelector('.sheet');
+  const W=1080;
+  const fit=()=>{
+    const cs=getComputedStyle(document.body);
+    const avail=document.documentElement.clientWidth
+      -parseFloat(cs.paddingLeft)-parseFloat(cs.paddingRight);
+    sheet.style.zoom=Math.min(1,avail/W);
+  };
+  fit();
+  addEventListener('resize',fit);
+})();
+</script>
+</body>
+</html>

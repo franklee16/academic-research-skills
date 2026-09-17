@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "case_id": "nature-violin-heatmap",
+  "status": "oa_reference_identified",
+  "original_sha256": "645307a96c75082717752eddf36aedbbe7472b99824709f8693e4471809ad323",
+  "figure": "Fig. 5",
+  "doi": "10.1038/s41467-019-09513-2",
+  "coverage": [
+    "violin",
+    "boxplot",
+    "heatmap",
+    "Venn"
+  ],
+  "scope": "Representative OA figure and panel crops only; no numeric values are accepted from this reference report.",
+  "limitations": [
+    "A routed or cropped panel is not a validated extraction.",
+    "Numeric support requires a dedicated coordinate model, calibration, overlay, and type-specific benchmark."
+  ]
+}

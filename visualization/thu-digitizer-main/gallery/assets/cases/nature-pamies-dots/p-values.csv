@@ -1,0 +1,22 @@
+,Variable 1,Variable 2,p-value,,Variable 1,Variable 2,p-value,,Variable 1,Variable 2,p-value,,Variable 1,Variable 2,p-value,,Variable 1,Variable 2,p-value,,Variable 1,Variable 2,p-value
+Flights of stairs climbed,Jan-Apr 2015,May-Aug 2015,0.39243,Walking and running distance,Jan-Apr 2015,May-Aug 2015,0.42311,Steps taken,Jan-Apr 2015,May-Aug 2015,0.61043,Sleep quality,Jan-Apr 2015,May-Aug 2015,0.98628,,,,,,,,
+,,Sep–Dec 2015,0.86018,,,Sep–Dec 2015,0.48499,,,Sep–Dec 2015,0.60795,,,Sep–Dec 2015,0.36887,,,,,,,,
+,,Jan–Apr 2016,0.81539,,,Jan–Apr 2016,0.14371,,,Jan–Apr 2016,0.41266,,,Jan–Apr 2016,0.95426,,,,,,,,
+,,May–Aug 2016,0.10147,,,May–Aug 2016,0.26237,,,May–Aug 2016,0.16238,,,May–Aug 2016,0.00378,,,,,,,,
+,,Sep–Dec 2016,0.17594,,,Sep–Dec 2016,0.00019,,,Sep–Dec 2016,0.00030,,,Sep–Dec 2016,0.23702,,,,,,,,
+,May-Aug 2015,Sep–Dec 2015,0.49697,,May-Aug 2015,Sep–Dec 2015,0.70476,,May-Aug 2015,Sep–Dec 2015,0.76882,,May-Aug 2015,Sep–Dec 2015,0.72191,,,,,,,,
+,,Jan–Apr 2016,0.19782,,,Jan–Apr 2016,0.11707,,,Jan–Apr 2016,0.42063,,,Jan–Apr 2016,0.95625,,,,,,,,
+,,May–Aug 2016,0.55541,,,May–Aug 2016,0.19610,,,May–Aug 2016,0.14713,,,May–Aug 2016,0.30371,,,,,,,,
+,,Sep–Dec 2016,0.15901,,,Sep–Dec 2016,0.00070,,,Sep–Dec 2016,0.00032,,,Sep–Dec 2016,0.64777,,,,,,,,
+,Sep–Dec 2015,Jan–Apr 2016,0.96353,,Sep–Dec 2015,Jan–Apr 2016,0.35951,,Sep–Dec 2015,Jan–Apr 2016,0.70873,,Sep–Dec 2015,Jan–Apr 2016,0.63345,,,,,,,,
+,,May–Aug 2016,0.26771,,,May–Aug 2016,0.15120,,,May–Aug 2016,0.10106,,,May–Aug 2016,0.04929,,,,,,,,
+,,Sep–Dec 2016,0.52390,,,Sep–Dec 2016,0.00875,,,Sep–Dec 2016,0.00676,,,Sep–Dec 2016,0.07832,,,,,,,,
+,Jan–Apr 2016,May–Aug 2016,0.18649,,Jan–Apr 2016,May–Aug 2016,0.14496,,Jan–Apr 2016,May–Aug 2016,0.10258,,Jan–Apr 2016,May–Aug 2016,0.03180,,,,,,,,
+,,Sep–Dec 2016,0.61290,,,Sep–Dec 2016,0.00229,,,Sep–Dec 2016,0.00294,,,Sep–Dec 2016,0.49087,,,,,,,,
+,May–Aug 2016,Sep–Dec 2016,0.02195,,May–Aug 2016,Sep–Dec 2016,0.66293,,May–Aug 2016,Sep–Dec 2016,0.58643,,May–Aug 2016,Sep–Dec 2016,0.26934,,,,,,,,
+Jan-Apr 2015,Flights of stairs climbed,Walking and running distance,0.01413,May–Aug 2015,Flights of stairs climbed,Walking and running distance,0.01618,Sep–Dec 2015,Flights of stairs climbed,Walking and running distance,0.04668,Jan–Apr 2016,Flights of stairs climbed,Walking and running distance,0.03519,May–Aug 2016,Flights of stairs climbed,Walking and running distance,0.47206,Sep–Dec 2016,Flights of stairs climbed,Walking and running distance,0.03005
+,,Steps taken,0.01562,,,Steps taken,0.01711,,,Steps taken,0.07431,,,Steps taken,0.12757,,,Steps taken,0.52181,,,Steps taken,0.01584
+,,Sleep quality,0.04022,,,Sleep quality,0.96160,,,Sleep quality,0.11360,,,Sleep quality,0.04017,,,Sleep quality,0.94607,,,Sleep quality,0.00605
+,Walking and running distance,Steps taken,0.04599,,Walking and running distance,Steps taken,0.01645,,Walking and running distance,Steps taken,0.00274,,Walking and running distance,Steps taken,0.00261,,Walking and running distance,Steps taken,0.32288,,Walking and running distance,Steps taken,0.00028
+,,Sleep quality,0.00002,,,Sleep quality,0.00212,,,Sleep quality,0.00093,,,Sleep quality,0.00016,,,Sleep quality,0.51386,,,Sleep quality,0.01400
+,Steps taken,Sleep quality,0.00009,,Steps taken,Sleep quality,0.00388,,Steps taken,Sleep quality,0.00083,,Steps taken,Sleep quality,0.00035,,Steps taken,Sleep quality,0.57491,,Steps taken,Sleep quality,0.05268

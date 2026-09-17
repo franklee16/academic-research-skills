@@ -1,0 +1,85 @@
+{
+  "schema_version": 1,
+  "case_id": "nature-27341-fig1",
+  "status": "visible_geometry_candidate",
+  "article_url": "https://www.nature.com/articles/s41467-021-27341-1",
+  "figure": "Fig. 1",
+  "input": {
+    "sha256": "8074417e4afa6a247e8d6b41e6fe86ad900abdec33748a88dba73da4df3f6dac",
+    "dimensions": [
+      1999,
+      1579
+    ]
+  },
+  "visible_extraction": {
+    "status": "printed_counts_and_original_pixel_geometry",
+    "algorithm_version": "lattice-composite-original-pixel-v2",
+    "deterministic_run_id": "9e351b18adf48509",
+    "count_labels": 30,
+    "set_rows": 19,
+    "membership_grid_cells": 570,
+    "active_membership_nodes": 42,
+    "ambiguous_membership_nodes": 0,
+    "node_support_rule": "original-pixel patch foreground fraction; active >= 0.4, inactive <= 0.05, middle range refused",
+    "node_support_values": [
+      0.0,
+      0.711111,
+      0.715556,
+      0.72,
+      0.724444,
+      0.728889,
+      0.733333,
+      0.737778,
+      0.746667
+    ],
+    "top_bar_geometry_vs_printed_count_rmse": 0.2873933199729079,
+    "top_bar_geometry_vs_printed_count_max_abs_error": 0.6425460379382457,
+    "horizontal_tick_centres_px": [
+      31.5,
+      105.0,
+      178.5,
+      252.0,
+      325.5,
+      399.0
+    ],
+    "horizontal_tick_values": [
+      1250,
+      1000,
+      750,
+      500,
+      250,
+      0
+    ],
+    "horizontal_tick_calibration_rmse": 1.4676907639293468e-13,
+    "set_total_left_bar_mae": 0.895452918009267,
+    "set_total_left_bar_max_abs_error": 2.823129251700834,
+    "set_total_validation_status": "all_rows_within_configured_pixel_error"
+  },
+  "source_data": {
+    "status": "official_source_available_not_panel_mapped",
+    "path": null,
+    "available_locally_during_build": true,
+    "url": "https://static-content.springer.com/esm/art%3A10.1038%2Fs41467-021-27341-1/MediaObjects/41467_2021_27341_MOESM10_ESM.xlsx",
+    "mapping_note": "Retained separately; it does not replace the primary image-visible extraction."
+  },
+  "coverage": {
+    "visible_records": 49,
+    "intersections": 30,
+    "set_rows": 19,
+    "membership_grid_cells": 570,
+    "active_membership_nodes": 42
+  },
+  "validation": {
+    "status": "original_pixel_geometry_validated",
+    "top_bar_rmse": 0.2873933199729079,
+    "top_bar_max_abs_error": 0.6425460379382457,
+    "set_total_left_bar_mae": 0.895452918009267,
+    "set_total_left_bar_max_abs_error": 2.823129251700834
+  },
+  "limitations": [
+    "Printed intersection counts and row/tumour labels are transcribed from visible text.",
+    "Memberships are accepted only at raster-derived centres with full dark-node support.",
+    "Set totals are sums of visible intersections and are independently checked against left-bar geometry.",
+    "Underlying mutation records and hidden intersections are not inferred."
+  ]
+}

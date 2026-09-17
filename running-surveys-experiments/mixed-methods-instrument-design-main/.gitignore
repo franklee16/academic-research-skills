@@ -1,0 +1,14 @@
+.DS_Store
+.env
+.env.*
+!.env.example
+
+__pycache__/
+*.py[cod]
+node_modules/
+
+internal/
+output/
+*.log
+*.wjx.jsonl
+*wjx-manifest*.json

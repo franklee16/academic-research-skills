@@ -1,0 +1,46 @@
+{
+  "status": "visible_geometry_extracted",
+  "route": "candidate_raster_bubble_matrix",
+  "panel_mapping": "Fig. 6a rows, columns, marker centres, visible colours, and visible radii are measured from the retained panel raster. The image-extracted data table contains no author source values.",
+  "rows": 208,
+  "pixel_extraction": {
+    "grid_bounds_px": [
+      347,
+      5,
+      1096,
+      296
+    ],
+    "grid_shape": [
+      8,
+      26
+    ],
+    "candidate_components": 207,
+    "visible_nodes": 207,
+    "unmatched_cells": [
+      {
+        "row": "DC_C3_LAMP3.Treg_C4_TNFRSF4",
+        "column": "CXCL10_CXCR3"
+      }
+    ],
+    "unassigned_components": 0,
+    "colour_mask": {
+      "minimum_chroma": 12,
+      "maximum_minimum_rgb": 251
+    },
+    "node_matching": {
+      "maximum_distance_px": 10.946923076923076,
+      "rule": "nearest categorical-grid centre"
+    }
+  },
+  "coverage": {
+    "categorical_grid_slots": 208,
+    "visible_raster_markers": 207,
+    "unmatched_grid_slots": 1
+  },
+  "limitations": [
+    "The 207 separable raster markers support only their visible centre, colour and radius. No hidden molecular value or significance value is inferred.",
+    "One categorical grid slot has no separable coloured mark in the retained raster and is retained as an explicitly unobserved image location.",
+    "This is a candidate categorical bubble-matrix route. The locally verified geometry improves the recreation but does not recover hidden source observations."
+  ],
+  "schema_version": 1
+}

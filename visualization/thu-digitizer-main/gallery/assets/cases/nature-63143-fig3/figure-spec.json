@@ -1,0 +1,331 @@
+{
+  "schema_version": 1,
+  "status": "ready_for_assisted_extraction",
+  "source": {
+    "sha256": "bf7d35b601333f68e4b7e4e573241d1aed27bddcc283459d73bfa4a5d1e998de",
+    "media_kind": "pdf",
+    "coordinate_space": "pdf_pt",
+    "measurement_space": "pdf_page_points",
+    "page": 4
+  },
+  "panels": [
+    {
+      "panel_id": "median_left",
+      "bounds": [
+        88.0,
+        45.0,
+        286.0,
+        251.0
+      ],
+      "bounds_verification": "verified",
+      "plot_bounds": [
+        96.904,
+        51.201,
+        270.581,
+        224.8521
+      ],
+      "plot_bounds_verification": "verified",
+      "chart_type": "bar_with_line_overlay",
+      "chart_type_verification": "verified",
+      "coordinate_model": "categorical_value",
+      "coordinate_model_verification": "verified",
+      "axes": [
+        {
+          "axis_id": "x_year",
+          "scale": "categorical",
+          "verification": "verified",
+          "anchors": [
+            {
+              "pixel": 106.894,
+              "value": "2012"
+            },
+            {
+              "pixel": 122.264,
+              "value": "2013"
+            },
+            {
+              "pixel": 137.633,
+              "value": "2014"
+            },
+            {
+              "pixel": 153.003,
+              "value": "2015"
+            },
+            {
+              "pixel": 168.373,
+              "value": "2016"
+            },
+            {
+              "pixel": 183.742,
+              "value": "2017"
+            },
+            {
+              "pixel": 199.112,
+              "value": "2018"
+            },
+            {
+              "pixel": 214.481,
+              "value": "2019"
+            },
+            {
+              "pixel": 229.851,
+              "value": "2020"
+            },
+            {
+              "pixel": 245.221,
+              "value": "2021"
+            },
+            {
+              "pixel": 260.591,
+              "value": "2022"
+            }
+          ]
+        },
+        {
+          "axis_id": "bar_y_left",
+          "scale": "linear",
+          "verification": "verified",
+          "anchors": [
+            {
+              "pixel": 224.8521,
+              "value": 0.0
+            },
+            {
+              "pixel": 51.201,
+              "value": 25.0
+            }
+          ],
+          "unit": "$/MWh"
+        },
+        {
+          "axis_id": "line_y_right",
+          "scale": "linear",
+          "verification": "verified",
+          "anchors": [
+            {
+              "pixel": 224.8521,
+              "value": 0.0
+            },
+            {
+              "pixel": 51.201,
+              "value": 70.0
+            }
+          ],
+          "unit": "$/MWh"
+        }
+      ],
+      "series": [
+        {
+          "series_id": "median_link_mean_rt_transmission_market_value",
+          "grammar": "vector_rectangle",
+          "fill": "#759adc",
+          "verification": "verified"
+        },
+        {
+          "series_id": "median_wholesale_rt_electricity_price",
+          "grammar": "vector_path_with_marker",
+          "line_fill": "#7f7f7f",
+          "marker_ring_fills": [
+            "#ffffff",
+            "#bacdee"
+          ],
+          "verification": "verified"
+        }
+      ],
+      "mark_grammars": [
+        "vector_rectangle",
+        "vector_path",
+        "vector_marker",
+        "vector_outline",
+        "text"
+      ],
+      "route": {
+        "route_id": "pdf_vector_assisted",
+        "maturity": "assisted_candidate",
+        "implementation": "scripts/inspect_pdf_vectors.py",
+        "automated_extraction": false
+      },
+      "required_confirmations": [
+        "page",
+        "panel_roi",
+        "axis_transform",
+        "path_to_data_verification",
+        "legend_exclusions"
+      ],
+      "confirmations": {
+        "page": "verified",
+        "panel_roi": "verified",
+        "axis_transform": "verified",
+        "path_to_data_verification": "verified",
+        "legend_exclusions": "not_applicable"
+      },
+      "recoverable": "Visible annual bar endpoints and visible annual line-marker centres for 2012-2022.",
+      "non_recoverable": "Underlying hourly observations, hidden link-level values, and unplotted source precision."
+    },
+    {
+      "panel_id": "mean_right",
+      "bounds": [
+        323.0,
+        45.0,
+        527.0,
+        251.0
+      ],
+      "bounds_verification": "verified",
+      "plot_bounds": [
+        337.584,
+        51.201,
+        511.261,
+        224.8521
+      ],
+      "plot_bounds_verification": "verified",
+      "chart_type": "bar_with_line_overlay",
+      "chart_type_verification": "verified",
+      "coordinate_model": "categorical_value",
+      "coordinate_model_verification": "verified",
+      "axes": [
+        {
+          "axis_id": "x_year",
+          "scale": "categorical",
+          "verification": "verified",
+          "anchors": [
+            {
+              "pixel": 347.575,
+              "value": "2012"
+            },
+            {
+              "pixel": 362.944,
+              "value": "2013"
+            },
+            {
+              "pixel": 378.314,
+              "value": "2014"
+            },
+            {
+              "pixel": 393.684,
+              "value": "2015"
+            },
+            {
+              "pixel": 409.054,
+              "value": "2016"
+            },
+            {
+              "pixel": 424.423,
+              "value": "2017"
+            },
+            {
+              "pixel": 439.793,
+              "value": "2018"
+            },
+            {
+              "pixel": 455.163,
+              "value": "2019"
+            },
+            {
+              "pixel": 470.532,
+              "value": "2020"
+            },
+            {
+              "pixel": 485.902,
+              "value": "2021"
+            },
+            {
+              "pixel": 501.271,
+              "value": "2022"
+            }
+          ]
+        },
+        {
+          "axis_id": "bar_y_left",
+          "scale": "linear",
+          "verification": "verified",
+          "anchors": [
+            {
+              "pixel": 224.8521,
+              "value": 0.0
+            },
+            {
+              "pixel": 51.201,
+              "value": 25.0
+            }
+          ],
+          "unit": "$/MWh"
+        },
+        {
+          "axis_id": "line_y_right",
+          "scale": "linear",
+          "verification": "verified",
+          "anchors": [
+            {
+              "pixel": 224.8521,
+              "value": 0.0
+            },
+            {
+              "pixel": 51.201,
+              "value": 70.0
+            }
+          ],
+          "unit": "$/MWh"
+        }
+      ],
+      "series": [
+        {
+          "series_id": "mean_link_mean_rt_transmission_market_value",
+          "grammar": "vector_rectangle",
+          "fill": "#759adc",
+          "verification": "verified"
+        },
+        {
+          "series_id": "mean_wholesale_rt_electricity_price",
+          "grammar": "vector_path_with_marker",
+          "line_fill": "#7f7f7f",
+          "marker_ring_fills": [
+            "#ffffff",
+            "#bacdee"
+          ],
+          "verification": "verified"
+        }
+      ],
+      "mark_grammars": [
+        "vector_rectangle",
+        "vector_path",
+        "vector_marker",
+        "vector_outline",
+        "text"
+      ],
+      "route": {
+        "route_id": "pdf_vector_assisted",
+        "maturity": "assisted_candidate",
+        "implementation": "scripts/inspect_pdf_vectors.py",
+        "automated_extraction": false
+      },
+      "required_confirmations": [
+        "page",
+        "panel_roi",
+        "axis_transform",
+        "path_to_data_verification",
+        "legend_exclusions"
+      ],
+      "confirmations": {
+        "page": "verified",
+        "panel_roi": "verified",
+        "axis_transform": "verified",
+        "path_to_data_verification": "verified",
+        "legend_exclusions": "not_applicable"
+      },
+      "recoverable": "Visible annual bar endpoints and visible annual line-marker centres for 2012-2022.",
+      "non_recoverable": "Underlying hourly observations, hidden link-level values, and unplotted source precision."
+    }
+  ],
+  "evidence_contract": {
+    "required": [
+      "input_hash",
+      "panel_and_plot_bounds",
+      "calibration_anchors",
+      "immutable_extraction_csv",
+      "json_report",
+      "overlay_or_recreation",
+      "confidence_and_refusal_reasons"
+    ],
+    "source_data_role": "independent_validation_only"
+  }
+}

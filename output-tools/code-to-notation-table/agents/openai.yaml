@@ -1,0 +1,7 @@
+interface:
+  display_name: "Code to Notation Table"
+  short_description: "Create Word equation-symbol tables from code variables."
+  default_prompt: "Use $code-to-notation-table to turn this program's variables into a Word .docx notation table with editable equation symbols."
+
+policy:
+  allow_implicit_invocation: true

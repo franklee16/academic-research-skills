@@ -1,0 +1,260 @@
+{
+  "schema_version": 1,
+  "case_id": "natcom-s41467-020-20563-9-fig6f",
+  "status": "candidate",
+  "claim": "case_specific_deterministic_polar_histogram_extraction",
+  "registered_route": "unsupported_coordinate_route",
+  "registered_route_status": "not_automated",
+  "numeric_output_authorized_by_registered_route": false,
+  "extraction_strategy": "deterministic_case_specific_candidate",
+  "source_contract": {
+    "image_file": "figure6-original.png",
+    "image_sha256": "4ed78ae7114310da1e3ca9178048a7fdcee96482076c06bd9d610960d384f16b",
+    "width_px": 1798,
+    "height_px": 2550,
+    "measurement_space": "original_raster_pixels",
+    "resampled_for_measurement": false,
+    "image_url": "https://media.springernature.com/full/springer-static/image/art%3A10.1038%2Fs41467-020-20563-9/MediaObjects/41467_2020_20563_Fig6_HTML.png",
+    "figure_url": "https://www.nature.com/articles/s41467-020-20563-9/figures/6",
+    "article_url": "https://www.nature.com/articles/s41467-020-20563-9",
+    "retrieval_date": "2026-07-21"
+  },
+  "panel_crop_for_review": {
+    "file": "panel-f-crop.png",
+    "bounds_original_pixels": [
+      0,
+      2240,
+      1798,
+      2550
+    ],
+    "used_for_measurement": false
+  },
+  "visible_grammar": {
+    "panel_count": 3,
+    "chart_type": "semicircular_polar_histogram",
+    "coordinate_model": "elliptical_rendering_of_linear_polar_coordinates",
+    "angle_range_deg": [
+      0,
+      180
+    ],
+    "bin_width_deg": 18,
+    "bins_per_panel": 10,
+    "series_per_panel": 1,
+    "radial_axis_label_present": false,
+    "radial_semantics": "Displayed histogram frequency/count inferred from the polar-histogram grammar; no explicit radial-axis unit label is printed.",
+    "caption_direction_mapping": {
+      "0_to_90_deg": "inward-pointing force",
+      "90_to_180_deg": "outward-pointing force"
+    }
+  },
+  "recoverable_representation": "Visible 18-degree bin intervals and calibrated outer radial chord values.",
+  "explicitly_non_recoverable": [
+    "Original force-vector observations within each bin",
+    "Any unprinted physical unit for the radial histogram scale",
+    "Exact author-side bin counts beyond raster precision"
+  ],
+  "panels": [
+    {
+      "panel_id": "D30",
+      "patch_diameter_um": 30,
+      "bounds_original_pixels": [
+        75,
+        2295,
+        470,
+        2491
+      ],
+      "center_original_pixels": [
+        287.5,
+        2488.5
+      ],
+      "calibration": {
+        "x_px_per_radial_unit": 0.07112249133537989,
+        "y_px_per_radial_unit": 0.05822343942807478,
+        "radial_units_per_x_px": 14.060249876294055,
+        "radial_units_per_y_px": 17.175213450509585,
+        "median_absolute_calibration_residual": 9.895374651596967,
+        "rings": [
+          {
+            "radial_value": 1000.0,
+            "x_radius_px": 71.12249133537989,
+            "y_radius_px": 58.22343942807478,
+            "median_fitted_value": 1001.5417591430745,
+            "median_absolute_residual": 9.73624846023722,
+            "retained_grid_pixels": 301,
+            "verification_status": "verified_from_visible_label_and_grid_ring"
+          },
+          {
+            "radial_value": 2000.0,
+            "x_radius_px": 142.24498267075978,
+            "y_radius_px": 116.44687885614955,
+            "median_fitted_value": 1999.8435069141256,
+            "median_absolute_residual": 9.926895678348956,
+            "retained_grid_pixels": 564,
+            "verification_status": "verified_from_visible_label_and_grid_ring"
+          }
+        ],
+        "calibration_model": "elliptical_linear_radial",
+        "formula": "r = sqrt(((x-cx)/sx)^2 + ((cy-y)/sy)^2)"
+      }
+    },
+    {
+      "panel_id": "D15",
+      "patch_diameter_um": 15,
+      "bounds_original_pixels": [
+        580,
+        2295,
+        945,
+        2491
+      ],
+      "center_original_pixels": [
+        764.5,
+        2487.5
+      ],
+      "calibration": {
+        "x_px_per_radial_unit": 0.14962799648651923,
+        "y_px_per_radial_unit": 0.12219916043670088,
+        "radial_units_per_x_px": 6.683241261538212,
+        "radial_units_per_y_px": 8.183362278646747,
+        "median_absolute_calibration_residual": 4.80624301074522,
+        "rings": [
+          {
+            "radial_value": 500.0,
+            "x_radius_px": 74.81399824325962,
+            "y_radius_px": 61.09958021835044,
+            "median_fitted_value": 500.04917455198654,
+            "median_absolute_residual": 4.542898341882392,
+            "retained_grid_pixels": 316,
+            "verification_status": "verified_from_visible_label_and_grid_ring"
+          },
+          {
+            "radial_value": 1000.0,
+            "x_radius_px": 149.62799648651924,
+            "y_radius_px": 122.19916043670088,
+            "median_fitted_value": 999.8073675372448,
+            "median_absolute_residual": 4.9065031537977575,
+            "retained_grid_pixels": 705,
+            "verification_status": "verified_from_visible_label_and_grid_ring"
+          }
+        ],
+        "calibration_model": "elliptical_linear_radial",
+        "formula": "r = sqrt(((x-cx)/sx)^2 + ((cy-y)/sy)^2)"
+      }
+    },
+    {
+      "panel_id": "D10",
+      "patch_diameter_um": 10,
+      "bounds_original_pixels": [
+        1030,
+        2295,
+        1395,
+        2491
+      ],
+      "center_original_pixels": [
+        1211.5,
+        2488.5
+      ],
+      "calibration": {
+        "x_px_per_radial_unit": 0.5077236903918215,
+        "y_px_per_radial_unit": 0.415700084935776,
+        "radial_units_per_x_px": 1.9695752215703743,
+        "radial_units_per_y_px": 2.4055804562909726,
+        "median_absolute_calibration_residual": 1.3616079712098497,
+        "rings": [
+          {
+            "radial_value": 100.0,
+            "x_radius_px": 50.77236903918215,
+            "y_radius_px": 41.570008493577596,
+            "median_fitted_value": 100.41759184895146,
+            "median_absolute_residual": 1.3255411852497616,
+            "retained_grid_pixels": 163,
+            "verification_status": "verified_from_visible_label_and_grid_ring"
+          },
+          {
+            "radial_value": 200.0,
+            "x_radius_px": 101.5447380783643,
+            "y_radius_px": 83.14001698715519,
+            "median_fitted_value": 200.0468903829388,
+            "median_absolute_residual": 1.4120207488259666,
+            "retained_grid_pixels": 438,
+            "verification_status": "verified_from_visible_label_and_grid_ring"
+          },
+          {
+            "radial_value": 300.0,
+            "x_radius_px": 152.31710711754647,
+            "y_radius_px": 124.7100254807328,
+            "median_fitted_value": 300.0005183803003,
+            "median_absolute_residual": 1.3483120497976984,
+            "retained_grid_pixels": 699,
+            "verification_status": "verified_from_visible_label_and_grid_ring"
+          }
+        ],
+        "calibration_model": "elliptical_linear_radial",
+        "formula": "r = sqrt(((x-cx)/sx)^2 + ((cy-y)/sy)^2)"
+      }
+    }
+  ],
+  "extraction_parameters": {
+    "series_base_rgb": [
+      11,
+      114,
+      185
+    ],
+    "series_colour_distance_max": 20.0,
+    "interior_angular_half_width_deg": 4.0,
+    "outer_cluster_threshold_fraction": 0.7,
+    "uncertainty_formula": "2 * median absolute deviation of retained outer-chord estimates + median absolute radial calibration residual"
+  },
+  "coverage_ledger": {
+    "declared_slots": 30,
+    "candidate_slots_with_visible_support": 30,
+    "reason_code_counts": {
+      "visible_geometry_supported": 30
+    }
+  },
+  "outputs": {
+    "data_csv": "data.csv",
+    "derived_direction_summary_csv": "derived-direction-summary.csv",
+    "report_json": "report.json",
+    "overlay_original_canvas": "overlay.png",
+    "overlay_review_crop": "panel-f-overlay.png",
+    "source_validation_csv": "source-validation.csv",
+    "source_validation_report": "source-validation-report.json"
+  },
+  "source_validation": {
+    "status": "metric_absent_in_source_workbook",
+    "paired_bins": 0,
+    "visible_digitized_bins": 30,
+    "source_workbook": "official-source-data.xlsx",
+    "source_workbook_sha256": "a236a6b4bdc68d2aad2360b9d1e143350ec7bab3f6efe4e9ccbcabc449f062d5",
+    "source_data_url": "https://static-content.springer.com/esm/art%3A10.1038%2Fs41467-020-20563-9/MediaObjects/41467_2020_20563_MOESM14_ESM.xlsx",
+    "sheet_count": 60,
+    "figure_6f_sheet_present": false,
+    "nearby_sheets_present": [
+      "Figure 6d",
+      "Figure 6e"
+    ],
+    "mapping_evidence": "The official figure caption says Source Data for c-f are provided, but the downloaded workbook has Figure 6d and Figure 6e sheets and no Figure 6f sheet or documented polar-bin mapping.",
+    "digitized_values_modified_from_source": false
+  },
+  "limitations": [
+    "General polar extraction is not implemented in the registered THU Digitizer route.",
+    "The bars and calibration grid are only a few pixels thick; uncertainty is approximate.",
+    "The official workbook does not expose a verifiable Figure 6f polar-bin table."
+  ],
+  "public_gallery": {
+    "case_id": "nature-20563-fig6f",
+    "primary_csv": "data.csv",
+    "primary_csv_source": "image_derived_only",
+    "original_asset": "original.png",
+    "original_asset_role": "review_crop_not_measurement_source",
+    "measurement_source": "measurement-source.png",
+    "overlay_asset": "overlay.png",
+    "recreation_asset": "recreated.png",
+    "recreation_driven_by": "data.csv",
+    "source_validation_separate": true,
+    "original_and_recreation_canvas": [
+      1798,
+      310
+    ]
+  }
+}

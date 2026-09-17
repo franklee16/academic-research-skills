@@ -1,0 +1,98 @@
+{
+  "schema_version": 1,
+  "status": "needs_verified_configuration",
+  "source": {
+    "input_file": "F:\\AI\\thu-digitizer\\gallery\\assets\\cases\\nature-pamies-dots\\original-hi.jpg",
+    "sha256": "f5e9b9b9467427d109b72d23d5944b74b5c70430b5688516e47e6669fe65bc99",
+    "media_kind": "raster",
+    "coordinate_space": "pixel",
+    "width": 1200,
+    "height": 793,
+    "page": null
+  },
+  "panels": [
+    {
+      "panel_id": "panel-1",
+      "bounds": [
+        0.0,
+        0.0,
+        1200,
+        793
+      ],
+      "bounds_verification": "proposed",
+      "plot_bounds": [
+        0.0,
+        0.0,
+        1200,
+        793
+      ],
+      "plot_bounds_verification": "proposed",
+      "chart_type": "bar",
+      "chart_type_verification": "user_provided",
+      "coordinate_model": "categorical_value",
+      "coordinate_model_verification": "proposed",
+      "axes": [
+        {
+          "axis_id": "category",
+          "orientation": "category",
+          "scale": "categorical",
+          "verification": "missing",
+          "anchors": []
+        },
+        {
+          "axis_id": "value",
+          "orientation": "value",
+          "scale": "linear",
+          "verification": "missing",
+          "anchors": []
+        }
+      ],
+      "series": [],
+      "mark_grammars": [
+        "rectangle",
+        "stack_segment",
+        "error_interval"
+      ],
+      "route": {
+        "route_id": "raster_bar_candidate",
+        "maturity": "candidate",
+        "implementation": "scripts/candidate_digitize_bar_chart.py",
+        "automated_extraction": true
+      },
+      "required_confirmations": [
+        "panel_roi",
+        "plot_bounds",
+        "value_axis",
+        "orientation",
+        "layout",
+        "category_centers",
+        "series_colors",
+        "legend_exclusions"
+      ],
+      "confirmations": {
+        "panel_roi": "missing",
+        "plot_bounds": "missing",
+        "value_axis": "missing",
+        "orientation": "missing",
+        "layout": "missing",
+        "category_centers": "missing",
+        "series_colors": "missing",
+        "legend_exclusions": "missing"
+      },
+      "recoverable": "Visible rectangle endpoints/segments and separately visible error intervals.",
+      "non_recoverable": "Hidden samples, zero/occluded segments, and unverified SD/SEM/CI semantics."
+    }
+  ],
+  "evidence_contract": {
+    "required": [
+      "input_hash",
+      "panel_and_plot_bounds",
+      "calibration_anchors",
+      "immutable_extraction_csv",
+      "json_report",
+      "overlay_or_recreation",
+      "confidence_and_refusal_reasons"
+    ],
+    "source_data_role": "independent_validation_only"
+  }
+}

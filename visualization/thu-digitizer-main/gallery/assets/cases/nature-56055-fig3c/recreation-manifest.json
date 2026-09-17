@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "status": "rendered",
+  "run_id": "line-recreation-f15e4f9e64a16310",
+  "identity": {
+    "renderer_version": "exact_canvas_line_recreation_v0.1.0",
+    "implementation_sha256": "a31ccad74ddb4e422acd623ccba424c0dcdb56fa5f21cea2d6063f2d00e87859",
+    "spec_sha256": "f8bb8458982081cf1985932e443f046e8a2ce35ad2dc4adb719bcb1d4184cdb9",
+    "data": [
+      [
+        "marker-line-evidence/rigid/data.csv",
+        "98fd781f7a3e15b793051fb6bdf201104bb1bdc9c3266346497ceccc506f3e2a"
+      ],
+      [
+        "marker-line-evidence/spontaneous_curvature/data.csv",
+        "5a0ac7cdb24b55397b29048a14e14bf2b50c1ffee23821afcfe8a9314e59340a"
+      ],
+      [
+        "marker-line-evidence/surface_reconstruction/data.csv",
+        "805f5107a2011e279570daf16bad6dd6e9b28b516f95ecba65d5ac4dedd20681"
+      ]
+    ]
+  },
+  "canvas": {
+    "width": 1495,
+    "height": 1278,
+    "coordinate_space": "exact_output_pixels"
+  },
+  "source_raster_embedded": false,
+  "artifacts": {
+    "png": "recreated.png",
+    "png_3x": "recreated-3x.png",
+    "svg": "recreated.svg",
+    "pdf": "recreated.pdf"
+  }
+}

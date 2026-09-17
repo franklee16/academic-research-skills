@@ -1,0 +1,1563 @@
+--- PDF p37 ---
+Chapter 3
+Making Regression Make Sense
+’Let us think the unthinkable, let us do the undoable.
+Let us prepare to grapple with the ine¤able itself,
+and see if we may not e¤ it after all.’
+Douglas Adams, Dirk Gently’s Holistic Detective Agency (1990)
+Angrist recounts:
+I ran my …rst regression in the summer of 1979 between my freshman and sophomore years
+as a student at Oberlin College. I was working as a research assistant for Allan Meltzer and
+Scott Richard, faculty members at Carnegie-Mellon University, near my house in Pittsburgh. I
+was still mostly interested in a career in special education, and had planned to go back to work
+as an orderly in a state mental hospital, my previous summer job. But Econ 101 had got me
+thinking, and I could also see that at the same wage rate, a research assistant’s hours and working
+conditions were better than those of a hospital orderly.
+My research assistant duties included
+data collection and regression analysis, though I did not understand regression or even statistics
+at the time.
+The paper I was working on that summer (Meltzer and Richard, 1983), is an attempt to
+link the size of governments in democracies, measured as government expenditure over GDP, to
+income inequality. Most income distributions have a long right tail, which means that average
+income tends to be way above the median. When inequality grows, more voters …nd themselves
+with below-average incomes.
+Annoyed by this, those with incomes between the median and
+the average may join those with incomes below the median in voting for …scal policies which
+- following Robin Hood - take from the rich and give to the poor.
+The size of government
+consequently increases.
+I absorbed the basic theory behind the Meltzer and Richards project, though I didn’t …nd it
+21
+
+--- PDF p38 ---
+22
+CHAPTER 3. MAKING REGRESSION MAKE SENSE
+all that plausible, since voter turnout is low for the poor.
+I also remember arguing with Alan
+Meltzer over whether government expenditure on education should be classi…ed as a public good
+(something that bene…ts everyone in society as well as those directly a¤ected) or a private good
+publicly supplied, and therefore a form of redistribution like welfare. You might say this project
+marked the beginning of my interest in the social returns to education, a topic I went back to
+with more enthusiasm and understanding in Acemoglu and Angrist (2000).
+Today, I understand the Meltzer and Richard (1983) study as an attempt to use regression
+to uncover and quantify an interesting causal relation. At the time, however, I was purely a
+regression mechanic. Sometimes I found the RA work depressing. Days would go by where I
+didn’t talk to anybody but my bosses and the occasional Carnegie-Mellon Ph.D. student, most
+of whom spoke little English anyway. The best part of the job was lunch with Alan Meltzer, a
+distinguished scholar and a patient and good-natured supervisor, who was happy to chat while
+we ate the contents of our brown-bags (this did not take long as Allan ate little and I ate fast).
+I remember asking Allan whether he found it satisfying to spend his days perusing regression
+output, which then came on reams of double-wide green-bar paper. Meltzer laughed and said
+there was nothing he would rather be doing.
+Now, we too spend our days (at least, the good ones) happily perusing regression output, in the manner
+of our teachers and advisors in college and graduate school. This chapter explains why.
+3.1
+Regression Fundamentals
+The end of the previous chapter introduces regression models as a computational device for the estimation
+of treatment-control di¤erences in an experiment, with and without covariates.
+Because the regressor of
+interest in the class size study discussed in Section 2.3 was randomly assigned, the resulting estimates have
+a causal interpretation.
+In most cases, however, regression is used with observational data.
+Without the
+bene…t of random assignment, regression estimates may or may not have a causal interpretation. We return
+to the central question of what makes a regression causal later in this chapter.
+Setting aside the relatively abstract causality problem for the moment, we start with the mechanical
+properties of regression estimates.
+These are universal features of the population regression vector and its
+sample analog that have nothing to do with a researcher’s interpretation of his output. This chapter begins
+by reviewing these properties, which include:
+(i) the intimate connection between the population regression function and the conditional expectation
+function
+(ii) how and why regression coe¢ cients change as covariates are added or removed from the model
+(iii) the close link between regression and other "control strategies" such as matching
+
+--- PDF p39 ---
+3.1. REGRESSION FUNDAMENTALS
+23
+(iv) the sampling distribution of regression estimates
+3.1.1
+Economic Relationships and the Conditional Expectation Function
+Empirical economic research in our …eld of Labor Economics is typically concerned with the statistical
+analysis of individual economic circumstances, and especially di¤erences between people that might account
+for di¤erences in their economic fortunes.
+Such di¤erences in economic fortune are notoriously hard to
+explain; they are, in a word, random. As applied econometricians, however, we believe we can summarize and
+interpret randomness in a useful way. An example of “systematic randomness”mentioned in the introduction
+is the connection between education and earnings.
+On average, people with more schooling earn more
+than people with less schooling. The connection between schooling and average earnings has considerable
+predictive power, in spite of the enormous variation in individual circumstances that sometimes clouds this
+fact. Of course, the fact that more educated people earn more than less educated people does not mean that
+schooling causes earnings to increase. The question of whether the earnings-schooling relationship is causal
+is of enormous importance, and we will come back to it many times. Even without resolving the di¢ cult
+question of causality, however, it’s clear that education predicts earnings in a narrow statistical sense. This
+predictive power is compellingly summarized by the conditional expectation function (CEF).
+The CEF for a dependent variable, yi given a k1 vector of covariates, Xi (with elements xki) is the
+expectation, or population average of yi with Xi held …xed. The population average can be thought of as the
+mean in an in…nitely large sample, or the average in a completely enumerated …nite population. The CEF
+is written E [yijXi] and is a function of Xi. Because Xi is random, the CEF is random, though sometimes
+we work with a particular value of the CEF, say E[yijXi=42], assuming 42 is a possible value for Xi. In
+Chapter 2, we brie‡y considered the CEF E[yijdi], where di is a zero-one variable. This CEF takes on two
+values, E[yijdi = 1] and E[yijdi = 0]: Although this special case is important, we are most often interested
+in CEFs that are functions of many variables, conveniently subsumed in the vector, Xi: For a speci…c value
+of Xi, say Xi = x, we write E [yijXi = x].
+For continuous yi with conditional density fy (jXi = x), the
+CEF is
+E [yijXi = x] =
+Z
+tfy (tjXi = x) dt:
+If yi is discrete, E [yijXi = x] equals the sum P
+t tfy (tjXi = x).
+Expectation is a population concept.
+In practice, data usually come in the form of samples and rarely
+consist of an entire population. We therefore use samples to make inferences about the population. For
+example, the sample CEF is used to learn about the population CEF. This is always necessary but we
+postpone a discussion of the formal inference step taking us from sample to population until Section 3.1.3.
+Our “population …rst”approach to econometrics is motivated by the fact that we must de…ne the objects of
+
+--- PDF p40 ---
+24
+CHAPTER 3. MAKING REGRESSION MAKE SENSE
+interest before we can use data to study them.1
+Figure 3.1.1 plots the CEF of log weekly wages given schooling for a sample of middle-aged white men
+from the 1980 Census. The distribution of earnings is also plotted for a few key values: 4, 8, 12, and 16 years
+of schooling. The CEF in the …gure captures the fact that— the enormous variation individual circumstances
+notwithstanding— people with more schooling generally earn more, on average. The average earnings gain
+associated with a year of schooling is typically about 10 percent.
+Figure 3.1.1:
+Raw data and the CEF of average log weekly wages given schooling. The sample includes
+white men aged 40-49 in the 1980 IPUMS 5 percent …le.
+An important complement to the CEF is the law of iterated expectations.
+This law says that an
+unconditional expectation can be written as the population average of the CEF. In other words
+E [yi] = EfE [yijXi]g;
+(3.1.1)
+where the outer expectation uses the distribution of Xi.
+Here is proof of the law of iterated expectations
+for continuously distributed (Xi; yi) with joint density fxy (u; t), where fy (tjXi = x) is the conditional
+1Examples of pedagogical writing using the “population-…rst”approach to econometrics include Chamberlain (1984), Gold-
+berger (1991), and Manski (1991).
+
+--- PDF p41 ---
+3.1. REGRESSION FUNDAMENTALS
+25
+distribution of yi given Xi = x and gy(t) and gx(u) are the marginal densities:
+EfE [yijXi]g
+=
+Z
+E [yijXi = u] gx(u)du
+=
+Z Z
+tfy (tjXi = u) dt
+
+gx(u)du
+=
+Z Z
+tfy (tjXi = u) gx(u)dudt
+=
+Z
+t
+Z
+fy (tjXi = u) gx(u)du
+
+dt =
+Z
+t
+Z
+fxy (u; t) du
+
+dt
+=
+Z
+tgy(t)dt:
+The integrals in this derivation run over the possible values of Xi and yi (indexed by u and t). We’ve laid
+out these steps because the CEF and its properties are central to the rest of this chapter.
+The power of the law of iterated expectations comes from the way it breaks a random variable into two
+pieces.
+Theorem 3.1.1 The CEF-Decomposition Property
+yi = E [yijXi] + "i,
+where (i) "i is mean-independent of Xi, i.e., E["ijXi] = 0;and, therefore, (ii) "i is uncorrelated with any
+function of Xi.
+Proof. (i) E["ijXi] = E[yi   E [yijXi] j Xi] = E [yijXi]   E [yijXi] = 0;(ii) This follows from (i): Let
+h(Xi) be any function of Xi. By the law of iterated expectations, E[h(Xi)"i] = Efh(Xi)E["ijXi]g and by
+mean-independence, E["ijXi] = 0:
+This theorem says that any random variable, yi, can be decomposed into a piece that’s “explained by
+Xi”, i.e., the CEF, and a piece left over which is orthogonal to (i.e., uncorrelated with) any function of Xi.
+The CEF is a good summary of the relationship between yi and Xi for a number of reasons. First, we
+are used to thinking of averages as providing a representative value for a random variable. More formally,
+the CEF is the best predictor of yi given Xi in the sense that it solves a Minimum Mean Squared Error
+(MMSE) prediction problem.
+This CEF-prediction property is a consequence of the CEF-decomposition
+property:
+Theorem 3.1.2 The CEF-Prediction Property.
+Let m (Xi) be any function of Xi.
+The CEF solves
+E [yijXi] = arg min
+m(Xi)
+E
+h
+(yi   m (Xi))2i
+;
+so it is the MMSE predictor of yi given Xi:
+
+--- PDF p42 ---
+26
+CHAPTER 3. MAKING REGRESSION MAKE SENSE
+Proof. Write
+(yi   m (Xi))2
+=
+((yi   E [yijXi]) + (E [yijXi]   m (Xi)))2
+=
+(yi   E [yijXi])2 + 2 (E [yijXi]   m (Xi)) (yi   E [yijXi])
++ (E [yijXi]   m (Xi))2
+The …rst term doesn’t matter because it doesn’t involve m (Xi). The second term can be written h(Xi)"i,
+where h(Xi)  2 (E [yijXi]   m (Xi)), and therefore has expectation zero by the CEF-decomposition prop-
+erty. The last term is minimized at zero when m (Xi) is the CEF.
+A …nal property of the CEF, closely related to both the CEF decomposition and prediction properties,
+is the Analysis-of-Variance (ANOVA) Theorem:
+Theorem 3.1.3 The ANOVA Theorem
+V (yi) = V (E [yijXi]) + E [V (yijXi)]
+where V () denotes variance and V (yijXi) is the conditional variance of yi given Xi:
+Proof. The CEF-decomposition property implies the variance of yi is the variance of the CEF plus the
+variance of the residual, "i  yi   E [yijXi] since "i and E [yijXi] are uncorrelated. The variance of "i is
+E
+
+"2
+i
+
+= E
+
+E
+
+"2
+i jXi
+
+= E [V [yijXi]]
+where E
+
+"2
+i jXi
+
+= V [yijXi] because "i  yi   E [yijXi].
+The two CEF properties and the ANOVA theorem may have a familiar ring.
+You might be used to
+seeing an ANOVA table in your regression output, for example. ANOVA is also important in research on
+inequality where labor economists decompose changes in the income distribution into parts that can be
+accounted for by changes in worker characteristics and changes in what’s left over after accounting for these
+factors (See, e.g., Autor, Katz, and Kearney, 2005).
+What may be unfamiliar is the fact that the CEF
+properties and ANOVA variance decomposition work in the population as well as in samples, and do not
+turn on the assumption of a linear CEF. In fact, the validity of linear regression as an empirical tool does
+not turn on linearity either.
+3.1.2
+Linear Regression and the CEF
+So what’s the regression you want to run?
+In our world, this question or one like it is heard almost every day. Regression estimates provide a valuable
+baseline for almost all empirical research because regression is tightly linked to the CEF, and the CEF
+
+--- PDF p43 ---
+3.1. REGRESSION FUNDAMENTALS
+27
+provides a natural summary of empirical relationships. The link between regression functions – i.e., the
+best-…tting line generated by minimizing expected squared errors – and the CEF can be explained in at
+least 3 ways. To lay out these explanations precisely, it helps to be precise about the regression function we
+have in mind. This chapter is concerned with the vector of population regression coe¢ cients, de…ned as the
+solution to a population least squares problem. At this point, we are not worried about causality. Rather,
+we let the k1 regression coe¢ cient vector  be de…ned by solving
+ = arg min
+b
+E
+h yi   X0
+ib
+2i
+:
+(3.1.2)
+Using the …rst-order condition,
+E
+
+Xi
+ yi   X0
+ib
+
+= 0.
+the solution for b can be written  = E
+
+XiX0
+i
+ 1 E [Xiyi]. Note that by construction, E
+
+Xi
+ yi   X0
+i
+
+=
+0: In other words, the population residual, which we de…ne as yi X0
+i = ei, is uncorrelated with the
+regressors, Xi.
+It bears emphasizing that this error term does not have a life of its own.
+It owes its
+existence and meaning to :
+In the simple bivariate case where the regression vector includes only the single regressor, xi, and a
+constant, the slope coe¢ cient is 1 = Cov(yi;xi)
+V (xi)
+, and the intercept is  = E [yi] 1E [Xi]. In the multivariate
+case, i.e., with more than one non-constant regressor, the slope coe¢ cient for the k-th regressor is given below:
+REGRESSION ANATOMY
+k = Cov (yi; ~xki)
+V (~xki)
+;
+(3.1.3)
+where ~xki is the residual from a regression of xki on all the other covariates.
+In other words, E
+
+XiX0
+i
+ 1 E [Xiyi] is the k1 vector with k-th element Cov(yi;~xki)
+V (~xki)
+. This important
+formula is said to describe the “anatomy of a multivariate regression coe¢ cient” because it reveals much
+more than the matrix formula  = E
+
+XiX0
+i
+ 1 E [Xiyi] : It shows us that each coe¢ cient in a multivariate
+regression is the bivariate slope coe¢ cient for the corresponding regressor, after "partialling out" all the
+other variables in the model.
+To verify the regression-anatomy formula, substitute
+yi = 0 + 1x1i + ::: + kxki + ::: + kxki + ei
+in the numerator of (3.1.3).
+Since ~xki is a linear combination of the regressors, it is uncorrelated with ei:
+Also, since ~xki is a residual from a regression on all the other covariates in the model, it must be uncorrelated
+these covariates. Finally, for the same reason, the covariance of ~xki with xki is just the variance of ~xki. We
+
+--- PDF p44 ---
+28
+CHAPTER 3. MAKING REGRESSION MAKE SENSE
+therefore have that Cov (yi; ~xki) = kV (~xki) :2
+The regression-anatomy formula is probably familiar to you from a regression or statistics course, perhaps
+with one twist: the regression coe¢ cients de…ned in this section are not estimators, but rather they are non-
+stochastic features of the joint distribution of dependent and independent variables. The joint distribution
+is what you would observe if you had a complete enumeration of the population of interest (or knew the
+stochastic process generating the data). You probably don’t have such information. Still, it’s kosher— even
+desirable— to think about what a set of population parameters might mean, without initially worrying about
+how to estimate them.
+Below we discuss three reasons why the vector of population regression coe¢ cients might be of interest.
+These reasons can be summarized by saying that you are interested in regression parameters if you are
+interested in the CEF.
+Theorem 3.1.4 The Linear CEF Theorem (Regression-justi…cation I)
+Suppose the CEF is linear. Then the population regression function is it.
+Proof. Suppose E [yijXi] =X0
+i for a k1 vector of coe¢ cients, . Recall that E [Xi (yi   E [yijXi])] = 0
+by the CEF-decomposition property. Substitute using E [yijXi] =X0
+i to …nd that  = E
+
+XiX0
+i
+ 1 E [Xiyi] =
+.
+The linear CEF theorem raises the question of under what circumstances a CEF is linear. The classic
+scenario is joint Normality, i.e., the vector (yi; x0
+i)0 has a multivariate Normal distribution.
+This is the
+scenario considered by Galton (1886), father of regression, who was interested in the intergenerational link
+between Normally distributed traits such as height and intelligence. The Normal case is clearly of limited
+empirical relevance since regressors and dependent variables are often discrete, while Normal distributions
+are continuous. Another linearity scenario arises when regression models are saturated. As reviewed in
+Section 3.1.4, the saturated regression model has a separate parameter for every possible combination of
+values that the set of regressors can take on. For example a saturated regression model with two dummy
+covariates includes both covariates (with coe¢ cients known as the main e¤ects) and their product (known
+as an interaction term). Such models are inherently linear, a point we also discuss in Section 3.1.4.
+2The regression-anatomy formula is usually attributed to Frisch and Waugh (1933).
+You can also do regression anatomy
+this way:
+k = Cov (˜
+yki; ~xki)
+V (~xki)
+;
+where ˜
+yki is the residual from a regression of yi on every covariate except xki.
+This works because the …tted values removed
+from ˜
+yki are uncorrelated with ~xki. Often it’s useful to plot ˜
+yki against ~xki; the slope of the least-squares …t in this scatterplot
+is your estimate of the multivariate k, even though the plot is two-dimensional. Note, however, that it’s not enough to partial
+the other covariates out of yi only.
+That is,
+Cov (˜
+yki; xki)
+V (xki)
+=
+Cov (˜
+yki; ~xki)
+V (~xki)
+ V (~xki)
+V (xki)
+
+6= k;
+unless xki is uncorrelated with the other covariates.
+
+--- PDF p45 ---
+3.1. REGRESSION FUNDAMENTALS
+29
+The following two reasons for focusing on regression are relevant when the linear CEF theorem does not
+apply.
+Theorem 3.1.5 The Best Linear Predictor Theorem (Regression-justi…cation II)
+The function X0
+i is the best linear predictor of yi given Xi in a MMSE sense.
+Proof.  = E[XiX0
+i] 1E[Xiyi] solves the population least squares problem, (3.1.2).
+In other words, just as the CEF, E [yijXi], is the best (i.e., MMSE) predictor of yi given Xi in the
+class of all functions of Xi, the population regression function is the best we can do in the class of linear
+functions.
+Theorem 3.1.6 The Regression-CEF Theorem (Regression-justi…cation III)
+The function X0
+i provides the MMSE linear approximation to E[yijXi], that is,
+ = arg min
+b
+Ef(E[yijXi]   X0
+ib)2g:
+(3.1.4)
+Proof. Write
+ yi   X0
+ib
+2
+=
+f(yi   E[yijXi]) + (E[yijXi]   X0
+ib)g2
+=
+(yi   E[yijXi])2 + (E[yijXi]   X0
+ib)2
++2(yi   E[yijXi])(E[yijXi]   X0
+ib):
+The …rst term doesn’t involve b and the last term has expectation zero by the CEF-decomposition property
+(ii).
+The CEF-approximation problem, (3.1.4), therefore has the same solution as the population least
+squares problem, (3.1.2).
+These two theorems show us two more ways to view regression.
+Regression provides the best linear
+predictor for the dependent variable in the same way that the CEF is the best unrestricted predictor of the
+dependent variable. On the other hand, if we prefer to think about approximating E[yijXi], as opposed to
+predicting yi, the Regression-CEF theorem tells us that even if the CEF is nonlinear, regression provides
+the best linear approximation to it.
+The regression-CEF theorem is our favorite way to motivate regression. The statement that regression
+approximates the CEF lines up with our view of empirical work as an e¤ort to describe the essential features
+of statistical relationships, without necessarily trying to pin them down exactly. The linear CEF theorem
+is for special cases only.
+The best linear predictor theorem is satisfyingly general, but it encourages an
+overly clinical view of empirical research. We’re not really interested in predicting individual yi; it’s the
+distribution of yi that we care about.
+Figure 3.1.2 illustrates the CEF approximation property for the same schooling CEF plotted in Figure
+3.1.1.
+The regression line …ts the somewhat bumpy and nonlinear CEF as if we were estimating a model
+
+--- PDF p46 ---
+30
+CHAPTER 3. MAKING REGRESSION MAKE SENSE
+for E[yijXi] instead of a model for yi. In fact, that is exactly what’s going on.
+An implication of the
+regression-CEF theorem is that regression coe¢ cients can be obtained by using E[yijXi] as a dependent
+variable instead of yi itself. To see this, suppose that Xi is a discrete random variable with probability mass
+function, gx(u) when Xi = u. Then
+Ef(E[yijXi]   X0
+ib)2g =
+X
+u
+(E[yijXi = u]   u0b)2gx(u):
+This means that  can be constructed from the weighted least squares regression of E[yijXi = u] on u,
+where u runs over the values taken on by Xi.
+The weights are given by the distribution of Xi, i.e., gx(u)
+when Xi = u: Another way to see this is to iterate expectations in the formula for :
+ = E[XiX0
+i] 1E[Xiyi] = E[XiX0
+i] 1E[XiE(yijXi)]:
+(3.1.5)
+The CEF or grouped-data version of the regression formula is of practical use when working on a project
+that precludes the analysis of micro data.
+For example, Angrist (1998), studies the e¤ect of voluntary
+military service on earnings later in life. One of the estimation strategies used in this project regresses
+civilian earnings on a dummy for veteran status, along with personal characteristics and the variables used
+by the military to screen soldiers. The earnings data come from the US Social Security system, but Social
+Security earnings records cannot be released to the public. Instead of individual earnings, Angrist worked
+with average earnings conditional on race, sex, test scores, education, and veteran status.
+An illustration of the grouped-data approach to regression appears below.
+We estimated the schooling
+coe¢ cient in a wage equation using 21 conditional means, the sample CEF of earnings given schooling. As
+the Stata output reported here shows, a grouped-data regression, weighted by the number of individuals
+at each schooling level in the sample, produces coe¢ cients identical to what would be obtained using the
+underlying microdata sample with hundreds of thousands of observations. Note, however, that the standard
+errors from the grouped regression do not correctly re‡ect the asymptotic sampling variance of the slope
+estimate in repeated micro-data samples; for that you need an estimate of the variance of yi X0
+i. This
+variance depends on the microdata, in particular, the second-moments of Wi 
+
+yi;
+X0
+i
+0
+, a point we
+elaborate on in the next section.
+3.1.3
+Asymptotic OLS Inference
+In practice, we don’t usually know what the CEF or the population regression vector is. We therefore draw
+statistical inferences about these quantities using samples. Statistical inference is what much of traditional
+econometrics is about. Although this material is covered in any Econometrics text, we don’t want to skip the
+inference step completely. A review of basic asymptotic theory allows us to highlight the important fact that
+the process of statistical inference is entirely distinct from the question of how a particular set of regression
+
+--- PDF p47 ---
+3.1. REGRESSION FUNDAMENTALS
+31
+5.8
+6
+6.2
+6.4
+6.6
+6.8
+7
+7.2
+Log weekly earnings, $2003
+0
+2
+4
+6
+8
+10
+12
+14
+16
+18
+20+
+Years of completed education
+Sample is limited to white men, age 40-49.  Data is from Census IPUMS 1980, 5% sample.
+g
+p
+g
+g
+Figure 3.1.2: Regression threads the CEF of average weekly wages given schooling
+estimates should be interpreted. Whatever a regression coe¢ cient may mean, it has a sampling distribution
+that is easy to describe and use for statistical inference.3
+We are interested in the distribution of the sample analog of
+ = E[XiX0
+i] 1E[Xiyi]
+in repeated samples. Suppose the vector Wi 
+
+yi;
+X0
+i
+0
+is independently and identically distributed in
+a sample of size N. A natural estimator of the …rst population moment, E[Wi], is the sum,
+1
+N
+PN
+i=1 Wi. By
+the law of large numbers, this sample moment gets arbitrarily close to the corresponding population moment
+as the sample size grows. We might similarly consider higher-order moments of the elements of Wi, e.g.,
+the matrix of second moments, E[WiW 0
+i], with sample analog
+1
+N
+PN
+i=1 WiW 0
+i. Following this principle, the
+method of moments estimator of  replaces each expectation by a sum. This logic leads to the Ordinary
+Least Squares (OLS) estimator
+^ =
+"X
+i
+XiX0
+i
+# 1 X
+i
+Xiyi.
+Although we derived ^ as a method of moments estimator, it is called the OLS estimator of  because it
+solves the sample analog of the least-squares problem described at the beginning of Section 3.1.2.4
+3The discussion of asymptotic OLS inference in this section is largely a condensation of material in Chamberlain (1984).
+Important pitfalls and problems with this asymptotic theory are covered in the last chapter.
+4Econometricians like to use matrices because the notation is so compact.
+Sometimes (not very often) we do too.
+Suppose
+
+--- PDF p48 ---
+32
+CHAPTER 3. MAKING REGRESSION MAKE SENSE
+A - Individual-level data
+. regress earnings school, robust
+      Source |       SS       df       MS        Number of obs =  409435
+-------------+------------------------------     F(  1,409433) =49118.25
+       Model | 22631.4793      1  22631.4793     Prob > F      =  0.0000
+    Residual |  188648.31 409433  .460755019     R-squared     =  0.1071
+-------------+------------------------------     Adj R-squared =  0.1071
+       Total | 211279.789 409434   .51602893     Root MSE      =  .67879
+-------------+----------------------------------------------------------
+             |               Robust                  Old Fashioned      
+    earnings |      Coef.   Std. Err.      t           Std. Err.       t 
+-------------+----------------------------------------------------------
+      school |   .0674387   .0003447   195.63          .0003043   221.63
+      const. |   5.835761   .0045507  1282.39          .0040043  1457.38
+------------------------------------------------------------------------
+B - Means by years of schooling
+. regress average_earnings school [aweight=count], robust
+(sum of wgt is   4.0944e+05)
+      Source |       SS       df       MS        Number of obs =      21
+-------------+------------------------------     F(  1,    19) =  540.31
+       Model |  1.16077332     1  1.16077332     Prob > F      =  0.0000
+    Residual |  .040818796    19  .002148358     R-squared     =  0.9660
+-------------+------------------------------     Adj R-squared =  0.9642
+       Total |  1.20159212    20  .060079606     Root MSE      =  .04635
+-------------+----------------------------------------------------------
+     average |               Robust                  Old Fashioned      
+   _earnings |      Coef.   Std. Err.      t           Std. Err.       t 
+-------------+----------------------------------------------------------
+      school |   .0674387   .0040352    16.71         .0029013     23.24
+      const. |   5.835761   .0399452   146.09         .0381792    152.85
+------------------------------------------------------------------------
+Figure 3.1.3: Micro-data and grouped-data estimates of returns to schooling. Source: 1980 Census - IPUMS,
+5 percent sample. Sample is limited to white men, age 40-49. Derived from Stata regression output. Old-
+fashioned standard errors are the default reported. Robust standard errors are heteroscedasticity-consistent.
+Panel A uses individual-level data. Panel B uses earnings averaged by years of schooling.
+
+--- PDF p49 ---
+3.1. REGRESSION FUNDAMENTALS
+33
+The asymptotic sampling distribution of ^ depends solely on the de…nition of the estimand (i.e., the
+nature of the thing we’re trying to estimate, ) and the assumption that the data constitute a random
+sample. Before deriving this distribution, it helps to record the general asymptotic distribution theory that
+covers our needs. This basic theory can be stated mostly in words. For the purposes of these statements,
+we assume the reader is familiar with the core terms and concepts of statistical theory (e.g., moments,
+mathematical expectation, probability limits, and asymptotic distributions). For de…nitions of these terms
+and a formal mathematical statement of the theoretical propositions given below, see, e.g., Knight (2000).
+THE LAW OF LARGE NUMBERS Sample moments converge in probability to the corresponding
+population moments. In other words, the probability that the sample mean is close to the population
+mean can be made as high as you like by taking a large enough sample.
+THE CENTRAL LIMIT THEOREM Sample moments are asymptotically Normally distributed (after
+subtracting the corresponding population moment and multiplying by the square root of the sample
+size). The covariance matrix is given by the variance of the underlying random variable. In other
+words, in large enough samples, appropriately normalized sample moments are approximately Normally
+distributed.
+SLUTSKY’S THEOREM
+(a) Consider the sum of two random variables, one of which converges in distribution and the other converges
+in probability to a constant: the asymptotic distribution of this sum is una¤ected by replacing the
+one that converges to a constant by this constant. Formally, let aN be a statistic with a limiting
+distribution and let bN be a statistic with probability limit b. Then aN + bN and aN + b have the same
+limiting distribution.
+(b) Consider the product of two random variables, one of which converges in distribution and the other
+converges in probability to a constant: the asymptotic distribution of this product is una¤ected by
+replacing the one that converges to a constant by this constant.
+This allows us to replaces some
+sample moments by population moments (i.e., by their probability limits) when deriving distributions.
+Formally, let aN be a statistic with a limiting distribution and let bN be a statistic with probability
+limit b. Then aNbN and aNb have the same asymptotic distribution.
+THE CONTINUOUS MAPPING THEOREM Probability limits pass through continuous functions.
+For example, the probability limit of any continuous function of a sample moment is the function
+evaluated at the corresponding population moment. Formally, the probability limit of h(bN) is h(b)
+where plim bN = b and h() is continuous at b.
+X is the matrix whose rows are given by X0
+i and y is the vector with elements yi, for i = 1; :::; N.
+The sample moment
+1
+N
+P XiX0
+i is X0X=N and the sample moment
+1
+N
+P Xiyi is X0y=N. Then we can write ^ = (X0X) 1 X0y, a familiar matrix
+formula.
+
+--- PDF p50 ---
+34
+CHAPTER 3. MAKING REGRESSION MAKE SENSE
+THE DELTA METHOD Consider a vector-valued random variable that is asymptotically Normally dis-
+tributed. Most scalar functions of this random variable are also asymptotically Normally distributed,
+with covariance matrix given by a quadratic form with the covariance matrix of the random variable
+on the inside and the gradient of the function evaluated at the probability limit of the random vari-
+able on the outside. Formally, the asymptotic distribution of h(bN) is Normal with covariance matrix
+rh(b)0
+rh(b) where plim bN = b, h() is continuously di¤erentiable at b with gradient rh(b), and bN
+has asymptotic covariance matrix 
+.5
+We can use these results to derive the asymptotic distribution of ^ in two ways. A conceptually straight-
+forward but somewhat inelegant approach is to use the delta method: ^ is a function of sample moments,
+and is therefore asymptotically Normally distributed. It remains only to …nd the covariance matrix of the
+asymptotic distribution from the gradient of this function. (Note that consistency of ^ comes immediately
+from the continuous mapping theorem). An easier and more instructive derivation uses the Slutsky and
+central limit theorems. Note …rst that we can write
+yi = X0
+i + [yi   X0
+i]  X0
+i + ei,
+(3.1.6)
+where the residual ei is de…ned as the di¤erence between the dependent variable and the population regression
+function, as before. This is as good a place as any to point out that these residuals are uncorrelated with the
+regressors by de…nition of .
+In other words, E[Xiei] = 0 is a consequence of  = E[XiX0
+i] 1E[Xiyi] and
+ei = yi X0
+i, and not an assumption about an underlying economic relation. We return to this important
+point in the discussion of causal regression models in Section 3.2.6
+Substituting the identity 3.1.6 for yi in the formula for ^, we have
+^ =  +
+hX
+XiX0
+i
+i 1 X
+Xiei.
+The asymptotic distribution of ^ is the asymptotic distribution of
+p
+N(^ ) = N
+P XiX0
+i
+ 1
+1
+p
+N
+PXiei.
+By the Slutsky theorem, this has the same asymptotic distribution as E[XiX0
+i] 1
+1
+p
+N
+PXiei. Since E[Xiei] =
+0,
+1
+p
+N
+PXiei is a root-N-normalized and centered sample moment. By the central limit theorem, this is
+asymptotically Normally distributed with mean zero and covariance matrix E[XiX0
+ie2
+i ], since this fourth mo-
+ment is the covariance matrix of Xiei. Therefore, ^ has an asymptotic Normal distribution, with probability
+limit , and covariance matrix
+E[XiX0
+i] 1E[XiX0
+ie2
+i ]E[XiX0
+i] 1:
+(3.1.7)
+The standard errors used to construct t-statistics are the square roots of the diagonal elements of this
+5For a derivation of the the delta method formula using the Slutsky and continuous mapping theorems, see, e.g., Knight,
+2000, pp. 120-121.
+6Residuals de…ned in this way are not necessarily mean-independent of Xi; for mean-independence, we need a linear CEF.
+
+--- PDF p51 ---
+3.1. REGRESSION FUNDAMENTALS
+35
+matrix. In practice these standard errors are estimated by substituting sums for expectations, and using the
+estimated residuals, ^ei =yi X0
+i^ to form the empirical fourth moment, P[XiXi^e2
+i ]=N.
+Asymptotic standard errors computed in this way are known as heteroskedasticity-consistent standard
+errors, White (1980a) standard errors, or Eicker-White standard errors in recognition of Eicker’s (1967)
+derivation. They are also known as “robust” standard errors (e.g., in Stata). These standard errors are
+said to be robust because, in large enough samples, they provide accurate hypothesis tests and con…dence
+intervals given minimal assumptions about the data and model. In particular, our derivation of the limiting
+distribution makes no assumptions other than those needed to ensure that basic statistical results like the
+central limit theorem go through. These are not, however, the standard errors that you get by default from
+packaged software. Default standard errors are derived under a homoskedasticity assumption, speci…cally,
+that E[e2
+i jXi] = 2, a constant. Given this assumption, we have
+E[XiX0
+ie2
+i ] = E(XiX0
+iE[e2
+i jXi]) = 2E[XiX0
+i],
+by iterating expectations. The asymptotic covariance matrix of ^ then simpli…es to
+E[XiX0
+i] 1E[XiX0
+ie2
+i ]E[XiX0
+i] 1
+=
+E[XiX0
+i] 12E[XiX0
+i]E[XiXi] 1
+=
+E[XiX0
+i] 12.
+(3.1.8)
+The diagonal elements of (3.1.8) are what SAS or Stata report unless you request otherwise.
+Our view of regression as an approximation to the CEF makes heteroskedasticity seem natural.
+If the
+CEF is nonlinear and you use a linear model to approximate it, then the quality of …t between the regression
+line and the CEF will vary with Xi. Hence, the residuals will be larger, on average, at values of Xi where the
+…t is poorer. Even if you are prepared to assumed that the conditional variance of yi given Xi is constant,
+the fact that the CEF is nonlinear means that E[(yi X0
+i)2jXi] will vary with Xi.
+To see this, note that,
+as a rule,
+E[(yi   X0
+i)2jXi]
+=
+(3.1.9)
+Ef[(yi   E[yijXi]) + (E[yijXi]   X0
+i)]2jXig
+=
+V [yijXi] + (E[yijXi]   X0
+i)2:
+Therefore, even if V [yijXi] is constant, the residual variance increases with the square of the gap between
+the regression line and the CEF, a fact noted in White (1980b).7
+In the same spirit, it’s also worth noting that while a linear CEF makes homoskedasticity possible, this is
+7The cross-product term resulting from an expansion of the quadratic in the middle of 3.1.9 is zero because yi   E[yijXi]
+is mean-independent of Xi.
+
+--- PDF p52 ---
+36
+CHAPTER 3. MAKING REGRESSION MAKE SENSE
+not a su¢ cient condition for homoskedasticity. Our favorite example in this context is the linear probability
+model (LPM). A linear probability model is any regression where the dependent variable is zero-one, i.e.,
+a dummy variable such as an indicator for labor force participation.
+Suppose the regression model is
+saturated, so the CEF is linear.
+Because the CEF is linear, the residual variance is also the conditional
+variance, V [yijXi]: But the dependent variable is a Bernoulli trial and the variance of a Bernoulli trial is
+P[yijXi](1   P[yijXi]).
+We conclude that LPM residuals are necessarily heteroskedastic unless the only
+regressor is a constant.
+These points of principle notwithstanding, as an empirical matter, heteroskedasticity may matter little.
+In the micro-data schooling regression depicted in Figure 3.1.3, the robust standard error is .0003447, while
+the old-fashioned standard error is .0003043, only slightly smaller. The standard errors from the grouped-
+data regression, which are necessarily heteroskedastic if group sizes di¤er, change somewhat more; compare
+the .004 robust standard to the .0029 conventional standard error. Based on our experience, these di¤erences
+are typical. If heteroskedasticity matters too much, say, more than a 30% increase or any marked decrease
+in standard errors, you should worry about possible programming errors or other problems (for example,
+robust standard errors below conventional may be a sign of …nite-sample bias in the robust calculation; see
+Chapter 8, below.)
+3.1.4
+Saturated Models, Main E¤ects, and Other Regression Talk
+We often discuss regression models using terms like saturated and main e¤ects.
+These terms originate in
+an experimentalist tradition that uses regression to model discrete treatment-type variables. This language
+is now used more widely in many …elds, however, including applied econometrics.
+For readers unfamiliar
+with these terms, this section provides a brief review.
+Saturated regression models are regression models with discrete explanatory variables, where the model
+includes a separate parameter for all possible values taken on by the explanatory variables. For example,
+when working with a single explanatory variable indicating whether a worker is a college graduate, the model
+is saturated by including a single dummy for college graduates and a constant. We can also saturate when
+the regressor takes on many values.
+Suppose, for example, that si = 0; 1; 2; :::; .
+A saturated regression
+model for si is
+yi = 0 + 1d1i + 2d2i + ::: + di + "i;
+where dji = 1[si = j] is a dummy variable indicating schooling level-j, and j is said to be the jth-level
+schooling e¤ect. Note that
+j = E[yijsi = j]   E[yijsi = 0];
+while 0 = E[yijsi = 0]: In practice, you can pick any value of si for the reference group; a regression model
+is saturated as long as it has one parameter for every possible j in E[yijsi = j]: Saturated models …t the
+
+--- PDF p53 ---
+3.1. REGRESSION FUNDAMENTALS
+37
+CEF perfectly because the CEF is linear in the dummy regressors used to saturate.
+This is an important
+special case of the regression-CEF theorem.
+If there are two explanatory variables, say one dummy indicating college graduates and one dummy
+indicating sex, the model is saturated by including these two dummies, their product, and a constant. The
+coe¢ cients on the dummies are known as main e¤ects, while the product is called an interaction term. This
+is not the only saturated parameterization; any set of indicators (dummies) that can be used to identify each
+value taken on by the covariates produces a saturated model. For example, an alternative saturated model
+includes dummies for male college graduates, male dropouts, female college graduates, and female dropouts,
+but no intercept.
+Here’s some notation to make this more concrete. Let x1i indicate college graduates and x2i indicate
+women. The CEF given x1i and x2i takes on four values:
+E [yijx1i = 0; x2i = 0] ;
+E [yijx1i = 1; x2i = 0] ;
+E [yijx1i = 0; x2i = 1] ;
+E [yijx1i = 1; x2i = 1] :
+We can label these using the following scheme:
+E [yijx1i = 0; x2i = 0]
+=
+
+E [yijx1i = 1; x2i = 0]
+=
+ + 
+E [yijx1i = 0; x2i = 1]
+=
+ + 
+E [yijx1i = 1; x2i = 1]
+=
+ +  +  + :
+Since there are four Greek letters and the CEF takes on four values, this parameterization does not restrict
+the CEF. It can be written in terms of Greek letters as
+E[yijx1i; x2i] =  + x1i + x2i + (x1ix2i);
+a parameterization with two main e¤ects and one interaction term.8
+The saturated regression equation
+becomes
+yi =  + x1i + x2i + (x1ix2i) + "i:
+Finally, we can combine the multi-valued schooling variable with sex to produce a saturated model that
+8With a third dummy variable in the model, say x3i, a saturated model includes 3 main e¤ects, 3 second-order interaction
+terms fx1ix2i, x2ix3i; x1ix2ig and one third-order term, x1ix2ix3i.
+
+--- PDF p54 ---
+38
+CHAPTER 3. MAKING REGRESSION MAKE SENSE
+has  main e¤ects for schooling, one main e¤ect for sex, and  sex-schooling interactions:
+yi = 0 +
+
+X
+j=1
+jdji + x2i +
+
+X
+j=1
+j(djix2i) + "i:
+(3.1.10)
+The interaction terms, j, tell us how each of the schooling e¤ects di¤er by sex. The CEF in this case takes
+on 2( + 1) values while the regression has this many parameters.
+Note that there is a natural hierarchy of modeling strategies with saturated models at the top.
+It’s
+natural to start with a saturated model because this …ts the CEF. On the other hand, saturated models
+generate a lot of interaction terms, many of which may be uninteresting or imprecise. You might therefore
+sensibly choose to omit some or all of these. Equation (3.1.10) without interaction terms approximates the
+CEF with a purely additive model for schooling and sex.
+This is a good approximation if the returns to
+college are similar for men and women. And, in any case, schooling coe¢ cients in the additive speci…cation
+give a (weighted) average return across both sexes, as discussed in Section 3.3.1, below. On the other hand,
+it would be strange to estimate a model which included interaction terms but omitted the corresponding
+main e¤ects. In the case of schooling, this would be something like
+yi = 0 + x2i +
+
+X
+j=1
+j(djix2i) + "i:
+(3.1.11)
+This model allows schooling to shift wages only for women, something very far from the truth. Consequently,
+the results of estimating (3.1.11) are likely to be hard to interpret.
+Finally, it’s important to recognize that a saturated model …ts the CEF perfectly regardless of the
+distribution of yi.
+For example, this is true for linear probability models and other limited dependent
+variable models (e.g., non-negative yi), a point we return to at the end of this chapter.
+3.2
+Regression and Causality
+Section 3.1.2 shows how regression gives the best (MMSE) linear approximation to the CEF. This under-
+standing, however, does not help us with the deeper question of when regression has a causal interpretation.
+When can we think of a regression coe¢ cient as approximating the causal e¤ect that might be revealed in
+an experiment?
+3.2.1
+The Conditional Independence Assumption
+A regression is causal when the CEF it approximates is causal. This doesn’t answer the question, of course.
+It just passes the buck up one level, since, as we’ve seen, a regression inherits it’s legitimacy from a CEF.
+Causality means di¤erent things to di¤erent people, but researchers working in many disciplines have found
+it useful to think of causal relationships in terms of the potential outcomes notation used in Chapter 2 to
+
+--- PDF p55 ---
+3.2. REGRESSION AND CAUSALITY
+39
+describe what would happen to a given individual in a hypothetical comparison of alternative hospitalization
+scenarios. Di¤erences in these potential outcomes were said to be the causal e¤ect of hospitalization. The
+CEF is causal when it describes di¤erences in average potential outcomes for a …xed reference population.
+It’s easiest to expand on the somewhat murky notion of a causal CEF in the context of a particular
+question, so let’s stick with the schooling example. The causal connection between schooling and earnings
+can be de…ned as the functional relationship that describes what a given individual would earn if he or she
+obtained di¤erent levels of education. In particular, we might think of schooling decisions as being made
+in a series of episodes where the decision-maker might realistically go one way or another, even if certain
+choices are more likely than others. For example, in the middle of junior year, restless and unhappy, Angrist
+glumly considered his options: dropping out of high school and hopefully getting a job, staying in school but
+taking easy classes that lead to a quick and dirty high school diploma, or plowing on in an academic track
+that leads to college. Although the consequences of such choices are usually unknown in advance, the idea of
+alternative paths leading to alternative outcomes for a given individual seems uncontroversial. Philosophers
+have argued over whether this personal notion of potential outcomes is precise enough to be scienti…cally
+useful, but individual decision-makers seem to have no trouble thinking about their lives and choices in this
+manner (as in Robert Frost’s celebrated The Road Not Taken: the traveller-narrator sees himself looking
+back on a moment of choice. He believes that the decision to follow the road less traveled "has made all the
+di¤erence," though he also recognizes that counterfactual outcomes are unknowable).
+In empirical work, the causal relationship between schooling and earnings tells us what people would
+earn— on average— if we could either change their schooling in a perfectly-controlled environment, or change
+their schooling randomly so that those with di¤erent levels of schooling would be otherwise comparable. As
+we discussed in Chapter 2, experiments ensure that the causal variable of interest is independent of potential
+outcomes so that the groups being compared are truly comparable.
+Here, we would like to generalize this
+notion to causal variables that take on more than two values, and to more complicated situations where we
+must hold a variety of "control variables" …xed for causal inferences to be valid. This leads to the conditional
+independence assumption (CIA), a core assumption that provides the (sometimes implicit) justi…cation for
+the causal interpretation of regression. This assumption is sometimes called selection-on-observables because
+the covariates to be held …xed are assumed to be known and observed (e.g., in Goldberger, 1972; Barnow,
+Cain, and Goldberger, 1981). The big question, therefore, is what these control variables are, or should be.
+We’ll say more about that shortly. For now, we just do the econometric thing and call the covariates "Xi".
+As far as the schooling problem goes, it seems natural to imagine that Xi is a vector that includes measures
+of ability and family background.
+For starters, think of schooling as a binary decision, like whether Angrist goes to college.
+Denote this
+by a dummy variable, ci.
+The causal relationship between college attendance and a future outcome like
+earnings can be described using the same potential-outcomes notation we used to describe experiments in
+
+--- PDF p56 ---
+40
+CHAPTER 3. MAKING REGRESSION MAKE SENSE
+Chapter 2. To address this question, we imagine two potential earnings variables:
+potential outcome =
+8
+>
+<
+>
+:
+y1i
+if ci = 1
+y0i
+if ci = 0
+:
+In this case, y0i is i’s earnings without college, while y1i is i’s earnings if he goes.
+We would like to know
+the di¤erence between y1i and y0i, which is the causal e¤ect of college attendance on individual i.
+This
+is what we would measure if we could go back in time and nudge i onto the road not taken. The observed
+outcome, yi, can be written in terms of potential outcomes as
+yi = y0i + (y1i   y0i)ci:
+We get to see one of y1i or y0i, but never both. We therefore hope to measure the average of y1i y0i, or
+the average for some group, such as those who went to college. This is E[y1i y0ijci = 1]:
+In general, comparisons of those who do and don’t go to college are likely to be a poor measure of the
+causal e¤ect of college attendance. Following the logic in Chapter 2, we have
+E [yijci = 1]   E[yijci = 0]
+|
+{z
+}
+Observed di¤erence in earnings
+=
+E[y1i   y0ijci = 1]
+|
+{z
+}
+average treatment e¤ect on the treated
+(3.2.1)
++E [y0ijci = 1]   E [y0ijci = 0]
+|
+{z
+}
+selection bias
+:
+It seems likely that those who go to college would have earned more anyway. If so, selection bias is positive,
+and the naive comparison, E [yijci = 1]   E[yijci = 0], exaggerates the bene…ts of college attendance.
+The CIA asserts that conditional on observed characteristics, Xi, selection bias disappears.
+In this
+example, the CIA says,
+fy0i,y1ig q cijXi:
+(3.2.2)
+Given the CIA, conditional-on-Xi comparisons of average earnings across schooling levels have a causal
+interpretation. In other words,
+E [yijXi; ci = 1]   E [yijXi; ci = 0] = E[y1i   y0ijXi]:
+Now, we’d like to expand the conditional independence assumption to causal relations that involve vari-
+ables that can take on more than two values, like years of schooling, si: The causal relationship between
+schooling and earnings is likely to be di¤erent for each person. We therefore use the individual-speci…c
+notation,
+ysi  fi(s)
+
+--- PDF p57 ---
+3.2. REGRESSION AND CAUSALITY
+41
+to denote the potential earnings that person i would receive after obtaining s years of education. If s takes
+on only two values, 12 and 16, then we are back to the college/no college example:
+y0i = fi(12); y1i = fi(16):
+More generally, the function fi(s) tells us what i would earn for any value of schooling, s. In other words,
+fi(s) answers causal “what if” questions. In the context of theoretical models of the relationship between
+human capital and earnings, the form of fi(s) may be determined by aspects of individual behavior and/or
+market forces.
+The CIA in this more general setup becomes
+Ysi q sijXi
+(CIA)
+In many randomized experiments, the CIA crops up because si is randomly assigned conditional on Xi (In
+the Tennessee STAR experiment, for example, small classes were randomly assigned within schools). In an
+observational study, the CIA means that si can be said to be "as good as randomly assigned," conditional
+on Xi.
+Conditional on Xi, the average causal e¤ect of a one year increase in schooling is E[fi(s)   fi(s   1)jXi],
+while the average causal e¤ect of a 4-year increase in schooling is E[fi(s)   E [fi(s   4)] jXi].
+The data
+reveal only yi = fi(si), however, that is fi(s) for s =si. But given the CIA, conditional-on-Xi comparisons
+of average earnings across schooling levels have a causal interpretation. In other words,
+E [yijXi; si = s]   E [yijXi; si = s   1]
+=
+E [fi(s)   fi(s   1)jXi]
+for any value of s. For example, we can compare the earnings of those with 12 and 11 years of schooling to
+learn about the average causal e¤ect of high school graduation:
+E [yijXi; si = 12]   E [yijXi; si = 11] = E [fi(12)jXi; si = 12]   E [fi(11)jXi; si = 11] :
+This comparison has a causal interpretation because, given the CIA,
+E [fi(12)jXi; si = 12]   E [fi(11)jXi; si = 11] = E [fi(12)   fi(11)jXi; si = 12] :
+Here, the selection bias term is the average di¤erence in the potential dropout-earnings of high school
+graduates and dropouts.
+Given the CIA, however, high school graduation is independent of potential
+earnings conditional on Xi, so the selection-bias vanishes.
+Note also that in this case, the causal e¤ect of
+
+--- PDF p58 ---
+42
+CHAPTER 3. MAKING REGRESSION MAKE SENSE
+graduating high school on high school graduates is the population average high school graduation e¤ect:
+E [fi(12)   fi(11)jXi; si = 12] = E [fi(12)   fi(11)jXi] :
+This is important . . . but less important than the elimination of selection bias in (3.2.1).
+So far, we have constructed separate causal e¤ects for each value taken on by the conditioning variable,
+Xi. This leads to as many causal e¤ects as there are values of Xi, an embarrassment of riches. Empiricists
+almost always …nd it useful to boil a set of estimates down to a single summary measure, like the population
+average causal e¤ect. By the law of iterated expectations, the population average causal e¤ect of high school
+graduation is
+E fE [yijXi; si = 12]   E [yijXi; si = 11]g
+(3.2.3)
+=
+E fE [fi(12)   fi(11)jXi]g
+=
+E [fi(12)   fi(11)]
+(3.2.4)
+In the same spirit, we might be interested in the average causal e¤ect of high school graduation on high
+school graduates:
+EfE[yijXi; si = 12]   E[yijXi; si = 11]jsi = 12g
+(3.2.5)
+=
+EfE[fi(12)   fi(11)jXi]jsi = 12g
+=
+E[fi(12)   fi(11)jsi = 12]:
+(3.2.6)
+This parameter tells us how much high school graduates gained by virtue of having graduated. Likewise, for
+the e¤ects of college graduation there is a distinction between E[fi(16)   fi(12)jsi = 16]; the average causal
+e¤ect on college graduates and E[fi(16)   fi(12)], the population average e¤ect.
+The population average e¤ect, (3.2.3), can be computed by averaging all of the X-speci…c e¤ects using
+the marginal distribution of Xi; while the average e¤ect on high school or college graduates averages the
+X-speci…c e¤ects using the distribution of Xi in these groups. In both cases, the empirical counterpart is a
+matching estimator: we make comparisons across schooling groups graduates for individuals with the same
+covariate values, compute the di¤erence in their earnings, and then average these di¤erences in some way.
+In practice, there are many details to worry about when implementing a matching strategy.
+We …ll in
+some of the technical details on the mechanics of matching in Section 3.3.1, below.
+Here we note that a
+global drawback of the matching approach is that it is not "automatic," rather it requires two steps, matching
+and averaging. Estimating the standard errors of the resulting estimates may not be straightforward, either.
+
+--- PDF p59 ---
+3.2. REGRESSION AND CAUSALITY
+43
+A third consideration is that the two-way contrast at the heart of this subsection (high school or college
+completers versus dropouts) does not do full justice to the problem at hand. Since si takes on many values,
+there are separate average causal e¤ects for each possible increment in si, which also must be summarized
+in some way.9 These considerations lead us back to regression.
+Regression provides an easy-to-use empirical strategy that automatically turns the CIA into causal e¤ects.
+Two routes can be traced from the CIA to regression. One assumes that fi(s) is both linear in s and the same
+for everyone except for an additive error term, in which case linear regression is a natural tool to estimate
+the features of fi(s).
+A more general but somewhat longer route recognizes that fi(s) almost certainly
+di¤ers for di¤erent people, and, moreover, need not be linear in s. Even so, allowing for random variation in
+fi(s) across people, and for non-linearity for a given person, regression can be thought of as strategy for the
+estimation of a weighted average of the individual-speci…c di¤erence, fi(s)   fi(s   1).
+In fact, regression
+can be seen as a particular sort of matching estimator, capturing an average causal e¤ect much like 3.2.3 or
+3.2.5.
+At this point, we want to focus on the conditions required for regression to have a causal interpretation
+and not on the details of the regression-matching analog. We therefore start with the …rst route, a linear
+constant-e¤ects causal model. Suppose that
+fi(s) =  + s + i.
+(3.2.7)
+In addition to being linear, this equation says that the functional relationship of interest is the same for
+everyone. Again, s is written without an i subscript to index individuals, because equation (3.2.7) tells us
+what person i would earn for any value of s and not just the realized value, si. In this case, however, the only
+individual-speci…c and random part of fi(s) is a mean-zero error component, i, which captures unobserved
+factors that determine potential earnings.
+Substituting the observed value si for s in equation (3.2.7), we have
+yi =  + si + i.
+(3.2.8)
+Equation (3.2.8) looks like a bivariate regression model, except that equation (3.2.7) explicitly associates the
+coe¢ cients in (3.2.8) with a causal relationship. Importantly, because equation (3.2.7) is a causal model, si
+may be correlated with potential outcomes, fi(s), or, in this case, the residual term in (3.2.8), i.
+9For example, we might construct the average e¤ect over s using the distribution of si: In other words, estimate E[fi(s)  fi(s   1)] for each s by matching, and then compute the average di¤erence
+X
+E[fi(s)   fi(s   1)]P(s):
+where P(s) is the probability mass function for si: This is a discrete approximation to the average derivative, E[f0
+i(si)]:
+
+--- PDF p60 ---
+44
+CHAPTER 3. MAKING REGRESSION MAKE SENSE
+Suppose now that the CIA holds given a vector of observed covariates, Xi: In addition to the functional
+form assumption for potential outcomes embodied in (3.2.8), we decompose the random part of potential
+earnings, i, into a linear function of observable characteristics, Xi, and an error term, vi:
+i = X0
+i + vi,
+where  is a vector of population regression coe¢ cients that is assumed to satisfy E[ijXi] =X0
+i. Because 
+is de…ned by the regression of i on Xi;the residual vi and Xi are uncorrelated by construction. Moreover,
+by virtue of the CIA, we have
+E[fi(s)jXi; si] = E[fi(s)jXi] =  + s + E[ijX] =  + s + X0
+i
+Because mean-independence implies orthogonality, the residual in the linear causal model
+yi =  + si + X0
+i + vi
+(3.2.9)
+is uncorrelated with the regressors, si and Xi, and the regression coe¢ cient  is the causal e¤ect of interest.
+It bears emphasizing once again that the key assumption here is that the observable characteristics, Xi, are
+the only reason why i and si (equivalently, fi(s) and si ) are correlated. This is the selection-on-observables
+assumption for regression models discussed over a quarter century ago by Barnow, Cain, and Goldberger
+(1981). It remains the basis of most empirical work in Economics.
+3.2.2
+The Omitted Variables Bias Formula
+The omitted variables bias (OVB) formula describes the relationship between regression estimates in models
+with di¤erent sets of control variables.
+This important formula is often motivated by the notion that a
+longer regression, i.e., one with more controls such as equation (3.2.9), has a causal interpretation, while a
+shorter regression does not. The coe¢ cients on the variables included in the shorter regression are therefore
+said to be "biased". In fact, the OVB formula is a mechanical link between coe¢ cient vectors that applies to
+short and long regressions whether or not the longer regression is causal. Nevertheless, we follow convention
+and refer to the di¤erence between the included coe¢ cients in a long regression and a short regression as
+being determined by the OVB formula.
+To make this discussion concrete, suppose the set of relevant control variables in the schooling regression
+can be boiled down to a combination of family background, intelligence and motivation. Let these speci…c
+factors be denoted by a vector, Ai, which we’ll refer to by the shorthand term “ability.”The regression of
+
+--- PDF p61 ---
+3.2. REGRESSION AND CAUSALITY
+45
+wages on schooling, si, controlling for ability can written as
+yi =  + si + A0
+i + "i,
+(3.2.10)
+where , , and  are population regression coe¢ cients, and "i is a regression residual that is uncorrelated
+with all regressors by de…nition. If the CIA applies given Ai, then  can be equated with the coe¢ cient in
+the linear causal model, 3.2.7, while the residual "i is the random part of potential earnings that is left over
+after controlling for Ai.
+In practice, ability is hard to measure. For example, the American Current Population Survey (CPS), a
+large data set widely used in applied microeconomics (and the source of U.S. government data on unemploy-
+ment rates), tells us nothing about adult respondents’family background, intelligence, or motivation. What
+are the consequences of leaving ability out of regression (3.2.10)? The resulting “short regression”coe¢ cient
+is related to the “long regression”coe¢ cient in equation (3.2.10) as follows:
+Cov(yi; si)
+V (si)
+=  + 0As;
+(3.2.11)
+where As is the vector of coe¢ cients from regressions of the elements of Ai on si. To paraphrase, the OVB
+formula says
+Short equals long plus the e¤ect of omitted times the regression of omitted on included.
+This formula is easy to derive: plug the long regression into the short regression formula, Cov(yi;si)
+V (si)
+: Not
+surprisingly, the OVB formula is closely related to the regression anatomy formula, 3.1.3, from Section 3.1.2.
+Both the OVB and regression anatomy formulas tell us that short and long regression coe¢ cients are the
+same whenever the omitted and included variables are uncorrelated.10
+We can use the OVB formula to get a sense of the likely consequences of omitting ability for schooling
+coe¢ cients. Ability variables have positive e¤ects on wages, and these variables are also likely to be positively
+correlated with schooling. The short regression coe¢ cient may therefore be “too big” relative to what we
+want. On the other hand, as a matter of economic theory, the direction of the correlation between schooling
+and ability is not entirely clear.
+Some omitted variables may be negatively correlated with schooling, in
+which case the short regression coe¢ cient will be too small.11
+10Here is the multivariate generalization of OVB: Let s
+1 denote the coe¢ cient vector on a k1  1 vector of variables, X1i in
+a (short) regression that has no other variables and let l
+1 denote the coe¢ cient vector on these variables in a (long) regression
+that includes a k2  1 vector of control variables, X2i, with coe¢ cient vector l
+2. Then s
+1 = l
+1 + E[X1iX0
+1i] 1E[X1iX0
+2i]l
+2.
+11As highly educated people, we like to assume that ability and schooling are positively correlated.
+This is not a foregone
+conclusion, however: Mick Jagger dropped out of the London School of Economics and Bill Gates dropped out of Harvard,
+perhaps because the opportunity cost of schooling for these high-ability guys was high (of course, they may also be a couple of
+very lucky college dropouts).
+
+--- PDF p62 ---
+46
+CHAPTER 3. MAKING REGRESSION MAKE SENSE
+Table 3.2.1 illustrates these points using data from the NLSY. The …rst three entries in the table show
+that the schooling coe¢ cient decreases from .132 to .114 when family background variables— in this case,
+parents’education— as well as a few basic demographic characteristics (age, race, census region of residence)
+are included as controls. Further control for individual ability, as proxied by the Armed Forces Quali…cation
+Test (AFQT) test score, reduces the schooling coe¢ cient to .087 (AFQT is used by the military to select
+soldiers). The omitted variables bias formula tells us that these reductions are a result of the fact that the
+additional controls are positively correlated with both wages and schooling.12
+Table 3.2.1: Estimates of the returns to education for men in the NLSY
+(1)
+(2)
+(3)
+(4)
+(5)
+Controls:
+None
+Age
+Col. (2) and
+Col. (3) and
+Col. (4), with
+dummies
+additional
+AFQT score
+occupation
+controls*
+dummies
+0.132
+0.131
+0.114
+0.087
+0.066
+(0.007)
+(0.007)
+(0.007)
+(0.009)
+(0.010)
+Notes: Data are from the National Longitudinal Survey of Youth (1979 cohort,
+2002 survey). The table reports the coe¢ cient on years of schooling in a regres-
+sion of log wages on years of schooling and the indicated controls. Standard
+errors are shown in parentheses. The sample is restricted to men and weighted
+by NLSY sampling weights. The sample size is 2434.
+*Additional controls are mother’s and father’s years of schooling and dummy
+variables for race and Census region.
+Although simple, the OVB formula is one of the most important things to know about regression. The
+importance of the OVB formula stems from the fact that if you claim an absence of omitted variables bias,
+then typically you’re also saying that the regression you’ve got is the one you want. And the regression you
+want usually has a causal interpretation.
+In other words, you’re prepared to lean on the CIA for a causal
+interpretation of the long-regression estimates.
+At this point, it’s worth considering when the CIA is most likely to give a plausible basis for empirical
+work.
+The best-case scenario is random assignment of si , conditional on Xi, in some sort of (possibly
+natural) experiment. An example is the study of a mandatory re-training program for unemployed workers
+by Black, et al.
+(2003).
+The authors of this study were interested in whether the re-training program
+succeeded in raising earnings later on.
+They exploit the fact that eligibility for the training program they
+study was determined on the basis of personal characteristics and past unemployment and job histories.
+Workers were divided up into groups on the basis of these characteristics. While some of these groups of
+workers were ineligible for training, those in other groups were required to take training if they did not take
+12A large empirical literature investigates the consequences of omitting ability variables from schooling equations. Key early
+references include Griliches and Mason (1972), Taubman (1976), Griliches (1977), and Chamberlain (1978).
+
+--- PDF p63 ---
+3.2. REGRESSION AND CAUSALITY
+47
+a job. When some of the mandatory training groups contained more workers than training slots, training
+opportunities were distributed by lottery. Hence, training requirements were randomly assigned conditional
+on the covariates used to assign workers to groups. A regression on a dummy for training plus the personal
+characteristics, past unemployment variables, and job history variables used to classify workers seems very
+likely to provide reliable estimates of the causal e¤ect of training.13
+In the schooling context, there is usually no lottery that directly determines whether someone will go
+to college or …nish high school.14
+Still, we might imagine subjecting individuals of similar ability and
+from similar family backgrounds to an experiment that encourages school attendance.
+The Education
+Maintenance Allowance, which pays British high school students in certain areas to attend school, is one
+such policy experiment (Dearden, et al, 2004).
+A second type of study that favors the CIA exploits detailed institutional knowledge regarding the
+process that determines si . An example is the Angrist (1998) study of the e¤ect of voluntary military
+service on the later earnings of soldiers. This research asks whether men who volunteered for service in
+the US Armed Forces were economically better o¤ in the long run. Since voluntary military service is not
+randomly assigned, we can never know for sure. Angrist therefore used matching and regression techniques
+to control for observed di¤erences between veterans and nonveterans who applied to get into the all-volunteer
+forces between 1979 and 1982. The motivation for a control strategy in this case is the fact that the military
+screens soldier-applicants primarily on the basis of observable covariates like age, schooling, and test scores.
+The CIA in Angrist (1998) amounts to the claim that after conditioning on all these observed characteris-
+tics veterans and nonveterans are comparable. This assumption seems worth entertaining since, conditional
+on Xi, variation in veteran status in the Angrist (1998) study comes solely from the fact that some quali…ed
+applicants fail to enlist at the last minute. Of course, the considerations that lead a quali…ed applicant
+to “drop out” of the enlistment process could be related to earnings potential, so the CIA is clearly not
+guaranteed even in this case.
+3.2.3
+Bad Control
+We’ve made the point that control for covariates can make the CIA more plausible. But more control is not
+always better. Some variables are bad controls and should not be included in a regression model even when
+their inclusion might be expected to change the short regression coe¢ cients. Bad controls are variables that
+are themselves outcome variables in the notional experiment at hand.
+That is, bad controls might just as
+well be dependent variables too.
+Good controls are variables that we can think of as having been …xed at
+the time the regressor of interest was determined.
+The essence of the bad control problem is a version of selection bias, albeit somewhat more subtle than
+13This program appears to raise earnings, primarily because workers in the training group went back to work more quickly.
+14Lotteries have been used to distribute private school tuition subsidies; see, e.g., Angrist, et al. (2002).
+
+--- PDF p64 ---
+48
+CHAPTER 3. MAKING REGRESSION MAKE SENSE
+the selection bias discussed in Chapter (2) and Section (3.2).
+To illustrate, suppose we are interested in the
+e¤ects of a college degree on earnings and that people can work in one of two occupations, white collar and
+blue collar. A college degree clearly opens the door to higher-paying white collar jobs. Should occupation
+therefore be seen as an omitted variable in a regression of wages on schooling? After all, occupation is highly
+correlated with both education and pay. Perhaps it’s best to look at the e¤ect of college on wages for those
+within an occupation, say white collar only.
+The problem with this argument is that once we acknowledge
+the fact that college a¤ects occupation, comparisons of wages by college degree status within an occupation
+are no longer apples-to-apples, even if college degree completion is randomly assigned.
+Here is a formal illustration of the bad control problem in the college/occupation example.15
+Let wi be
+a dummy variable that denotes white collar workers and let yi denote earnings.
+The realization of these
+variables is determined by college graduation status and potential outcomes that are indexed against ci.
+We have
+yi
+=
+ciy1i + (1   ci)y0i
+wi
+=
+ciw1i + (1   ci)w0i
+where ci = 1 for college graduates and is zero otherwise, {y1i,y0i} denotes potential earnings, and {w1i,w0i}
+denotes potential white-collar status.
+We assume that ci is randomly assigned, so it is independent of
+all potential outcomes.
+We have no trouble estimating the causal e¤ect of ci on either yi or wi since
+independence gives us
+E [yijci = 1]   E [yijci = 0]
+=
+E [y1i   y0i] ;
+E [wijci = 1]   E [wijci = 0]
+=
+E [w1i   w0i] :
+In practice, we might estimate these average treatment e¤ects by regressing yi and wi and on ci:
+Bad control means that a comparison of earnings conditional on wi does not have a causal interpretation.
+Consider the di¤erence in mean earnings between college graduates and others conditional on working at a
+white collar job.
+We can compute this in a regression model that includes wi or by regressing yi on ci in
+the sample where wi = 1: The estimand in the latter case is the di¤erence in means with ci switched o¤ and
+on, conditional on wi = 1:
+E [yijwi = 1; ci = 1]   E [yijwi = 1; ci = 0] = E [y1ijw1i = 1; ci = 1]   E [y0ijw0i = 1; ci = 0]
+(3.2.12)
+15The same problem arises in "conditional-on-positive" comparisons, discussed in detail in section (3.4.2), below.
+
+--- PDF p65 ---
+3.2. REGRESSION AND CAUSALITY
+49
+By the joint independence of fy1i;w1i;y0i;w0ig and ci, we have
+E [y1ijw1i = 1; ci = 1]   E [y0ijw0i = 1; ci = 0] = E [y1ijw1i = 1]   E [y0ijw0i = 1] :
+This expression illustrates the apples-to-oranges nature of the bad-control problem:
+E [y1ijw1i = 1]   E [y0ijw0i = 1]
+= E [y1i   y0ijw1i = 1]
+|
+{z
+}
+causal e¤ect on college grads
++fE [y0ijw1i = 1]   E [y0ijw0i = 1]g :
+|
+{z
+}
+selection bias
+In other words, the di¤erence in wages between those with and without a college degree conditional on
+working in a white collar job equals the causal e¤ect of college on those with w1i = 1 (people who work at
+a white collar job when they have a college degree) and a selection-bias term which re‡ects the fact that
+college changes the composition of the pool of white collar workers.
+The selection-bias in this context can be positive or negative, depending on the relation between occupa-
+tional choice, college attendance, and potential earnings.
+The main point is that even if y1i =y0i, so that
+there is no causal e¤ect of college on wages, the conditional comparison in (3.2.12) will not tell us this (the
+regression of yi on wi and ci has exactly the same problem). It is also incorrect to say that the conditional
+comparison captures the part of the e¤ect of college that is "not explained by occupation."
+In fact, the
+conditional comparison does not tell us much that is useful without a more elaborate model of the links
+between college, occupation, and earnings.16
+As an empirical illustration, we see that the addition of two-digit occupation dummies indeed reduces the
+schooling coe¢ cient in the NLSY models reported in Table 3.2.1, in this case from .087 to .066. However,
+it’s hard to say what we should make of this decline.
+The change in schooling coe¢ cients when we add
+occupation dummies may simply be an artifact of selection bias. So we would do better to control only for
+variables that are not themselves caused by education.
+A second version of the bad control scenario involves proxy control, that is, the inclusion of variables that
+might partially control for omitted factors, but are themselves a¤ected by the variable of interest. A simple
+version of the proxy-control scenario goes like this: Suppose you are interested in a long regression, similar
+to equation (3.2.10),
+yi =  + si + ai + "i;
+(3.2.13)
+where for the purposes of this discussion we’ve replaced the vector of controls Ai, with a scalar ability
+measure ai.
+Think of this as an IQ score that measures innate ability in eighth grade, before any relevant
+16In this example, selection bias is probably negative, that is E [y0ijw1i = 1] < E [y0ijw0i = 1] : It seems reasonable to think
+that any college graduate can get a white collar job, so E [y0ijw1i = 1] is not too far from E[y0i]:
+But someone who gets a
+white collar without bene…t of a college degree (i.e., w0i = 1) is probably special, i.e., has a better than average y0i.
+
+--- PDF p66 ---
+50
+CHAPTER 3. MAKING REGRESSION MAKE SENSE
+schooling choices are made (assuming everyone completes eighth grade).
+The error term in this equation
+satis…es E[si"i] = E[ai"i] = 0 by de…nition.
+Since ai is measured before si is determined, it is a good
+control.
+Equation (3.2.13) is the regression of interest, but unfortunately, data on ai are unavailable.
+However,
+you have a second ability measure collected later, after schooling is completed (say, the score on a test used
+to screen job applicants).
+Call this variable "late ability," ali.
+In general, schooling increases late ability
+relative to innate ability. To be speci…c, suppose
+ali = 0 + 1si + 2ai:
+(3.2.14)
+By this, we mean to say that both schooling and innate ability increase late or measured ability.
+There is
+almost certainly some randomness in measured ability as well, but we can make our point more simply via
+the deterministic link, (3.2.14).
+You’re worried about OVB in the regression of yi on si alone, so you propose to regress yi on si and
+late ability, ali since the desired control, ai, is unavailable.
+Using (3.2.14) to substitute for ai in (3.2.13),
+the regression on si and ali is
+yi = (    0
+2
+) + (    1
+2
+)si + 
+2
+ali + "i:
+(3.2.15)
+In this scenario, , 1, and 2 are all positive, so     1
+2 is too small unless 1 turns out to be zero.
+In
+other words, use of a proxy control that is increased by the variable of interest generates a coe¢ cient below
+the desired e¤ect. Importantly, 1 can be investigated to some extent: if the regression of ali on si is zero,
+you might feel better about assuming that 1 is zero in (3.2.14).
+There is an interesting ambiguity in the proxy-control story that is not present in the …rst bad-control
+story.
+Control for outcome variables is simply misguided; you do not want to control for occupation in
+a schooling regression if the regression is to have a causal interpretation.
+In the proxy-control scenario,
+however, your intentions are good.
+And while proxy control does not generate the regression coe¢ cient of
+interest, it may be an improvement on no control at all.
+Recall that the motivation for proxy control is
+equation (3.2.13). In terms of the parameters in this model, the OVB formula tells us that a regression on
+si with no controls generates a coe¢ cient of  + as, where as is slope coe¢ cient from a regression of ai
+on si.
+The schooling coe¢ cient in (3.2.15) might be closer to  than the coe¢ cient you estimate with no
+control at all.
+Moreover, assuming as is positive, you can safely say that the causal e¤ect of interest lies
+between these two.
+One moral of both the bad-control and the proxy-control stories is that when thinking about controls,
+timing matters. Variables measured before the variable of interest was determined are generally good controls.
+In particular, because these variables were determined before the variable of interest, they cannot themselves
+
+--- PDF p67 ---
+3.3. HETEROGENEITY AND NONLINEARITY
+51
+be outcomes in the causal nexus. In many cases, however, the timing is uncertain or unknown. In such
+cases, clear reasoning about causal channels requires explicit assumptions about what happened …rst, or the
+assertion that none of the control variables are themselves caused by the regressor of interest.17
+3.3
+Heterogeneity and Nonlinearity
+As we saw in the previous section, a linear causal model in combination with the CIA leads to a linear
+CEF with a causal interpretation. Assuming the CEF is linear, the population regression is it. In practice,
+however, the assumption of a linear CEF is not really necessary for a causal interpretation of regression. For
+one thing, as discussed in Section 3.1.2, we can think of the regression of yi on Xi and si as providing the
+best linear approximation to the underlying CEF, regardless of its shape.
+Therefore, if the CEF is causal,
+the fact that regression approximates it gives regression coe¢ cients a causal ‡avor.
+This claim is a little
+vague, however, and the nature of the link between regression and the CEF is worth exploring further. This
+exploration leads us to an understanding of regression as a computationally attractive matching estimator.
+3.3.1
+Regression Meets Matching
+The past decade or two has seen increasing interest in matching as an empirical tool. Matching as a strategy
+to control for covariates is typically motivated by the CIA, as for causal regression in the previous section.
+For example, Angrist (1998) used matching to estimate the e¤ects of volunteering for the military service
+on the later earnings of soldiers. These matching estimates have a causal interpretation assuming that,
+conditional on the individual characteristics the military uses to select soldiers (age, schooling, test scores),
+veteran status is independent of potential earnings.
+An attractive feature of matching strategies is that they are typically accompanied by an explicit state-
+ment of the conditional independence assumption required to give matching estimates a causal interpretation.
+At the same time, we have just seen that the causal interpretation of a regression coe¢ cient is based on
+exactly the same assumption. In other words, matching and regression are both control strategies. Since
+the core assumption underlying causal inference is the same for the two strategies, it’s worth asking whether
+or to what extent matching really di¤ers from regression. Our view is that regression can be motivated as
+a computational device for a particular sort of weighted matching estimator, and therefore the di¤erences
+between regression and matching are unlikely to be of major empirical importance.
+To ‡esh out this idea, it helps to look more deeply into the mathematical structure of the matching and
+regressions estimands, i.e., the population quantities that these methods attempt to estimate. For regression,
+of course, the estimand is a vector of population regression coe¢ cients. The matching estimand is typically
+17Griliches and Mason (1972) is a seminal exploration of the use of early and late ability controls in schooling equations.
+See also Chamberlain (1977, 1978) for closely related studies.
+Rosenbaum (1984) o¤ers an alternative discussion of the proxy
+control idea using very di¤erent notation, outside of a regression framework.
+

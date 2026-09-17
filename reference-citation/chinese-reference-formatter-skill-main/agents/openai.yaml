@@ -1,0 +1,4 @@
+interface:
+  display_name: "Chinese Reference Formatter"
+  short_description: "Format Chinese academic references"
+  default_prompt: "Use $chinese-reference-formatter-skill to format these literature titles as Chinese academic references with BibTeX."

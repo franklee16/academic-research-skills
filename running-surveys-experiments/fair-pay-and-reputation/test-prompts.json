@@ -1,0 +1,66 @@
+{
+  "skill": "fair-pay-and-reputation",
+  "version": "0.1.0",
+  "source_book": "Survey Curious? Start-Up Guide — Bergman, Chinco, Hartzmark, Sussman (2020)",
+  "darwin_compatible": true,
+  "test_cases": [
+    {
+      "id": "should-trigger-01",
+      "type": "should_trigger",
+      "prompt": "How much should I pay Prolific respondents per hour?",
+      "expected_behavior": "Activate fair-pay-and-reputation. Prolific enforces $6.50/hr minimum; best practice $15/hr. Compute user-specific pay from expected survey duration.",
+      "notes": "Direct pay-rate question."
+    },
+    {
+      "id": "should-trigger-02",
+      "type": "should_trigger",
+      "prompt": "Do I have to pay MTurk workers who fail my screening?",
+      "expected_behavior": "Activate fair-pay-and-reputation. Yes. Two-stage design: paid screener at small amount, then invite passers to a higher-paid main. Example wording provided.",
+      "notes": "Direct 'must I pay' signal."
+    },
+    {
+      "id": "should-trigger-03",
+      "type": "should_trigger",
+      "prompt": "My Turker reviews are bad. How do I rebuild reputation?",
+      "expected_behavior": "Activate fair-pay-and-reputation. Diagnose: reputation damage compounds. Fix: pay platform norms, pay on time, dedicated email, claim Turkerview profile, run a dozen clean launches.",
+      "notes": "Reputation damage = primary signal."
+    },
+    {
+      "id": "should-trigger-04",
+      "type": "should_trigger",
+      "prompt": "I'm setting up a 5-min survey on Prolific. What should I pay?",
+      "expected_behavior": "Activate fair-pay-and-reputation. 5 min = 1/12 hour. At $15/hr → $1.25. At $7.50/hr → $0.625. Recommend $1.25 to be safe and signal fairness.",
+      "notes": "Compute-pay-from-duration = primary signal."
+    },
+    {
+      "id": "should-not-trigger-01",
+      "type": "should_not_trigger",
+      "prompt": "How do I design the screening questions for my survey?",
+      "expected_behavior": "Do NOT activate fair-pay-and-reputation. This is a screening-content question, not a payment question. Defer to design-layer skills or pilot-protocol.",
+      "notes": "Trap: 'screening' word adjacency."
+    },
+    {
+      "id": "should-not-trigger-02",
+      "type": "should_not_trigger",
+      "prompt": "My responses are weird, am I getting bot responses?",
+      "expected_behavior": "Do NOT activate fair-pay-and-reputation. Different concern (bot detection). Defer to quality-checks-diagnosis or platform-selection (CloudResearch has bot-mitigation).",
+      "notes": "Trap: 'are my respondents good' is a reputation-adjacent concern; but primary is bot-detection."
+    },
+    {
+      "id": "should-not-trigger-03",
+      "type": "should_not_trigger",
+      "prompt": "Should I run my survey on MTurk or Prolific?",
+      "expected_behavior": "Do NOT activate fair-pay-and-reputation. Platform choice upstream. Defer to platform-selection. (Pay-rate recommendation depends on platform; this skill applies after choice.)",
+      "notes": "Trap: 'MTurk/Prolific pay-rate' can fire; but choice comes first."
+    },
+    {
+      "id": "edge-01",
+      "type": "edge_case",
+      "prompt": "I want to pay below $7.50/hr on MTurk because my budget is tight. Is this defensible?",
+      "expected_behavior": "Edge: no. Explain the silent-degeneration mechanism: experienced workers avoid, sample becomes low-quality tail, data quality falls over multiple launches. Recommend cutting survey length or reducing N rather than pay-rate.",
+      "notes": "Edge: budget-pressure trap. Hold the line on platform norms."
+    }
+  ],
+  "minimum_pass_rate": 0.85,
+  "notes": "Trap: pay-rate is a universal trigger word, but should only fire for *survey* pay decisions, not general labor pricing. Filter: 'respondents' / 'workers' / 'MTurk/Prolific/Lucid' specifically on payment topics."
+}

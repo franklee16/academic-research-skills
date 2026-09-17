@@ -1,0 +1,26 @@
+{
+  "style_name": "Nature",
+  "in_text_format": "^{number}",
+  "multiple_citations": "^{numbers_comma_separated}",
+  "consecutive_citations": "^{start}-{end}",
+  "reference_entry": {
+    "journal": "{number}. {authors_nature_style}. {title}. *{journal_abbrev}* **{volume}**, {pages} ({year}).",
+    "conference": "{number}. {authors_nature_style}. {title}. In *{conference}* {pages} ({year}).",
+    "book": "{number}. {authors_nature_style}. *{title}* ({publisher}, {year})."
+  },
+  "author_format": {
+    "max_display": 5,
+    "et_al_threshold": 6,
+    "separator": ", ",
+    "last_separator": " & ",
+    "name_format": "last_initials_no_comma",
+    "ampersand_for_last": true
+  },
+  "title_case": "sentence",
+  "language": "en",
+  "journal_abbreviation": true,
+  "examples": [
+    "1. Vaswani, A. et al. Attention is all you need. *Adv. Neural Inf. Process. Syst.* **30**, 5998–6008 (2017).",
+    "2. LeCun, Y., Bengio, Y. & Hinton, G. Deep learning. *Nature* **521**, 436–444 (2015)."
+  ]
+}

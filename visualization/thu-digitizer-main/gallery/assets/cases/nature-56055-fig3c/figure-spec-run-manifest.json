@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "status": "candidate_extracted",
+  "numeric_output_authorized": true,
+  "run_id": "marker-line-spec-db310817cbeba0b3",
+  "execution_identity": {
+    "runner_version": "marker_line_figure_spec_v0.1.0-candidate",
+    "runner_sha256": "1b097e6eba75385b451477ea773b6c64a8a8619ce09a806567550fe0a0bc0094",
+    "extractor_sha256": "fb87387d08e7969806baaf3d9574b92527c1fc24f0a5de4067073e7d53a94d18",
+    "figure_spec_sha256": "64d0b884949667e31c985cc6b5b7323a9ea2a9c0a0f24169223a71ff49341eb8",
+    "source_sha256": "fd5fe57633c5535eedd61619cd4d60c7ca5136a523f08655a4b8c19ad8cb0078"
+  },
+  "source": {
+    "file": "original.png",
+    "sha256": "fd5fe57633c5535eedd61619cd4d60c7ca5136a523f08655a4b8c19ad8cb0078"
+  },
+  "figure_spec": {
+    "file": "figure-spec.json",
+    "sha256": "64d0b884949667e31c985cc6b5b7323a9ea2a9c0a0f24169223a71ff49341eb8"
+  },
+  "panels": [
+    {
+      "panel_id": "spontaneous_curvature",
+      "run_id": "marker-line-19836f00b322ca8d",
+      "status": "candidate_extracted",
+      "numeric_output_authorized": true,
+      "relative_directory": "marker-line-evidence/spontaneous_curvature"
+    },
+    {
+      "panel_id": "surface_reconstruction",
+      "run_id": "marker-line-b77e1626867350e6",
+      "status": "candidate_extracted",
+      "numeric_output_authorized": true,
+      "relative_directory": "marker-line-evidence/surface_reconstruction"
+    },
+    {
+      "panel_id": "rigid",
+      "run_id": "marker-line-eeb921e46074e7a4",
+      "status": "candidate_extracted",
+      "numeric_output_authorized": true,
+      "relative_directory": "marker-line-evidence/rigid"
+    }
+  ],
+  "immutability": "A repeated identical execution is refused instead of overwriting evidence."
+}

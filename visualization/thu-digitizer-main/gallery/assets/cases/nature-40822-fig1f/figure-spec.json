@@ -1,0 +1,85 @@
+{
+  "schema_version": 1,
+  "status": "needs_verified_configuration",
+  "source": {
+    "input_file": "measurement-source.png",
+    "sha256": "4dd50564058d2823dfe740ec3df49d6f451088cebd402b51d9890fdfc3282e46",
+    "media_kind": "raster",
+    "coordinate_space": "pixel",
+    "measurement_space": "original_raster_pixels",
+    "resampling_applied": false,
+    "width": 2050,
+    "height": 1399,
+    "page": null
+  },
+  "panels": [
+    {
+      "panel_id": "panel-1",
+      "bounds": [
+        1000.0,
+        420.0,
+        2025.0,
+        635.0
+      ],
+      "bounds_verification": "user_provided",
+      "plot_bounds": [
+        1000.0,
+        420.0,
+        2025.0,
+        635.0
+      ],
+      "plot_bounds_verification": "proposed",
+      "chart_type": "donut",
+      "chart_type_verification": "user_provided",
+      "coordinate_model": "polar",
+      "coordinate_model_verification": "proposed",
+      "axes": [],
+      "series": [],
+      "mark_grammars": [
+        "visible_numeric_label",
+        "color_sector",
+        "annular_band"
+      ],
+      "route": {
+        "route_id": "raster_labelled_donut_candidate",
+        "maturity": "assisted_candidate",
+        "implementation": "scripts/candidate_digitize_labelled_donut.py",
+        "automated_extraction": true
+      },
+      "required_confirmations": [
+        "original_raster",
+        "panel_roi",
+        "group_centers",
+        "radial_bands",
+        "series_palette",
+        "two_pass_visible_label_transcription",
+        "label_anchors",
+        "overlay_review"
+      ],
+      "confirmations": {
+        "original_raster": "missing",
+        "panel_roi": "user_provided",
+        "group_centers": "missing",
+        "radial_bands": "missing",
+        "series_palette": "missing",
+        "two_pass_visible_label_transcription": "missing",
+        "label_anchors": "missing",
+        "overlay_review": "missing"
+      },
+      "recoverable": "Explicitly visible numeric labels whose duplicate transcription agrees and whose normalized shares match independently sampled sector geometry.",
+      "non_recoverable": "Unlabeled sectors, hidden source values, raw observations, and any value inferred only from an angle."
+    }
+  ],
+  "evidence_contract": {
+    "required": [
+      "input_hash",
+      "panel_and_plot_bounds",
+      "calibration_anchors",
+      "immutable_extraction_csv",
+      "json_report",
+      "overlay_or_recreation",
+      "confidence_and_refusal_reasons"
+    ],
+    "source_data_role": "independent_validation_only"
+  }
+}

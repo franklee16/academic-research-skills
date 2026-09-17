@@ -1,0 +1,4 @@
+interface:
+  display_name: "Good Story"
+  short_description: "Builds sharp scientific stories from messy research materials."
+  default_prompt: "Use $good-story to find the strongest scientific story in my results and explain why it works."

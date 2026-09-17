@@ -1,0 +1,66 @@
+{
+  "skill": "selective-attrition-audit",
+  "version": "0.1.0",
+  "source_book": "Survey Curious? Start-Up Guide — Bergman, Chinco, Hartzmark, Sussman (2020)",
+  "darwin_compatible": true,
+  "test_cases": [
+    {
+      "id": "should-trigger-01",
+      "type": "should_trigger",
+      "prompt": "My treatment arm had 30% drop-out, my control had 8%. Is the comparison still valid?",
+      "expected_behavior": "Activate selective-attrition-audit. Asymmetric drop-out is a quietly fatal confound. Recommend: (a) report pass-rate per condition; (b) reweight; (c) restrict with sensitivity analyses; (d) treat as a finding.",
+      "notes": "Direct asymmetric-dropout signal."
+    },
+    {
+      "id": "should-trigger-02",
+      "type": "should_trigger",
+      "prompt": "I have a survey with 20% completion in one condition and 55% in another. Did I get valid data?",
+      "expected_behavior": "Activate selective-attrition-audit. Yes, this is a major concern. Audit demographics, attention-check pass-rate, response time per condition. Recommend sensitivity analysis or the comparison might be invalid.",
+      "notes": "Strong completion asymmetry = signal."
+    },
+    {
+      "id": "should-trigger-03",
+      "type": "should_trigger",
+      "prompt": "Check-pass rate is 92% in treatment, 78% in control. Is this a problem?",
+      "expected_behavior": "Activate selective-attrition-audit. Asymmetric check-pass-rate = differential respondent quality across arms. Diagnose; recommend reweighting or restricted analyses.",
+      "notes": "Asymmetric check-pass rate = signal."
+    },
+    {
+      "id": "should-trigger-04",
+      "type": "should_trigger",
+      "prompt": "I'm designing a survey with treatments of different lengths. Should I be worried about attrition?",
+      "expected_behavior": "Activate selective-attrition-audit. Pre-emptively: yes, length asymmetry predicts asymmetric drop-out. Recommend length-matching, compensation design, or length-equated-filler to balance.",
+      "notes": "Pre-launch risk assessment = signal."
+    },
+    {
+      "id": "should-not-trigger-01",
+      "type": "should_not_trigger",
+      "prompt": "How do I analyze my survey results?",
+      "expected_behavior": "Do NOT activate selective-attrition-audit. This is a generic analysis question. Filter: 'analyze' is too broad; specific condition-asymmetry concerns activate this skill.",
+      "notes": "Trap: 'results' could match attrition-audit, but no condition-asymmetry cue."
+    },
+    {
+      "id": "should-not-trigger-02",
+      "type": "should_not_trigger",
+      "prompt": "My survey shows a 5pp treatment effect. Is it real?",
+      "expected_behavior": "Do NOT activate selective-attrition-audit as primary. The user is asking whether the *effect* is real, which is closer to relative-vs-absolute. Audit can be a follow-up if there's attrition concern, but not primary.",
+      "notes": "Trap: 'real' question could pull audit; but no asymmetry cue."
+    },
+    {
+      "id": "should-not-trigger-03",
+      "type": "should_not_trigger",
+      "prompt": "How do I deal with missing data statistically?",
+      "expected_behavior": "Do NOT activate selective-attrition-audit. This is a missing-data-method question (multiple imputation, FIML). Defer to statistics literature.",
+      "notes": "Trap: 'missing' is adjacent to 'attrition'; but the user is asking about *method*, not *diagnosis*."
+    },
+    {
+      "id": "edge-01",
+      "type": "edge_case",
+      "prompt": "Treatment arm took 2 minutes longer on average than control. Is that bad?",
+      "expected_behavior": "Edge: depends on the survey length and what the treatment was. Recommend asymmetric-response-time audit. Small time gaps are noise; large gaps indicate differential content or fatigue. Combine with completion-rate check.",
+      "notes": "Edge: response-time audit is part of the four-distribution check."
+    }
+  ],
+  "minimum_pass_rate": 0.85,
+  "notes": "Trap: 'my data looks weird' could be attrition, interpretation, design, or analysis. Filter: only fire when there's a condition-comparison cue + concern about asymmetric missingness."
+}

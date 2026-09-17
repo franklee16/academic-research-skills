@@ -1,0 +1,7 @@
+Working-paper record supplied for evaluation.
+
+Title: Communication and Investment Flows
+Authors: Example Author and Coauthor
+Abstract: We study whether narrative disclosures predict aggregate fund flows using fund-level text and holdings.
+Public record: https://example.org/communication-flows
+Earliest public date: 2025-10-01

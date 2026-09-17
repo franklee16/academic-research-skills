@@ -1,0 +1,19 @@
+# Workspaces created by the skill
+research-*/
+workspace/
+results/
+logs/
+
+# Local Claude Code settings (personal overrides, not team-wide)
+.claude/settings.local.json
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor files
+*.swp
+*.swo
+*~
+.vscode/
+.idea/

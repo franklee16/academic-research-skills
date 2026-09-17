@@ -1,0 +1,168 @@
+{
+  "schema_version": 1,
+  "case_contract_version": 1,
+  "case_id": "china-mining-gakedaban-dt-300m",
+  "status": "partial_visible",
+  "extraction_status": "candidate_partial_visible",
+  "claim": "visible_raster_filled_contour_colour_class_and_ink_recovery",
+  "registered_route": "raster_contour_map_candidate",
+  "registered_route_status": "candidate_only",
+  "numeric_output_authorized_by_registered_route": false,
+  "source_data_role": "not_provided_or_used",
+  "source": {
+    "supplement_page_url": "http://www.chinaminingmagazine.com/en/supplement/d54a6c83-9a62-493c-a673-b34c60773e73",
+    "image_url": "http://www.chinaminingmagazine.com/fileZGKY/journal/article/zgky/2024/S1/20240624-11.jpg",
+    "article_url": "http://www.chinaminingmagazine.com/en/article/doi/10.12075/j.issn.1004-4051.20240624",
+    "article_title": "Study on the anomaly characteristics of high-precision magnetic survey in the Gakedaban Area of the western section of East Kunlun",
+    "article_doi": "10.12075/j.issn.1004-4051.20240624",
+    "figure_title": "Isogram plan of extending 300 m above ΔT polarization",
+    "sha256": "487510a87cdb1438b1fa6fe4ee950597afa59f9e43160a3a729987ba60e924c3",
+    "image_size_px": [
+      1575,
+      1246
+    ],
+    "license_status": "not_stated_on_the_source_page; retain as a local gallery evidence asset and obtain permission before any public redistribution"
+  },
+  "visible_grammar": {
+    "chart_type": "filled_contour_or_isogram_map",
+    "map_boundary": "irregular L-shaped visible filled region",
+    "filled_colour_classes": 25,
+    "full_canvas_recreation": "recovered map pixels inside the map polygon plus retained source-raster legend, graticule labels, frame, and scale bar",
+    "contour_ink": "retained as a raster ink layer; it still contains graticule and label ink because no per-label annotation was introduced",
+    "measurement_points": "none accepted; point detection was disabled because no dedicated point-mark grammar is visible"
+  },
+  "recoverable_representation": {
+    "map_polygon_source_pixels": [
+      [
+        143.0,
+        80.0
+      ],
+      [
+        141.0,
+        874.0
+      ],
+      [
+        181.0,
+        976.0
+      ],
+      [
+        342.0,
+        990.0
+      ],
+      [
+        1257.0,
+        981.0
+      ],
+      [
+        1269.0,
+        565.0
+      ],
+      [
+        1312.0,
+        555.0
+      ],
+      [
+        1309.0,
+        318.0
+      ],
+      [
+        707.0,
+        313.0
+      ],
+      [
+        692.0,
+        79.0
+      ]
+    ],
+    "colour_classes": "one visible discrete legend class per accepted map pixel",
+    "legend": "25 sampled swatches; 13 directly printed values and 12 explicitly derived intermediate regular steps",
+    "ink": "neutral raster ink retained in the overlay; contour, graticule, and text remain a review layer rather than a clean vector contour set",
+    "coordinate_mapping": "pixel to printed degree/arcminute graticule mapping only"
+  },
+  "legend": {
+    "displayed_unit": "ΔT / nT",
+    "directly_printed_values_nT": [
+      20,
+      60,
+      100,
+      140,
+      180,
+      220,
+      260,
+      300,
+      340,
+      380,
+      420,
+      460,
+      500
+    ],
+    "regular_swatch_step_nT": 20,
+    "value_rule": "Only every second swatch has a printed label. Intermediate 20 nT values are separately flagged as derived from the visibly uniform two-swatch spacing, not as author source data.",
+    "candidate_class_index_is_not_physical_value": true
+  },
+  "coordinate_calibration": {
+    "coordinate_space": "degree_and_arcminute_labels_visible_on_graticule",
+    "longitude": {
+      "formula": "arcminute = slope * pixel_coordinate + intercept",
+      "slope": 0.004081632653061225,
+      "intercept": 53.6,
+      "anchor_residual_arcminute": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "max_abs_anchor_residual_arcminute": 0.0
+    },
+    "latitude": {
+      "formula": "arcminute = slope * pixel_coordinate + intercept",
+      "slope": -0.004083289774351972,
+      "intercept": 47.98366100524959,
+      "anchor_residual_arcminute": [
+        0.00041183036923797545,
+        0.0008178250854697922,
+        -0.0028594699726482986,
+        0.001629814517940531
+      ],
+      "max_abs_anchor_residual_arcminute": 0.0028594699726482986
+    },
+    "limitations": [
+      "The figure does not print a datum, projection, or coordinate-reference-system identifier.",
+      "The calibration is retained as a pixel-to-degree/arcminute display mapping; it is not a surveyed georeferencing claim."
+    ]
+  },
+  "candidate_quality": {
+    "low_support_fraction_of_map": 0.009472960935366766,
+    "palette_tolerance_lab": 48.0,
+    "visual_review_required": true
+  },
+  "counts": {
+    "visible_colour_classes": 25,
+    "directly_printed_legend_labels": 13,
+    "derived_regular_step_labels": 12,
+    "accepted_measurement_points": 0,
+    "graticule_anchors": 10
+  },
+  "outputs": {
+    "primary_csv": "data.csv",
+    "visible_band_grid": "visible-contour-band-grid.npz",
+    "coordinate_grid_anchors": "coordinate-grid-anchors.csv",
+    "coordinate_calibration": "coordinate-calibration.json",
+    "original": "original.jpg",
+    "overlay": "overlay.png",
+    "map_only_semantic_overlay": "map-only-semantic-overlay.png",
+    "recreated": "recreated.png",
+    "map_only_recreation": "map-only-recreation.png",
+    "evidence_summary": "evidence-summary.json"
+  },
+  "full_canvas_recreation": "The map polygon is replaced with the visible-class reconstruction; legend, graticule labels, frame, and scale bar remain as source-raster annotation layers.",
+  "limitations": [
+    "Raw magnetic-survey observations, station locations, and original gridded ΔT values.",
+    "Interpolation, continuation, smoothing, contouring, or kriging settings.",
+    "An exact ΔT value at an arbitrary map location inside a rendered colour class.",
+    "A declared geodetic datum, projection, or CRS."
+  ],
+  "review_required": true
+}

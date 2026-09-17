@@ -1,0 +1,142 @@
+{
+  "instrument": {
+    "title": "[问卷名称]",
+    "instrument_type": "fact-behavior-survey",
+    "version": "0.1.0-draft",
+    "status": "draft",
+    "target_population_ids": ["P1"],
+    "languages": ["zh-CN"],
+    "modes": ["interviewer-assisted-web"],
+    "sampling_approach": "to-be-determined",
+    "inference_scope": "[可支持的推论及边界]",
+    "ethics_review_status": "institutional-determination-pending",
+    "privacy_model": "confidential-deidentified"
+  },
+  "participant_materials": {
+    "organization": "[研究机构或团队]",
+    "study_purpose": "[用参与者能够理解的语言说明研究目的、为何邀请其参加以及资料将如何使用]",
+    "estimated_minutes": "[预计完成时间，例如约 10 分钟]",
+    "voluntary_statement": "参加完全自愿。您可以拒绝回答任何问题，也可以在提交前随时中止，不会因此受到不利影响。",
+    "privacy_statement": "[说明是否匿名或保密、会收集哪些可识别信息、谁能访问、保存多久以及如何删除]",
+    "consent_mode": "explicit",
+    "consent_prompt": "我已阅读并理解上述说明，自愿参加本研究。",
+    "contact": "[研究联系人、机构邮箱或伦理投诉渠道]",
+    "completion_message": "感谢您的参与和帮助。"
+  },
+  "forms": [
+    {
+      "id": "F1",
+      "population_id": "P1",
+      "language": "zh-CN",
+      "mode": "interviewer-assisted-web",
+      "title": "[问卷名称]",
+      "introduction": "[说明本版本适用于谁、在什么场景下完成]",
+      "instructions": "请根据您的实际情况作答。除特别说明外，每题只选择一个最符合情况的选项；访员不得解释为题面之外的含义。"
+    }
+  ],
+  "sections": [
+    {
+      "id": "S1",
+      "title": "第一部分　[板块名称]",
+      "introduction": "[只保留回答本板块所必需的简短说明]",
+      "population_ids": ["P1"]
+    }
+  ],
+  "research_questions": [
+    {"id": "RQ1", "text": "[研究问题]"}
+  ],
+  "populations": [
+    {
+      "id": "P1",
+      "label": "[目标人群]",
+      "respondent_role": "self-report",
+      "observation_unit": "individual",
+      "analysis_unit": "individual"
+    }
+  ],
+  "constructs": [
+    {
+      "id": "C1",
+      "label": "[构念或变量域]",
+      "definition": "[包含、排除、时间与参照边界]",
+      "kind": "observed-variable",
+      "rq_ids": ["RQ1"]
+    }
+  ],
+  "items": [
+    {
+      "id": "Q1",
+      "variable_name": "example_variable",
+      "rq_ids": ["RQ1"],
+      "construct_ids": ["C1"],
+      "population_ids": ["P1"],
+      "section_id": "S1",
+      "question_text": "[受访者实际看到的题面]",
+      "instruction": "",
+      "required": true,
+      "response_type": "single-choice",
+      "response_options": [
+        {"code": 1, "label": "选项一"},
+        {"code": 2, "label": "选项二"}
+      ],
+      "recall_period": "not-applicable",
+      "referent": "self",
+      "universe": "all P1 respondents",
+      "display_logic": "always",
+      "skip_logic": "next",
+      "help_text": "",
+      "validation_rule": "one substantive or permitted missing code",
+      "error_message": "请选择一个选项。",
+      "randomization": "none",
+      "piping": "none",
+      "missing_codes": {
+        "dont_know": -97,
+        "not_applicable": -98,
+        "refused": -99,
+        "not_shown": -96
+      },
+      "missing_display": [
+        "dont_know",
+        "not_applicable",
+        "refused"
+      ],
+      "source_status": "new",
+      "source": "",
+      "license_status": "self-authored",
+      "wording_changed": false,
+      "validation_status": "draft-unvalidated",
+      "scoring": "not-applicable",
+      "derived_variable": "none",
+      "analysis_use": "[如何形成变量并回答 RQ]",
+      "change_log": [
+        {
+          "version": "0.1.0-draft",
+          "date": "[YYYY-MM-DD]",
+          "change": "初始草案",
+          "reason": "[设计依据]"
+        }
+      ]
+    }
+  ],
+  "testing": {
+    "expert_review": "planned",
+    "cognitive_interviewing": "planned",
+    "usability_testing": "planned",
+    "field_pilot": "planned",
+    "path_test_cases": ["P1 eligible, substantive response, normal completion"]
+  },
+  "measurement_validation": {
+    "required": false,
+    "rationale": "当前示例为单项观察变量；若形成多项目量表需另建验证计划。",
+    "planned_evidence": []
+  },
+  "data_quality": {
+    "predefined_rules": ["preserve raw responses and quality flags separately"],
+    "sensitivity_analysis": "compare results with and without justified exclusions"
+  },
+  "governance": {
+    "data_minimization_review": "planned",
+    "contact_data_separated": true,
+    "retention_plan": "[保存期限、权限与删除方式]"
+  }
+}

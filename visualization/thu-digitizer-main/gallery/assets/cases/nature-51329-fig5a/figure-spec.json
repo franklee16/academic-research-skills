@@ -1,0 +1,71 @@
+{
+  "schema_version": 1,
+  "status": "unsupported",
+  "source": {
+    "input_file": "F:\\AI\\thu-digitizer\\thu_digitizer_natcom_fig5a\\article.pdf",
+    "sha256": "ed160426494e71b3e9b37a8d42adb17b474117b6805b3ecdbab26f9d435be075",
+    "media_kind": "pdf",
+    "coordinate_space": "pdf_pt",
+    "width": 595.2760009765625,
+    "height": 790.8660278320312,
+    "page": 10
+  },
+  "panels": [
+    {
+      "panel_id": "panel-1",
+      "bounds": [
+        80.0,
+        48.0,
+        520.0,
+        185.0
+      ],
+      "bounds_verification": "user_provided",
+      "plot_bounds": [
+        80.0,
+        48.0,
+        520.0,
+        185.0
+      ],
+      "plot_bounds_verification": "proposed",
+      "chart_type": "spatial_point_map",
+      "chart_type_verification": "user_provided",
+      "coordinate_model": "unknown",
+      "coordinate_model_verification": "missing",
+      "axes": [],
+      "series": [],
+      "mark_grammars": [
+        "unknown"
+      ],
+      "route": {
+        "route_id": "unknown_refuse",
+        "maturity": "refusal",
+        "implementation": null,
+        "automated_extraction": false
+      },
+      "required_confirmations": [
+        "chart_type",
+        "coordinate_model",
+        "recoverable_representation"
+      ],
+      "confirmations": {
+        "chart_type": "missing",
+        "coordinate_model": "missing",
+        "recoverable_representation": "missing"
+      },
+      "recoverable": "Input metadata and routing diagnostics only.",
+      "non_recoverable": "All numeric values until the chart grammar and coordinate model are verified."
+    }
+  ],
+  "evidence_contract": {
+    "required": [
+      "input_hash",
+      "panel_and_plot_bounds",
+      "calibration_anchors",
+      "immutable_extraction_csv",
+      "json_report",
+      "overlay_or_recreation",
+      "confidence_and_refusal_reasons"
+    ],
+    "source_data_role": "independent_validation_only"
+  }
+}

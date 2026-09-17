@@ -1,0 +1,4 @@
+﻿panel_id,patch_diameter_um,inward_bin_sum,outward_bin_sum,inward_share,outward_share,status
+D30,30,8616.5,2813.6,0.7538,0.2462,derived_from_candidate_bins
+D15,15,3810.2,967.0,0.7976,0.2024,derived_from_candidate_bins
+D10,10,907.6,1048.9,0.4639,0.5361,derived_from_candidate_bins

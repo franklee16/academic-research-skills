@@ -1,0 +1,91 @@
+{
+  "schema_version": 1,
+  "status": "needs_verified_configuration",
+  "source": {
+    "input_file": "F:\\AI\\thu-digitizer\\gallery\\assets\\cases\\nature-67353-fig1\\original.png",
+    "sha256": "30d83f3adf494d698d16c510c4ca352ba18626d351b0fa91e608553e854fc3cc",
+    "media_kind": "raster",
+    "coordinate_space": "pixel",
+    "width": 1750,
+    "height": 1482,
+    "page": null
+  },
+  "panels": [
+    {
+      "panel_id": "panel-1",
+      "bounds": [
+        0.0,
+        0.0,
+        1750,
+        1482
+      ],
+      "bounds_verification": "proposed",
+      "plot_bounds": [
+        0.0,
+        0.0,
+        1750,
+        1482
+      ],
+      "plot_bounds_verification": "proposed",
+      "chart_type": "box",
+      "chart_type_verification": "user_provided",
+      "coordinate_model": "categorical_value",
+      "coordinate_model_verification": "proposed",
+      "axes": [
+        {
+          "axis_id": "category",
+          "orientation": "category",
+          "scale": "categorical",
+          "verification": "missing",
+          "anchors": []
+        },
+        {
+          "axis_id": "value",
+          "orientation": "value",
+          "scale": "linear",
+          "verification": "missing",
+          "anchors": []
+        }
+      ],
+      "series": [],
+      "mark_grammars": [
+        "box_summary",
+        "outlier"
+      ],
+      "route": {
+        "route_id": "raster_boxplot_color",
+        "maturity": "validated_local_stable",
+        "implementation": "scripts/digitize_boxplot.py",
+        "automated_extraction": true
+      },
+      "required_confirmations": [
+        "panel_roi",
+        "plot_bounds",
+        "value_axis",
+        "orientation",
+        "box_line_outlier_colors"
+      ],
+      "confirmations": {
+        "panel_roi": "missing",
+        "plot_bounds": "missing",
+        "value_axis": "missing",
+        "orientation": "missing",
+        "box_line_outlier_colors": "missing"
+      },
+      "recoverable": "Visible five-number summaries and separable visible outliers.",
+      "non_recoverable": "Raw samples and hidden/fused outliers."
+    }
+  ],
+  "evidence_contract": {
+    "required": [
+      "input_hash",
+      "panel_and_plot_bounds",
+      "calibration_anchors",
+      "immutable_extraction_csv",
+      "json_report",
+      "overlay_or_recreation",
+      "confidence_and_refusal_reasons"
+    ],
+    "source_data_role": "independent_validation_only"
+  }
+}

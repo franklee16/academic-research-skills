@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "case_id": "nature-19006-fig2b",
+  "status": "visible_geometry_candidate",
+  "article_url": "https://www.nature.com/articles/s41467-020-19006-2",
+  "figure": "Fig. 2b",
+  "input": {
+    "sha256": "e7c1dbef62958ed5a8ceb035c0ba3020052e6dcd8248ff7af96c2236ecfb05f8",
+    "width": 1200,
+    "height": 645,
+    "coordinate_space": "original_raster_pixels",
+    "resampling_applied": false
+  },
+  "visible_extraction": {
+    "extractor": "candidate_lattice_composite",
+    "algorithm_version": "lattice-composite-original-pixel-v2",
+    "deterministic_run_id": "c329fed867cd248e",
+    "numeric_output_authorized": true,
+    "column_guide_role": "column_bar",
+    "row_guide_role": "membership_guides"
+  },
+  "coverage": {
+    "intersections": 15,
+    "set_rows": 4,
+    "membership_grid_cells": 60,
+    "active_membership_nodes": 32,
+    "ambiguous_membership_nodes": 0
+  },
+  "validation": {
+    "candidate_spacing_status": "passed",
+    "top_bars_vs_values": {
+      "status": "validated_against_verified_visible_values",
+      "rmse": 1.343743513488903,
+      "max_abs_error": 3.113990222964958
+    },
+    "official_source": {
+      "status": "validated",
+      "path": "gallery\\assets\\cases\\nature-19006-fig2b\\source-reference.csv",
+      "sha256": "a9f72adcb6a08aadc06be2a40dd638571a2baf9c3db731badd70dc9af3833692",
+      "role": "committed_summary_derived_from_official_fig2b_tsv",
+      "upstream_file": "Source Data/fig2b.tsv",
+      "upstream_sha256": "b8e56cf1e3276837ef40524ebe6e189a235ff0ecadd35cc032094729cbaf636f"
+    },
+    "source_mismatch_count": 0
+  },
+  "source_data_role": "independent_validation_only",
+  "limitations": [
+    "Intersection values and row labels are visibly transcribed; geometry and memberships are original-pixel detections.",
+    "The retained official-source reference validates the immutable image-derived table but never replaces it.",
+    "The candidate recovers visible plotted summaries, not hidden observations or connector semantics."
+  ]
+}

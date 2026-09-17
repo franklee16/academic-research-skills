@@ -1,0 +1,70 @@
+{
+  "schema_version": 1,
+  "status": "needs_verified_configuration",
+  "inspection": {
+    "input_file": "F:\\AI\\thu-digitizer\\tmp\\nature-28348\\fig6.png",
+    "input_sha256": "f140ea8e3c5015b0e68a60e1446adc32ec7da25ee4822c627182f75cc6f9670e",
+    "file_size_bytes": 82276,
+    "media_kind": "raster",
+    "coordinate_space": "pixel",
+    "format": "PNG",
+    "mode": "RGB",
+    "width": 1350,
+    "height": 783,
+    "appearance": {
+      "background_proposal": "light",
+      "border_median_luminance_0_255": 254.99999999999997,
+      "border_colour_span_median_0_255": 0.0,
+      "pixel_count": 1057050,
+      "role": "appearance proposal only; not chart classification or numeric evidence"
+    }
+  },
+  "route_selection": {
+    "chart_type": "bar",
+    "primary": {
+      "route_id": "raster_bar_candidate",
+      "title": "Simple/grouped/stacked calibrated raster bars",
+      "chart_types": [
+        "bar",
+        "grouped_bar",
+        "stacked_bar",
+        "percent_stacked_bar",
+        "negative_bar"
+      ],
+      "media_kinds": [
+        "raster"
+      ],
+      "coordinate_models": [
+        "categorical_value"
+      ],
+      "mark_grammars": [
+        "rectangle",
+        "stack_segment",
+        "error_interval"
+      ],
+      "maturity": "candidate",
+      "implementation": "scripts/candidate_digitize_bar_chart.py",
+      "required_confirmations": [
+        "panel_roi",
+        "plot_bounds",
+        "value_axis",
+        "orientation",
+        "layout",
+        "category_centers",
+        "series_colors",
+        "legend_exclusions"
+      ],
+      "recoverable": "Visible rectangle endpoints/segments and separately visible error intervals.",
+      "non_recoverable": "Hidden samples, zero/occluded segments, and unverified SD/SEM/CI semantics.",
+      "automated_extraction": true
+    },
+    "fallback": null,
+    "decision": "needs_verified_configuration",
+    "reason": "A route is registered, but all required confirmations remain explicit before extraction."
+  },
+  "figure_spec_status": "valid_template_not_yet_verified",
+  "safety": {
+    "numeric_extraction_authorized": false,
+    "reason": "Preflight routing never converts proposed chart type, ROI, axes, or series into verified values."
+  }
+}

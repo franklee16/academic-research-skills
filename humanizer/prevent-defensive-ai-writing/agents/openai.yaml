@@ -1,0 +1,4 @@
+interface:
+  display_name: "Prevent Defensive AI Writing"
+  short_description: "Train agents to avoid defensive prose"
+  default_prompt: "Use $prevent-defensive-ai-writing to revise this draft so it responds directly without defensive caveats."

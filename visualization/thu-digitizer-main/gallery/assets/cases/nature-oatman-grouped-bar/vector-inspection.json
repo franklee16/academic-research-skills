@@ -1,0 +1,463 @@
+{
+  "input_file": "D:\\Scratch\\thu-digitizer-natcom-grouped-bar-20260720\\article.pdf",
+  "input_sha256": "d9275a57628269c90962a7a36d0aafb281013d0a9b9742586dd04bf030d2805a",
+  "tool": "thu-digitizer/scripts/inspect_pdf_vectors.py",
+  "tool_scope": "composition routing only; not a chart-data extractor",
+  "page_number_1_based": 4,
+  "page_rect_pt": {
+    "x0_pt": 0.0,
+    "y0_pt": 0.0,
+    "x1_pt": 595.276001,
+    "y1_pt": 790.866028
+  },
+  "text_span_count": 239,
+  "embedded_image_count": 0,
+  "embedded_images": [],
+  "drawing_path_count": 51969,
+  "drawing_paths_with_nonempty_bounds": 51678,
+  "filled_bezier_path_count": 29051,
+  "path_operation_counts": [
+    {
+      "value": "l",
+      "count": 167061
+    },
+    {
+      "value": "c",
+      "count": 100458
+    },
+    {
+      "value": "re",
+      "count": 130
+    }
+  ],
+  "fill_colour_counts": [
+    {
+      "value": "#00c5cd",
+      "count": 7315
+    },
+    {
+      "value": "#a3a3a3",
+      "count": 4331
+    },
+    {
+      "value": "#828282",
+      "count": 4311
+    },
+    {
+      "value": "#8968cd",
+      "count": 3091
+    },
+    {
+      "value": "#686868",
+      "count": 3044
+    },
+    {
+      "value": "#00b2b9",
+      "count": 2447
+    },
+    {
+      "value": "#cccccc",
+      "count": 1756
+    },
+    {
+      "value": "#535353",
+      "count": 1620
+    },
+    {
+      "value": "#292929",
+      "count": 1231
+    },
+    {
+      "value": "#01b2ba",
+      "count": 1157
+    },
+    {
+      "value": "#8c6ec9",
+      "count": 1059
+    },
+    {
+      "value": "#04b6bd",
+      "count": 940
+    },
+    {
+      "value": "#886bc6",
+      "count": 928
+    },
+    {
+      "value": "#080808",
+      "count": 876
+    },
+    {
+      "value": "#212121",
+      "count": 857
+    },
+    {
+      "value": "#03b5bc",
+      "count": 809
+    },
+    {
+      "value": "#10c2c9",
+      "count": 804
+    },
+    {
+      "value": "#7c5eb9",
+      "count": 752
+    },
+    {
+      "value": "#0dbec6",
+      "count": 705
+    },
+    {
+      "value": "#424242",
+      "count": 685
+    },
+    {
+      "value": "#333333",
+      "count": 576
+    },
+    {
+      "value": "#1a1a1a",
+      "count": 526
+    },
+    {
+      "value": "#8668c3",
+      "count": 526
+    },
+    {
+      "value": "#0a0a0a",
+      "count": 507
+    },
+    {
+      "value": "#9072cd",
+      "count": 494
+    },
+    {
+      "value": "#020202",
+      "count": 472
+    },
+    {
+      "value": "#8062bd",
+      "count": 466
+    },
+    {
+      "value": "#7f61bc",
+      "count": 463
+    },
+    {
+      "value": "#01b3ba",
+      "count": 461
+    },
+    {
+      "value": "#060606",
+      "count": 447
+    },
+    {
+      "value": "#03b4bb",
+      "count": 435
+    },
+    {
+      "value": "#14c6cd",
+      "count": 425
+    },
+    {
+      "value": "#0abcc3",
+      "count": 413
+    },
+    {
+      "value": "#01b2b9",
+      "count": 406
+    },
+    {
+      "value": "#7e60bb",
+      "count": 405
+    },
+    {
+      "value": "#05b7be",
+      "count": 372
+    },
+    {
+      "value": "#010101",
+      "count": 347
+    },
+    {
+      "value": "#000000",
+      "count": 339
+    },
+    {
+      "value": "#050505",
+      "count": 337
+    },
+    {
+      "value": "#7c5fba",
+      "count": 319
+    },
+    {
+      "value": "#151515",
+      "count": 296
+    },
+    {
+      "value": "#353535",
+      "count": 237
+    },
+    {
+      "value": "#969696",
+      "count": 237
+    },
+    {
+      "value": "#8466c1",
+      "count": 221
+    },
+    {
+      "value": "#02b4bb",
+      "count": 206
+    },
+    {
+      "value": "#bcbcbc",
+      "count": 206
+    },
+    {
+      "value": "#040404",
+      "count": 192
+    },
+    {
+      "value": "#787878",
+      "count": 191
+    },
+    {
+      "value": "#8163be",
+      "count": 183
+    },
+    {
+      "value": "#070707",
+      "count": 162
+    },
+    {
+      "value": "#08bac1",
+      "count": 158
+    },
+    {
+      "value": "#7d5fba",
+      "count": 141
+    },
+    {
+      "value": "#606060",
+      "count": 135
+    },
+    {
+      "value": "#8a6dc8",
+      "count": 121
+    },
+    {
+      "value": "#04b5bd",
+      "count": 114
+    },
+    {
+      "value": "#4d4d4d",
+      "count": 110
+    },
+    {
+      "value": "#111111",
+      "count": 109
+    },
+    {
+      "value": "#8e70cb",
+      "count": 108
+    },
+    {
+      "value": "#030303",
+      "count": 99
+    },
+    {
+      "value": "#12c4cb",
+      "count": 89
+    },
+    {
+      "value": "#876ac5",
+      "count": 78
+    },
+    {
+      "value": "#7c5eba",
+      "count": 76
+    },
+    {
+      "value": "#0fc0c8",
+      "count": 66
+    },
+    {
+      "value": "#7f62bd",
+      "count": 65
+    },
+    {
+      "value": "#2a2a2a",
+      "count": 63
+    },
+    {
+      "value": "#8264bf",
+      "count": 63
+    },
+    {
+      "value": "#05b6be",
+      "count": 54
+    },
+    {
+      "value": "#06b8bf",
+      "count": 54
+    },
+    {
+      "value": "#7d5fbb",
+      "count": 46
+    },
+    {
+      "value": "#262626",
+      "count": 40
+    },
+    {
+      "value": "#0cbdc5",
+      "count": 35
+    },
+    {
+      "value": "#02b3bb",
+      "count": 34
+    },
+    {
+      "value": "#8062be",
+      "count": 31
+    },
+    {
+      "value": "#3e3e3e",
+      "count": 29
+    },
+    {
+      "value": "#2f2f2f",
+      "count": 28
+    },
+    {
+      "value": "#1e1e1e",
+      "count": 27
+    },
+    {
+      "value": "#0d0d0d",
+      "count": 25
+    },
+    {
+      "value": "#8567c2",
+      "count": 25
+    },
+    {
+      "value": "#181818",
+      "count": 23
+    },
+    {
+      "value": "#090909",
+      "count": 16
+    },
+    {
+      "value": "#09bbc2",
+      "count": 16
+    },
+    {
+      "value": "#ffffff",
+      "count": 15
+    },
+    {
+      "value": "#131313",
+      "count": 14
+    },
+    {
+      "value": "#222222",
+      "count": 11
+    },
+    {
+      "value": "#323232",
+      "count": 9
+    },
+    {
+      "value": "#ebebeb",
+      "count": 8
+    },
+    {
+      "value": "#08b9c0",
+      "count": 5
+    },
+    {
+      "value": "#7d60bb",
+      "count": 5
+    },
+    {
+      "value": "#0b0b0b",
+      "count": 4
+    },
+    {
+      "value": "#0f0f0f",
+      "count": 4
+    },
+    {
+      "value": "#19cbd2",
+      "count": 4
+    },
+    {
+      "value": "#8365c0",
+      "count": 3
+    },
+    {
+      "value": "#17c9d0",
+      "count": 2
+    },
+    {
+      "value": "#9375d0",
+      "count": 2
+    },
+    {
+      "value": "#9577d2",
+      "count": 2
+    },
+    {
+      "value": "#03b4bc",
+      "count": 1
+    },
+    {
+      "value": "#0c0c0c",
+      "count": 1
+    },
+    {
+      "value": "#1b1b1b",
+      "count": 1
+    },
+    {
+      "value": "#282828",
+      "count": 1
+    }
+  ],
+  "stroke_colour_counts": [
+    {
+      "value": "#00c5cd",
+      "count": 7281
+    },
+    {
+      "value": "#8968cd",
+      "count": 3057
+    },
+    {
+      "value": "#333333",
+      "count": 195
+    },
+    {
+      "value": "#ebebeb",
+      "count": 51
+    },
+    {
+      "value": "#000000",
+      "count": 3
+    },
+    {
+      "value": "#ffffff",
+      "count": 3
+    }
+  ],
+  "composition_status": "vector_paths_detected",
+  "suggested_next_step": "Inspect drawing bounds and path geometry before attempting direct mark recovery; legend symbols and decorations can use the same vector primitives as data marks.",
+  "limitations": [
+    "A vector drawing path is not necessarily a plotted datum.",
+    "This report does not identify panel bounds, axis transforms, legends, or source-data parameters."
+  ]
+}

@@ -1,0 +1,20 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.coverage
+htmlcov/
+.venv/
+venv/
+
+# Editor and operating-system metadata
+.DS_Store
+Thumbs.db
+
+# Local generated evidence and temporary review outputs
+artifacts/
+evidence/
+*.log
+.playwright-cli/
+output/
+tmp/
+.tmp/

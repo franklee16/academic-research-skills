@@ -1,0 +1,9 @@
+* text=auto eol=lf
+
+*.md text eol=lf
+*.ps1 text eol=lf
+*.yaml text eol=lf
+LICENSE text eol=lf
+
+*.png binary
+*.webp binary

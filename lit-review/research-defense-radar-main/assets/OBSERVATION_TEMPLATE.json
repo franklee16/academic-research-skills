@@ -1,0 +1,49 @@
+{
+  "observations": [
+    {
+      "title": "Authoritative paper title",
+      "authors": ["First Author", "Second Author"],
+      "doi": null,
+      "repository_id": null,
+      "canonical_url": "https://example.org/paper",
+      "source_urls": ["https://example.org/paper"],
+      "versions": [
+        {
+          "label": "working paper",
+          "date": "2026-08-01",
+          "url": "https://example.org/paper"
+        }
+      ],
+      "earliest_public_date": "2026-08-01",
+      "earliest_public_date_provenance": "public_record",
+      "earliest_public_record_url": "https://example.org/paper",
+      "current_version_date": "2026-08-01",
+      "publication_status": "working_paper",
+      "category": "B",
+      "secondary_tags": ["measurement"],
+      "evidence_level": "A",
+      "verified_at": "2026-08-24",
+      "confidence": "medium",
+      "claim_summary": "What the accessible evidence actually establishes.",
+      "overlap_dimensions": {
+        "question": 0.75,
+        "mechanism": 0.5,
+        "data_setting": 0.25,
+        "unit": 0.5,
+        "measurement": 0.75,
+        "identification": null,
+        "method_model": 0.25,
+        "outcome": 0.5,
+        "contribution_claim": 0.75
+      },
+      "overlap_score": null,
+      "threat_help_level": "medium",
+      "affected_fingerprint_fields": ["primary_contribution"],
+      "recommended_action": "Obtain and inspect the full manuscript before rescoring.",
+      "uncertainty": "Identification details are not reported in the abstract.",
+      "chronology_relation": "unknown",
+      "priority_effect": "uncertain",
+      "change_kind": null
+    }
+  ]
+}

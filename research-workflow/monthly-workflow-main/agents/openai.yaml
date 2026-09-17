@@ -1,0 +1,3 @@
+display_name: Monthly Workflow
+short_description: Plan, log, review, and settle monthly work.
+default_prompt: Help me set up and run a monthly workflow: define my goals, create daily logs and a task board, track progress honestly, and produce weekly or monthly reviews.

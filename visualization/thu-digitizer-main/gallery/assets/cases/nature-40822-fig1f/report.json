@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "case_id": "nature-40822-fig1f",
+  "status": "candidate",
+  "route": "candidate_labelled_donut_annular_validation",
+  "shared_pie_route": "raster_labelled_donut_candidate",
+  "expected_detection_count_passed": false,
+  "source_data_role": "independent_validation_only",
+  "normalization_applied_to_primary_values": false,
+  "measurement": {
+    "file": "measurement-source.png",
+    "sha256": "4dd50564058d2823dfe740ec3df49d6f451088cebd402b51d9890fdfc3282e46",
+    "size": [
+      2050,
+      1399
+    ],
+    "gallery_crop": [
+      1000,
+      420,
+      2025,
+      635
+    ],
+    "resampling_applied": false
+  },
+  "visible_label_extraction": {
+    "method": "two matching visible-label transcriptions plus annular geometry validation",
+    "declared_label_count": 18,
+    "authorized_label_count": 18,
+    "recovered_label_count": 18,
+    "coverage": 1.0,
+    "group_label_sums_percent": {
+      "Normal": 97.5,
+      "AK": 90.60000000000001,
+      "Primary": 70.30000000000001,
+      "MET": 73.6
+    }
+  },
+  "sector_geometry_validation": {
+    "role": "validation_only_never_fills_or_normalizes_a_label",
+    "mean_absolute_percentage_point_error": 0.5960996911798231,
+    "maximum_absolute_percentage_point_error": 1.8986035683730051
+  },
+  "validation": {
+    "status": "not_comparable",
+    "filled_from_external_data": 0
+  },
+  "limitations": [
+    "Numeric use is authorized only for the 18 explicitly printed labels.",
+    "The four printed label sums are retained as 97.5, 90.6, 70.3, and 73.6 rather than forced to 100.",
+    "Sector geometry is validation-only; the shared route never derives or fills a primary label from angle geometry."
+  ]
+}

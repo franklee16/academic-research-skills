@@ -1,0 +1,6 @@
+Project title: Manager communication and investor redemption
+
+Question: Does the language used by mutual-fund managers change investor redemption behavior?
+Data: Fund holdings, matched investor accounts, and manager communications.
+Current claim: Account-level matching lets us separate information updating from attention.
+Open issue: The identification strategy is not final.

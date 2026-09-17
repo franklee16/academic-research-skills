@@ -1,0 +1,4 @@
+interface:
+  display_name: "Nan-paper-polish"
+  short_description: "系统诊断并完成学术论文的必要修改，提供原文、修改稿与具体理由"
+  default_prompt: "Use $nan-paper-polish to run criterion-specific diagnostics, merge related findings, correct every supported issue in this academic manuscript, return the clean revision in LaTeX, and explain each substantive change against the original."

@@ -1,0 +1,139 @@
+\documentclass[11pt]{article}
+
+% ============================================================
+% AI Co-Mathematician — working paper
+% Project: {{PROJECT_NAME}}
+% Initialized: {{DATE}}
+% ============================================================
+
+\usepackage[a4paper,margin=1in,marginparwidth=1.4in,marginparsep=0.2in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{mathtools}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage{marginnote}
+\usepackage{enumitem}
+\usepackage{etoolbox}
+
+\hypersetup{
+  colorlinks=true,
+  linkcolor=blue!50!black,
+  citecolor=blue!50!black,
+  urlcolor=blue!50!black
+}
+
+% ---- Theorem environments --------------------------------------------------
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+
+% ---- Co-mathematician custom macros ---------------------------------------
+%
+% \unproven{text}     — flags an unverified step. Renders in red and is
+%                       collected in the "Open Obligations" appendix.
+% \marginorigin{tag}  — provenance tag in the margin (e.g., workstream id,
+%                       sub-agent name, citation source).
+% \internalref{path}  — link to a file in the project (workstream report,
+%                       failed exploration, etc.).
+% \claim{text}        — an asserted claim that needs justification or citation.
+%                       Reviewer agent must check that every \claim is
+%                       followed by a proof, citation, or \unproven.
+
+\newcounter{unprovencount}
+\newcommand{\unprovenlist}{}
+
+\newcommand{\unproven}[1]{%
+  \stepcounter{unprovencount}%
+  \textcolor{red!80!black}{\textbf{[UNPROVEN \theunprovencount]} #1}%
+  \marginnote{\footnotesize\textcolor{red!80!black}{unproven \#\theunprovencount}}%
+  \appto\unprovenlist{\item[\textbf{\#\theunprovencount}] #1\par}%
+}
+
+\newcommand{\marginorigin}[1]{\marginnote{\footnotesize\textit{origin:} #1}}
+
+\newcommand{\internalref}[2]{\href{run:#1}{\texttt{#2}}}
+
+\newcommand{\claim}[1]{\textit{#1}\marginnote{\footnotesize\textcolor{orange!70!black}{claim — needs justification}}}
+
+% \leanproved{workstream-id} — placed inside (or right after) a theorem
+% environment in lieu of \proof, indicating the result has been verified by
+% the lean-prover sub-agent. The hook paper_tex_guard.py treats this as a
+% valid alternative to \proof. Links the reader to the Lean source.
+\newcommand{\leanproved}[1]{%
+  \textcolor{green!50!black}{$\blacksquare$ \textit{Lean-verified in }\internalref{workstreams/#1/lean/Main.lean}{\texttt{#1}}\textit{.}}%
+  \marginnote{\footnotesize\textcolor{green!50!black}{Lean: #1}}%
+}
+
+% ---- Document --------------------------------------------------------------
+\title{ {{PROJECT_NAME}} \\ \large (working paper) }
+\author{ }
+\date{Initialized {{DATE}}}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+\textit{Working draft.} Research question: {{RESEARCH_QUESTION}}
+
+\medskip
+This is a living document maintained by the AI co-mathematician system. Sections
+will be added, revised, and reviewed iteratively. Margin notes record the
+provenance of each contribution. Items flagged \unproven{} are explicitly
+unverified and listed in the appendix of open obligations.
+\end{abstract}
+
+\tableofcontents
+
+% ---- Sections start here --------------------------------------------------
+
+\section{Introduction}
+
+\marginorigin{co-math-init scaffolding}
+This section will be drafted by the project-coordinator agent after the user
+approves the goals in \internalref{goals.md}{goals.md}.
+
+\section{Preliminaries}
+
+\textit{To be drafted by literature-reviewer workstream.}
+
+\section{Main results}
+
+\textit{To be drafted by prover workstream(s).}
+
+\section{Computational evidence}
+
+\textit{To be drafted by coder workstream(s).}
+
+\section{Discussion}
+
+\textit{To be drafted last, after main results stabilise.}
+
+% ---- Open obligations appendix --------------------------------------------
+
+\appendix
+
+\section{Open obligations}
+\label{app:open}
+
+The following items are flagged \texttt{\textbackslash{}unproven} elsewhere in
+this document. The reviewer agent must verify that each is either resolved or
+explicitly accepted before the paper can be marked complete.
+
+\begin{description}
+\unprovenlist
+\end{description}
+
+\section{Failed explorations (negative space)}
+
+Per the co-mathematician principle of preserving the history of unsuccessful
+attempts, summaries of abandoned approaches live in
+\internalref{failed-explorations/}{failed-explorations/}. Reviewer agents
+consult this directory before suggesting new strategies.
+
+\end{document}

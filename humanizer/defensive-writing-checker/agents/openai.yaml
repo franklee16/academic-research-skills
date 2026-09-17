@@ -1,0 +1,6 @@
+interface:
+  display_name: "Defensive Writing Checker"
+  short_description: "Apply publication-launch writing principles"
+  default_prompt: "Use $defensive-writing-checker to check this paper against the publication-launch principles."
+policy:
+  allow_implicit_invocation: false

@@ -1,0 +1,298 @@
+{
+  "schema_version": 1,
+  "family": "histogram",
+  "privacy": "All fixtures are deterministic and locally generated synthetic data.",
+  "truth": [
+    3.0,
+    8.0,
+    5.0,
+    11.0,
+    6.0
+  ],
+  "status": "passed",
+  "failure_reason": "",
+  "variants": [
+    {
+      "name": "histogram_clean.png",
+      "raster_dimensions": [
+        640,
+        450
+      ],
+      "plot_bounds": [
+        83,
+        45,
+        479,
+        382
+      ],
+      "x_axis": [
+        83.2,
+        -0.8,
+        480.0,
+        4.8
+      ],
+      "y_axis": [
+        45.0,
+        12.0,
+        382.5,
+        0.0
+      ],
+      "bar_color": "#1f77b4",
+      "tolerance": 16.0,
+      "min_area": 50,
+      "bins": [
+        {
+          "x_left": -0.4076612903225808,
+          "x_right": 0.41088709677419333,
+          "height": 3.004444444444445,
+          "left_pixel": 111.0,
+          "right_pixel": 169.0,
+          "top_pixel": 298.0,
+          "bottom_pixel": 383.0,
+          "pixel_area": 4930.0
+        },
+        {
+          "x_left": 0.5943548387096771,
+          "x_right": 1.4129032258064516,
+          "height": 7.982222222222222,
+          "left_pixel": 182.0,
+          "right_pixel": 240.0,
+          "top_pixel": 158.0,
+          "bottom_pixel": 383.0,
+          "pixel_area": 13050.0
+        },
+        {
+          "x_left": 1.596370967741935,
+          "x_right": 2.414919354838709,
+          "height": 4.995555555555556,
+          "left_pixel": 253.0,
+          "right_pixel": 311.0,
+          "top_pixel": 242.0,
+          "bottom_pixel": 383.0,
+          "pixel_area": 8178.0
+        },
+        {
+          "x_left": 2.584274193548387,
+          "x_right": 3.416935483870968,
+          "height": 11.004444444444445,
+          "left_pixel": 323.0,
+          "right_pixel": 382.0,
+          "top_pixel": 73.0,
+          "bottom_pixel": 383.0,
+          "pixel_area": 18290.0
+        },
+        {
+          "x_left": 3.586290322580645,
+          "x_right": 4.404838709677419,
+          "height": 5.9911111111111115,
+          "left_pixel": 394.0,
+          "right_pixel": 452.0,
+          "top_pixel": 214.0,
+          "bottom_pixel": 383.0,
+          "pixel_area": 9802.0
+        }
+      ],
+      "expected_bin_count": 5,
+      "extracted_bin_count": 5,
+      "matched_bin_count": 5,
+      "unmatched_prediction_count": 0,
+      "missing_truth_count": 0,
+      "coverage": 1.0,
+      "precision": 1.0,
+      "mae": 0.008000000000000184,
+      "p95_abs_error": 0.016000000000000014,
+      "max_abs_error": 0.017777777777777892,
+      "overlay": "histogram_clean_overlay.png",
+      "image_hash_sha256": "05bcb1d860460dec2397d01f0391040520d71a89e7727eb8257f31445482b47b",
+      "status": "passed",
+      "failure_reason": ""
+    },
+    {
+      "name": "histogram_lowres.jpg",
+      "raster_dimensions": [
+        376,
+        263
+      ],
+      "plot_bounds": [
+        48,
+        26,
+        281,
+        223
+      ],
+      "x_axis": [
+        48.88,
+        -0.8,
+        282.0,
+        4.8
+      ],
+      "y_axis": [
+        26.3,
+        12.0,
+        223.54999999999998,
+        0.0
+      ],
+      "bar_color": "#1f77b4",
+      "tolerance": 80.0,
+      "min_area": 50,
+      "bins": [
+        {
+          "x_left": -0.41276595744680866,
+          "x_right": 0.40398078242964974,
+          "height": 3.0144486692015207,
+          "left_pixel": 65.0,
+          "right_pixel": 99.0,
+          "top_pixel": 174.0,
+          "bottom_pixel": 224.0,
+          "pixel_area": 1676.0
+        },
+        {
+          "x_left": 0.596156485929993,
+          "x_right": 1.4129032258064516,
+          "height": 7.942205323193916,
+          "left_pixel": 107.0,
+          "right_pixel": 141.0,
+          "top_pixel": 93.0,
+          "bottom_pixel": 224.0,
+          "pixel_area": 4429.0
+        },
+        {
+          "x_left": 1.6050789293067946,
+          "x_right": 2.421825669183253,
+          "height": 4.961216730038021,
+          "left_pixel": 149.0,
+          "right_pixel": 183.0,
+          "top_pixel": 142.0,
+          "bottom_pixel": 224.0,
+          "pixel_area": 2689.0
+        },
+        {
+          "x_left": 2.5899794097460536,
+          "x_right": 3.4067261496225116,
+          "height": 10.984030418250951,
+          "left_pixel": 190.0,
+          "right_pixel": 224.0,
+          "top_pixel": 43.0,
+          "bottom_pixel": 224.0,
+          "pixel_area": 6131.0
+        },
+        {
+          "x_left": 3.5748798901853123,
+          "x_right": 4.415648592999314,
+          "height": 5.995437262357414,
+          "left_pixel": 231.0,
+          "right_pixel": 266.0,
+          "top_pixel": 125.0,
+          "bottom_pixel": 224.0,
+          "pixel_area": 3244.0
+        }
+      ],
+      "expected_bin_count": 5,
+      "extracted_bin_count": 5,
+      "matched_bin_count": 5,
+      "unmatched_prediction_count": 0,
+      "missing_truth_count": 0,
+      "coverage": 1.0,
+      "precision": 1.0,
+      "mae": 0.026311787072243752,
+      "p95_abs_error": 0.05399239543726324,
+      "max_abs_error": 0.05779467680608441,
+      "overlay": "histogram_lowres_overlay.png",
+      "image_hash_sha256": "4c8e0d57f407e3040a41cc0500dec0b5fe594e937e2f17f98b21313894200838",
+      "status": "passed",
+      "failure_reason": ""
+    },
+    {
+      "name": "histogram_dark.png",
+      "raster_dimensions": [
+        640,
+        450
+      ],
+      "plot_bounds": [
+        83,
+        45,
+        479,
+        382
+      ],
+      "x_axis": [
+        83.2,
+        -0.8,
+        480.0,
+        4.8
+      ],
+      "y_axis": [
+        45.0,
+        12.0,
+        382.5,
+        0.0
+      ],
+      "bar_color": "#1f77b4",
+      "tolerance": 16.0,
+      "min_area": 50,
+      "bins": [
+        {
+          "x_left": -0.4076612903225808,
+          "x_right": 0.41088709677419333,
+          "height": 3.004444444444445,
+          "left_pixel": 111.0,
+          "right_pixel": 169.0,
+          "top_pixel": 298.0,
+          "bottom_pixel": 383.0,
+          "pixel_area": 4930.0
+        },
+        {
+          "x_left": 0.5943548387096771,
+          "x_right": 1.4129032258064516,
+          "height": 7.982222222222222,
+          "left_pixel": 182.0,
+          "right_pixel": 240.0,
+          "top_pixel": 158.0,
+          "bottom_pixel": 383.0,
+          "pixel_area": 13050.0
+        },
+        {
+          "x_left": 1.596370967741935,
+          "x_right": 2.414919354838709,
+          "height": 4.995555555555556,
+          "left_pixel": 253.0,
+          "right_pixel": 311.0,
+          "top_pixel": 242.0,
+          "bottom_pixel": 383.0,
+          "pixel_area": 8178.0
+        },
+        {
+          "x_left": 2.584274193548387,
+          "x_right": 3.416935483870968,
+          "height": 11.004444444444445,
+          "left_pixel": 323.0,
+          "right_pixel": 382.0,
+          "top_pixel": 73.0,
+          "bottom_pixel": 383.0,
+          "pixel_area": 18290.0
+        },
+        {
+          "x_left": 3.586290322580645,
+          "x_right": 4.404838709677419,
+          "height": 5.9911111111111115,
+          "left_pixel": 394.0,
+          "right_pixel": 452.0,
+          "top_pixel": 214.0,
+          "bottom_pixel": 383.0,
+          "pixel_area": 9802.0
+        }
+      ],
+      "expected_bin_count": 5,
+      "extracted_bin_count": 5,
+      "matched_bin_count": 5,
+      "unmatched_prediction_count": 0,
+      "missing_truth_count": 0,
+      "coverage": 1.0,
+      "precision": 1.0,
+      "mae": 0.008000000000000184,
+      "p95_abs_error": 0.016000000000000014,
+      "max_abs_error": 0.017777777777777892,
+      "overlay": "histogram_dark_overlay.png",
+      "image_hash_sha256": "8e3bfbbad541153a9f0f87ca0014d04d3df455953bdbe3b2b860d822832f1e44",
+      "status": "passed",
+      "failure_reason": ""
+    }
+  ]
+}

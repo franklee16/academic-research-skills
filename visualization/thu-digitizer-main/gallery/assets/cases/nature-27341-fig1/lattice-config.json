@@ -1,0 +1,205 @@
+{
+  "schema_version": 1,
+  "source": {
+    "sha256": "8074417e4afa6a247e8d6b41e6fe86ad900abdec33748a88dba73da4df3f6dac",
+    "width": 1999,
+    "height": 1579,
+    "coordinate_space": "original_raster_pixels",
+    "resampling_applied": false
+  },
+  "layers": {
+    "column_bars": {
+      "roi_fraction": [
+        0.25,
+        0.05,
+        0.92,
+        0.7
+      ],
+      "color": [
+        59,
+        59,
+        59
+      ],
+      "color_verification": "verified",
+      "tolerance": 0,
+      "width_range": [
+        20,
+        30
+      ]
+    },
+    "row_bars": {
+      "roi_fraction": [
+        0,
+        0.65,
+        0.25,
+        0.98
+      ],
+      "color": [
+        86,
+        180,
+        233
+      ],
+      "color_verification": "verified",
+      "tolerance": 0,
+      "height_range": [
+        5,
+        20
+      ],
+      "min_area": 300,
+      "min_row_pixels": 5
+    },
+    "membership": {
+      "color": [
+        59,
+        59,
+        59
+      ],
+      "color_verification": "verified",
+      "tolerance": 0,
+      "patch_radius": 7,
+      "active_fraction_min": 0.4,
+      "inactive_fraction_max": 0.05
+    }
+  },
+  "semantics": {
+    "verification": "verified",
+    "column_ids": [
+      "I01",
+      "I02",
+      "I03",
+      "I04",
+      "I05",
+      "I06",
+      "I07",
+      "I08",
+      "I09",
+      "I10",
+      "I11",
+      "I12",
+      "I13",
+      "I14",
+      "I15",
+      "I16",
+      "I17",
+      "I18",
+      "I19",
+      "I20",
+      "I21",
+      "I22",
+      "I23",
+      "I24",
+      "I25",
+      "I26",
+      "I27",
+      "I28",
+      "I29",
+      "I30"
+    ],
+    "column_values": [
+      998,
+      802,
+      684,
+      675,
+      500,
+      441,
+      287,
+      278,
+      229,
+      124,
+      117,
+      110,
+      110,
+      108,
+      83,
+      71,
+      62,
+      41,
+      40,
+      40,
+      39,
+      38,
+      37,
+      28,
+      23,
+      21,
+      16,
+      9,
+      7,
+      4
+    ],
+    "row_ids": [
+      "Pa26T1",
+      "Pa26T2",
+      "Pa29T1",
+      "Pa29T2",
+      "Pa29T4",
+      "Pa30T1",
+      "Pa30T2",
+      "Pa31T1",
+      "Pa31T2",
+      "Pa33T1",
+      "Pa33T2",
+      "Pa34T1",
+      "Pa34T2",
+      "Pa35T1",
+      "Pa35T2",
+      "Pa36T1",
+      "Pa36T2",
+      "Pa37T1",
+      "Pa37T2"
+    ],
+    "row_types": [
+      "LCNEC",
+      "LUAD",
+      "LCNEC",
+      "LUSC",
+      "NSCLC-NOS",
+      "LCNEC",
+      "LUAD",
+      "SCLC",
+      "LUAD",
+      "LCNEC",
+      "LUSC",
+      "LCNEC",
+      "LUAD",
+      "SCLC",
+      "LUAD",
+      "SCLC",
+      "LUSC",
+      "LUAD",
+      "LCNEC"
+    ]
+  },
+  "validation": {
+    "max_spacing_cv": 0.02,
+    "row_value_axis": [
+      {
+        "pixel": 31.5,
+        "value": 1250
+      },
+      {
+        "pixel": 105.0,
+        "value": 1000
+      },
+      {
+        "pixel": 178.5,
+        "value": 750
+      },
+      {
+        "pixel": 252.0,
+        "value": 500
+      },
+      {
+        "pixel": 325.5,
+        "value": 250
+      },
+      {
+        "pixel": 399.0,
+        "value": 0
+      }
+    ],
+    "row_bar_edge_offset_px": 1,
+    "row_total_max_abs_error": 3,
+    "top_value_max_abs_error": 1
+  }
+}

@@ -1,0 +1,76 @@
+{
+  "schema_version": 1,
+  "status": "not_automated",
+  "inspection": {
+    "input_file": "figure6-original.png",
+    "input_sha256": "4ed78ae7114310da1e3ca9178048a7fdcee96482076c06bd9d610960d384f16b",
+    "file_size_bytes": 2035616,
+    "media_kind": "raster",
+    "coordinate_space": "pixel",
+    "format": "PNG",
+    "mode": "RGB",
+    "width": 1798,
+    "height": 2550,
+    "appearance": {
+      "background_proposal": "light",
+      "border_median_luminance_0_255": 254.99999999999997,
+      "border_colour_span_median_0_255": 0.0,
+      "pixel_count": 4584900,
+      "role": "appearance proposal only; not chart classification or numeric evidence"
+    }
+  },
+  "route_selection": {
+    "chart_type": "polar",
+    "primary": {
+      "route_id": "unsupported_coordinate_route",
+      "title": "Coordinate-specific route not implemented",
+      "chart_types": [
+        "matrix_plot",
+        "area",
+        "stacked_area",
+        "waterfall",
+        "radar",
+        "polar",
+        "ternary",
+        "geospatial_map",
+        "network_plot",
+        "sankey_alluvial",
+        "event_raster",
+        "table_like",
+        "density",
+        "violin",
+        "bubble_plot",
+        "dot_plot",
+        "volcano_plot",
+        "umap_tsne_pca"
+      ],
+      "media_kinds": [
+        "raster",
+        "pdf"
+      ],
+      "coordinate_models": [
+        "unknown"
+      ],
+      "mark_grammars": [
+        "unknown"
+      ],
+      "maturity": "not_implemented_or_case_only",
+      "implementation": null,
+      "required_confirmations": [
+        "chart_specific_contract",
+        "coordinate_specific_benchmark"
+      ],
+      "recoverable": "A panel-specific visible representation only after a dedicated route is implemented.",
+      "non_recoverable": "No values should be accepted through a generic XY fallback.",
+      "automated_extraction": false
+    },
+    "fallback": null,
+    "decision": "not_automated",
+    "reason": "A route is registered, but all required confirmations remain explicit before extraction."
+  },
+  "figure_spec_status": "valid_template_not_yet_verified",
+  "safety": {
+    "numeric_extraction_authorized": false,
+    "reason": "Preflight routing never converts proposed chart type, ROI, axes, or series into verified values."
+  }
+}

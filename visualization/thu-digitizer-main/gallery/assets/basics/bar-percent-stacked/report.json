@@ -1,0 +1,629 @@
+{
+  "schema_version": 1,
+  "family": "bar_chart_candidate",
+  "candidate_module": "candidate_digitize_bar_chart.py",
+  "privacy": "All fixtures are deterministic and locally generated synthetic data.",
+  "comparison": {
+    "current_stable": "not_available_for_dedicated_bar_extraction",
+    "webplotdigitizer": "not_compared; assisted comparison still required before promotion"
+  },
+  "status": "passed",
+  "failure_reason": "",
+  "variants": [
+    {
+      "name": "percent_stacked_horizontal_clean",
+      "expected_status": "candidate",
+      "status": "candidate",
+      "raster_dimensions": [
+        700,
+        480
+      ],
+      "plot_bounds": [
+        91,
+        48,
+        538,
+        403
+      ],
+      "value_axis": [
+        91.0,
+        0.0,
+        539.0,
+        100.0
+      ],
+      "orientation": "horizontal",
+      "layout": "percent_stacked",
+      "categories": [
+        {
+          "name": "A",
+          "center_pixel": 349.5069767441861
+        },
+        {
+          "name": "B",
+          "center_pixel": 266.90232558139536
+        },
+        {
+          "name": "C",
+          "center_pixel": 184.2976744186047
+        },
+        {
+          "name": "D",
+          "center_pixel": 101.69302325581396
+        }
+      ],
+      "series_colors": {
+        "red": "#d62728",
+        "blue": "#1f77b4",
+        "green": "#2ca02c"
+      },
+      "expected_stack_total": 100.0,
+      "error_color": null,
+      "truth": [
+        {
+          "category": "A",
+          "series": "red",
+          "value": 20.0
+        },
+        {
+          "category": "A",
+          "series": "blue",
+          "value": 30.0
+        },
+        {
+          "category": "A",
+          "series": "green",
+          "value": 50.0
+        },
+        {
+          "category": "B",
+          "series": "red",
+          "value": 35.0
+        },
+        {
+          "category": "B",
+          "series": "blue",
+          "value": 20.0
+        },
+        {
+          "category": "B",
+          "series": "green",
+          "value": 45.0
+        },
+        {
+          "category": "C",
+          "series": "red",
+          "value": 15.0
+        },
+        {
+          "category": "C",
+          "series": "blue",
+          "value": 45.0
+        },
+        {
+          "category": "C",
+          "series": "green",
+          "value": 40.0
+        },
+        {
+          "category": "D",
+          "series": "red",
+          "value": 30.0
+        },
+        {
+          "category": "D",
+          "series": "blue",
+          "value": 25.0
+        },
+        {
+          "category": "D",
+          "series": "green",
+          "value": 45.0
+        }
+      ],
+      "extraction": {
+        "schema_version": 1,
+        "extractor_status": "candidate",
+        "status": "candidate",
+        "input_file": "original.png",
+        "input_sha256": "374226280fb3d51ee90ffae333d20bbac10d0d17c35397164adaed61fae891a0",
+        "image_size": {
+          "width": 700,
+          "height": 480
+        },
+        "orientation": "horizontal",
+        "layout": "percent_stacked",
+        "plot_bounds": [
+          91,
+          48,
+          538,
+          403
+        ],
+        "exclude_regions": [],
+        "value_axis": [
+          91.0,
+          0.0,
+          539.0,
+          100.0
+        ],
+        "axis_assumption": "verified linear value axis",
+        "baseline_value": 0.0,
+        "baseline_pixel": 91.0,
+        "categories": [
+          {
+            "name": "A",
+            "center_pixel": 349.5069767441861
+          },
+          {
+            "name": "B",
+            "center_pixel": 266.90232558139536
+          },
+          {
+            "name": "C",
+            "center_pixel": 184.2976744186047
+          },
+          {
+            "name": "D",
+            "center_pixel": 101.69302325581396
+          }
+        ],
+        "series": [
+          {
+            "name": "red",
+            "color": "#d62728"
+          },
+          {
+            "name": "blue",
+            "color": "#1f77b4"
+          },
+          {
+            "name": "green",
+            "color": "#2ca02c"
+          }
+        ],
+        "parameters": {
+          "tolerance": 28.0,
+          "min_area": 30,
+          "min_bar_thickness": 3,
+          "min_bar_length": 2,
+          "min_fill_ratio": 0.55,
+          "bridge_gap": 1,
+          "category_tolerance_px": 39.65023255813952,
+          "baseline_tolerance_px": 3.0,
+          "stack_gap_tolerance_px": 3.0,
+          "expected_stack_total": 100.0,
+          "stack_total_tolerance": 0.75,
+          "error_color": null,
+          "error_tolerance": 24.0,
+          "error_search_radius": 2,
+          "error_min_span": 4
+        },
+        "marks": [
+          {
+            "category": "A",
+            "requested_category_pixel": 349.5069767441861,
+            "series": "red",
+            "color": "#d62728",
+            "status": "extracted",
+            "confidence": 0.998,
+            "component_category_pixel": 350.0,
+            "component": {
+              "area": 4094.0,
+              "left_pixel": 92.0,
+              "right_pixel": 181.0,
+              "top_pixel": 327.0,
+              "bottom_pixel": 373.0,
+              "width_pixels": 89.0,
+              "height_pixels": 46.0,
+              "cross_extent_pixels": 46.0,
+              "value_extent_pixels": 89.0,
+              "fill_ratio": 1.0,
+              "category_pixel": 350.0,
+              "category_distance_pixels": 0.4930232558139096
+            },
+            "baseline_pixel": 91.0,
+            "start_pixel": 92.0,
+            "end_pixel": 181.0,
+            "start_value": 0.22321428571428573,
+            "end_value": 20.089285714285715,
+            "value": 19.86607142857143
+          },
+          {
+            "category": "A",
+            "requested_category_pixel": 349.5069767441861,
+            "series": "blue",
+            "color": "#1f77b4",
+            "status": "extracted",
+            "confidence": 0.998,
+            "component_category_pixel": 350.0,
+            "component": {
+              "area": 6118.0,
+              "left_pixel": 182.0,
+              "right_pixel": 315.0,
+              "top_pixel": 327.0,
+              "bottom_pixel": 373.0,
+              "width_pixels": 133.0,
+              "height_pixels": 46.0,
+              "cross_extent_pixels": 46.0,
+              "value_extent_pixels": 133.0,
+              "fill_ratio": 1.0,
+              "category_pixel": 350.0,
+              "category_distance_pixels": 0.4930232558139096
+            },
+            "baseline_pixel": 91.0,
+            "start_pixel": 182.0,
+            "end_pixel": 315.0,
+            "start_value": 20.3125,
+            "end_value": 50.0,
+            "value": 29.6875
+          },
+          {
+            "category": "A",
+            "requested_category_pixel": 349.5069767441861,
+            "series": "green",
+            "color": "#2ca02c",
+            "status": "extracted",
+            "confidence": 0.998,
+            "component_category_pixel": 350.0,
+            "component": {
+              "area": 10258.0,
+              "left_pixel": 316.0,
+              "right_pixel": 539.0,
+              "top_pixel": 327.0,
+              "bottom_pixel": 373.0,
+              "width_pixels": 223.0,
+              "height_pixels": 46.0,
+              "cross_extent_pixels": 46.0,
+              "value_extent_pixels": 223.0,
+              "fill_ratio": 1.0,
+              "category_pixel": 350.0,
+              "category_distance_pixels": 0.4930232558139096
+            },
+            "baseline_pixel": 91.0,
+            "start_pixel": 316.0,
+            "end_pixel": 539.0,
+            "start_value": 50.223214285714285,
+            "end_value": 100.0,
+            "value": 49.776785714285715
+          },
+          {
+            "category": "B",
+            "requested_category_pixel": 266.90232558139536,
+            "series": "red",
+            "color": "#d62728",
+            "status": "extracted",
+            "confidence": 0.997,
+            "component_category_pixel": 267.5,
+            "component": {
+              "area": 7332.0,
+              "left_pixel": 92.0,
+              "right_pixel": 248.0,
+              "top_pixel": 244.0,
+              "bottom_pixel": 291.0,
+              "width_pixels": 156.0,
+              "height_pixels": 47.0,
+              "cross_extent_pixels": 47.0,
+              "value_extent_pixels": 156.0,
+              "fill_ratio": 1.0,
+              "category_pixel": 267.5,
+              "category_distance_pixels": 0.5976744186046403
+            },
+            "baseline_pixel": 91.0,
+            "start_pixel": 92.0,
+            "end_pixel": 248.0,
+            "start_value": 0.22321428571428573,
+            "end_value": 35.044642857142854,
+            "value": 34.82142857142857
+          },
+          {
+            "category": "B",
+            "requested_category_pixel": 266.90232558139536,
+            "series": "blue",
+            "color": "#1f77b4",
+            "status": "extracted",
+            "confidence": 0.997,
+            "component_category_pixel": 267.5,
+            "component": {
+              "area": 4136.0,
+              "left_pixel": 249.0,
+              "right_pixel": 337.0,
+              "top_pixel": 244.0,
+              "bottom_pixel": 291.0,
+              "width_pixels": 88.0,
+              "height_pixels": 47.0,
+              "cross_extent_pixels": 47.0,
+              "value_extent_pixels": 88.0,
+              "fill_ratio": 1.0,
+              "category_pixel": 267.5,
+              "category_distance_pixels": 0.5976744186046403
+            },
+            "baseline_pixel": 91.0,
+            "start_pixel": 249.0,
+            "end_pixel": 337.0,
+            "start_value": 35.267857142857146,
+            "end_value": 54.910714285714285,
+            "value": 19.64285714285714
+          },
+          {
+            "category": "B",
+            "requested_category_pixel": 266.90232558139536,
+            "series": "green",
+            "color": "#2ca02c",
+            "status": "extracted",
+            "confidence": 0.997,
+            "component_category_pixel": 267.5,
+            "component": {
+              "area": 9447.0,
+              "left_pixel": 338.0,
+              "right_pixel": 539.0,
+              "top_pixel": 244.0,
+              "bottom_pixel": 291.0,
+              "width_pixels": 201.0,
+              "height_pixels": 47.0,
+              "cross_extent_pixels": 47.0,
+              "value_extent_pixels": 201.0,
+              "fill_ratio": 1.0,
+              "category_pixel": 267.5,
+              "category_distance_pixels": 0.5976744186046403
+            },
+            "baseline_pixel": 91.0,
+            "start_pixel": 338.0,
+            "end_pixel": 539.0,
+            "start_value": 55.13392857142857,
+            "end_value": 100.0,
+            "value": 44.86607142857143
+          },
+          {
+            "category": "C",
+            "requested_category_pixel": 184.2976744186047,
+            "series": "red",
+            "color": "#d62728",
+            "status": "extracted",
+            "confidence": 0.999,
+            "component_category_pixel": 184.5,
+            "component": {
+              "area": 3102.0,
+              "left_pixel": 92.0,
+              "right_pixel": 158.0,
+              "top_pixel": 161.0,
+              "bottom_pixel": 208.0,
+              "width_pixels": 66.0,
+              "height_pixels": 47.0,
+              "cross_extent_pixels": 47.0,
+              "value_extent_pixels": 66.0,
+              "fill_ratio": 1.0,
+              "category_pixel": 184.5,
+              "category_distance_pixels": 0.2023255813953142
+            },
+            "baseline_pixel": 91.0,
+            "start_pixel": 92.0,
+            "end_pixel": 158.0,
+            "start_value": 0.22321428571428573,
+            "end_value": 14.955357142857142,
+            "value": 14.732142857142856
+          },
+          {
+            "category": "C",
+            "requested_category_pixel": 184.2976744186047,
+            "series": "blue",
+            "color": "#1f77b4",
+            "status": "extracted",
+            "confidence": 0.999,
+            "component_category_pixel": 184.5,
+            "component": {
+              "area": 9447.0,
+              "left_pixel": 159.0,
+              "right_pixel": 360.0,
+              "top_pixel": 161.0,
+              "bottom_pixel": 208.0,
+              "width_pixels": 201.0,
+              "height_pixels": 47.0,
+              "cross_extent_pixels": 47.0,
+              "value_extent_pixels": 201.0,
+              "fill_ratio": 1.0,
+              "category_pixel": 184.5,
+              "category_distance_pixels": 0.2023255813953142
+            },
+            "baseline_pixel": 91.0,
+            "start_pixel": 159.0,
+            "end_pixel": 360.0,
+            "start_value": 15.178571428571429,
+            "end_value": 60.044642857142854,
+            "value": 44.86607142857142
+          },
+          {
+            "category": "C",
+            "requested_category_pixel": 184.2976744186047,
+            "series": "green",
+            "color": "#2ca02c",
+            "status": "extracted",
+            "confidence": 0.999,
+            "component_category_pixel": 184.5,
+            "component": {
+              "area": 8366.0,
+              "left_pixel": 361.0,
+              "right_pixel": 539.0,
+              "top_pixel": 161.0,
+              "bottom_pixel": 208.0,
+              "width_pixels": 178.0,
+              "height_pixels": 47.0,
+              "cross_extent_pixels": 47.0,
+              "value_extent_pixels": 178.0,
+              "fill_ratio": 1.0,
+              "category_pixel": 184.5,
+              "category_distance_pixels": 0.2023255813953142
+            },
+            "baseline_pixel": 91.0,
+            "start_pixel": 361.0,
+            "end_pixel": 539.0,
+            "start_value": 60.267857142857146,
+            "end_value": 100.0,
+            "value": 39.732142857142854
+          },
+          {
+            "category": "D",
+            "requested_category_pixel": 101.69302325581396,
+            "series": "red",
+            "color": "#d62728",
+            "status": "extracted",
+            "confidence": 0.996,
+            "component_category_pixel": 102.5,
+            "component": {
+              "area": 6251.0,
+              "left_pixel": 92.0,
+              "right_pixel": 225.0,
+              "top_pixel": 79.0,
+              "bottom_pixel": 126.0,
+              "width_pixels": 133.0,
+              "height_pixels": 47.0,
+              "cross_extent_pixels": 47.0,
+              "value_extent_pixels": 133.0,
+              "fill_ratio": 1.0,
+              "category_pixel": 102.5,
+              "category_distance_pixels": 0.8069767441860449
+            },
+            "baseline_pixel": 91.0,
+            "start_pixel": 92.0,
+            "end_pixel": 225.0,
+            "start_value": 0.22321428571428573,
+            "end_value": 29.910714285714285,
+            "value": 29.6875
+          },
+          {
+            "category": "D",
+            "requested_category_pixel": 101.69302325581396,
+            "series": "blue",
+            "color": "#1f77b4",
+            "status": "extracted",
+            "confidence": 0.996,
+            "component_category_pixel": 102.5,
+            "component": {
+              "area": 5217.0,
+              "left_pixel": 226.0,
+              "right_pixel": 337.0,
+              "top_pixel": 79.0,
+              "bottom_pixel": 126.0,
+              "width_pixels": 111.0,
+              "height_pixels": 47.0,
+              "cross_extent_pixels": 47.0,
+              "value_extent_pixels": 111.0,
+              "fill_ratio": 1.0,
+              "category_pixel": 102.5,
+              "category_distance_pixels": 0.8069767441860449
+            },
+            "baseline_pixel": 91.0,
+            "start_pixel": 226.0,
+            "end_pixel": 337.0,
+            "start_value": 30.133928571428573,
+            "end_value": 54.910714285714285,
+            "value": 24.77678571428571
+          },
+          {
+            "category": "D",
+            "requested_category_pixel": 101.69302325581396,
+            "series": "green",
+            "color": "#2ca02c",
+            "status": "extracted",
+            "confidence": 0.996,
+            "component_category_pixel": 102.5,
+            "component": {
+              "area": 9447.0,
+              "left_pixel": 338.0,
+              "right_pixel": 539.0,
+              "top_pixel": 79.0,
+              "bottom_pixel": 126.0,
+              "width_pixels": 201.0,
+              "height_pixels": 47.0,
+              "cross_extent_pixels": 47.0,
+              "value_extent_pixels": 201.0,
+              "fill_ratio": 1.0,
+              "category_pixel": 102.5,
+              "category_distance_pixels": 0.8069767441860449
+            },
+            "baseline_pixel": 91.0,
+            "start_pixel": 338.0,
+            "end_pixel": 539.0,
+            "start_value": 55.13392857142857,
+            "end_value": 100.0,
+            "value": 44.86607142857143
+          }
+        ],
+        "rejected_components": [],
+        "excluded_components": [],
+        "stack_diagnostics": [
+          {
+            "kind": "stack_total",
+            "category": "A",
+            "expected": 100.0,
+            "observed_positive_total": 99.33035714285714,
+            "difference": -0.6696428571428612,
+            "within_tolerance": true
+          },
+          {
+            "kind": "stack_total",
+            "category": "B",
+            "expected": 100.0,
+            "observed_positive_total": 99.33035714285714,
+            "difference": -0.6696428571428612,
+            "within_tolerance": true
+          },
+          {
+            "kind": "stack_total",
+            "category": "C",
+            "expected": 100.0,
+            "observed_positive_total": 99.33035714285714,
+            "difference": -0.6696428571428612,
+            "within_tolerance": true
+          },
+          {
+            "kind": "stack_total",
+            "category": "D",
+            "expected": 100.0,
+            "observed_positive_total": 99.33035714285714,
+            "difference": -0.6696428571428612,
+            "within_tolerance": true
+          }
+        ],
+        "summary": {
+          "expected_mark_count": 12,
+          "extracted_mark_count": 12,
+          "missing_mark_count": 0,
+          "ambiguous_mark_count": 0,
+          "rejected_component_count": 0,
+          "excluded_component_count": 0,
+          "error_bar_missing_count": 0,
+          "mean_confidence": 0.998
+        },
+        "limitations": [
+          "Only visible colour-distinct rectangles are measured; source observations are not recovered.",
+          "Category centres, the plot region, orientation, layout, and linear calibration must be verified.",
+          "A missing segment is not converted to a zero value.",
+          "Error intervals describe visible endpoints only; SD, SEM, or confidence-interval semantics are unknown.",
+          "Facets, insets, photos, 3D projections, gradients, hatching, and overlapping same-colour marks require separate routing.",
+          "Every exclusion region must be visually verified as legend or decorative geometry before extraction."
+        ]
+      },
+      "metrics": {
+        "expected_mark_count": 12,
+        "extracted_mark_count": 12,
+        "matched_mark_count": 12,
+        "unmatched_prediction_count": 0,
+        "missing_truth_count": 0,
+        "precision": 1.0,
+        "coverage": 1.0,
+        "f1": 1.0,
+        "mae": 0.22321428571428661,
+        "p95_abs_error": 0.33258928571428753,
+        "max_abs_error": 0.3571428571428612,
+        "error_endpoint_p95_px": null,
+        "error_endpoint_max_px": null,
+        "expected_error_bar_count": 0,
+        "extracted_error_bar_count": 0,
+        "error_bar_coverage": null
+      },
+      "overlay": "percent_stacked_horizontal_clean_overlay.png",
+      "recreation": "percent_stacked_horizontal_clean_recreation.png",
+      "image_hash_sha256": "374226280fb3d51ee90ffae333d20bbac10d0d17c35397164adaed61fae891a0",
+      "benchmark_status": "passed",
+      "failure_reason": ""
+    }
+  ]
+}

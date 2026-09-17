@@ -1,0 +1,34 @@
+record_id,kind,series,series_label,x,value,pixel_x,pixel_y,confidence,candidate_pixels,color,marker,line_style,error_lower,error_upper,error_top_pixel_y,error_bottom_pixel_y,error_confidence,error_status,value_status,shape,radius
+biodiversity-00,point,biodiversity,biodiversity,0,25.171233,89.208,231.0,1.0,29,#d62728,s,-,,,,,,not_applicable,calibrated_original_pixel_sample,circle,8
+biodiversity-01,point,biodiversity,biodiversity,1,10.068493,126.566,294.0,1.0,63,#d62728,s,-,,,,,,not_applicable,calibrated_original_pixel_sample,circle,8
+biodiversity-02,point,biodiversity,biodiversity,2,9.109589,163.925,298.0,1.0,63,#d62728,s,-,,,,,,not_applicable,calibrated_original_pixel_sample,circle,8
+biodiversity-03,point,biodiversity,biodiversity,3,5.993151,201.283,311.0,1.0,63,#d62728,s,-,,,,,,not_applicable,calibrated_original_pixel_sample,circle,8
+biodiversity-04,point,biodiversity,biodiversity,4,7.910959,238.642,303.0,1.0,63,#d62728,s,-,,,,,,not_applicable,calibrated_original_pixel_sample,circle,8
+biodiversity-05,point,biodiversity,biodiversity,5,10.068493,276.0,294.0,1.0,63,#d62728,s,-,,,,,,not_applicable,calibrated_original_pixel_sample,circle,8
+biodiversity-06,point,biodiversity,biodiversity,6,13.90411,313.358,278.0,1.0,63,#d62728,s,-,,,,,,not_applicable,calibrated_original_pixel_sample,circle,8
+biodiversity-07,point,biodiversity,biodiversity,7,7.910959,350.717,303.0,1.0,63,#d62728,s,-,,,,,,not_applicable,calibrated_original_pixel_sample,circle,8
+biodiversity-08,point,biodiversity,biodiversity,8,5.993151,388.075,311.0,1.0,64,#d62728,s,-,,,,,,not_applicable,calibrated_original_pixel_sample,circle,8
+biodiversity-09,point,biodiversity,biodiversity,9,17.979452,425.434,261.0,1.0,63,#d62728,s,-,,,,,,not_applicable,calibrated_original_pixel_sample,circle,8
+biodiversity-10,point,biodiversity,biodiversity,10,10.068493,462.792,294.0,1.0,63,#d62728,s,-,,,,,,not_applicable,calibrated_original_pixel_sample,circle,8
+economic_language-00,point,economic_language,economic language,0,39.554795,89.208,171.0,1.0,38,#1f77b4,^,--,,,,,,not_applicable,calibrated_original_pixel_sample,circle,8
+economic_language-01,point,economic_language,economic language,1,32.60274,126.566,200.0,1.0,40,#1f77b4,^,--,,,,,,not_applicable,calibrated_original_pixel_sample,circle,8
+economic_language-02,point,economic_language,economic language,2,24.452055,163.925,234.0,1.0,41,#1f77b4,^,--,,,,,,not_applicable,calibrated_original_pixel_sample,circle,8
+economic_language-03,point,economic_language,economic language,3,31.40411,201.283,205.0,1.0,40,#1f77b4,^,--,,,,,,not_applicable,calibrated_original_pixel_sample,circle,8
+economic_language-04,point,economic_language,economic language,4,34.520548,238.642,192.0,1.0,41,#1f77b4,^,--,,,,,,not_applicable,calibrated_original_pixel_sample,circle,8
+economic_language-05,point,economic_language,economic language,5,29.726027,276.0,212.0,1.0,46,#1f77b4,^,--,,,,,,not_applicable,calibrated_original_pixel_sample,circle,8
+economic_language-06,point,economic_language,economic language,6,42.431507,313.358,159.0,1.0,40,#1f77b4,^,--,,,,,,not_applicable,calibrated_original_pixel_sample,circle,8
+economic_language-07,point,economic_language,economic language,7,43.630137,350.717,154.0,1.0,39,#1f77b4,^,--,,,,,,not_applicable,calibrated_original_pixel_sample,circle,8
+economic_language-08,point,economic_language,economic language,8,36.558219,388.075,183.5,1.0,42,#1f77b4,^,--,,,,,,not_applicable,calibrated_original_pixel_sample,circle,8
+economic_language-09,point,economic_language,economic language,9,36.438356,425.434,184.0,1.0,41,#1f77b4,^,--,,,,,,not_applicable,calibrated_original_pixel_sample,circle,8
+economic_language-10,point,economic_language,economic language,10,39.554795,462.792,171.0,1.0,40,#1f77b4,^,--,,,,,,not_applicable,calibrated_original_pixel_sample,circle,8
+context-00,point,context,context,0,27.089041,89.208,223.0,1.0,59,#7f7f7f,o,-,11.027397,42.910959,157,290,0.897,visible_endpoints_extracted,calibrated_original_pixel_sample,circle,8
+context-01,point,context,context,1,12.945205,126.566,282.0,1.0,57,#7f7f7f,o,-,5.034247,21.09589,248,315,0.838,visible_endpoints_extracted,calibrated_original_pixel_sample,circle,8
+context-02,point,context,context,2,11.986301,163.925,286.0,1.0,55,#7f7f7f,o,-,4.075342,19.89726,253,319,0.836,visible_endpoints_extracted,calibrated_original_pixel_sample,circle,8
+context-03,point,context,context,3,13.90411,201.283,278.0,1.0,55,#7f7f7f,o,-,7.431507,23.013699,240,305,0.925,visible_endpoints_extracted,calibrated_original_pixel_sample,circle,8
+context-04,point,context,context,4,18.938356,238.642,257.0,1.0,57,#7f7f7f,o,-,9.349315,30.924658,207,297,0.94,visible_endpoints_extracted,calibrated_original_pixel_sample,circle,8
+context-05,point,context,context,5,19.89726,276.0,253.0,1.0,57,#7f7f7f,o,-,7.910959,31.883562,203,303,0.837,visible_endpoints_extracted,calibrated_original_pixel_sample,circle,8
+context-06,point,context,context,6,28.047945,313.358,219.0,1.0,55,#7f7f7f,o,-,15.342466,41.472603,163,272,0.955,visible_endpoints_extracted,calibrated_original_pixel_sample,circle,8
+context-07,point,context,context,7,35.0,350.717,190.0,1.0,55,#7f7f7f,o,-,17.020548,52.979452,115,265,0.931,visible_endpoints_extracted,calibrated_original_pixel_sample,circle,8
+context-08,point,context,context,8,31.883562,388.075,203.0,1.0,55,#7f7f7f,o,-,17.020548,46.986301,140,265,0.917,visible_endpoints_extracted,calibrated_original_pixel_sample,circle,8
+context-09,point,context,context,9,28.047945,425.434,219.0,1.0,55,#7f7f7f,o,-,13.90411,41.952055,161,278,0.86,visible_endpoints_extracted,calibrated_original_pixel_sample,circle,8
+context-10,point,context,context,10,21.09589,462.792,248.0,1.0,55,#7f7f7f,o,-,11.506849,31.883562,203,288,0.949,visible_endpoints_extracted,calibrated_original_pixel_sample,circle,8

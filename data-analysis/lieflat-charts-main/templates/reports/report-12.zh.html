@@ -1,0 +1,413 @@
+<!doctype html>
+<html lang="zh-Hans">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>周报速览 — Lieflat 报告模板 · 椰林三秒</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4"></script>
+<script src="https://cdn.jsdelivr.net/npm/echarts@6/dist/echarts.min.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+SC:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+  /* ═══════════════════════════════════════════════════════════════
+     LIEFLAT 报告模板 12 · 周报速览 · 椰林三秒
+     场景：运营周报 dashboard 一页，读者只给不到 10 秒——按
+           lieflat-charts/SKILL.md 第〇节的例外条款（"用户明确要求
+           Glance / dashboard / 周报 / 三秒快读时"），本模板直接走
+           Glance 系，不走 Lupi/Basics 的发丝细读路线。不是因为这几个
+           数据形状 Lupi 撑不住，是场合本身要三秒读完，用户也点名要
+           Glance 的粗笔画质感——这条例外在 SKILL.md 里写得很明白。
+     依赖说明：这是模板库里第一张、目前也是唯一一张挂 CDN 依赖的模板。
+           库里其余模板都是纯 SVG、离线可开；这四张图来自 Chart.js 和
+           ECharts，脚本标签原样照抄 glance-palm.html 画廊，没有联网
+           时图表区会是空白。
+     图表正本 = templates/color/glance-palm.html：
+       图A  G1 Range Capsules   （Chart.js floating bar）
+       图B  G2 Petal Rose       （ECharts，暗卡，本页唯一一张深色卡）
+       图C  G5 Pictorial Bar    （ECharts pictorialBar）
+       图D  G3 Chunky Bars      （Chart.js，补上"排名比较"这个数据
+                                  形状缺口——G1/G2/G5 分别覆盖了区间、
+                                  近似等分构成、逐日计数，唯独少类目
+                                  排名比较没人管）
+     色板正本 = color-presets.js 的 PALM 一套，与模板 02 共用同一批
+       色值，不新增色值。深绿 #43593B 当主墨，琥珀 #D4A017 当强调，
+       浓咖 #58402E 当纸浆衬底；RAMP 五档梯（#F2D17E → #ACAD79 →
+       #929960 → #77835A → #43593B）直接取自 glance-palm.html 脚本
+       内的同名常量，暗卡用的 DRAMP4/DMID/DQ 同理照搬。
+     排版参考：模板 02 的信纸垫底结构（浓咖衬底 + 纸张、全大写字距
+       节标题 + 下划线、claim + 图 + srcline 三件套、页脚双栏）——只学
+       骨架，栏位为这张仪表盘重排成 2×2 图区 + 顶部速览条。
+     数据说明：全部为虚构演示数据，仅用于验证版式。
+     ═══════════════════════════════════════════════════════════════ */
+  :root{
+    /* PALM preset roles（与模板 02 同一套） */
+    --paper:#F0EFEB; --txt:#58402E;
+    --mut:rgba(88,64,46,.60); --lab:rgba(88,64,46,.72);
+    --faint:rgba(88,64,46,.32); --quiet:rgba(88,64,46,.15);
+    --grid:rgba(88,64,46,.16);
+    --data:#43593B; --data2:#58402E; --hero:#D4A017;
+    --faintdata:#ACAD79; --bead:#77835A;
+    --mat:#58402E;
+    /* 暗卡专用（取自 glance-palm.html 的 --dmid/--dq，BG 的纸色透明档） */
+    --dmid:rgba(240,239,235,.62); --dq:rgba(240,239,235,.24);
+    --sans:'Inter','Noto Sans SC',sans-serif;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{background:var(--mat);font-family:var(--sans);color:var(--txt);
+    -webkit-font-smoothing:antialiased;font-variant-numeric:tabular-nums lining-nums;
+    display:flex;justify-content:center;padding:64px 32px}
+  .sheet{width:1080px;max-width:1080px;background:var(--paper);padding:60px 68px 64px}
+
+  /* ── 节标题：字距 + 底线（学模板 02） ── */
+  .sect{font-size:14px;font-weight:800;letter-spacing:.2em;
+    padding-bottom:10px;border-bottom:2px solid var(--txt);margin-bottom:22px}
+  .sect .yr{float:right;font-weight:600;color:var(--mut);letter-spacing:.1em}
+
+  /* ── 顶部速览条：四个数,当天一句话就懂（学模板 02 的 .miles） ── */
+  .miles{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:44px}
+  .miles .m{padding:18px 16px 16px;position:relative}
+  .miles .m.hero{background:var(--hero);color:var(--paper)}
+  .miles .m.frame{border:1px solid var(--faint)}
+  .miles .m.green{background:var(--data);color:var(--paper)}
+  .miles .m .tag{font-size:8.5px;font-weight:700;letter-spacing:.14em;opacity:.7}
+  .miles .m .v{font-size:26px;font-weight:800;letter-spacing:-.03em;line-height:1;margin-top:6px}
+  .miles .m .v small{font-size:13px;font-weight:700;margin-left:2px}
+  .miles .m .l{font-size:10px;line-height:1.65;margin-top:8px;opacity:.85}
+
+  /* ── 2×2 图区（复用模板 02 的 .duo，纵向再叠一份） ── */
+  .duo{display:grid;grid-template-columns:1fr 1fr;gap:40px}
+  .duo + .duo{margin-top:40px}
+
+  /* ── 图卡：轻卡描边,暗卡实底(唯一一张,读花瓣要暗底) ── */
+  .gcard{padding:24px 26px 22px;border:1px solid var(--faint)}
+  .gcard.dark{background:var(--mat);color:var(--paper);border:none}
+  .gcard.dark .sect{border-bottom-color:var(--paper);color:var(--paper)}
+  .gcard.dark .sub{color:var(--dmid)}
+  .gcard.dark .claim{color:var(--paper)}
+  .gcard.dark .srcline{color:var(--dq)}
+
+  .sub{font-size:11px;color:var(--mut);margin-bottom:14px;line-height:1.75}
+  .claim{font-size:13.5px;font-weight:700;margin-bottom:10px;line-height:1.6}
+  .wrap{position:relative;height:280px}
+  .ch{height:280px}
+  svg text{font-family:var(--sans)}
+  .srcline{font-size:9px;font-weight:600;letter-spacing:.1em;
+    color:var(--faint);margin-top:10px;line-height:1.6}
+
+  /* ── 页脚：数据说明 + CDN 依赖说明 + 落款(三栏,比模板 02 多一栏) ── */
+  .foot{margin-top:52px;padding-top:16px;border-top:2px solid var(--txt);
+    display:grid;grid-template-columns:1fr 1.55fr .85fr;gap:26px;
+    font-size:9px;font-weight:600;letter-spacing:.08em;color:var(--mut)}
+  .foot .warn{color:var(--data);font-weight:700;line-height:1.75}
+  .foot .warn small{display:block;font-weight:500;color:var(--mut);margin-top:4px}
+  .foot .dep{line-height:1.9}
+  .foot .end{text-align:right;line-height:1.75}
+
+  /* ── 动画（mono-tokens MOTION.css 原样） ── */
+  .pop{transform-box:fill-box;transform-origin:center;animation:pop .5s cubic-bezier(.2,.7,.3,1.3) both}
+  @keyframes pop{from{transform:scale(0)}to{transform:none}}
+  .fade{animation:fade .9s ease both}
+  @keyframes fade{from{opacity:0}}
+  .draw{stroke-dasharray:1;stroke-dashoffset:1;animation:draw 1s cubic-bezier(.4,0,.2,1) both}
+  @keyframes draw{to{stroke-dashoffset:0}}
+  @media(max-width:640px){body{padding:24px 10px}}
+  @media (prefers-reduced-motion:reduce){
+    .pop,.fade{animation:none}
+    .draw{animation:none;stroke-dasharray:none;stroke-dashoffset:0}
+  }
+</style>
+</head>
+<body>
+<div class="sheet">
+
+  <div class="sect">Loop 运营速览 <span class="yr">第 32 周 · 2026年8月3日–8月9日</span></div>
+
+  <!-- ══ 顶部速览条：四个数,串起下面四张图 ══ -->
+  <div class="miles">
+    <div class="m hero">
+      <div class="tag">周活跃峰值</div>
+      <div class="v">210<small>人</small></div>
+      <div class="l">周三同时在线的最高点</div>
+    </div>
+    <div class="m frame">
+      <div class="tag">发布心情</div>
+      <div class="v">12<small>票</small></div>
+      <div class="l">"顺畅"是这周投票最多的词</div>
+    </div>
+    <div class="m frame">
+      <div class="tag">本周上线</div>
+      <div class="v">28<small>个</small></div>
+      <div class="l">五个工作日加起来的改动数</div>
+    </div>
+    <div class="m green">
+      <div class="tag">工单总量</div>
+      <div class="v">293<small>件</small></div>
+      <div class="l">四个渠道加起来的这周工单</div>
+    </div>
+  </div>
+
+  <!-- ══ 第一行：区间 | 暗卡花瓣 ══ -->
+  <div class="duo">
+    <div class="gcard">
+      <div class="sect" style="border-bottom-width:1px">同时在线人数,周三波动最大</div>
+      <div class="sub">每天同时在线人数的最低到最高区间 · 8月3日–8月9日</div>
+      <!-- 图A · G1 Range Capsules
+           模板：templates/color/glance-palm.html · "Daily active range" -->
+      <div class="claim">周三从95人冲到210人,振幅是全周平均的两倍多</div>
+      <div class="wrap"><canvas id="c1"></canvas></div>
+      <div class="srcline">RANGE CAPSULES · 每日同时在线人数区间(人) · 深绿=常规日,琥珀=全周最大摆动</div>
+    </div>
+
+    <div class="gcard dark">
+      <div class="sect" style="border-bottom-width:1px">这次发布,团队整体松了口气</div>
+      <div class="sub">复盘会上给这次发布投的形容词票 · 7 个词,54 票</div>
+      <!-- 图B · G2 Petal Rose（暗卡,本页唯一一张）
+           模板：templates/color/glance-palm.html · "How releases made us feel" -->
+      <div class="claim">"顺畅"拿到12票,"紧张"只有3票</div>
+      <div class="ch" id="rose"></div>
+      <div class="srcline">PETAL ROSE · 复盘投票数(票) · 花瓣越亮=票数越高,越暗=票数越低</div>
+    </div>
+  </div>
+
+  <!-- ══ 第二行：逐日计数 | 排名比较(补的第四张) ══ -->
+  <div class="duo">
+    <div class="gcard">
+      <div class="sect" style="border-bottom-width:1px">上线节奏,一路走高</div>
+      <div class="sub">工作日的功能上线数量 · 周一到周五</div>
+      <!-- 图C · G5 Pictorial Bar
+           模板：templates/color/glance-palm.html · "Trees planted, year by year" -->
+      <div class="claim">周五上线9个改动,是周一的3倍</div>
+      <div class="ch" id="ship"></div>
+      <div class="srcline">PICTORIAL BAR · 每日上线改动数(个) · 一个符号=1个改动 · 麦黄到深绿=周一到周五递深</div>
+    </div>
+
+    <div class="gcard">
+      <div class="sect" style="border-bottom-width:1px">工单,大半还是从邮件来的</div>
+      <div class="sub">本周工单量,按提交渠道 · 4 个渠道,293 件</div>
+      <!-- 图D · G3 Chunky Bars（补"排名比较"这个数据形状缺口）
+           模板：templates/color/glance-palm.html · "Revenue by plan" -->
+      <div class="claim">邮件工单186件,比其余三个渠道加起来还多</div>
+      <div class="wrap"><canvas id="c3"></canvas></div>
+      <div class="srcline">CHUNKY BARS · 本周工单量,按渠道(件) · 深绿=工单最多的渠道,依次转浅</div>
+    </div>
+  </div>
+
+  <div class="foot">
+    <div class="warn">数据说明:全部为虚构演示数据,不代表任何真实产品的运营指标。
+      <small>这页只用来验证 Glance 图表家族放进报告模板里是什么样子。</small></div>
+    <div class="dep">依赖说明:这四张图跑在 Chart.js 和 ECharts 上,是模板库里唯一一张挂 CDN 依赖的模板。离线打开会看到图表区空白,联网后刷新即可正常渲染。</div>
+    <div class="end">Loop · 运营周报一页纸<br>数据 · 内部看板(演示) · LIEFLAT CHARTS</div>
+  </div>
+</div>
+
+<script>
+/* ── PALM 角色 token（与 glance-palm.html 脚本内同名常量逐一对应，不新增色值） ── */
+const BG='#F0EFEB',DARK='#58402E',TXT='#58402E';
+const MUT='rgba(88,64,46,.60)',LAB='rgba(88,64,46,.72)',FAINT='rgba(88,64,46,.40)',QUIET='rgba(88,64,46,.15)',GRID='rgba(88,64,46,.16)';
+const DATA='#43593B',DATA2='#58402E',HERO='#D4A017';
+const HERODK='#F2D17E';
+const FAINTDATA='#ACAD79';
+const DMID='rgba(240,239,235,.62)',DQ='rgba(240,239,235,.24)';
+const RAMP=['#F2D17E','#ACAD79','#929960','#77835A','#43593B'];
+const DRAMP4=['#F2D17E','#ACAD79','rgba(240,239,235,.55)','rgba(240,239,235,.26)'];
+const INK=TXT,PAPER=BG,MUTED=MUT;
+const rgb=h=>[0,2,4].map(i=>parseInt(h.slice(1).substr(i,2),16));
+const alpha=(h,a)=>h[0]==='#'?'rgba('+rgb(h).join(',')+','+a+')':h;
+const mix=(a,b,t)=>'#'+rgb(a).map((v,i)=>Math.round(v+(rgb(b)[i]-v)*t).toString(16).padStart(2,'0')).join('');
+const lum=h=>{const [r,g,b]=rgb(h).map(v=>v/255).map(v=>v<=.03928?v/12.92:Math.pow((v+.055)/1.055,2.4));
+  return .2126*r+.7152*g+.0722*b};
+const ratio=(a,b)=>{const l=[lum(a),lum(b)].sort((p,q)=>q-p);return (l[0]+.05)/(l[1]+.05)};
+const readable=c=>c[0]!=='#'?BG:(ratio(c,DARK)>=ratio(c,BG)?DARK:BG);
+const DSHELL=mix(DARK,BG,.09);
+const rankOf=a=>{const r=[...a].map((v,i)=>[v,i]).sort((x,y)=>y[0]-x[0]).map(d=>d[1]);
+  return i=>r.indexOf(i)};
+const rampAt=(i,n)=>i===0?RAMP[4]
+  :RAMP[Math.max(0,Math.min(3,3-Math.round((i-1)/Math.max(1,n-2)*3)))];
+const tipLight={backgroundColor:INK,borderWidth:0,textStyle:{color:PAPER,fontFamily:'Inter',fontSize:12},padding:[10,14]};
+const tipDark={backgroundColor:PAPER,borderWidth:0,textStyle:{color:INK,fontFamily:'Inter',fontSize:12},padding:[10,14]};
+
+/* ── 统一 reveal 机制（滚入播 + 点击重播，与 glance-palm.html 一致） ── */
+const timers={};
+const obsReveal=(id,fn)=>{
+  const el=document.getElementById(id);
+  const go=()=>{(timers[id]||[]).forEach(clearInterval);timers[id]=[];fn(el)};
+  const io=new IntersectionObserver(es=>{
+    if(es[0].isIntersecting){go();io.disconnect()}
+  },{threshold:.35});
+  io.observe(el);
+  el.style.cursor='pointer';
+  el.addEventListener('click',go);
+};
+const keep=(id,t)=>{(timers[id]=timers[id]||[]).push(t)};
+const eReveal=(id,opt)=>obsReveal(id,el=>{
+  const g=echarts.getInstanceByDom(el)||echarts.init(el);
+  g.clear();g.setOption(opt);
+});
+const cjs={};
+const cReveal=(id,mkCfg)=>obsReveal(id,el=>{
+  cjs[id]?.destroy();
+  cjs[id]=new Chart(el,mkCfg());
+});
+
+Chart.defaults.color=MUT;
+Chart.defaults.font.family="'Inter','Noto Sans SC',sans-serif";
+Chart.defaults.font.size=10.5;
+Chart.defaults.borderColor=GRID;
+Chart.defaults.plugins.legend.display=false;
+Chart.defaults.plugins.tooltip.backgroundColor=TXT;
+Chart.defaults.plugins.tooltip.titleColor=BG;
+Chart.defaults.plugins.tooltip.bodyColor=alpha(BG,.72);
+Chart.defaults.plugins.tooltip.padding=12;
+Chart.defaults.plugins.tooltip.cornerRadius=12;
+Chart.defaults.plugins.tooltip.displayColors=false;
+
+/* ════ 图A · G1 Range Capsules ════
+   结构照搬 glance-palm.html "Daily active range"：浮动区间柱,
+   最宽的一根上琥珀墨。原图是 14 天窗口,这里换成一周 7 天。 */
+(()=>{
+const RANGES=[[120,178],[108,172],[95,210],[130,183],[142,188],[82,121],[76,116]];
+const DAYS=['周一','周二','周三','周四','周五','周六','周日'];
+const WIDEST=r=>r.reduce((b,x,i)=>x[1]-x[0]>r[b][1]-r[b][0]?i:b,0);
+cReveal('c1',()=>({
+  type:'bar',
+  data:{labels:DAYS,
+    datasets:[{data:RANGES,backgroundColor:RANGES.map((_,i)=>i===WIDEST(RANGES)?HERO:DATA),borderRadius:99,borderSkipped:false,barPercentage:.42}]},
+  options:{
+    maintainAspectRatio:false,
+    animation:{duration:800,easing:'easeOutQuart',delay:c=>c.type==='data'?c.dataIndex*60:0},
+    plugins:{tooltip:{callbacks:{label:i=>i.raw[0]+' – '+i.raw[1]+' 人在线'}}},
+    scales:{
+      x:{grid:{display:false},border:{display:false},ticks:{padding:6,font:{size:10,weight:600}}},
+      y:{min:50,max:230,grid:{display:false},border:{display:false},ticks:{padding:8,maxTicksLimit:6,callback:v=>v+'人',font:{size:9.5}}},
+    },
+  },
+}));
+})();
+
+/* ════ 图B · G2 Petal Rose（暗卡） ════
+   结构照搬 glance-palm.html "How releases made us feel"：花瓣长度
+   编码票数,颜色阶(DRAMP4)也编码票数,票数越高越亮。 */
+(()=>{
+const EMO=[
+  ['顺畅',12],['轻松',10],['期待',9],['忐忑',7],
+  ['疲惫',6],['惊喜',5],['紧张',3],
+];
+const MAXV=12;
+const petal=v=>{const t=v/MAXV;return t>.8?DRAMP4[0]:t>.6?DRAMP4[1]:t>.35?DRAMP4[2]:DRAMP4[3]};
+const onPetal=v=>v/MAXV>.6;
+eReveal('rose',{
+  animationDuration:1100,animationEasing:'quarticOut',
+  tooltip:{...tipDark,formatter:p=>p.name+' — '+EMO[p.dataIndex][1]+' 票'},
+  series:[
+    {type:'pie',silent:false,radius:['14%','92%'],center:['50%','50%'],
+     itemStyle:{color:DSHELL,borderRadius:16,borderColor:DARK,borderWidth:5},
+     label:{show:false},emphasis:{scale:false},
+     data:EMO.map(([n])=>({name:n,value:1})),z:1},
+    {type:'pie',silent:true,radius:['14%','92%'],center:['50%','50%'],
+     itemStyle:{color:'transparent'},label:{position:'inside'},
+     data:EMO.map(([n,v])=>({name:n,value:1,
+       label:{formatter:`{n|${v}}\n{l|${n}}`,rich:{
+         n:{fontSize:17,fontWeight:700,fontFamily:'Inter',lineHeight:20,
+              color:onPetal(v)?readable(petal(v)):DMID},
+         l:{fontSize:9.5,fontFamily:"'Inter','Noto Sans SC',sans-serif",
+              color:onPetal(v)?alpha(readable(petal(v)),.66):DQ},
+       }}})),z:3},
+    {type:'pie',roseType:'area',silent:true,radius:['14%','88%'],center:['50%','50%'],
+     itemStyle:{borderRadius:14,borderColor:DARK,borderWidth:5},label:{show:false},
+     data:EMO.map(([n,v])=>({name:n,value:v,itemStyle:{color:petal(v)}})),z:2},
+  ],
+});
+})();
+
+/* ════ 图C · G5 Pictorial Bar ════
+   结构照搬 glance-palm.html "Trees planted, year by year"：符号
+   计数横条,原图 symbol 是树形,这里换成一个中性菱形——上线的是
+   功能改动,不是树,符号形状不该借一个不相关的隐喻。 */
+(()=>{
+const SHIP='path://M14,0 L28,14 L14,28 L0,14 Z';
+const DAYS5=['周一','周二','周三','周四','周五'];
+const SHIPPED=[3,4,5,7,9];
+eReveal('ship',{
+  animationDuration:900,animationEasing:'quarticOut',animationDelay:i=>i*130,
+  tooltip:{...tipLight,formatter:p=>p.name+' — '+SHIPPED[p.dataIndex]+' 个改动'},
+  grid:{left:52,right:56,top:10,bottom:8},
+  yAxis:{type:'category',data:DAYS5,inverse:true,
+    axisLine:{show:false},axisTick:{show:false},
+    axisLabel:{color:MUT,fontFamily:"'Inter','Noto Sans SC',sans-serif",fontSize:10.5,fontWeight:700}},
+  xAxis:{show:false,max:10},
+  series:[{
+    type:'pictorialBar',symbol:SHIP,
+    symbolRepeat:true,symbolSize:[15,15],symbolMargin:3,symbolClip:true,
+    data:SHIPPED.map((v,i)=>({name:DAYS5[i],value:v,itemStyle:{color:RAMP[i]}})),
+    label:{show:true,position:'right',offset:[8,0],
+      color:TXT,fontFamily:"'Inter','Noto Sans SC',sans-serif",fontSize:12,fontWeight:700,
+      formatter:p=>SHIPPED[p.dataIndex]+' 个'},
+    z:10,
+  },{
+    type:'pictorialBar',symbol:SHIP,
+    symbolRepeat:'fixed',symbolSize:[15,15],symbolMargin:3,symbolClip:true,
+    itemStyle:{color:QUIET},data:DAYS5.map(()=>10),silent:true,z:5,
+  }],
+});
+})();
+
+/* ════ 图D · G3 Chunky Bars（补"排名比较"这个数据形状缺口） ════
+   结构照搬 glance-palm.html "Revenue by plan"：粗胶囊柱 + 柱顶大字,
+   颜色按 rampAt(排名,n) 走,排第一深绿,排最后最浅。 */
+(()=>{
+const CATS=['邮件','应用内','Slack 社群','工单表单'];
+const V=[186,54,31,22];
+const rk=rankOf(V);
+cReveal('c3',()=>({
+  type:'bar',
+  data:{labels:CATS,
+    datasets:[{data:V,
+      backgroundColor:V.map((_,i)=>rampAt(rk(i),V.length)),
+      borderRadius:{topLeft:99,topRight:99},borderSkipped:false,barPercentage:.52}]},
+  options:{
+    maintainAspectRatio:false,
+    animation:{duration:900,easing:'easeOutQuart',delay:c=>c.type==='data'?c.dataIndex*110:0},
+    plugins:{tooltip:{callbacks:{label:i=>i.raw+' 件工单'}}},
+    scales:{
+      x:{grid:{display:false},border:{display:false},ticks:{padding:8,font:{size:9.5,weight:600}}},
+      y:{display:false,suggestedMax:220},
+    },
+  },
+  plugins:[{
+    id:'topValues',
+    afterDatasetsDraw(chart){
+      const {ctx}=chart;
+      chart.getDatasetMeta(0).data.forEach((bar,i)=>{
+        ctx.save();ctx.font="700 13px 'Inter','Noto Sans SC',sans-serif";ctx.fillStyle=INK;ctx.textAlign='center';
+        ctx.fillText(chart.data.datasets[0].data[i]+'件',bar.x,bar.y-10);ctx.restore();
+      });
+    },
+  }],
+}));
+})();
+
+addEventListener('resize',()=>{
+  ['rose','ship'].forEach(id=>echarts.getInstanceByDom(document.getElementById(id))?.resize());
+});
+
+</script>
+<script>
+/* ── fit-width：视口比版心窄时整页等比缩小，不重排 ──
+   报告是一张版面，不是响应式网页。窄屏塌成单栏会得到一个
+   设计时不存在的版式；等比缩小则保留构图，跟 PDF 的「适合宽度」一致。
+   机制同模板 11。 */
+(()=>{
+  const sheet=document.querySelector('.sheet');
+  const W=1080;
+  const fit=()=>{
+    const cs=getComputedStyle(document.body);
+    const avail=document.documentElement.clientWidth
+      -parseFloat(cs.paddingLeft)-parseFloat(cs.paddingRight);
+    sheet.style.zoom=Math.min(1,avail/W);
+  };
+  fit();
+  addEventListener('resize',fit);
+})();
+</script>
+</body>
+</html>

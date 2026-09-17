@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "status": "not_comparable_official_source_file",
+  "paired_count": 0,
+  "visible_mark_count": 16,
+  "validation_coverage": 0.0,
+  "primary_csv_fill_from_source_data": false,
+  "official_source_file": "original/41467_2026_70284_MOESM6_ESM.xlsx",
+  "official_description_file": "original/41467_2026_70284_MOESM3_ESM.pdf",
+  "official_description_verified": true,
+  "workbook_direct_inspection": {
+    "status": "blocked_artifact_tool_unavailable",
+    "required_tool": "@oai/artifact-tool via load_workspace_dependencies",
+    "fallback_excel_parser_used": false
+  },
+  "reason": "Supplementary Data 3 contains regional climate summaries. Figure 8a requires per-land-cover-transition ridge sensitivities, contributions, and bootstrap intervals.",
+  "true_counterpart_mapping": {
+    "author_notebook": "original/code/Sieber-etal-2026_NCOMMS-main/5_PFT-transitions_Ridge.ipynb",
+    "generated_files": [
+      "ridgeOutputs/std_T2m_nfn_coefmean.csv",
+      "ridgeOutputs/std_T2m_nfn_coefci.csv",
+      "ridgeOutputs/std_T2m_nfn_contribmean.csv",
+      "ridgeOutputs/std_T2m_nfn_contribci.csv"
+    ],
+    "availability_in_downloaded_code_archive": "absent"
+  },
+  "note": "No source-data value was copied into the primary extraction CSV."
+}

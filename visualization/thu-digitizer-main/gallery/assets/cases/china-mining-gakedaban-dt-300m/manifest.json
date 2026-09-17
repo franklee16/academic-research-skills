@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "case_id": "china-mining-gakedaban-dt-300m",
+  "chart_type": "filled_contour_or_isogram_map",
+  "status": "partial_visible",
+  "assets": {
+    "primary_csv": "data.csv",
+    "visible_band_grid": "visible-contour-band-grid.npz",
+    "coordinate_grid_anchors": "coordinate-grid-anchors.csv",
+    "coordinate_calibration": "coordinate-calibration.json",
+    "original": "original.jpg",
+    "overlay": "overlay.png",
+    "map_only_semantic_overlay": "map-only-semantic-overlay.png",
+    "recreated": "recreated.png",
+    "map_only_recreation": "map-only-recreation.png",
+    "evidence_summary": "evidence-summary.json"
+  },
+  "counts": {
+    "visible_colour_classes": 25,
+    "directly_printed_legend_labels": 13,
+    "derived_regular_step_labels": 12,
+    "accepted_measurement_points": 0,
+    "graticule_anchors": 10
+  }
+}

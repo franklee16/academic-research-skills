@@ -1,0 +1,13 @@
+category,series,value,status,confidence,error_lower,error_upper
+A,red,17.792792792792795,extracted,0.997,,
+A,blue,26.8018018018018,extracted,0.997,,
+A,green,15.765765765765764,extracted,0.997,,
+B,red,21.62162162162162,extracted,0.998,,
+B,blue,18.91891891891892,extracted,0.998,,
+B,green,22.747747747747745,extracted,0.998,,
+C,red,13.738738738738732,extracted,0.998,,
+C,blue,30.855855855855857,extracted,0.998,,
+C,green,19.594594594594597,extracted,0.998,,
+D,red,24.774774774774777,extracted,0.999,,
+D,blue,17.792792792792795,extracted,0.999,,
+D,green,27.7027027027027,extracted,0.999,,

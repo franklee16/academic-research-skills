@@ -1,0 +1,4 @@
+interface:
+  display_name: "THU Digitizer"
+  short_description: "Extract and validate chart data from images, PDFs, and source data"
+  default_prompt: "Use $thu-digitizer to extract chart data with evidence-bound adaptive execution: preserve original-pixel calibration, CSV, report, overlay, provenance, ambiguity and refusal status; for weak or unidentified models require registered detectors, coverage ledgers, residual audits, and verified-label geometry checks before authorizing values."

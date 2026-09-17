@@ -1,0 +1,4 @@
+interface:
+  display_name: "Data Analysis Router"
+  short_description: "Route datasets to the right analysis framework."
+  default_prompt: "Use $data-analysis-router to identify the business domain, choose the right analysis framework, and produce a structured data report."

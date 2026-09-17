@@ -1,0 +1,7 @@
+# Runtime dependencies for scripts/extract.py
+# scripts/assemble.py uses only the Python standard library.
+pypdf>=4.0
+pymupdf>=1.23
+
+# Optional: if `pandoc` is on PATH, extract.py uses it for cleaner text.
+# Install pandoc separately via your OS package manager (not pip).

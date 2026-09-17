@@ -1,0 +1,306 @@
+{
+  "lines": [
+    {
+      "x1": 163,
+      "y1": 54,
+      "x2": 1521,
+      "y2": 54,
+      "width": 1.5
+    },
+    {
+      "x1": 163,
+      "y1": 257,
+      "x2": 1521,
+      "y2": 257,
+      "width": 1.5
+    },
+    {
+      "x1": 163,
+      "y1": 54,
+      "x2": 163,
+      "y2": 257,
+      "width": 1.5
+    },
+    {
+      "x1": 1521,
+      "y1": 54,
+      "x2": 1521,
+      "y2": 257,
+      "width": 1.5
+    }
+  ],
+  "rects": [
+    {
+      "x": 1578,
+      "y": 118.0,
+      "width": 15,
+      "height": 16.833333333333332,
+      "fill": "#d05644"
+    },
+    {
+      "x": 1578,
+      "y": 134.33333333333334,
+      "width": 15,
+      "height": 16.833333333333332,
+      "fill": "#f8ae8f"
+    },
+    {
+      "x": 1578,
+      "y": 150.66666666666666,
+      "width": 15,
+      "height": 16.833333333333332,
+      "fill": "#fbe8dd"
+    },
+    {
+      "x": 1578,
+      "y": 167.0,
+      "width": 15,
+      "height": 16.833333333333332,
+      "fill": "#e3edf3"
+    },
+    {
+      "x": 1578,
+      "y": 183.33333333333331,
+      "width": 15,
+      "height": 16.833333333333332,
+      "fill": "#9fc6df"
+    },
+    {
+      "x": 1578,
+      "y": 199.66666666666666,
+      "width": 15,
+      "height": 16.833333333333332,
+      "fill": "#4987bd"
+    }
+  ],
+  "polygons": [],
+  "annotations": [
+    {
+      "text": "d",
+      "x": 1,
+      "y": 20,
+      "size": 24,
+      "bold": true
+    },
+    {
+      "text": "Significantly enriched signaling pathways per cluster",
+      "x": 842.0,
+      "y": 20,
+      "size": 17,
+      "anchor": "middle"
+    },
+    {
+      "text": "AUC scaled mean",
+      "x": 1578,
+      "y": 87,
+      "size": 13,
+      "anchor": "middle"
+    },
+    {
+      "text": "1.0",
+      "x": 1601,
+      "y": 126,
+      "size": 13
+    },
+    {
+      "text": "0.5",
+      "x": 1601,
+      "y": 174,
+      "size": 13
+    },
+    {
+      "text": "0.0",
+      "x": 1601,
+      "y": 222,
+      "size": 13
+    },
+    {
+      "text": "Quiescent NSCs",
+      "x": 150,
+      "y": 84.375,
+      "size": 15,
+      "anchor": "end"
+    },
+    {
+      "text": "Active NSCs",
+      "x": 150,
+      "y": 135.125,
+      "size": 15,
+      "anchor": "end"
+    },
+    {
+      "text": "Juvenile RG",
+      "x": 150,
+      "y": 185.875,
+      "size": 15,
+      "anchor": "end"
+    },
+    {
+      "text": "Embryonic RG",
+      "x": 150,
+      "y": 236.625,
+      "size": 15,
+      "anchor": "end"
+    },
+    {
+      "text": "splicing",
+      "x": 196.95,
+      "y": 275,
+      "size": 14,
+      "anchor": "end",
+      "rotate": -48
+    },
+    {
+      "text": "signaling",
+      "x": 264.85,
+      "y": 275,
+      "size": 14,
+      "anchor": "end",
+      "rotate": -48
+    },
+    {
+      "text": "cell cycle",
+      "x": 332.75,
+      "y": 275,
+      "size": 14,
+      "anchor": "end",
+      "rotate": -48
+    },
+    {
+      "text": "signaling",
+      "x": 400.65000000000003,
+      "y": 275,
+      "size": 14,
+      "anchor": "end",
+      "rotate": -48
+    },
+    {
+      "text": "signaling",
+      "x": 468.55,
+      "y": 275,
+      "size": 14,
+      "anchor": "end",
+      "rotate": -48
+    },
+    {
+      "text": "signaling",
+      "x": 536.45,
+      "y": 275,
+      "size": 14,
+      "anchor": "end",
+      "rotate": -48
+    },
+    {
+      "text": "signaling",
+      "x": 604.35,
+      "y": 275,
+      "size": 14,
+      "anchor": "end",
+      "rotate": -48
+    },
+    {
+      "text": "signaling",
+      "x": 672.25,
+      "y": 275,
+      "size": 14,
+      "anchor": "end",
+      "rotate": -48
+    },
+    {
+      "text": "signaling",
+      "x": 740.1500000000001,
+      "y": 275,
+      "size": 14,
+      "anchor": "end",
+      "rotate": -48
+    },
+    {
+      "text": "signaling",
+      "x": 808.0500000000001,
+      "y": 275,
+      "size": 14,
+      "anchor": "end",
+      "rotate": -48
+    },
+    {
+      "text": "signaling",
+      "x": 875.95,
+      "y": 275,
+      "size": 14,
+      "anchor": "end",
+      "rotate": -48
+    },
+    {
+      "text": "signaling",
+      "x": 943.85,
+      "y": 275,
+      "size": 14,
+      "anchor": "end",
+      "rotate": -48
+    },
+    {
+      "text": "signaling",
+      "x": 1011.7500000000001,
+      "y": 275,
+      "size": 14,
+      "anchor": "end",
+      "rotate": -48
+    },
+    {
+      "text": "signaling",
+      "x": 1079.65,
+      "y": 275,
+      "size": 14,
+      "anchor": "end",
+      "rotate": -48
+    },
+    {
+      "text": "signaling",
+      "x": 1147.5500000000002,
+      "y": 275,
+      "size": 14,
+      "anchor": "end",
+      "rotate": -48
+    },
+    {
+      "text": "signaling",
+      "x": 1215.45,
+      "y": 275,
+      "size": 14,
+      "anchor": "end",
+      "rotate": -48
+    },
+    {
+      "text": "signaling",
+      "x": 1283.3500000000001,
+      "y": 275,
+      "size": 14,
+      "anchor": "end",
+      "rotate": -48
+    },
+    {
+      "text": "signaling",
+      "x": 1351.25,
+      "y": 275,
+      "size": 14,
+      "anchor": "end",
+      "rotate": -48
+    },
+    {
+      "text": "interaction",
+      "x": 1419.15,
+      "y": 275,
+      "size": 14,
+      "anchor": "end",
+      "rotate": -48
+    },
+    {
+      "text": "molecules",
+      "x": 1487.0500000000002,
+      "y": 275,
+      "size": 14,
+      "anchor": "end",
+      "rotate": -48
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+intersection,visible_count,source_count,count_error,visible_members,source_members,membership_match,validation_status
+1,1857,1857,0,FunC-2;FunC-4;FunC-3;FunC-1,FunC-1;FunC-2;FunC-3;FunC-4,True,validated
+2,709,709,0,FunC-1,FunC-1,True,validated
+3,565,565,0,FunC-3,FunC-3,True,validated
+4,495,495,0,FunC-4;FunC-3;FunC-1,FunC-1;FunC-3;FunC-4,True,validated
+5,458,458,0,FunC-2,FunC-2,True,validated
+6,444,444,0,FunC-4,FunC-4,True,validated
+7,355,355,0,FunC-4;FunC-3,FunC-3;FunC-4,True,validated
+8,308,308,0,FunC-3;FunC-1,FunC-1;FunC-3,True,validated
+9,298,298,0,FunC-2;FunC-4;FunC-3,FunC-2;FunC-3;FunC-4,True,validated
+10,273,273,0,FunC-2;FunC-4;FunC-1,FunC-1;FunC-2;FunC-4,True,validated
+11,249,249,0,FunC-4;FunC-1,FunC-1;FunC-4,True,validated
+12,207,207,0,FunC-2;FunC-1,FunC-1;FunC-2,True,validated
+13,178,178,0,FunC-2;FunC-3;FunC-1,FunC-1;FunC-2;FunC-3,True,validated
+14,158,158,0,FunC-2;FunC-4,FunC-2;FunC-4,True,validated
+15,121,121,0,FunC-2;FunC-3,FunC-2;FunC-3,True,validated

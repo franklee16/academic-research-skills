@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Online normalizer calculation for softmax — Yomitoki</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+    onload="renderMathInElement(document.body, {
+      delimiters: [
+        {left: '\\[', right: '\\]', display: true},
+        {left: '$$', right: '$$', display: true},
+        {left: '\\(', right: '\\)', display: false}
+      ],
+      throwOnError: false
+    });"></script>
+</head>
+<body>
+
+<div class="page-wrapper">
+<!-- ══ BLOCK 1 — HEADER ══════════════════════════════════════════════════ -->
+<header class="paper-header">
+<p class="meta-top">
+      Yomitoki ·
+      <a href="https://arxiv.org/abs/1805.02867" rel="noopener" target="_blank">PDF</a> · <a href="https://github.com/NVIDIA/online-softmax" rel="noopener" target="_blank">Code</a> · <a href="https://arxiv.org/abs/1805.02867" rel="noopener" target="_blank">arXiv</a>
+</p>
+<h1>Online <span class="jargon" data-gloss="The denominator of softmax: d_V = Σ_j e^(x_j − m_V).">normalizer</span> calculation for softmax</h1>
+<p class="authors">Maxim Milakov, Natalia Gimelshein (NVIDIA)</p>
+<p class="venue-line">
+      arXiv preprint (April 2018) · 2018
+      <span class="difficulty" title="Approachable: Undergraduate math + a comfort with GPU memory hierarchy">⭐⭐</span>
+<span class="difficulty-label">Approachable: Undergraduate math + a comfort with GPU memory hierarchy</span>
+<span class="reading-time">📖 ≈ 12 min</span>
+</p>
+<p class="tags">
+<span class="tag">softmax</span><span class="tag">gpu-kernels</span><span class="tag">cuda</span><span class="tag">memory-bandwidth</span><span class="tag">flash-attention-precursor</span>
+</p>
+</header>
+<!-- ══ BLOCK 2 — PREREQUISITES ══════════════════════════════════════════ -->
+<section class="prereqs">
+<p class="label">Prerequisites · brush up before reading</p>
+<div class="prereq-list">
+<details class="prereq">
+<summary class="prereq-pill">Safe softmax (numerical-stability trick)</summary>
+<div class="prereq-detail">
+<p>Subtract the max from every logit before exponentiating to avoid overflow. Every DL framework's softmax does this. And it forces a separate pass over the input just to find the max, which is what this paper attacks.</p>
+<p class="prereq-links">
+<a href="https://en.wikipedia.org/wiki/Softmax_function#Numerical_stability" rel="noopener" target="_blank">Softmax: Numerical stability (Wikipedia)</a> ·
+          <a href="https://gregorygundersen.com/blog/2020/02/09/log-sum-exp/" rel="noopener" target="_blank">Gregory Gundersen: Log-sum-exp &amp; softmax stability</a>
+</p>
+</div>
+</details>
+<details class="prereq">
+<summary class="prereq-pill">GPU memory hierarchy &amp; <span class="jargon" data-gloss="A kernel whose throughput is set by DRAM bandwidth, not by FLOPs. Softmax is the canonical example.">memory-bandwidth-bound</span> kernels</summary>
+<div class="prereq-detail">
+<p>Softmax is bandwidth-bound: arithmetic intensity is so low that performance is set by how many bytes you pull from DRAM, not by FLOPs. Cutting passes from 3 to 1 directly cuts wall-clock time.</p>
+<p class="prereq-links">
+<a href="https://docs.nvidia.com/deeplearning/performance/dl-performance-gpu-background/index.html" rel="noopener" target="_blank">NVIDIA: GPU Performance Background (memory-bound vs compute-bound)</a> ·
+          <a href="https://horace.io/brrr_intro.html" rel="noopener" target="_blank">Horace He: Making Deep Learning Go Brrrr (memory vs compute)</a>
+</p>
+</div>
+</details>
+<details class="prereq">
+<summary class="prereq-pill">Parallel reduction with an <span class="jargon" data-gloss="An operator ⊕ is associative if (a ⊕ b) ⊕ c = a ⊕ (b ⊕ c). Enables tree-reduce.">associative</span> operator</summary>
+<div class="prereq-detail">
+<p>If you have an associative binary operator ⊕, you can reduce an N-element array in log₂N tree levels in parallel. This paper's contribution is showing that the (max, normalizer) update is ⊕-shaped. So the whole thing parallelizes for free.</p>
+<p class="prereq-links">
+<a href="https://developer.download.nvidia.com/assets/cuda/files/reduction.pdf" rel="noopener" target="_blank">Mark Harris: Optimizing Parallel Reduction in CUDA (canonical talk)</a> ·
+          <a href="https://en.wikipedia.org/wiki/Prefix_sum" rel="noopener" target="_blank">Wikipedia: Prefix sum / scan</a>
+</p>
+</div>
+</details>
+<details class="prereq">
+<summary class="prereq-pill">Welford's online variance algorithm</summary>
+<div class="prereq-detail">
+<p>1962 algorithm that computes mean and variance in a single pass by maintaining running statistics that get updated as each new sample arrives. The paper explicitly names this as the inspiration for the online normalizer trick.</p>
+<p class="prereq-links">
+<a href="https://www.tandfonline.com/doi/abs/10.1080/00401706.1962.10490022" rel="noopener" target="_blank">Welford (1962): Note on a method for calculating corrected sums of squares and products</a> ·
+          <a href="https://en.wikipedia.org/wiki/Algorithms_for_calculating_variance#Welford's_online_algorithm" rel="noopener" target="_blank">Wikipedia: Welford's online algorithm</a>
+</p>
+</div>
+</details>
+<details class="prereq">
+<summary class="prereq-pill">Kernel fusion (softmax + <span class="jargon" data-gloss="Selecting the K largest values (and their indices) from an array. Used in beam-search decoding.">TopK</span>)</summary>
+<div class="prereq-detail">
+<p>Combining two kernels into one so intermediate values never round-trip to DRAM. The paper's second contribution is showing the online normalizer recurrence makes softmax+TopK fuseable, which alone saves 2.5× memory traffic on top of the 1.3× from going single-pass.</p>
+<p class="prereq-links">
+<a href="https://horace.io/brrr_intro.html" rel="noopener" target="_blank">Horace He: Making Deep Learning Go Brrrr (overhead and fusion)</a> ·
+          <a href="https://pytorch.org/blog/accelerating-pytorch-with-cuda-graphs/" rel="noopener" target="_blank">PyTorch blog: Kernel launch overhead and fusion concepts</a>
+</p>
+</div>
+</details>
+<details class="prereq">
+<summary class="prereq-pill"><span class="jargon" data-gloss="2022 attention kernel that ports the online normalizer recurrence to tile attention without materializing the full softmax matrix.">FlashAttention</span> (downstream consumer)</summary>
+<div class="prereq-detail">
+<p>Not a prerequisite for understanding the paper, but the paper's online normalizer recurrence is the algorithmic foundation FlashAttention (Dao et al., 2022) builds on to tile attention over Q-blocks without materializing the full softmax matrix. Worth knowing where this lands.</p>
+<p class="prereq-links">
+<a href="https://arxiv.org/abs/2205.14135" rel="noopener" target="_blank">FlashAttention (Dao et al., 2022)</a> ·
+          <a href="https://gordicaleksa.medium.com/eli5-flash-attention-5c44017022ad" rel="noopener" target="_blank">Aleksa Gordić: ELI5 FlashAttention</a>
+</p>
+</div>
+</details>
+</div>
+</section>
+<!-- ══ READER GRID ════════════════════════════════════════════════════════ -->
+<div class="reader">
+<article>
+<!-- ══ BLOCK 3 — TL;DR (single-paragraph) ════════════════════════════════ -->
+<section class="tldr" id="tldr">
+<p class="label">TL;DR</p>
+<p class="tldr-summary">Mainstream frameworks compute Softmax with a 3-pass 'safe' version (find max, sum exp, normalize). 4 memory ops per element. This paper gives a single-pass recurrence that maintains max and normalizer together, dropping accesses to 3 (1.33×) at the cost of 2 extra flops per element. Because Softmax is bandwidth-bound, fewer accesses translate almost directly to speedup. Fused with TopK the saving compounds to 5×. The recurrence. <em>maintain (max, normalizer) and correct on the fly</em>. Later became the algorithmic kernel of FlashAttention.</p>
+</section>
+<!-- ══ BLOCK 3b — PAPER OVERVIEW (Problem → Background → Offering) ════ -->
+<section class="overview" id="overview">
+<h2>Paper Overview</h2>
+<div class="overview-problem-block">
+<div class="overview-card overview-problem">
+<p class="label">Problem</p>
+<p>Softmax is everywhere. Output layer of every classifier, normalizer of every attention head. And it is bandwidth-bound on every GPU it runs on. The 'safe' formulation that every framework uses for numerical stability requires three sequential passes over the input vector: max, sum-of-exp, and divide. Each pass loads (and one of them stores) the full vector, so for a vocabulary of V floats the kernel moves ≈ 4V bytes through DRAM, almost all of it avoidable.</p>
+</div>
+</div>
+<div class="overview-background">
+<p class="label">Background</p>
+<p>Softmax turns a set of logits into a probability distribution. Language modeling, machine translation, and ASR all run softmax over a vocabulary of tens to hundreds of thousands at every step. That step is not cheap.</p>
+<p>A decade of speedup work targets a <em>different</em> problem: Differentiated Softmax and SVD-Softmax replace the projection matmul; <span class="jargon" data-gloss="Tree-structured softmax approximation that splits one large softmax into many small ones. Orthogonal to this paper's contribution.">Hierarchical Softmax</span> splits one big softmax into many small ones; Importance Sampling / NCE / Blackout sample a subset at training time; Self-Normalized Softmax modifies the loss to push the normalizer toward 1. The authors point out that with the exception of NCE (training only) and Self-Normalized Softmax (inference only), <em>every</em> method still runs the original <span class="jargon" data-gloss="Numerically stable softmax that subtracts the running maximum before exponentiating. Used by every DL framework.">safe softmax</span> in the end. But nobody had optimized that.</p>
+<p>The key performance lens: softmax has very low flops/byte (every loaded float gets only a couple of FP ops). On modern hardware that means bandwidth-bound. Fewer reads ≈ faster. The paper's whole bet is to <strong>not reduce computation, reduce memory accesses</strong>. Inspiration comes from Welford's 1962 online variance algorithm: maintain running statistics that absorb each new sample, with a small corrective term when the running aggregate moves.</p>
+</div>
+<div class="overview-offering">
+<div class="overview-card overview-solution">
+<p class="label">Solution</p>
+<p>Maintain the <span class="jargon" data-gloss="The largest x seen so far during a single pass over the input vector.">running maximum</span> and the running normalizer <em>together</em> in one sweep. Whenever a new element pushes the maximum up, multiply the partial normalizer by e^(old_max − new_max). That correction is the entire trick. The fused (max, normalizer) update is an associative + <span class="jargon" data-gloss="An operator ⊕ is commutative if a ⊕ b = b ⊕ a. Lets reductions process elements in any order.">commutative</span> binary operator on ℝ², which makes it drop straight into a <span class="jargon" data-gloss="Combining N values into 1 using log₂N tree levels of a binary operator.">parallel reduction</span> primitive (CUB's <code>BlockReduce</code> in the reference implementation). The same recurrence also lets the TopK pass be folded into the softmax kernel, eliminating an extra full-vector traversal.</p>
+</div>
+<div class="overview-card overview-contributions">
+<p class="label">Main Contributions</p>
+<ul>
+<li><strong>The online normalizer recurrence</strong> (Algorithm 3). Computes the safe softmax denominator in one pass instead of two, reducing memory accesses from 4 to 3 per element.</li>
+<li><strong>Associativity + commutativity proof</strong> of the (m, d) update operator (Eq. 4), making the algorithm a drop-in for any parallel reduction primitive.</li>
+<li><strong>Softmax + TopK fusion</strong> (Algorithm 4). The running (m, d, top-K) tuple still composes under the same reduction operator, collapsing two kernels into one. Memory accesses drop from 5 to 1.</li>
+<li><strong>Open-source CUDA implementation</strong> at github.com/NVIDIA/online-softmax (CUB-based, <span class="jargon" data-gloss="NVIDIA Tesla V100. The GPU used for all benchmarks in the paper. fp32 throughput ~14 TFLOPs, HBM2 bandwidth ~900 GB/s.">V100</span>-targeted).</li>
+<li><strong>Measured speedups on Tesla V100</strong>: ~1.3× for softmax alone (V ≥ 4000), 1.5–5× for fused softmax+TopK depending on V and batch size.</li>
+<li><strong>Algorithmic foundation</strong> later picked up by FlashAttention (2022) to tile attention over query blocks without materializing the full softmax.</li>
+</ul>
+</div>
+</div>
+</section>
+<!-- ══ BLOCK 5 — TECH TIMELINE (custom CSS) ════════════════════════════ -->
+<section class="paper-section" id="timeline">
+<h2>Tech Timeline</h2>
+<div class="tech-timeline">
+<div class="timeline-node">
+<div class="timeline-year">1962</div>
+<div class="timeline-label">Welford: Online variance</div>
+<div class="timeline-delta">The general 'maintain running statistics + one corrective term per step' pattern</div>
+</div><div aria-hidden="true" class="timeline-arrow">→</div>
+<div class="timeline-node">
+<div class="timeline-year">2014</div>
+<div class="timeline-label">Sutskever et al.. Seq2Seq with softmax over vocab</div>
+<div class="timeline-delta">Cements softmax-over-large-vocab as the bottleneck workload</div>
+</div><div aria-hidden="true" class="timeline-arrow">→</div>
+<div class="timeline-node">
+<div class="timeline-year">2015</div>
+<div class="timeline-label">Hierarchical / Differentiated / Adaptive softmax</div>
+<div class="timeline-delta">Decade of papers attacking the projection layer, not softmax itself</div>
+</div><div aria-hidden="true" class="timeline-arrow">→</div>
+<div class="timeline-node timeline-node-current">
+<div class="timeline-year">2018</div>
+<div class="timeline-label">Online Softmax (this paper)</div>
+<div class="timeline-delta">Single-pass safe softmax; associative reduction; TopK fusion</div>
+</div><div aria-hidden="true" class="timeline-arrow">→</div>
+<div class="timeline-node">
+<div class="timeline-year">2022</div>
+<div class="timeline-label">FlashAttention (Dao et al.)</div>
+<div class="timeline-delta">Builds on this recurrence to tile attention over Q-blocks without materializing the full softmax matrix</div>
+</div><div aria-hidden="true" class="timeline-arrow">→</div>
+<div class="timeline-node">
+<div class="timeline-year">2023</div>
+<div class="timeline-label">FlashAttention-2 / FlashDecoding / cuDNN attention</div>
+<div class="timeline-delta">All inherit the same (m, d) update; the algorithmic core is unchanged</div>
+</div>
+</div>
+<p class="timeline-caption">This work is highlighted; earlier nodes are prerequisites, later nodes are downstream consumers / follow-ups.</p>
+</section>
+<!-- ══ BLOCK 5b — WHERE THIS MATTERS (optional) ════════════════════════ -->
+<section class="paper-section where-matters" id="context">
+<h2>Where this matters</h2>
+<p class="section-intro">Softmax runs in the inner loop of every modern decoder LLM, in three places per generated token. Each place has a different size and a different optimization story. And the same recurrence wins in all three:</p>
+<table><thead><tr><th>Workload</th><th>Scale</th><th>Impact</th></tr></thead><tbody><tr><td><strong>Attention softmax (over keys)</strong></td><td>32 layers × 32 heads × N tokens = ~8.4M softmaxes per forward pass at N=8K context; the (N, N) score matrix is the killer (~137 GB intermediate at fp16 for a 7B model)</td><td><strong>FlashAttention</strong> (Dao et al., 2022) tiles the attention into B_r × B_c blocks and uses this paper's online recurrence to merge partial (m, d) per tile. The full N×N matrix never materializes in HBM</td></tr><tr><td><strong>Vocab softmax (LM head)</strong></td><td>Vocabulary V = 32K (Llama-2) to 256K (Gemma); one softmax per output position, every output token of every request</td><td>The 2018 paper's <strong>original</strong> target. Online softmax cuts a 4-mem-op kernel to 3 (1.3× speedup). Fused with TopK for beam search: <strong>5× total speedup</strong></td></tr><tr><td><strong>MoE router (over experts)</strong></td><td>E = 8 (Mixtral) to 256 (DeepSeek-V3); one router softmax per MoE layer per token</td><td>Small in absolute terms, but it's a softmax-then-TopK pattern. The exact case Algorithm 4 fuses. Saves a kernel launch per MoE layer per token</td></tr></tbody></table>
+</section>
+<!-- ══ BLOCK 6 — CORE METHOD ═════════════════════════════════════════════ -->
+<section class="paper-section" id="method">
+<h2>Core Method</h2>
+<div class="subsection">
+<h3>1: Naive softmax. 2 passes, the textbook version</h3>
+<p>Pass 1 sums the exponentials. Pass 2 divides each x_i by the sum. 3 memory accesses per element: load (for the sum), load (for the divide), store (for the output).</p>\[ \text{Naive: } \quad y_i = \frac{e^{x_i}}{\sum_{j=1}^{V} e^{x_j}} \]<p>Pseudocode (Algorithm 1 in the paper):</p><pre><code>d = 0
+for j = 1..V:                       # pass 1: sum exponentials
+    d = d + exp(x_j)
+for i = 1..V:                       # pass 2: write outputs
+    y_i = exp(x_i) / d</code></pre><p>Why nobody ships this: <code>exp(x_j)</code> overflows for x_j around 88 in fp32 (because e^88 ≈ FLT_MAX) and underflows to zero for x_j around −88. Real logits routinely sit in that range. The naive version is fast but unsafe. Exactly one inferred 'inf' poisons the entire normalizer.</p>
+</div>
+<div class="subsection">
+<h3>2: Safe softmax. 3 passes, what every framework runs</h3>
+<p>Subtract the running max from every logit before exponentiating. The output is mathematically identical to <span class="jargon" data-gloss="Direct e^x / Σ e^x, no max-shifting. Fast but overflows in fp32 for x ≳ 88.">naive softmax</span>, but every exponent is now ≤ 0, so e^(·) is in [0, 1] and can't overflow.</p>\[ \text{Safe: } \quad y_i = \frac{e^{x_i - m_V}}{\sum_{j=1}^{V} e^{x_j - m_V}}, \qquad m_V = \max_{k=1..V} x_k \]<p><strong>The catch:</strong> you can't compute the denominator without first knowing m_V. So you sweep three times. Algorithm 2 in pseudocode:</p><pre><code>m_0 = -inf
+for k = 1..V:                       # pass 1: find max
+    m_k = max(m_{k-1}, x_k)
+d_0 = 0
+for j = 1..V:                       # pass 2: build denominator (needs the global max)
+    d_j = d_{j-1} + exp(x_j - m_V)
+for i = 1..V:                       # pass 3: write outputs
+    y_i = exp(x_i - m_V) / d_V</code></pre><p><strong>4 memory accesses per element</strong> (3 load + 1 store). Every DL framework (TensorFlow ≥ 1.7, <span class="code-anchor" data-coderef-idx="7" data-coderef-section="method" title="PyTorch's safe softmax kernel — for comparison">PyTorch</span> ≥ 0.4, MXNet, CNTK, Chainer) ships this version. This is the baseline the paper attacks.</p><p>Side-by-side: how the memory-access budget shrinks across the three variants the paper introduces.</p><pre class="mermaid">
+flowchart TB
+  subgraph A ["Safe Softmax (baseline) — 4 mem ops/elem"]
+    direction LR
+    A1["Pass 1<br/>find max m_V"] --> A2["Pass 2<br/>sum exp(x − m_V)"] --> A3["Pass 3<br/>write y_i"]
+  end
+  subgraph B ["Online Softmax (this paper) — 3 mem ops/elem"]
+    direction LR
+    B1["Pass 1<br/>update (m, d) jointly"] --> B2["Pass 2<br/>write y_i"]
+  end
+  subgraph C ["Online + TopK fused — 1 mem op/elem"]
+    direction LR
+    C1["Single pass<br/>update (m, d, u, p)<br/>write only K outputs"]
+  end
+  A --> B --> C
+</pre>
+</div>
+<div class="subsection">
+<h3>3: Online softmax. 2 passes, the contribution</h3>
+<p>Maintain the running pair (m_j, d_j) jointly. When a new element arrives, update both at once:</p>\[ m_j = \max(m_{j-1},\, x_j), \qquad d_j = d_{j-1} \cdot e^{m_{j-1} - m_j} + e^{x_j - m_j} \]<p>Pseudocode (Algorithm 3 in the paper):</p><pre><code>m_0 = -inf
+d_0 = 0
+for j = 1..V:                                   # single pass: max + denominator together
+    m_j = max(m_{j-1}, x_j)
+    d_j = d_{j-1} * exp(m_{j-1} - m_j) + exp(x_j - m_j)
+for i = 1..V:                                   # output pass (unchanged)
+    y_i = exp(x_i - m_V) / d_V</code></pre><p><strong>Why is the rescaling exact?</strong> The previous denominator d_{j-1} was ∑_{k&lt;j} e^(x_k − m_{j-1}). If a new max appears (m_j &gt; m_{j-1}), every term in that sum needs the same factor e^(m_{j-1} − m_j) to become e^(x_k − m_j). One multiply on d_{j-1} corrects them all at once. No per-term rewrite. Add e^(x_j − m_j) for the new element, and d_j is exactly what <span class="code-anchor" data-coderef-idx="2" data-coderef-section="method" title="safe_softmax kernel — contrast: 3 loops, 2 reductions, the 4-mem-op baseline">safe softmax</span> would compute (induction on j, Theorem 1).</p><p><strong>Why doesn't this slow things down?</strong> Two extra FP ops per element (one multiply, one exp on the rescaling). But softmax is bandwidth-bound, so those flops slot into time the kernel was already spending waiting for the DRAM load. The wall-clock speedup tracks the memory-access ratio: 4 ops/elem → 3 ops/elem = 1.33×.</p><p><strong>Runnable <span class="code-anchor" data-coderef-idx="5" data-coderef-section="method" title="Online softmax in 8 lines of Python — synthesized for clarity">Python</span> with verification:</strong></p><pre><code>import numpy as np
+
+def online_softmax(x):
+    m, d = -np.inf, 0.0
+    for xj in x:                                 # pass 1: maintain (m, d) together
+        m_new = max(m, xj)
+        d = d * np.exp(m - m_new) + np.exp(xj - m_new)   # rescale + accumulate
+        m = m_new
+    return np.exp(x - m) / d                     # pass 2: write outputs
+
+def safe_softmax(x):
+    m = x.max(); e = np.exp(x - m); return e / e.sum()
+
+x = np.random.randn(10000).astype(np.float32) * 50   # blow up the range to provoke overflow
+assert np.allclose(online_softmax(x), safe_softmax(x), atol=1e-6)</code></pre><p>The proof also shows 1 ≤ d_j ≤ j for all j, so fp32 stays in range for any plausible V. Fp32 storage works up to V ≈ 1.7×10³⁷ elements.</p>
+</div>
+<div class="subsection">
+<h3>4: Parallel version. The (m, d) update as an associative reduction</h3>
+<p>The single-thread loop is fine for tiny vectors, but a GPU thread block has hundreds of threads sitting idle while one of them iterates. The fix: lift the update to a binary operator on partial pairs.</p>\[ \begin{bmatrix} m_i \\ d_i \end{bmatrix} \oplus \begin{bmatrix} m_j \\ d_j \end{bmatrix} = \begin{bmatrix} \max(m_i, m_j) \\ d_i \cdot e^{m_i - \max(m_i, m_j)} + d_j \cdot e^{m_j - \max(m_i, m_j)} \end{bmatrix} \]<p>⊕ is both <strong>associative</strong> (so a tree-reduce works) and <strong>commutative</strong> (so threads can merge in any order. Useful for warp-shuffle reductions where the ordering depends on lane indexing). The reference implementation uses CUB's <span class="code-anchor" data-coderef-idx="0" data-coderef-section="method" title="MD struct + reduce_md_op — the ⊕ operator from Eq. 4 in 11 lines of CUDA">BlockReduce</span> primitive with this operator as a tight C++ device function. Each thread sweeps a strided chunk of the input, accumulating a thread-local (m, d), then the block-reduce combines them in log₂(threads_per_block) levels.</p><p><strong>Python sketch of the parallel pattern:</strong></p><pre><code>from functools import reduce
+
+def merge(a, b):
+    """The ⊕ operator: merge two partial (m, d) pairs."""
+    (m_a, d_a), (m_b, d_b) = a, b
+    m = max(m_a, m_b)
+    d = d_a * np.exp(m_a - m) + d_b * np.exp(m_b - m)
+    return (m, d)
+
+def online_normalizer_parallel(x, nchunks=8):
+    """Split into chunks → each chunk independent → tree-reduce.
+    Result is order-invariant thanks to associativity + commutativity."""
+    chunks = np.array_split(x, nchunks)
+    partials = [(c.max(), np.exp(c - c.max()).sum()) for c in chunks]
+    return reduce(merge, partials)               # any merge order → same result</code></pre><p>A picture of the reduction tree on 8 elements:</p><pre class="mermaid">
+flowchart TB
+  x1["(x_1, 1)"] --> p12["⊕"]
+  x2["(x_2, 1)"] --> p12
+  x3["(x_3, 1)"] --> p34["⊕"]
+  x4["(x_4, 1)"] --> p34
+  x5["(x_5, 1)"] --> p56["⊕"]
+  x6["(x_6, 1)"] --> p56
+  x7["(x_7, 1)"] --> p78["⊕"]
+  x8["(x_8, 1)"] --> p78
+  p12 --> p1234["⊕"]
+  p34 --> p1234
+  p56 --> p5678["⊕"]
+  p78 --> p5678
+  p1234 --> root["⊕<br/>= (m_V, d_V)"]
+  p5678 --> root
+</pre><p>This is the property <span class="code-anchor" data-coderef-idx="6" data-coderef-section="method" title="How FlashAttention reuses the ⊕ operator — synthesized illustration">FlashAttention</span> (2022) inherits: tile the attention's Q × K^T into blocks, run <span class="code-anchor" data-coderef-idx="1" data-coderef-section="method" title="online_softmax kernel — 40 lines from input to output">online softmax</span> per block to get partial (m, d), then merge across blocks with the same ⊕. The online normalizer paper is essentially the algorithmic kernel of FlashAttention.</p>
+</div>
+<div class="subsection">
+<h3>5: Softmax + TopK fusion. 1 memory op per element</h3>
+<p>Auto-regressive decoding does <code>logits → softmax → top-K</code> on every step. Run separately, that's 4 memory ops/element for online softmax, plus another load/store pair for TopK ≈ 5 memory ops/element total.</p><p>Fusion plan: augment the running state from (m, d) to (m, d, u, p), where u holds the K largest values seen so far and p their indices. Each new element x_j: update m and d as before, then <span class="code-anchor" data-coderef-idx="4" data-coderef-section="method" title="TopK&lt;MAX_K&gt; with insertion sort — the per-thread running buffer">insertion-sort</span> x_j into u (cost: O(K) per element. Fine for the small K that TopK actually uses).</p><p>Pseudocode (Algorithm 4 in the paper):</p><pre><code>m_0 = -inf; d_0 = 0
+u = [-inf] * (K+1);  p = [-1] * (K+1)
+for j = 1..V:
+    m_j = max(m_{j-1}, x_j)
+    d_j = d_{j-1} * exp(m_{j-1} - m_j) + exp(x_j - m_j)   # online normalizer
+    u[K+1] = x_j; p[K+1] = j                              # land new value at end
+    k = K                                                  # single-pass insertion sort
+    while k &gt;= 1 and u[k] &lt; u[k+1]:
+        swap(u[k], u[k+1]); swap(p[k], p[k+1]); k -= 1
+for i = 1..K:                                              # write K outputs only
+    v_i = exp(u[i] - m_V) / d_V; z_i = p[i]</code></pre><table><thead><tr><th>Variant</th><th>Memory ops / element</th><th>V100 speedup vs Safe+TopK separate</th></tr></thead><tbody><tr><td>Safe Softmax + TopK, separate</td><td>5</td><td>1.0× (baseline)</td></tr><tr><td>Safe Softmax + TopK, fused</td><td>2</td><td>~2.5×</td></tr><tr><td><span class="code-anchor" data-coderef-idx="3" data-coderef-section="method" title="online_softmax_topk — fused kernel, 1 memory op per input element">Online Softmax + TopK</span>, fused</td><td>1</td><td><strong>5× at V = 25,000, K = 5</strong></td></tr></tbody></table><p>The 5× total decomposes cleanly: 2.5× from fusion (eliminating the round-trip between two kernels) and 2× from single-pass online softmax. The gain shrinks as K grows. At K = 30 the insertion-sort dominates and the speedup falls to 1.4×. The technique is best suited to beam-search-style decoding where K is small (5–10).</p>
+</div>
+<div class="subsection">
+<h3>6: Implementation notes. CUDA + CUB</h3>
+<p>The reference kernel (in the open-source NVIDIA/online-softmax repo) is ~40 lines of CUDA. Key choices:</p><ul><li><strong>Struct layout</strong>: <code>struct __align__(8) MD { float m; float d; }</code>. 8-byte aligned so the GPU coalesces (m, d) loads into one transaction.</li><li><strong>Reduction primitive</strong>: <code>cub::BlockReduce&lt;MD, THREADBLOCK_SIZE&gt;</code> with the (m, d) ⊕ operator passed as a <code>__device__ __forceinline__</code> function.</li><li><strong>Thread-local accumulation</strong>: each thread strides through the input with stride = THREADBLOCK_SIZE, accumulating its own partial (m, d). After the loop, the block-reduce merges all partials in log₂(threads) levels.</li><li><strong>Output pass</strong>: once thread 0 holds (m_V, d_V) in shared memory, every thread reads (x_i, m_V, d_V) and writes y_i = e^(x_i − m_V) · (1 / d_V) using the precomputed reciprocal <code>__fdividef</code> for speed.</li><li><strong>Hardware</strong>: benchmarks on Tesla V100, fp32, CUDA 9.1, CUB 1.8.</li></ul><p>The whole machinery. Single-pass kernel, reduction operator, fused TopK. Fits in under 500 lines of CUDA. The 'algorithm' is essentially one C++ struct plus one device function.</p>
+</div>
+</section>
+<!-- ══ BLOCK 7 — EXPERIMENTS ════════════════════════════════════════════ -->
+<section class="paper-section" id="experiments">
+<h2>Experiments</h2>
+<p class="results-headline">Online softmax matches the predicted 1.33× memory-access reduction (4 → 3 ops/elem) with a real ~1.3× wall-clock speedup on V100, and the fused softmax+TopK kernel runs up to 5× faster than the standard safe-softmax-then-TopK pipeline.</p>
+<table class="results-table">
+<thead>
+<tr><th>Kernel</th><th>Memory ops / element</th><th>Best V100 speedup</th><th>Conditions</th></tr>
+</thead>
+<tbody>
+<tr><td>Naive Softmax</td><td>3</td><td>≈ same as Online for V &lt; 1000</td><td>Unsafe (overflow risk)</td></tr>
+<tr><td>Safe Softmax (baseline)</td><td>4</td><td>1.00× (baseline)</td><td>Used by every DL framework</td></tr>
+<tr><td>Online Softmax</td><td>3</td><td>1.30×</td><td>Large batch (4000 vectors), V ≥ 4000</td></tr>
+<tr><td>Online Softmax</td><td>3</td><td>1.15×</td><td>Small batch (10 vectors), V ≥ 1000</td></tr>
+<tr><td>Safe + TopK, separate</td><td>5</td><td>1.00× (baseline)</td><td>Two kernels</td></tr>
+<tr><td>Safe + TopK, fused</td><td>2</td><td>≈ 2.5×</td><td>Eliminates round-trip between kernels</td></tr>
+<tr class="highlight"><td>Online + TopK, fused</td><td>1</td><td>5.0×</td><td>K = 5, V = 25000, large batch</td></tr>
+<tr><td>Online + TopK, fused</td><td>1</td><td>1.4×</td><td>K = 30 (TopK insert dominates)</td></tr>
+</tbody>
+</table>
+<p class="label">Ablation highlights</p>
+<ul class="ablations">
+<li>K sweep for fused Online+TopK: K=5 → 5.0×, K=10 → 3.5×, K=15 → 2.0×, K=30 → 1.4×. The O(K) insertion-sort per element eats the savings for big K. Fusion only wins when TopK is small.</li>
+<li>Vector size sweep: speedups start appearing at V ≥ 1000 (when L1/L2 thrashing pushes the kernel into DRAM-bound territory). Below 1000, all three variants are similar because the cache absorbs the extra passes.</li>
+<li>Batch size effect: small batch (10 vectors) saturates the GPU less, so speedup is latency-limited at ~1.15× even at large V. Large batch (4000 vectors) hits the predicted 1.3× ceiling.</li>
+<li>Practical implication noted by the paper: switching from naive to online <em>improves</em> numerical stability with no performance hit. Net free upgrade for kernels that were using naive softmax.</li>
+</ul>
+</section>
+<!-- ══ BLOCK 8 — METHODS COMPARISON ════════════════════════════════════ -->
+<section class="paper-section" id="comparison">
+<h2>Methods Comparison</h2>
+<table class="results-table">
+<thead>
+<tr><th>Method</th><th>Passes over input</th><th>Memory ops / elem</th><th>Numerically safe?</th><th>Parallel-reducible?</th></tr>
+</thead>
+<tbody>
+<tr><td>Naive softmax</td><td>2</td><td>3</td><td>No (overflow)</td><td>Trivially</td></tr>
+<tr><td>Safe softmax</td><td>3</td><td>4</td><td>Yes</td><td>Yes, but two separate reductions</td></tr>
+<tr><td>Online softmax (this paper)</td><td>2</td><td>3</td><td>Yes (proved)</td><td>Yes, single ⊕-reduction</td></tr>
+<tr><td>Online softmax + TopK fused</td><td>1</td><td>1</td><td>Yes</td><td>Yes, augmented (m,d,u,p) tuple</td></tr>
+</tbody>
+</table>
+</section>
+<!-- ══ BLOCK 9 — RELATED WORK ════════════════════════════════════════════ -->
+<section class="paper-section" id="related">
+<h2>Related Work</h2>
+<div class="related-block">
+<p class="label">Foundational</p>
+<ul>
+<li><strong>Welford: Note on a method for calculating corrected sums of squares and products</strong> (B. P. Welford, 1962) — The paper explicitly names this as the inspiration. Running-statistics update with a corrective rescaling term.</li>
+</ul>
+</div>
+<div class="related-block">
+<p class="label">Comparable</p>
+<ul>
+<li><strong>Differentiated Softmax / SVD-Softmax / Adaptive Softmax</strong> (Chen et al., Shim et al., Grave et al., 2015) — Attack the projection layer, not softmax itself. Orthogonal to this work. The paper claims you can stack online softmax on top of any of them.</li>
+<li><strong>Hierarchical Softmax (Goodman, Mikolov)</strong> (various, 2001) — Splits softmax into a tree of smaller ones. Each leaf still runs a softmax. And benefits from the online algorithm running underneath.</li>
+<li><strong>Self-Normalized Softmax / Noise Contrastive Estimation</strong> (Devlin et al., Mnih &amp; Teh, 2012) — The only prior approaches that fully eliminate the safe-softmax denominator. Limited to specific training/inference settings. Online softmax is the drop-in alternative everywhere else.</li>
+</ul>
+</div>
+<div class="related-block closest">
+<p class="label">Closest — with key delta</p>
+<p><strong>FlashAttention (Dao et al., 2022)</strong> (2022)</p>
+<p>Not a prior work. A direct downstream consumer. FlashAttention tiles attention into blocks of size B_r × B_c, runs softmax per block, and merges the partial (m_i, d_i, O_i) tuples using <em>exactly</em> the same ⊕ operator from Eq. 4 of this paper. The 'rescale-then-add' line in the FlashAttention forward kernel is line-for-line the online normalizer recurrence. The paper's contribution outlived the V100-era softmax-vs-TopK story by becoming the algorithmic kernel of every modern attention implementation.</p>
+</div>
+</section>
+<!-- ══ BLOCK 10 — LIMITATIONS / USE CASES / OPEN QUESTIONS ══════════════ -->
+<section class="paper-section" id="limits">
+<h2>Limitations, Use Cases, Open Questions</h2>
+<div class="lim-block">
+<p class="label">Limitations</p>
+<ul class="limit-list">
+<li>
+<p class="lim">Speedup is purely from saved memory bandwidth. Flop-bound workloads see nothing.</p>
+<p class="lim-soften"><em>Softmax is bandwidth-bound on every GPU generation since at least Pascal, and the bound has gotten worse with each generation (HBM bandwidth grows slower than FLOPs). The paper's gain is structural, not architecture-specific.</em></p>
+</li>
+<li>
+<p class="lim">TopK fusion shrinks as K grows: 5× at K=5, only 1.4× at K=30 because insertion-sort per element dominates.</p>
+<p class="lim-soften"><em>Auto-regressive decoding with beam search uses K ≤ 10 routinely, so the design point matches the dominant use case. For large-K TopK other algorithms (radix-K, bitonic sort) win anyway.</em></p>
+</li>
+<li>
+<p class="lim">No evaluation on CPUs or non-NVIDIA GPUs. The whole benchmark is V100 + CUB.</p>
+<p class="lim-soften"><em>The Discussion section conjectures similar speedups on CPU if the implementation vectorizes the running pair. The arithmetic claim (4 → 3 → 1 memory ops) is hardware-agnostic; only the absolute speedup depends on the bandwidth/latency mix of a specific chip.</em></p>
+</li>
+<li>
+<p class="lim">The paper only fuses softmax with the layer <em>after</em> it (TopK). Fusing with the layer <em>before</em> (the matmul projection) is mentioned as future work but not done.</p>
+<p class="lim-soften"><em>The projection is compute-bound (matmul), and fusing memory-bound with compute-bound kernels is hard without sacrificing matmul's tiling. Subsequent work (cuBLAS/cuBLASLt epilogues, FlashAttention) eventually addressed this.</em></p>
+</li>
+</ul>
+</div>
+<div class="lim-block">
+<p class="label">Where this is useful</p>
+<ul>
+<li>Any large-vocabulary classifier output layer (language models, NMT, ASR).</li>
+<li>Attention layers. The recurrence is the algorithmic core of FlashAttention 1 / 2 / 3 and every modern attention kernel.</li>
+<li>Beam-search decoding (softmax + TopK fused into one kernel. 5× faster).</li>
+<li>Any softmax sitting after a bandwidth-bound op where the L2 cache can't absorb the extra passes (typically V ≥ 1000).</li>
+</ul>
+</div>
+<div class="lim-block">
+<p class="label">Open questions</p>
+<ul>
+<li>Can the (m, d) recurrence be extended to 'log-sum-exp + Top-K + sampling' as a single fused kernel for Gumbel-style sampling?</li>
+<li>What is the speedup on Hopper (H100) where DRAM bandwidth is much higher but L2 is also larger. Does the V ≥ 1000 threshold for cache thrashing move?</li>
+<li>Can fp8 / bf16 storage for the running d be made safe given the 1 ≤ d_j ≤ j bound, or does the <span class="jargon" data-gloss="The e^(m_{j-1} − m_j) term in the recurrence. Corrects an existing partial normalizer when the running max moves.">rescaling factor</span>'s wide dynamic range force fp32?</li>
+<li>Does the parallel ⊕ reduction lose any precision vs the sequential recurrence under finite arithmetic? The paper doesn't characterize this.</li>
+</ul>
+</div>
+</section>
+<!-- ══ BLOCK 11 — DEEP Q&A ════════════════════════════════════════════════ -->
+<section class="paper-section" id="qa">
+<h2>Deep Q&amp;A</h2>
+<p class="section-intro">Open-ended questions to deepen understanding. Try to answer before clicking reveal. Badges show what kind of thinking each question is testing.</p>
+<details class="qa-item">
+<summary><span class="qa-badge qa-badge-principle">Principle</span> Why is the rescaling factor e^(m_{j-1} − m_j) exact rather than approximate? Floating-point exp is not exact.</summary>
+<div class="qa-answer">In real arithmetic the rescaling is exact algebraically: every term e^(x_k − m_{j-1}) in d_{j-1} gets multiplied by e^(m_{j-1} − m_j), giving e^(x_k − m_j), which is exactly what d_j should contain. The fp32 implementation does pick up rounding error from the exp() call, but it picks up the <em>same</em> rounding error that safe softmax would have picked up. Both algorithms compute e^(x_k − m_V) eventually. In fact the paper proves d_V from online softmax equals d_V from safe softmax in exact arithmetic; in fp32 they differ only by representational noise of comparable magnitude. The number-of-ops-per-element doubles for exp (one exp per update vs one per element in safe), but the operands are smaller in magnitude, so the rounding error doesn't get worse.</div>
+</details>
+<details class="qa-item">
+<summary><span class="qa-badge qa-badge-detail">Detail</span> Why does the paper bother proving the operator is commutative when associative alone is enough for tree reduction?</summary>
+<div class="qa-answer">Tree reduction only requires associativity. You can fix any binary-tree shape and merge bottom-up. But many real GPU reductions don't fix a tree shape: warp-shuffle reductions exchange pairs along arbitrary lane patterns, and atomic-add-style reductions process partials in nondeterministic order. Commutativity buys you the freedom to use those faster patterns without worrying about deterministic ordering. The proof costs them one sentence and pays off in every fast-reduction kernel that consumes the operator.</div>
+</details>
+<details class="qa-item">
+<summary><span class="qa-badge qa-badge-principle">Principle</span> Online softmax does <em>more</em> FP ops per element than safe softmax (extra multiply + extra exp). Why does it run faster?</summary>
+<div class="qa-answer">Because softmax is memory-bandwidth-bound, not flop-bound. A V100 has ~14 TFLOP/s of fp32 but only ~900 GB/s of HBM bandwidth. A ratio of ~16 flops per byte. Softmax does ≈ 2 flops per byte loaded. The kernel sits idle waiting on DRAM 90%+ of the time, and the extra flops slot into that idle time for free. The speedup tracks the memory-access ratio (4/3 ≈ 1.33×) almost perfectly, which is the cleanest possible evidence that bandwidth is the bottleneck.</div>
+</details>
+<details class="qa-item">
+<summary><span class="qa-badge qa-badge-detail">Detail</span> Why does the fused softmax+TopK speedup collapse from 5× at K=5 to 1.4× at K=30?</summary>
+<div class="qa-answer">The TopK insert is implemented as an insertion sort against the K-element running buffer (Algorithm 4, lines 10–15). Per element absorbed, the cost is O(K) comparisons and shuffles. At K=5 that cost is negligible compared to the memory load; at K=30 it's substantial enough that the kernel becomes compute-limited rather than memory-limited, and the original memory-savings argument no longer applies. The paper's experimental table makes this transition explicit: K=10 → 3.5×, K=15 → 2.0×, K=30 → 1.4×. The takeaway is that fusion + online softmax is a beam-search optimization (small K), not a general TopK optimization.</div>
+</details>
+<details class="qa-item">
+<summary><span class="qa-badge qa-badge-principle">Principle</span> FlashAttention is famously much harder to implement than online softmax. Both build on the same recurrence. What's the extra work?</summary>
+<div class="qa-answer">Three things FlashAttention has to handle that this paper doesn't: (1) the softmax input isn't a vector. It's a row of a Q × K^T matrix, so the recurrence has to advance per row across blocks of columns, not per element; (2) the softmax outputs get multiplied by V into a running output accumulator O_i, which has to be rescaled by e^(m_old − m_new) in lockstep with d (this is the extra recurrence FlashAttention adds. Same shape, applied to O); (3) backward pass requires recomputing softmax during gradient (FlashAttention saves only (m, d), not the full softmax matrix, to keep memory O(N) instead of O(N²)). The (m, d) ⊕ operator is reused unchanged in all three places. The original online-softmax paper is essentially the math; FlashAttention is the engineering of applying that math to a 2D structured workload.</div>
+</details>
+<details class="qa-item">
+<summary><span class="qa-badge qa-badge-detail">Detail</span> Why store (m, d) in a single 8-byte-aligned struct instead of two separate float arrays?</summary>
+<div class="qa-answer">Coalesced memory access. On a GPU, threads in a warp issue loads simultaneously; if the addresses are contiguous and aligned, the memory system fuses them into one cache-line transaction. With (m, d) packed into a single 8-byte struct, a warp of 32 threads reading 32 consecutive structs hits 32 × 8 = 256 bytes. Exactly two 128-byte transactions. Two separate arrays would force two completely separate sets of transactions, doubling the number of memory requests issued. The <code>__align__(8)</code> attribute is what tells the compiler to keep these structs aligned in the shared-memory layout used by CUB's BlockReduce.</div>
+</details>
+<details class="qa-item">
+<summary><span class="qa-badge qa-badge-principle">Principle</span> The paper proves 1 ≤ d_j ≤ j. Why does this matter, and why doesn't it apply if we use the naive (non-safe) softmax?</summary>
+<div class="qa-answer">It matters because it bounds the dynamic range of d, which determines whether fp32 storage is enough. d_j ≥ 1 because at least one term in the sum is e^(x_max − m) = e^0 = 1; d_j ≤ j because all V terms are e^(x_k − m) ≤ 1. So d_j stays in [1, V], and even for V = 1.7×10³⁷ (way past any practical vocabulary) it doesn't exceed the fp32 representable range. In naive softmax, d is a sum of unscaled e^x terms, and a single x near 88 makes d explode past fp32 max. That's the whole reason safe softmax exists. The online recurrence inherits the safe-softmax bound for free because it always rescales to the current running max.</div>
+</details>
+<details class="qa-item">
+<summary><span class="qa-badge qa-badge-detail">Detail</span> What happens to the recurrence in the degenerate case where every x_j is identical (no max ever changes)?</summary>
+<div class="qa-answer">The rescaling factor e^(m_{j-1} − m_j) becomes e^0 = 1, so the update degenerates to d_j = d_{j-1} + e^(x_j − m_j). Plain accumulation, same as safe softmax's pass 2. There's no penalty for this case other than the wasted exp(0) computation, which is a single fp32 op. In practice the exp is computed unconditionally because branching on 'is the max changing?' would cost more than just doing the multiply with operand 1. The branch-free implementation is a clean example of choosing predictable throughput over minimum FLOP count on a bandwidth-bound kernel.</div>
+</details>
+</section>
+<!-- ══ BLOCK 12 — SELF-CHECK QUIZ ════════════════════════════════════════ -->
+<section class="paper-section" id="quiz">
+<h2>Self-Check Quiz</h2>
+<p class="section-intro">Imagine an interviewer who knows ML but hasn't read this paper. Answer aloud, then click to reveal a model answer.</p>
+<details class="qa-item quiz-item">
+<summary>Write the online softmax update in 5 lines of Python that processes x as a 1D NumPy array element by element. No NumPy vector ops. Just a Python loop.</summary>
+<div class="qa-answer"><strong>Model answer.</strong> <pre class="code-snippet"><code>m, d = -np.inf, 0.0
+for xj in x:
+    m_new = max(m, xj)
+    d = d * np.exp(m - m_new) + np.exp(xj - m_new)
+    m = m_new
+# Second pass: y = np.exp(x - m) / d</code></pre></div>
+</details>
+<details class="qa-item quiz-item">
+<summary>Given two partial (m, d) pairs from chunks A and B of the input, write the merge formula. Why is this enough to parallelize the algorithm?</summary>
+<div class="qa-answer"><strong>Model answer.</strong> <pre class="code-snippet"><code>m_new = max(m_A, m_B)
+d_new = d_A * exp(m_A - m_new) + d_B * exp(m_B - m_new)</code></pre><br/>
+This merge is <strong>associative</strong>. Merging (A ⊕ B) ⊕ C gives the same result as A ⊕ (B ⊕ C). So you can build a binary-tree reduction across any number of threads in log₂(T) steps. It's also <strong>commutative</strong>, so the tree doesn't need a fixed shape; warp-shuffle and unordered-atomic reductions both work.</div>
+</details>
+<details class="qa-item quiz-item">
+<summary>On a memory-bandwidth-bound kernel, doing 1 extra multiply per element is free. Explain why, using rough numbers for a V100.</summary>
+<div class="qa-answer"><strong>Model answer.</strong> V100 has ~14 TFLOP/s of fp32 throughput and ~900 GB/s of HBM bandwidth → ratio ≈ 15 flops per byte loaded. Online softmax does ~2 flops per byte (one add, one compare, plus the new multiply + exp). So the kernel is ~7× under-utilized in compute and pegged on memory. The extra multiply lands in those wasted compute cycles and adds zero wall-clock time. The wall-clock speedup is set entirely by the memory-access ratio: 4 ops/elem → 3 ops/elem = 1.33×, matching the measured 1.3×.</div>
+</details>
+<details class="qa-item quiz-item">
+<summary>Sketch what changes if you want to fuse online softmax with TopK. Why doesn't the recurrence break?</summary>
+<div class="qa-answer"><strong>Model answer.</strong> Augment the running state from (m, d) to (m, d, u, p), where u ∈ ℝ^K holds the K largest values seen and p ∈ ℤ^K their original indices. On each new element x_j: (a) update m and d with the standard recurrence; (b) insertion-sort x_j into u, updating p in lockstep. The ⊕ operator generalizes to merge (m_A, d_A, u_A, p_A) and (m_B, d_B, u_B, p_B): merge (m, d) as before; merge u via parallel select-K (or a small sort) on u_A ∪ u_B. The recurrence doesn't break because the (m, d) update is independent of the TopK update. They share only the input element. Memory accesses drop to 1 per element because the K outputs are written once at the end, not per element.</div>
+</details>
+</section>
+</article>
+<!-- ══ BLOCK 13 — SIDEBAR ═════════════════════════════════════════════════ -->
+<aside class="sidebar">
+<nav class="toc">
+<p class="label">On this page</p>
+<ol>
+<li><a data-section-id="tldr" href="#tldr">TL;DR</a></li>
+<li><a data-section-id="overview" href="#overview">Paper Overview</a></li>
+<li><a data-section-id="timeline" href="#timeline">Timeline</a></li>
+<li><a data-section-id="context" href="#context">Where it matters</a></li>
+<li><a data-section-id="method" href="#method">Core Method</a></li>
+<li><a data-section-id="experiments" href="#experiments">Experiments</a></li>
+<li><a data-section-id="comparison" href="#comparison">Comparison</a></li>
+<li><a data-section-id="related" href="#related">Related Work</a></li>
+<li><a data-section-id="limits" href="#limits">Limits &amp; Open Qs</a></li>
+<li><a data-section-id="qa" href="#qa">Q&amp;A</a></li>
+<li><a data-section-id="quiz" href="#quiz">Quiz</a></li>
+</ol>
+</nav>
+<div class="coderefs-wrap">
+<p class="label">Code refs <span class="hint">(click for full view)</span></p>
+<div id="coderefs"></div>
+</div>
+</aside>
+</div><!-- end .reader -->
+</div><!-- end .page-wrapper -->
+<!-- ══ FLOATING POMODORO (fixed bottom-right of viewport) ══════════════════ -->
+<div aria-label="Focus timer" class="pomodoro pomodoro-floating" id="pomodoro" role="region">
+<button aria-label="Minimize" class="pomo-collapse" id="pomo-collapse">–</button>
+<p class="label">Focus</p>
+<div class="pomo-display">
+<span class="pomo-mode" id="pomo-mode">Focus</span>
+<span class="pomo-time" id="pomo-time">25:00</span>
+</div>
+<div class="pomo-controls">
+<button aria-label="Start/pause timer" class="pomo-btn" id="pomo-toggle">▶</button>
+<button aria-label="Reset timer" class="pomo-btn" id="pomo-reset">↺</button>
+</div>
+<p class="pomo-stats" id="pomo-stats">0 pomodoros today</p>
+</div>
+<!-- ══ CODE MODAL (full-width snippet viewer) ════════════════════════════ -->
+<div aria-hidden="true" aria-modal="true" class="code-modal" id="code-modal" role="dialog">
+<div class="code-modal-backdrop" data-close=""></div>
+<div class="code-modal-panel">
+<header class="code-modal-header">
+<div>
+<p class="code-modal-meta" id="code-modal-meta"></p>
+<h3 class="code-modal-title" id="code-modal-title"></h3>
+</div>
+<button aria-label="Close" class="code-modal-close" data-close="">×</button>
+</header>
+<pre class="code-modal-body" id="code-modal-body"></pre>
+<footer class="code-modal-footer">
+<p class="code-modal-note" id="code-modal-note"></p>
+<a class="code-modal-link" hidden="" href="#" id="code-modal-link" rel="noopener" target="_blank">View on GitHub ↗</a>
+</footer>
+</div>
+</div>
+<!-- ── Inject code refs data ────────────────────────────────────────────────── -->
+<script>
+window.CODEREFS = {
+  "method": [
+    {
+      "source": "author_repo",
+      "title": "MD struct + reduce_md_op — the ⊕ operator from Eq. 4 in 11 lines of CUDA",
+      "repo": "NVIDIA/online-softmax",
+      "path": "online_softmax_benchmark.cu",
+      "url": "https://github.com/NVIDIA/online-softmax/blob/master/online_softmax_benchmark.cu#L150-L166",
+      "snippet_lines": "L150-L166",
+      "snippet_start_line": 150,
+      "snippet": "struct __align__(8) MD\n{\n    float m;\n    float d;\n};\n\n__device__ __forceinline__ MD reduce_md_op(MD a, MD b)\n{\n    bool a_bigger = (a.m > b.m);\n    MD bigger_m = a_bigger ? a : b;\n    MD smaller_m = a_bigger ? b : a;\n    MD res;\n    res.d = bigger_m.d + smaller_m.d * __expf(smaller_m.m - bigger_m.m);\n    res.m = bigger_m.m;\n    return res;\n}",
+      "note": "Real source. This is the paper's entire algorithm — the (m, d) struct and the ⊕ operator from Equation 4. Note the branch-free pattern: pick bigger_m via ternary, rescale smaller_m.d by exp(smaller_m.m - bigger_m.m), add. Exactly one of the two sides has rescaling factor 1 (the side that already held the max), but the code rescales unconditionally because the multiply is cheaper than the branch.",
+      "section": "method",
+      "anchor_phrase": "BlockReduce"
+    },
+    {
+      "source": "author_repo",
+      "title": "online_softmax kernel — 40 lines from input to output",
+      "repo": "NVIDIA/online-softmax",
+      "path": "online_softmax_benchmark.cu",
+      "url": "https://github.com/NVIDIA/online-softmax/blob/master/online_softmax_benchmark.cu#L167-L205",
+      "snippet_lines": "L167-L205",
+      "snippet_start_line": 167,
+      "snippet": "template<int THREADBLOCK_SIZE>\n__launch_bounds__(THREADBLOCK_SIZE)\n__global__ void online_softmax(\n    const float * __restrict x,\n    float * __restrict y,\n    int V)\n{\n    int thread_id = threadIdx.x;\n    int vector_id = blockIdx.x;\n\n    // reposition x and y to data for the current vector\n    x += vector_id * V;\n    y += vector_id * V;\n\n    typedef cub::BlockReduce<MD, THREADBLOCK_SIZE> BlockReduce;\n\n    __shared__ typename BlockReduce::TempStorage temp_storage;\n    __shared__ MD md_total;\n\n    MD md_partial;\n    md_partial.m = -FLT_MAX;\n    md_partial.d = 0.0F;\n    for(int elem_id = thread_id; elem_id < V; elem_id += THREADBLOCK_SIZE)\n    {\n        MD new_elem;\n        new_elem.m = x[elem_id];\n        new_elem.d = 1.0F;\n        md_partial = reduce_md_op(md_partial, new_elem);\n    }\n\n    MD md = BlockReduce(temp_storage).Reduce(md_partial, reduce_md_op);\n    if (thread_id == 0)\n        md_total = md;\n    __syncthreads();\n\n    float d_total_inverse = __fdividef(1.0F, md_total.d);\n    for(int elem_id = thread_id; elem_id < V; elem_id += THREADBLOCK_SIZE)\n        y[elem_id] = __expf(x[elem_id] - md_total.m) * d_total_inverse;\n}",
+      "note": "Real source. Two loops, one __syncthreads. Loop 1 strides through the input, accumulating a thread-local (m, d) via the ⊕ operator (each new element is treated as a chunk of size 1 with d=1). The block-wide BlockReduce merges all per-thread partials in log₂(THREADBLOCK_SIZE) levels. Thread 0 publishes the final (m_V, d_V) to shared memory. Loop 2 reads it, computes the softmax outputs in parallel using the precomputed reciprocal __fdividef.",
+      "section": "method",
+      "anchor_phrase": "online softmax"
+    },
+    {
+      "source": "author_repo",
+      "title": "safe_softmax kernel — contrast: 3 loops, 2 reductions, the 4-mem-op baseline",
+      "repo": "NVIDIA/online-softmax",
+      "path": "online_softmax_benchmark.cu",
+      "url": "https://github.com/NVIDIA/online-softmax/blob/master/online_softmax_benchmark.cu#L108-L148",
+      "snippet_lines": "L108-L148",
+      "snippet_start_line": 108,
+      "snippet": "template<int THREADBLOCK_SIZE>\n__launch_bounds__(THREADBLOCK_SIZE)\n__global__ void safe_softmax(\n    const float * __restrict x,\n    float * __restrict y,\n    int V)\n{\n    int thread_id = threadIdx.x;\n    int vector_id = blockIdx.x;\n\n    x += vector_id * V;\n    y += vector_id * V;\n\n    typedef cub::BlockReduce<float, THREADBLOCK_SIZE> BlockReduce;\n\n    __shared__ typename BlockReduce::TempStorage temp_storage;\n    __shared__ float m_total;\n    __shared__ float d_total_inverse;\n\n    float m_partial = -FLT_MAX;\n    for(int elem_id = thread_id; elem_id < V; elem_id += THREADBLOCK_SIZE)\n        m_partial = max_op(m_partial, x[elem_id]);\n\n    float m = BlockReduce(temp_storage).Reduce(m_partial, max_op);\n    if (thread_id == 0)\n        m_total = m;\n    __syncthreads();\n\n    float d_partial = 0.0F;\n    for(int elem_id = thread_id; elem_id < V; elem_id += THREADBLOCK_SIZE)\n        d_partial += __expf(x[elem_id] - m_total);\n\n    float d = BlockReduce(temp_storage).Sum(d_partial);\n    if (thread_id == 0)\n        d_total_inverse = __fdividef(1.0F, d);\n    __syncthreads();\n\n    for(int elem_id = thread_id; elem_id < V; elem_id += THREADBLOCK_SIZE)\n        y[elem_id] = __expf(x[elem_id] - m_total) * d_total_inverse;\n}",
+      "note": "Real source. Side-by-side comparison with the online kernel above: three loops vs two, two BlockReduces vs one, the input vector is read three times (lines 21, 30, 45) vs twice. This is the baseline that ships in every DL framework, and the kernel the paper attacks. The two kernels are otherwise identical in structure — same thread-block stride pattern, same CUB primitive, same fdividef trick.",
+      "section": "method",
+      "anchor_phrase": "safe softmax"
+    },
+    {
+      "source": "author_repo",
+      "title": "online_softmax_topk — fused kernel, 1 memory op per input element",
+      "repo": "NVIDIA/online-softmax",
+      "path": "online_softmax_benchmark.cu",
+      "url": "https://github.com/NVIDIA/online-softmax/blob/master/online_softmax_benchmark.cu#L388-L442",
+      "snippet_lines": "L388-L442",
+      "snippet_start_line": 388,
+      "snippet": "template<int MAX_K, int THREADBLOCK_SIZE>\n__launch_bounds__(THREADBLOCK_SIZE)\n__global__ void online_softmax_topk(\n    const float * __restrict x,\n    int * __restrict z,\n    float * __restrict v,\n    int V,\n    int K)\n{\n    int thread_id = threadIdx.x;\n    int vector_id = blockIdx.x;\n\n    x += vector_id * V;\n\n    typedef cub::BlockReduce<TopKMD<MAX_K>, THREADBLOCK_SIZE> BlockReduce;\n\n    __shared__ typename BlockReduce::TempStorage temp_storage;\n\n    TopKMD<MAX_K> partial;\n    for(int i = 0; i < MAX_K; ++i)\n        partial.topk.p[i] = -1;\n    for(int i = 0; i < MAX_K; ++i)\n        partial.topk.u[i] = -FLT_MAX;\n    partial.md.m = -FLT_MAX;\n    partial.md.d = 0.0F;\n    for(int elem_id = thread_id; elem_id < V; elem_id += THREADBLOCK_SIZE)\n    {\n        float elem = x[elem_id];\n        MD new_elem{elem, 1.0F};\n        partial.md = reduce_md_op(partial.md, new_elem);\n        partial.topk.insert(elem, elem_id);\n    }\n\n    TopKMD<MAX_K> total = BlockReduce(temp_storage).Reduce(partial, reduce_topk_md_op<MAX_K>);\n\n    if (thread_id == 0)\n    {\n        z += vector_id * K;\n        v += vector_id * K;\n        \n        float d_total_inverse = __fdividef(1.0F, total.md.d);\n        for(int i = 0; i < MAX_K; ++i)\n        {\n            float val = __expf(total.topk.u[i] - total.md.m) * d_total_inverse;\n            if (i < K)\n            {\n                z[i] = total.topk.p[i];\n                v[i] = val;\n            }\n        }\n    }\n}",
+      "note": "Real source. The 5× kernel. Each thread maintains a TopKMD<MAX_K> = {MD md; TopK<MAX_K> topk}. On every loaded x[elem_id]: (a) feed it into the (m, d) recurrence via reduce_md_op, (b) try to insert it into the running top-K buffer. After the loop, a single BlockReduce merges all thread partials using reduce_topk_md_op (which calls both reduce_md_op and reduce_topk_op). Only thread 0 writes — and it writes only K outputs, not V. So the kernel reads each input element exactly once, no writes per input element, K writes total at the end. This is the 'one memory op per element' claim made concrete.",
+      "section": "method",
+      "anchor_phrase": "Online Softmax + TopK"
+    },
+    {
+      "source": "author_repo",
+      "title": "TopK<MAX_K> with insertion sort — the per-thread running buffer",
+      "repo": "NVIDIA/online-softmax",
+      "path": "online_softmax_benchmark.cu",
+      "url": "https://github.com/NVIDIA/online-softmax/blob/master/online_softmax_benchmark.cu#L207-L242",
+      "snippet_lines": "L207-L242",
+      "snippet_start_line": 207,
+      "snippet": "template<int MAX_K>\nstruct TopK\n{\n    int p[MAX_K];\n    float u[MAX_K];\n\n    __device__ __forceinline__ void insert(float elem, int elem_id)\n    {\n        if (elem > u[MAX_K-1])\n        {\n            u[MAX_K-1] = elem;\n            p[MAX_K-1] = elem_id;\n        }\n        for(int k = MAX_K - 2; k >= 0; --k)\n        {\n            if (u[k+1] > u[k])\n            {\n                float u2 = u[k];\n                int p2 = p[k];\n                u[k] = u[k+1];\n                p[k] = p[k+1];\n                u[k+1] = u2;\n                p[k+1] = p2;\n            }\n        }\n    }\n};\n\ntemplate<int MAX_K>\n__device__ __forceinline__ TopK<MAX_K> reduce_topk_op(const TopK<MAX_K>& a, const TopK<MAX_K>& b)\n{\n    TopK<MAX_K> res = a;\n    for(int i = 0; i < MAX_K; ++i)\n        res.insert(b.u[i], b.p[i]);\n    return res;\n}",
+      "note": "Real source. The TopK struct and its insert(). Note the O(K) per-element cost — this is the term that grows linearly with K and explains why the fused-kernel speedup collapses from 5× at K=5 to 1.4× at K=30 (the insertion-sort eats all the bandwidth savings). reduce_topk_op merges two TopK buffers by inserting all K values of b into a one at a time, so the merge is O(K²) — fine for K≤30, prohibitive past that.",
+      "section": "method",
+      "anchor_phrase": "insertion-sort"
+    },
+    {
+      "source": "synthesized",
+      "title": "Online softmax in 8 lines of Python — synthesized for clarity",
+      "url": "https://arxiv.org/abs/1805.02867",
+      "note": "Synthesized minimal reference. Mirrors Algorithm 3 of the paper line-for-line in NumPy. Useful as the 'mental model' version — no CUB, no warp shuffles, no fp32 tricks, just the recurrence.",
+      "section": "method",
+      "anchor_phrase": "Python",
+      "snippet_lines": "L1-L14",
+      "snippet_start_line": 1,
+      "snippet": "import numpy as np\n\ndef online_softmax(x):\n    \"\"\"Algorithm 3 from Milakov & Gimelshein (2018).\"\"\"\n    m, d = -np.inf, 0.0\n    for xj in x:               # Single pass: update (m, d) jointly\n        m_new = max(m, xj)\n        d = d * np.exp(m - m_new) + np.exp(xj - m_new)\n        m = m_new\n    # m, d now hold the safe-softmax max and denominator exactly\n    return np.exp(x - m) / d   # Output pass — same as safe softmax\n\n# Equivalent to scipy.special.softmax(x) but in a single sweep over x\n# instead of three (max, sum-of-exp, divide)."
+    },
+    {
+      "source": "synthesized",
+      "title": "How FlashAttention reuses the ⊕ operator — synthesized illustration",
+      "url": "https://arxiv.org/abs/2205.14135",
+      "note": "Synthesized — not from the FlashAttention source, but a faithful sketch of how this paper's recurrence powers FA's tiled attention. The (m, d) update from Eq. 4 of the online-softmax paper appears verbatim; FlashAttention's addition is the parallel rescaling of the output accumulator O_i, which uses the same e^(m_old − m_new) correction term.",
+      "section": "method",
+      "anchor_phrase": "FlashAttention",
+      "snippet_lines": "L1-L28",
+      "snippet_start_line": 1,
+      "snippet": "# FlashAttention forward, conceptual sketch — the (m, d) recurrence from\n# Milakov & Gimelshein (2018) ported to attention's 2D structure.\n#\n# For each query block Q_i (B_r rows):\n#   m_i = -inf  (length B_r)\n#   d_i = 0     (length B_r)\n#   O_i = 0     (B_r, head_dim)\n#\n#   For each key/value block (K_j, V_j) of B_c columns:\n#       # Compute the B_r x B_c attention scores for this tile\n#       S_ij = Q_i @ K_j.T / sqrt(d)\n#\n#       # --- online softmax recurrence, applied per row of S_ij ---\n#       m_new = max(m_i, rowmax(S_ij))\n#       # rescale the existing running denominator AND the output accumulator\n#       # by exactly the same factor — this is the trick that lets FA throw away\n#       # the softmax intermediate without losing correctness\n#       d_i = d_i * exp(m_i - m_new) + rowsum(exp(S_ij - m_new))\n#       O_i = O_i * exp(m_i - m_new) + exp(S_ij - m_new) @ V_j\n#       m_i = m_new\n#       # -----------------------------------------------------------\n#\n#   # Final normalize once per Q block\n#   O_i = O_i / d_i\n#\n# Memory: O(N) instead of O(N^2). The online-softmax paper is the algorithmic\n# kernel — FlashAttention is the engineering of applying it to a tiled\n# 2D structured workload."
+    },
+    {
+      "source": "github_search",
+      "title": "PyTorch's safe softmax kernel — for comparison",
+      "repo": "pytorch/pytorch",
+      "path": "aten/src/ATen/native/cuda/SoftMax.cu",
+      "url": "https://github.com/pytorch/pytorch/blob/main/aten/src/ATen/native/cuda/SoftMax.cu",
+      "note": "Reference pointer (no snippet — file is large and changes frequently). PyTorch's CUDA softmax has used the 3-pass safe variant since the era this paper attacks. As of 2024, recent revisions of this file have begun adopting the online normalizer pattern for certain block sizes, but the historic baseline is exactly the safe_softmax kernel shown in the side-by-side ref above. Check the file's blame for the migration story if you're curious about how long the paper took to influence the production code path.",
+      "section": "method",
+      "anchor_phrase": "PyTorch"
+    }
+  ]
+};
+</script>
+
+<script>
+mermaid.initialize({
+  startOnLoad: true,
+  theme: 'base',
+  themeVariables: {
+    primaryColor: '#f5f0e8',
+    primaryTextColor: '#2c2a27',
+    primaryBorderColor: '#c47c5a',
+    lineColor: '#c47c5a',
+    secondaryColor: '#fdf6ec',
+    tertiaryColor: '#faf5ed',
+    edgeLabelBackground: '#fdf6ec',
+    fontFamily: 'Inter, sans-serif',
+    fontSize: '13px'
+  }
+});
+</script>
+
+<script src="main.js" defer></script>
+
+</body>
+</html>

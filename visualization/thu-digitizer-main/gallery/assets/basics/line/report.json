@@ -1,0 +1,141 @@
+{
+  "schema_version": 1,
+  "status": "validated_local_stable",
+  "run_id": "line-04efe900130e",
+  "source": {
+    "file": "original.png",
+    "sha256": "04efe900130ee60e291fdff77374c2283a16b0a0f0ae7a6568e6e3d134991d84",
+    "width": 600,
+    "height": 400,
+    "measurement_space": "original_raster_pixels",
+    "resampling_applied": false
+  },
+  "visible_extraction": {
+    "route_id": "raster_line_color",
+    "implementation": "scripts/digitize_line_chart.py",
+    "implementation_sha256": "bdcfedb135303472b19dd6e0ed1f79fb3616413355f14e2f960dba8cc2edc0d7",
+    "trace_mode": "sample",
+    "registered_output": "registered-output.csv",
+    "registered_report": "extraction-report.json",
+    "coordinate_provenance": "calibrated original-image pixels"
+  },
+  "coverage": {
+    "points_found": 33,
+    "points_expected": 33,
+    "error_bars_found": 11,
+    "error_bars_expected": 11
+  },
+  "calibration": {
+    "x": {
+      "scale": "linear",
+      "anchors": [
+        {
+          "pixel": 89.207547,
+          "value": 0.0
+        },
+        {
+          "pixel": 462.792453,
+          "value": 10.0
+        }
+      ],
+      "pixel_slope": 0.026767676743342517,
+      "transformed_intercept": -2.387878781162534,
+      "residuals_pixels": [
+        -3.318100514348998e-14,
+        -6.636201028697996e-14
+      ],
+      "rmse_transformed": 1.4043333874306805e-15,
+      "max_abs_residual_transformed": 1.7763568394002505e-15,
+      "pixel_uncertainty": 0.5,
+      "fit": "robust_huber_affine_in_transformed_value_space"
+    },
+    "y": {
+      "scale": "linear",
+      "anchors": [
+        {
+          "pixel": 336.0,
+          "value": 0.0
+        },
+        {
+          "pixel": 44.0,
+          "value": 70.0
+        }
+      ],
+      "pixel_slope": -0.2397260273972602,
+      "transformed_intercept": 80.54794520547945,
+      "residuals_pixels": [
+        1.1855913076682818e-13,
+        -0.0
+      ],
+      "rmse_transformed": 2.0097183471152322e-14,
+      "max_abs_residual_transformed": 2.842170943040401e-14,
+      "pixel_uncertainty": 0.5,
+      "fit": "robust_huber_affine_in_transformed_value_space"
+    },
+    "assumption": "robust affine fit in transformed value space"
+  },
+  "plot_bounds_px": {
+    "left": 78,
+    "top": 44,
+    "right": 474,
+    "bottom": 336
+  },
+  "series": [
+    {
+      "name": "biodiversity",
+      "color_rgb": [
+        214,
+        39,
+        40
+      ],
+      "found_samples": 11,
+      "total_samples": 11,
+      "mean_confidence": 1.0
+    },
+    {
+      "name": "economic_language",
+      "color_rgb": [
+        31,
+        119,
+        180
+      ],
+      "found_samples": 11,
+      "total_samples": 11,
+      "mean_confidence": 1.0
+    },
+    {
+      "name": "context",
+      "color_rgb": [
+        127,
+        127,
+        127
+      ],
+      "found_samples": 11,
+      "total_samples": 11,
+      "mean_confidence": 1.0
+    }
+  ],
+  "error_bar_interpretation": {
+    "meaning": "visible endpoint geometry only",
+    "not_claimed": "SD, SEM, confidence interval, or hidden endpoint reconstruction",
+    "occlusion_note": "Where another mark covers the pale stroke, the reported endpoint is the furthest visible supported pixel."
+  },
+  "validation": {
+    "role": "independent_synthetic_truth_validation_only",
+    "truth_source": "scripts/run_synthetic_benchmark.py::render_line",
+    "point_mae": 0.221357,
+    "point_max_abs_error": 0.828767,
+    "per_series_mae": {
+      "biodiversity": 0.132005,
+      "economic_language": 0.466065,
+      "context": 0.066002
+    },
+    "note": "Synthetic truth is compared only after image extraction and does not populate data.csv."
+  },
+  "limitations": [
+    "Series values require distinct colors and a verified linear calibration.",
+    "A missing observation remains missing; the script does not interpolate.",
+    "Extracted error-bar geometry is not a claim about SD, SEM, or confidence intervals.",
+    "Continuity mode reports only colour-supported path columns; gap columns remain missing."
+  ]
+}

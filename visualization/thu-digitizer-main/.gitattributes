@@ -1,0 +1,25 @@
+* text=auto
+.gitattributes text eol=lf
+.gitignore text eol=lf
+
+# Keep source files stable across Windows and Unix checkouts.
+*.css text eol=lf
+*.csv text eol=lf
+*.html text eol=lf
+*.js text eol=lf
+*.json text eol=lf
+*.md text eol=lf
+*.py text eol=lf
+*.R text eol=lf
+*.yaml text eol=lf
+*.yml text eol=lf
+
+# Gallery fixtures and source-data packages are binary artifacts.
+*.jpeg binary
+*.jpg binary
+*.pdf binary
+*.png binary
+*.xlsx binary
+
+# Preserve whitespace in upstream figure recipes kept for provenance.
+gallery/assets/cases/*/source-figure-code.R whitespace=-trailing-space,-space-before-tab

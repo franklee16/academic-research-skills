@@ -1,0 +1,5068 @@
+{
+  "schema_version": 1,
+  "case_id": "nature-kahlous-dose-response",
+  "status": "candidate",
+  "family": "dose_response",
+  "title": "D5R M74 catecholamine concentration-response curves",
+  "article": {
+    "title": "Molecular mechanisms of native ligand selectivity in catecholamine G protein-coupled receptors",
+    "journal": "Nature Communications",
+    "year": 2026,
+    "doi": "10.1038/s41467-026-71361-8",
+    "article_url": "https://www.nature.com/articles/s41467-026-71361-8",
+    "figure_url": "https://www.nature.com/articles/s41467-026-71361-8/figures/4",
+    "image_url": "https://media.springernature.com/full/springer-static/image/art%3A10.1038%2Fs41467-026-71361-8/MediaObjects/41467_2026_71361_Fig4_HTML.png",
+    "pdf_url": "https://www.nature.com/articles/s41467-026-71361-8.pdf",
+    "source_data_url": "https://static-content.springer.com/esm/art%3A10.1038%2Fs41467-026-71361-8/MediaObjects/41467_2026_71361_MOESM7_ESM.xlsx",
+    "figure": "Fig. 4d",
+    "license": "CC BY 4.0"
+  },
+  "inputs": {
+    "pdf_sha256": "c9cd1feb7b8acd8435658d492824d485acec0448b01a6369cf461b7c7331aac4",
+    "source_data_sha256": "546fdf947b3f746d7d23a22882799080e781d0010d596955c4e8e519d0c0db00",
+    "pdf_page": 7,
+    "panel_roi_pt": [
+      55.0,
+      178.0,
+      235.0,
+      310.0
+    ]
+  },
+  "candidate_extraction": {
+    "status": "candidate",
+    "route": "verified_vector_pdf_geometry",
+    "page_number_1_based": 7,
+    "panel_roi_pt": [
+      55.0,
+      178.0,
+      235.0,
+      310.0
+    ],
+    "main_plot_roi_pt": [
+      106.7,
+      213.8,
+      192.3,
+      280.8
+    ],
+    "calibration": {
+      "x": {
+        "transform": "linear_in_displayed_coordinate",
+        "pixel_1": 116.836998,
+        "value_1": -10.0,
+        "pixel_2": 192.264999,
+        "value_2": -2.0,
+        "coordinate": "displayed log10 molar concentration"
+      },
+      "y": {
+        "transform": "linear_in_displayed_coordinate",
+        "pixel_1": 277.919006,
+        "value_1": 0.0,
+        "pixel_2": 222.200012,
+        "value_2": 100.0,
+        "coordinate": "percent of maximum cAMP response"
+      },
+      "vehicle_segment": {
+        "display_value": 0,
+        "meaning": "vehicle/control point on the left side of a broken x axis"
+      }
+    },
+    "series": [
+      {
+        "name": "ADR",
+        "marker_shape": "square",
+        "marker_colour": "#ffba12",
+        "curve_colour": "#ffba10"
+      },
+      {
+        "name": "NA",
+        "marker_shape": "triangle",
+        "marker_colour": "#748d8e",
+        "curve_colour": "#758c8e"
+      },
+      {
+        "name": "DA",
+        "marker_shape": "circle",
+        "marker_colour": "#48e99d",
+        "curve_colour": "#48ea9c"
+      }
+    ],
+    "points": [
+      {
+        "series": "ADR",
+        "marker_shape": "square",
+        "marker_index": 0,
+        "segment": "vehicle",
+        "display_x": 0.0,
+        "log10_molar": null,
+        "plotted_value": 16.597545699025932,
+        "error_lower": null,
+        "error_upper": null,
+        "pdf_x_pt": 92.19725036621094,
+        "pdf_y_pt": 268.6710205078125,
+        "marker_drawing_index": 506,
+        "error_drawing_indices": [],
+        "status": "vector_marker_extracted"
+      },
+      {
+        "series": "ADR",
+        "marker_shape": "square",
+        "marker_index": 1,
+        "segment": "main",
+        "display_x": -9.002672630833366,
+        "log10_molar": -9.002672630833366,
+        "plotted_value": 22.09932575453705,
+        "error_lower": null,
+        "error_upper": null,
+        "pdf_x_pt": 126.24029922485352,
+        "pdf_y_pt": 265.60548400878906,
+        "marker_drawing_index": 507,
+        "error_drawing_indices": [],
+        "status": "vector_marker_extracted"
+      },
+      {
+        "series": "ADR",
+        "marker_shape": "square",
+        "marker_index": 2,
+        "segment": "main",
+        "display_x": -8.00392433248612,
+        "log10_molar": -8.00392433248612,
+        "plotted_value": 40.29952571283834,
+        "error_lower": 33.900371901091546,
+        "error_upper": 46.69673517141997,
+        "pdf_x_pt": 135.65699768066406,
+        "pdf_y_pt": 255.46451568603516,
+        "marker_drawing_index": 508,
+        "error_drawing_indices": [
+          462,
+          463,
+          464,
+          465,
+          486,
+          487,
+          488,
+          489
+        ],
+        "status": "vector_marker_extracted"
+      },
+      {
+        "series": "ADR",
+        "marker_shape": "square",
+        "marker_index": 3,
+        "segment": "main",
+        "display_x": -7.005223371422023,
+        "log10_molar": -7.005223371422023,
+        "plotted_value": 68.1993368249877,
+        "error_lower": 64.89700359286087,
+        "error_upper": 71.49797304757512,
+        "pdf_x_pt": 145.07324981689453,
+        "pdf_y_pt": 239.9190216064453,
+        "marker_drawing_index": 509,
+        "error_drawing_indices": [
+          466,
+          467,
+          468,
+          469,
+          490,
+          491,
+          492,
+          493
+        ],
+        "status": "vector_marker_extracted"
+      },
+      {
+        "series": "ADR",
+        "marker_shape": "square",
+        "marker_index": 4,
+        "segment": "main",
+        "display_x": -6.000536064704439,
+        "log10_molar": -6.000536064704439,
+        "plotted_value": 78.39963261149386,
+        "error_lower": 74.09675167172627,
+        "error_upper": 82.6988439269779,
+        "pdf_x_pt": 154.5459442138672,
+        "pdf_y_pt": 234.2355194091797,
+        "marker_drawing_index": 510,
+        "error_drawing_indices": [
+          470,
+          471,
+          472,
+          473,
+          494,
+          495,
+          496,
+          497
+        ],
+        "status": "vector_marker_extracted"
+      },
+      {
+        "series": "ADR",
+        "marker_shape": "square",
+        "marker_index": 5,
+        "segment": "main",
+        "display_x": -5.001910357782781,
+        "log10_molar": -5.001910357782781,
+        "plotted_value": 85.79936151613727,
+        "error_lower": 82.6988439269779,
+        "error_upper": 88.89601778422215,
+        "pdf_x_pt": 163.96148681640625,
+        "pdf_y_pt": 230.11246490478516,
+        "marker_drawing_index": 511,
+        "error_drawing_indices": [
+          474,
+          475,
+          476,
+          477,
+          498,
+          499,
+          500,
+          501
+        ],
+        "status": "vector_marker_extracted"
+      },
+      {
+        "series": "ADR",
+        "marker_shape": "square",
+        "marker_index": 6,
+        "segment": "main",
+        "display_x": -4.003184312004536,
+        "log10_molar": -4.003184312004536,
+        "plotted_value": 85.79936151613727,
+        "error_lower": 82.6988439269779,
+        "error_upper": 88.89601778422215,
+        "pdf_x_pt": 173.3779754638672,
+        "pdf_y_pt": 230.11246490478516,
+        "marker_drawing_index": 512,
+        "error_drawing_indices": [
+          478,
+          479,
+          480,
+          481,
+          502,
+          503,
+          504,
+          505
+        ],
+        "status": "vector_marker_extracted"
+      },
+      {
+        "series": "NA",
+        "marker_shape": "triangle",
+        "marker_index": 0,
+        "segment": "vehicle",
+        "display_x": 0.0,
+        "log10_molar": null,
+        "plotted_value": 13.801401535982539,
+        "error_lower": null,
+        "error_upper": null,
+        "pdf_x_pt": 92.1974983215332,
+        "pdf_y_pt": 270.22900390625,
+        "marker_drawing_index": 451,
+        "error_drawing_indices": [],
+        "status": "vector_marker_extracted"
+      },
+      {
+        "series": "NA",
+        "marker_shape": "triangle",
+        "marker_index": 1,
+        "segment": "main",
+        "display_x": -9.002598590467418,
+        "log10_molar": -9.002598590467418,
+        "plotted_value": 26.0001089826972,
+        "error_lower": 21.500656676456938,
+        "error_upper": 30.499396977402377,
+        "pdf_x_pt": 126.24099731445312,
+        "pdf_y_pt": 263.4320068359375,
+        "marker_drawing_index": 452,
+        "error_drawing_indices": [
+          403,
+          404,
+          405,
+          406,
+          427,
+          428,
+          429,
+          430
+        ],
+        "status": "vector_marker_extracted"
+      },
+      {
+        "series": "NA",
+        "marker_shape": "triangle",
+        "marker_index": 2,
+        "segment": "main",
+        "display_x": -8.003925141670448,
+        "log10_molar": -8.003925141670448,
+        "plotted_value": 48.99945179460482,
+        "error_lower": 42.89911220203699,
+        "error_upper": 55.09781964875165,
+        "pdf_x_pt": 135.65699005126953,
+        "pdf_y_pt": 250.61700439453125,
+        "marker_drawing_index": 453,
+        "error_drawing_indices": [
+          407,
+          408,
+          409,
+          410,
+          431,
+          432,
+          433,
+          434
+        ],
+        "status": "vector_marker_extracted"
+      },
+      {
+        "series": "NA",
+        "marker_shape": "triangle",
+        "marker_index": 3,
+        "segment": "main",
+        "display_x": -7.005196668339221,
+        "log10_molar": -7.005196668339221,
+        "plotted_value": 68.89930396444736,
+        "error_lower": 62.700267909805476,
+        "error_upper": 75.09998313444008,
+        "pdf_x_pt": 145.07350158691406,
+        "pdf_y_pt": 239.5290069580078,
+        "marker_drawing_index": 454,
+        "error_drawing_indices": [
+          411,
+          412,
+          413,
+          414,
+          435,
+          436,
+          437,
+          438
+        ],
+        "status": "vector_marker_extracted"
+      },
+      {
+        "series": "NA",
+        "marker_shape": "triangle",
+        "marker_index": 4,
+        "segment": "main",
+        "display_x": -6.000531209598474,
+        "log10_molar": -6.000531209598474,
+        "plotted_value": 80.19706387903825,
+        "error_lower": 76.4962751743317,
+        "error_upper": 83.89590823057965,
+        "pdf_x_pt": 154.54598999023438,
+        "pdf_y_pt": 233.2340087890625,
+        "marker_drawing_index": 455,
+        "error_drawing_indices": [
+          415,
+          416,
+          417,
+          418,
+          439,
+          440,
+          441,
+          442
+        ],
+        "status": "vector_marker_extracted"
+      },
+      {
+        "series": "NA",
+        "marker_shape": "triangle",
+        "marker_index": 5,
+        "segment": "main",
+        "display_x": -5.001910357782781,
+        "log10_molar": -5.001910357782781,
+        "plotted_value": 89.1958041799837,
+        "error_lower": 84.99967096750929,
+        "error_upper": 93.39894801795504,
+        "pdf_x_pt": 163.96148681640625,
+        "pdf_y_pt": 228.22000122070312,
+        "marker_drawing_index": 456,
+        "error_drawing_indices": [
+          419,
+          420,
+          421,
+          422,
+          443,
+          444,
+          445,
+          446
+        ],
+        "status": "vector_marker_extracted"
+      },
+      {
+        "series": "NA",
+        "marker_shape": "triangle",
+        "marker_index": 6,
+        "segment": "main",
+        "display_x": -4.003182693635881,
+        "log10_molar": -4.003182693635881,
+        "plotted_value": 89.49820586767866,
+        "error_lower": 85.20067874542923,
+        "error_upper": 93.79737610527893,
+        "pdf_x_pt": 173.37799072265625,
+        "pdf_y_pt": 228.05150604248047,
+        "marker_drawing_index": 457,
+        "error_drawing_indices": [
+          423,
+          424,
+          425,
+          426,
+          447,
+          448,
+          449,
+          450
+        ],
+        "status": "vector_marker_extracted"
+      },
+      {
+        "series": "DA",
+        "marker_shape": "circle",
+        "marker_index": 0,
+        "segment": "vehicle",
+        "display_x": 0.0,
+        "log10_molar": null,
+        "plotted_value": 14.599106653561586,
+        "error_lower": null,
+        "error_upper": null,
+        "pdf_x_pt": 92.1984977722168,
+        "pdf_y_pt": 269.78453063964844,
+        "marker_drawing_index": 537,
+        "error_drawing_indices": [],
+        "status": "vector_marker_extracted"
+      },
+      {
+        "series": "DA",
+        "marker_shape": "circle",
+        "marker_index": 1,
+        "segment": "main",
+        "display_x": -9.002545588893978,
+        "log10_molar": -9.002545588893978,
+        "plotted_value": 19.79934765693693,
+        "error_lower": null,
+        "error_upper": null,
+        "pdf_x_pt": 126.24149703979492,
+        "pdf_y_pt": 266.8870086669922,
+        "marker_drawing_index": 538,
+        "error_drawing_indices": [],
+        "status": "vector_marker_extracted"
+      },
+      {
+        "series": "DA",
+        "marker_shape": "circle",
+        "marker_index": 2,
+        "segment": "main",
+        "display_x": -8.003817520154914,
+        "log10_molar": -8.003817520154914,
+        "plotted_value": 20.397907193993653,
+        "error_lower": null,
+        "error_upper": null,
+        "pdf_x_pt": 135.6580047607422,
+        "pdf_y_pt": 266.5534973144531,
+        "marker_drawing_index": 539,
+        "error_drawing_indices": [],
+        "status": "vector_marker_extracted"
+      },
+      {
+        "series": "DA",
+        "marker_shape": "circle",
+        "marker_index": 3,
+        "segment": "main",
+        "display_x": -7.005197477523549,
+        "log10_molar": -7.005197477523549,
+        "plotted_value": 23.999889895602774,
+        "error_lower": null,
+        "error_upper": null,
+        "pdf_x_pt": 145.07349395751953,
+        "pdf_y_pt": 264.5465087890625,
+        "marker_drawing_index": 540,
+        "error_drawing_indices": [],
+        "status": "vector_marker_extracted"
+      },
+      {
+        "series": "DA",
+        "marker_shape": "circle",
+        "marker_index": 4,
+        "segment": "main",
+        "display_x": -6.000478612617199,
+        "log10_molar": -6.000478612617199,
+        "plotted_value": 50.29971743486752,
+        "error_lower": 44.5000816441321,
+        "error_upper": 56.099353225602925,
+        "pdf_x_pt": 154.5464859008789,
+        "pdf_y_pt": 249.89250946044922,
+        "marker_drawing_index": 541,
+        "error_drawing_indices": [
+          513,
+          514,
+          515,
+          516,
+          525,
+          526,
+          527,
+          528
+        ],
+        "status": "vector_marker_extracted"
+      },
+      {
+        "series": "DA",
+        "marker_shape": "circle",
+        "marker_index": 5,
+        "segment": "main",
+        "display_x": -5.001804354635902,
+        "log10_molar": -5.001804354635902,
+        "plotted_value": 69.9985618267901,
+        "error_lower": 64.5004377029346,
+        "error_upper": 75.4949059090155,
+        "pdf_x_pt": 163.96248626708984,
+        "pdf_y_pt": 238.91651153564453,
+        "marker_drawing_index": 542,
+        "error_drawing_indices": [
+          517,
+          518,
+          519,
+          520,
+          529,
+          530,
+          531,
+          532
+        ],
+        "status": "vector_marker_extracted"
+      },
+      {
+        "series": "DA",
+        "marker_shape": "circle",
+        "marker_index": 6,
+        "segment": "main",
+        "display_x": -4.00307749967333,
+        "log10_molar": -4.00307749967333,
+        "plotted_value": 73.60057191365506,
+        "error_lower": 68.80058011711746,
+        "error_upper": 78.39875628330674,
+        "pdf_x_pt": 173.3789825439453,
+        "pdf_y_pt": 236.90950775146484,
+        "marker_drawing_index": 543,
+        "error_drawing_indices": [
+          521,
+          522,
+          523,
+          524,
+          533,
+          534,
+          535,
+          536
+        ],
+        "status": "vector_marker_extracted"
+      }
+    ],
+    "curves": [
+      {
+        "series": "ADR",
+        "status": "curve_path_traced",
+        "drawing_index": 400,
+        "points": [
+          {
+            "log10_molar": -11.071008055686276,
+            "plotted_value": 18.496329798461574,
+            "pdf_x_pt": 106.73899841308594,
+            "pdf_y_pt": 267.613037109375
+          },
+          {
+            "log10_molar": -10.4149125020706,
+            "plotted_value": 18.496329798461574,
+            "pdf_x_pt": 112.92499542236328,
+            "pdf_y_pt": 267.613037109375
+          },
+          {
+            "log10_molar": -10.408973089108098,
+            "plotted_value": 18.59864111430748,
+            "pdf_x_pt": 112.98099517822266,
+            "pdf_y_pt": 267.5560302734375
+          },
+          {
+            "log10_molar": -10.137243327704985,
+            "plotted_value": 18.59864111430748,
+            "pdf_x_pt": 115.54299926757812,
+            "pdf_y_pt": 267.5560302734375
+          },
+          {
+            "log10_molar": -10.131303914742483,
+            "plotted_value": 18.697337576381525,
+            "pdf_x_pt": 115.5989990234375,
+            "pdf_y_pt": 267.50103759765625
+          },
+          {
+            "log10_molar": -9.95980296085808,
+            "plotted_value": 18.697337576381525,
+            "pdf_x_pt": 117.21599578857422,
+            "pdf_y_pt": 267.50103759765625
+          },
+          {
+            "log10_molar": -9.954181557336213,
+            "plotted_value": 18.7978414653415,
+            "pdf_x_pt": 117.26899719238281,
+            "pdf_y_pt": 267.4450378417969
+          },
+          {
+            "log10_molar": -9.841756723636193,
+            "plotted_value": 18.7978414653415,
+            "pdf_x_pt": 118.32899475097656,
+            "pdf_y_pt": 267.4450378417969
+          },
+          {
+            "log10_molar": -9.829877897711189,
+            "plotted_value": 18.9001527811874,
+            "pdf_x_pt": 118.44099426269531,
+            "pdf_y_pt": 267.3880310058594
+          },
+          {
+            "log10_molar": -9.747255322786229,
+            "plotted_value": 18.9001527811874,
+            "pdf_x_pt": 119.22000122070312,
+            "pdf_y_pt": 267.3880310058594
+          },
+          {
+            "log10_molar": -9.735376496861225,
+            "plotted_value": 19.00065667014738,
+            "pdf_x_pt": 119.33200073242188,
+            "pdf_y_pt": 267.33203125
+          },
+          {
+            "log10_molar": -9.664633557045596,
+            "plotted_value": 19.00065667014738,
+            "pdf_x_pt": 119.9990005493164,
+            "pdf_y_pt": 267.33203125
+          },
+          {
+            "log10_molar": -9.658588140936216,
+            "plotted_value": 19.101160559107353,
+            "pdf_x_pt": 120.05599975585938,
+            "pdf_y_pt": 267.2760314941406
+          },
+          {
+            "log10_molar": -9.599512020751831,
+            "plotted_value": 19.101160559107353,
+            "pdf_x_pt": 120.61299896240234,
+            "pdf_y_pt": 267.2760314941406
+          },
+          {
+            "log10_molar": -9.59357260778933,
+            "plotted_value": 19.201664448067326,
+            "pdf_x_pt": 120.66899871826172,
+            "pdf_y_pt": 267.22003173828125
+          },
+          {
+            "log10_molar": -9.546269310383073,
+            "plotted_value": 19.201664448067326,
+            "pdf_x_pt": 121.11499786376953,
+            "pdf_y_pt": 267.22003173828125
+          },
+          {
+            "log10_molar": -9.534390484458068,
+            "plotted_value": 19.3021683370273,
+            "pdf_x_pt": 121.22699737548828,
+            "pdf_y_pt": 267.1640319824219
+          },
+          {
+            "log10_molar": -9.327465059092411,
+            "plotted_value": 19.69881638272111,
+            "pdf_x_pt": 123.17799377441406,
+            "pdf_y_pt": 266.9430236816406
+          },
+          {
+            "log10_molar": -9.321842846386218,
+            "plotted_value": 19.801072928055316,
+            "pdf_x_pt": 123.23100280761719,
+            "pdf_y_pt": 266.88604736328125
+          },
+          {
+            "log10_molar": -9.29808519453621,
+            "plotted_value": 19.801072928055316,
+            "pdf_x_pt": 123.45500183105469,
+            "pdf_y_pt": 266.88604736328125
+          },
+          {
+            "log10_molar": -9.286100365464328,
+            "plotted_value": 19.901576817015293,
+            "pdf_x_pt": 123.56800079345703,
+            "pdf_y_pt": 266.8300476074219
+          },
+          {
+            "log10_molar": -9.262660723054957,
+            "plotted_value": 19.901576817015293,
+            "pdf_x_pt": 123.78900146484375,
+            "pdf_y_pt": 266.8300476074219
+          },
+          {
+            "log10_molar": -9.256721310092454,
+            "plotted_value": 20.000328049601034,
+            "pdf_x_pt": 123.84500122070312,
+            "pdf_y_pt": 266.7750244140625
+          },
+          {
+            "log10_molar": -9.238903071204948,
+            "plotted_value": 20.000328049601034,
+            "pdf_x_pt": 124.01300048828125,
+            "pdf_y_pt": 266.7750244140625
+          },
+          {
+            "log10_molar": -9.232857655095568,
+            "plotted_value": 20.10258459493524,
+            "pdf_x_pt": 124.06999969482422,
+            "pdf_y_pt": 266.7180480957031
+          },
+          {
+            "log10_molar": -9.209524015833075,
+            "plotted_value": 20.10258459493524,
+            "pdf_x_pt": 124.29000091552734,
+            "pdf_y_pt": 266.7180480957031
+          },
+          {
+            "log10_molar": -9.197539186761192,
+            "plotted_value": 20.195913546863196,
+            "pdf_x_pt": 124.40299987792969,
+            "pdf_y_pt": 266.6660461425781
+          },
+          {
+            "log10_molar": -9.18566036083619,
+            "plotted_value": 20.195913546863196,
+            "pdf_x_pt": 124.51499938964844,
+            "pdf_y_pt": 266.6660461425781
+          },
+          {
+            "log10_molar": -9.17409954435182,
+            "plotted_value": 20.298224862709098,
+            "pdf_x_pt": 124.6240005493164,
+            "pdf_y_pt": 266.6090393066406
+          },
+          {
+            "log10_molar": -9.162220718426818,
+            "plotted_value": 20.298224862709098,
+            "pdf_x_pt": 124.73600006103516,
+            "pdf_y_pt": 266.6090393066406
+          },
+          {
+            "log10_molar": -9.150235889354935,
+            "plotted_value": 20.398728751669076,
+            "pdf_x_pt": 124.8489990234375,
+            "pdf_y_pt": 266.55303955078125
+          },
+          {
+            "log10_molar": -9.13846306657681,
+            "plotted_value": 20.398728751669076,
+            "pdf_x_pt": 124.95999908447266,
+            "pdf_y_pt": 266.55303955078125
+          },
+          {
+            "log10_molar": -9.126902250092442,
+            "plotted_value": 20.49923264062905,
+            "pdf_x_pt": 125.06900024414062,
+            "pdf_y_pt": 266.4970397949219
+          },
+          {
+            "log10_molar": -9.037917058801792,
+            "plotted_value": 20.90124819646895,
+            "pdf_x_pt": 125.90799713134766,
+            "pdf_y_pt": 266.2730407714844
+          },
+          {
+            "log10_molar": -9.03197764583929,
+            "plotted_value": 20.996384575282832,
+            "pdf_x_pt": 125.96399688720703,
+            "pdf_y_pt": 266.22003173828125
+          },
+          {
+            "log10_molar": -9.01447741639242,
+            "plotted_value": 20.996384575282832,
+            "pdf_x_pt": 126.12899780273438,
+            "pdf_y_pt": 266.22003173828125
+          },
+          {
+            "log10_molar": -9.00843200028304,
+            "plotted_value": 21.096888464242806,
+            "pdf_x_pt": 126.18599700927734,
+            "pdf_y_pt": 266.1640319824219
+          },
+          {
+            "log10_molar": -9.002598590467418,
+            "plotted_value": 21.096888464242806,
+            "pdf_x_pt": 126.24099731445312,
+            "pdf_y_pt": 266.1640319824219
+          },
+          {
+            "log10_molar": -8.990613761395535,
+            "plotted_value": 21.19739235320278,
+            "pdf_x_pt": 126.35399627685547,
+            "pdf_y_pt": 266.1080322265625
+          },
+          {
+            "log10_molar": -8.984674348433034,
+            "plotted_value": 21.19739235320278,
+            "pdf_x_pt": 126.40999603271484,
+            "pdf_y_pt": 266.1080322265625
+          },
+          {
+            "log10_molar": -8.973113531948666,
+            "plotted_value": 21.299703669048682,
+            "pdf_x_pt": 126.51899719238281,
+            "pdf_y_pt": 266.051025390625
+          },
+          {
+            "log10_molar": -8.967174118986163,
+            "plotted_value": 21.299703669048682,
+            "pdf_x_pt": 126.57499694824219,
+            "pdf_y_pt": 266.051025390625
+          },
+          {
+            "log10_molar": -8.961234706023662,
+            "plotted_value": 21.39840013112273,
+            "pdf_x_pt": 126.63099670410156,
+            "pdf_y_pt": 265.99603271484375
+          },
+          {
+            "log10_molar": -8.949355880098658,
+            "plotted_value": 21.39840013112273,
+            "pdf_x_pt": 126.74299621582031,
+            "pdf_y_pt": 265.99603271484375
+          },
+          {
+            "log10_molar": -8.943416467136156,
+            "plotted_value": 21.500711446968634,
+            "pdf_x_pt": 126.79899597167969,
+            "pdf_y_pt": 265.93902587890625
+          },
+          {
+            "log10_molar": -8.937370241842448,
+            "plotted_value": 21.500711446968634,
+            "pdf_x_pt": 126.85600280761719,
+            "pdf_y_pt": 265.93902587890625
+          },
+          {
+            "log10_molar": -8.925810234542407,
+            "plotted_value": 21.601215335928607,
+            "pdf_x_pt": 126.96499633789062,
+            "pdf_y_pt": 265.8830261230469
+          },
+          {
+            "log10_molar": -8.919870821579906,
+            "plotted_value": 21.70171922488858,
+            "pdf_x_pt": 127.02099609375,
+            "pdf_y_pt": 265.8270263671875
+          },
+          {
+            "log10_molar": -8.914037411764282,
+            "plotted_value": 21.70171922488858,
+            "pdf_x_pt": 127.07599639892578,
+            "pdf_y_pt": 265.8270263671875
+          },
+          {
+            "log10_molar": -8.9020525826924,
+            "plotted_value": 21.796800833190773,
+            "pdf_x_pt": 127.18899536132812,
+            "pdf_y_pt": 265.7740478515625
+          },
+          {
+            "log10_molar": -8.8961131697299,
+            "plotted_value": 21.796800833190773,
+            "pdf_x_pt": 127.2449951171875,
+            "pdf_y_pt": 265.7740478515625
+          },
+          {
+            "log10_molar": -8.890173756767396,
+            "plotted_value": 21.897304722150746,
+            "pdf_x_pt": 127.30099487304688,
+            "pdf_y_pt": 265.7180480957031
+          },
+          {
+            "log10_molar": -8.878612940283029,
+            "plotted_value": 21.99780861111072,
+            "pdf_x_pt": 127.40999603271484,
+            "pdf_y_pt": 265.66204833984375
+          },
+          {
+            "log10_molar": -8.872673527320526,
+            "plotted_value": 21.99780861111072,
+            "pdf_x_pt": 127.46599578857422,
+            "pdf_y_pt": 265.66204833984375
+          },
+          {
+            "log10_molar": -8.866733305173698,
+            "plotted_value": 22.098312500070694,
+            "pdf_x_pt": 127.52200317382812,
+            "pdf_y_pt": 265.6060485839844
+          },
+          {
+            "log10_molar": -8.854854479248694,
+            "plotted_value": 22.098312500070694,
+            "pdf_x_pt": 127.63400268554688,
+            "pdf_y_pt": 265.6060485839844
+          },
+          {
+            "log10_molar": -8.84880987232364,
+            "plotted_value": 22.2006238159166,
+            "pdf_x_pt": 127.69099426269531,
+            "pdf_y_pt": 265.5490417480469
+          },
+          {
+            "log10_molar": -8.836931046398638,
+            "plotted_value": 22.299320277990645,
+            "pdf_x_pt": 127.80299377441406,
+            "pdf_y_pt": 265.4940490722656
+          },
+          {
+            "log10_molar": -8.831308833692443,
+            "plotted_value": 22.299320277990645,
+            "pdf_x_pt": 127.85600280761719,
+            "pdf_y_pt": 265.4940490722656
+          },
+          {
+            "log10_molar": -8.825369420729942,
+            "plotted_value": 22.39982416695062,
+            "pdf_x_pt": 127.91200256347656,
+            "pdf_y_pt": 265.43804931640625
+          },
+          {
+            "log10_molar": -8.813490594804938,
+            "plotted_value": 22.502135482796522,
+            "pdf_x_pt": 128.0240020751953,
+            "pdf_y_pt": 265.38104248046875
+          },
+          {
+            "log10_molar": -8.807551181842436,
+            "plotted_value": 22.502135482796522,
+            "pdf_x_pt": 128.0800018310547,
+            "pdf_y_pt": 265.38104248046875
+          },
+          {
+            "log10_molar": -8.801611768879933,
+            "plotted_value": 22.602639371756496,
+            "pdf_x_pt": 128.13600158691406,
+            "pdf_y_pt": 265.3250427246094
+          },
+          {
+            "log10_molar": -8.789732942954931,
+            "plotted_value": 22.69777575057038,
+            "pdf_x_pt": 128.2480010986328,
+            "pdf_y_pt": 265.27203369140625
+          },
+          {
+            "log10_molar": -8.784005536286186,
+            "plotted_value": 22.798279639530357,
+            "pdf_x_pt": 128.302001953125,
+            "pdf_y_pt": 265.2160339355469
+          },
+          {
+            "log10_molar": -8.77817293565489,
+            "plotted_value": 22.798279639530357,
+            "pdf_x_pt": 128.35699462890625,
+            "pdf_y_pt": 265.2160339355469
+          },
+          {
+            "log10_molar": -8.76618729739868,
+            "plotted_value": 22.89878352849033,
+            "pdf_x_pt": 128.47000122070312,
+            "pdf_y_pt": 265.1600341796875
+          },
+          {
+            "log10_molar": -8.754308471473676,
+            "plotted_value": 23.09979130641028,
+            "pdf_x_pt": 128.58200073242188,
+            "pdf_y_pt": 265.04803466796875
+          },
+          {
+            "log10_molar": -8.742429645548674,
+            "plotted_value": 23.200295195370256,
+            "pdf_x_pt": 128.69400024414062,
+            "pdf_y_pt": 264.9920349121094
+          },
+          {
+            "log10_molar": -8.736809051211134,
+            "plotted_value": 23.200295195370256,
+            "pdf_x_pt": 128.7469940185547,
+            "pdf_y_pt": 264.9920349121094
+          },
+          {
+            "log10_molar": -8.72493022528613,
+            "plotted_value": 23.30079908433023,
+            "pdf_x_pt": 128.85899353027344,
+            "pdf_y_pt": 264.93603515625
+          },
+          {
+            "log10_molar": -8.718990812323629,
+            "plotted_value": 23.403110400176132,
+            "pdf_x_pt": 128.9149932861328,
+            "pdf_y_pt": 264.8790283203125
+          },
+          {
+            "log10_molar": -8.71294458702992,
+            "plotted_value": 23.496439352104087,
+            "pdf_x_pt": 128.9720001220703,
+            "pdf_y_pt": 264.8270263671875
+          },
+          {
+            "log10_molar": -8.701172573436123,
+            "plotted_value": 23.598695897438297,
+            "pdf_x_pt": 129.08299255371094,
+            "pdf_y_pt": 264.7700500488281
+          },
+          {
+            "log10_molar": -8.695126348142415,
+            "plotted_value": 23.69919978639827,
+            "pdf_x_pt": 129.13999938964844,
+            "pdf_y_pt": 264.71405029296875
+          },
+          {
+            "log10_molar": -8.689610947767427,
+            "plotted_value": 23.797951018984012,
+            "pdf_x_pt": 129.19200134277344,
+            "pdf_y_pt": 264.6590270996094
+          },
+          {
+            "log10_molar": -8.677626927879873,
+            "plotted_value": 23.797951018984012,
+            "pdf_x_pt": 129.30499267578125,
+            "pdf_y_pt": 264.6590270996094
+          },
+          {
+            "log10_molar": -8.665748101954868,
+            "plotted_value": 24.000711453278193,
+            "pdf_x_pt": 129.4169921875,
+            "pdf_y_pt": 264.5460510253906
+          },
+          {
+            "log10_molar": -8.653762463698659,
+            "plotted_value": 24.10121534223817,
+            "pdf_x_pt": 129.52999877929688,
+            "pdf_y_pt": 264.49005126953125
+          },
+          {
+            "log10_molar": -8.647929863067363,
+            "plotted_value": 24.201719231198144,
+            "pdf_x_pt": 129.58499145507812,
+            "pdf_y_pt": 264.4340515136719
+          },
+          {
+            "log10_molar": -8.641990450104862,
+            "plotted_value": 24.296855610012027,
+            "pdf_x_pt": 129.6409912109375,
+            "pdf_y_pt": 264.38104248046875
+          },
+          {
+            "log10_molar": -8.630428824436166,
+            "plotted_value": 24.397359498972,
+            "pdf_x_pt": 129.75,
+            "pdf_y_pt": 264.3250427246094
+          },
+          {
+            "log10_molar": -8.618549998511162,
+            "plotted_value": 24.60017470377788,
+            "pdf_x_pt": 129.86199951171875,
+            "pdf_y_pt": 264.2120361328125
+          },
+          {
+            "log10_molar": -8.606564360254954,
+            "plotted_value": 24.698871165851926,
+            "pdf_x_pt": 129.97500610351562,
+            "pdf_y_pt": 264.15704345703125
+          },
+          {
+            "log10_molar": -8.60062494729245,
+            "plotted_value": 24.80118248169783,
+            "pdf_x_pt": 130.031005859375,
+            "pdf_y_pt": 264.10003662109375
+          },
+          {
+            "log10_molar": -8.58906493999241,
+            "plotted_value": 24.901686370657803,
+            "pdf_x_pt": 130.13999938964844,
+            "pdf_y_pt": 264.0440368652344
+          },
+          {
+            "log10_molar": -8.583125527029908,
+            "plotted_value": 25.00038283273185,
+            "pdf_x_pt": 130.1959991455078,
+            "pdf_y_pt": 263.9890441894531
+          },
+          {
+            "log10_molar": -8.577186114067405,
+            "plotted_value": 25.19602310050571,
+            "pdf_x_pt": 130.2519989013672,
+            "pdf_y_pt": 263.8800354003906
+          },
+          {
+            "log10_molar": -8.565307288142403,
+            "plotted_value": 25.29833441635161,
+            "pdf_x_pt": 130.36399841308594,
+            "pdf_y_pt": 263.8230285644531
+          },
+          {
+            "log10_molar": -8.553321649886193,
+            "plotted_value": 25.49934219427156,
+            "pdf_x_pt": 130.4770050048828,
+            "pdf_y_pt": 263.7110290527344
+          },
+          {
+            "log10_molar": -8.541761642586152,
+            "plotted_value": 25.599846083231537,
+            "pdf_x_pt": 130.58599853515625,
+            "pdf_y_pt": 263.655029296875
+          },
+          {
+            "log10_molar": -8.529989628992354,
+            "plotted_value": 25.802661288037413,
+            "pdf_x_pt": 130.69699096679688,
+            "pdf_y_pt": 263.5420227050781
+          },
+          {
+            "log10_molar": -8.518003990736146,
+            "plotted_value": 25.998246785299578,
+            "pdf_x_pt": 130.80999755859375,
+            "pdf_y_pt": 263.43304443359375
+          },
+          {
+            "log10_molar": -8.506125164811142,
+            "plotted_value": 26.197447136333597,
+            "pdf_x_pt": 130.9219970703125,
+            "pdf_y_pt": 263.3220520019531
+          },
+          {
+            "log10_molar": -8.494563539142446,
+            "plotted_value": 26.2997584521795,
+            "pdf_x_pt": 131.031005859375,
+            "pdf_y_pt": 263.2650451660156
+          },
+          {
+            "log10_molar": -8.488624126179944,
+            "plotted_value": 26.50076623009945,
+            "pdf_x_pt": 131.08700561523438,
+            "pdf_y_pt": 263.1530456542969
+          },
+          {
+            "log10_molar": -8.47674530025494,
+            "plotted_value": 26.601270119059425,
+            "pdf_x_pt": 131.19900512695312,
+            "pdf_y_pt": 263.0970458984375
+          },
+          {
+            "log10_molar": -8.470700693329889,
+            "plotted_value": 26.7017740080194,
+            "pdf_x_pt": 131.25599670410156,
+            "pdf_y_pt": 263.0410461425781
+          },
+          {
+            "log10_molar": -8.464761280367386,
+            "plotted_value": 26.897414275793256,
+            "pdf_x_pt": 131.31199645996094,
+            "pdf_y_pt": 262.9320373535156
+          },
+          {
+            "log10_molar": -8.452882454442381,
+            "plotted_value": 26.997918164753234,
+            "pdf_x_pt": 131.4239959716797,
+            "pdf_y_pt": 262.87603759765625
+          },
+          {
+            "log10_molar": -8.44694304147988,
+            "plotted_value": 27.098422053713207,
+            "pdf_x_pt": 131.47999572753906,
+            "pdf_y_pt": 262.8200378417969
+          },
+          {
+            "log10_molar": -8.441320828773687,
+            "plotted_value": 27.301237258519084,
+            "pdf_x_pt": 131.5330047607422,
+            "pdf_y_pt": 262.70703125
+          },
+          {
+            "log10_molar": -8.42933680888613,
+            "plotted_value": 27.399933720593133,
+            "pdf_x_pt": 131.64599609375,
+            "pdf_y_pt": 262.65203857421875
+          },
+          {
+            "log10_molar": -8.334942220367374,
+            "plotted_value": 29.29696516365454,
+            "pdf_x_pt": 132.53599548339844,
+            "pdf_y_pt": 261.59503173828125
+          },
+          {
+            "log10_molar": -8.317123981479869,
+            "plotted_value": 29.60028425742039,
+            "pdf_x_pt": 132.70399475097656,
+            "pdf_y_pt": 261.426025390625
+          },
+          {
+            "log10_molar": -8.305138343223659,
+            "plotted_value": 30.00229981326029,
+            "pdf_x_pt": 132.81700134277344,
+            "pdf_y_pt": 261.2020263671875
+          },
+          {
+            "log10_molar": -8.293578335923618,
+            "plotted_value": 30.097381421562478,
+            "pdf_x_pt": 132.92599487304688,
+            "pdf_y_pt": 261.1490478515625
+          },
+          {
+            "log10_molar": -8.104470340261138,
+            "plotted_value": 35.00235459639111,
+            "pdf_x_pt": 134.70899963378906,
+            "pdf_y_pt": 258.4160461425781
+          },
+          {
+            "log10_molar": -8.092591514336135,
+            "plotted_value": 35.19799486416497,
+            "pdf_x_pt": 134.8209991455078,
+            "pdf_y_pt": 258.3070373535156
+          },
+          {
+            "log10_molar": -8.086652101373632,
+            "plotted_value": 35.49950653104489,
+            "pdf_x_pt": 134.8769989013672,
+            "pdf_y_pt": 258.1390380859375
+          },
+          {
+            "log10_molar": -8.08071268841113,
+            "plotted_value": 35.70051430896484,
+            "pdf_x_pt": 134.93299865722656,
+            "pdf_y_pt": 258.02703857421875
+          },
+          {
+            "log10_molar": -8.068833862486127,
+            "plotted_value": 35.896154576738695,
+            "pdf_x_pt": 135.0449981689453,
+            "pdf_y_pt": 257.91802978515625
+          },
+          {
+            "log10_molar": -7.897650918042359,
+            "plotted_value": 41.50104012051529,
+            "pdf_x_pt": 136.65899658203125,
+            "pdf_y_pt": 254.7950439453125
+          },
+          {
+            "log10_molar": -7.885665279786149,
+            "plotted_value": 41.79896431887921,
+            "pdf_x_pt": 136.77200317382812,
+            "pdf_y_pt": 254.62904357910156
+          },
+          {
+            "log10_molar": -7.879725866823648,
+            "plotted_value": 42.10050337101498,
+            "pdf_x_pt": 136.8280029296875,
+            "pdf_y_pt": 254.46102905273438
+          },
+          {
+            "log10_molar": -7.7026035094173775,
+            "plotted_value": 48.496877579293255,
+            "pdf_x_pt": 138.4980010986328,
+            "pdf_y_pt": 250.89703369140625
+          },
+          {
+            "log10_molar": -7.696664096454875,
+            "plotted_value": 48.800169287803264,
+            "pdf_x_pt": 138.5540008544922,
+            "pdf_y_pt": 250.72804260253906
+          },
+          {
+            "log10_molar": -7.684785270529872,
+            "plotted_value": 49.096313444537095,
+            "pdf_x_pt": 138.66600036621094,
+            "pdf_y_pt": 250.5630340576172
+          },
+          {
+            "log10_molar": -7.672801250642317,
+            "plotted_value": 49.699336778296946,
+            "pdf_x_pt": 138.77899169921875,
+            "pdf_y_pt": 250.22703552246094
+          },
+          {
+            "log10_molar": -7.661239624973621,
+            "plotted_value": 49.997260976660854,
+            "pdf_x_pt": 138.88800048828125,
+            "pdf_y_pt": 250.06103515625
+          },
+          {
+            "log10_molar": -7.649360799048617,
+            "plotted_value": 50.600284310420705,
+            "pdf_x_pt": 139.0,
+            "pdf_y_pt": 249.72503662109375
+          },
+          {
+            "log10_molar": -7.637375160792408,
+            "plotted_value": 50.89820850878462,
+            "pdf_x_pt": 139.11300659179688,
+            "pdf_y_pt": 249.5590362548828
+          },
+          {
+            "log10_molar": -7.631542560161112,
+            "plotted_value": 51.199720175664545,
+            "pdf_x_pt": 139.16799926757812,
+            "pdf_y_pt": 249.3910369873047
+          },
+          {
+            "log10_molar": -7.2239483226486065,
+            "plotted_value": 65.3008265755867,
+            "pdf_x_pt": 143.01100158691406,
+            "pdf_y_pt": 241.53404235839844
+          },
+          {
+            "log10_molar": -7.212069496723603,
+            "plotted_value": 65.59697073232054,
+            "pdf_x_pt": 143.1230010986328,
+            "pdf_y_pt": 241.36903381347656
+          },
+          {
+            "log10_molar": -7.2001906707986,
+            "plotted_value": 65.99898628816044,
+            "pdf_x_pt": 143.23500061035156,
+            "pdf_y_pt": 241.14503479003906
+          },
+          {
+            "log10_molar": -7.188311844873596,
+            "plotted_value": 66.30227799667044,
+            "pdf_x_pt": 143.3470001220703,
+            "pdf_y_pt": 240.97604370117188
+          },
+          {
+            "log10_molar": -6.999203849211117,
+            "plotted_value": 71.20007623446705,
+            "pdf_x_pt": 145.1300048828125,
+            "pdf_y_pt": 238.24703979492188
+          },
+          {
+            "log10_molar": -6.987325023286113,
+            "plotted_value": 71.3957165022409,
+            "pdf_x_pt": 145.24200439453125,
+            "pdf_y_pt": 238.13803100585938
+          },
+          {
+            "log10_molar": -6.981704428948573,
+            "plotted_value": 71.59850432179094,
+            "pdf_x_pt": 145.2949981689453,
+            "pdf_y_pt": 238.02503967285156
+          },
+          {
+            "log10_molar": -6.975765015986072,
+            "plotted_value": 71.79951209971088,
+            "pdf_x_pt": 145.3509979248047,
+            "pdf_y_pt": 237.9130401611328
+          },
+          {
+            "log10_molar": -6.957841583136015,
+            "plotted_value": 72.10102376659081,
+            "pdf_x_pt": 145.51998901367188,
+            "pdf_y_pt": 237.7450408935547
+          },
+          {
+            "log10_molar": -6.951900551804859,
+            "plotted_value": 72.29666403436467,
+            "pdf_x_pt": 145.5760040283203,
+            "pdf_y_pt": 237.6360321044922
+          },
+          {
+            "log10_molar": -6.934082312917353,
+            "plotted_value": 72.5981757012446,
+            "pdf_x_pt": 145.74400329589844,
+            "pdf_y_pt": 237.46803283691406
+          },
+          {
+            "log10_molar": -6.928461718579815,
+            "plotted_value": 72.80096352079462,
+            "pdf_x_pt": 145.7969970703125,
+            "pdf_y_pt": 237.35504150390625
+          },
+          {
+            "log10_molar": -6.9165828926548105,
+            "plotted_value": 72.99660378856848,
+            "pdf_x_pt": 145.90899658203125,
+            "pdf_y_pt": 237.24603271484375
+          },
+          {
+            "log10_molar": -6.910643479692309,
+            "plotted_value": 73.09710767752846,
+            "pdf_x_pt": 145.96499633789062,
+            "pdf_y_pt": 237.19003295898438
+          },
+          {
+            "log10_molar": -6.904704066729806,
+            "plotted_value": 73.29811545544841,
+            "pdf_x_pt": 146.02099609375,
+            "pdf_y_pt": 237.07803344726562
+          },
+          {
+            "log10_molar": -6.892825240804804,
+            "plotted_value": 73.39861934440839,
+            "pdf_x_pt": 146.13299560546875,
+            "pdf_y_pt": 237.02203369140625
+          },
+          {
+            "log10_molar": -6.886779015511095,
+            "plotted_value": 73.59962712232833,
+            "pdf_x_pt": 146.19000244140625,
+            "pdf_y_pt": 236.9100341796875
+          },
+          {
+            "log10_molar": -6.875324202173606,
+            "plotted_value": 73.70191105291839,
+            "pdf_x_pt": 146.29800415039062,
+            "pdf_y_pt": 236.85304260253906
+          },
+          {
+            "log10_molar": -6.869279595248553,
+            "plotted_value": 73.89755132069224,
+            "pdf_x_pt": 146.35499572753906,
+            "pdf_y_pt": 236.74403381347656
+          },
+          {
+            "log10_molar": -6.845521943398546,
+            "plotted_value": 74.29956687653214,
+            "pdf_x_pt": 146.57899475097656,
+            "pdf_y_pt": 236.52003479003906
+          },
+          {
+            "log10_molar": -6.839582530436044,
+            "plotted_value": 74.5005746544521,
+            "pdf_x_pt": 146.63499450683594,
+            "pdf_y_pt": 236.4080352783203
+          },
+          {
+            "log10_molar": -6.828020904767348,
+            "plotted_value": 74.60107854341207,
+            "pdf_x_pt": 146.74400329589844,
+            "pdf_y_pt": 236.35203552246094
+          },
+          {
+            "log10_molar": -6.8220814918048465,
+            "plotted_value": 74.79669142593008,
+            "pdf_x_pt": 146.8000030517578,
+            "pdf_y_pt": 236.2430419921875
+          },
+          {
+            "log10_molar": -6.816036884879793,
+            "plotted_value": 74.89719531489006,
+            "pdf_x_pt": 146.85699462890625,
+            "pdf_y_pt": 236.18704223632812
+          },
+          {
+            "log10_molar": -6.804263252917341,
+            "plotted_value": 74.99769920385003,
+            "pdf_x_pt": 146.96800231933594,
+            "pdf_y_pt": 236.13104248046875
+          },
+          {
+            "log10_molar": -6.7982186459922875,
+            "plotted_value": 75.2005144086559,
+            "pdf_x_pt": 147.02499389648438,
+            "pdf_y_pt": 236.01803588867188
+          },
+          {
+            "log10_molar": -6.792279233029786,
+            "plotted_value": 75.29921087072995,
+            "pdf_x_pt": 147.08099365234375,
+            "pdf_y_pt": 235.96304321289062
+          },
+          {
+            "log10_molar": -6.78071760736109,
+            "plotted_value": 75.40152218657586,
+            "pdf_x_pt": 147.19000244140625,
+            "pdf_y_pt": 235.90603637695312
+          },
+          {
+            "log10_molar": -6.774778194398589,
+            "plotted_value": 75.4948511385038,
+            "pdf_x_pt": 147.24600219726562,
+            "pdf_y_pt": 235.85403442382812
+          },
+          {
+            "log10_molar": -6.751020542548582,
+            "plotted_value": 75.89864673597378,
+            "pdf_x_pt": 147.47000122070312,
+            "pdf_y_pt": 235.62904357910156
+          },
+          {
+            "log10_molar": -6.739034904292373,
+            "plotted_value": 75.99917801018961,
+            "pdf_x_pt": 147.5830078125,
+            "pdf_y_pt": 235.57302856445312
+          },
+          {
+            "log10_molar": -6.733521122286039,
+            "plotted_value": 76.20018578810956,
+            "pdf_x_pt": 147.63499450683594,
+            "pdf_y_pt": 235.46102905273438
+          },
+          {
+            "log10_molar": -6.727474896992331,
+            "plotted_value": 76.29707482329768,
+            "pdf_x_pt": 147.69200134277344,
+            "pdf_y_pt": 235.40704345703125
+          },
+          {
+            "log10_molar": -6.715596071067328,
+            "plotted_value": 76.39579867062757,
+            "pdf_x_pt": 147.8040008544922,
+            "pdf_y_pt": 235.35203552246094
+          },
+          {
+            "log10_molar": -6.7037172451423235,
+            "plotted_value": 76.59858649017761,
+            "pdf_x_pt": 147.91600036621094,
+            "pdf_y_pt": 235.23904418945312
+          },
+          {
+            "log10_molar": -6.69183841921732,
+            "plotted_value": 76.69909037913757,
+            "pdf_x_pt": 148.0279998779297,
+            "pdf_y_pt": 235.18304443359375
+          },
+          {
+            "log10_molar": -6.6862178248797814,
+            "plotted_value": 76.79959426809755,
+            "pdf_x_pt": 148.08099365234375,
+            "pdf_y_pt": 235.12704467773438
+          },
+          {
+            "log10_molar": -6.668399585992276,
+            "plotted_value": 77.10110593497748,
+            "pdf_x_pt": 148.24899291992188,
+            "pdf_y_pt": 234.95904541015625
+          },
+          {
+            "log10_molar": -6.662460173029774,
+            "plotted_value": 77.19624231379136,
+            "pdf_x_pt": 148.30499267578125,
+            "pdf_y_pt": 234.90603637695312
+          },
+          {
+            "log10_molar": -6.650474534773565,
+            "plotted_value": 77.29674620275134,
+            "pdf_x_pt": 148.41799926757812,
+            "pdf_y_pt": 234.85003662109375
+          },
+          {
+            "log10_molar": -6.644535121811062,
+            "plotted_value": 77.39725009171131,
+            "pdf_x_pt": 148.4739990234375,
+            "pdf_y_pt": 234.79403686523438
+          },
+          {
+            "log10_molar": -6.638914527473523,
+            "plotted_value": 77.49956140755721,
+            "pdf_x_pt": 148.52699279785156,
+            "pdf_y_pt": 234.73703002929688
+          },
+          {
+            "log10_molar": -6.627034083179865,
+            "plotted_value": 77.60006529651719,
+            "pdf_x_pt": 148.63900756835938,
+            "pdf_y_pt": 234.6810302734375
+          },
+          {
+            "log10_molar": -6.621094670217364,
+            "plotted_value": 77.69876175859123,
+            "pdf_x_pt": 148.69500732421875,
+            "pdf_y_pt": 234.62603759765625
+          },
+          {
+            "log10_molar": -6.6151552572548615,
+            "plotted_value": 77.69876175859123,
+            "pdf_x_pt": 148.75100708007812,
+            "pdf_y_pt": 234.62603759765625
+          },
+          {
+            "log10_molar": -6.603171237367307,
+            "plotted_value": 77.80107307443714,
+            "pdf_x_pt": 148.86399841308594,
+            "pdf_y_pt": 234.56903076171875
+          },
+          {
+            "log10_molar": -6.591716424029817,
+            "plotted_value": 77.99668595695515,
+            "pdf_x_pt": 148.9720001220703,
+            "pdf_y_pt": 234.4600372314453
+          },
+          {
+            "log10_molar": -6.579837598104813,
+            "plotted_value": 78.09718984591512,
+            "pdf_x_pt": 149.08399963378906,
+            "pdf_y_pt": 234.40403747558594
+          },
+          {
+            "log10_molar": -6.5678535782172585,
+            "plotted_value": 78.29819762383507,
+            "pdf_x_pt": 149.19699096679688,
+            "pdf_y_pt": 234.2920379638672
+          },
+          {
+            "log10_molar": -6.555974752292254,
+            "plotted_value": 78.39870151279504,
+            "pdf_x_pt": 149.30899047851562,
+            "pdf_y_pt": 234.2360382080078
+          },
+          {
+            "log10_molar": -6.550035339329753,
+            "plotted_value": 78.49920540175502,
+            "pdf_x_pt": 149.364990234375,
+            "pdf_y_pt": 234.18003845214844
+          },
+          {
+            "log10_molar": -6.543989114036045,
+            "plotted_value": 78.49920540175502,
+            "pdf_x_pt": 149.4219970703125,
+            "pdf_y_pt": 234.18003845214844
+          },
+          {
+            "log10_molar": -6.53242748836735,
+            "plotted_value": 78.599709290715,
+            "pdf_x_pt": 149.531005859375,
+            "pdf_y_pt": 234.12403869628906
+          },
+          {
+            "log10_molar": -6.526594887736054,
+            "plotted_value": 78.7020206065609,
+            "pdf_x_pt": 149.58599853515625,
+            "pdf_y_pt": 234.06703186035156
+          },
+          {
+            "log10_molar": -6.514609249479845,
+            "plotted_value": 78.795322173233,
+            "pdf_x_pt": 149.69900512695312,
+            "pdf_y_pt": 234.01504516601562
+          },
+          {
+            "log10_molar": -6.508669836517342,
+            "plotted_value": 78.89582606219298,
+            "pdf_x_pt": 149.7550048828125,
+            "pdf_y_pt": 233.95904541015625
+          },
+          {
+            "log10_molar": -6.502730423554841,
+            "plotted_value": 78.89582606219298,
+            "pdf_x_pt": 149.81100463867188,
+            "pdf_y_pt": 233.95904541015625
+          },
+          {
+            "log10_molar": -6.4911704162548,
+            "plotted_value": 78.99813737803889,
+            "pdf_x_pt": 149.9199981689453,
+            "pdf_y_pt": 233.90203857421875
+          },
+          {
+            "log10_molar": -6.479291590329796,
+            "plotted_value": 79.19914515595883,
+            "pdf_x_pt": 150.03199768066406,
+            "pdf_y_pt": 233.7900390625
+          },
+          {
+            "log10_molar": -6.467412764404792,
+            "plotted_value": 79.19914515595883,
+            "pdf_x_pt": 150.1439971923828,
+            "pdf_y_pt": 233.7900390625
+          },
+          {
+            "log10_molar": -6.455533938479789,
+            "plotted_value": 79.40015293387879,
+            "pdf_x_pt": 150.25599670410156,
+            "pdf_y_pt": 233.67803955078125
+          },
+          {
+            "log10_molar": -6.443973931179748,
+            "plotted_value": 79.40015293387879,
+            "pdf_x_pt": 150.364990234375,
+            "pdf_y_pt": 233.67803955078125
+          },
+          {
+            "log10_molar": -6.438034518217246,
+            "plotted_value": 79.50065682283876,
+            "pdf_x_pt": 150.42098999023438,
+            "pdf_y_pt": 233.62203979492188
+          },
+          {
+            "log10_molar": -6.431988292923538,
+            "plotted_value": 79.59579320165264,
+            "pdf_x_pt": 150.47799682617188,
+            "pdf_y_pt": 233.56903076171875
+          },
+          {
+            "log10_molar": -6.420109466998534,
+            "plotted_value": 79.59579320165264,
+            "pdf_x_pt": 150.58999633789062,
+            "pdf_y_pt": 233.56903076171875
+          },
+          {
+            "log10_molar": -6.414170054036033,
+            "plotted_value": 79.69629709061262,
+            "pdf_x_pt": 150.64599609375,
+            "pdf_y_pt": 233.51303100585938
+          },
+          {
+            "log10_molar": -6.402291228111029,
+            "plotted_value": 79.7968009795726,
+            "pdf_x_pt": 150.75799560546875,
+            "pdf_y_pt": 233.45703125
+          },
+          {
+            "log10_molar": -6.396669015404836,
+            "plotted_value": 79.7968009795726,
+            "pdf_x_pt": 150.81100463867188,
+            "pdf_y_pt": 233.45703125
+          },
+          {
+            "log10_molar": -6.390729602442334,
+            "plotted_value": 79.89908491016264,
+            "pdf_x_pt": 150.86700439453125,
+            "pdf_y_pt": 233.40003967285156
+          },
+          {
+            "log10_molar": -6.37885077651733,
+            "plotted_value": 79.99780875749254,
+            "pdf_x_pt": 150.97900390625,
+            "pdf_y_pt": 233.34503173828125
+          },
+          {
+            "log10_molar": -6.372806169592277,
+            "plotted_value": 79.99780875749254,
+            "pdf_x_pt": 151.03599548339844,
+            "pdf_y_pt": 233.34503173828125
+          },
+          {
+            "log10_molar": -6.366971950592326,
+            "plotted_value": 80.09831264645251,
+            "pdf_x_pt": 151.09100341796875,
+            "pdf_y_pt": 233.28903198242188
+          },
+          {
+            "log10_molar": -6.354987930704771,
+            "plotted_value": 80.09831264645251,
+            "pdf_x_pt": 151.20399475097656,
+            "pdf_y_pt": 233.28903198242188
+          },
+          {
+            "log10_molar": -6.34904851774227,
+            "plotted_value": 80.20059657704257,
+            "pdf_x_pt": 151.25999450683594,
+            "pdf_y_pt": 233.23204040527344
+          },
+          {
+            "log10_molar": -6.3434263050360755,
+            "plotted_value": 80.20059657704257,
+            "pdf_x_pt": 151.31300354003906,
+            "pdf_y_pt": 233.23204040527344
+          },
+          {
+            "log10_molar": -6.331547479111072,
+            "plotted_value": 80.30110046600255,
+            "pdf_x_pt": 151.4250030517578,
+            "pdf_y_pt": 233.17604064941406
+          },
+          {
+            "log10_molar": -6.32560806614857,
+            "plotted_value": 80.30110046600255,
+            "pdf_x_pt": 151.4810028076172,
+            "pdf_y_pt": 233.17604064941406
+          },
+          {
+            "log10_molar": -6.3195634592235175,
+            "plotted_value": 80.40160435496252,
+            "pdf_x_pt": 151.53799438476562,
+            "pdf_y_pt": 233.1200408935547
+          },
+          {
+            "log10_molar": -6.307789827261065,
+            "plotted_value": 80.4967407337764,
+            "pdf_x_pt": 151.6490020751953,
+            "pdf_y_pt": 233.06703186035156
+          },
+          {
+            "log10_molar": -6.301745220336012,
+            "plotted_value": 80.4967407337764,
+            "pdf_x_pt": 151.70599365234375,
+            "pdf_y_pt": 233.06703186035156
+          },
+          {
+            "log10_molar": -6.296229819961024,
+            "plotted_value": 80.59724462273638,
+            "pdf_x_pt": 151.75799560546875,
+            "pdf_y_pt": 233.0110321044922
+          },
+          {
+            "log10_molar": -6.278304768742313,
+            "plotted_value": 80.59724462273638,
+            "pdf_x_pt": 151.927001953125,
+            "pdf_y_pt": 233.0110321044922
+          },
+          {
+            "log10_molar": -6.266425942817309,
+            "plotted_value": 80.69774851169635,
+            "pdf_x_pt": 152.03900146484375,
+            "pdf_y_pt": 232.9550323486328
+          },
+          {
+            "log10_molar": -6.260486529854807,
+            "plotted_value": 80.69774851169635,
+            "pdf_x_pt": 152.09500122070312,
+            "pdf_y_pt": 232.9550323486328
+          },
+          {
+            "log10_molar": -6.254547116892306,
+            "plotted_value": 80.79825240065632,
+            "pdf_x_pt": 152.1510009765625,
+            "pdf_y_pt": 232.89903259277344
+          },
+          {
+            "log10_molar": -6.242987109592264,
+            "plotted_value": 80.79825240065632,
+            "pdf_x_pt": 152.25999450683594,
+            "pdf_y_pt": 232.89903259277344
+          },
+          {
+            "log10_molar": -6.154107921448494,
+            "plotted_value": 81.2971843769402,
+            "pdf_x_pt": 153.09799194335938,
+            "pdf_y_pt": 232.62103271484375
+          },
+          {
+            "log10_molar": -6.148380514779749,
+            "plotted_value": 81.2971843769402,
+            "pdf_x_pt": 153.15199279785156,
+            "pdf_y_pt": 232.62103271484375
+          },
+          {
+            "log10_molar": -6.142546295779798,
+            "plotted_value": 81.39768826590017,
+            "pdf_x_pt": 153.20700073242188,
+            "pdf_y_pt": 232.56503295898438
+          },
+          {
+            "log10_molar": -6.0181358238235685,
+            "plotted_value": 81.79970382174007,
+            "pdf_x_pt": 154.3800048828125,
+            "pdf_y_pt": 232.34103393554688
+          },
+          {
+            "log10_molar": -6.012303223192273,
+            "plotted_value": 81.90020771070004,
+            "pdf_x_pt": 154.43499755859375,
+            "pdf_y_pt": 232.2850341796875
+          },
+          {
+            "log10_molar": -5.988757577636022,
+            "plotted_value": 81.90020771070004,
+            "pdf_x_pt": 154.65699768066406,
+            "pdf_y_pt": 232.2850341796875
+          },
+          {
+            "log10_molar": -5.98281816467352,
+            "plotted_value": 82.00071159966001,
+            "pdf_x_pt": 154.71299743652344,
+            "pdf_y_pt": 232.22903442382812
+          },
+          {
+            "log10_molar": -5.959060512823513,
+            "plotted_value": 82.00071159966001,
+            "pdf_x_pt": 154.93699645996094,
+            "pdf_y_pt": 232.22903442382812
+          },
+          {
+            "log10_molar": -5.947500505523472,
+            "plotted_value": 82.09582059321805,
+            "pdf_x_pt": 155.04598999023438,
+            "pdf_y_pt": 232.17604064941406
+          },
+          {
+            "log10_molar": -5.923636041342259,
+            "plotted_value": 82.09582059321805,
+            "pdf_x_pt": 155.27099609375,
+            "pdf_y_pt": 232.17604064941406
+          },
+          {
+            "log10_molar": -5.917696628379757,
+            "plotted_value": 82.19632448217803,
+            "pdf_x_pt": 155.32699584960938,
+            "pdf_y_pt": 232.1200408935547
+          },
+          {
+            "log10_molar": -5.882272156898503,
+            "plotted_value": 82.19632448217803,
+            "pdf_x_pt": 155.66099548339844,
+            "pdf_y_pt": 232.1200408935547
+          },
+          {
+            "log10_molar": -5.876437937898553,
+            "plotted_value": 82.29863579802392,
+            "pdf_x_pt": 155.71600341796875,
+            "pdf_y_pt": 232.0630340576172
+          },
+          {
+            "log10_molar": -5.8469528793798,
+            "plotted_value": 82.29863579802392,
+            "pdf_x_pt": 155.99400329589844,
+            "pdf_y_pt": 232.0630340576172
+          },
+          {
+            "log10_molar": -5.835074053454797,
+            "plotted_value": 82.39733226009797,
+            "pdf_x_pt": 156.1060028076172,
+            "pdf_y_pt": 232.00804138183594
+          },
+          {
+            "log10_molar": -5.793710169011041,
+            "plotted_value": 82.39733226009797,
+            "pdf_x_pt": 156.49600219726562,
+            "pdf_y_pt": 232.00804138183594
+          },
+          {
+            "log10_molar": -5.787877568379745,
+            "plotted_value": 82.49783614905795,
+            "pdf_x_pt": 156.55099487304688,
+            "pdf_y_pt": 231.95204162597656
+          },
+          {
+            "log10_molar": -5.746513683935989,
+            "plotted_value": 82.49783614905795,
+            "pdf_x_pt": 156.9409942626953,
+            "pdf_y_pt": 231.95204162597656
+          },
+          {
+            "log10_molar": -5.740467458642281,
+            "plotted_value": 82.60014746490386,
+            "pdf_x_pt": 156.9980010986328,
+            "pdf_y_pt": 231.89503479003906
+          },
+          {
+            "log10_molar": -5.332661214836019,
+            "plotted_value": 82.99676812534182,
+            "pdf_x_pt": 160.84300231933594,
+            "pdf_y_pt": 231.67404174804688
+          },
+          {
+            "log10_molar": -5.326616607910966,
+            "plotted_value": 83.09727201430178,
+            "pdf_x_pt": 160.89999389648438,
+            "pdf_y_pt": 231.6180419921875
+          },
+          {
+            "log10_molar": -5.161371458061045,
+            "plotted_value": 83.09727201430178,
+            "pdf_x_pt": 162.4580078125,
+            "pdf_y_pt": 231.6180419921875
+          },
+          {
+            "log10_molar": -5.155432045098543,
+            "plotted_value": 83.19777590326176,
+            "pdf_x_pt": 162.51400756835938,
+            "pdf_y_pt": 231.56204223632812
+          },
+          {
+            "log10_molar": -4.889325305585952,
+            "plotted_value": 83.19777590326176,
+            "pdf_x_pt": 165.0229949951172,
+            "pdf_y_pt": 231.56204223632812
+          },
+          {
+            "log10_molar": -4.883809905210963,
+            "plotted_value": 83.29827979222173,
+            "pdf_x_pt": 165.0749969482422,
+            "pdf_y_pt": 231.50604248046875
+          },
+          {
+            "log10_molar": -4.003287887598432,
+            "plotted_value": 83.29827979222173,
+            "pdf_x_pt": 173.3769989013672,
+            "pdf_y_pt": 231.50604248046875
+          }
+        ]
+      },
+      {
+        "series": "NA",
+        "status": "curve_path_traced",
+        "drawing_index": 398,
+        "points": [
+          {
+            "log10_molar": -11.071008055686276,
+            "plotted_value": 17.697720967439565,
+            "pdf_x_pt": 106.73899841308594,
+            "pdf_y_pt": 268.0580139160156
+          },
+          {
+            "log10_molar": -10.633716753361261,
+            "plotted_value": 17.697720967439565,
+            "pdf_x_pt": 110.86199951171875,
+            "pdf_y_pt": 268.0580139160156
+          },
+          {
+            "log10_molar": -10.62777734039876,
+            "plotted_value": 17.79641742951361,
+            "pdf_x_pt": 110.91799926757812,
+            "pdf_y_pt": 268.0030212402344
+          },
+          {
+            "log10_molar": -10.367608395480016,
+            "plotted_value": 17.79641742951361,
+            "pdf_x_pt": 113.37100219726562,
+            "pdf_y_pt": 268.0030212402344
+          },
+          {
+            "log10_molar": -10.361668982517513,
+            "plotted_value": 17.898728745359513,
+            "pdf_x_pt": 113.427001953125,
+            "pdf_y_pt": 267.9460144042969
+          },
+          {
+            "log10_molar": -10.20236486399875,
+            "plotted_value": 17.898728745359513,
+            "pdf_x_pt": 114.92900085449219,
+            "pdf_y_pt": 267.9460144042969
+          },
+          {
+            "log10_molar": -10.190486038073745,
+            "plotted_value": 17.999232634319487,
+            "pdf_x_pt": 115.04100036621094,
+            "pdf_y_pt": 267.8900146484375
+          },
+          {
+            "log10_molar": -9.794558620192486,
+            "plotted_value": 18.403055617045315,
+            "pdf_x_pt": 118.77400207519531,
+            "pdf_y_pt": 267.6650085449219
+          },
+          {
+            "log10_molar": -9.782573791120605,
+            "plotted_value": 18.49638456897327,
+            "pdf_x_pt": 118.88700103759766,
+            "pdf_y_pt": 267.6130065917969
+          },
+          {
+            "log10_molar": -9.735376496861225,
+            "plotted_value": 18.49638456897327,
+            "pdf_x_pt": 119.33200073242188,
+            "pdf_y_pt": 267.6130065917969
+          },
+          {
+            "log10_molar": -9.729331080751844,
+            "plotted_value": 18.598695884819172,
+            "pdf_x_pt": 119.38899993896484,
+            "pdf_y_pt": 267.5559997558594
+          },
+          {
+            "log10_molar": -9.694012612417469,
+            "plotted_value": 18.598695884819172,
+            "pdf_x_pt": 119.72200012207031,
+            "pdf_y_pt": 267.5559997558594
+          },
+          {
+            "log10_molar": -9.688073199454967,
+            "plotted_value": 18.69739234689322,
+            "pdf_x_pt": 119.77799987792969,
+            "pdf_y_pt": 267.5010070800781
+          },
+          {
+            "log10_molar": -9.658588140936216,
+            "plotted_value": 18.69739234689322,
+            "pdf_x_pt": 120.05599975585938,
+            "pdf_y_pt": 267.5010070800781
+          },
+          {
+            "log10_molar": -9.646709315011211,
+            "plotted_value": 18.797896235853194,
+            "pdf_x_pt": 120.16799926757812,
+            "pdf_y_pt": 267.44500732421875
+          },
+          {
+            "log10_molar": -9.616906247051825,
+            "plotted_value": 18.797896235853194,
+            "pdf_x_pt": 120.4489974975586,
+            "pdf_y_pt": 267.44500732421875
+          },
+          {
+            "log10_molar": -9.611390846676835,
+            "plotted_value": 18.900207551699097,
+            "pdf_x_pt": 120.5009994506836,
+            "pdf_y_pt": 267.38800048828125
+          },
+          {
+            "log10_molar": -9.575648365754946,
+            "plotted_value": 18.900207551699097,
+            "pdf_x_pt": 120.83799743652344,
+            "pdf_y_pt": 267.38800048828125
+          },
+          {
+            "log10_molar": -9.569708952792444,
+            "plotted_value": 19.00071144065907,
+            "pdf_x_pt": 120.89399719238281,
+            "pdf_y_pt": 267.3320007324219
+          },
+          {
+            "log10_molar": -9.546269310383073,
+            "plotted_value": 19.00071144065907,
+            "pdf_x_pt": 121.11499786376953,
+            "pdf_y_pt": 267.3320007324219
+          },
+          {
+            "log10_molar": -9.534390484458068,
+            "plotted_value": 19.10121532961905,
+            "pdf_x_pt": 121.22699737548828,
+            "pdf_y_pt": 267.2760009765625
+          },
+          {
+            "log10_molar": -9.522511658533066,
+            "plotted_value": 19.10121532961905,
+            "pdf_x_pt": 121.33899688720703,
+            "pdf_y_pt": 267.2760009765625
+          },
+          {
+            "log10_molar": -9.510950842048697,
+            "plotted_value": 19.201719218579022,
+            "pdf_x_pt": 121.447998046875,
+            "pdf_y_pt": 267.2200012207031
+          },
+          {
+            "log10_molar": -9.392586595386174,
+            "plotted_value": 19.598312493761135,
+            "pdf_x_pt": 122.56399536132812,
+            "pdf_y_pt": 266.9990234375
+          },
+          {
+            "log10_molar": -9.386647182423673,
+            "plotted_value": 19.69881638272111,
+            "pdf_x_pt": 122.6199951171875,
+            "pdf_y_pt": 266.9430236816406
+          },
+          {
+            "log10_molar": -9.369146952976802,
+            "plotted_value": 19.69881638272111,
+            "pdf_x_pt": 122.78499603271484,
+            "pdf_y_pt": 266.9430236816406
+          },
+          {
+            "log10_molar": -9.363101536867422,
+            "plotted_value": 19.80112769856701,
+            "pdf_x_pt": 122.84199523925781,
+            "pdf_y_pt": 266.8860168457031
+          },
+          {
+            "log10_molar": -9.35132790490497,
+            "plotted_value": 19.80112769856701,
+            "pdf_x_pt": 122.9530029296875,
+            "pdf_y_pt": 266.8860168457031
+          },
+          {
+            "log10_molar": -9.345283297979917,
+            "plotted_value": 19.901631587526985,
+            "pdf_x_pt": 123.00999450683594,
+            "pdf_y_pt": 266.83001708984375
+          },
+          {
+            "log10_molar": -9.327465059092411,
+            "plotted_value": 19.901631587526985,
+            "pdf_x_pt": 123.17799377441406,
+            "pdf_y_pt": 266.83001708984375
+          },
+          {
+            "log10_molar": -9.321842846386218,
+            "plotted_value": 20.000328049601034,
+            "pdf_x_pt": 123.23100280761719,
+            "pdf_y_pt": 266.7750244140625
+          },
+          {
+            "log10_molar": -9.309964020461214,
+            "plotted_value": 20.000328049601034,
+            "pdf_x_pt": 123.34300231933594,
+            "pdf_y_pt": 266.7750244140625
+          },
+          {
+            "log10_molar": -9.304024607498713,
+            "plotted_value": 20.102639365446937,
+            "pdf_x_pt": 123.39900207519531,
+            "pdf_y_pt": 266.718017578125
+          },
+          {
+            "log10_molar": -9.286100365464328,
+            "plotted_value": 20.102639365446937,
+            "pdf_x_pt": 123.56800079345703,
+            "pdf_y_pt": 266.718017578125
+          },
+          {
+            "log10_molar": -9.280266955648704,
+            "plotted_value": 20.19596831737489,
+            "pdf_x_pt": 123.62300109863281,
+            "pdf_y_pt": 266.666015625
+          },
+          {
+            "log10_molar": -9.27453954897996,
+            "plotted_value": 20.19596831737489,
+            "pdf_x_pt": 123.677001953125,
+            "pdf_y_pt": 266.666015625
+          },
+          {
+            "log10_molar": -9.262660723054957,
+            "plotted_value": 20.298279633220794,
+            "pdf_x_pt": 123.78900146484375,
+            "pdf_y_pt": 266.6090087890625
+          },
+          {
+            "log10_molar": -9.256721310092454,
+            "plotted_value": 20.298279633220794,
+            "pdf_x_pt": 123.84500122070312,
+            "pdf_y_pt": 266.6090087890625
+          },
+          {
+            "log10_molar": -9.250781897129952,
+            "plotted_value": 20.398783522180768,
+            "pdf_x_pt": 123.9010009765625,
+            "pdf_y_pt": 266.5530090332031
+          },
+          {
+            "log10_molar": -9.238903071204948,
+            "plotted_value": 20.398783522180768,
+            "pdf_x_pt": 124.01300048828125,
+            "pdf_y_pt": 266.5530090332031
+          },
+          {
+            "log10_molar": -9.232857655095568,
+            "plotted_value": 20.499287411140745,
+            "pdf_x_pt": 124.06999969482422,
+            "pdf_y_pt": 266.49700927734375
+          },
+          {
+            "log10_molar": -9.2212968386112,
+            "plotted_value": 20.499287411140745,
+            "pdf_x_pt": 124.17900085449219,
+            "pdf_y_pt": 266.49700927734375
+          },
+          {
+            "log10_molar": -9.215463428795577,
+            "plotted_value": 20.59979130010072,
+            "pdf_x_pt": 124.23400115966797,
+            "pdf_y_pt": 266.4410095214844
+          },
+          {
+            "log10_molar": -9.209524015833075,
+            "plotted_value": 20.59979130010072,
+            "pdf_x_pt": 124.29000091552734,
+            "pdf_y_pt": 266.4410095214844
+          },
+          {
+            "log10_molar": -9.197539186761192,
+            "plotted_value": 20.700295189060693,
+            "pdf_x_pt": 124.40299987792969,
+            "pdf_y_pt": 266.385009765625
+          },
+          {
+            "log10_molar": -9.191599773798691,
+            "plotted_value": 20.700295189060693,
+            "pdf_x_pt": 124.45899963378906,
+            "pdf_y_pt": 266.385009765625
+          },
+          {
+            "log10_molar": -9.18566036083619,
+            "plotted_value": 20.800799078020667,
+            "pdf_x_pt": 124.51499938964844,
+            "pdf_y_pt": 266.3290100097656
+          },
+          {
+            "log10_molar": -9.17409954435182,
+            "plotted_value": 20.90130296698064,
+            "pdf_x_pt": 124.6240005493164,
+            "pdf_y_pt": 266.27301025390625
+          },
+          {
+            "log10_molar": -9.16816013138932,
+            "plotted_value": 20.90130296698064,
+            "pdf_x_pt": 124.68000030517578,
+            "pdf_y_pt": 266.27301025390625
+          },
+          {
+            "log10_molar": -9.162220718426818,
+            "plotted_value": 20.996439345794524,
+            "pdf_x_pt": 124.73600006103516,
+            "pdf_y_pt": 266.2200012207031
+          },
+          {
+            "log10_molar": -9.150235889354935,
+            "plotted_value": 20.996439345794524,
+            "pdf_x_pt": 124.8489990234375,
+            "pdf_y_pt": 266.2200012207031
+          },
+          {
+            "log10_molar": -9.144296476392434,
+            "plotted_value": 21.0969432347545,
+            "pdf_x_pt": 124.90499877929688,
+            "pdf_y_pt": 266.16400146484375
+          },
+          {
+            "log10_molar": -9.13846306657681,
+            "plotted_value": 21.0969432347545,
+            "pdf_x_pt": 124.95999908447266,
+            "pdf_y_pt": 266.16400146484375
+          },
+          {
+            "log10_molar": -9.126902250092442,
+            "plotted_value": 21.197447123714475,
+            "pdf_x_pt": 125.06900024414062,
+            "pdf_y_pt": 266.1080017089844
+          },
+          {
+            "log10_molar": -9.120856833983062,
+            "plotted_value": 21.299703669048682,
+            "pdf_x_pt": 125.1259994506836,
+            "pdf_y_pt": 266.051025390625
+          },
+          {
+            "log10_molar": -9.114917421020559,
+            "plotted_value": 21.299703669048682,
+            "pdf_x_pt": 125.18199920654297,
+            "pdf_y_pt": 266.051025390625
+          },
+          {
+            "log10_molar": -9.103038595095557,
+            "plotted_value": 21.398454901634423,
+            "pdf_x_pt": 125.29399871826172,
+            "pdf_y_pt": 265.9960021972656
+          },
+          {
+            "log10_molar": -9.097099182133054,
+            "plotted_value": 21.500711446968634,
+            "pdf_x_pt": 125.3499984741211,
+            "pdf_y_pt": 265.93902587890625
+          },
+          {
+            "log10_molar": -9.085220356208051,
+            "plotted_value": 21.500711446968634,
+            "pdf_x_pt": 125.46199798583984,
+            "pdf_y_pt": 265.93902587890625
+          },
+          {
+            "log10_molar": -9.079492949539306,
+            "plotted_value": 21.601215335928607,
+            "pdf_x_pt": 125.51599884033203,
+            "pdf_y_pt": 265.8830261230469
+          },
+          {
+            "log10_molar": -9.073659539723682,
+            "plotted_value": 21.70171922488858,
+            "pdf_x_pt": 125.57099914550781,
+            "pdf_y_pt": 265.8270263671875
+          },
+          {
+            "log10_molar": -9.0616747106518,
+            "plotted_value": 21.70171922488858,
+            "pdf_x_pt": 125.68399810791016,
+            "pdf_y_pt": 265.8270263671875
+          },
+          {
+            "log10_molar": -9.055841300836176,
+            "plotted_value": 21.796855603702465,
+            "pdf_x_pt": 125.73899841308594,
+            "pdf_y_pt": 265.7740173339844
+          },
+          {
+            "log10_molar": -9.049795884726796,
+            "plotted_value": 21.897359492662442,
+            "pdf_x_pt": 125.7959976196289,
+            "pdf_y_pt": 265.718017578125
+          },
+          {
+            "log10_molar": -9.037917058801792,
+            "plotted_value": 21.997863381622416,
+            "pdf_x_pt": 125.90799713134766,
+            "pdf_y_pt": 265.6620178222656
+          },
+          {
+            "log10_molar": -9.03197764583929,
+            "plotted_value": 21.997863381622416,
+            "pdf_x_pt": 125.96399688720703,
+            "pdf_y_pt": 265.6620178222656
+          },
+          {
+            "log10_molar": -8.961234706023662,
+            "plotted_value": 22.79833441004205,
+            "pdf_x_pt": 126.63099670410156,
+            "pdf_y_pt": 265.21600341796875
+          },
+          {
+            "log10_molar": -8.949355880098658,
+            "plotted_value": 22.898838299002026,
+            "pdf_x_pt": 126.74299621582031,
+            "pdf_y_pt": 265.1600036621094
+          },
+          {
+            "log10_molar": -8.943416467136156,
+            "plotted_value": 22.898838299002026,
+            "pdf_x_pt": 126.79899597167969,
+            "pdf_y_pt": 265.1600036621094
+          },
+          {
+            "log10_molar": -8.84880987232364,
+            "plotted_value": 24.101270112749862,
+            "pdf_x_pt": 127.69099426269531,
+            "pdf_y_pt": 264.4900207519531
+          },
+          {
+            "log10_molar": -8.836931046398638,
+            "plotted_value": 24.20177400170984,
+            "pdf_x_pt": 127.80299377441406,
+            "pdf_y_pt": 264.43402099609375
+          },
+          {
+            "log10_molar": -8.831308833692443,
+            "plotted_value": 24.397414269483697,
+            "pdf_x_pt": 127.85600280761719,
+            "pdf_y_pt": 264.32501220703125
+          },
+          {
+            "log10_molar": -8.825369420729942,
+            "plotted_value": 24.49791815844367,
+            "pdf_x_pt": 127.91200256347656,
+            "pdf_y_pt": 264.2690124511719
+          },
+          {
+            "log10_molar": -8.813490594804938,
+            "plotted_value": 24.600229474289574,
+            "pdf_x_pt": 128.0240020751953,
+            "pdf_y_pt": 264.2120056152344
+          },
+          {
+            "log10_molar": -8.801611768879933,
+            "plotted_value": 24.801237252209525,
+            "pdf_x_pt": 128.13600158691406,
+            "pdf_y_pt": 264.1000061035156
+          },
+          {
+            "log10_molar": -8.789732942954931,
+            "plotted_value": 24.9017411411695,
+            "pdf_x_pt": 128.2480010986328,
+            "pdf_y_pt": 264.04400634765625
+          },
+          {
+            "log10_molar": -8.784005536286186,
+            "plotted_value": 25.097326638431664,
+            "pdf_x_pt": 128.302001953125,
+            "pdf_y_pt": 263.9350280761719
+          },
+          {
+            "log10_molar": -8.77817293565489,
+            "plotted_value": 25.1960778710174,
+            "pdf_x_pt": 128.35699462890625,
+            "pdf_y_pt": 263.8800048828125
+          },
+          {
+            "log10_molar": -8.76618729739868,
+            "plotted_value": 25.29833441635161,
+            "pdf_x_pt": 128.47000122070312,
+            "pdf_y_pt": 263.8230285644531
+          },
+          {
+            "log10_molar": -8.760247884436179,
+            "plotted_value": 25.398838305311585,
+            "pdf_x_pt": 128.5260009765625,
+            "pdf_y_pt": 263.76702880859375
+          },
+          {
+            "log10_molar": -8.754308471473676,
+            "plotted_value": 25.599846083231537,
+            "pdf_x_pt": 128.58200073242188,
+            "pdf_y_pt": 263.655029296875
+          },
+          {
+            "log10_molar": -8.742429645548674,
+            "plotted_value": 25.700404742703206,
+            "pdf_x_pt": 128.69400024414062,
+            "pdf_y_pt": 263.5989990234375
+          },
+          {
+            "log10_molar": -8.736809051211134,
+            "plotted_value": 25.802661288037413,
+            "pdf_x_pt": 128.7469940185547,
+            "pdf_y_pt": 263.5420227050781
+          },
+          {
+            "log10_molar": -8.72493022528613,
+            "plotted_value": 25.99830155581127,
+            "pdf_x_pt": 128.85899353027344,
+            "pdf_y_pt": 263.4330139160156
+          },
+          {
+            "log10_molar": -8.695126348142415,
+            "plotted_value": 26.500821000611147,
+            "pdf_x_pt": 129.13999938964844,
+            "pdf_y_pt": 263.15301513671875
+          },
+          {
+            "log10_molar": -8.689610947767427,
+            "plotted_value": 26.60132488957112,
+            "pdf_x_pt": 129.19200134277344,
+            "pdf_y_pt": 263.0970153808594
+          },
+          {
+            "log10_molar": -8.677626927879873,
+            "plotted_value": 26.796965157344978,
+            "pdf_x_pt": 129.30499267578125,
+            "pdf_y_pt": 262.9880065917969
+          },
+          {
+            "log10_molar": -8.671687514917371,
+            "plotted_value": 26.897469046304952,
+            "pdf_x_pt": 129.36099243164062,
+            "pdf_y_pt": 262.9320068359375
+          },
+          {
+            "log10_molar": -8.665748101954868,
+            "plotted_value": 27.098476824224903,
+            "pdf_x_pt": 129.4169921875,
+            "pdf_y_pt": 262.82000732421875
+          },
+          {
+            "log10_molar": -8.653762463698659,
+            "plotted_value": 27.200788140070806,
+            "pdf_x_pt": 129.52999877929688,
+            "pdf_y_pt": 262.76300048828125
+          },
+          {
+            "log10_molar": -8.647929863067363,
+            "plotted_value": 27.399988491104825,
+            "pdf_x_pt": 129.58499145507812,
+            "pdf_y_pt": 262.6520080566406
+          },
+          {
+            "log10_molar": -8.630428824436166,
+            "plotted_value": 27.697885304212893,
+            "pdf_x_pt": 129.75,
+            "pdf_y_pt": 262.48602294921875
+          },
+          {
+            "log10_molar": -8.624382599142459,
+            "plotted_value": 27.898893082132844,
+            "pdf_x_pt": 129.8070068359375,
+            "pdf_y_pt": 262.3740234375
+          },
+          {
+            "log10_molar": -8.606564360254954,
+            "plotted_value": 28.202212175898694,
+            "pdf_x_pt": 129.97500610351562,
+            "pdf_y_pt": 262.20501708984375
+          },
+          {
+            "log10_molar": -8.60062494729245,
+            "plotted_value": 28.39785244367255,
+            "pdf_x_pt": 130.031005859375,
+            "pdf_y_pt": 262.09600830078125
+          },
+          {
+            "log10_molar": -8.58906493999241,
+            "plotted_value": 28.4965489057466,
+            "pdf_x_pt": 130.13999938964844,
+            "pdf_y_pt": 262.041015625
+          },
+          {
+            "log10_molar": -8.577186114067405,
+            "plotted_value": 28.900371888472428,
+            "pdf_x_pt": 130.2519989013672,
+            "pdf_y_pt": 261.8160095214844
+          },
+          {
+            "log10_molar": -8.565307288142403,
+            "plotted_value": 29.0008757774324,
+            "pdf_x_pt": 130.36399841308594,
+            "pdf_y_pt": 261.760009765625
+          },
+          {
+            "log10_molar": -8.559367875179902,
+            "plotted_value": 29.20188355535235,
+            "pdf_x_pt": 130.4199981689453,
+            "pdf_y_pt": 261.64801025390625
+          },
+          {
+            "log10_molar": -8.553321649886193,
+            "plotted_value": 29.397523823126207,
+            "pdf_x_pt": 130.4770050048828,
+            "pdf_y_pt": 261.53900146484375
+          },
+          {
+            "log10_molar": -8.541761642586152,
+            "plotted_value": 29.60028425742039,
+            "pdf_x_pt": 130.58599853515625,
+            "pdf_y_pt": 261.426025390625
+          },
+          {
+            "log10_molar": -8.34077482099867,
+            "plotted_value": 34.79959416209692,
+            "pdf_x_pt": 132.4810028076172,
+            "pdf_y_pt": 258.5290222167969
+          },
+          {
+            "log10_molar": -8.334942220367374,
+            "plotted_value": 35.0024093669028,
+            "pdf_x_pt": 132.53599548339844,
+            "pdf_y_pt": 258.416015625
+          },
+          {
+            "log10_molar": -8.328895995073665,
+            "plotted_value": 35.19804963467666,
+            "pdf_x_pt": 132.59300231933594,
+            "pdf_y_pt": 258.3070068359375
+          },
+          {
+            "log10_molar": -8.317123981479869,
+            "plotted_value": 35.49956130155658,
+            "pdf_x_pt": 132.70399475097656,
+            "pdf_y_pt": 258.1390075683594
+          },
+          {
+            "log10_molar": -7.927029164229905,
+            "plotted_value": 49.29734860771289,
+            "pdf_x_pt": 136.3820037841797,
+            "pdf_y_pt": 250.45101928710938
+          },
+          {
+            "log10_molar": -7.921089751267403,
+            "plotted_value": 49.60066770147874,
+            "pdf_x_pt": 136.43800354003906,
+            "pdf_y_pt": 250.28201293945312
+          },
+          {
+            "log10_molar": -7.9092109253424,
+            "plotted_value": 49.89500443132665,
+            "pdf_x_pt": 136.5500030517578,
+            "pdf_y_pt": 250.11801147460938
+          },
+          {
+            "log10_molar": -7.903483518673655,
+            "plotted_value": 50.19829613983666,
+            "pdf_x_pt": 136.60400390625,
+            "pdf_y_pt": 249.9490203857422
+          },
+          {
+            "log10_molar": -7.897650918042359,
+            "plotted_value": 50.6003390809324,
+            "pdf_x_pt": 136.65899658203125,
+            "pdf_y_pt": 249.72500610351562
+          },
+          {
+            "log10_molar": -7.885665279786149,
+            "plotted_value": 50.89823589404047,
+            "pdf_x_pt": 136.77200317382812,
+            "pdf_y_pt": 249.55902099609375
+          },
+          {
+            "log10_molar": -7.879725866823648,
+            "plotted_value": 51.19974756092039,
+            "pdf_x_pt": 136.8280029296875,
+            "pdf_y_pt": 249.39102172851562
+          },
+          {
+            "log10_molar": -7.471919623017385,
+            "plotted_value": 65.89850978445631,
+            "pdf_x_pt": 140.67300415039062,
+            "pdf_y_pt": 241.20101928710938
+          },
+          {
+            "log10_molar": -7.460254421754793,
+            "plotted_value": 66.09951756237626,
+            "pdf_x_pt": 140.78298950195312,
+            "pdf_y_pt": 241.08901977539062
+          },
+          {
+            "log10_molar": -7.454420202754842,
+            "plotted_value": 66.3956617191101,
+            "pdf_x_pt": 140.83799743652344,
+            "pdf_y_pt": 240.92401123046875
+          },
+          {
+            "log10_molar": -7.4483755958297895,
+            "plotted_value": 66.59666949703004,
+            "pdf_x_pt": 140.89498901367188,
+            "pdf_y_pt": 240.81201171875
+          },
+          {
+            "log10_molar": -7.436495151536131,
+            "plotted_value": 66.89998859079589,
+            "pdf_x_pt": 141.0070037841797,
+            "pdf_y_pt": 240.64300537109375
+          },
+          {
+            "log10_molar": -7.365753020904829,
+            "plotted_value": 68.99622038489132,
+            "pdf_x_pt": 141.6739959716797,
+            "pdf_y_pt": 239.47500610351562
+          },
+          {
+            "log10_molar": -7.359813607942327,
+            "plotted_value": 69.19900820444136,
+            "pdf_x_pt": 141.72999572753906,
+            "pdf_y_pt": 239.3620147705078
+          },
+          {
+            "log10_molar": -7.347934782017323,
+            "plotted_value": 69.4000159823613,
+            "pdf_x_pt": 141.8419952392578,
+            "pdf_y_pt": 239.25001525878906
+          },
+          {
+            "log10_molar": -7.271251620054865,
+            "plotted_value": 71.49805520334266,
+            "pdf_x_pt": 142.56500244140625,
+            "pdf_y_pt": 238.0810089111328
+          },
+          {
+            "log10_molar": -7.259372794129861,
+            "plotted_value": 71.69725555437668,
+            "pdf_x_pt": 142.677001953125,
+            "pdf_y_pt": 237.9700164794922
+          },
+          {
+            "log10_molar": -7.247388774242307,
+            "plotted_value": 72.10107853710251,
+            "pdf_x_pt": 142.7899932861328,
+            "pdf_y_pt": 237.74501037597656
+          },
+          {
+            "log10_molar": -7.235509948317302,
+            "plotted_value": 72.19618753066054,
+            "pdf_x_pt": 142.90199279785156,
+            "pdf_y_pt": 237.6920166015625
+          },
+          {
+            "log10_molar": -7.229568916986146,
+            "plotted_value": 72.39719530858049,
+            "pdf_x_pt": 142.9580078125,
+            "pdf_y_pt": 237.58001708984375
+          },
+          {
+            "log10_molar": -7.2239483226486065,
+            "plotted_value": 72.59820308650045,
+            "pdf_x_pt": 143.01100158691406,
+            "pdf_y_pt": 237.468017578125
+          },
+          {
+            "log10_molar": -7.212069496723603,
+            "plotted_value": 72.80101829130632,
+            "pdf_x_pt": 143.1230010986328,
+            "pdf_y_pt": 237.35501098632812
+          },
+          {
+            "log10_molar": -7.206130083761101,
+            "plotted_value": 72.99663117382433,
+            "pdf_x_pt": 143.1790008544922,
+            "pdf_y_pt": 237.2460174560547
+          },
+          {
+            "log10_molar": -7.2001906707986,
+            "plotted_value": 73.19763895174428,
+            "pdf_x_pt": 143.23500061035156,
+            "pdf_y_pt": 237.13401794433594
+          },
+          {
+            "log10_molar": -7.188311844873596,
+            "plotted_value": 73.29814284070426,
+            "pdf_x_pt": 143.3470001220703,
+            "pdf_y_pt": 237.07801818847656
+          },
+          {
+            "log10_molar": -7.182267237948543,
+            "plotted_value": 73.4991506186242,
+            "pdf_x_pt": 143.40399169921875,
+            "pdf_y_pt": 236.9660186767578
+          },
+          {
+            "log10_molar": -7.176751837573555,
+            "plotted_value": 73.70196582343009,
+            "pdf_x_pt": 143.45599365234375,
+            "pdf_y_pt": 236.85301208496094
+          },
+          {
+            "log10_molar": -7.164766199317345,
+            "plotted_value": 73.80066228550413,
+            "pdf_x_pt": 143.56900024414062,
+            "pdf_y_pt": 236.7980194091797
+          },
+          {
+            "log10_molar": -7.158933598686049,
+            "plotted_value": 73.99630255327799,
+            "pdf_x_pt": 143.62399291992188,
+            "pdf_y_pt": 236.6890106201172
+          },
+          {
+            "log10_molar": -7.152887373392343,
+            "plotted_value": 74.19909037282801,
+            "pdf_x_pt": 143.68099975585938,
+            "pdf_y_pt": 236.57601928710938
+          },
+          {
+            "log10_molar": -7.141008547467338,
+            "plotted_value": 74.29959426178799,
+            "pdf_x_pt": 143.79299926757812,
+            "pdf_y_pt": 236.52001953125
+          },
+          {
+            "log10_molar": -7.135069134504837,
+            "plotted_value": 74.50060203970794,
+            "pdf_x_pt": 143.8489990234375,
+            "pdf_y_pt": 236.40802001953125
+          },
+          {
+            "log10_molar": -7.117568095873639,
+            "plotted_value": 74.79674619644177,
+            "pdf_x_pt": 144.01400756835938,
+            "pdf_y_pt": 236.24301147460938
+          },
+          {
+            "log10_molar": -7.1115234889485865,
+            "plotted_value": 74.99775397436173,
+            "pdf_x_pt": 144.0709991455078,
+            "pdf_y_pt": 236.13101196289062
+          },
+          {
+            "log10_molar": -7.099644663023582,
+            "plotted_value": 75.10003790495178,
+            "pdf_x_pt": 144.18299865722656,
+            "pdf_y_pt": 236.0740203857422
+          },
+          {
+            "log10_molar": -7.093705250061081,
+            "plotted_value": 75.29926564124165,
+            "pdf_x_pt": 144.23899841308594,
+            "pdf_y_pt": 235.9630126953125
+          },
+          {
+            "log10_molar": -7.070266416836036,
+            "plotted_value": 75.69769372856554,
+            "pdf_x_pt": 144.45999145507812,
+            "pdf_y_pt": 235.7410125732422
+          },
+          {
+            "log10_molar": -7.064327003873535,
+            "plotted_value": 75.89870150648548,
+            "pdf_x_pt": 144.5159912109375,
+            "pdf_y_pt": 235.62901306152344
+          },
+          {
+            "log10_molar": -7.052448177948531,
+            "plotted_value": 75.99920539544546,
+            "pdf_x_pt": 144.62799072265625,
+            "pdf_y_pt": 235.57301330566406
+          },
+          {
+            "log10_molar": -7.046508764986029,
+            "plotted_value": 76.10148932603552,
+            "pdf_x_pt": 144.68399047851562,
+            "pdf_y_pt": 235.51602172851562
+          },
+          {
+            "log10_molar": -7.040462539692321,
+            "plotted_value": 76.29712959380937,
+            "pdf_x_pt": 144.74099731445312,
+            "pdf_y_pt": 235.40701293945312
+          },
+          {
+            "log10_molar": -7.028900914023625,
+            "plotted_value": 76.39582605588342,
+            "pdf_x_pt": 144.85000610351562,
+            "pdf_y_pt": 235.35202026367188
+          },
+          {
+            "log10_molar": -6.975765015986072,
+            "plotted_value": 77.29680097326303,
+            "pdf_x_pt": 145.3509979248047,
+            "pdf_y_pt": 234.85000610351562
+          },
+          {
+            "log10_molar": -6.963886190061068,
+            "plotted_value": 77.39730486222301,
+            "pdf_x_pt": 145.46299743652344,
+            "pdf_y_pt": 234.79400634765625
+          },
+          {
+            "log10_molar": -6.957841583136015,
+            "plotted_value": 77.49958879281306,
+            "pdf_x_pt": 145.51998901367188,
+            "pdf_y_pt": 234.7370147705078
+          },
+          {
+            "log10_molar": -6.951900551804859,
+            "plotted_value": 77.69881652910293,
+            "pdf_x_pt": 145.5760040283203,
+            "pdf_y_pt": 234.62600708007812
+          },
+          {
+            "log10_molar": -6.9400217258798556,
+            "plotted_value": 77.80110045969299,
+            "pdf_x_pt": 145.68800354003906,
+            "pdf_y_pt": 234.5690155029297
+          },
+          {
+            "log10_molar": -6.928461718579815,
+            "plotted_value": 77.996713342211,
+            "pdf_x_pt": 145.7969970703125,
+            "pdf_y_pt": 234.46002197265625
+          },
+          {
+            "log10_molar": -6.9165828926548105,
+            "plotted_value": 78.09721723117097,
+            "pdf_x_pt": 145.90899658203125,
+            "pdf_y_pt": 234.40402221679688
+          },
+          {
+            "log10_molar": -6.904704066729806,
+            "plotted_value": 78.29822500909091,
+            "pdf_x_pt": 146.02099609375,
+            "pdf_y_pt": 234.29202270507812
+          },
+          {
+            "log10_molar": -6.892825240804804,
+            "plotted_value": 78.39872889805089,
+            "pdf_x_pt": 146.13299560546875,
+            "pdf_y_pt": 234.23602294921875
+          },
+          {
+            "log10_molar": -6.886779015511095,
+            "plotted_value": 78.49923278701087,
+            "pdf_x_pt": 146.19000244140625,
+            "pdf_y_pt": 234.18002319335938
+          },
+          {
+            "log10_molar": -6.875324202173606,
+            "plotted_value": 78.59973667597085,
+            "pdf_x_pt": 146.29800415039062,
+            "pdf_y_pt": 234.1240234375
+          },
+          {
+            "log10_molar": -6.869279595248553,
+            "plotted_value": 78.7953769437447,
+            "pdf_x_pt": 146.35499572753906,
+            "pdf_y_pt": 234.0150146484375
+          },
+          {
+            "log10_molar": -6.863340182286051,
+            "plotted_value": 78.89588083270468,
+            "pdf_x_pt": 146.41099548339844,
+            "pdf_y_pt": 233.95901489257812
+          },
+          {
+            "log10_molar": -6.851461356361048,
+            "plotted_value": 78.89588083270468,
+            "pdf_x_pt": 146.5229949951172,
+            "pdf_y_pt": 233.95901489257812
+          },
+          {
+            "log10_molar": -6.839582530436044,
+            "plotted_value": 79.09688861062463,
+            "pdf_x_pt": 146.63499450683594,
+            "pdf_y_pt": 233.84701538085938
+          },
+          {
+            "log10_molar": -6.828020904767348,
+            "plotted_value": 79.19919992647053,
+            "pdf_x_pt": 146.74400329589844,
+            "pdf_y_pt": 233.79000854492188
+          },
+          {
+            "log10_molar": -6.816036884879793,
+            "plotted_value": 79.40020770439048,
+            "pdf_x_pt": 146.85699462890625,
+            "pdf_y_pt": 233.67800903320312
+          },
+          {
+            "log10_molar": -6.804263252917341,
+            "plotted_value": 79.50071159335046,
+            "pdf_x_pt": 146.96800231933594,
+            "pdf_y_pt": 233.62200927734375
+          },
+          {
+            "log10_molar": -6.7982186459922875,
+            "plotted_value": 79.59582058690849,
+            "pdf_x_pt": 147.02499389648438,
+            "pdf_y_pt": 233.5690155029297
+          },
+          {
+            "log10_molar": -6.792279233029786,
+            "plotted_value": 79.69632447586847,
+            "pdf_x_pt": 147.08099365234375,
+            "pdf_y_pt": 233.5130157470703
+          },
+          {
+            "log10_molar": -6.78071760736109,
+            "plotted_value": 79.79682836482844,
+            "pdf_x_pt": 147.19000244140625,
+            "pdf_y_pt": 233.45701599121094
+          },
+          {
+            "log10_molar": -6.774778194398589,
+            "plotted_value": 79.89913968067434,
+            "pdf_x_pt": 147.24600219726562,
+            "pdf_y_pt": 233.40000915527344
+          },
+          {
+            "log10_molar": -6.762899368473585,
+            "plotted_value": 79.89913968067434,
+            "pdf_x_pt": 147.35800170898438,
+            "pdf_y_pt": 233.40000915527344
+          },
+          {
+            "log10_molar": -6.751020542548582,
+            "plotted_value": 80.09834003170836,
+            "pdf_x_pt": 147.47000122070312,
+            "pdf_y_pt": 233.2890167236328
+          },
+          {
+            "log10_molar": -6.739034904292373,
+            "plotted_value": 80.20065134755427,
+            "pdf_x_pt": 147.5830078125,
+            "pdf_y_pt": 233.2320098876953
+          },
+          {
+            "log10_molar": -6.733521122286039,
+            "plotted_value": 80.30115523651423,
+            "pdf_x_pt": 147.63499450683594,
+            "pdf_y_pt": 233.17601013183594
+          },
+          {
+            "log10_molar": -6.727474896992331,
+            "plotted_value": 80.30115523651423,
+            "pdf_x_pt": 147.69200134277344,
+            "pdf_y_pt": 233.17601013183594
+          },
+          {
+            "log10_molar": -6.715596071067328,
+            "plotted_value": 80.40165912547421,
+            "pdf_x_pt": 147.8040008544922,
+            "pdf_y_pt": 233.12001037597656
+          },
+          {
+            "log10_molar": -6.709656658104826,
+            "plotted_value": 80.49676811903225,
+            "pdf_x_pt": 147.86000061035156,
+            "pdf_y_pt": 233.0670166015625
+          },
+          {
+            "log10_molar": -6.7037172451423235,
+            "plotted_value": 80.59727200799223,
+            "pdf_x_pt": 147.91600036621094,
+            "pdf_y_pt": 233.01101684570312
+          },
+          {
+            "log10_molar": -6.69183841921732,
+            "plotted_value": 80.59727200799223,
+            "pdf_x_pt": 148.0279998779297,
+            "pdf_y_pt": 233.01101684570312
+          },
+          {
+            "log10_molar": -6.6862178248797814,
+            "plotted_value": 80.6977758969522,
+            "pdf_x_pt": 148.08099365234375,
+            "pdf_y_pt": 232.95501708984375
+          },
+          {
+            "log10_molar": -6.680278411917279,
+            "plotted_value": 80.79827978591217,
+            "pdf_x_pt": 148.13699340820312,
+            "pdf_y_pt": 232.89901733398438
+          },
+          {
+            "log10_molar": -6.668399585992276,
+            "plotted_value": 80.79827978591217,
+            "pdf_x_pt": 148.24899291992188,
+            "pdf_y_pt": 232.89901733398438
+          },
+          {
+            "log10_molar": -6.662460173029774,
+            "plotted_value": 80.89878367487215,
+            "pdf_x_pt": 148.30499267578125,
+            "pdf_y_pt": 232.843017578125
+          },
+          {
+            "log10_molar": -6.650474534773565,
+            "plotted_value": 80.99928756383213,
+            "pdf_x_pt": 148.41799926757812,
+            "pdf_y_pt": 232.78701782226562
+          },
+          {
+            "log10_molar": -6.644535121811062,
+            "plotted_value": 80.99928756383213,
+            "pdf_x_pt": 148.4739990234375,
+            "pdf_y_pt": 232.78701782226562
+          },
+          {
+            "log10_molar": -6.638914527473523,
+            "plotted_value": 81.10159887967802,
+            "pdf_x_pt": 148.52699279785156,
+            "pdf_y_pt": 232.73001098632812
+          },
+          {
+            "log10_molar": -6.627034083179865,
+            "plotted_value": 81.202102768638,
+            "pdf_x_pt": 148.63900756835938,
+            "pdf_y_pt": 232.67401123046875
+          },
+          {
+            "log10_molar": -6.621094670217364,
+            "plotted_value": 81.202102768638,
+            "pdf_x_pt": 148.69500732421875,
+            "pdf_y_pt": 232.67401123046875
+          },
+          {
+            "log10_molar": -6.6151552572548615,
+            "plotted_value": 81.29721176219604,
+            "pdf_x_pt": 148.75100708007812,
+            "pdf_y_pt": 232.6210174560547
+          },
+          {
+            "log10_molar": -6.603171237367307,
+            "plotted_value": 81.29721176219604,
+            "pdf_x_pt": 148.86399841308594,
+            "pdf_y_pt": 232.6210174560547
+          },
+          {
+            "log10_molar": -6.597231824404805,
+            "plotted_value": 81.39771565115602,
+            "pdf_x_pt": 148.9199981689453,
+            "pdf_y_pt": 232.5650177001953
+          },
+          {
+            "log10_molar": -6.591716424029817,
+            "plotted_value": 81.49643949848591,
+            "pdf_x_pt": 148.9720001220703,
+            "pdf_y_pt": 232.510009765625
+          },
+          {
+            "log10_molar": -6.579837598104813,
+            "plotted_value": 81.49643949848591,
+            "pdf_x_pt": 149.08399963378906,
+            "pdf_y_pt": 232.510009765625
+          },
+          {
+            "log10_molar": -6.57379299117976,
+            "plotted_value": 81.59872342907596,
+            "pdf_x_pt": 149.1409912109375,
+            "pdf_y_pt": 232.45301818847656
+          },
+          {
+            "log10_molar": -6.5678535782172585,
+            "plotted_value": 81.59872342907596,
+            "pdf_x_pt": 149.19699096679688,
+            "pdf_y_pt": 232.45301818847656
+          },
+          {
+            "log10_molar": -6.555974752292254,
+            "plotted_value": 81.69922731803594,
+            "pdf_x_pt": 149.30899047851562,
+            "pdf_y_pt": 232.3970184326172
+          },
+          {
+            "log10_molar": -6.550035339329753,
+            "plotted_value": 81.69922731803594,
+            "pdf_x_pt": 149.364990234375,
+            "pdf_y_pt": 232.3970184326172
+          },
+          {
+            "log10_molar": -6.543989114036045,
+            "plotted_value": 81.79973120699592,
+            "pdf_x_pt": 149.4219970703125,
+            "pdf_y_pt": 232.3410186767578
+          },
+          {
+            "log10_molar": -6.53242748836735,
+            "plotted_value": 81.79973120699592,
+            "pdf_x_pt": 149.531005859375,
+            "pdf_y_pt": 232.3410186767578
+          },
+          {
+            "log10_molar": -6.526594887736054,
+            "plotted_value": 81.90023509595589,
+            "pdf_x_pt": 149.58599853515625,
+            "pdf_y_pt": 232.28501892089844
+          },
+          {
+            "log10_molar": -6.514609249479845,
+            "plotted_value": 81.90023509595589,
+            "pdf_x_pt": 149.69900512695312,
+            "pdf_y_pt": 232.28501892089844
+          },
+          {
+            "log10_molar": -6.508669836517342,
+            "plotted_value": 82.00073898491586,
+            "pdf_x_pt": 149.7550048828125,
+            "pdf_y_pt": 232.22901916503906
+          },
+          {
+            "log10_molar": -6.502730423554841,
+            "plotted_value": 82.00073898491586,
+            "pdf_x_pt": 149.81100463867188,
+            "pdf_y_pt": 232.22901916503906
+          },
+          {
+            "log10_molar": -6.4911704162548,
+            "plotted_value": 82.09587536372975,
+            "pdf_x_pt": 149.9199981689453,
+            "pdf_y_pt": 232.17601013183594
+          },
+          {
+            "log10_molar": -6.485231003292298,
+            "plotted_value": 82.09587536372975,
+            "pdf_x_pt": 149.9759979248047,
+            "pdf_y_pt": 232.17601013183594
+          },
+          {
+            "log10_molar": -6.479291590329796,
+            "plotted_value": 82.19637925268972,
+            "pdf_x_pt": 150.03199768066406,
+            "pdf_y_pt": 232.12001037597656
+          },
+          {
+            "log10_molar": -6.390729602442334,
+            "plotted_value": 82.6001748501597,
+            "pdf_x_pt": 150.86700439453125,
+            "pdf_y_pt": 231.89501953125
+          },
+          {
+            "log10_molar": -6.37885077651733,
+            "plotted_value": 82.6988986974896,
+            "pdf_x_pt": 150.97900390625,
+            "pdf_y_pt": 231.8400115966797
+          },
+          {
+            "log10_molar": -6.366971950592326,
+            "plotted_value": 82.6988986974896,
+            "pdf_x_pt": 151.09100341796875,
+            "pdf_y_pt": 231.8400115966797
+          },
+          {
+            "log10_molar": -6.260486529854807,
+            "plotted_value": 83.19783067377345,
+            "pdf_x_pt": 152.09500122070312,
+            "pdf_y_pt": 231.56201171875
+          },
+          {
+            "log10_molar": -6.236940884298557,
+            "plotted_value": 83.19783067377345,
+            "pdf_x_pt": 152.31700134277344,
+            "pdf_y_pt": 231.56201171875
+          },
+          {
+            "log10_molar": -6.2310014713360555,
+            "plotted_value": 83.29833456273343,
+            "pdf_x_pt": 152.3730010986328,
+            "pdf_y_pt": 231.50601196289062
+          },
+          {
+            "log10_molar": -6.207243819486048,
+            "plotted_value": 83.29833456273343,
+            "pdf_x_pt": 152.5970001220703,
+            "pdf_y_pt": 231.50601196289062
+          },
+          {
+            "log10_molar": -6.1957890061485585,
+            "plotted_value": 83.39883845169341,
+            "pdf_x_pt": 152.7050018310547,
+            "pdf_y_pt": 231.45001220703125
+          },
+          {
+            "log10_molar": -6.012303223192273,
+            "plotted_value": 83.79545911213137,
+            "pdf_x_pt": 154.43499755859375,
+            "pdf_y_pt": 231.22901916503906
+          },
+          {
+            "log10_molar": -6.006256997898564,
+            "plotted_value": 83.89596300109135,
+            "pdf_x_pt": 154.49200439453125,
+            "pdf_y_pt": 231.1730194091797
+          },
+          {
+            "log10_molar": -5.959060512823513,
+            "plotted_value": 83.89596300109135,
+            "pdf_x_pt": 154.93699645996094,
+            "pdf_y_pt": 231.1730194091797
+          },
+          {
+            "log10_molar": -5.947500505523472,
+            "plotted_value": 83.99827431693724,
+            "pdf_x_pt": 155.04598999023438,
+            "pdf_y_pt": 231.1160125732422
+          },
+          {
+            "log10_molar": -5.900195589748559,
+            "plotted_value": 83.99827431693724,
+            "pdf_x_pt": 155.49200439453125,
+            "pdf_y_pt": 231.1160125732422
+          },
+          {
+            "log10_molar": -5.894256176786058,
+            "plotted_value": 84.09877820589722,
+            "pdf_x_pt": 155.54800415039062,
+            "pdf_y_pt": 231.0600128173828
+          },
+          {
+            "log10_molar": -5.829134640492295,
+            "plotted_value": 84.09877820589722,
+            "pdf_x_pt": 156.16200256347656,
+            "pdf_y_pt": 231.0600128173828
+          },
+          {
+            "log10_molar": -5.8231952275297925,
+            "plotted_value": 84.1992820948572,
+            "pdf_x_pt": 156.21800231933594,
+            "pdf_y_pt": 231.00401306152344
+          },
+          {
+            "log10_molar": -5.746513683935989,
+            "plotted_value": 84.1992820948572,
+            "pdf_x_pt": 156.9409942626953,
+            "pdf_y_pt": 231.00401306152344
+          },
+          {
+            "log10_molar": -5.740467458642281,
+            "plotted_value": 84.29978598381717,
+            "pdf_x_pt": 156.9980010986328,
+            "pdf_y_pt": 230.94801330566406
+          },
+          {
+            "log10_molar": -5.651905470754818,
+            "plotted_value": 84.29978598381717,
+            "pdf_x_pt": 157.8330078125,
+            "pdf_y_pt": 230.94801330566406
+          },
+          {
+            "log10_molar": -5.646072870123523,
+            "plotted_value": 84.40028987277714,
+            "pdf_x_pt": 157.88800048828125,
+            "pdf_y_pt": 230.8920135498047
+          },
+          {
+            "log10_molar": -5.521769210498499,
+            "plotted_value": 84.40028987277714,
+            "pdf_x_pt": 159.05999755859375,
+            "pdf_y_pt": 230.8920135498047
+          },
+          {
+            "log10_molar": -5.516146997792305,
+            "plotted_value": 84.50079376173711,
+            "pdf_x_pt": 159.11300659179688,
+            "pdf_y_pt": 230.8360137939453
+          },
+          {
+            "log10_molar": -5.33860062779852,
+            "plotted_value": 84.50079376173711,
+            "pdf_x_pt": 160.78700256347656,
+            "pdf_y_pt": 230.8360137939453
+          },
+          {
+            "log10_molar": -5.332661214836019,
+            "plotted_value": 84.59590275529516,
+            "pdf_x_pt": 160.84300231933594,
+            "pdf_y_pt": 230.78302001953125
+          },
+          {
+            "log10_molar": -5.013628965210976,
+            "plotted_value": 84.59590275529516,
+            "pdf_x_pt": 163.8509979248047,
+            "pdf_y_pt": 230.78302001953125
+          },
+          {
+            "log10_molar": -5.0017501392859725,
+            "plotted_value": 84.69640664425513,
+            "pdf_x_pt": 163.96299743652344,
+            "pdf_y_pt": 230.72702026367188
+          },
+          {
+            "log10_molar": -4.003287887598432,
+            "plotted_value": 84.69640664425513,
+            "pdf_x_pt": 173.3769989013672,
+            "pdf_y_pt": 230.72702026367188
+          }
+        ]
+      },
+      {
+        "series": "DA",
+        "status": "curve_path_traced",
+        "drawing_index": 402,
+        "points": [
+          {
+            "log10_molar": -11.071008055686276,
+            "plotted_value": 17.796362659001915,
+            "pdf_x_pt": 106.73899841308594,
+            "pdf_y_pt": 268.0030517578125
+          },
+          {
+            "log10_molar": -9.634830489086207,
+            "plotted_value": 17.796362659001915,
+            "pdf_x_pt": 120.27999877929688,
+            "pdf_y_pt": 268.0030517578125
+          },
+          {
+            "log10_molar": -9.622951663161205,
+            "plotted_value": 17.898673974847817,
+            "pdf_x_pt": 120.39199829101562,
+            "pdf_y_pt": 267.946044921875
+          },
+          {
+            "log10_molar": -8.813490594804938,
+            "plotted_value": 17.898673974847817,
+            "pdf_x_pt": 128.0240020751953,
+            "pdf_y_pt": 267.946044921875
+          },
+          {
+            "log10_molar": -8.807551181842436,
+            "plotted_value": 17.999177863807795,
+            "pdf_x_pt": 128.0800018310547,
+            "pdf_y_pt": 267.8900451660156
+          },
+          {
+            "log10_molar": -8.553321649886193,
+            "plotted_value": 17.999177863807795,
+            "pdf_x_pt": 130.4770050048828,
+            "pdf_y_pt": 267.8900451660156
+          },
+          {
+            "log10_molar": -8.541761642586152,
+            "plotted_value": 18.09968175276777,
+            "pdf_x_pt": 130.58599853515625,
+            "pdf_y_pt": 267.83404541015625
+          },
+          {
+            "log10_molar": -8.382138705442426,
+            "plotted_value": 18.09968175276777,
+            "pdf_x_pt": 132.09100341796875,
+            "pdf_y_pt": 267.83404541015625
+          },
+          {
+            "log10_molar": -8.376199292479923,
+            "plotted_value": 18.200185641727742,
+            "pdf_x_pt": 132.14700317382812,
+            "pdf_y_pt": 267.7780456542969
+          },
+          {
+            "log10_molar": -8.263881271111108,
+            "plotted_value": 18.200185641727742,
+            "pdf_x_pt": 133.20599365234375,
+            "pdf_y_pt": 267.7780456542969
+          },
+          {
+            "log10_molar": -8.257835045817401,
+            "plotted_value": 18.300689530687716,
+            "pdf_x_pt": 133.26300048828125,
+            "pdf_y_pt": 267.7220458984375
+          },
+          {
+            "log10_molar": -8.169274676298594,
+            "plotted_value": 18.300689530687716,
+            "pdf_x_pt": 134.09799194335938,
+            "pdf_y_pt": 267.7220458984375
+          },
+          {
+            "log10_molar": -8.15739585037359,
+            "plotted_value": 18.40300084653362,
+            "pdf_x_pt": 134.20999145507812,
+            "pdf_y_pt": 267.6650390625
+          },
+          {
+            "log10_molar": -8.092591514336135,
+            "plotted_value": 18.40300084653362,
+            "pdf_x_pt": 134.8209991455078,
+            "pdf_y_pt": 267.6650390625
+          },
+          {
+            "log10_molar": -8.086652101373632,
+            "plotted_value": 18.496329798461574,
+            "pdf_x_pt": 134.8769989013672,
+            "pdf_y_pt": 267.613037109375
+          },
+          {
+            "log10_molar": -7.83242256941739,
+            "plotted_value": 18.90009801067571,
+            "pdf_x_pt": 137.2740020751953,
+            "pdf_y_pt": 267.3880615234375
+          },
+          {
+            "log10_molar": -7.820543743492387,
+            "plotted_value": 19.000601899635683,
+            "pdf_x_pt": 137.38600158691406,
+            "pdf_y_pt": 267.3320617675781
+          },
+          {
+            "log10_molar": -7.79116549730484,
+            "plotted_value": 19.000601899635683,
+            "pdf_x_pt": 137.66299438476562,
+            "pdf_y_pt": 267.3320617675781
+          },
+          {
+            "log10_molar": -7.785226084342337,
+            "plotted_value": 19.101105788595657,
+            "pdf_x_pt": 137.718994140625,
+            "pdf_y_pt": 267.27606201171875
+          },
+          {
+            "log10_molar": -7.761680438786088,
+            "plotted_value": 19.101105788595657,
+            "pdf_x_pt": 137.9409942626953,
+            "pdf_y_pt": 267.27606201171875
+          },
+          {
+            "log10_molar": -7.631542560161112,
+            "plotted_value": 19.59825772324944,
+            "pdf_x_pt": 139.16799926757812,
+            "pdf_y_pt": 266.9990539550781
+          },
+          {
+            "log10_molar": -7.614041521529915,
+            "plotted_value": 19.59825772324944,
+            "pdf_x_pt": 139.3330078125,
+            "pdf_y_pt": 266.9990539550781
+          },
+          {
+            "log10_molar": -7.607996914604862,
+            "plotted_value": 19.698761612209413,
+            "pdf_x_pt": 139.38999938964844,
+            "pdf_y_pt": 266.94305419921875
+          },
+          {
+            "log10_molar": -7.501616687829895,
+            "plotted_value": 20.10258459493524,
+            "pdf_x_pt": 140.39300537109375,
+            "pdf_y_pt": 266.7180480957031
+          },
+          {
+            "log10_molar": -7.495572080904841,
+            "plotted_value": 20.195913546863196,
+            "pdf_x_pt": 140.4499969482422,
+            "pdf_y_pt": 266.6660461425781
+          },
+          {
+            "log10_molar": -7.483798448942389,
+            "plotted_value": 20.195913546863196,
+            "pdf_x_pt": 140.56100463867188,
+            "pdf_y_pt": 266.6660461425781
+          },
+          {
+            "log10_molar": -7.477753842017336,
+            "plotted_value": 20.298224862709098,
+            "pdf_x_pt": 140.6179962158203,
+            "pdf_y_pt": 266.6090393066406
+          },
+          {
+            "log10_molar": -7.471919623017385,
+            "plotted_value": 20.298224862709098,
+            "pdf_x_pt": 140.67300415039062,
+            "pdf_y_pt": 266.6090393066406
+          },
+          {
+            "log10_molar": -7.460254421754793,
+            "plotted_value": 20.398728751669076,
+            "pdf_x_pt": 140.78298950195312,
+            "pdf_y_pt": 266.55303955078125
+          },
+          {
+            "log10_molar": -7.454420202754842,
+            "plotted_value": 20.398728751669076,
+            "pdf_x_pt": 140.83799743652344,
+            "pdf_y_pt": 266.55303955078125
+          },
+          {
+            "log10_molar": -7.4483755958297895,
+            "plotted_value": 20.49923264062905,
+            "pdf_x_pt": 140.89498901367188,
+            "pdf_y_pt": 266.4970397949219
+          },
+          {
+            "log10_molar": -7.430555738573629,
+            "plotted_value": 20.49923264062905,
+            "pdf_x_pt": 141.06300354003906,
+            "pdf_y_pt": 266.4970397949219
+          },
+          {
+            "log10_molar": -7.424511131648576,
+            "plotted_value": 20.599736529589023,
+            "pdf_x_pt": 141.1199951171875,
+            "pdf_y_pt": 266.4410400390625
+          },
+          {
+            "log10_molar": -7.413056318311087,
+            "plotted_value": 20.599736529589023,
+            "pdf_x_pt": 141.22799682617188,
+            "pdf_y_pt": 266.4410400390625
+          },
+          {
+            "log10_molar": -7.407116905348585,
+            "plotted_value": 20.700240418548997,
+            "pdf_x_pt": 141.28399658203125,
+            "pdf_y_pt": 266.3850402832031
+          },
+          {
+            "log10_molar": -7.401177492386083,
+            "plotted_value": 20.700240418548997,
+            "pdf_x_pt": 141.33999633789062,
+            "pdf_y_pt": 266.3850402832031
+          },
+          {
+            "log10_molar": -7.389191854129873,
+            "plotted_value": 20.800744307508975,
+            "pdf_x_pt": 141.4530029296875,
+            "pdf_y_pt": 266.32904052734375
+          },
+          {
+            "log10_molar": -7.383359253498577,
+            "plotted_value": 20.800744307508975,
+            "pdf_x_pt": 141.50799560546875,
+            "pdf_y_pt": 266.32904052734375
+          },
+          {
+            "log10_molar": -7.371797627829881,
+            "plotted_value": 20.90124819646895,
+            "pdf_x_pt": 141.61700439453125,
+            "pdf_y_pt": 266.2730407714844
+          },
+          {
+            "log10_molar": -7.365753020904829,
+            "plotted_value": 20.996329804771136,
+            "pdf_x_pt": 141.6739959716797,
+            "pdf_y_pt": 266.2200622558594
+          },
+          {
+            "log10_molar": -7.359813607942327,
+            "plotted_value": 20.996329804771136,
+            "pdf_x_pt": 141.72999572753906,
+            "pdf_y_pt": 266.2200622558594
+          },
+          {
+            "log10_molar": -7.347934782017323,
+            "plotted_value": 21.09683369373111,
+            "pdf_x_pt": 141.8419952392578,
+            "pdf_y_pt": 266.1640625
+          },
+          {
+            "log10_molar": -7.341995369054821,
+            "plotted_value": 21.09683369373111,
+            "pdf_x_pt": 141.8979949951172,
+            "pdf_y_pt": 266.1640625
+          },
+          {
+            "log10_molar": -7.335949143761114,
+            "plotted_value": 21.197337582691084,
+            "pdf_x_pt": 141.9550018310547,
+            "pdf_y_pt": 266.1080627441406
+          },
+          {
+            "log10_molar": -7.32407031783611,
+            "plotted_value": 21.197337582691084,
+            "pdf_x_pt": 142.06700134277344,
+            "pdf_y_pt": 266.1080627441406
+          },
+          {
+            "log10_molar": -7.318554917461123,
+            "plotted_value": 21.29964889853699,
+            "pdf_x_pt": 142.11900329589844,
+            "pdf_y_pt": 266.0510559082031
+          },
+          {
+            "log10_molar": -7.312510310536069,
+            "plotted_value": 21.398345360611035,
+            "pdf_x_pt": 142.17599487304688,
+            "pdf_y_pt": 265.9960632324219
+          },
+          {
+            "log10_molar": -7.300631484611065,
+            "plotted_value": 21.398345360611035,
+            "pdf_x_pt": 142.28799438476562,
+            "pdf_y_pt": 265.9960632324219
+          },
+          {
+            "log10_molar": -7.294692071648564,
+            "plotted_value": 21.500656676456938,
+            "pdf_x_pt": 142.343994140625,
+            "pdf_y_pt": 265.9390563964844
+          },
+          {
+            "log10_molar": -7.288752658686063,
+            "plotted_value": 21.500656676456938,
+            "pdf_x_pt": 142.39999389648438,
+            "pdf_y_pt": 265.9390563964844
+          },
+          {
+            "log10_molar": -7.2768738327610585,
+            "plotted_value": 21.60116056541691,
+            "pdf_x_pt": 142.51199340820312,
+            "pdf_y_pt": 265.883056640625
+          },
+          {
+            "log10_molar": -7.271251620054865,
+            "plotted_value": 21.70166445437689,
+            "pdf_x_pt": 142.56500244140625,
+            "pdf_y_pt": 265.8270568847656
+          },
+          {
+            "log10_molar": -7.259372794129861,
+            "plotted_value": 21.70166445437689,
+            "pdf_x_pt": 142.677001953125,
+            "pdf_y_pt": 265.8270568847656
+          },
+          {
+            "log10_molar": -7.253328187204808,
+            "plotted_value": 21.796800833190773,
+            "pdf_x_pt": 142.73399353027344,
+            "pdf_y_pt": 265.7740478515625
+          },
+          {
+            "log10_molar": -7.247388774242307,
+            "plotted_value": 21.897304722150746,
+            "pdf_x_pt": 142.7899932861328,
+            "pdf_y_pt": 265.7180480957031
+          },
+          {
+            "log10_molar": -7.235509948317302,
+            "plotted_value": 21.897304722150746,
+            "pdf_x_pt": 142.90199279785156,
+            "pdf_y_pt": 265.7180480957031
+          },
+          {
+            "log10_molar": -7.229568916986146,
+            "plotted_value": 21.99780861111072,
+            "pdf_x_pt": 142.9580078125,
+            "pdf_y_pt": 265.66204833984375
+          },
+          {
+            "log10_molar": -7.2239483226486065,
+            "plotted_value": 22.098312500070694,
+            "pdf_x_pt": 143.01100158691406,
+            "pdf_y_pt": 265.6060485839844
+          },
+          {
+            "log10_molar": -7.212069496723603,
+            "plotted_value": 22.2006238159166,
+            "pdf_x_pt": 143.1230010986328,
+            "pdf_y_pt": 265.5490417480469
+          },
+          {
+            "log10_molar": -7.206130083761101,
+            "plotted_value": 22.2006238159166,
+            "pdf_x_pt": 143.1790008544922,
+            "pdf_y_pt": 265.5490417480469
+          },
+          {
+            "log10_molar": -7.2001906707986,
+            "plotted_value": 22.299320277990645,
+            "pdf_x_pt": 143.23500061035156,
+            "pdf_y_pt": 265.4940490722656
+          },
+          {
+            "log10_molar": -7.188311844873596,
+            "plotted_value": 22.39982416695062,
+            "pdf_x_pt": 143.3470001220703,
+            "pdf_y_pt": 265.43804931640625
+          },
+          {
+            "log10_molar": -7.182267237948543,
+            "plotted_value": 22.502135482796522,
+            "pdf_x_pt": 143.40399169921875,
+            "pdf_y_pt": 265.38104248046875
+          },
+          {
+            "log10_molar": -7.176751837573555,
+            "plotted_value": 22.502135482796522,
+            "pdf_x_pt": 143.45599365234375,
+            "pdf_y_pt": 265.38104248046875
+          },
+          {
+            "log10_molar": -7.164766199317345,
+            "plotted_value": 22.602639371756496,
+            "pdf_x_pt": 143.56900024414062,
+            "pdf_y_pt": 265.3250427246094
+          },
+          {
+            "log10_molar": -7.158933598686049,
+            "plotted_value": 22.697720980058687,
+            "pdf_x_pt": 143.62399291992188,
+            "pdf_y_pt": 265.2720642089844
+          },
+          {
+            "log10_molar": -7.152887373392343,
+            "plotted_value": 22.79822486901866,
+            "pdf_x_pt": 143.68099975585938,
+            "pdf_y_pt": 265.216064453125
+          },
+          {
+            "log10_molar": -7.141008547467338,
+            "plotted_value": 22.898728757978635,
+            "pdf_x_pt": 143.79299926757812,
+            "pdf_y_pt": 265.1600646972656
+          },
+          {
+            "log10_molar": -7.135069134504837,
+            "plotted_value": 22.99923264693861,
+            "pdf_x_pt": 143.8489990234375,
+            "pdf_y_pt": 265.10406494140625
+          },
+          {
+            "log10_molar": -7.123507508836141,
+            "plotted_value": 22.99923264693861,
+            "pdf_x_pt": 143.9580078125,
+            "pdf_y_pt": 265.10406494140625
+          },
+          {
+            "log10_molar": -7.1115234889485865,
+            "plotted_value": 23.20024042485856,
+            "pdf_x_pt": 144.0709991455078,
+            "pdf_y_pt": 264.9920654296875
+          },
+          {
+            "log10_molar": -7.099644663023582,
+            "plotted_value": 23.300744313818534,
+            "pdf_x_pt": 144.18299865722656,
+            "pdf_y_pt": 264.9360656738281
+          },
+          {
+            "log10_molar": -7.093705250061081,
+            "plotted_value": 23.403055629664436,
+            "pdf_x_pt": 144.23899841308594,
+            "pdf_y_pt": 264.8790588378906
+          },
+          {
+            "log10_molar": -7.087765837098579,
+            "plotted_value": 23.49638458159239,
+            "pdf_x_pt": 144.2949981689453,
+            "pdf_y_pt": 264.8270568847656
+          },
+          {
+            "log10_molar": -7.076205829798537,
+            "plotted_value": 23.598695897438297,
+            "pdf_x_pt": 144.40399169921875,
+            "pdf_y_pt": 264.7700500488281
+          },
+          {
+            "log10_molar": -7.064327003873535,
+            "plotted_value": 23.797896248472316,
+            "pdf_x_pt": 144.5159912109375,
+            "pdf_y_pt": 264.6590576171875
+          },
+          {
+            "log10_molar": -7.052448177948531,
+            "plotted_value": 23.90020756431822,
+            "pdf_x_pt": 144.62799072265625,
+            "pdf_y_pt": 264.60205078125
+          },
+          {
+            "log10_molar": -7.040462539692321,
+            "plotted_value": 24.10121534223817,
+            "pdf_x_pt": 144.74099731445312,
+            "pdf_y_pt": 264.49005126953125
+          },
+          {
+            "log10_molar": -7.028900914023625,
+            "plotted_value": 24.201719231198144,
+            "pdf_x_pt": 144.85000610351562,
+            "pdf_y_pt": 264.4340515136719
+          },
+          {
+            "log10_molar": -7.023068313392329,
+            "plotted_value": 24.296855610012027,
+            "pdf_x_pt": 144.90499877929688,
+            "pdf_y_pt": 264.38104248046875
+          },
+          {
+            "log10_molar": -7.0110826751361195,
+            "plotted_value": 24.397359498972,
+            "pdf_x_pt": 145.01800537109375,
+            "pdf_y_pt": 264.3250427246094
+          },
+          {
+            "log10_molar": -6.999203849211117,
+            "plotted_value": 24.600119933266186,
+            "pdf_x_pt": 145.1300048828125,
+            "pdf_y_pt": 264.2120666503906
+          },
+          {
+            "log10_molar": -6.987325023286113,
+            "plotted_value": 24.698871165851926,
+            "pdf_x_pt": 145.24200439453125,
+            "pdf_y_pt": 264.15704345703125
+          },
+          {
+            "log10_molar": -6.981704428948573,
+            "plotted_value": 24.80118248169783,
+            "pdf_x_pt": 145.2949981689453,
+            "pdf_y_pt": 264.10003662109375
+          },
+          {
+            "log10_molar": -6.975765015986072,
+            "plotted_value": 25.00038283273185,
+            "pdf_x_pt": 145.3509979248047,
+            "pdf_y_pt": 263.9890441894531
+          },
+          {
+            "log10_molar": -6.963886190061068,
+            "plotted_value": 25.097271867919968,
+            "pdf_x_pt": 145.46299743652344,
+            "pdf_y_pt": 263.93505859375
+          },
+          {
+            "log10_molar": -6.951900551804859,
+            "plotted_value": 25.298279645839916,
+            "pdf_x_pt": 145.5760040283203,
+            "pdf_y_pt": 263.82305908203125
+          },
+          {
+            "log10_molar": -6.9400217258798556,
+            "plotted_value": 25.39878353479989,
+            "pdf_x_pt": 145.68800354003906,
+            "pdf_y_pt": 263.7670593261719
+          },
+          {
+            "log10_molar": -6.934082312917353,
+            "plotted_value": 25.499287423759867,
+            "pdf_x_pt": 145.74400329589844,
+            "pdf_y_pt": 263.7110595703125
+          },
+          {
+            "log10_molar": -6.928461718579815,
+            "plotted_value": 25.700295201679815,
+            "pdf_x_pt": 145.7969970703125,
+            "pdf_y_pt": 263.59906005859375
+          },
+          {
+            "log10_molar": -6.9165828926548105,
+            "plotted_value": 25.802606517525717,
+            "pdf_x_pt": 145.90899658203125,
+            "pdf_y_pt": 263.54205322265625
+          },
+          {
+            "log10_molar": -6.910643479692309,
+            "plotted_value": 25.901302979599766,
+            "pdf_x_pt": 145.96499633789062,
+            "pdf_y_pt": 263.487060546875
+          },
+          {
+            "log10_molar": -6.904704066729806,
+            "plotted_value": 26.096943247373623,
+            "pdf_x_pt": 146.02099609375,
+            "pdf_y_pt": 263.3780517578125
+          },
+          {
+            "log10_molar": -6.892825240804804,
+            "plotted_value": 26.197447136333597,
+            "pdf_x_pt": 146.13299560546875,
+            "pdf_y_pt": 263.3220520019531
+          },
+          {
+            "log10_molar": -6.886779015511095,
+            "plotted_value": 26.2997584521795,
+            "pdf_x_pt": 146.19000244140625,
+            "pdf_y_pt": 263.2650451660156
+          },
+          {
+            "log10_molar": -6.875324202173606,
+            "plotted_value": 26.400262341139477,
+            "pdf_x_pt": 146.29800415039062,
+            "pdf_y_pt": 263.20904541015625
+          },
+          {
+            "log10_molar": -6.869279595248553,
+            "plotted_value": 26.601270119059425,
+            "pdf_x_pt": 146.35499572753906,
+            "pdf_y_pt": 263.0970458984375
+          },
+          {
+            "log10_molar": -6.863340182286051,
+            "plotted_value": 26.7017740080194,
+            "pdf_x_pt": 146.41099548339844,
+            "pdf_y_pt": 263.0410461425781
+          },
+          {
+            "log10_molar": -6.851461356361048,
+            "plotted_value": 26.897414275793256,
+            "pdf_x_pt": 146.5229949951172,
+            "pdf_y_pt": 262.9320373535156
+          },
+          {
+            "log10_molar": -6.839582530436044,
+            "plotted_value": 27.098422053713207,
+            "pdf_x_pt": 146.63499450683594,
+            "pdf_y_pt": 262.8200378417969
+          },
+          {
+            "log10_molar": -6.828020904767348,
+            "plotted_value": 27.30118248800739,
+            "pdf_x_pt": 146.74400329589844,
+            "pdf_y_pt": 262.7070617675781
+          },
+          {
+            "log10_molar": -6.8220814918048465,
+            "plotted_value": 27.399933720593133,
+            "pdf_x_pt": 146.8000030517578,
+            "pdf_y_pt": 262.65203857421875
+          },
+          {
+            "log10_molar": -6.816036884879793,
+            "plotted_value": 27.595519217855294,
+            "pdf_x_pt": 146.85699462890625,
+            "pdf_y_pt": 262.5430603027344
+          },
+          {
+            "log10_molar": -6.804263252917341,
+            "plotted_value": 27.697830533701197,
+            "pdf_x_pt": 146.96800231933594,
+            "pdf_y_pt": 262.4860534667969
+          },
+          {
+            "log10_molar": -6.7982186459922875,
+            "plotted_value": 27.898838311621148,
+            "pdf_x_pt": 147.02499389648438,
+            "pdf_y_pt": 262.3740539550781
+          },
+          {
+            "log10_molar": -6.792279233029786,
+            "plotted_value": 27.999342200581122,
+            "pdf_x_pt": 147.08099365234375,
+            "pdf_y_pt": 262.31805419921875
+          },
+          {
+            "log10_molar": -6.78071760736109,
+            "plotted_value": 28.202157405387,
+            "pdf_x_pt": 147.19000244140625,
+            "pdf_y_pt": 262.2050476074219
+          },
+          {
+            "log10_molar": -6.774778194398589,
+            "plotted_value": 28.300853867461047,
+            "pdf_x_pt": 147.24600219726562,
+            "pdf_y_pt": 262.1500549316406
+          },
+          {
+            "log10_molar": -6.762899368473585,
+            "plotted_value": 28.496494135234904,
+            "pdf_x_pt": 147.35800170898438,
+            "pdf_y_pt": 262.0410461425781
+          },
+          {
+            "log10_molar": -6.756854761548532,
+            "plotted_value": 28.69930934004078,
+            "pdf_x_pt": 147.4149932861328,
+            "pdf_y_pt": 261.92803955078125
+          },
+          {
+            "log10_molar": -6.739034904292373,
+            "plotted_value": 29.000821006920706,
+            "pdf_x_pt": 147.5830078125,
+            "pdf_y_pt": 261.7600402832031
+          },
+          {
+            "log10_molar": -6.733521122286039,
+            "plotted_value": 29.201828784840657,
+            "pdf_x_pt": 147.63499450683594,
+            "pdf_y_pt": 261.6480407714844
+          },
+          {
+            "log10_molar": -6.727474896992331,
+            "plotted_value": 29.296910393142845,
+            "pdf_x_pt": 147.69200134277344,
+            "pdf_y_pt": 261.5950622558594
+          },
+          {
+            "log10_molar": -6.715596071067328,
+            "plotted_value": 29.497918171062793,
+            "pdf_x_pt": 147.8040008544922,
+            "pdf_y_pt": 261.4830627441406
+          },
+          {
+            "log10_molar": -6.709656658104826,
+            "plotted_value": 29.698925948982744,
+            "pdf_x_pt": 147.86000061035156,
+            "pdf_y_pt": 261.3710632324219
+          },
+          {
+            "log10_molar": -6.69183841921732,
+            "plotted_value": 30.002245042748594,
+            "pdf_x_pt": 148.0279998779297,
+            "pdf_y_pt": 261.2020568847656
+          },
+          {
+            "log10_molar": -6.6862178248797814,
+            "plotted_value": 30.197885310522455,
+            "pdf_x_pt": 148.08099365234375,
+            "pdf_y_pt": 261.0930480957031
+          },
+          {
+            "log10_molar": -6.680278411917279,
+            "plotted_value": 30.398893088442403,
+            "pdf_x_pt": 148.13699340820312,
+            "pdf_y_pt": 260.9810485839844
+          },
+          {
+            "log10_molar": -6.668399585992276,
+            "plotted_value": 30.499396977402377,
+            "pdf_x_pt": 148.24899291992188,
+            "pdf_y_pt": 260.925048828125
+          },
+          {
+            "log10_molar": -6.662460173029774,
+            "plotted_value": 30.700404755322328,
+            "pdf_x_pt": 148.30499267578125,
+            "pdf_y_pt": 260.81304931640625
+          },
+          {
+            "log10_molar": -6.650474534773565,
+            "plotted_value": 30.896045023096185,
+            "pdf_x_pt": 148.41799926757812,
+            "pdf_y_pt": 260.70404052734375
+          },
+          {
+            "log10_molar": -6.644535121811062,
+            "plotted_value": 31.09880545739037,
+            "pdf_x_pt": 148.4739990234375,
+            "pdf_y_pt": 260.591064453125
+          },
+          {
+            "log10_molar": -6.638914527473523,
+            "plotted_value": 31.299813235310317,
+            "pdf_x_pt": 148.52699279785156,
+            "pdf_y_pt": 260.47906494140625
+          },
+          {
+            "log10_molar": -6.627034083179865,
+            "plotted_value": 31.50082101323027,
+            "pdf_x_pt": 148.63900756835938,
+            "pdf_y_pt": 260.3670654296875
+          },
+          {
+            "log10_molar": -6.621094670217364,
+            "plotted_value": 31.696461281004126,
+            "pdf_x_pt": 148.69500732421875,
+            "pdf_y_pt": 260.258056640625
+          },
+          {
+            "log10_molar": -6.6151552572548615,
+            "plotted_value": 31.897469058924074,
+            "pdf_x_pt": 148.75100708007812,
+            "pdf_y_pt": 260.14605712890625
+          },
+          {
+            "log10_molar": -6.603171237367307,
+            "plotted_value": 32.09847683684402,
+            "pdf_x_pt": 148.86399841308594,
+            "pdf_y_pt": 260.0340576171875
+          },
+          {
+            "log10_molar": -6.597231824404805,
+            "plotted_value": 32.3012920416499,
+            "pdf_x_pt": 148.9199981689453,
+            "pdf_y_pt": 259.9210510253906
+          },
+          {
+            "log10_molar": -6.591716424029817,
+            "plotted_value": 32.40179593060988,
+            "pdf_x_pt": 148.9720001220703,
+            "pdf_y_pt": 259.86505126953125
+          },
+          {
+            "log10_molar": -6.579837598104813,
+            "plotted_value": 32.59743619838373,
+            "pdf_x_pt": 149.08399963378906,
+            "pdf_y_pt": 259.75604248046875
+          },
+          {
+            "log10_molar": -6.57379299117976,
+            "plotted_value": 32.89894786526366,
+            "pdf_x_pt": 149.1409912109375,
+            "pdf_y_pt": 259.5880432128906
+          },
+          {
+            "log10_molar": -6.5678535782172585,
+            "plotted_value": 33.099955643183606,
+            "pdf_x_pt": 149.19699096679688,
+            "pdf_y_pt": 259.4760437011719
+          },
+          {
+            "log10_molar": -6.555974752292254,
+            "plotted_value": 33.302770847989486,
+            "pdf_x_pt": 149.30899047851562,
+            "pdf_y_pt": 259.363037109375
+          },
+          {
+            "log10_molar": -6.550035339329753,
+            "plotted_value": 33.49835634525165,
+            "pdf_x_pt": 149.364990234375,
+            "pdf_y_pt": 259.2540588378906
+          },
+          {
+            "log10_molar": -6.543989114036045,
+            "plotted_value": 33.6993641231716,
+            "pdf_x_pt": 149.4219970703125,
+            "pdf_y_pt": 259.1420593261719
+          },
+          {
+            "log10_molar": -6.53242748836735,
+            "plotted_value": 33.900371901091546,
+            "pdf_x_pt": 149.531005859375,
+            "pdf_y_pt": 259.0300598144531
+          },
+          {
+            "log10_molar": -6.526594887736054,
+            "plotted_value": 34.1013796790115,
+            "pdf_x_pt": 149.58599853515625,
+            "pdf_y_pt": 258.9180603027344
+          },
+          {
+            "log10_molar": -6.514609249479845,
+            "plotted_value": 34.297019946785355,
+            "pdf_x_pt": 149.69900512695312,
+            "pdf_y_pt": 258.8090515136719
+          },
+          {
+            "log10_molar": -6.502730423554841,
+            "plotted_value": 34.70084292951118,
+            "pdf_x_pt": 149.81100463867188,
+            "pdf_y_pt": 258.58404541015625
+          },
+          {
+            "log10_molar": -6.4911704162548,
+            "plotted_value": 34.99517965935909,
+            "pdf_x_pt": 149.9199981689453,
+            "pdf_y_pt": 258.4200439453125
+          },
+          {
+            "log10_molar": -6.414170054036033,
+            "plotted_value": 37.19909027944651,
+            "pdf_x_pt": 150.64599609375,
+            "pdf_y_pt": 257.1920471191406
+          },
+          {
+            "log10_molar": -6.402291228111029,
+            "plotted_value": 37.496987092554576,
+            "pdf_x_pt": 150.75799560546875,
+            "pdf_y_pt": 257.02606201171875
+          },
+          {
+            "log10_molar": -6.396669015404836,
+            "plotted_value": 37.697994870474524,
+            "pdf_x_pt": 150.81100463867188,
+            "pdf_y_pt": 256.9140625
+          },
+          {
+            "log10_molar": -6.390729602442334,
+            "plotted_value": 37.89900264839448,
+            "pdf_x_pt": 150.86700439453125,
+            "pdf_y_pt": 256.80206298828125
+          },
+          {
+            "log10_molar": -6.21318323244855,
+            "plotted_value": 43.39626413669077,
+            "pdf_x_pt": 152.54100036621094,
+            "pdf_y_pt": 253.73904418945312
+          },
+          {
+            "log10_molar": -6.207243819486048,
+            "plotted_value": 43.69777580357069,
+            "pdf_x_pt": 152.5970001220703,
+            "pdf_y_pt": 253.571044921875
+          },
+          {
+            "log10_molar": -6.1957890061485585,
+            "plotted_value": 43.900563623120725,
+            "pdf_x_pt": 152.7050018310547,
+            "pdf_y_pt": 253.4580535888672
+          },
+          {
+            "log10_molar": -6.189744399223505,
+            "plotted_value": 44.19848782148464,
+            "pdf_x_pt": 152.76199340820312,
+            "pdf_y_pt": 253.29205322265625
+          },
+          {
+            "log10_molar": -6.183804986261004,
+            "plotted_value": 44.39771555777451,
+            "pdf_x_pt": 152.8179931640625,
+            "pdf_y_pt": 253.18104553222656
+          },
+          {
+            "log10_molar": -6.171926160336,
+            "plotted_value": 44.70100726628451,
+            "pdf_x_pt": 152.92999267578125,
+            "pdf_y_pt": 253.01205444335938
+          },
+          {
+            "log10_molar": -6.165986747373498,
+            "plotted_value": 44.997151423018344,
+            "pdf_x_pt": 152.98599243164062,
+            "pdf_y_pt": 252.8470458984375
+          },
+          {
+            "log10_molar": -6.154107921448494,
+            "plotted_value": 45.19815920093829,
+            "pdf_x_pt": 153.09799194335938,
+            "pdf_y_pt": 252.73504638671875
+          },
+          {
+            "log10_molar": -5.764013104198532,
+            "plotted_value": 57.201226379879095,
+            "pdf_x_pt": 156.7760009765625,
+            "pdf_y_pt": 246.04705810546875
+          },
+          {
+            "log10_molar": -5.758392509860992,
+            "plotted_value": 57.396866647652956,
+            "pdf_x_pt": 156.82899475097656,
+            "pdf_y_pt": 245.93804931640625
+          },
+          {
+            "log10_molar": -5.746513683935989,
+            "plotted_value": 57.597874425572904,
+            "pdf_x_pt": 156.9409942626953,
+            "pdf_y_pt": 245.8260498046875
+          },
+          {
+            "log10_molar": -5.740467458642281,
+            "plotted_value": 57.90119351933876,
+            "pdf_x_pt": 156.9980010986328,
+            "pdf_y_pt": 245.65704345703125
+          },
+          {
+            "log10_molar": -5.5574056882735094,
+            "plotted_value": 62.29644492707965,
+            "pdf_x_pt": 158.7239990234375,
+            "pdf_y_pt": 243.2080535888672
+          },
+          {
+            "log10_molar": -5.545526862348505,
+            "plotted_value": 62.39694881603962,
+            "pdf_x_pt": 158.83599853515625,
+            "pdf_y_pt": 243.1520538330078
+          },
+          {
+            "log10_molar": -5.533648036423502,
+            "plotted_value": 62.79896437187952,
+            "pdf_x_pt": 158.947998046875,
+            "pdf_y_pt": 242.9280548095703
+          },
+          {
+            "log10_molar": -5.521769210498499,
+            "plotted_value": 62.90127568772542,
+            "pdf_x_pt": 159.05999755859375,
+            "pdf_y_pt": 242.8710479736328
+          },
+          {
+            "log10_molar": -5.445087666904694,
+            "plotted_value": 64.50035554716708,
+            "pdf_x_pt": 159.78298950195312,
+            "pdf_y_pt": 241.9800567626953
+          },
+          {
+            "log10_molar": -5.4390414416109865,
+            "plotted_value": 64.60085943612704,
+            "pdf_x_pt": 159.83999633789062,
+            "pdf_y_pt": 241.92405700683594
+          },
+          {
+            "log10_molar": -5.427162615685983,
+            "plotted_value": 64.7964997039009,
+            "pdf_x_pt": 159.95199584960938,
+            "pdf_y_pt": 241.81504821777344
+          },
+          {
+            "log10_molar": -5.421223202723481,
+            "plotted_value": 64.89700359286087,
+            "pdf_x_pt": 160.00799560546875,
+            "pdf_y_pt": 241.75904846191406
+          },
+          {
+            "log10_molar": -5.409661577054785,
+            "plotted_value": 64.99750748182085,
+            "pdf_x_pt": 160.11700439453125,
+            "pdf_y_pt": 241.7030487060547
+          },
+          {
+            "log10_molar": -5.403722164092284,
+            "plotted_value": 65.1985152597408,
+            "pdf_x_pt": 160.17300415039062,
+            "pdf_y_pt": 241.59104919433594
+          },
+          {
+            "log10_molar": -5.397782751129782,
+            "plotted_value": 65.30079919033086,
+            "pdf_x_pt": 160.22900390625,
+            "pdf_y_pt": 241.5340576171875
+          },
+          {
+            "log10_molar": -5.385798731242227,
+            "plotted_value": 65.40130307929083,
+            "pdf_x_pt": 160.3419952392578,
+            "pdf_y_pt": 241.47805786132812
+          },
+          {
+            "log10_molar": -5.379964512242276,
+            "plotted_value": 65.5969433470647,
+            "pdf_x_pt": 160.39700317382812,
+            "pdf_y_pt": 241.36904907226562
+          },
+          {
+            "log10_molar": -5.374025099279774,
+            "plotted_value": 65.69563980913874,
+            "pdf_x_pt": 160.4530029296875,
+            "pdf_y_pt": 241.31405639648438
+          },
+          {
+            "log10_molar": -5.362465091979733,
+            "plotted_value": 65.79795112498464,
+            "pdf_x_pt": 160.56199645996094,
+            "pdf_y_pt": 241.25704956054688
+          },
+          {
+            "log10_molar": -5.356418866686026,
+            "plotted_value": 65.99895890290459,
+            "pdf_x_pt": 160.61900329589844,
+            "pdf_y_pt": 241.14505004882812
+          },
+          {
+            "log10_molar": -5.3504794537235245,
+            "plotted_value": 66.09946279186457,
+            "pdf_x_pt": 160.6750030517578,
+            "pdf_y_pt": 241.08905029296875
+          },
+          {
+            "log10_molar": -5.33860062779852,
+            "plotted_value": 66.19996668082453,
+            "pdf_x_pt": 160.78700256347656,
+            "pdf_y_pt": 241.03305053710938
+          },
+          {
+            "log10_molar": -5.332661214836019,
+            "plotted_value": 66.30227799667044,
+            "pdf_x_pt": 160.84300231933594,
+            "pdf_y_pt": 240.97604370117188
+          },
+          {
+            "log10_molar": -5.326616607910966,
+            "plotted_value": 66.49789087918845,
+            "pdf_x_pt": 160.89999389648438,
+            "pdf_y_pt": 240.86705017089844
+          },
+          {
+            "log10_molar": -5.315054982242271,
+            "plotted_value": 66.59658734126249,
+            "pdf_x_pt": 161.00900268554688,
+            "pdf_y_pt": 240.8120574951172
+          },
+          {
+            "log10_molar": -5.309222381610974,
+            "plotted_value": 66.69709123022247,
+            "pdf_x_pt": 161.06399536132812,
+            "pdf_y_pt": 240.7560577392578
+          },
+          {
+            "log10_molar": -5.297236743354765,
+            "plotted_value": 66.79940254606838,
+            "pdf_x_pt": 161.177001953125,
+            "pdf_y_pt": 240.6990509033203
+          },
+          {
+            "log10_molar": -5.285357917429761,
+            "plotted_value": 67.00041032398832,
+            "pdf_x_pt": 161.28900146484375,
+            "pdf_y_pt": 240.58705139160156
+          },
+          {
+            "log10_molar": -5.27379791012972,
+            "plotted_value": 67.1009142129483,
+            "pdf_x_pt": 161.3979949951172,
+            "pdf_y_pt": 240.5310516357422
+          },
+          {
+            "log10_molar": -5.267858497167218,
+            "plotted_value": 67.29652709546632,
+            "pdf_x_pt": 161.45399475097656,
+            "pdf_y_pt": 240.42205810546875
+          },
+          {
+            "log10_molar": -5.261919084204717,
+            "plotted_value": 67.39703098442628,
+            "pdf_x_pt": 161.50999450683594,
+            "pdf_y_pt": 240.36605834960938
+          },
+          {
+            "log10_molar": -5.2500402582797125,
+            "plotted_value": 67.49753487338626,
+            "pdf_x_pt": 161.6219940185547,
+            "pdf_y_pt": 240.31005859375
+          },
+          {
+            "log10_molar": -5.238161432354709,
+            "plotted_value": 67.70035007819214,
+            "pdf_x_pt": 161.73399353027344,
+            "pdf_y_pt": 240.19705200195312
+          },
+          {
+            "log10_molar": -5.226175794098499,
+            "plotted_value": 67.80085396715211,
+            "pdf_x_pt": 161.8470001220703,
+            "pdf_y_pt": 240.14105224609375
+          },
+          {
+            "log10_molar": -5.220660393723512,
+            "plotted_value": 67.89955042922615,
+            "pdf_x_pt": 161.8990020751953,
+            "pdf_y_pt": 240.0860595703125
+          },
+          {
+            "log10_molar": -5.214615786798459,
+            "plotted_value": 68.00186174507206,
+            "pdf_x_pt": 161.95599365234375,
+            "pdf_y_pt": 240.029052734375
+          },
+          {
+            "log10_molar": -5.202736960873455,
+            "plotted_value": 68.09519069700002,
+            "pdf_x_pt": 162.0679931640625,
+            "pdf_y_pt": 239.97705078125
+          },
+          {
+            "log10_molar": -5.190858134948452,
+            "plotted_value": 68.2980059018059,
+            "pdf_x_pt": 162.17999267578125,
+            "pdf_y_pt": 239.86404418945312
+          },
+          {
+            "log10_molar": -5.178979309023448,
+            "plotted_value": 68.39850979076587,
+            "pdf_x_pt": 162.2919921875,
+            "pdf_y_pt": 239.80804443359375
+          },
+          {
+            "log10_molar": -5.173357096317254,
+            "plotted_value": 68.49901367972585,
+            "pdf_x_pt": 162.34500122070312,
+            "pdf_y_pt": 239.75204467773438
+          },
+          {
+            "log10_molar": -5.161371458061045,
+            "plotted_value": 68.49901367972585,
+            "pdf_x_pt": 162.4580078125,
+            "pdf_y_pt": 239.75204467773438
+          },
+          {
+            "log10_molar": -5.149599444467247,
+            "plotted_value": 68.70002145764579,
+            "pdf_x_pt": 162.56900024414062,
+            "pdf_y_pt": 239.64004516601562
+          },
+          {
+            "log10_molar": -5.1376138062110375,
+            "plotted_value": 68.80052534660577,
+            "pdf_x_pt": 162.6820068359375,
+            "pdf_y_pt": 239.58404541015625
+          },
+          {
+            "log10_molar": -5.131674393248535,
+            "plotted_value": 68.89563434016381,
+            "pdf_x_pt": 162.73800659179688,
+            "pdf_y_pt": 239.5310516357422
+          },
+          {
+            "log10_molar": -5.126053798910997,
+            "plotted_value": 68.99613822912377,
+            "pdf_x_pt": 162.79100036621094,
+            "pdf_y_pt": 239.4750518798828
+          },
+          {
+            "log10_molar": -5.114174972985992,
+            "plotted_value": 69.09842215971383,
+            "pdf_x_pt": 162.9029998779297,
+            "pdf_y_pt": 239.41806030273438
+          },
+          {
+            "log10_molar": -5.108235560023491,
+            "plotted_value": 69.09842215971383,
+            "pdf_x_pt": 162.95899963378906,
+            "pdf_y_pt": 239.41806030273438
+          },
+          {
+            "log10_molar": -5.102190953098438,
+            "plotted_value": 69.19895343392966,
+            "pdf_x_pt": 163.0159912109375,
+            "pdf_y_pt": 239.36204528808594
+          },
+          {
+            "log10_molar": -5.090417321135986,
+            "plotted_value": 69.2976498960037,
+            "pdf_x_pt": 163.1269989013672,
+            "pdf_y_pt": 239.3070526123047
+          },
+          {
+            "log10_molar": -5.084372714210932,
+            "plotted_value": 69.3999612118496,
+            "pdf_x_pt": 163.18399047851562,
+            "pdf_y_pt": 239.2500457763672
+          },
+          {
+            "log10_molar": -5.078857313835945,
+            "plotted_value": 69.50046510080958,
+            "pdf_x_pt": 163.23599243164062,
+            "pdf_y_pt": 239.1940460205078
+          },
+          {
+            "log10_molar": -5.066871675579735,
+            "plotted_value": 69.50046510080958,
+            "pdf_x_pt": 163.3489990234375,
+            "pdf_y_pt": 239.1940460205078
+          },
+          {
+            "log10_molar": -5.060932262617233,
+            "plotted_value": 69.60096898976956,
+            "pdf_x_pt": 163.40499877929688,
+            "pdf_y_pt": 239.13804626464844
+          },
+          {
+            "log10_molar": -5.04905343669223,
+            "plotted_value": 69.6960779833276,
+            "pdf_x_pt": 163.51699829101562,
+            "pdf_y_pt": 239.08505249023438
+          },
+          {
+            "log10_molar": -5.043114023729728,
+            "plotted_value": 69.6960779833276,
+            "pdf_x_pt": 163.572998046875,
+            "pdf_y_pt": 239.08505249023438
+          },
+          {
+            "log10_molar": -5.037174610767226,
+            "plotted_value": 69.79658187228756,
+            "pdf_x_pt": 163.62899780273438,
+            "pdf_y_pt": 239.029052734375
+          },
+          {
+            "log10_molar": -5.0256129850985305,
+            "plotted_value": 69.89708576124754,
+            "pdf_x_pt": 163.73800659179688,
+            "pdf_y_pt": 238.97305297851562
+          },
+          {
+            "log10_molar": -5.019568378173478,
+            "plotted_value": 69.99758965020752,
+            "pdf_x_pt": 163.7949981689453,
+            "pdf_y_pt": 238.91705322265625
+          },
+          {
+            "log10_molar": -5.013628965210976,
+            "plotted_value": 69.99758965020752,
+            "pdf_x_pt": 163.8509979248047,
+            "pdf_y_pt": 238.91705322265625
+          },
+          {
+            "log10_molar": -5.0017501392859725,
+            "plotted_value": 70.09990096605343,
+            "pdf_x_pt": 163.96299743652344,
+            "pdf_y_pt": 238.86004638671875
+          },
+          {
+            "log10_molar": -4.99581072632347,
+            "plotted_value": 70.19859742812747,
+            "pdf_x_pt": 164.0189971923828,
+            "pdf_y_pt": 238.8050537109375
+          },
+          {
+            "log10_molar": -4.989871313360968,
+            "plotted_value": 70.19859742812747,
+            "pdf_x_pt": 164.0749969482422,
+            "pdf_y_pt": 238.8050537109375
+          },
+          {
+            "log10_molar": -4.978416500023479,
+            "plotted_value": 70.30090874397337,
+            "pdf_x_pt": 164.18299865722656,
+            "pdf_y_pt": 238.748046875
+          },
+          {
+            "log10_molar": -4.972371893098425,
+            "plotted_value": 70.40141263293334,
+            "pdf_x_pt": 164.239990234375,
+            "pdf_y_pt": 238.69204711914062
+          },
+          {
+            "log10_molar": -4.966432480135924,
+            "plotted_value": 70.40141263293334,
+            "pdf_x_pt": 164.29598999023438,
+            "pdf_y_pt": 238.69204711914062
+          },
+          {
+            "log10_molar": -4.95455365421092,
+            "plotted_value": 70.4947415848613,
+            "pdf_x_pt": 164.40798950195312,
+            "pdf_y_pt": 238.64004516601562
+          },
+          {
+            "log10_molar": -4.948507428917212,
+            "plotted_value": 70.4947415848613,
+            "pdf_x_pt": 164.46499633789062,
+            "pdf_y_pt": 238.64004516601562
+          },
+          {
+            "log10_molar": -4.93673379695476,
+            "plotted_value": 70.59702551545135,
+            "pdf_x_pt": 164.5760040283203,
+            "pdf_y_pt": 238.5830535888672
+          },
+          {
+            "log10_molar": -4.931006390286015,
+            "plotted_value": 70.59702551545135,
+            "pdf_x_pt": 164.6300048828125,
+            "pdf_y_pt": 238.5830535888672
+          },
+          {
+            "log10_molar": -4.925173789654719,
+            "plotted_value": 70.69752940441133,
+            "pdf_x_pt": 164.68499755859375,
+            "pdf_y_pt": 238.5270538330078
+          },
+          {
+            "log10_molar": -4.91318815139851,
+            "plotted_value": 70.7980332933713,
+            "pdf_x_pt": 164.79800415039062,
+            "pdf_y_pt": 238.47105407714844
+          },
+          {
+            "log10_molar": -4.9072487384360075,
+            "plotted_value": 70.7980332933713,
+            "pdf_x_pt": 164.85400390625,
+            "pdf_y_pt": 238.47105407714844
+          },
+          {
+            "log10_molar": -4.901309325473506,
+            "plotted_value": 70.89853718233128,
+            "pdf_x_pt": 164.91000366210938,
+            "pdf_y_pt": 238.41505432128906
+          },
+          {
+            "log10_molar": -4.889325305585952,
+            "plotted_value": 70.89853718233128,
+            "pdf_x_pt": 165.0229949951172,
+            "pdf_y_pt": 238.41505432128906
+          },
+          {
+            "log10_molar": -4.883809905210963,
+            "plotted_value": 70.99904107129126,
+            "pdf_x_pt": 165.0749969482422,
+            "pdf_y_pt": 238.3590545654297
+          },
+          {
+            "log10_molar": -4.877763679917256,
+            "plotted_value": 70.99904107129126,
+            "pdf_x_pt": 165.1320037841797,
+            "pdf_y_pt": 238.3590545654297
+          },
+          {
+            "log10_molar": -4.865991666323458,
+            "plotted_value": 71.09954496025122,
+            "pdf_x_pt": 165.2429962158203,
+            "pdf_y_pt": 238.3030548095703
+          },
+          {
+            "log10_molar": -4.85994544102975,
+            "plotted_value": 71.09954496025122,
+            "pdf_x_pt": 165.3000030517578,
+            "pdf_y_pt": 238.3030548095703
+          },
+          {
+            "log10_molar": -4.854006028067248,
+            "plotted_value": 71.2000488492112,
+            "pdf_x_pt": 165.3560028076172,
+            "pdf_y_pt": 238.24705505371094
+          },
+          {
+            "log10_molar": -4.842127202142245,
+            "plotted_value": 71.2000488492112,
+            "pdf_x_pt": 165.46800231933594,
+            "pdf_y_pt": 238.24705505371094
+          },
+          {
+            "log10_molar": -4.836187789179743,
+            "plotted_value": 71.30236016505711,
+            "pdf_x_pt": 165.5240020751953,
+            "pdf_y_pt": 238.19004821777344
+          },
+          {
+            "log10_molar": -4.830567194842204,
+            "plotted_value": 71.30236016505711,
+            "pdf_x_pt": 165.57699584960938,
+            "pdf_y_pt": 238.19004821777344
+          },
+          {
+            "log10_molar": -4.8186883689172,
+            "plotted_value": 71.39568911698505,
+            "pdf_x_pt": 165.68899536132812,
+            "pdf_y_pt": 238.13804626464844
+          },
+          {
+            "log10_molar": -4.8127489559546985,
+            "plotted_value": 71.39568911698505,
+            "pdf_x_pt": 165.7449951171875,
+            "pdf_y_pt": 238.13804626464844
+          },
+          {
+            "log10_molar": -4.800763317698489,
+            "plotted_value": 71.49797304757512,
+            "pdf_x_pt": 165.85800170898438,
+            "pdf_y_pt": 238.0810546875
+          },
+          {
+            "log10_molar": -4.788884491773485,
+            "plotted_value": 71.49797304757512,
+            "pdf_x_pt": 165.97000122070312,
+            "pdf_y_pt": 238.0810546875
+          },
+          {
+            "log10_molar": -4.777324484473445,
+            "plotted_value": 71.59847693653509,
+            "pdf_x_pt": 166.07899475097656,
+            "pdf_y_pt": 238.02505493164062
+          },
+          {
+            "log10_molar": -4.7713850715109425,
+            "plotted_value": 71.59847693653509,
+            "pdf_x_pt": 166.13499450683594,
+            "pdf_y_pt": 238.02505493164062
+          },
+          {
+            "log10_molar": -4.76544565854844,
+            "plotted_value": 71.69720078386499,
+            "pdf_x_pt": 166.1909942626953,
+            "pdf_y_pt": 237.9700469970703
+          },
+          {
+            "log10_molar": -4.747520607329729,
+            "plotted_value": 71.69720078386499,
+            "pdf_x_pt": 166.36000061035156,
+            "pdf_y_pt": 237.9700469970703
+          },
+          {
+            "log10_molar": -4.741688006698434,
+            "plotted_value": 71.79948471445503,
+            "pdf_x_pt": 166.4149932861328,
+            "pdf_y_pt": 237.91305541992188
+          },
+          {
+            "log10_molar": -4.730126381029738,
+            "plotted_value": 71.79948471445503,
+            "pdf_x_pt": 166.5240020751953,
+            "pdf_y_pt": 237.91305541992188
+          },
+          {
+            "log10_molar": -4.724186968067236,
+            "plotted_value": 71.89998860341501,
+            "pdf_x_pt": 166.5800018310547,
+            "pdf_y_pt": 237.8570556640625
+          },
+          {
+            "log10_molar": -4.70626353521718,
+            "plotted_value": 71.89998860341501,
+            "pdf_x_pt": 166.74899291992188,
+            "pdf_y_pt": 237.8570556640625
+          },
+          {
+            "log10_molar": -4.700324122254678,
+            "plotted_value": 72.00049249237499,
+            "pdf_x_pt": 166.80499267578125,
+            "pdf_y_pt": 237.80105590820312
+          },
+          {
+            "log10_molar": -4.68282308362348,
+            "plotted_value": 72.00049249237499,
+            "pdf_x_pt": 166.97000122070312,
+            "pdf_y_pt": 237.80105590820312
+          },
+          {
+            "log10_molar": -4.676883670660978,
+            "plotted_value": 72.10099638133497,
+            "pdf_x_pt": 167.0260009765625,
+            "pdf_y_pt": 237.74505615234375
+          },
+          {
+            "log10_molar": -4.659065431773473,
+            "plotted_value": 72.10099638133497,
+            "pdf_x_pt": 167.19400024414062,
+            "pdf_y_pt": 237.74505615234375
+          },
+          {
+            "log10_molar": -4.653126018810971,
+            "plotted_value": 72.19613276014884,
+            "pdf_x_pt": 167.25,
+            "pdf_y_pt": 237.69204711914062
+          },
+          {
+            "log10_molar": -4.635519786217222,
+            "plotted_value": 72.19613276014884,
+            "pdf_x_pt": 167.41600036621094,
+            "pdf_y_pt": 237.69204711914062
+          },
+          {
+            "log10_molar": -4.62958037325472,
+            "plotted_value": 72.29663664910882,
+            "pdf_x_pt": 167.4720001220703,
+            "pdf_y_pt": 237.63604736328125
+          },
+          {
+            "log10_molar": -4.605822721404714,
+            "plotted_value": 72.29663664910882,
+            "pdf_x_pt": 167.6959991455078,
+            "pdf_y_pt": 237.63604736328125
+          },
+          {
+            "log10_molar": -4.593838701517159,
+            "plotted_value": 72.3971405380688,
+            "pdf_x_pt": 167.80899047851562,
+            "pdf_y_pt": 237.58004760742188
+          },
+          {
+            "log10_molar": -4.582383888179669,
+            "plotted_value": 72.3971405380688,
+            "pdf_x_pt": 167.9169921875,
+            "pdf_y_pt": 237.58004760742188
+          },
+          {
+            "log10_molar": -4.570505062254665,
+            "plotted_value": 72.49942446865886,
+            "pdf_x_pt": 168.02899169921875,
+            "pdf_y_pt": 237.52305603027344
+          },
+          {
+            "log10_molar": -4.546640598073452,
+            "plotted_value": 72.49942446865886,
+            "pdf_x_pt": 168.25399780273438,
+            "pdf_y_pt": 237.52305603027344
+          },
+          {
+            "log10_molar": -4.541018385367258,
+            "plotted_value": 72.59814831598875,
+            "pdf_x_pt": 168.3070068359375,
+            "pdf_y_pt": 237.46804809570312
+          },
+          {
+            "log10_molar": -4.517260733517251,
+            "plotted_value": 72.59814831598875,
+            "pdf_x_pt": 168.531005859375,
+            "pdf_y_pt": 237.46804809570312
+          },
+          {
+            "log10_molar": -4.505276713629696,
+            "plotted_value": 72.7004322465788,
+            "pdf_x_pt": 168.6439971923828,
+            "pdf_y_pt": 237.4110565185547
+          },
+          {
+            "log10_molar": -4.47589846744215,
+            "plotted_value": 72.7004322465788,
+            "pdf_x_pt": 168.92098999023438,
+            "pdf_y_pt": 237.4110565185547
+          },
+          {
+            "log10_molar": -4.469959054479648,
+            "plotted_value": 72.80093613553878,
+            "pdf_x_pt": 168.97698974609375,
+            "pdf_y_pt": 237.3550567626953
+          },
+          {
+            "log10_molar": -4.24553339966712,
+            "plotted_value": 73.19758418123259,
+            "pdf_x_pt": 171.09298706054688,
+            "pdf_y_pt": 237.13404846191406
+          },
+          {
+            "log10_molar": -4.233652955373462,
+            "plotted_value": 73.29808807019256,
+            "pdf_x_pt": 171.2050018310547,
+            "pdf_y_pt": 237.0780487060547
+          },
+          {
+            "log10_molar": -4.168424606748493,
+            "plotted_value": 73.29808807019256,
+            "pdf_x_pt": 171.82000732421875,
+            "pdf_y_pt": 237.0780487060547
+          },
+          {
+            "log10_molar": -4.162592006117197,
+            "plotted_value": 73.39859195915254,
+            "pdf_x_pt": 171.875,
+            "pdf_y_pt": 237.0220489501953
+          },
+          {
+            "log10_molar": -4.091849875485894,
+            "plotted_value": 73.39859195915254,
+            "pdf_x_pt": 172.5419921875,
+            "pdf_y_pt": 237.0220489501953
+          },
+          {
+            "log10_molar": -4.079971049560891,
+            "plotted_value": 73.4990958481125,
+            "pdf_x_pt": 172.65399169921875,
+            "pdf_y_pt": 236.96604919433594
+          },
+          {
+            "log10_molar": -4.003287887598432,
+            "plotted_value": 73.4990958481125,
+            "pdf_x_pt": 173.3769989013672,
+            "pdf_y_pt": 236.96604919433594
+          }
+        ]
+      }
+    ],
+    "diagnostics": [
+      {
+        "series": "ADR",
+        "marker_count": 7,
+        "main_marker_count": 6,
+        "simple_error_segment_count": 40,
+        "curve_candidate_count": 1
+      },
+      {
+        "series": "NA",
+        "marker_count": 7,
+        "main_marker_count": 6,
+        "simple_error_segment_count": 48,
+        "curve_candidate_count": 1
+      },
+      {
+        "series": "DA",
+        "marker_count": 7,
+        "main_marker_count": 6,
+        "simple_error_segment_count": 24,
+        "curve_candidate_count": 1
+      }
+    ],
+    "summary": {
+      "visible_marker_count": 21,
+      "main_marker_count": 18,
+      "vehicle_marker_count": 3,
+      "visible_error_bar_count": 14,
+      "traced_curve_count": 3
+    },
+    "limitations": [
+      "Only visible marker centres, error-bar endpoints, and curve paths are recovered.",
+      "The vehicle points are visible geometry but are not assigned a log-concentration value.",
+      "Curve paths are traced vector geometry, not author-supplied 4PL parameters.",
+      "Raw replicate observations cannot be recovered from this rendered panel."
+    ]
+  },
+  "source_validation": {
+    "status": "validated_against_official_source_data",
+    "visible_markers": 21,
+    "source_matched_markers": 18,
+    "source_uncovered_vehicle_markers": 3,
+    "visible_error_bars": 14,
+    "source_sem_values": 18,
+    "sem_occluded_by_marker": 4,
+    "marker_mae": 0.042772081865138624,
+    "marker_max_absolute_error": 0.08521248386273328,
+    "visible_error_endpoint_mae": 0.05542766177406287,
+    "visible_error_endpoint_max_absolute_error": 0.14333221577784627,
+    "source_value_transform": "workbook mean and SD multiplied by 100; SEM = SD / sqrt(N)",
+    "source_role": "independent validation; never substituted for digitized PDF geometry"
+  },
+  "claims": {
+    "points": "vector_marker_extracted",
+    "visible_error_bars": "vector_error_endpoints_extracted",
+    "curves": "curve_path_traced",
+    "curve_parameters": "not_extracted",
+    "vehicle_source_values": "not_present_in_source_workbook",
+    "raw_replicates": "not_recoverable_from_rendered_panel"
+  },
+  "limitations": [
+    "Only visible marker centres, error-bar endpoints, and curve paths are recovered.",
+    "The vehicle points are visible geometry but are not assigned a log-concentration value.",
+    "Curve paths are traced vector geometry, not author-supplied 4PL parameters.",
+    "Raw replicate observations cannot be recovered from this rendered panel.",
+    "Four source-data SEM intervals are fully occluded by their visible markers and are not claimed as image-extracted error bars.",
+    "The official workbook validates the 18 concentration points but contains no vehicle rows for this panel.",
+    "This is a verified real-figure candidate case, not yet a stable general dose-response extractor.",
+    "WebPlotDigitizer has not yet been compared under matched calibration and intervention conditions."
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "status": "partial_visible_with_source_mapping",
+  "route": "candidate_raster_bubble_matrix_with_source_mapping",
+  "source_file": "Supplementary Data 6-1",
+  "panel_mapping": "Fig. 6a rows/columns follow the retained panel raster. Source mean/P fields are retained only for exact pair names; marker colour, centre and radius are measured from the raster.",
+  "rows": 208,
+  "pixel_extraction": {
+    "grid_bounds_px": [
+      347,
+      5,
+      1096,
+      296
+    ],
+    "grid_shape": [
+      8,
+      26
+    ],
+    "candidate_components": 207,
+    "visible_nodes": 207,
+    "unmatched_cells": [
+      {
+        "row": "DC_C3_LAMP3.Treg_C4_TNFRSF4",
+        "column": "CXCL10_CXCR3"
+      }
+    ],
+    "unassigned_components": 0,
+    "colour_mask": {
+      "minimum_chroma": 12,
+      "maximum_minimum_rgb": 251
+    },
+    "node_matching": {
+      "maximum_distance_px": 10.946923076923076,
+      "rule": "nearest categorical-grid centre"
+    }
+  },
+  "coverage": {
+    "categorical_grid_slots": 208,
+    "visible_raster_markers": 207,
+    "source_pairs_total": 83,
+    "source_pairs_with_visible_marker": 82,
+    "source_pairs_without_separable_marker": 1,
+    "raster_only_visible_markers": 125
+  },
+  "limitations": [
+    "The 207 separable raster markers support only their visible centre, colour and radius. Raster-only markers do not receive inferred significance means or P values.",
+    "One official source pair has no separable coloured marker under the retained raster evidence and is retained in the table without a drawn mark.",
+    "This is a candidate categorical bubble-matrix route. The locally verified geometry improves the recreation but does not recover hidden source observations."
+  ],
+  "schema_version": 1
+}

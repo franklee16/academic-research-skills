@@ -1,0 +1,111 @@
+{
+  "schema_version": 1,
+  "case_contract_version": 1,
+  "case_id": "nature-51329-fig5a",
+  "status": "partial_visible",
+  "extraction_status": "candidate_partial_visible",
+  "claim": "direct_pdf_vector_visible_spatial_point_recovery",
+  "registered_route": "unknown_refuse",
+  "registered_route_status": "not_automated",
+  "numeric_output_authorized_by_registered_route": false,
+  "extraction_strategy": "case_specific_direct_pdf_vector_spot_recovery",
+  "source_data_role": "independent_validation_only",
+  "source_contract": {
+    "article_url": "https://www.nature.com/articles/s41467-024-51329-2",
+    "figure_url": "https://www.nature.com/articles/s41467-024-51329-2/figures/5",
+    "article_pdf_sha256": "ed160426494e71b3e9b37a8d42adb17b474117b6805b3ecdbab26f9d435be075",
+    "pdf_page_1_based": 10,
+    "panel_crop_pdf_pt": [
+      80.0,
+      48.0,
+      520.0,
+      180.0
+    ],
+    "measurement_space": "PDF-vector point centres; source-crop pixels for gallery hit-testing",
+    "source_canvas_px": [
+      1834,
+      550
+    ]
+  },
+  "preflight": {
+    "registered_route": "unknown_refuse",
+    "reason": "Figure 5a is a spatial dot map with categorical and continuous colour encodings, not a registered filled-contour map.",
+    "candidate_workflow": "Direct recovery of visually verified, vector-drawn circle marks; no XY axis calibration was applied."
+  },
+  "visible_grammar": {
+    "chart_type": "spatial_point_map",
+    "left_panel": "categorical region spots",
+    "right_panels": "eight colour-mapped spot maps",
+    "coordinate_model": "relative map coordinates only; no physical axes are printed",
+    "mark_origin": "direct PDF vector-drawn circle marks"
+  },
+  "recoverable_representation": {
+    "left_map": "426 categorical spot centres, fills, and relative positions",
+    "right_maps": "3424 spot centres and rendered fills across eight displayed cell-type maps",
+    "colour_values": "nearest-CIELAB matches to the printed colourbar, retained only as visible display approximations"
+  },
+  "counts": {
+    "region_spots_total": 426,
+    "region_spots_by_category": {
+      "Cancer": 137,
+      "Duct Epithelium": 72,
+      "Pancreatic": 70,
+      "Stroma": 147
+    },
+    "colour_mapped_spots_total": 3424,
+    "colour_mapped_spots_by_map": {
+      "map_11": 496,
+      "map_12": 496,
+      "map_13": 496,
+      "map_14": 496,
+      "map_21": 360,
+      "map_22": 360,
+      "map_23": 360,
+      "map_24": 360
+    },
+    "primary_csv_rows": 3850
+  },
+  "colourbar_display_calibration": {
+    "displayed_labels": [
+      0.0,
+      0.2,
+      0.4,
+      0.6,
+      0.8,
+      1.0
+    ],
+    "one_tick_y_pt": 80.6225,
+    "zero_tick_y_pt": 142.846,
+    "sampled_column_px": 2080,
+    "sampled_row_range_px_inclusive": [
+      322,
+      595
+    ],
+    "nearest_colour_match_deltaE76": {
+      "median": 1.3480126569906568,
+      "p95": 3.5843765200050335,
+      "maximum": 7.102822251678931
+    },
+    "displayed_colour_value_range": [
+      0.02002458878076626,
+      1.0498605832201662
+    ]
+  },
+  "outputs": {
+    "primary_csv": "data.csv",
+    "region_spots_csv": "region-spots-visible.csv",
+    "probability_spots_csv": "probability-spots-visible.csv",
+    "original": "original.png",
+    "overlay": "overlay.png",
+    "recreated": "recreated.png",
+    "preflight_report": "preflight-report.json",
+    "figure_spec": "figure-spec.json"
+  },
+  "limitations": [
+    "Raw spatial-transcriptomics observations, cell IDs, and physical coordinates.",
+    "The authors' underlying probabilistic-mapping values beyond the rendered colour precision.",
+    "Any interpolation, model, deconvolution, or communication-analysis parameters.",
+    "An isopleth/contour surface: no contour lines or filled contour bands are present in Figure 5a."
+  ],
+  "review_required": "Visually inspect figure5a_vector_spot_overlay.png before treating the colour-derived values as usable display estimates."
+}

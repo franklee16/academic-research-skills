@@ -1,0 +1,70 @@
+{
+  "schema_version": 1,
+  "status": "needs_verified_configuration",
+  "inspection": {
+    "input_file": "F:\\AI\\thu-digitizer\\gallery\\assets\\cases\\nature-27341-fig1\\original.png",
+    "input_sha256": "8074417e4afa6a247e8d6b41e6fe86ad900abdec33748a88dba73da4df3f6dac",
+    "file_size_bytes": 161306,
+    "media_kind": "raster",
+    "coordinate_space": "pixel",
+    "format": "PNG",
+    "mode": "RGB",
+    "width": 1999,
+    "height": 1579,
+    "appearance": {
+      "background_proposal": "light",
+      "border_median_luminance_0_255": 254.99999999999997,
+      "border_colour_span_median_0_255": 0.0,
+      "pixel_count": 3156421,
+      "role": "appearance proposal only; not chart classification or numeric evidence"
+    }
+  },
+  "route_selection": {
+    "chart_type": "upset",
+    "primary": {
+      "route_id": "raster_lattice_composite_candidate",
+      "title": "Repeated aligned bars with categorical membership lattice",
+      "chart_types": [
+        "upset",
+        "lattice_composite"
+      ],
+      "media_kinds": [
+        "raster"
+      ],
+      "coordinate_models": [
+        "lattice_composite"
+      ],
+      "mark_grammars": [
+        "aligned_bar",
+        "row_bar",
+        "membership_cell",
+        "connector",
+        "categorical_strip"
+      ],
+      "maturity": "candidate",
+      "implementation": "scripts/candidate_digitize_lattice_composite.py",
+      "required_confirmations": [
+        "original_raster",
+        "panel_roi",
+        "layer_grammar",
+        "column_bar_color",
+        "row_bar_color",
+        "node_color",
+        "semantic_labels",
+        "row_value_axis",
+        "overlay_review"
+      ],
+      "recoverable": "Original-pixel repeated bar geometry, complete active/inactive/ambiguous cell classification, and independently validated visible values when supplied.",
+      "non_recoverable": "Hidden records, occluded cells, unverified text, and meanings not visibly encoded by the aligned layers.",
+      "automated_extraction": true
+    },
+    "fallback": null,
+    "decision": "needs_verified_configuration",
+    "reason": "A route is registered, but all required confirmations remain explicit before extraction."
+  },
+  "figure_spec_status": "valid_template_not_yet_verified",
+  "safety": {
+    "numeric_extraction_authorized": false,
+    "reason": "Preflight routing never converts proposed chart type, ROI, axes, or series into verified values."
+  }
+}

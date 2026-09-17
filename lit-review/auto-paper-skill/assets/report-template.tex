@@ -1,0 +1,64 @@
+\documentclass[12pt,a4paper]{ctexart}
+
+\usepackage{fontspec}
+\usepackage{xeCJK}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{geometry}
+\usepackage{hyperref}
+\usepackage{enumitem}
+\usepackage[most]{tcolorbox}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{mathtools}
+\usepackage{xcolor}
+\usepackage{titlesec}
+\usepackage{fancyhdr}
+\usepackage{caption}
+\usepackage{indentfirst}
+
+\geometry{top=2.3cm,bottom=2.4cm,left=2.2cm,right=2.2cm}
+\setmainfont{Noto Serif CJK SC}
+\setCJKmainfont{Noto Serif CJK SC}
+\setmonofont{DejaVu Sans Mono}
+\hypersetup{colorlinks=true,linkcolor=black,urlcolor=blue!60!black}
+\setlength{\parindent}{2\ccwd}
+\setlength{\parskip}{0.35em}
+\linespread{1.12}
+\definecolor{AutoPaperBlue}{HTML}{124E78}
+\definecolor{AutoPaperGray}{HTML}{F3F5F7}
+\titleformat{\section}{\Large\bfseries\color{AutoPaperBlue}}{\thesection}{0.8em}{}
+\titleformat{\subsection}{\normalsize\bfseries\color{black}}{\thesubsection}{0.65em}{}
+\titlespacing{\section}{0pt}{1.2em}{0.55em}
+\titlespacing{\subsection}{0pt}{0.9em}{0.35em}
+\setlist[itemize]{itemsep=0.16em,topsep=0.25em}
+\captionsetup{font=small,labelformat=empty}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{AutoPaperSkill}
+\fancyhead[R]{\leftmark}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.25pt}
+\tcbset{
+  colback=AutoPaperGray,
+  colframe=AutoPaperBlue,
+  arc=1mm,
+  boxrule=0.45pt,
+  left=6pt,
+  right=6pt,
+  top=5pt,
+  bottom=5pt
+}
+
+\title{__REPORT_TITLE__}
+\author{}
+\date{__REPORT_DATE__}
+
+\begin{document}
+\maketitle
+\tableofcontents
+\newpage
+
+__REPORT_BODY__
+
+\end{document}

@@ -1,0 +1,73 @@
+{
+  "skill": "messy-to-tidy-pipeline",
+  "version": "0.1.0",
+  "source_book": "Tidy Data — Hadley Wickham",
+  "darwin_compatible": true,
+  "test_cases": [
+    {
+      "id": "should-trigger-01",
+      "type": "should_trigger",
+      "prompt": "帮我把这个宽表 melt 成长表,列名 2018-2023 应该变成一个 year 列",
+      "expected_behavior": "应激活 messy-to-tidy-pipeline, 执行 melt 操作, 将年份列头转为 year 变量, 原值转为对应的 measure 变量",
+      "notes": "正面场景: 明确的 melt 请求"
+    },
+    {
+      "id": "should-trigger-02",
+      "type": "should_trigger",
+      "prompt": "我的列名叫 Beijing_PM25、Shanghai_PM25、Beijing_SO2、Shanghai_SO2,需要把城市和污染物拆成两个独立变量",
+      "expected_behavior": "应激活, 识别为模式 1+2 组合: 先 melt 将列头转为单列, 再 split 拆出 city 和 pollutant",
+      "notes": "正面场景: 复合列名需要拆分"
+    },
+    {
+      "id": "should-trigger-03",
+      "type": "should_trigger",
+      "prompt": "这个数据有 element 列,值是 temp 和 humidity,日期铺在 d1-d30 列里。需要 reshape 成每天一行, temp 和 humidity 各一列",
+      "expected_behavior": "应激活, 识别为模式 3, 执行 melt→cast: 先 melt d1-d30, 再 cast element 列展开为独立列",
+      "notes": "正面场景: 变量在行和列, 类似气象数据"
+    },
+    {
+      "id": "should-trigger-04",
+      "type": "should_trigger",
+      "prompt": "我这张表里每首歌的歌手名和时长在每周排名行里都重复了,感觉不对。怎么规范化?",
+      "expected_behavior": "应激活, 识别为模式 4 (混合观察类型), 建议拆为歌曲表和排名表, 用 song_id 关联",
+      "notes": "正面场景: 冗余暗示混合观察类型, 直接对应 Billboard 案例"
+    },
+    {
+      "id": "should-not-trigger-01",
+      "type": "should_not_trigger",
+      "prompt": "帮我把这列的缺失值用均值填充",
+      "expected_behavior": "不应激活, 这是缺失值处理(数据质量), 不是 reshape 操作",
+      "notes": "诱饵: 数据清洗请求, 但不是结构问题"
+    },
+    {
+      "id": "should-not-trigger-02",
+      "type": "should_not_trigger",
+      "prompt": "我需要把这两个表按 user_id 做 inner join",
+      "expected_behavior": "不应激活, 这是标准数据库 join 操作(两个已有整洁表的横向合并), 不是 reshape",
+      "notes": "诱饵: '合并表'的字面意思容易混淆"
+    },
+    {
+      "id": "should-not-trigger-03",
+      "type": "should_not_trigger",
+      "prompt": "我有一批 CSV 文件按年份分的,需要全部合并成一个表",
+      "expected_behavior": "不应激活 messy-to-tidy-pipeline, 应推荐 multi-table-merge skill",
+      "notes": "诱饵: 多文件合并是 multi-table-merge 的场景, 不是单表 reshape"
+    },
+    {
+      "id": "edge-01",
+      "type": "edge_case",
+      "prompt": "我有一个透视表(pivot table)输出,需要把它转回原始明细格式",
+      "expected_behavior": "应激活, 这是 melt 操作 (pivot 的逆), 但需要确认: 透视表的聚合是否丢失了明细粒度。如果透视表是 sum/mean 聚合的, 无法完全还原明细",
+      "notes": "边界: melt 是 pivot 的逆, 但聚合后的透视表不可逆"
+    },
+    {
+      "id": "edge-02",
+      "type": "edge_case",
+      "prompt": "列名是产品型号(如 iPhone_15、Galaxy_S24),但我的分析需要把产品型号保留为列名而不是 melt",
+      "expected_behavior": "应激活但给出 nuanced 建议: 从整洁数据角度看这确实是模式 1 (列头是值), 但如果分析目的是比较产品(矩阵操作), 宽表可能更合适。Wickham 承认宽表对交叉设计有存储和计算优势",
+      "notes": "边界: 并非所有非整洁格式都需要修复, 取决于分析目的"
+    }
+  ],
+  "minimum_pass_rate": 0.8,
+  "notes": "4 条 should_trigger + 3 条 should_not_trigger + 2 条 edge_case。所有 should_not_trigger 必须通过 (诱饵容错为 0)。"
+}

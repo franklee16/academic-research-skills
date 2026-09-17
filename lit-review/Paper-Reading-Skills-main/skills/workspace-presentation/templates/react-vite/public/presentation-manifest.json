@@ -1,0 +1,39 @@
+{
+  "schemaVersion": 1,
+  "presentation": {
+    "title": "Workspace Presentation",
+    "slug": "workspace-presentation",
+    "generatedAt": "not generated yet",
+    "sourceKind": "placeholder",
+    "sourcePath": "",
+    "sourceLabel": "",
+    "status": "missing",
+    "description": "Generate presentation metadata to replace this placeholder."
+  },
+  "sections": [
+    {
+      "id": "overview",
+      "title": "Research State Overview",
+      "kind": "overview",
+      "summaryFile": "generated-summaries/overview.json"
+    },
+    {
+      "id": "source-files",
+      "title": "Source Files",
+      "kind": "source-files"
+    }
+  ],
+  "modules": [
+    {
+      "id": "overview",
+      "sectionId": "overview",
+      "title": "Research State Overview",
+      "workflow": "placeholder",
+      "displayCategory": "primary-display",
+      "summaryFile": "generated-summaries/overview.json",
+      "sourceFileIds": []
+    }
+  ],
+  "sourceFileIds": [],
+  "warnings": ["This placeholder should be overwritten by the Workspace Presentation skill."]
+}

@@ -1,0 +1,22 @@
+[
+  {"query":"A new SSRN paper looks almost identical to my job-market paper. Our WP was public six months earlier; compare the actual public dates and tell me what earlier work, if any, pre-empts us.","should_trigger":true},
+  {"query":"这是我的博士论文proposal。请建立竞争论文地图，重点检查近两年的working papers，并说明哪些贡献可能已经不安全。","should_trigger":true},
+  {"query":"I replaced county-level aggregates with matched worker-firm records. Update the competitor radar and re-score the papers we were watching.","should_trigger":true},
+  {"query":"Set up a weekly monitor for new papers or revisions that could threaten my paper's primary contribution; notify me only for material changes.","should_trigger":true},
+  {"query":"Find methods papers I can borrow to validate an LLM-derived behavioral measure in my finance project, even if their substantive topic is different.","should_trigger":true},
+  {"query":"My coauthor thinks this conference draft kills our mechanism claim. Please compare the actual manuscript with our current fingerprint.","should_trigger":true},
+  {"query":"Search for job-market papers using account-level investor-manager matching that could overlap our contribution, and keep a durable registry so we can rerun this next month.","should_trigger":true},
+  {"query":"We use a confidential dataset. Build privacy-safe public queries and map the closest competing projects without exposing its name.","should_trigger":true},
+  {"query":"After the new experiment results, our main claim changed. Rebuild the novelty boundary and update the existing literature monitor.","should_trigger":true},
+  {"query":"I attached our full WP draft, but it may only have circulated privately. Before using a priority cutoff, check or ask when it first became publicly accessible.","should_trigger":true},
+  {"query":"Summarize the main argument of this famous paper in two paragraphs for my undergraduate class.","should_trigger":false},
+  {"query":"Write a thematic literature review on household finance with a smooth narrative and a clear research gap.","should_trigger":false},
+  {"query":"Fix the capitalization and DOI fields in my BibTeX bibliography and remove duplicate references.","should_trigger":false},
+  {"query":"Verify that every citation in introduction.tex supports the sentence attached to it and flag retracted sources.","should_trigger":false},
+  {"query":"Translate this English abstract into formal academic Chinese without changing the claims.","should_trigger":false},
+  {"query":"Help me derive the equilibrium in this signaling model and check whether Proposition 2 follows from the assumptions.","should_trigger":false},
+  {"query":"I need a list of ten recent papers about CEO overconfidence for a reading group; title and link are enough.","should_trigger":false},
+  {"query":"Turn these notes into a LaTeX research proposal with motivation, hypotheses, and an empirical plan.","should_trigger":false},
+  {"query":"Create a weekly general newsletter covering AI news and startup funding announcements.","should_trigger":false},
+  {"query":"Proofread my introduction for grammar, flow, and journal style while preserving all citations.","should_trigger":false}
+]

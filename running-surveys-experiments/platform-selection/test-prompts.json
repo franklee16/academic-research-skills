@@ -1,0 +1,66 @@
+{
+  "skill": "platform-selection",
+  "version": "0.1.0",
+  "source_book": "Survey Curious? Start-Up Guide — Bergman, Chinco, Hartzmark, Sussman (2020)",
+  "darwin_compatible": true,
+  "test_cases": [
+    {
+      "id": "should-trigger-01",
+      "type": "should_trigger",
+      "prompt": "Which platform should I use for my survey — MTurk, Prolific, CloudResearch, or Lucid?",
+      "expected_behavior": "Activate platform-selection. Walk through population-target first, then score each platform against it. Note 2026 era: raw MTurk rarely the right primary; CloudResearch / Prolific more defensible.",
+      "notes": "Direct platform-choice question."
+    },
+    {
+      "id": "should-trigger-02",
+      "type": "should_trigger",
+      "prompt": "I want a US-representative sample for my study. Where should I recruit?",
+      "expected_behavior": "Activate platform-selection. For US representative, Prolific or Lucid Theorem (quota sampling) is closer than MTurk (convenience). Specify sample-size tradeoffs.",
+      "notes": "Population-targeted recruitment."
+    },
+    {
+      "id": "should-trigger-03",
+      "type": "should_trigger",
+      "prompt": "I'm getting bad data quality on MTurk. Should I switch?",
+      "expected_behavior": "Activate platform-selection. Diagnose: bad data can be bot / professional-survey-taker / fatigue / population mismatch. Recommend CloudResearch (same pool, better screening) or Prolific (different pool, ethical pay floor).",
+      "notes": "Quality-problem-from-platform = primary signal."
+    },
+    {
+      "id": "should-trigger-04",
+      "type": "should_trigger",
+      "prompt": "I want to reach finance professionals for a survey. Lucid Marketplace?",
+      "expected_behavior": "Activate platform-selection. Lucid Marketplace is the right answer for targeted subgroups. Note: cost is 3-4× Lucid Theorem. Discuss pay-rate and design tradeoffs.",
+      "notes": "Targeted-subgroup recruitment."
+    },
+    {
+      "id": "should-not-trigger-01",
+      "type": "should_not_trigger",
+      "prompt": "How much should I pay MTurk workers?",
+      "expected_behavior": "Do NOT activate platform-selection. The user has chosen MTurk and is asking about pay rate. Defer to fair-pay-and-reputation.",
+      "notes": "Trap: 'MTurk' is on both skills; but this is operational pay, not platform choice."
+    },
+    {
+      "id": "should-not-trigger-02",
+      "type": "should_not_trigger",
+      "prompt": "My survey items are getting weird responses. How do I fix them?",
+      "expected_behavior": "Do NOT activate platform-selection. Question-design concern. Defer to clarity-concreteness / avoid-leading-questions.",
+      "notes": "Trap: 'weird responses' could be a population issue, but the user is asking about items."
+    },
+    {
+      "id": "should-not-trigger-03",
+      "type": "should_not_trigger",
+      "prompt": "Should my survey use the Likert scale or open-ended responses?",
+      "expected_behavior": "Do NOT activate platform-selection. Item-design concern. Defer to design-layer skills.",
+      "notes": "Trap: 'survey' wording adjacency."
+    },
+    {
+      "id": "edge-01",
+      "type": "edge_case",
+      "prompt": "I want to use MTurk for cost reasons. Is that defensible?",
+      "expected_behavior": "Edge: yes, but with screening. Recommend CloudResearch wrapper for screening + bot mitigation. Default to ethical pay (≥$7.50/hr). Acknowledge cost-saving tradeoff; do not paternalize.",
+      "notes": "Edge: user has constraints; offer defensible path."
+    }
+  ],
+  "minimum_pass_rate": 0.85,
+  "notes": "Trap: any prompt with 'MTurk' or 'Prolific' looks like a trigger. Filter: only fire when the prompt is a *choice* between platforms or population-targeting, not operational follow-up."
+}

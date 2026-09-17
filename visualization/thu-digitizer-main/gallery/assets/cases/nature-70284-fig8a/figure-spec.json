@@ -1,0 +1,293 @@
+{
+  "schema_version": 1,
+  "status": "ready_for_assisted_extraction",
+  "source": {
+    "input_file": "41467_2026_70284_Fig8_HTML.png",
+    "sha256": "030221d33457598cab08442d0af1d0add749a16aaa6860c4124862b2b5c07d3e",
+    "media_kind": "raster",
+    "coordinate_space": "pixel",
+    "measurement_space": "original_raster_pixels",
+    "resampling_applied": false,
+    "width": 2001,
+    "height": 1235,
+    "page": null
+  },
+  "panels": [
+    {
+      "panel_id": "fig8a-temperature-sensitivity",
+      "bounds": [
+        0,
+        0,
+        959,
+        360
+      ],
+      "bounds_verification": "verified",
+      "plot_bounds": [
+        224,
+        39,
+        959,
+        317
+      ],
+      "plot_bounds_verification": "verified",
+      "chart_type": "bar",
+      "chart_type_verification": "verified",
+      "coordinate_model": "categorical_value",
+      "coordinate_model_verification": "verified",
+      "axes": [
+        {
+          "axis_id": "category",
+          "orientation": "category",
+          "scale": "categorical",
+          "verification": "verified",
+          "anchors": [
+            {
+              "pixel": 56.5,
+              "value": "CropR to Grass"
+            },
+            {
+              "pixel": 91,
+              "value": "CropR to Bare"
+            },
+            {
+              "pixel": 126,
+              "value": "TreeBL to Grass"
+            },
+            {
+              "pixel": 161,
+              "value": "TreeBL to CropR"
+            },
+            {
+              "pixel": 195,
+              "value": "TreeNL to Grass"
+            },
+            {
+              "pixel": 230,
+              "value": "Shrub to CropR"
+            },
+            {
+              "pixel": 265,
+              "value": "Shrub to Grass"
+            },
+            {
+              "pixel": 299,
+              "value": "TreeNL to CropR"
+            }
+          ]
+        },
+        {
+          "axis_id": "value",
+          "orientation": "value",
+          "scale": "linear",
+          "verification": "verified",
+          "anchors": [
+            {
+              "pixel": 268.5,
+              "value": -0.004
+            },
+            {
+              "pixel": 902.5,
+              "value": 0.002
+            }
+          ]
+        }
+      ],
+      "series": [
+        {
+          "series_id": "NfN-SSP1",
+          "metric": "temperature_sensitivity",
+          "unit": "degree_C_per_percent_change",
+          "displayed_statistic": "mean_across_200_ridge_fits",
+          "error_interval": "bootstrap_percentile_2.5_to_97.5",
+          "bar_colors_by_category": [
+            "#67001f",
+            "#ae172a",
+            "#c13639",
+            "#e7f0f4",
+            "#a0cce2",
+            "#3e8cbf",
+            "#114781",
+            "#053061"
+          ],
+          "error_color": "#000000",
+          "verification": "verified"
+        }
+      ],
+      "mark_grammars": [
+        "rectangle",
+        "error_interval"
+      ],
+      "route": {
+        "route_id": "raster_bar_candidate",
+        "maturity": "candidate",
+        "implementation": "scripts/candidate_digitize_bar_chart.py",
+        "automated_extraction": true
+      },
+      "required_confirmations": [
+        "panel_roi",
+        "plot_bounds",
+        "value_axis",
+        "orientation",
+        "layout",
+        "category_centers",
+        "series_colors",
+        "legend_exclusions"
+      ],
+      "confirmations": {
+        "panel_roi": "verified",
+        "plot_bounds": "verified",
+        "value_axis": "verified",
+        "orientation": "verified",
+        "layout": "verified",
+        "category_centers": "verified",
+        "series_colors": "verified",
+        "legend_exclusions": "not_applicable"
+      },
+      "recoverable": "Visible horizontal rectangle endpoints and separately visible error-interval endpoints calibrated to the linear value axis.",
+      "non_recoverable": "The 200 regression fits, grid-cell observations, hidden values, and any interval semantics beyond the caption-verified bootstrap percentiles."
+    },
+    {
+      "panel_id": "fig8a-regional-contribution",
+      "bounds": [
+        1045,
+        0,
+        2000,
+        360
+      ],
+      "bounds_verification": "verified",
+      "plot_bounds": [
+        1266,
+        39,
+        2000,
+        317
+      ],
+      "plot_bounds_verification": "verified",
+      "chart_type": "bar",
+      "chart_type_verification": "verified",
+      "coordinate_model": "categorical_value",
+      "coordinate_model_verification": "verified",
+      "axes": [
+        {
+          "axis_id": "category",
+          "orientation": "category",
+          "scale": "categorical",
+          "verification": "verified",
+          "anchors": [
+            {
+              "pixel": 56.5,
+              "value": "CropR to Grass"
+            },
+            {
+              "pixel": 91,
+              "value": "TreeBL to Grass"
+            },
+            {
+              "pixel": 126,
+              "value": "CropR to Bare"
+            },
+            {
+              "pixel": 161,
+              "value": "TreeNL to Grass"
+            },
+            {
+              "pixel": 195,
+              "value": "Shrub to Grass"
+            },
+            {
+              "pixel": 230,
+              "value": "TreeBL to CropR"
+            },
+            {
+              "pixel": 265,
+              "value": "Shrub to CropR"
+            },
+            {
+              "pixel": 299,
+              "value": "TreeNL to CropR"
+            }
+          ]
+        },
+        {
+          "axis_id": "value",
+          "orientation": "value",
+          "scale": "linear",
+          "verification": "verified",
+          "anchors": [
+            {
+              "pixel": 1438.5,
+              "value": -0.001
+            },
+            {
+              "pixel": 1869.5,
+              "value": 0.001
+            }
+          ]
+        }
+      ],
+      "series": [
+        {
+          "series_id": "NfN-SSP1",
+          "metric": "regional_temperature_contribution",
+          "unit": "degree_C",
+          "displayed_statistic": "mean_across_200_ridge_fits",
+          "error_interval": "bootstrap_percentile_2.5_to_97.5",
+          "bar_colors_by_category": [
+            "#67001f",
+            "#dd7059",
+            "#fcdfcf",
+            "#c5dfec",
+            "#bddbea",
+            "#b1d5e7",
+            "#b1d5e7",
+            "#053061"
+          ],
+          "error_color": "#000000",
+          "verification": "verified"
+        }
+      ],
+      "mark_grammars": [
+        "rectangle",
+        "error_interval"
+      ],
+      "route": {
+        "route_id": "raster_bar_candidate",
+        "maturity": "candidate",
+        "implementation": "scripts/candidate_digitize_bar_chart.py",
+        "automated_extraction": true
+      },
+      "required_confirmations": [
+        "panel_roi",
+        "plot_bounds",
+        "value_axis",
+        "orientation",
+        "layout",
+        "category_centers",
+        "series_colors",
+        "legend_exclusions"
+      ],
+      "confirmations": {
+        "panel_roi": "verified",
+        "plot_bounds": "verified",
+        "value_axis": "verified",
+        "orientation": "verified",
+        "layout": "verified",
+        "category_centers": "verified",
+        "series_colors": "verified",
+        "legend_exclusions": "not_applicable"
+      },
+      "recoverable": "Visible horizontal rectangle endpoints and separately visible error-interval endpoints calibrated to the linear value axis.",
+      "non_recoverable": "The 200 regression fits, grid-cell observations, hidden values, and any interval semantics beyond the caption-verified bootstrap percentiles."
+    }
+  ],
+  "evidence_contract": {
+    "required": [
+      "input_hash",
+      "panel_and_plot_bounds",
+      "calibration_anchors",
+      "immutable_extraction_csv",
+      "json_report",
+      "overlay_or_recreation",
+      "confidence_and_refusal_reasons"
+    ],
+    "source_data_role": "independent_validation_only"
+  }
+}

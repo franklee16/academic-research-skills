@@ -1,0 +1,7 @@
+interface:
+  display_name: "AutoPaperSkill"
+  short_description: "Find, save, index, and analyze research papers"
+  default_prompt: "Use $auto-paper-skill to find, deduplicate, save, index, and analyze papers for my topic, venue, or paper list."
+
+policy:
+  allow_implicit_invocation: true

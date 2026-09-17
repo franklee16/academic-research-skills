@@ -1,0 +1,175 @@
+{
+  "schema_version": 1,
+  "family": "scatter",
+  "status": "validated_local_stable",
+  "input_file": "scatter.png",
+  "raster_dimensions": [
+    600,
+    400
+  ],
+  "plot_bounds": {
+    "left": 78.0,
+    "top": 44.0,
+    "right": 474.0,
+    "bottom": 336.0
+  },
+  "calibration": {
+    "x": [
+      0,
+      10
+    ],
+    "y": [
+      0,
+      10
+    ],
+    "assumption": "verified linear axes"
+  },
+  "series": [
+    "red",
+    "blue",
+    "green"
+  ],
+  "points": [
+    {
+      "series": "red",
+      "x": 6.111111111111111,
+      "y": 5.0,
+      "x_pixel": 320.0,
+      "y_pixel": 190.0
+    },
+    {
+      "series": "red",
+      "x": 8.409090909090908,
+      "y": 4.109589041095891,
+      "x_pixel": 411.0,
+      "y_pixel": 216.0
+    },
+    {
+      "series": "red",
+      "x": 2.398989898989899,
+      "y": 3.390410958904109,
+      "x_pixel": 173.0,
+      "y_pixel": 237.0
+    },
+    {
+      "series": "red",
+      "x": 4.090909090909091,
+      "y": 2.705479452054795,
+      "x_pixel": 240.0,
+      "y_pixel": 257.0
+    },
+    {
+      "series": "red",
+      "x": 0.9090909090909091,
+      "y": 2.089041095890411,
+      "x_pixel": 114.0,
+      "y_pixel": 275.0
+    },
+    {
+      "series": "blue",
+      "x": 8.712121212121213,
+      "y": 8.013698630136986,
+      "x_pixel": 423.0,
+      "y_pixel": 102.0
+    },
+    {
+      "series": "blue",
+      "x": 1.2121212121212122,
+      "y": 7.5,
+      "x_pixel": 126.0,
+      "y_pixel": 117.0
+    },
+    {
+      "series": "blue",
+      "x": 4.898989898989899,
+      "y": 7.191780821917808,
+      "x_pixel": 272.0,
+      "y_pixel": 126.0
+    },
+    {
+      "series": "blue",
+      "x": 6.994949494949495,
+      "y": 6.404109589041096,
+      "x_pixel": 355.0,
+      "y_pixel": 149.0
+    },
+    {
+      "series": "blue",
+      "x": 3.207070707070707,
+      "y": 6.095890410958904,
+      "x_pixel": 205.0,
+      "y_pixel": 158.0
+    },
+    {
+      "series": "green",
+      "x": 3.888888888888889,
+      "y": 5.205479452054795,
+      "x_pixel": 232.0,
+      "y_pixel": 184.0
+    },
+    {
+      "series": "green",
+      "x": 9.090909090909092,
+      "y": 5.102739726027397,
+      "x_pixel": 438.0,
+      "y_pixel": 187.0
+    },
+    {
+      "series": "green",
+      "x": 1.792929292929293,
+      "y": 4.794520547945205,
+      "x_pixel": 149.0,
+      "y_pixel": 196.0
+    },
+    {
+      "series": "green",
+      "x": 5.303030303030303,
+      "y": 4.212328767123288,
+      "x_pixel": 288.0,
+      "y_pixel": 213.0
+    },
+    {
+      "series": "green",
+      "x": 6.792929292929293,
+      "y": 3.595890410958904,
+      "x_pixel": 347.0,
+      "y_pixel": 231.0
+    }
+  ],
+  "benchmark_metrics": [
+    {
+      "case": "scatter",
+      "family": "scatter",
+      "series": "red",
+      "method": "component_centroids",
+      "mae": 0.007501037775010366,
+      "coverage": 1.0,
+      "normalized_score": 0.0007501037775010655,
+      "count": 5
+    },
+    {
+      "case": "scatter",
+      "family": "scatter",
+      "series": "blue",
+      "method": "component_centroids",
+      "mae": 0.006751072367510868,
+      "coverage": 1.0,
+      "normalized_score": 0.0006751072367510158,
+      "count": 5
+    },
+    {
+      "case": "scatter",
+      "family": "scatter",
+      "series": "green",
+      "method": "component_centroids",
+      "mae": 0.006751072367510602,
+      "coverage": 1.0,
+      "normalized_score": 0.0006751072367510158,
+      "count": 5
+    }
+  ],
+  "limitations": [
+    "Only visible, colour-distinct marker components are recovered.",
+    "Overlapped same-colour points and hidden source observations are not inferred."
+  ]
+}

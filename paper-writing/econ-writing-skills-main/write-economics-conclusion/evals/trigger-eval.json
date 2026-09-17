@@ -1,0 +1,8 @@
+[
+  {"query":"请完整阅读这份实证经济学论文主体，并撰写一节可直接放入论文的英文结论；结论必须忠于正文且不能夸大机制和政策含义。","should_trigger":true},
+  {"query":"Read this structural economics manuscript and write its publication-ready English conclusion, separating estimated objects, model implications, and counterfactuals.","should_trigger":true},
+  {"query":"我的模型、数据、实证结果和机制分析已经完成，请据此重写论文结论，正式文本使用英文。","should_trigger":true},
+  {"query":"Fact-check and revise this economics conclusion against the body, preserving null-result qualifications and exact quantitative baselines.","should_trigger":true},
+  {"query":"请为论文写一个100到150词的英文摘要。","should_trigger":false},
+  {"query":"Summarize Table 4 and explain whether the coefficient is statistically significant; do not draft a conclusion.","should_trigger":false}
+]

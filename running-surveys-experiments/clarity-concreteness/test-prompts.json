@@ -1,0 +1,66 @@
+{
+  "skill": "clarity-concreteness",
+  "version": "0.1.0",
+  "source_book": "Survey Curious? Start-Up Guide — Bergman, Chinco, Hartzmark, Sussman (2020)",
+  "darwin_compatible": true,
+  "test_cases": [
+    {
+      "id": "should-trigger-01",
+      "type": "should_trigger",
+      "prompt": "How do I rewrite 'How do you think the market will perform short-term?' to be unambiguous?",
+      "expected_behavior": "Activate clarity-concreteness. Replace 'the market' with 'S&P 500' and 'short-term' with 'between today and one month from today (DD/MM/YY)'. Add a numerical response format. Stress-test dual interpretation.",
+      "notes": "Direct wording fix = primary signal."
+    },
+    {
+      "id": "should-trigger-02",
+      "type": "should_trigger",
+      "prompt": "Survey respondents are giving weird answers to my question — they all say one thing but I asked about something else. What happened?",
+      "expected_behavior": "Activate clarity-concreteness. Diagnose attribute substitution. List likely substituted questions. Recommend concreteness replacements: named, dated, denominated references.",
+      "notes": "Indirect trigger: respondents answering a different construct = classic attribute-substitution symptom."
+    },
+    {
+      "id": "should-trigger-03",
+      "type": "should_trigger",
+      "prompt": "I want to ask about 'recent trading behavior'. How do I make this question clearer?",
+      "expected_behavior": "Activate clarity-concreteness. Replace 'recent' with 'in the last 7 days'. If broader window needed, give specific time-frame options. Stress-test: dual interpretation.",
+      "notes": "Abstract noun ('recent') explicitly mentioned."
+    },
+    {
+      "id": "should-trigger-04",
+      "type": "should_trigger",
+      "prompt": "I'm checking if respondents understood my instructions. Should I use 'Did you understand?' or a different format?",
+      "expected_behavior": "Activate clarity-concreteness. Replace yes/no with open-text 'What was confusing in these instructions?'. Explain yes/no is social-desirability-saturated.",
+      "notes": "Comprehension-check wording = concreteness + social-desirability combined."
+    },
+    {
+      "id": "should-not-trigger-01",
+      "type": "should_not_trigger",
+      "prompt": "Why is my survey's response distribution piled at '5 of 5'?",
+      "expected_behavior": "Do NOT activate clarity-concreteness alone. Pile-up at scale endpoint signals a ceiling effect — relevant to quality-checks-diagnosis and pilot-protocol. Possibly clear from concreteness stand-alone if wording is abstract, but the right first check is ceiling/floor effect, not concreteness.",
+      "notes": "Trap: pile-up looks like concreteness failure; it's usually a scale-design failure."
+    },
+    {
+      "id": "should-not-trigger-02",
+      "type": "should_not_trigger",
+      "prompt": "Should I use a Likert scale with 5 or 7 points?",
+      "expected_behavior": "Do NOT activate clarity-concreteness. This is a scale-design question, not wording concreteness. Defer to experimental-design literature.",
+      "notes": "Trap: scale question is not concreteness."
+    },
+    {
+      "id": "should-not-trigger-03",
+      "type": "should_not_trigger",
+      "prompt": "I asked 'Have you ever used insider information?' and 99% said 'no'. How do I trust this?",
+      "expected_behavior": "Do NOT activate clarity-concreteness. The 99% 'no' is a social-desirability signal. Defer to avoid-leading-questions (or, more accurately, the sensitive-topic branch).",
+      "notes": "Trap: '99% said no' looks like concreteness issue; it's a sensitive-topic issue."
+    },
+    {
+      "id": "edge-01",
+      "type": "edge_case",
+      "prompt": "I want to ask 'why did you sell stock XYZ last year?' My question seems clear to me.",
+      "expected_behavior": "Edge. Clarify that concreteness won't fix this — introspection-illusion (Nisbett & Wilson) means the question is unanswerable regardless of wording. Recommend field data, behavioral records, or skipping the construct.",
+      "notes": "Edge: concreteness applies to wrong questions; this is a construct-validity limit."
+    }
+  ],
+  "minimum_pass_rate": 0.85,
+  "notes": "Hardest false-fires: 'pile-up at scale endpoint' and 'sensitive topic 99% no' both look like concreteness but are ceiling/sensitive-topic problems. The right first skill is seldom concreteness when the failure mode is *response distribution* rather than *wording*."
+}

@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "panel_id": "Figure 1b",
+  "status": "not_comparable_css_normalization_not_reproduced",
+  "digitized_visible_segments": 29,
+  "numerically_validated_segments": 0,
+  "semantic_mapping": "verified",
+  "displayed_statistic": "CSS-normalized relative abundance percentage grouped by center at tp7",
+  "reason": "The official mapping identifies raw counts, metadata, taxonomy, and CSS normalization, but the exact CSS implementation/parameters and aggregation settings are not fixed in the retained source table. Raw-count aggregates are preserved only as contextual evidence.",
+  "source_files": [
+    {
+      "file": "source-data_table_metagenomics_methanogens.txt",
+      "sha256": "e84c2bb4c9ef98bc3ddf41bf8b67d879345253d1b533156d1895486bf18e4fe3"
+    },
+    {
+      "file": "source-metadata.txt",
+      "sha256": "30598021bd7e606bcbb1295edf9b55f86cf177536335ce965b88ec4afd04da09"
+    },
+    {
+      "file": "source-taxonomy_archaea.txt",
+      "sha256": "afbf2541fc4bb31145a2941a1d40ce99f159a133f313c2247d69926876563841"
+    }
+  ],
+  "prohibitions": [
+    "Source values did not drive the primary candidate CSV.",
+    "No missing, zero-height, or occluded segment was filled from source data.",
+    "No numerical error metric is reported for non-comparable normalization pipelines."
+  ]
+}

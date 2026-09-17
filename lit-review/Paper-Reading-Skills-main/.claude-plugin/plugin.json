@@ -1,0 +1,14 @@
+{
+  "name": "paper-reading-skills",
+  "skills": [
+    "./skills/01-field-map",
+    "./skills/02-research-question",
+    "./skills/03-problem-reality-check",
+    "./skills/04-theoretical-grounding",
+    "./skills/05-method-inspiration",
+    "./skills/06-method-commitment",
+    "./skills/07-experiment-design",
+    "./skills/08-research-framing",
+    "./skills/workspace-presentation"
+  ]
+}

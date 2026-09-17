@@ -1,0 +1,41 @@
+{
+  "style_name": "GB/T 7714-2015",
+  "in_text_format": "[{number}]",
+  "multiple_citations": "[{numbers_comma_separated}]",
+  "consecutive_citations": "[{start}-{end}]",
+  "reference_entry": {
+    "journal": "[{number}] {authors_gbt_style}. {title}[J]. {journal}, {year}, {volume}({issue}): {pages}. DOI: {doi}.",
+    "conference": "[{number}] {authors_gbt_style}. {title}[C]//{conference}. {location}, {year}: {pages}.",
+    "book": "[{number}] {authors_gbt_style}. {title}[M]. {location}: {publisher}, {year}.",
+    "thesis": "[{number}] {authors_gbt_style}. {title}[D]. {location}: {institution}, {year}.",
+    "newspaper": "[{number}] {authors_gbt_style}. {title}[N]. {newspaper}, {date}({version})."
+  },
+  "author_format": {
+    "max_display": 3,
+    "et_al_threshold": 4,
+    "separator": ", ",
+    "last_separator": ", ",
+    "name_format_chinese": "full_name",
+    "name_format_english": "last_initials_no_punct",
+    "et_al_text_chinese": "等",
+    "et_al_text_english": "et al"
+  },
+  "title_case": "preserve",
+  "language": "zh-cn",
+  "document_type_codes": {
+    "J": "期刊",
+    "C": "会议论文",
+    "M": "专著",
+    "D": "学位论文",
+    "N": "报纸",
+    "P": "专利",
+    "R": "报告",
+    "S": "标准",
+    "EB/OL": "电子文献/网络"
+  },
+  "examples": [
+    "[1] 余凯, 贾磊, 陈雨强, 等. 深度学习的昨天、今天和明天[J]. 计算机研究与发展, 2013, 50(9): 1799-1804.",
+    "[2] Vaswani A, Shazeer N, Parmar N, 等. Attention is all you need[C]//Advances in Neural Information Processing Systems. 2017: 5998-6008.",
+    "[3] LeCun Y, Bengio Y, Hinton G. Deep learning[J]. Nature, 2015, 521(7553): 436-444."
+  ]
+}

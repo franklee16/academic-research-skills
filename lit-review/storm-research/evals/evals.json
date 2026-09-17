@@ -1,0 +1,23 @@
+{
+  "skill_name": "storm-research",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Research prediction markets and how they're being used for forecasting corporate earnings",
+      "expected_output": "A comprehensive report with sections on: what prediction markets are, how they work, their application to earnings forecasting, evidence on accuracy vs analyst forecasts, key platforms like Polymarket, and current developments. Should have inline citations.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "Give me a deep dive into the attention mechanism in transformer models",
+      "expected_output": "Technical but accessible explanation of attention mechanisms, including: self-attention mathematics, multi-head attention, key papers (Attention is All You Need), applications in NLP, and recent developments like flash attention. Citations required.",
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "Write a literature review on ESG investing and its relationship to financial performance",
+      "expected_output": "Academic-style literature review covering: definition of ESG, evolution of the field, key empirical studies on ESG-performance relationship, methodological debates, recent meta-analyses, and remaining questions. Should cite specific papers with URLs.",
+      "files": []
+    }
+  ]
+}

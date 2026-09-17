@@ -1,0 +1,148 @@
+{
+  "schema_version": 1,
+  "case_id": "nature-63143-fig3",
+  "status": "partial_visible",
+  "maturity": "assisted_candidate",
+  "claim": "Direct recovery of visible annual bar endpoints and line-marker centres from the vector PDF; not recovery of underlying hourly or link-level data.",
+  "source": {
+    "article_url": "https://www.nature.com/articles/s41467-025-63143-5",
+    "figure_url": "https://www.nature.com/articles/s41467-025-63143-5/figures/3",
+    "article_title": "Electric transmission value and its drivers in United States power markets",
+    "figure": "Fig. 3",
+    "pdf_page_1_based": 4,
+    "pdf_sha256": "bf7d35b601333f68e4b7e4e573241d1aed27bddcc283459d73bfa4a5d1e998de",
+    "official_source_data_validation": {
+      "status": "not_available",
+      "reason": "No separate Source Data file was exposed on the article page; the data-availability statement describes commercial inputs."
+    }
+  },
+  "route": {
+    "route_id": "pdf_vector_assisted",
+    "figure_spec_status": "ready_for_assisted_extraction",
+    "coordinate_space": "pdf_pt"
+  },
+  "chart": {
+    "composition": "two-panel bar chart with a line-marker overlay and dual linear y axes",
+    "years": [
+      2012,
+      2013,
+      2014,
+      2015,
+      2016,
+      2017,
+      2018,
+      2019,
+      2020,
+      2021,
+      2022
+    ],
+    "panels": [
+      {
+        "panel_id": "median_left",
+        "plot_bounds_pt": [
+          96.904,
+          51.201,
+          270.581,
+          224.8521
+        ],
+        "bar_axis": {
+          "scale": "linear",
+          "domain": [
+            0,
+            25
+          ],
+          "unit": "$/MWh"
+        },
+        "line_axis": {
+          "scale": "linear",
+          "domain": [
+            0,
+            70
+          ],
+          "unit": "$/MWh"
+        }
+      },
+      {
+        "panel_id": "mean_right",
+        "plot_bounds_pt": [
+          337.584,
+          51.201,
+          511.261,
+          224.8521
+        ],
+        "bar_axis": {
+          "scale": "linear",
+          "domain": [
+            0,
+            25
+          ],
+          "unit": "$/MWh"
+        },
+        "line_axis": {
+          "scale": "linear",
+          "domain": [
+            0,
+            70
+          ],
+          "unit": "$/MWh"
+        }
+      }
+    ]
+  },
+  "visible_mark_counts": {
+    "bars_expected": 22,
+    "bars_accepted": 22,
+    "bars_rejected": 0,
+    "line_markers_expected": 22,
+    "line_markers_accepted": 22,
+    "line_markers_rejected": 0
+  },
+  "quality_checks": {
+    "bar_fill": "#759adc",
+    "bar_baseline_range_pt": 0.0,
+    "max_marker_bar_x_alignment_error_pt": 0.0010070000000155233,
+    "marker_centres_derived_from_symmetric_outer_vector_ring": true,
+    "legend_exclusion": "not_applicable_no_legend_in_figure_3"
+  },
+  "public_gallery": {
+    "primary_csv": "data.csv",
+    "primary_csv_row_count": 22,
+    "primary_csv_fields": [
+      "figure",
+      "pdf_page_1_based",
+      "panel_id",
+      "statistic",
+      "year",
+      "bar_series",
+      "bar_value_usd_per_mwh",
+      "bar_x_center_pt",
+      "bar_top_y_pt",
+      "bar_bottom_y_pt",
+      "line_series",
+      "line_value_usd_per_mwh",
+      "line_marker_x_pt",
+      "line_marker_y_pt",
+      "bar_status",
+      "line_status",
+      "claim_scope"
+    ],
+    "representation": "visible PDF geometry only",
+    "original_and_recreation_canvas": [
+      1756,
+      828
+    ],
+    "crop_pt": [
+      88.0,
+      45.0,
+      527.0,
+      252.0
+    ],
+    "scale": 4.0,
+    "source_data_used_by_renderer": false,
+    "limitations": [
+      "Only displayed annual summaries are recoverable.",
+      "Underlying hourly observations and link-level values are not inferred.",
+      "Displayed values are coordinate-derived estimates from the vector geometry."
+    ]
+  }
+}

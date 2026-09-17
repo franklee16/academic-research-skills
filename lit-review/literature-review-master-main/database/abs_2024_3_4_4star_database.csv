@@ -1,0 +1,469 @@
+id,field,title,ajg_2024
+1,ACCOUNT,Accounting Review,4*
+2,ACCOUNT,"Accounting, Organizations and Society",4*
+3,ACCOUNT,Journal of Accounting and Economics,4*
+4,ACCOUNT,Journal of Accounting Research,4*
+119,ECON,American Economic Review,4*
+120,ECON,Annals of Statistics,4*
+121,ECON,Econometrica,4*
+122,ECON,Journal of Political Economy,4*
+123,ECON,Quarterly Journal of Economics,4*
+124,ECON,Review of Economic Studies,4*
+474,ENT-SBM,Entrepreneurship Theory and Practice,4*
+475,ENT-SBM,Journal of Business Venturing,4*
+510,ETHICS-CSR-MAN,Academy of Management Annals,4*
+511,ETHICS-CSR-MAN,Academy of Management Journal,4*
+512,ETHICS-CSR-MAN,Academy of Management Review,4*
+513,ETHICS-CSR-MAN,Administrative Science Quarterly,4*
+514,ETHICS-CSR-MAN,Journal of Management,4*
+621,FINANCE,Journal of Finance,4*
+622,FINANCE,Journal of Financial Economics,4*
+623,FINANCE,Review of Financial Studies,4*
+747,HRM&EMP,Human Resource Management Journal (UK),4*
+805,IB&AREA,Journal of International Business Studies,4*
+861,INFO MAN,Information Systems Research,4*
+862,INFO MAN,Journal of the Association for Information Systems,4*
+863,INFO MAN,MIS Quarterly: Management Information Systems,4*
+964,INNOV,Research Policy,4*
+1007,MDEV&EDU,Academy of Management Learning and Education,4*
+1064,MKT,Journal of Consumer Psychology,4*
+1065,MKT,Journal of Consumer Research,4*
+1066,MKT,Journal of Marketing,4*
+1067,MKT,Journal of Marketing Research,4*
+1068,MKT,Journal of the Academy of Marketing Science,4*
+1069,MKT,Marketing Science,4*
+1142,OPS&TECH,Journal of Operations Management,4*
+1216,OR&MANSCI,Management Science,4*
+1217,OR&MANSCI,Operations Research,4*
+1293,ORG STUD,Organization Science,4*
+1331,PSYCH (GENERAL),Psychological Science,4*
+1403,PSYCH (WOP-OB),Journal of Applied Psychology,4*
+1404,PSYCH (WOP-OB),Personnel Psychology,4*
+1470,PUB SEC,Public Administration Review,4*
+1681,SOC SCI,American Journal of Political Science,4*
+1682,SOC SCI,American Journal of Sociology,4*
+1683,SOC SCI,American Political Science Review,4*
+1684,SOC SCI,American Sociological Review,4*
+1685,SOC SCI,Annual Review of Sociology,4*
+1796,STRAT,Strategic Management Journal,4*
+5,ACCOUNT,Contemporary Accounting Research,4
+6,ACCOUNT,Review of Accounting Studies,4
+90,BUS HIST & ECON HIST,Business History,4
+91,BUS HIST & ECON HIST,Business History Review,4
+92,BUS HIST & ECON HIST,Economic History Review,4
+125,ECON,American Economic Journal: Applied Economics,4
+126,ECON,American Economic Journal: Macroeconomics,4
+127,ECON,Biometrika,4
+128,ECON,Econometric Theory,4
+129,ECON,Economic Journal,4
+130,ECON,International Economic Review,4
+131,ECON,Journal of Business and Economic Statistics,4
+132,ECON,Journal of Econometrics,4
+133,ECON,Journal of Economic Literature,4
+134,ECON,Journal of Economic Perspectives,4
+135,ECON,Journal of Economic Theory,4
+136,ECON,Journal of International Economics,4
+137,ECON,Journal of Labor Economics,4
+138,ECON,Journal of Monetary Economics,4
+139,ECON,Journal of the American Statistical Association,4
+140,ECON,Journal of the European Economic Association,4
+141,ECON,Journal of the Royal Statistical Society. Series B: Statistical Methodology,4
+142,ECON,Quantitative Economics,4
+143,ECON,RAND Journal of Economics,4
+144,ECON,Review of Economics and Statistics,4
+145,ECON,Theoretical Economics,4
+476,ENT-SBM,Strategic Entrepreneurship Journal,4
+515,ETHICS-CSR-MAN,Academy of Management Perspectives,4
+516,ETHICS-CSR-MAN,British Journal of Management,4
+517,ETHICS-CSR-MAN,Journal of Management Studies,4
+624,FINANCE,Journal of Corporate Finance,4
+625,FINANCE,Journal of Financial and Quantitative Analysis,4
+626,FINANCE,Journal of Financial Intermediation,4
+627,FINANCE,"Journal of Money, Credit and Banking",4
+628,FINANCE,Review of Finance,4
+748,HRM&EMP,British Journal of Industrial Relations,4
+749,HRM&EMP,Human Resource Management (USA),4
+750,HRM&EMP,Industrial Relations,4
+751,HRM&EMP,"Work, Employment and Society",4
+806,IB&AREA,Journal of World Business,4
+864,INFO MAN,European Journal of Information Systems,4
+865,INFO MAN,Information Systems Journal,4
+866,INFO MAN,Journal of Information Technology,4
+867,INFO MAN,Journal of Management Information Systems,4
+868,INFO MAN,Journal of Strategic Information Systems,4
+965,INNOV,Journal of Product Innovation Management,4
+1070,MKT,International Journal of Research in Marketing,4
+1071,MKT,Journal of Retailing,4
+1143,OPS&TECH,International Journal of Operations and Production Management,4
+1144,OPS&TECH,Journal of Supply Chain Management,4
+1145,OPS&TECH,Production and Operations Management,4
+1218,OR&MANSCI,European Journal of Operational Research,4
+1219,OR&MANSCI,IEEE Transactions on Evolutionary Computation,4
+1220,OR&MANSCI,Mathematical Programming,4
+1294,ORG STUD,Human Relations,4
+1295,ORG STUD,Leadership Quarterly,4
+1296,ORG STUD,Organization Studies,4
+1297,ORG STUD,Organizational Research Methods,4
+1332,PSYCH (GENERAL),Annual Review of Psychology,4
+1333,PSYCH (GENERAL),Behavioral and Brain Sciences,4
+1334,PSYCH (GENERAL),Cognition,4
+1335,PSYCH (GENERAL),Current Directions in Psychological Science,4
+1336,PSYCH (GENERAL),Journal of Experimental Psychology: Applied,4
+1337,PSYCH (GENERAL),Journal of Experimental Psychology: General,4
+1338,PSYCH (GENERAL),Journal of Experimental Social Psychology,4
+1339,PSYCH (GENERAL),Journal of Personality and Social Psychology,4
+1340,PSYCH (GENERAL),Nature Human Behaviour,4
+1341,PSYCH (GENERAL),Personality and Social Psychology Bulletin,4
+1342,PSYCH (GENERAL),Psychological Bulletin,4
+1343,PSYCH (GENERAL),Psychological Review,4
+1405,PSYCH (WOP-OB),Journal of Occupational and Organizational Psychology,4
+1406,PSYCH (WOP-OB),Journal of Occupational Health Psychology,4
+1407,PSYCH (WOP-OB),Journal of Organizational Behavior,4
+1408,PSYCH (WOP-OB),Journal of Vocational Behavior,4
+1409,PSYCH (WOP-OB),Organizational Behavior and Human Decision Processes,4
+1410,PSYCH (WOP-OB),Work and Stress,4
+1471,PUB SEC,Governance,4
+1472,PUB SEC,Journal of Public Administration Research and Theory,4
+1473,PUB SEC,Public Administration,4
+1474,PUB SEC,Public Management Review,4
+1541,"REGIONAL STUDIES, PLANNING AND ENVIRONMENT",Economic Geography,4
+1542,"REGIONAL STUDIES, PLANNING AND ENVIRONMENT",Journal of Economic Geography,4
+1543,"REGIONAL STUDIES, PLANNING AND ENVIRONMENT",Regional Studies,4
+1573,SECTOR,Annals of Tourism Research,4
+1574,SECTOR,Journal of Service Research,4
+1575,SECTOR,Journal of Travel Research,4
+1576,SECTOR,Tourism Management,4
+1577,SECTOR,"Transportation Research, Series B: Methodological",4
+1686,SOC SCI,Environment and Planning D: Society and Space,4
+1687,SOC SCI,International Organization,4
+1688,SOC SCI,International Studies Quarterly,4
+1689,SOC SCI,Journal of Politics,4
+1690,SOC SCI,Risk Analysis,4
+1691,SOC SCI,Social Science and Medicine,4
+1692,SOC SCI,Socio-Economic Review,4
+1693,SOC SCI,Sociology,4
+1797,STRAT,Global Strategy Journal,4
+1798,STRAT,Long Range Planning,4
+7,ACCOUNT,Abacus,3
+8,ACCOUNT,Accounting and Business Research,3
+9,ACCOUNT,Accounting Forum,3
+10,ACCOUNT,Accounting Horizons,3
+11,ACCOUNT,"Accounting, Auditing and Accountability Journal",3
+12,ACCOUNT,Auditing,3
+13,ACCOUNT,Behavioral Research in Accounting,3
+14,ACCOUNT,British Accounting Review,3
+15,ACCOUNT,British Tax Review,3
+16,ACCOUNT,Critical Perspectives on Accounting,3
+17,ACCOUNT,European Accounting Review,3
+18,ACCOUNT,Financial Accountability and Management,3
+19,ACCOUNT,Foundations and Trends in Accounting,3
+20,ACCOUNT,International Journal of Accounting,3
+21,ACCOUNT,Journal of Accounting and Public Policy,3
+22,ACCOUNT,Journal of Accounting Literature,3
+23,ACCOUNT,"Journal of Accounting, Auditing and Finance",3
+24,ACCOUNT,Journal of Business Finance and Accounting,3
+25,ACCOUNT,Journal of Financial Reporting,3
+26,ACCOUNT,"Journal of International Accounting, Auditing and Taxation",3
+27,ACCOUNT,Journal of the American Taxation Association,3
+28,ACCOUNT,Management Accounting Research,3
+93,BUS HIST & ECON HIST,Enterprise and Society,3
+94,BUS HIST & ECON HIST,European Review of Economic History,3
+95,BUS HIST & ECON HIST,Explorations in Economic History,3
+96,BUS HIST & ECON HIST,Journal of Economic History,3
+146,ECON,American Economic Journal: Economic Policy,3
+147,ECON,American Economic Journal: Microeconomics,3
+148,ECON,American Economic Review: Insights,3
+149,ECON,American Journal of Agricultural Economics,3
+150,ECON,Annual Review of Economics,3
+151,ECON,Brookings Papers on Economic Activity,3
+152,ECON,Cambridge Journal of Economics,3
+153,ECON,Canadian Journal of Economics,3
+154,ECON,Computational Statistics and Data Analysis,3
+155,ECON,Ecological Economics,3
+156,ECON,Econometric Reviews,3
+157,ECON,Econometrics Journal,3
+158,ECON,Economic Development and Cultural Change,3
+159,ECON,Economic Inquiry,3
+160,ECON,Economic Policy,3
+161,ECON,Economic Theory,3
+162,ECON,Economica,3
+163,ECON,Economics Letters,3
+164,ECON,Energy Economics,3
+165,ECON,Environmental and Resource Economics,3
+166,ECON,European Economic Review,3
+167,ECON,European Review of Agricultural Economics,3
+168,ECON,Experimental Economics,3
+169,ECON,Games and Economic Behavior,3
+170,ECON,Health Economics (United Kingdom),3
+171,ECON,IMF Economic Review,3
+172,ECON,International Journal of Industrial Organization,3
+173,ECON,International Statistical Review,3
+174,ECON,Journal of Agricultural Economics,3
+175,ECON,Journal of Applied Econometrics,3
+176,ECON,Journal of Comparative Economics,3
+177,ECON,Journal of Computational and Graphical Statistics,3
+178,ECON,Journal of Development Economics,3
+179,ECON,Journal of Economic Behavior and Organization,3
+180,ECON,Journal of Economic Dynamics and Control,3
+181,ECON,Journal of Economic Growth,3
+182,ECON,Journal of Environmental Economics and Management,3
+183,ECON,Journal of Health Economics,3
+184,ECON,Journal of Human Capital,3
+185,ECON,Journal of Human Resources,3
+186,ECON,Journal of Industrial Economics,3
+187,ECON,Journal of Institutional Economics,3
+188,ECON,Journal of Law and Economics,3
+189,ECON,"Journal of Law, Economics, and Organization",3
+190,ECON,Journal of Legal Studies,3
+191,ECON,Journal of Mathematical Economics,3
+192,ECON,Journal of Multivariate Analysis,3
+193,ECON,Journal of Population Economics,3
+194,ECON,Journal of Public Economics,3
+195,ECON,Journal of Risk and Uncertainty,3
+196,ECON,Journal of the Association of Environmental and Resource Economists,3
+197,ECON,Journal of the Royal Statistical Society. Series A: Statistics in Society,3
+198,ECON,Journal of the Royal Statistical Society. Series C: Applied Statistics,3
+199,ECON,Journal of Time Series Analysis,3
+200,ECON,Journal of Urban Economics,3
+201,ECON,Labour Economics,3
+202,ECON,Land Economics,3
+203,ECON,Oxford Bulletin of Economics and Statistics,3
+204,ECON,Oxford Economic Papers,3
+205,ECON,Public Choice,3
+206,ECON,Real Estate Economics,3
+207,ECON,Review of Economic Dynamics,3
+208,ECON,Review of Income and Wealth,3
+209,ECON,Scandinavian Journal of Economics,3
+210,ECON,Scandinavian Journal of Statistics,3
+211,ECON,Social Choice and Welfare,3
+212,ECON,World Bank Economic Review,3
+477,ENT-SBM,Entrepreneurship and Regional Development,3
+478,ENT-SBM,Family Business Review,3
+479,ENT-SBM,International Journal of Entrepreneurial Behaviour and Research,3
+480,ENT-SBM,International Small Business Journal,3
+481,ENT-SBM,Journal of Small Business Management,3
+482,ENT-SBM,Small Business Economics,3
+518,ETHICS-CSR-MAN,Academy of Management Discoveries,3
+519,ETHICS-CSR-MAN,Business and Society,3
+520,ETHICS-CSR-MAN,Business Ethics Quarterly,3
+521,ETHICS-CSR-MAN,California Management Review,3
+522,ETHICS-CSR-MAN,European Management Review,3
+523,ETHICS-CSR-MAN,Gender and Society,3
+524,ETHICS-CSR-MAN,"Gender, Work and Organization",3
+525,ETHICS-CSR-MAN,Harvard Business Review,3
+526,ETHICS-CSR-MAN,International Journal of Management Reviews,3
+527,ETHICS-CSR-MAN,Journal of Business Ethics,3
+528,ETHICS-CSR-MAN,Journal of Business Research,3
+529,ETHICS-CSR-MAN,Journal of Management Inquiry,3
+530,ETHICS-CSR-MAN,MIT Sloan Management Review,3
+629,FINANCE,Annual Review of Financial Economics,3
+630,FINANCE,Corporate Governance: An International Review,3
+631,FINANCE,European Financial Management,3
+632,FINANCE,European Journal of Finance,3
+633,FINANCE,Finance and Stochastics,3
+634,FINANCE,Financial Analysts Journal,3
+635,FINANCE,Financial Management,3
+636,FINANCE,"Financial Markets, Institutions and Instruments",3
+637,FINANCE,Financial Review,3
+638,FINANCE,Insurance: Mathematics and Economics,3
+639,FINANCE,International Journal of Central Banking,3
+640,FINANCE,International Journal of Finance and Economics,3
+641,FINANCE,International Review of Financial Analysis,3
+642,FINANCE,Journal of Banking and Finance,3
+643,FINANCE,Journal of Commodity Markets,3
+644,FINANCE,Journal of Empirical Finance,3
+645,FINANCE,Journal of Financial Econometrics,3
+646,FINANCE,Journal of Financial Markets,3
+647,FINANCE,Journal of Financial Research,3
+648,FINANCE,Journal of Financial Services Research,3
+649,FINANCE,Journal of Financial Stability,3
+650,FINANCE,Journal of Futures Markets,3
+651,FINANCE,"Journal of International Financial Markets, Institutions and Money",3
+652,FINANCE,Journal of International Money and Finance,3
+653,FINANCE,Journal of Portfolio Management,3
+654,FINANCE,Journal of Real Estate Finance and Economics,3
+655,FINANCE,Journal of Risk and Insurance,3
+656,FINANCE,Mathematical Finance,3
+657,FINANCE,Quantitative Finance,3
+658,FINANCE,Review of Asset Pricing Studies,3
+659,FINANCE,Review of Corporate Finance Studies,3
+660,FINANCE,Review of Quantitative Finance and Accounting,3
+752,HRM&EMP,Economic and Industrial Democracy,3
+753,HRM&EMP,European Journal of Industrial Relations,3
+754,HRM&EMP,Human Resource Management Review,3
+755,HRM&EMP,ILR Review,3
+756,HRM&EMP,Industrial Law Journal,3
+757,HRM&EMP,Industrial Relations Journal,3
+758,HRM&EMP,International Journal of Human Resource Management,3
+759,HRM&EMP,"New Technology, Work and Employment",3
+760,HRM&EMP,Work and Occupations,3
+807,IB&AREA,African Affairs,3
+808,IB&AREA,Asia Pacific Journal of Management,3
+809,IB&AREA,International Business Review,3
+810,IB&AREA,Journal of Common Market Studies,3
+811,IB&AREA,Journal of International Business Policy,3
+812,IB&AREA,Journal of International Management,3
+813,IB&AREA,Management and Organization Review,3
+814,IB&AREA,Management International Review,3
+815,IB&AREA,Multinational Business Review,3
+869,INFO MAN,Decision Support Systems,3
+870,INFO MAN,Government Information Quarterly,3
+871,INFO MAN,Information and Management,3
+872,INFO MAN,Information and Organization,3
+873,INFO MAN,Information Society,3
+874,INFO MAN,Information Systems Frontiers,3
+875,INFO MAN,Information Technology and People,3
+876,INFO MAN,International Journal of Electronic Commerce,3
+877,INFO MAN,Internet Research,3
+878,INFO MAN,Journal of Computer-Mediated Communication,3
+879,INFO MAN,Journal of the Association for Information Science and Technology (JASIST),3
+966,INNOV,Industry and Innovation,3
+967,INNOV,Journal of Technology Transfer,3
+968,INNOV,R and D Management,3
+969,INNOV,Technological Forecasting and Social Change,3
+970,INNOV,Technovation,3
+1008,MDEV&EDU,Management Learning,3
+1009,MDEV&EDU,Studies in Higher Education,3
+1072,MKT,European Journal of Marketing,3
+1073,MKT,Industrial Marketing Management,3
+1074,MKT,International Marketing Review,3
+1075,MKT,Journal of Advertising,3
+1076,MKT,Journal of Advertising Research,3
+1077,MKT,Journal of Interactive Marketing,3
+1078,MKT,Journal of International Marketing,3
+1079,MKT,Journal of Public Policy and Marketing,3
+1080,MKT,Marketing Letters,3
+1081,MKT,Marketing Theory,3
+1082,MKT,Psychology and Marketing,3
+1083,MKT,Quantitative Marketing and Economics,3
+1146,OPS&TECH,Computers in Industry,3
+1147,OPS&TECH,IEEE Transactions on Engineering Management,3
+1148,OPS&TECH,International Journal of Production Economics,3
+1149,OPS&TECH,International Journal of Production Research,3
+1150,OPS&TECH,Journal of Business Logistics,3
+1151,OPS&TECH,Journal of Purchasing and Supply Management,3
+1152,OPS&TECH,Manufacturing and Service Operations Management,3
+1153,OPS&TECH,Production Planning and Control,3
+1154,OPS&TECH,Supply Chain Management,3
+1221,OR&MANSCI,ACM Transactions on Modeling and Computer Simulation,3
+1222,OR&MANSCI,Annals of Operations Research,3
+1223,OR&MANSCI,Computational Optimization and Applications,3
+1224,OR&MANSCI,Computers and Operations Research,3
+1225,OR&MANSCI,Decision Sciences,3
+1226,OR&MANSCI,Evolutionary Computation,3
+1227,OR&MANSCI,Fuzzy Optimization and Decision Making,3
+1228,OR&MANSCI,IEEE Transactions on Cybernetics,3
+1229,OR&MANSCI,"IEEE Transactions on Systems, Man, and Cybernetics: Systems",3
+1230,OR&MANSCI,IISE Transactions,3
+1231,OR&MANSCI,INFORMS Journal on Computing,3
+1232,OR&MANSCI,International Journal of Forecasting,3
+1233,OR&MANSCI,Journal of Heuristics,3
+1234,OR&MANSCI,Journal of Optimization Theory and Applications,3
+1235,OR&MANSCI,Journal of the Operational Research Society,3
+1236,OR&MANSCI,Mathematics of Operations Research,3
+1237,OR&MANSCI,Naval Research Logistics,3
+1238,OR&MANSCI,Omega,3
+1239,OR&MANSCI,OR Spectrum,3
+1240,OR&MANSCI,Reliability Engineering and System Safety,3
+1241,OR&MANSCI,SIAM Journal on Optimization,3
+1242,OR&MANSCI,Transportation Science,3
+1298,ORG STUD,Group and Organization Management,3
+1299,ORG STUD,Organization,3
+1300,ORG STUD,Organization and Environment,3
+1301,ORG STUD,Organizational Dynamics,3
+1302,ORG STUD,Research in Organizational Behavior,3
+1303,ORG STUD,Research in the Sociology of Organizations,3
+1344,PSYCH (GENERAL),British Journal of Psychology,3
+1345,PSYCH (GENERAL),British Journal of Social Psychology,3
+1346,PSYCH (GENERAL),Cognitive Science,3
+1347,PSYCH (GENERAL),European Journal of Social Psychology,3
+1348,PSYCH (GENERAL),Journal of Behavioral Decision Making,3
+1349,PSYCH (GENERAL),Journal of Conflict Resolution,3
+1350,PSYCH (GENERAL),Journal of Cross-Cultural Psychology,3
+1351,PSYCH (GENERAL),Journal of Environmental Psychology,3
+1352,PSYCH (GENERAL),Journal of Experimental Psychology: Learning Memory and Cognition,3
+1353,PSYCH (GENERAL),Journal of Mathematical Psychology,3
+1354,PSYCH (GENERAL),Journal of Personality,3
+1355,PSYCH (GENERAL),Judgment and Decision Making,3
+1356,PSYCH (GENERAL),Personality and Individual Differences,3
+1357,PSYCH (GENERAL),Psychological Research,3
+1358,PSYCH (GENERAL),Psychology of Women Quarterly,3
+1359,PSYCH (GENERAL),Psychometrika,3
+1360,PSYCH (GENERAL),Quarterly Journal of Experimental Psychology,3
+1361,PSYCH (GENERAL),Social Psychological and Personality Science,3
+1362,PSYCH (GENERAL),Stress and Health,3
+1411,PSYCH (WOP-OB),Accident Analysis and Prevention,3
+1412,PSYCH (WOP-OB),Applied Ergonomics,3
+1413,PSYCH (WOP-OB),Applied Psychology,3
+1414,PSYCH (WOP-OB),Ergonomics,3
+1415,PSYCH (WOP-OB),European Journal of Work and Organizational Psychology,3
+1416,PSYCH (WOP-OB),Human Factors,3
+1417,PSYCH (WOP-OB),Human Performance,3
+1418,PSYCH (WOP-OB),International Journal of Rehabilitation Research,3
+1419,PSYCH (WOP-OB),Journal of Business and Psychology,3
+1420,PSYCH (WOP-OB),Journal of Managerial Psychology,3
+1421,PSYCH (WOP-OB),Journal of School Psychology,3
+1422,PSYCH (WOP-OB),Occupational and Environmental Medicine,3
+1423,PSYCH (WOP-OB),"Scandinavian Journal of Work, Environment and Health",3
+1475,PUB SEC,American Review of Public Administration,3
+1476,PUB SEC,Environment and Planning C: Politics and Space,3
+1477,PUB SEC,Health Services Research,3
+1478,PUB SEC,International Public Management Journal,3
+1479,PUB SEC,International Review of Administrative Sciences,3
+1480,PUB SEC,Journal of European Public Policy,3
+1481,PUB SEC,Journal of Policy Analysis and Management,3
+1482,PUB SEC,Milbank Quarterly,3
+1483,PUB SEC,Policy and Politics,3
+1484,PUB SEC,Policy Studies Journal,3
+1485,PUB SEC,Regulation and Governance,3
+1544,"REGIONAL STUDIES, PLANNING AND ENVIRONMENT","Cambridge Journal of Regions, Economy and Society",3
+1545,"REGIONAL STUDIES, PLANNING AND ENVIRONMENT",Environment and Planning A,3
+1546,"REGIONAL STUDIES, PLANNING AND ENVIRONMENT",European Urban and Regional Studies,3
+1547,"REGIONAL STUDIES, PLANNING AND ENVIRONMENT",Global Environmental Change,3
+1548,"REGIONAL STUDIES, PLANNING AND ENVIRONMENT",Journal of Regional Science,3
+1549,"REGIONAL STUDIES, PLANNING AND ENVIRONMENT",Journal of Rural Studies,3
+1550,"REGIONAL STUDIES, PLANNING AND ENVIRONMENT",Papers in Regional Science,3
+1551,"REGIONAL STUDIES, PLANNING AND ENVIRONMENT",Regional Science and Urban Economics,3
+1552,"REGIONAL STUDIES, PLANNING AND ENVIRONMENT",Urban Studies,3
+1578,SECTOR,Energy Journal,3
+1579,SECTOR,European Sport Management Quarterly,3
+1580,SECTOR,Food Policy,3
+1581,SECTOR,International Journal of Contemporary Hospitality Management,3
+1582,SECTOR,International Journal of Hospitality Management,3
+1583,SECTOR,Journal of Sustainable Tourism,3
+1584,SECTOR,Nonprofit and Voluntary Sector Quarterly,3
+1585,SECTOR,"Transportation Research, Part A: Policy and Practice",3
+1586,SECTOR,"Transportation Research, Part D: Transport and Environment",3
+1587,SECTOR,"Transportation Research, Part E: Logistics and Transportation Review",3
+1694,SOC SCI,Antipode,3
+1695,SOC SCI,British Journal of Sociology,3
+1696,SOC SCI,Business Strategy and the Environment,3
+1697,SOC SCI,Development and Change,3
+1698,SOC SCI,Economy and Society,3
+1699,SOC SCI,Electoral Studies,3
+1700,SOC SCI,Environmental Science & Technology,3
+1701,SOC SCI,Environmental Science and Policy,3
+1702,SOC SCI,European Sociological Review,3
+1703,SOC SCI,Global Networks,3
+1704,SOC SCI,Industrial and Corporate Change,3
+1705,SOC SCI,Journal of Cultural Economy,3
+1706,SOC SCI,Journal of Development Studies,3
+1707,SOC SCI,Journal of European Social Policy,3
+1708,SOC SCI,Journal of Social Policy,3
+1709,SOC SCI,New Political Economy,3
+1710,SOC SCI,Politics and Society,3
+1711,SOC SCI,Progress in Human Geography,3
+1712,SOC SCI,Public Opinion Quarterly,3
+1713,SOC SCI,Quarterly Journal of Political Science,3
+1714,SOC SCI,Research in Social Stratification and Mobility,3
+1715,SOC SCI,Review of International Political Economy,3
+1716,SOC SCI,Social Forces,3
+1717,SOC SCI,Social Science Research,3
+1718,SOC SCI,Sociological Methodology,3
+1719,SOC SCI,Sociological Review,3
+1720,SOC SCI,Sociology of Health and Illness,3
+1721,SOC SCI,"Theory, Culture and Society",3
+1722,SOC SCI,West European Politics,3
+1723,SOC SCI,World Development,3
+1799,STRAT,Strategic Organization,3
+1800,STRAT,Strategy Science,3

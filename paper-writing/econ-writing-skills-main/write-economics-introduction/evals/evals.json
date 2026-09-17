@@ -1,0 +1,59 @@
+{
+  "skill_name": "write-economics-introduction",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Rewrite the outdated introduction using the completed body and verified literature packet. Produce a publication-ready English economics introduction, and do not preserve claims the body or literature does not support.",
+      "expected_output": "A natural causal-empirical introduction that accurately explains district assignment and caregiver receipt, reports the 1.6-point attendance and 3.2-point chronic-absence effects with scope, preserves the selected-sample test-score null, treats information delay only as a consistent-with mechanism, positions the contribution against the three verified studies, and removes false novelty, achievement, cost-effectiveness, and universal-policy claims.",
+      "files": ["evals/files/causal-school-attendance-paper.md"],
+      "expectations": [
+        "Correctly distinguishes district assignment from caregiver receipt and student-level outcomes.",
+        "Reports the central attendance result without changing its unit, baseline, sample, or causal subject.",
+        "Does not upgrade the information-delay evidence into an identified mechanism.",
+        "Does not claim a test-score effect, cost-effectiveness, a universal mandate, or global firstness.",
+        "Uses the verified literature relationally rather than as an author list.",
+        "Forms an early question-answer capsule and a coherent problem-answer-meaning progression."
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "Read this structural economics manuscript packet and write its English introduction. Keep descriptive relationships, structurally identified objects, model counterfactuals, and welfare exercises distinct, and position the contribution only against the verified literature.",
+      "expected_output": "A structural introduction organized around the queue-policy tradeoff, explaining why the model is needed, how data discipline it, the batched-review counterfactual, ambiguous quality effect, partial-equilibrium boundary, and verified contribution without inventing causality, dominance, offsets, workforce quality, or consumer-welfare numbers.",
+      "files": ["evals/files/structural-grid-queues-paper.md"],
+      "expectations": [
+        "Does not interpret the raw queue-delay association as causal.",
+        "Labels the 7-month, 6.4-percent, and 1.8-percent results as model counterfactuals and preserves their exact objects.",
+        "Preserves ambiguity in average output quality and does not rank selection versus preparation.",
+        "Does not call production-cost expenditure consumer welfare or omit the partial-equilibrium boundary.",
+        "States a specific, verified relative contribution without a global novelty claim."
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "Write a journal-ready English introduction for this pure theory paper. Explain the economic tension, main propositions, conditions, intuition, and verified literature position without forcing an empirical template.",
+      "expected_output": "A theory-appropriate introduction centered on scarce review capacity, noisy scalable screening, the non-monotonic delegation result, conditions under which it disappears, distributional implication, complementary-AI extension, and verified relationship to nearby theory, with no fabricated data, estimates, significance, or policy experiment.",
+      "files": ["evals/files/theory-ai-screening-paper.md"],
+      "expectations": [
+        "Explains the model environment and economic mechanism without empirical-identification language.",
+        "Accurately states the non-monotonic result and at least one condition under which it changes.",
+        "Keeps the complementary-AI extension conditional rather than empirically prevalent.",
+        "Uses only the verified literature packet for positioning and avoids global novelty.",
+        "Produces a natural theory introduction rather than a list of propositions."
+      ]
+    },
+    {
+      "id": 4,
+      "prompt": "The body is complete. Draft the strongest defensible English introduction, but also tell me briefly if the material is insufficient for the literature-positioning claims I requested.",
+      "expected_output": "A conservative-ready response: a body-faithful associational introduction that does not claim causality, an identified care-coordination mechanism, firstness, ignored literature, or a mandate effect, followed outside the formal prose by a concise note identifying the missing source content needed for final positioning.",
+      "files": ["evals/files/incomplete-literature-paper.md"],
+      "expectations": [
+        "Writes from the completed body instead of refusing merely because positioning is incomplete.",
+        "Preserves the 3.5-percentage-point association and pre-trend selection boundary.",
+        "Does not infer literature findings from bibliography titles.",
+        "Omits the requested firstness, causal mechanism, and mandate claims.",
+        "Keeps the risk note outside the formal English introduction."
+      ]
+    }
+  ]
+}
+

@@ -1,0 +1,17 @@
+{
+  "status": "official_figshare_source_mapped",
+  "url": "https://doi.org/10.6084/m9.figshare.28645625",
+  "download_url": "https://ndownloader.figshare.com/files/60135722",
+  "file": "source-data.xlsx",
+  "sha256": "be11c2ad6521d994b1c9142e1812ecb0e7c4a6258b9fada2e778ddade1c09693",
+  "sheet": "DATASET",
+  "source_rows": 484,
+  "mapped_fields": [
+    "EMF_weighted",
+    "LC_simpl_2018",
+    "Climate_zone_simpl",
+    "SOIL_TYPE_SIMPL",
+    "PH_Class"
+  ],
+  "semantic_evidence": "The article reports Fig. 1 land use, climate, texture and pH groupings and the published group means match EMF_weighted; the 484 source rows and all four group sample sizes match the figure."
+}

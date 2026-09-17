@@ -1,0 +1,51 @@
+{
+  "campaign_id": "Project_002_BeckerHukou",
+  "workspace": "Exploration/Project_002_BeckerHukou",
+  "hypothesis": "基于 Becker 人力资本投资模型，加入中国城乡二元结构，解释为什么能力相同的城乡孩子（有户籍壁垒）可能做出不同教育投资选择。",
+  "current_stage": 10,
+  "stage_status": "completed",
+  "completed_stages": [0, 1, 2, "3", "3b", 4, 5, 6, 7, 8, 9, 10],
+  "failed_stages": [],
+  "gate_results": {
+    "gate_1": "CONDITIONAL_PASS",
+    "gate_2b": "PASS",
+    "gate_2c": "PASS",
+    "gate_2": "CONDITIONAL_PASS",
+    "gate_3": "PASS",
+    "gate_4": "CONDITIONAL_PASS",
+    "gate_5": "PASS"
+  },
+  "human_decisions": {
+    "hil_1": "APPROVE",
+    "hil_2": "APPROVE",
+    "hil_3": "APPROVE",
+    "hil_4": "CONFIRM — Individual Optimality; multiplicative penalty; Cobb-Douglas wage",
+    "hil_5": "APPROVE ALL — all 7 propositions approved",
+    "hil_6": "CE1-A, CE2-A, CE3-A, CE4-A"
+  },
+  "caveats": [
+    "Gate 1: Arrow (1973) parallel risk — mitigated by making P_C1 SUPPORTING",
+    "Gate 2: payoff discontinuity at ê — handled by comparison-of-regimes analysis",
+    "Gate 4: P_C2 step 5 GAP (F monotone in θ) — needs proof under general w; Cobb-Douglas verified",
+    "Gate 4: P_C3(iii) now conditional (CE2-A applied) — sign of dθ̃/dδ stated with parameter condition",
+    "Gate 5: 1 WARNING — P_C3 So What? paragraph corrected (conditional language added to manuscript skeleton)"
+  ],
+  "gate_retry_counts": {
+    "gate_1": 0,
+    "gate_2b": 0,
+    "gate_2c": 0,
+    "gate_2": 0,
+    "gate_3": 0,
+    "gate_4": 0,
+    "gate_5": 0
+  },
+  "loopback_history": [],
+  "active_propositions": ["P_E1", "P_C1", "P_C2", "P_C3", "P_W1", "P_W2", "P_B1"],
+  "deferred_propositions": [],
+  "equilibrium_concept": "Individual Optimality (IO) — single-agent optimization, competitive wages, no strategic interaction",
+  "social_planner_benchmark": "First-best: δ=1, p≡1 → both children solve identical problem → e^{FB}(θ)",
+  "finished": true,
+  "pdf_generation": "success — manuscript.pdf (8 pages, 208KB; pdflatex + Computer Modern; green hyperlinks; all math renders correctly)",
+  "started_at": "2026-06-14",
+  "last_checkpoint": "2026-06-14"
+}

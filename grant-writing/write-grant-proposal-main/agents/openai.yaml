@@ -1,0 +1,4 @@
+interface:
+  display_name: "写本子助手"
+  short_description: "Draft and review Chinese grant proposals and technical plans"
+  default_prompt: "Use $write-grant-proposal to draft or revise a Chinese grant proposal with research contents, technical route, indicators, milestones, and deliverables."

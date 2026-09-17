@@ -1,0 +1,100 @@
+{
+  "schema_version": 1,
+  "status": "needs_verified_configuration",
+  "source": {
+    "input_file": "F:\\AI\\thu-digitizer\\tmp\\nature-62086\\fig5.png",
+    "sha256": "8bac66bc7f172a49df0d3be1974bd208b0a1db58adf319c580573f7ca728e2d8",
+    "media_kind": "raster",
+    "coordinate_space": "pixel",
+    "width": 996,
+    "height": 1098,
+    "page": null
+  },
+  "panels": [
+    {
+      "panel_id": "panel-1",
+      "bounds": [
+        0.0,
+        0.0,
+        996,
+        1098
+      ],
+      "bounds_verification": "proposed",
+      "plot_bounds": [
+        0.0,
+        0.0,
+        996,
+        1098
+      ],
+      "plot_bounds_verification": "proposed",
+      "chart_type": "line",
+      "chart_type_verification": "user_provided",
+      "coordinate_model": "cartesian_linear",
+      "coordinate_model_verification": "proposed",
+      "axes": [
+        {
+          "axis_id": "x",
+          "orientation": "x",
+          "scale": "linear",
+          "verification": "missing",
+          "anchors": []
+        },
+        {
+          "axis_id": "y",
+          "orientation": "y",
+          "scale": "linear",
+          "verification": "missing",
+          "anchors": []
+        }
+      ],
+      "series": [],
+      "mark_grammars": [
+        "curve",
+        "marker",
+        "error_interval"
+      ],
+      "route": {
+        "route_id": "raster_line_color",
+        "maturity": "validated_local_stable",
+        "implementation": "scripts/digitize_line_chart.py",
+        "automated_extraction": true
+      },
+      "required_confirmations": [
+        "panel_roi",
+        "plot_bounds",
+        "x_axis",
+        "y_axis",
+        "axis_transform",
+        "series_colors",
+        "sample_positions",
+        "trace_mode",
+        "anchor_residual_review"
+      ],
+      "confirmations": {
+        "panel_roi": "missing",
+        "plot_bounds": "missing",
+        "x_axis": "missing",
+        "y_axis": "missing",
+        "axis_transform": "missing",
+        "series_colors": "missing",
+        "sample_positions": "missing",
+        "trace_mode": "missing",
+        "anchor_residual_review": "missing"
+      },
+      "recoverable": "Visible colour-distinct curve samples, or continuity-traced visible spans with support/gap uncertainty, plus separately visible pale error intervals.",
+      "non_recoverable": "Hidden spans, source model parameters, and raw observations."
+    }
+  ],
+  "evidence_contract": {
+    "required": [
+      "input_hash",
+      "panel_and_plot_bounds",
+      "calibration_anchors",
+      "immutable_extraction_csv",
+      "json_report",
+      "overlay_or_recreation",
+      "confidence_and_refusal_reasons"
+    ],
+    "source_data_role": "independent_validation_only"
+  }
+}

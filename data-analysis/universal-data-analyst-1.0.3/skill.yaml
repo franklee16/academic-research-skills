@@ -1,0 +1,222 @@
+name: universal-data-analyst
+description: |
+  通用数据分析专家。基于数据本体论进行开放性分析规划，不依赖关键词硬编码，
+  每次均通过大模型思考判断数据类型、问题类型和分析方法。
+
+  工作流程：
+  1. 使用 data_loader 加载数据
+  2. 使用速查卡进行数据本体识别（这是什么存在）
+  3. 使用 data_validator 执行数据质量诊断（必须步骤，结果进入报告）
+  4. 结合用户诉求，调用大模型选择领域公认分析方法
+  5. 生成分析脚本
+  6. 执行分析脚本
+  7. 生成综合报告（HTML + MD + 图表）
+
+  支持经济型数据和非经济型数据，自动适配分析框架。
+
+version: 1.0.0
+author: Claude
+
+triggers:
+  - type: file_upload
+    description: 当用户上传 CSV/Excel/Parquet 等数据文件时触发
+
+  - type: keyword
+    description: 数据分析相关请求
+    patterns:
+      - "分析.*数据"
+      - "帮我看看这份数据"
+      - "数据.*怎么分析"
+      - "探索.*数据集"
+      - "解读.*数据"
+
+capabilities:
+  - data_loading
+  - data_profiling
+  - data_validation
+  - analysis_planning
+  - script_generation
+  - statistical_analysis
+
+dependencies:
+  # 所有依赖已内置于本 skill 的 layers/ 目录下
+  - layers/data_loader.py
+  - layers/data_validator.py
+  - report_generator.py
+
+configuration:
+  # 数据质量校验已改为必须执行步骤
+  auto_validate: true
+  # 是否生成分步分析脚本（而非一次性脚本）
+  step_by_step: true
+  # 输出格式：html / markdown / both
+  output_format: both
+
+prompts:
+  # 第一层：数据本体识别
+  ontology_prompt: |
+    你是一位数据本体论专家。请分析以下数据的基本特征，回答"这是关于什么的存在"。
+
+    数据概况：
+    {data_profile}
+
+    请回答以下问题：
+    1. 实体类型识别：
+       - 这是交易/事件型、状态/存量型、关系/网络型、特征/属性型，还是时序/轨迹型？
+       - 判断依据是什么？
+
+    2. 数据生成机制：
+       - 数据是如何产生的？（观测/实验/模拟/测量/报告）
+       - 这暗示了什么潜在偏差或局限性？
+
+    3. 核心维度识别：
+       - 数据中有哪些关键维度可以用来分组、对比、追溯？
+       - 是否有时间维度？地理维度？分类维度？
+
+    4. 数据质量初判：
+       - 从样本量、时间跨度、字段完整性看，这份数据适合做什么类型的分析？
+       - 明显的局限性是什么？
+
+    5. 经济类型判定：
+       - 这份数据是否涉及经济行为（价格、成本、收入、利润、交易）？
+       - 如果是，初步判断属于什么经济类型？
+       - 如果不是，属于什么领域的数据？
+
+    输出格式：
+    - 用结构化方式输出，每个问题都要有明确结论
+    - 给出3-5个关键词标签描述这份数据
+    - 给出初步分析建议：这份数据最适合回答什么类型的问题？
+
+  # 第二层+第三层：分析规划
+  analysis_planning_prompt: |
+    你是一位跨领域数据分析专家。请基于数据本体和用户诉求，规划完整的分析方案。
+
+    ## 数据本体（已识别）
+    {ontology_result}
+
+    ## 用户诉求
+    {user_intent}
+
+    ## 数据样本（前10行）
+    {data_sample}
+
+    ## 数据字段详情
+    {column_details}
+
+    请完成以下思考并输出分析方案：
+
+    ### 第一步：问题类型判定
+    用户想回答什么问题类型？
+    - 描述型（是什么）：现状描述、分布特征、趋势
+    - 诊断型（为什么）：归因分析、根因定位、差异解释
+    - 预测型（会怎样）：趋势预测、风险预警、容量规划
+    - 规范型（应怎样）：优化建议、策略选择、资源配置
+    - 因果型（有效应吗）：因果推断、效果评估、机制验证
+
+    判断依据：用户的问题关键词 + 数据支持程度
+
+    ### 第二步：领域方法匹配
+    基于数据类型和问题类型，该领域公认的分析方法是什么？
+
+    如果涉及经济类型：
+    - 零售经济 → 价值链分析、ABC-XYZ、RFM
+    - 订阅经济 → LTV/Cohort、留存曲线、收入瀑布
+    - 注意力经济 → 漏斗分析、AARRR、网络效应
+    - 劳动力市场 → 技能溢价、经验弹性、供需分析
+
+    如果是非经济数据：
+    - 科学测量 → 不确定性分析、假设检验、实验设计
+    - 社会网络 → 中心性分析、社区发现、传播模型
+    - 时空数据 → 空间自相关、热点分析、地理加权回归
+    - 文本数据 → 主题模型、情感分析、语义网络
+
+    ### 第三步：分析路径设计
+    设计具体的分析步骤：
+    1. 起手式分析（所有数据都做的基础分析）
+    2. 核心分析（针对用户问题的深度分析）
+    3. 验证分析（稳健性检查、敏感性分析）
+    4. 可视化方案（如何呈现关键发现）
+
+    ### 第四步：脚本规划
+    规划需要生成的Python分析脚本：
+    - 需要哪些分析模块？
+    - 每个模块的输入、处理、输出是什么？
+    - 模块之间的依赖关系？
+
+    输出格式：
+    1. 问题类型判定结论
+    2. 推荐的分析框架及理由
+    3. 分步骤的分析路径（具体到每一步的代码逻辑）
+    4. 生成的脚本文件清单及每个文件的功能说明
+    5. 预期输出：用户能看到什么样的分析结果？
+
+  # 脚本生成提示词
+  script_generation_prompt: |
+    你是一位Python数据分析专家。请根据分析方案生成可执行的分析脚本。
+
+    ## 分析方案
+    {analysis_plan}
+
+    ## 数据加载路径
+    {file_path}
+
+    ## 生成要求
+    1. 使用标准的 data_loader.py 和 data_validator.py
+    2. 脚本需要包含完整的错误处理
+    3. 所有分析结果要保存到变量，便于后续生成报告
+    4. 关键图表使用 matplotlib/seaborn 生成并保存
+    5. 脚本要有清晰的注释说明每个分析步骤的目的
+
+    输出格式：
+    直接输出完整的Python脚本代码，使用以下结构：
+    ```python
+    # 脚本功能说明
+    # 输入: xxx
+    # 输出: xxx
+
+    import sys
+    import os
+    from pathlib import Path
+
+    # 使用相对路径加载本skill的layers模块
+    SCRIPT_DIR = Path(__file__).parent
+    sys.path.insert(0, str(SCRIPT_DIR))
+    sys.path.insert(0, str(SCRIPT_DIR / 'layers'))
+
+    from data_loader import DataLoader
+    from data_validator import DataValidator
+
+    # 输出目录
+    OUTPUT_DIR = SCRIPT_DIR / 'output'
+    CHARTS_DIR = OUTPUT_DIR / 'charts'
+    CHARTS_DIR.mkdir(exist_ok=True, parents=True)
+    ...
+    ```
+
+  # 报告生成提示词
+  report_generation_prompt: |
+    你是一位数据分析报告撰写专家。请基于分析结果生成专业的数据解读报告。
+
+    ## 数据本体
+    {ontology_result}
+
+    ## 分析方案
+    {analysis_plan}
+
+    ## 分析结果（关键发现）
+    {analysis_results}
+
+    ## 生成要求
+    1. 报告结构：
+       - 执行摘要（3-5条核心发现）
+       - 数据画像（数据来源、规模、质量）
+       - 分析方法说明（为什么选这些方法）
+       - 详细发现（分主题展开，每个发现有数据支撑）
+       - 局限性说明（数据不能回答什么）
+       - 建议/下一步（如果需要）
+
+    2. 使用Markdown格式
+    3. 所有数字结论都要有具体数值支撑
+    4. 不要过度解读，区分"数据显示"和"可能意味着"
+
+    输出格式：完整的Markdown报告

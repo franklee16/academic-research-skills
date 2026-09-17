@@ -1,0 +1,66 @@
+{
+  "skill": "avoid-leading-questions",
+  "version": "0.1.0",
+  "source_book": "Survey Curious? Start-Up Guide — Bergman, Chinco, Hartzmark, Sussman (2020)",
+  "darwin_compatible": true,
+  "test_cases": [
+    {
+      "id": "should-trigger-01",
+      "type": "should_trigger",
+      "prompt": "I'm worried my question 'Experts consider X important in investment. To what extent do you consider X?' is leading.",
+      "expected_behavior": "Activate avoid-leading-questions. Classify as experimenter-demand (the lead-in broadcasts expected answer). Strip 'Experts consider X...'. Add expected-irrelevant filler items to catch consistency-seekers.",
+      "notes": "Direct signal: 'I think this is leading'."
+    },
+    {
+      "id": "should-trigger-02",
+      "type": "should_trigger",
+      "prompt": "Everyone in my survey said 'yes' to 'Do you understand these instructions?' Is this reliable?",
+      "expected_behavior": "Activate avoid-leading-questions (with clarity-concreteness component). Diagnose as acquiescence + social-desirability. Replace with 'What was confusing? Please explain.' (open text).",
+      "notes": "Universal 'yes' is a classic social-desirability signature on comprehension checks."
+    },
+    {
+      "id": "should-trigger-03",
+      "type": "should_trigger",
+      "prompt": "I need to ask study participants about insider trading but I expect a 0% yes rate that means nothing.",
+      "expected_behavior": "Activate avoid-leading-questions. Don't accept direct self-report. Recommend list experiments, randomized response, or behavioral/admin data substitute.",
+      "notes": "Sensitive topic explicitly named = primary signal."
+    },
+    {
+      "id": "should-trigger-04",
+      "type": "should_trigger",
+      "prompt": "My Likert-agreement items show 80% 'agree'. Is this real or acquiescence?",
+      "expected_behavior": "Activate avoid-leading-questions. Diagnose acquiescence (tendency to say 'agree'). Recommend rotating agreement anchors, mixing positively/negatively-keyed items, balance across survey.",
+      "notes": "Acquiescence signature: heavy 'agree'."
+    },
+    {
+      "id": "should-not-trigger-01",
+      "type": "should_not_trigger",
+      "prompt": "My survey respondents can't recall details from last year. What do I do?",
+      "expected_behavior": "Do NOT activate avoid-leading-questions. This is a recall problem (ability constraint), not a bias problem. Defer to survey-design-checklist or recommend shortening the time horizon.",
+      "notes": "Trap: 'respondents aren't answering' looks like a bias question; here it's ability."
+    },
+    {
+      "id": "should-not-trigger-02",
+      "type": "should_not_trigger",
+      "prompt": "How do I make my question shorter without losing precision?",
+      "expected_behavior": "Do NOT activate avoid-leading-questions. This is a clarity/brevity question. Defer to clarity-concreteness.",
+      "notes": "Trap: 'make it shorter' sounds like a writing fix, not a bias fix."
+    },
+    {
+      "id": "should-not-trigger-03",
+      "type": "should_not_trigger",
+      "prompt": "How many attention checks should I include?",
+      "expected_behavior": "Do NOT activate avoid-leading-questions. Different concern. Defer to quality-checks-diagnosis.",
+      "notes": "Trap: 'attention' word is adjacent to 'leading' word, but this is check-design."
+    },
+    {
+      "id": "edge-01",
+      "type": "edge_case",
+      "prompt": "I want to assess whether people understand a particular survey question by asking 'Do you understand?' — wait, isn't that a bad question?",
+      "expected_behavior": "Edge: yes, the user has identified the issue themselves. Confirm and fix. This is between clarity-concreteness (yes/no saturation) and avoid-leading-questions (the social-desirability branch). Treat as a clarity-concreteness fix primarily.",
+      "notes": "Edge: when the user already knows, the skill's job is confirmation + replacement."
+    }
+  ],
+  "minimum_pass_rate": 0.85,
+  "notes": "Trap of the month: 'everyone says yes' is the canonical signal — every prompt with that pattern should fire. But 'everyone in my data says X' on a non-confirmation item is more likely acquiescence or ceiling than leading."
+}

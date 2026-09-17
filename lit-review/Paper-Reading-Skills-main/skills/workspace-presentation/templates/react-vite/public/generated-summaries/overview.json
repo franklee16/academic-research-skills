@@ -1,0 +1,16 @@
+{
+  "schemaVersion": 1,
+  "moduleId": "overview",
+  "title": "Research State Overview",
+  "displayCategory": "primary-display",
+  "sourceFileIds": [],
+  "summary": "This is a placeholder presentation. Generate metadata from a source workspace to show real research artifacts.",
+  "status": "missing",
+  "takeaways": [
+    "Run the paper-reading-workspace-presentation skill against one source workspace or source chain.",
+    "The generated presentation will preserve source links and show derived summaries."
+  ],
+  "structuredItems": [],
+  "risks": [],
+  "nextActions": []
+}

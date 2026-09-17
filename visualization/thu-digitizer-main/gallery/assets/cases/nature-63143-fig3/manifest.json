@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "case_id": "nature-63143-fig3",
+  "assets": {
+    "original.png": {
+      "sha256": "39bfd2bcce7f52af3f82d09a6324a993fd5e6045c3acea4cce360eec6648e603",
+      "bytes": 129719
+    },
+    "overlay.png": {
+      "sha256": "d3f3673a484aa79982fe14a77635d19fa99b492eac3b97000357ac39bc56e68c",
+      "bytes": 141632
+    },
+    "recreated.png": {
+      "sha256": "3ea458fda66c85060dbb22d3c41895a8310485cc14770a1289d1965279dbe304",
+      "bytes": 65859
+    },
+    "data.csv": {
+      "sha256": "7f6a4d2b3479ecbbc8aa613b77283c4ded48e893b8a542bf23b0b6d4658c33ac",
+      "bytes": 6319
+    },
+    "report.json": {
+      "sha256": "339ac7a08bf210a3cf729317e1031c4a93f3c2c8c7be2cb1681038398b75cdf9",
+      "bytes": 3942
+    },
+    "figure-spec.json": {
+      "sha256": "9918d04983953639a3e9b0f716f00860d1da296b6d9b03470d4769659eeda05d",
+      "bytes": 8777
+    }
+  }
+}

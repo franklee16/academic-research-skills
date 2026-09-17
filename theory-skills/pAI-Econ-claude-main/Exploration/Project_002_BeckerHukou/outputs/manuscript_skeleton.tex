@@ -1,0 +1,511 @@
+\documentclass[12pt]{article}
+
+\usepackage[margin=1.2in]{geometry}
+\usepackage{amsmath,amsthm,amssymb}
+\usepackage{microtype}
+\usepackage[authoryear,round]{natbib}
+\usepackage{xcolor}
+\definecolor{linkgreen}{RGB}{0,120,100}
+\usepackage[colorlinks=true,linkcolor=linkgreen,citecolor=linkgreen,urlcolor=linkgreen]{hyperref}
+
+% Reduce title font from \LARGE (default) to \Large so title fits in 2 lines
+\makeatletter
+\renewcommand{\maketitle}{%
+  \begin{center}%
+    {\Large\bfseries \@title \par}%
+    \vskip 1.5em%
+    {\normalsize \@author \par}%
+    \vskip 0.8em%
+    {\normalsize \@date}%
+  \end{center}%
+  \vskip 2em%
+}
+\makeatother
+
+% Theorem environments
+\theoremstyle{plain}
+\newtheorem{proposition}{Proposition}
+\newtheorem{lemma}{Lemma}
+\newtheorem{corollary}{Corollary}
+\theoremstyle{definition}
+\newtheorem{assumption}{Assumption}
+\newtheorem{definition}{Definition}
+\theoremstyle{remark}
+\newtheorem{remark}{Remark}
+
+\title{Education Investment under China's Hukou System:\\
+A Theoretical Framework}
+\author{%
+  \texttt{pAI-Econ-claude} (\texttt{theoretical-economics-claude-skill})\\[4pt]
+  \small\url{https://github.com/maxwell2732/pAI-Econ-claude}\\[2pt]
+  \small Claude Sonnet 4.6%
+}
+\date{Draft: June 14, 2026}
+
+\begin{document}
+
+\maketitle
+
+\section{Introduction}
+
+This paper develops a formal model of educational investment under China's hukou
+(household registration) system.  A rural child and an urban child of identical
+innate ability $\theta$ face different expected returns to education: the rural
+child earns a fraction $\delta\in(0,1)$ of the urban wage unless she crosses an
+elite education threshold $\hat{e}$, at which point she gains probability
+$p_{0}>0$ of accessing the full urban labor market.  We embed this two-regime
+payoff structure into the \citet{Becker1964} human capital framework and
+characterize the resulting investment patterns.
+
+Our central finding is that the hukou system generates a \emph{non-monotone}
+relationship between ability and investment distortion.  Low-ability rural
+children rationally under-invest relative to equally-able urban peers, confirming
+the benchmark of \citet{Arrow1973}: a proportional wage penalty suppresses the
+marginal return to education and reduces optimal investment.  Intermediate-ability
+rural children, however, rationally \emph{over-invest}.  For these children,
+whose unconstrained optimum lies just below $\hat{e}$, the escape-route
+premium---the expected wage gain from crossing the elite threshold---outweighs
+the cost of over-shooting.  The institutional barrier does not uniformly suppress
+investment; for those near enough to the threshold to find the gamble worthwhile,
+it reverses the direction of distortion.
+
+Two further results follow.  First, the welfare loss from hukou is non-monotone
+in ability, peaking among intermediate-ability children near $\hat{e}$ who bear
+the cost of over-investment with certainty while receiving the escape premium only
+with probability $p_{0}$.  Second, hukou reform that equalizes returns---as
+China's post-2014 reforms aim to do---simultaneously improves welfare for all
+rural children and reduces educational attainment among the intermediate-ability
+group.  The escape-route incentive that was driving over-investment disappears;
+these children now invest at their unconstrained optimum, which is strictly below
+$\hat{e}$.  A policymaker monitoring Gaokao preparation intensity as a reform
+indicator would observe declining effort among the most motivated rural students
+precisely when the reform is working.
+
+\section{Model}
+
+\subsection{Agents and Ability}
+
+Two children, an urban child $C_{U}$ and a rural child $C_{R}$, share innate
+ability $\theta\in[\theta_{L},\theta_{H}]$ with $\theta_{L}>0$.  Hukou
+registration status $\tau\in\{U,R\}$ is fixed at birth and determines
+labor-market access.  Each child independently chooses education $e\in[0,\bar{e}]$
+to maximize the present discounted value of lifetime earnings net of education
+costs, discounted at rate $r>0$.  Agents are risk-neutral.
+
+\begin{assumption}[Equal Ability]
+Both children possess ability $\theta$; the investment gap
+$\Delta e^{*}(\theta):=e^{*}_{U}(\theta)-e^{*}_{R}(\theta)$ is analyzed
+parametrically in $\theta$ to isolate the institutional effect of hukou from
+any ability differences between the urban and rural populations.
+\end{assumption}
+
+\subsection{Wages and the Hukou Penalty}
+
+The market wage function is $w(e,\theta)=A\theta^{\alpha}e^{\beta}$, where
+$A>0$, $\alpha>0$, and $\beta\in(0,1)$.  The Cobb-Douglas specification implies
+strictly diminishing marginal returns to education ($w_{ee}<0$) and strict
+supermodularity ($w_{e\theta}>0$): higher ability raises the marginal return to
+education at every level $e$.
+
+\begin{assumption}[Multiplicative Penalty]
+The rural wage in the absence of an escape route is $\delta\cdot w(e,\theta)$,
+$\delta\in(0,1)$.  The penalty scales the entire return to education
+proportionally.
+\end{assumption}
+
+The escape-route probability function is
+\begin{equation}
+  p(e)=\begin{cases}0, & e<\hat{e},\\p_{0}, & e\geq\hat{e},\end{cases}
+  \label{eq:escape}
+\end{equation}
+where $\hat{e}\in(0,\bar{e})$ is the elite education threshold and
+$p_{0}\in(0,1)$.  In the Chinese context, $\hat{e}$ corresponds to crossing the
+Gaokao provincial key-line for admission to a nationally recognized university,
+and $p_{0}$ captures the fraction of elite rural graduates who successfully access
+the urban labor market.  The discontinuity at $\hat{e}$ reflects the binary
+nature of university-tier assignment.
+
+\subsection{Payoffs}
+
+Let $C(e)$ denote education costs with $C'>0$ and $C''>0$.  The urban child's
+payoff is
+\begin{equation}
+  V_{U}(e;\theta)=\frac{w(e,\theta)}{r}-C(e).
+  \label{eq:Vu}
+\end{equation}
+The rural child faces a two-regime structure.  Below the threshold,
+\begin{equation}
+  V_{R}^{low}(e;\theta)=\frac{\delta\,w(e,\theta)}{r}-C(e),\qquad e<\hat{e}.
+  \label{eq:Vlow}
+\end{equation}
+At or above the threshold, the expected payoff reflects the escape-route lottery:
+\begin{equation}
+  \boxed{V_{R}^{high}(e;\theta)=
+    \frac{\bigl[\delta+(1-\delta)p_{0}\bigr]w(e,\theta)}{r}-C(e),\qquad
+    e\geq\hat{e}.}
+  \label{eq:Vhigh}
+\end{equation}
+The effective wage multiplier $\delta+(1-\delta)p_{0}=1-(1-\delta)(1-p_{0})$
+lies strictly between $\delta$ and $1$: crossing the elite threshold improves
+but does not fully equalize expected wages, because the escape succeeds only with
+probability $p_{0}<1$.
+
+\section{Equilibrium Characterization}
+
+\begin{lemma}[Existence and Characterization]
+\label{lem:exist}
+Under the Cobb-Douglas wage and strictly convex cost:
+\begin{itemize}
+  \item[\textit{(i)}] The urban child's optimum $e^{*}_{U}(\theta)$ uniquely
+    solves
+    \begin{equation}
+      \frac{\beta A\theta^{\alpha}(e^{*}_{U})^{\beta-1}}{r}=C'(e^{*}_{U}).
+      \label{eq:focU}
+    \end{equation}
+    Moreover, $e^{*}_{U}(\theta)$ is strictly increasing in $\theta$.
+  \item[\textit{(ii)}] The rural child's global optimum satisfies
+    \[
+      e^{*}_{R}(\theta)\in
+      \arg\max\Bigl\{\max_{e<\hat{e}}V_{R}^{low}(e;\theta),\;
+      \max_{e\geq\hat{e}}V_{R}^{high}(e;\theta)\Bigr\}.
+    \]
+    The low-regime maximum is the unique interior point $e^{*}_{int}(\theta)$
+    solving $\delta\,w_{e}(e^{*}_{int};\theta)/r=C'(e^{*}_{int})$.
+    The high-regime maximum is at the interior point $e^{*}_{high}(\theta)$
+    solving $[\delta+(1-\delta)p_{0}]\,w_{e}(e^{*}_{high};\theta)/r=
+    C'(e^{*}_{high})$ when $e^{*}_{high}(\theta)\geq\hat{e}$, and at the corner
+    $\hat{e}$ otherwise.  Since the effective multiplier
+    $\delta+(1-\delta)p_{0}<1$, we have $e^{*}_{high}(\theta)<e^{*}_{U}(\theta)$
+    for all $\theta$.  Recalling that $e^{*}_{U}(\bar{\theta})=\hat{e}$, the
+    high-regime corner $\hat{e}$ is optimal within $[\hat{e},\bar{e}]$ for all
+    $\theta\leq\bar{\theta}$, while for $\theta>\bar{\theta}$ the interior
+    solution $e^{*}_{high}(\theta)>\hat{e}$ is feasible.
+\end{itemize}
+\end{lemma}
+
+The urban child's problem is globally concave---$V_{U}$ is strictly concave in
+$e$ because $w_{ee}<0$ and $C''>0$---so a unique interior solution exists.
+Monotonicity of $e^{*}_{U}$ in $\theta$ follows from the supermodularity
+condition $w_{e\theta}>0$: higher ability shifts the marginal-return schedule
+upward, raising the crossing point with $C'(e)$.  The rural child cannot apply
+a single first-order condition because $p(e)$ is discontinuous at $\hat{e}$.
+The correct solution procedure is regime comparison: evaluate the best investment
+in each regime and choose the higher-payoff option.  The over-investment result
+(Proposition~\ref{prop:over}) focuses on the intermediate-ability range
+$\theta\in(\tilde{\theta},\bar{\theta})$, where the high-regime maximum is at
+the corner $\hat{e}$ and $\hat{e}>e^{*}_{U}(\theta)$.
+
+\section{Under-Investment and Over-Investment}
+
+\subsection{The Under-Investment Benchmark}
+
+When the rural child's optimum lies below the escape threshold, the proportional
+penalty delivers the \citet{Arrow1973} result in the human-capital setting.
+
+\begin{proposition}[Under-Investment Benchmark]
+\label{prop:under}
+Suppose $e^{*}_{R}(\theta)<\hat{e}$.  Then
+$e^{*}_{R}(\theta)<e^{*}_{U}(\theta)$ for all $\theta\in[\theta_{L},\theta_{H}]$.
+The investment gap $\Delta e^{*}(\theta):=e^{*}_{U}(\theta)-e^{*}_{R}(\theta)$
+is strictly positive and strictly decreasing in $\delta$, with
+$\Delta e^{*}(\theta)\to 0$ as $\delta\to 1$.
+\end{proposition}
+
+The proof is a single-crossing argument.  The urban child's marginal return is
+$w_{e}(e;\theta)/r$; the rural child's is $\delta\,w_{e}(e;\theta)/r<w_{e}/r$ at
+every $e$.  Since $C'(e)$ is strictly increasing and identical across children,
+the intersection of marginal benefit and marginal cost occurs at a strictly lower
+$e$ for the rural child.  The mechanism is purely the return channel: the
+multiplicative penalty scales down the payoff to every unit of education,
+reducing investment.
+
+\begin{remark}[Scope of Proposition~\ref{prop:under}]
+\textit{The under-investment result depends critically on the multiplicative
+penalty specification.  Under an additive penalty $W_{R}=w(e,\theta)-d$, the
+rural child's marginal return is $w_{e}(e;\theta)/r$---identical to the urban
+child's---so $e^{*}_{R}(\theta)=e^{*}_{U}(\theta)$ and the investment gap is
+zero.  The multiplicative form is the mechanism through which the institutional
+penalty distorts the education investment margin.}
+\end{remark}
+
+\subsection{Escape-Route Over-Investment}
+
+The central result of this paper is that the direction of investment distortion
+reverses for intermediate-ability rural children.  Define two ability thresholds:
+\begin{align}
+  \bar{\theta}&: \quad e^{*}_{U}(\bar{\theta})=\hat{e},
+    \label{eq:thetabar}\\
+  \tilde{\theta}&: \quad
+    V_{R}^{low}\!\bigl(e^{*}_{int}(\tilde{\theta});\tilde{\theta}\bigr)=
+    V_{R}^{high}\!\bigl(\hat{e};\tilde{\theta}\bigr).
+    \label{eq:thetatilde}
+\end{align}
+$\bar{\theta}$ is the ability level at which the urban child's unconstrained
+optimum equals $\hat{e}$; for $\theta<\bar{\theta}$, the urban child would invest
+below $\hat{e}$ if unconstrained.  $\tilde{\theta}$ is the ability level at which
+the rural child is indifferent between the low-regime interior solution and
+investing exactly at $\hat{e}$.
+
+\begin{proposition}[Escape-Route Over-Investment]
+\label{prop:over}
+If $p_{0}\geq p^{*}_{0}(\delta,\hat{e},\bar{\theta})$ (defined in the proof),
+then $\tilde{\theta}<\bar{\theta}$ and
+\[
+  e^{*}_{R}(\theta)=\hat{e}>e^{*}_{U}(\theta)
+  \quad\text{for all }\theta\in(\tilde{\theta},\bar{\theta}).
+\]
+A rural child of intermediate ability invests strictly more in education than an
+equally-able urban child.
+\end{proposition}
+
+The proof has three steps.  \textit{Step~1.}  $\bar{\theta}$ is well-defined:
+$e^{*}_{U}(\theta)$ is continuous and strictly increasing in $\theta$, and by
+calibration $e^{*}_{U}(\theta_{L})<\hat{e}<e^{*}_{U}(\theta_{H})$, so the
+intermediate value theorem delivers a unique $\bar{\theta}$.  \textit{Step~2.}
+Define the payoff difference
+$F(\theta):=V_{R}^{high}(\hat{e};\theta)-V_{R}^{low}(e^{*}_{int}(\theta);\theta)$.
+At $\theta=\bar{\theta}$, the escape premium is
+$(1-\delta)p_{0}\cdot w(\hat{e},\bar{\theta})/r>0$.  There exists a threshold
+$p^{*}_{0}$ such that for $p_{0}\geq p^{*}_{0}$, this premium exceeds the net
+cost of over-investing from $e^{*}_{int}(\bar{\theta})$ to $\hat{e}$, giving
+$F(\bar{\theta})>0$.  \textit{Step~3.}  $F(\theta)$ is strictly increasing in
+$\theta$: by supermodularity ($w_{e\theta}>0$) and the envelope theorem applied
+to the low-regime optimum, higher ability raises $w(\hat{e},\theta)$ by more than
+it raises $w(e^{*}_{int}(\theta),\theta)$, because $\hat{e}>e^{*}_{int}$.  Since
+$F(\theta_{L})<0$ (negligible escape premium at low ability) and
+$F(\bar{\theta})>0$, the intermediate value theorem delivers a unique
+$\tilde{\theta}\in(\theta_{L},\bar{\theta})$ satisfying $F(\tilde{\theta})=0$.
+For $\theta\in(\tilde{\theta},\bar{\theta})$, $F(\theta)>0$ implies
+$e^{*}_{R}(\theta)=\hat{e}$.  Since $e^{*}_{U}(\theta)<\hat{e}$ for
+$\theta<\bar{\theta}$, over-investment follows.
+
+The economic mechanism is an asymmetric prize structure.  Urban children gain
+nothing from crossing $\hat{e}$: they already earn the full urban wage at any
+education level.  Rural children gain an expected wage jump of
+$(1-\delta)p_{0}\cdot w(\hat{e},\theta)/r$ upon crossing.  For intermediate-ability
+rural children whose unconstrained optimum lies just below $\hat{e}$, this escape
+premium outweighs the marginal cost of the additional investment required to reach
+the threshold.  The result overturns the central prediction of standard
+discrimination models---that institutional barriers uniformly suppress investment
+by the affected group---by showing that a threshold-based escape route creates
+over-investment incentives for those close enough to the threshold to find the
+gamble rational.
+
+\begin{remark}[Robustness to Penalty Specification]
+\textit{Unlike Proposition~\ref{prop:under}, the over-investment result is robust
+to the penalty specification.  Under an additive penalty $W_{R}=w-d$, the escape
+premium at $\hat{e}$ becomes $d\cdot p_{0}/r>0$, which still creates an incentive
+to invest at $\hat{e}$ for intermediate-ability rural children.  The
+over-investment direction survives; the under-investment direction does not.}
+\end{remark}
+
+\section{Comparative Statics}
+
+\begin{proposition}[Comparative Statics on the Investment Gap]
+\label{prop:cs}
+\begin{itemize}
+  \item[\textit{(i)}] For $\theta\in[\theta_{L},\tilde{\theta})$:
+    $\partial\Delta e^{*}(\theta)/\partial\delta<0$.
+    Relaxing the hukou penalty reduces the under-investment gap.
+  \item[\textit{(ii)}] $\partial(\bar{\theta}-\tilde{\theta})/\partial p_{0}>0$.
+    A higher escape probability expands the ability range over which rural
+    children over-invest.
+  \item[\textit{(iii)}] The sign of $\partial\tilde{\theta}/\partial\delta$
+    depends on a parameter condition.  By the implicit function theorem and the
+    envelope theorem applied to $F(\theta):=V_{R}^{high}(\hat{e};\theta)-
+    V_{R}^{low}(e^{*}_{int}(\theta);\theta)$:
+    \[
+      \operatorname{sign}\!\Bigl(\frac{\partial\tilde{\theta}}{\partial\delta}
+      \Bigr)
+      =-\operatorname{sign}\!\bigl[(1-p_{0})\hat{e}^{\beta}-(e^{*}_{int})^{\beta}
+      \bigr].
+    \]
+    When $\hat{e}/e^{*}_{int}(\tilde{\theta})>(1-p_{0})^{-1/\beta}$:
+    $\partial\tilde{\theta}/\partial\delta<0$, so a \emph{relaxation} of the
+    hukou penalty (higher $\delta$) lowers $\tilde{\theta}$ and expands the
+    over-investment range.  Under the complementary condition
+    ($\hat{e}/e^{*}_{int}\leq(1-p_{0})^{-1/\beta}$): $\partial\tilde{\theta}/
+    \partial\delta\geq 0$ and stricter enforcement widens the range.
+    The aggregate effect of enforcement on the over-investment range is
+    therefore parameter-dependent and not generically monotone.
+\end{itemize}
+\end{proposition}
+
+Parts~(i) and~(iii) follow from the implicit function theorem applied to the
+low-regime first-order condition and indifference condition~(\ref{eq:thetatilde}),
+respectively.  Part~(ii) follows because $F(\theta)$ is strictly increasing in
+$p_{0}$ at every $\theta$, which shifts $\tilde{\theta}$ downward while leaving
+$\bar{\theta}$ unchanged ($\bar{\theta}$ depends only on $e^{*}_{U}$, which is
+independent of $p_{0}$).
+
+The sign result in part~(iii) has a clean intuition.  When $\hat{e}\gg
+e^{*}_{int}$ (first condition), a marginal increase in $\delta$ raises the
+high-regime base return $\delta w(\hat{e},\theta)$ by much more than it raises
+the low-regime return $\delta w(e^{*}_{int},\theta)$, since $\hat{e}^{\beta}\gg
+(e^{*}_{int})^{\beta}$.  Even though the escape premium $(1-\delta)p_{0}w$ falls,
+the net payoff advantage of the high regime increases, drawing more rural children
+toward over-investment.  When $\hat{e}$ is close to $e^{*}_{int}$ (second
+condition), the escape premium effect dominates and stricter enforcement widens
+the range.  Neither direction is empirically universal; calibration to Chinese
+Gaokao data is required to determine which regime obtains.
+
+\section{Welfare}
+
+Let $e^{FB}(\theta)=e^{*}_{U}(\theta)$ denote the first-best investment level
+and define the welfare loss from hukou as
+$\Delta W(\theta):=V_{U}(e^{FB};\theta)-V_{R}(e^{*}_{R};\theta)$.
+
+\begin{proposition}[Welfare Loss]
+\label{prop:welfare}
+For all $\theta\in[\theta_{L},\theta_{H}]$ and $\delta\in(0,1)$:
+\begin{itemize}
+  \item[\textit{(i)}] $\Delta W(\theta)>0$.
+  \item[\textit{(ii)}] $\partial\Delta W(\theta)/\partial\delta<0$: relaxing the
+    penalty reduces welfare loss.
+  \item[\textit{(iii)}] $\Delta W(\theta)$ is non-monotone in $\theta$, attaining
+    a local maximum near $\tilde{\theta}$.
+\end{itemize}
+\end{proposition}
+
+The non-monotone profile in part~(iii) reflects two competing distortions.  In
+the under-investment region $\theta<\tilde{\theta}$, the gap between $e^{FB}$ and
+$e^{*}_{R}$ grows as $\theta$ approaches $\tilde{\theta}$ from below:
+$e^{*}_{U}(\theta)$ rises toward $\hat{e}$ while $e^{*}_{int}(\theta)$ is pushed
+downward by the penalty.  In the over-investment region $\theta\in(\tilde{\theta},
+\bar{\theta})$, the rural child invests at $\hat{e}$ and bears the cost of
+over-shooting with certainty, while receiving the escape premium only with
+probability $p_{0}$.  The welfare loss peaks near $\tilde{\theta}$ where both
+distortions are simultaneously active.
+
+A natural prior predicts that welfare losses should be largest for high-ability
+rural children, who have the most to gain from equal treatment.
+Proposition~\ref{prop:welfare}(iii) qualifies this: above $\bar{\theta}$, rural
+children invest in the high regime at $e^{*}_{high}(\theta)>\hat{e}$, but the
+effective multiplier $\delta+(1-\delta)p_{0}<1$ means their expected wage still
+falls short of the first-best; $\Delta W(\theta)>0$ for all $\theta$.  What the
+non-monotonicity says is that the welfare loss is particularly large near
+$\tilde{\theta}$, where two distortions coincide: the rural child over-shoots to
+$\hat{e}$ (incurring excess investment cost) while still receiving the penalized
+wage with probability $1-p_{0}$.  Whether the welfare loss is monotonically
+smaller above $\bar{\theta}$ than near $\tilde{\theta}$ depends on parameters and
+is not established in general; the proposition asserts only that $\Delta W(\theta)$
+attains a local maximum near $\tilde{\theta}$, not a global ordering across the
+full ability distribution.
+
+\begin{proposition}[Unintended Consequence of Hukou Reform]
+\label{prop:reform}
+Let $\delta^{*}\in(0,1)$ be the pre-reform penalty.  A reform setting $\delta'=1$:
+\begin{itemize}
+  \item[\textit{(i)}] Eliminates all welfare loss: $\Delta W(\theta;\delta')=0$
+    for all $\theta$.
+  \item[\textit{(ii)}] Increases investment for
+    $\theta\in[\theta_{L},\tilde{\theta}(\delta^{*}))$:
+    $e^{*}_{R}(\theta;\delta')=e^{*}_{U}(\theta)>e^{*}_{R}(\theta;\delta^{*})$.
+  \item[\textit{(iii)}] \textit{Decreases} investment for
+    $\theta\in(\tilde{\theta}(\delta^{*}),\bar{\theta})$:
+    $e^{*}_{R}(\theta;\delta')=e^{*}_{U}(\theta)<\hat{e}=
+    e^{*}_{R}(\theta;\delta^{*})$.
+\end{itemize}
+\end{proposition}
+
+The proof is direct.  Post-reform ($\delta=1$), both children solve the same
+problem and arrive at the first-best: $e^{*}_{R}(\theta;1)=e^{*}_{U}(\theta)$.
+Welfare is equalized by construction.  The investment comparison in~(iii) follows
+because the pre-reform rural child in $(\tilde{\theta},\bar{\theta})$ was
+investing at $\hat{e}>e^{*}_{U}(\theta)$, while the post-reform rural child
+invests at $e^{*}_{U}(\theta)$.
+
+The paradox arises because the escape-route over-investment was a distortion, not
+genuine educational ambition.  Once the wage penalty disappears, intermediate-ability
+rural children optimally reduce education to the unconstrained level: they earn the
+full wage at lower cost, strictly improving welfare.  A policymaker who interprets
+reduced Gaokao preparation intensity among rural near-threshold students as evidence
+that reform has backfired is drawing the opposite conclusion from the correct one:
+the observed investment decline is the efficiency gain from removing the distortion.
+
+\section{Boundary Cases}
+
+\begin{proposition}[Limiting Behavior]
+\label{prop:boundary}
+\begin{itemize}
+  \item[\textit{(i)}] As $\delta\to 1$: $e^{*}_{R}(\theta)\to e^{*}_{U}(\theta)$
+    and $\Delta W(\theta)\to 0$ for all $\theta$.
+  \item[\textit{(ii)}] As $p_{0}\to 0$: the over-investment range collapses,
+    $\bar{\theta}-\tilde{\theta}\to 0$.  For $\theta\leq\bar{\theta}$,
+    $e^{*}_{R}(\theta)\to e^{*}_{int}(\theta)$ (the low-regime interior).
+    For $\theta>\bar{\theta}$, the high-regime interior $e^{*}_{high}(\theta)\to
+    e^{*}_{int}(\theta)$ as well (since the effective multiplier
+    $\delta+(1-\delta)p_{0}\to\delta$), representing a \emph{contraction} of
+    investment for these high-ability children.  The overall limit is pure
+    under-investment relative to first-best for all $\theta$, consistent with
+    the \citet{Arrow1973} benchmark.
+  \item[\textit{(iii)}] As $\delta\to 0$: $e^{*}_{int}(\theta)\to 0$ for all
+    $\theta$; the escape route becomes the only investment incentive for rural
+    children.  Whether rural children actually cross $\hat{e}$ depends on whether
+    the escape premium $p_{0}\,w(\hat{e},\theta)/r$ exceeds $C(\hat{e})$; for
+    very low $\delta$ and low $\theta$, neither regime may generate positive
+    investment.
+\end{itemize}
+\end{proposition}
+
+The limit in~(ii) is the most informative.  As $p_{0}\to 0$, the payoff jump at
+$\hat{e}$ vanishes; the rural child always prefers the low-regime interior,
+yielding the Arrow~(1973) prediction of proportional under-investment at every
+ability level.  For high-ability children ($\theta>\bar{\theta}$), convergence
+to the Arrow benchmark involves a fall in investment from the high-regime interior
+$e^{*}_{high}>\hat{e}$ back to $e^{*}_{int}<\hat{e}$, not merely a collapse of
+the intermediate over-investment range.  The novel predictions of the present
+paper---escape-route over-investment (Proposition~\ref{prop:over}) and the reform
+paradox (Proposition~\ref{prop:reform})---require both $\delta<1$ and $p_{0}>0$;
+neither feature alone is sufficient.
+
+\section{Testable Predictions}
+
+The model generates the following empirically testable predictions.
+
+\textbf{P1.~Non-monotone investment gap.}  Among rural and urban students of
+equal measured ability, the investment gap $\Delta e^{*}(\theta)$ is positive
+(rural under-invest) at low ability, negative (rural over-invest) at intermediate
+ability near the Gaokao key-line, and approaches zero at high ability.
+Cross-sectional variation in Gaokao preparation intensity by ability and hukou
+status provides the most direct test.
+
+\textbf{P2.~Over-investment expands under stricter enforcement.}  When the elite
+threshold substantially exceeds rural students' unconstrained optimum
+(Proposition~\ref{prop:cs}(iii)), stricter regional hukou enforcement should
+increase preparation intensity among near-threshold rural students.  Regional
+variation in enforcement strictness is the natural testing ground.
+
+\textbf{P3.~Post-reform investment decline among near-threshold students.}  In
+regions where hukou reform has reduced the wage penalty, Gaokao preparation
+intensity among intermediate-ability rural students should fall even as wage and
+welfare outcomes improve.  Isolating this prediction from general discouragement
+effects requires joint measurement of wage outcomes and investment.
+
+\textbf{P4.~Welfare loss concentrated at intermediate ability.}  Welfare measures
+---earnings gaps, consumption shortfalls, subjective well-being differentials
+relative to urban peers---should be largest for rural students near the elite
+admission threshold, not for the most- or least-able.
+
+\begin{thebibliography}{}
+
+\bibitem[Arrow(1973)]{Arrow1973}
+Arrow, K. J. 1973. ``The Theory of Discrimination.''
+In \textit{Discrimination in Labor Markets},
+edited by O. Ashenfelter and A. Rees, 3--33.
+Princeton University Press.
+
+\bibitem[Becker(1964)]{Becker1964}
+Becker, G. S. 1964.
+\textit{Human Capital: A Theoretical and Empirical Analysis,
+with Special Reference to Education}.
+National Bureau of Economic Research.
+
+\bibitem[Galor and Zeira(1993)]{GalorZeira1993}
+Galor, O., and J. Zeira. 1993.
+``Income Distribution and Macroeconomics.''
+\textit{Review of Economic Studies}, 60(1): 35--52.
+
+\end{thebibliography}
+
+\end{document}

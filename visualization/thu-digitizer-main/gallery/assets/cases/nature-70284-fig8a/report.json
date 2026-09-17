@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "case_id": "nature-70284-fig8a",
+  "status": "partial_visible",
+  "route": "raster_bar_candidate",
+  "expected_detection_count_passed": false,
+  "source_data_role": "independent_validation_only",
+  "measurement": {
+    "file": "measurement-source.png",
+    "sha256": "030221d33457598cab08442d0af1d0add749a16aaa6860c4124862b2b5c07d3e",
+    "size": [
+      2001,
+      1235
+    ],
+    "gallery_crop": [
+      0,
+      0,
+      2001,
+      360
+    ],
+    "resampling_applied": false
+  },
+  "coverage": {
+    "visible_slots": 16,
+    "authorized_bars": 13,
+    "not_extracted": 3,
+    "fraction": 0.8125
+  },
+  "interval_coverage": {
+    "authorized_bars_with_intervals": 13,
+    "authorized_bars": 13
+  },
+  "validation": {
+    "status": "not_comparable",
+    "numerically_compared": 0,
+    "filled_from_external_data": 0
+  },
+  "limitations": [
+    "The registered extractor uses bridge_gap=1; black interval strokes split three pale fills into unsupported or mixed components.",
+    "One low-confidence invocation contains one ambiguous and one extracted detector mark; report-level low confidence means neither row is authorized in the consolidated CSV.",
+    "No value was inferred visually or copied from source data.",
+    "The official Supplementary Data 3 workbook is a regional climate summary, not the per-transition ridge coefficients/contributions used for Fig. 8a."
+  ]
+}

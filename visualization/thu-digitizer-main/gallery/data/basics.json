@@ -1,0 +1,2816 @@
+{
+  "schemaVersion": 1,
+  "generated": "2026-07-23",
+  "title": "thu-digitizer Basic Extraction Gallery",
+  "columnLabels": [
+    "原图",
+    "提取覆盖",
+    "数据复现"
+  ],
+  "samples": [
+    {
+      "id": "line",
+      "title": "折线散点图",
+      "subtitle": "三个语义系列、标记与可见误差线",
+      "status": "validated_local_stable",
+      "statusLabel": "稳定 · 合成基准",
+      "description": "从附件原始像素中恢复 biodiversity、economic language 与 context 的 33 个采样点，并单独记录 11 组浅灰误差线可见端点。",
+      "metrics": [
+        {
+          "label": "点覆盖",
+          "value": "33 / 33"
+        },
+        {
+          "label": "误差线",
+          "value": "11 / 11"
+        },
+        {
+          "label": "验证 MAE",
+          "value": "0.221"
+        }
+      ],
+      "assets": {
+        "original": "assets/basics/line/original.png",
+        "overlay": "assets/basics/line/overlay.png",
+        "recreated": "assets/basics/line/recreated.png",
+        "data": "assets/basics/line/data.csv",
+        "report": "assets/basics/line/report.json"
+      },
+      "styleSpec": {
+        "renderer": "paper-native-geometry",
+        "fidelity": "evidence_backed_style_reconstruction",
+        "label": "原图像素提取 · 交互命中",
+        "note": "复现底图来自提取值；悬停点读取 data.csv 中的坐标、像素证据与可见误差端点。",
+        "canvas": {
+          "width": 600,
+          "height": 400
+        },
+        "fontFamily": "DejaVu Sans, Arial, sans-serif",
+        "rasterEvidenceInteractive": true
+      }
+    },
+    {
+      "id": "scatter",
+      "title": "散点图",
+      "subtitle": "真实论文中的彩色标记散点",
+      "status": "visible_geometry_candidate",
+      "statusLabel": "候选 · 确定性分峰",
+      "description": "Nature Communications Fig. 4a：11 个可见彩色标记由紧凑散点候选提取器在原始像素画布上恢复；两组三点相连组件按距离峰分离，坐标值来自已确认的线性坐标标定。",
+      "metrics": [
+        {
+          "label": "点覆盖",
+          "value": "11 / 11"
+        },
+        {
+          "label": "接触分峰",
+          "value": "2 组三点组件"
+        },
+        {
+          "label": "证据",
+          "value": "确定性栅格候选"
+        }
+      ],
+      "assets": {
+        "original": "assets/cases/nature-09789-fig4a/original.png",
+        "overlay": "assets/cases/nature-09789-fig4a/overlay.png",
+        "recreated": "assets/cases/nature-09789-fig4a/recreated.png",
+        "data": "assets/cases/nature-09789-fig4a/data.csv",
+        "report": "assets/cases/nature-09789-fig4a/report.json"
+      },
+      "articleUrl": "https://www.nature.com/articles/s41467-019-09789-4",
+      "journal": "Nature Communications",
+      "articleTitle": "Bayesian nonparametric models characterize instantaneous strategies in a competitive dynamic game",
+      "figure": "Fig. 4a",
+      "figureUrl": "https://www.nature.com/articles/s41467-019-09789-4/figures/4",
+      "styleSpec": {
+        "renderer": "paper-native-geometry",
+        "fidelity": "visible_geometry_candidate",
+        "label": "11 个可见散点 · 原像素命中",
+        "note": "悬停每个圆点可读取变量、提取坐标、原始像素中心与不确定度；这些是显示层的可见标记，而非作者的原始观测或潜在模型参数。",
+        "canvas": {
+          "width": 1370,
+          "height": 650
+        },
+        "fontFamily": "Arial, Helvetica, sans-serif",
+        "geometryAsset": "assets/cases/nature-09789-fig4a/geometry.json",
+        "lines": [
+          {
+            "x1": 170,
+            "y1": 25,
+            "x2": 720,
+            "y2": 25,
+            "width": 8
+          },
+          {
+            "x1": 170,
+            "y1": 25,
+            "x2": 170,
+            "y2": 570,
+            "width": 8
+          },
+          {
+            "x1": 170,
+            "y1": 570,
+            "x2": 720,
+            "y2": 570,
+            "width": 8
+          },
+          {
+            "x1": 720,
+            "y1": 25,
+            "x2": 720,
+            "y2": 570,
+            "width": 8
+          }
+        ],
+        "annotations": [
+          {
+            "text": "a",
+            "x": 50,
+            "y": 25,
+            "size": 30,
+            "bold": true
+          },
+          {
+            "text": "Trial-level variance",
+            "x": 450,
+            "y": 640,
+            "size": 18,
+            "anchor": "middle"
+          },
+          {
+            "text": "Subject-level variance",
+            "x": 55,
+            "y": 330,
+            "size": 18
+          }
+        ],
+        "rasterEvidenceInteractive": true
+      }
+    },
+    {
+      "id": "nature-56055-fig3c",
+      "title": "多面板散点折线图",
+      "subtitle": "三组全覆盖标记曲线与局部点阵",
+      "status": "visible_geometry_candidate",
+      "statusLabel": "真实图 · 候选标记路径",
+      "description": "Fig. 3c 三层曲线的 168 个可见标记中心均由原始像素、多锚点标定和全局路径选择恢复；同色参考虚线与阴影合成色已显式处理，并保留 57 个具有像素证据的局部点阵组件。",
+      "metrics": [
+        {
+          "label": "曲线标记覆盖",
+          "value": "168 / 168"
+        },
+        {
+          "label": "局部点阵",
+          "value": "57 个可分组件"
+        },
+        {
+          "label": "路径平均置信度",
+          "value": "0.958"
+        }
+      ],
+      "articleUrl": "https://www.nature.com/articles/s41467-025-56055-x",
+      "journal": "Nature Communications",
+      "articleTitle": "Spontaneous curvature in two-dimensional van der Waals heterostructures",
+      "figure": "Fig. 3c",
+      "figureUrl": "https://www.nature.com/articles/s41467-025-56055-x/figures/3",
+      "assets": {
+        "original": "assets/cases/nature-56055-fig3c/original.png",
+        "overlay": "assets/cases/nature-56055-fig3c/overlay.png",
+        "recreated": "assets/cases/nature-56055-fig3c/recreated.png",
+        "data": "assets/cases/nature-56055-fig3c/data.csv",
+        "report": "assets/cases/nature-56055-fig3c/report.json"
+      },
+      "styleSpec": {
+        "renderer": "paper-native-geometry",
+        "fidelity": "visible_geometry_candidate",
+        "label": "全局标记路径 · 原像素证据",
+        "note": "悬停曲线标记可读取候选值、原始像素中心、置信度与不确定度；局部点阵仅展示可见位置、颜色和半径。",
+        "canvas": {
+          "width": 1495,
+          "height": 1278
+        },
+        "fontFamily": "Arial, Helvetica, sans-serif",
+        "rects": [
+          {
+            "x": 1028,
+            "y": 35,
+            "width": 154,
+            "height": 341,
+            "fill": "#f8c8c8"
+          },
+          {
+            "x": 913,
+            "y": 376,
+            "width": 322,
+            "height": 339,
+            "fill": "#cdeefa"
+          },
+          {
+            "x": 937,
+            "y": 715,
+            "width": 333,
+            "height": 341,
+            "fill": "#cfcfcf"
+          }
+        ],
+        "lines": [
+          {
+            "x1": 142,
+            "y1": 35,
+            "x2": 142,
+            "y2": 376,
+            "width": 2
+          },
+          {
+            "x1": 142,
+            "y1": 376,
+            "x2": 1297,
+            "y2": 376,
+            "width": 2
+          },
+          {
+            "x1": 142,
+            "y1": 182,
+            "x2": 1297,
+            "y2": 182,
+            "width": 1.5,
+            "stroke": "#fb8177",
+            "dash": "5 6"
+          },
+          {
+            "x1": 142.0,
+            "y1": 376,
+            "x2": 142.0,
+            "y2": 356,
+            "width": 2
+          },
+          {
+            "x1": 184.4074074074074,
+            "y1": 376,
+            "x2": 184.4074074074074,
+            "y2": 366,
+            "width": 2
+          },
+          {
+            "x1": 226.8148148148148,
+            "y1": 376,
+            "x2": 226.8148148148148,
+            "y2": 356,
+            "width": 2
+          },
+          {
+            "x1": 269.22222222222223,
+            "y1": 376,
+            "x2": 269.22222222222223,
+            "y2": 366,
+            "width": 2
+          },
+          {
+            "x1": 311.6296296296296,
+            "y1": 376,
+            "x2": 311.6296296296296,
+            "y2": 356,
+            "width": 2
+          },
+          {
+            "x1": 354.03703703703707,
+            "y1": 376,
+            "x2": 354.03703703703707,
+            "y2": 366,
+            "width": 2
+          },
+          {
+            "x1": 396.44444444444446,
+            "y1": 376,
+            "x2": 396.44444444444446,
+            "y2": 356,
+            "width": 2
+          },
+          {
+            "x1": 438.85185185185185,
+            "y1": 376,
+            "x2": 438.85185185185185,
+            "y2": 366,
+            "width": 2
+          },
+          {
+            "x1": 481.25925925925924,
+            "y1": 376,
+            "x2": 481.25925925925924,
+            "y2": 356,
+            "width": 2
+          },
+          {
+            "x1": 523.6666666666667,
+            "y1": 376,
+            "x2": 523.6666666666667,
+            "y2": 366,
+            "width": 2
+          },
+          {
+            "x1": 566.0740740740741,
+            "y1": 376,
+            "x2": 566.0740740740741,
+            "y2": 356,
+            "width": 2
+          },
+          {
+            "x1": 608.4814814814815,
+            "y1": 376,
+            "x2": 608.4814814814815,
+            "y2": 366,
+            "width": 2
+          },
+          {
+            "x1": 650.8888888888889,
+            "y1": 376,
+            "x2": 650.8888888888889,
+            "y2": 356,
+            "width": 2
+          },
+          {
+            "x1": 693.2962962962963,
+            "y1": 376,
+            "x2": 693.2962962962963,
+            "y2": 366,
+            "width": 2
+          },
+          {
+            "x1": 735.7037037037037,
+            "y1": 376,
+            "x2": 735.7037037037037,
+            "y2": 356,
+            "width": 2
+          },
+          {
+            "x1": 778.1111111111111,
+            "y1": 376,
+            "x2": 778.1111111111111,
+            "y2": 366,
+            "width": 2
+          },
+          {
+            "x1": 820.5185185185185,
+            "y1": 376,
+            "x2": 820.5185185185185,
+            "y2": 356,
+            "width": 2
+          },
+          {
+            "x1": 862.925925925926,
+            "y1": 376,
+            "x2": 862.925925925926,
+            "y2": 366,
+            "width": 2
+          },
+          {
+            "x1": 905.3333333333334,
+            "y1": 376,
+            "x2": 905.3333333333334,
+            "y2": 356,
+            "width": 2
+          },
+          {
+            "x1": 947.7407407407408,
+            "y1": 376,
+            "x2": 947.7407407407408,
+            "y2": 366,
+            "width": 2
+          },
+          {
+            "x1": 990.1481481481482,
+            "y1": 376,
+            "x2": 990.1481481481482,
+            "y2": 356,
+            "width": 2
+          },
+          {
+            "x1": 1032.5555555555557,
+            "y1": 376,
+            "x2": 1032.5555555555557,
+            "y2": 366,
+            "width": 2
+          },
+          {
+            "x1": 1074.962962962963,
+            "y1": 376,
+            "x2": 1074.962962962963,
+            "y2": 356,
+            "width": 2
+          },
+          {
+            "x1": 1117.3703703703704,
+            "y1": 376,
+            "x2": 1117.3703703703704,
+            "y2": 366,
+            "width": 2
+          },
+          {
+            "x1": 1159.7777777777778,
+            "y1": 376,
+            "x2": 1159.7777777777778,
+            "y2": 356,
+            "width": 2
+          },
+          {
+            "x1": 1202.1851851851852,
+            "y1": 376,
+            "x2": 1202.1851851851852,
+            "y2": 366,
+            "width": 2
+          },
+          {
+            "x1": 1244.5925925925926,
+            "y1": 376,
+            "x2": 1244.5925925925926,
+            "y2": 356,
+            "width": 2
+          },
+          {
+            "x1": 1287.0,
+            "y1": 376,
+            "x2": 1287.0,
+            "y2": 366,
+            "width": 2
+          },
+          {
+            "x1": 142,
+            "y1": 376.0,
+            "x2": 162,
+            "y2": 376.0,
+            "width": 2
+          },
+          {
+            "x1": 142,
+            "y1": 290.74999999999994,
+            "x2": 162,
+            "y2": 290.74999999999994,
+            "width": 2
+          },
+          {
+            "x1": 142,
+            "y1": 205.49999999999986,
+            "x2": 162,
+            "y2": 205.49999999999986,
+            "width": 2
+          },
+          {
+            "x1": 142,
+            "y1": 120.24999999999977,
+            "x2": 162,
+            "y2": 120.24999999999977,
+            "width": 2
+          },
+          {
+            "x1": 142,
+            "y1": 34.999999999999716,
+            "x2": 162,
+            "y2": 34.999999999999716,
+            "width": 2
+          },
+          {
+            "x1": 142,
+            "y1": 376,
+            "x2": 142,
+            "y2": 715,
+            "width": 2
+          },
+          {
+            "x1": 142,
+            "y1": 715,
+            "x2": 1297,
+            "y2": 715,
+            "width": 2
+          },
+          {
+            "x1": 142,
+            "y1": 514,
+            "x2": 1297,
+            "y2": 514,
+            "width": 1.5,
+            "stroke": "#2ba3ca",
+            "dash": "5 6"
+          },
+          {
+            "x1": 142.0,
+            "y1": 715,
+            "x2": 142.0,
+            "y2": 695,
+            "width": 2
+          },
+          {
+            "x1": 184.4074074074074,
+            "y1": 715,
+            "x2": 184.4074074074074,
+            "y2": 705,
+            "width": 2
+          },
+          {
+            "x1": 226.8148148148148,
+            "y1": 715,
+            "x2": 226.8148148148148,
+            "y2": 695,
+            "width": 2
+          },
+          {
+            "x1": 269.22222222222223,
+            "y1": 715,
+            "x2": 269.22222222222223,
+            "y2": 705,
+            "width": 2
+          },
+          {
+            "x1": 311.6296296296296,
+            "y1": 715,
+            "x2": 311.6296296296296,
+            "y2": 695,
+            "width": 2
+          },
+          {
+            "x1": 354.03703703703707,
+            "y1": 715,
+            "x2": 354.03703703703707,
+            "y2": 705,
+            "width": 2
+          },
+          {
+            "x1": 396.44444444444446,
+            "y1": 715,
+            "x2": 396.44444444444446,
+            "y2": 695,
+            "width": 2
+          },
+          {
+            "x1": 438.85185185185185,
+            "y1": 715,
+            "x2": 438.85185185185185,
+            "y2": 705,
+            "width": 2
+          },
+          {
+            "x1": 481.25925925925924,
+            "y1": 715,
+            "x2": 481.25925925925924,
+            "y2": 695,
+            "width": 2
+          },
+          {
+            "x1": 523.6666666666667,
+            "y1": 715,
+            "x2": 523.6666666666667,
+            "y2": 705,
+            "width": 2
+          },
+          {
+            "x1": 566.0740740740741,
+            "y1": 715,
+            "x2": 566.0740740740741,
+            "y2": 695,
+            "width": 2
+          },
+          {
+            "x1": 608.4814814814815,
+            "y1": 715,
+            "x2": 608.4814814814815,
+            "y2": 705,
+            "width": 2
+          },
+          {
+            "x1": 650.8888888888889,
+            "y1": 715,
+            "x2": 650.8888888888889,
+            "y2": 695,
+            "width": 2
+          },
+          {
+            "x1": 693.2962962962963,
+            "y1": 715,
+            "x2": 693.2962962962963,
+            "y2": 705,
+            "width": 2
+          },
+          {
+            "x1": 735.7037037037037,
+            "y1": 715,
+            "x2": 735.7037037037037,
+            "y2": 695,
+            "width": 2
+          },
+          {
+            "x1": 778.1111111111111,
+            "y1": 715,
+            "x2": 778.1111111111111,
+            "y2": 705,
+            "width": 2
+          },
+          {
+            "x1": 820.5185185185185,
+            "y1": 715,
+            "x2": 820.5185185185185,
+            "y2": 695,
+            "width": 2
+          },
+          {
+            "x1": 862.925925925926,
+            "y1": 715,
+            "x2": 862.925925925926,
+            "y2": 705,
+            "width": 2
+          },
+          {
+            "x1": 905.3333333333334,
+            "y1": 715,
+            "x2": 905.3333333333334,
+            "y2": 695,
+            "width": 2
+          },
+          {
+            "x1": 947.7407407407408,
+            "y1": 715,
+            "x2": 947.7407407407408,
+            "y2": 705,
+            "width": 2
+          },
+          {
+            "x1": 990.1481481481482,
+            "y1": 715,
+            "x2": 990.1481481481482,
+            "y2": 695,
+            "width": 2
+          },
+          {
+            "x1": 1032.5555555555557,
+            "y1": 715,
+            "x2": 1032.5555555555557,
+            "y2": 705,
+            "width": 2
+          },
+          {
+            "x1": 1074.962962962963,
+            "y1": 715,
+            "x2": 1074.962962962963,
+            "y2": 695,
+            "width": 2
+          },
+          {
+            "x1": 1117.3703703703704,
+            "y1": 715,
+            "x2": 1117.3703703703704,
+            "y2": 705,
+            "width": 2
+          },
+          {
+            "x1": 1159.7777777777778,
+            "y1": 715,
+            "x2": 1159.7777777777778,
+            "y2": 695,
+            "width": 2
+          },
+          {
+            "x1": 1202.1851851851852,
+            "y1": 715,
+            "x2": 1202.1851851851852,
+            "y2": 705,
+            "width": 2
+          },
+          {
+            "x1": 1244.5925925925926,
+            "y1": 715,
+            "x2": 1244.5925925925926,
+            "y2": 695,
+            "width": 2
+          },
+          {
+            "x1": 1287.0,
+            "y1": 715,
+            "x2": 1287.0,
+            "y2": 705,
+            "width": 2
+          },
+          {
+            "x1": 142,
+            "y1": 715.0,
+            "x2": 162,
+            "y2": 715.0,
+            "width": 2
+          },
+          {
+            "x1": 142,
+            "y1": 630.25,
+            "x2": 162,
+            "y2": 630.25,
+            "width": 2
+          },
+          {
+            "x1": 142,
+            "y1": 545.4999999999999,
+            "x2": 162,
+            "y2": 545.4999999999999,
+            "width": 2
+          },
+          {
+            "x1": 142,
+            "y1": 460.7499999999998,
+            "x2": 162,
+            "y2": 460.7499999999998,
+            "width": 2
+          },
+          {
+            "x1": 142,
+            "y1": 375.9999999999998,
+            "x2": 162,
+            "y2": 375.9999999999998,
+            "width": 2
+          },
+          {
+            "x1": 142,
+            "y1": 715,
+            "x2": 142,
+            "y2": 1056,
+            "width": 2
+          },
+          {
+            "x1": 142,
+            "y1": 1056,
+            "x2": 1297,
+            "y2": 1056,
+            "width": 2
+          },
+          {
+            "x1": 142,
+            "y1": 885,
+            "x2": 1297,
+            "y2": 885,
+            "width": 1.5,
+            "stroke": "#808080",
+            "dash": "5 6"
+          },
+          {
+            "x1": 142.0,
+            "y1": 1056,
+            "x2": 142.0,
+            "y2": 1036,
+            "width": 2
+          },
+          {
+            "x1": 184.4074074074074,
+            "y1": 1056,
+            "x2": 184.4074074074074,
+            "y2": 1046,
+            "width": 2
+          },
+          {
+            "x1": 226.8148148148148,
+            "y1": 1056,
+            "x2": 226.8148148148148,
+            "y2": 1036,
+            "width": 2
+          },
+          {
+            "x1": 269.22222222222223,
+            "y1": 1056,
+            "x2": 269.22222222222223,
+            "y2": 1046,
+            "width": 2
+          },
+          {
+            "x1": 311.6296296296296,
+            "y1": 1056,
+            "x2": 311.6296296296296,
+            "y2": 1036,
+            "width": 2
+          },
+          {
+            "x1": 354.03703703703707,
+            "y1": 1056,
+            "x2": 354.03703703703707,
+            "y2": 1046,
+            "width": 2
+          },
+          {
+            "x1": 396.44444444444446,
+            "y1": 1056,
+            "x2": 396.44444444444446,
+            "y2": 1036,
+            "width": 2
+          },
+          {
+            "x1": 438.85185185185185,
+            "y1": 1056,
+            "x2": 438.85185185185185,
+            "y2": 1046,
+            "width": 2
+          },
+          {
+            "x1": 481.25925925925924,
+            "y1": 1056,
+            "x2": 481.25925925925924,
+            "y2": 1036,
+            "width": 2
+          },
+          {
+            "x1": 523.6666666666667,
+            "y1": 1056,
+            "x2": 523.6666666666667,
+            "y2": 1046,
+            "width": 2
+          },
+          {
+            "x1": 566.0740740740741,
+            "y1": 1056,
+            "x2": 566.0740740740741,
+            "y2": 1036,
+            "width": 2
+          },
+          {
+            "x1": 608.4814814814815,
+            "y1": 1056,
+            "x2": 608.4814814814815,
+            "y2": 1046,
+            "width": 2
+          },
+          {
+            "x1": 650.8888888888889,
+            "y1": 1056,
+            "x2": 650.8888888888889,
+            "y2": 1036,
+            "width": 2
+          },
+          {
+            "x1": 693.2962962962963,
+            "y1": 1056,
+            "x2": 693.2962962962963,
+            "y2": 1046,
+            "width": 2
+          },
+          {
+            "x1": 735.7037037037037,
+            "y1": 1056,
+            "x2": 735.7037037037037,
+            "y2": 1036,
+            "width": 2
+          },
+          {
+            "x1": 778.1111111111111,
+            "y1": 1056,
+            "x2": 778.1111111111111,
+            "y2": 1046,
+            "width": 2
+          },
+          {
+            "x1": 820.5185185185185,
+            "y1": 1056,
+            "x2": 820.5185185185185,
+            "y2": 1036,
+            "width": 2
+          },
+          {
+            "x1": 862.925925925926,
+            "y1": 1056,
+            "x2": 862.925925925926,
+            "y2": 1046,
+            "width": 2
+          },
+          {
+            "x1": 905.3333333333334,
+            "y1": 1056,
+            "x2": 905.3333333333334,
+            "y2": 1036,
+            "width": 2
+          },
+          {
+            "x1": 947.7407407407408,
+            "y1": 1056,
+            "x2": 947.7407407407408,
+            "y2": 1046,
+            "width": 2
+          },
+          {
+            "x1": 990.1481481481482,
+            "y1": 1056,
+            "x2": 990.1481481481482,
+            "y2": 1036,
+            "width": 2
+          },
+          {
+            "x1": 1032.5555555555557,
+            "y1": 1056,
+            "x2": 1032.5555555555557,
+            "y2": 1046,
+            "width": 2
+          },
+          {
+            "x1": 1074.962962962963,
+            "y1": 1056,
+            "x2": 1074.962962962963,
+            "y2": 1036,
+            "width": 2
+          },
+          {
+            "x1": 1117.3703703703704,
+            "y1": 1056,
+            "x2": 1117.3703703703704,
+            "y2": 1046,
+            "width": 2
+          },
+          {
+            "x1": 1159.7777777777778,
+            "y1": 1056,
+            "x2": 1159.7777777777778,
+            "y2": 1036,
+            "width": 2
+          },
+          {
+            "x1": 1202.1851851851852,
+            "y1": 1056,
+            "x2": 1202.1851851851852,
+            "y2": 1046,
+            "width": 2
+          },
+          {
+            "x1": 1244.5925925925926,
+            "y1": 1056,
+            "x2": 1244.5925925925926,
+            "y2": 1036,
+            "width": 2
+          },
+          {
+            "x1": 1287.0,
+            "y1": 1056,
+            "x2": 1287.0,
+            "y2": 1046,
+            "width": 2
+          },
+          {
+            "x1": 142,
+            "y1": 1056.0,
+            "x2": 162,
+            "y2": 1056.0,
+            "width": 2
+          },
+          {
+            "x1": 142,
+            "y1": 970.7499999999999,
+            "x2": 162,
+            "y2": 970.7499999999999,
+            "width": 2
+          },
+          {
+            "x1": 142,
+            "y1": 885.4999999999999,
+            "x2": 162,
+            "y2": 885.4999999999999,
+            "width": 2
+          },
+          {
+            "x1": 142,
+            "y1": 800.2499999999998,
+            "x2": 162,
+            "y2": 800.2499999999998,
+            "width": 2
+          },
+          {
+            "x1": 142,
+            "y1": 714.9999999999998,
+            "x2": 162,
+            "y2": 714.9999999999998,
+            "width": 2
+          }
+        ],
+        "annotations": [
+          {
+            "text": "3.3",
+            "x": 118,
+            "y": 382.0,
+            "size": 19,
+            "anchor": "ra"
+          },
+          {
+            "text": "3.4",
+            "x": 118,
+            "y": 296.74999999999994,
+            "size": 19,
+            "anchor": "ra"
+          },
+          {
+            "text": "3.5",
+            "x": 118,
+            "y": 211.49999999999986,
+            "size": 19,
+            "anchor": "ra"
+          },
+          {
+            "text": "3.6",
+            "x": 118,
+            "y": 126.24999999999977,
+            "size": 19,
+            "anchor": "ra"
+          },
+          {
+            "text": "3.7",
+            "x": 118,
+            "y": 40.999999999999716,
+            "size": 19,
+            "anchor": "ra"
+          },
+          {
+            "text": "Spontaneous curvature",
+            "x": 186,
+            "y": 73,
+            "size": 24,
+            "fill": "#111"
+          },
+          {
+            "text": "●",
+            "x": 167,
+            "y": 73,
+            "size": 20,
+            "fill": "#fb8177"
+          },
+          {
+            "text": "3.3",
+            "x": 118,
+            "y": 721.0,
+            "size": 19,
+            "anchor": "ra"
+          },
+          {
+            "text": "3.4",
+            "x": 118,
+            "y": 636.25,
+            "size": 19,
+            "anchor": "ra"
+          },
+          {
+            "text": "3.5",
+            "x": 118,
+            "y": 551.4999999999999,
+            "size": 19,
+            "anchor": "ra"
+          },
+          {
+            "text": "3.6",
+            "x": 118,
+            "y": 466.7499999999998,
+            "size": 19,
+            "anchor": "ra"
+          },
+          {
+            "text": "3.7",
+            "x": 118,
+            "y": 381.9999999999998,
+            "size": 19,
+            "anchor": "ra"
+          },
+          {
+            "text": "Surface reconstruction",
+            "x": 186,
+            "y": 414,
+            "size": 24,
+            "fill": "#111"
+          },
+          {
+            "text": "●",
+            "x": 167,
+            "y": 414,
+            "size": 20,
+            "fill": "#2ba3ca"
+          },
+          {
+            "text": "3.3",
+            "x": 118,
+            "y": 1062.0,
+            "size": 19,
+            "anchor": "ra"
+          },
+          {
+            "text": "3.4",
+            "x": 118,
+            "y": 976.7499999999999,
+            "size": 19,
+            "anchor": "ra"
+          },
+          {
+            "text": "3.5",
+            "x": 118,
+            "y": 891.4999999999999,
+            "size": 19,
+            "anchor": "ra"
+          },
+          {
+            "text": "3.6",
+            "x": 118,
+            "y": 806.2499999999998,
+            "size": 19,
+            "anchor": "ra"
+          },
+          {
+            "text": "3.7",
+            "x": 118,
+            "y": 720.9999999999998,
+            "size": 19,
+            "anchor": "ra"
+          },
+          {
+            "text": "Rigid",
+            "x": 186,
+            "y": 753,
+            "size": 24,
+            "fill": "#111"
+          },
+          {
+            "text": "●",
+            "x": 167,
+            "y": 753,
+            "size": 20,
+            "fill": "#808080"
+          },
+          {
+            "text": "Interlayer distance (Å)",
+            "x": 38,
+            "y": 560,
+            "size": 20,
+            "rotate": -90,
+            "anchor": "ma"
+          },
+          {
+            "text": "Distance (Å)",
+            "x": 720,
+            "y": 1210,
+            "size": 20,
+            "anchor": "ma"
+          }
+        ],
+        "rasterEvidenceInteractive": true
+      }
+    },
+    {
+      "id": "dose-response",
+      "title": "剂量—反应曲线",
+      "subtitle": "断轴、散点、SEM 与曲线路径",
+      "status": "candidate",
+      "statusLabel": "候选 · 论文源数据核验",
+      "description": "从 Nature Communications Fig. 4d 的 OA PDF 矢量层恢复三系列可见点、误差棒和曲线路径。",
+      "metrics": [
+        {
+          "label": "点覆盖",
+          "value": "18 + 3"
+        },
+        {
+          "label": "点值 MAE",
+          "value": "0.043"
+        }
+      ],
+      "articleUrl": "https://www.nature.com/articles/s41467-026-71361-8",
+      "assets": {
+        "original": "assets/cases/nature-kahlous-dose-response/original.png",
+        "overlay": "assets/cases/nature-kahlous-dose-response/overlay.png",
+        "recreated": "assets/cases/nature-kahlous-dose-response/recreated.png",
+        "data": "assets/cases/nature-kahlous-dose-response/data-image-extracted.csv",
+        "report": "assets/cases/nature-kahlous-dose-response/report.json"
+      },
+      "evidence": {
+        "visibleMarkers": 21,
+        "visibleErrorBars": 14,
+        "tracedCurves": 3
+      },
+      "journal": "Nature Communications",
+      "articleTitle": "Molecular mechanisms of native ligand selectivity in catecholamine G protein-coupled receptors",
+      "figure": "Fig. 4d",
+      "figureUrl": "https://www.nature.com/articles/s41467-026-71361-8/figures/4",
+      "interactiveLayers": {
+        "curves": "assets/cases/nature-kahlous-dose-response/curves.csv"
+      },
+      "styleSpec": {
+        "renderer": "paper-dose-response",
+        "fidelity": "evidence_backed_style_reconstruction",
+        "label": "风格复现 · 矢量证据",
+        "note": "点位、误差棒、三种点形、系列配色与作者曲线路径来自 OA PDF 矢量证据；字体抗锯齿与标题字距为浏览器近似。",
+        "canvas": {
+          "width": 720,
+          "height": 528
+        },
+        "fontFamily": "Arial, Helvetica, sans-serif",
+        "plot": {
+          "axisLeft": 148,
+          "vehicleX": 148,
+          "breakLeft": 187,
+          "breakRight": 209,
+          "mainLeft": 247,
+          "mainRight": 550,
+          "top": 144,
+          "bottom": 411
+        },
+        "axes": {
+          "xDomain": [
+            -10,
+            -2
+          ],
+          "xTicks": [
+            -10,
+            -8,
+            -6,
+            -4,
+            -2
+          ],
+          "xLabel": "log [ligand], M",
+          "yDomain": [
+            0,
+            115
+          ],
+          "yTicks": [
+            0,
+            50,
+            100
+          ],
+          "yLabel": "% of max. cAMP"
+        },
+        "series": {
+          "ADR": {
+            "color": "#ffba12",
+            "marker": "square"
+          },
+          "NA": {
+            "color": "#748d8e",
+            "marker": "triangle"
+          },
+          "DA": {
+            "color": "#48e99d",
+            "marker": "circle"
+          }
+        }
+      }
+    },
+    {
+      "id": "bar",
+      "title": "双轴柱形折线图",
+      "subtitle": "年度传输价值与批发电价",
+      "status": "partial_visible",
+      "statusLabel": "可见几何 · PDF 向量",
+      "description": "从 Nature Communications Fig. 3 的矢量 PDF 直接恢复两个面板中 2012–2022 年的 22 个柱端值与 22 个折线标记；不反推逐小时或链路级原始数据。",
+      "metrics": [
+        {
+          "label": "可见柱",
+          "value": "22 / 22"
+        },
+        {
+          "label": "折线标记",
+          "value": "22 / 22"
+        }
+      ],
+      "metricNote": "公开 CSV 仅含图中可见年度汇总及 PDF 坐标；文章未提供可核验的 Fig. 3 Source Data 文件。",
+      "articleUrl": "https://www.nature.com/articles/s41467-025-63143-5",
+      "assets": {
+        "original": "assets/cases/nature-63143-fig3/original.png",
+        "overlay": "assets/cases/nature-63143-fig3/overlay.png",
+        "recreated": "assets/cases/nature-63143-fig3/recreated.png",
+        "data": "assets/cases/nature-63143-fig3/data.csv",
+        "report": "assets/cases/nature-63143-fig3/report.json"
+      },
+      "journal": "Nature Communications",
+      "articleTitle": "Electric transmission value and its drivers in United States power markets",
+      "figure": "Fig. 3",
+      "figureUrl": "https://www.nature.com/articles/s41467-025-63143-5/figures/3",
+      "styleSpec": {
+        "renderer": "paper-dual-axis-bar-line",
+        "fidelity": "visible_geometry_candidate",
+        "label": "论文原生画布 · PDF 向量几何",
+        "note": "柱体与折线标记逐行来自公开主 CSV；悬停任一数据标记可读取生成它的完整行字段。",
+        "canvas": {
+          "width": 1756,
+          "height": 828
+        },
+        "fontFamily": "Arial, Helvetica, sans-serif",
+        "crop": {
+          "x": 88.0,
+          "y": 45.0,
+          "scale": 4.0
+        },
+        "barWidthPt": 12.296,
+        "barColor": "#759adc",
+        "lineColor": "#7f7f7f",
+        "markerFill": "#bacdee",
+        "markerStroke": "#3f3f3f",
+        "panels": [
+          {
+            "id": "median_left",
+            "label": "Median",
+            "statistic": "median",
+            "plotBoundsPt": [
+              96.904,
+              51.201,
+              270.581,
+              224.8521
+            ],
+            "barDomain": [
+              0,
+              25
+            ],
+            "barTicks": [
+              0,
+              5,
+              10,
+              15,
+              20,
+              25
+            ],
+            "lineDomain": [
+              0,
+              70
+            ],
+            "lineTicks": [
+              0,
+              10,
+              20,
+              30,
+              40,
+              50,
+              60,
+              70
+            ]
+          },
+          {
+            "id": "mean_right",
+            "label": "Mean",
+            "statistic": "mean",
+            "plotBoundsPt": [
+              337.584,
+              51.201,
+              511.261,
+              224.8521
+            ],
+            "barDomain": [
+              0,
+              25
+            ],
+            "barTicks": [
+              0,
+              5,
+              10,
+              15,
+              20,
+              25
+            ],
+            "lineDomain": [
+              0,
+              70
+            ],
+            "lineTicks": [
+              0,
+              10,
+              20,
+              30,
+              40,
+              50,
+              60,
+              70
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "bar-horizontal",
+      "title": "横向发散柱状图",
+      "subtitle": "双面板均值与 Bootstrap 区间",
+      "status": "partial_visible",
+      "statusLabel": "部分可见提取 · 13/16",
+      "description": "从 Nature Communications Fig. 8a 的原始像素恢复两组发散横柱及区间；3 个被黑色区间线切断的浅色柱保留为未提取。",
+      "metrics": [
+        {
+          "label": "授权柱",
+          "value": "13 / 16"
+        },
+        {
+          "label": "区间覆盖",
+          "value": "13 / 13"
+        }
+      ],
+      "journal": "Nature Communications",
+      "figure": "Fig. 8a",
+      "articleTitle": "Climate response to Nature Future scenarios in a regional Earth System Model",
+      "articleUrl": "https://www.nature.com/articles/s41467-026-70284-8",
+      "figureUrl": "https://www.nature.com/articles/s41467-026-70284-8/figures/8",
+      "styleSpec": {
+        "renderer": "paper-native-geometry",
+        "fidelity": "visible_geometry_candidate",
+        "label": "论文原生画布 · 部分可见提取",
+        "note": "复现只绘制 13 个授权柱及其可见 Bootstrap 区间；橙色叉号对应 3 个未授权槽位。",
+        "canvas": {
+          "width": 2001,
+          "height": 360
+        },
+        "rasterEvidenceInteractive": true
+      },
+      "assets": {
+        "original": "assets/cases/nature-70284-fig8a/original.png",
+        "overlay": "assets/cases/nature-70284-fig8a/overlay.png",
+        "recreated": "assets/cases/nature-70284-fig8a/recreated.png",
+        "data": "assets/cases/nature-70284-fig8a/data.csv",
+        "report": "assets/cases/nature-70284-fig8a/report.json"
+      }
+    },
+    {
+      "id": "bar-stacked",
+      "title": "百分比堆叠柱状图",
+      "subtitle": "三中心古菌属组成",
+      "status": "low_confidence",
+      "statusLabel": "低置信候选 · 29/33",
+      "description": "从 Nature Communications Fig. 1b 恢复 29 个可见堆叠段；4 个未检出槽位保留为空，整例维持低置信候选而不宣称数值已授权。",
+      "metrics": [
+        {
+          "label": "可见候选段",
+          "value": "29 / 33"
+        },
+        {
+          "label": "缺失保持",
+          "value": "4"
+        }
+      ],
+      "journal": "Nature Communications",
+      "figure": "Fig. 1b",
+      "articleTitle": "Clinical NEC prevention practices drive different microbiome profiles and functional responses in the preterm intestine",
+      "articleUrl": "https://www.nature.com/articles/s41467-023-36825-1",
+      "figureUrl": "https://www.nature.com/articles/s41467-023-36825-1/figures/1",
+      "styleSpec": {
+        "renderer": "paper-native-geometry",
+        "fidelity": "visible_geometry_candidate",
+        "label": "论文原生画布 · 低置信候选",
+        "note": "透明命中层展示 29 个可见候选段；4 个未检出槽位不会被补零或由源数据回填。",
+        "canvas": {
+          "width": 709,
+          "height": 600
+        },
+        "rasterEvidenceInteractive": true
+      },
+      "assets": {
+        "original": "assets/cases/nature-36825-fig1b/original.png",
+        "overlay": "assets/cases/nature-36825-fig1b/overlay.png",
+        "recreated": "assets/cases/nature-36825-fig1b/recreated.png",
+        "data": "assets/cases/nature-36825-fig1b/data.csv",
+        "report": "assets/cases/nature-36825-fig1b/report.json"
+      }
+    },
+    {
+      "id": "bar-percent-stacked",
+      "title": "100% 堆叠柱",
+      "subtitle": "横向比例堆叠",
+      "status": "candidate",
+      "statusLabel": "候选 · 仅合成基准",
+      "description": "白底确定性基准恢复每个可见比例段；尚未完成真实矢量、真实栅格和同条件 WPD 对比。",
+      "metrics": [
+        {
+          "label": "分段覆盖",
+          "value": "12 / 12"
+        },
+        {
+          "label": "数值 MAE",
+          "value": "0.223"
+        }
+      ],
+      "assets": {
+        "original": "assets/basics/bar-percent-stacked/original.png",
+        "overlay": "assets/basics/bar-percent-stacked/overlay.png",
+        "recreated": "assets/basics/bar-percent-stacked/recreated.png",
+        "data": "assets/basics/bar-percent-stacked/data.csv",
+        "report": "assets/basics/bar-percent-stacked/report.json"
+      }
+    },
+    {
+      "id": "pie",
+      "title": "环形饼图 / Donut",
+      "subtitle": "四组可见百分比标签",
+      "status": "candidate",
+      "statusLabel": "可见标签候选 · 18/18",
+      "description": "从 Nature Communications Fig. 1f 提取四个 donut 上明确印出的 18 个百分比；原标签和不强制补到 100，扇区角度仅作案例级验证。",
+      "metrics": [
+        {
+          "label": "可见标签",
+          "value": "18 / 18"
+        },
+        {
+          "label": "几何验证 MAE",
+          "value": "0.596 pp"
+        }
+      ],
+      "journal": "Nature Communications",
+      "figure": "Fig. 1f",
+      "articleTitle": "Driver gene combinations dictate cutaneous squamous cell carcinoma disease continuum progression",
+      "articleUrl": "https://www.nature.com/articles/s41467-023-40822-9",
+      "figureUrl": "https://www.nature.com/articles/s41467-023-40822-9/figures/1",
+      "styleSpec": {
+        "renderer": "paper-native-geometry",
+        "fidelity": "visible_geometry_candidate",
+        "label": "论文原生画布 · 可见标签提取",
+        "note": "交互命中层对应 18 个印刷标签；显示值保持原样，环形角度按组内可见值重建但不替代原值。",
+        "canvas": {
+          "width": 1025,
+          "height": 215
+        },
+        "rasterEvidenceInteractive": true
+      },
+      "assets": {
+        "original": "assets/cases/nature-40822-fig1f/original.png",
+        "overlay": "assets/cases/nature-40822-fig1f/overlay.png",
+        "recreated": "assets/cases/nature-40822-fig1f/recreated.png",
+        "data": "assets/cases/nature-40822-fig1f/data.csv",
+        "report": "assets/cases/nature-40822-fig1f/report.json"
+      }
+    },
+    {
+      "id": "nature-20563-fig6f",
+      "title": "Nature Communications Fig. 6f — force orientation",
+      "subtitle": "三个半圆极坐标直方图",
+      "status": "candidate",
+      "statusLabel": "候选 · 30/30 可见扇区",
+      "description": "从 Nature Communications Fig. 6f 的三个半圆极坐标直方图提取 30 个 18° 扇区的可见外缘；保留各面板独立椭圆径向校准和像素不确定度，不恢复原始力向量。",
+      "metrics": [
+        {
+          "label": "可见扇区",
+          "value": "30 / 30"
+        },
+        {
+          "label": "方向分组",
+          "value": "3 个面板"
+        }
+      ],
+      "metricNote": "径向轴没有明确单位标签；官方工作簿也没有可核验的 Figure 6f 极坐标分箱表，因此这里报告图像校准值与近似栅格不确定度，不报告源数据误差。",
+      "journal": "Nature Communications",
+      "figure": "Fig. 6f",
+      "articleTitle": "Adhesion-mediated heterogeneous actin organization governs apoptotic cell extrusion",
+      "articleUrl": "https://www.nature.com/articles/s41467-020-20563-9",
+      "figureUrl": "https://www.nature.com/articles/s41467-020-20563-9/figures/6",
+      "validationDataUrl": "assets/cases/nature-20563-fig6f/source-validation.csv",
+      "styleSpec": {
+        "renderer": "paper-polar-histogram",
+        "fidelity": "visible_geometry_candidate",
+        "label": "论文原生画布 · 候选极坐标提取",
+        "note": "交互扇区逐行读取图像提取 CSV；悬停显示角度区间、径向校准值、不确定度和原始像素弦端点。",
+        "canvas": {
+          "width": 1798,
+          "height": 310
+        },
+        "fontFamily": "Arial, sans-serif",
+        "color": "#0b72b9",
+        "gridColor": "#e0e1e2",
+        "textColor": "#303030",
+        "panelLabelY": 298,
+        "panels": {
+          "D30": {
+            "cx": 287.5,
+            "cy": 248.5,
+            "xPxPerUnit": 0.07112249133537989,
+            "yPxPerUnit": 0.05822343942807478,
+            "radialTicks": [
+              1000,
+              2000
+            ],
+            "radialMax": 2500,
+            "label": "D = 30 μm"
+          },
+          "D15": {
+            "cx": 764.5,
+            "cy": 247.5,
+            "xPxPerUnit": 0.14962799648651923,
+            "yPxPerUnit": 0.12219916043670088,
+            "radialTicks": [
+              500,
+              1000
+            ],
+            "radialMax": 1200,
+            "label": "D = 15 μm"
+          },
+          "D10": {
+            "cx": 1211.5,
+            "cy": 248.5,
+            "xPxPerUnit": 0.5077236903918215,
+            "yPxPerUnit": 0.415700084935776,
+            "radialTicks": [
+              100,
+              200,
+              300
+            ],
+            "radialMax": 350,
+            "label": "D = 10 μm"
+          }
+        }
+      },
+      "assets": {
+        "original": "assets/cases/nature-20563-fig6f/original.png",
+        "overlay": "assets/cases/nature-20563-fig6f/overlay.png",
+        "recreated": "assets/cases/nature-20563-fig6f/recreated.png",
+        "data": "assets/cases/nature-20563-fig6f/data.csv",
+        "report": "assets/cases/nature-20563-fig6f/report.json"
+      }
+    },
+    {
+      "id": "histogram",
+      "title": "直方图",
+      "subtitle": "箱边界与箱高",
+      "status": "validated_local_stable",
+      "statusLabel": "稳定 · 合成基准",
+      "description": "恢复每个可见矩形的左右边界与高度；这里只提取已绘制的箱，不反推箱内原始观测。",
+      "metrics": [
+        {
+          "label": "箱覆盖",
+          "value": "5 / 5"
+        },
+        {
+          "label": "高度 MAE",
+          "value": "0.008"
+        }
+      ],
+      "assets": {
+        "original": "assets/basics/histogram/original.png",
+        "overlay": "assets/basics/histogram/overlay.png",
+        "recreated": "assets/basics/histogram/recreated.png",
+        "data": "assets/basics/histogram/data.csv",
+        "report": "assets/basics/histogram/report.json"
+      }
+    },
+    {
+      "id": "heatmap",
+      "title": "热力图",
+      "subtitle": "单元格、色条与显著性标记",
+      "status": "candidate",
+      "statusLabel": "候选 · 论文验证",
+      "description": "从 Nature Medicine Fig. 4c 恢复 32×21 相关矩阵、色条区间和可见白色显著性星号。",
+      "metrics": [
+        {
+          "label": "单元格覆盖",
+          "value": "672 / 672"
+        },
+        {
+          "label": "色条内 MAE",
+          "value": "0.0033"
+        }
+      ],
+      "articleUrl": "https://www.nature.com/articles/s41591-026-04303-y",
+      "assets": {
+        "original": "assets/cases/nature-protaide-heatmap/original.png",
+        "overlay": "assets/cases/nature-protaide-heatmap/overlay.png",
+        "recreated": "assets/cases/nature-protaide-heatmap/recreated.png",
+        "data": "assets/cases/nature-protaide-heatmap/data.csv",
+        "report": "assets/cases/nature-protaide-heatmap/report.json"
+      },
+      "journal": "Nature Medicine",
+      "articleTitle": "A deep joint-learning proteomics model for diagnosis of six conditions associated with dementia",
+      "figure": "Fig. 4c",
+      "figureUrl": "https://www.nature.com/articles/s41591-026-04303-y/figures/4",
+      "styleSpec": {
+        "renderer": "paper-heatmap",
+        "fidelity": "evidence_backed_style_reconstruction",
+        "label": "风格复现 · 单元格证据",
+        "note": "每个单元格沿用原图像素边界、采样 RGB 和可见显著性星号；色条与字体排版为浏览器重建。",
+        "canvas": {
+          "width": 951,
+          "height": 852
+        },
+        "fontFamily": "Arial, Helvetica, sans-serif",
+        "grid": {
+          "left": 82,
+          "right": 751,
+          "top": 54,
+          "bottom": 716
+        },
+        "colorbar": {
+          "left": 817,
+          "right": 846,
+          "top": 63,
+          "bottom": 283,
+          "domain": [
+            -0.3,
+            0.3
+          ],
+          "low": "#3953c5",
+          "mid": "#f3f1ed",
+          "high": "#c91d2e"
+        }
+      }
+    },
+    {
+      "id": "boxplot",
+      "title": "纵向箱线图",
+      "subtitle": "论文中的成对空心与填充箱体",
+      "status": "candidate",
+      "statusLabel": "候选 · 论文原图",
+      "description": "从 Nature Medicine Fig. 4b 恢复 Retrain 与 Finetune 的五数概括、须线及可见离群点。",
+      "metrics": [
+        {
+          "label": "箱体覆盖",
+          "value": "20 / 20"
+        },
+        {
+          "label": "可见离群点",
+          "value": "9"
+        }
+      ],
+      "articleUrl": "https://www.nature.com/articles/s41591-026-04303-y",
+      "assets": {
+        "original": "assets/cases/nature-protaide-boxplot/original.png",
+        "overlay": "assets/cases/nature-protaide-boxplot/overlay.png",
+        "recreated": "assets/cases/nature-protaide-boxplot/recreated.png",
+        "data": "assets/cases/nature-protaide-boxplot/data.csv",
+        "report": "assets/cases/nature-protaide-boxplot/report.json"
+      },
+      "journal": "Nature Medicine",
+      "articleTitle": "A deep joint-learning proteomics model for diagnosis of six conditions associated with dementia",
+      "figure": "Fig. 4b",
+      "figureUrl": "https://www.nature.com/articles/s41591-026-04303-y/figures/4",
+      "styleSpec": {
+        "renderer": "paper-boxplot",
+        "fidelity": "evidence_backed_style_reconstruction",
+        "label": "风格复现 · 像素几何",
+        "note": "箱体、须线和中位数使用原图像素坐标，离群点按同一标定轴定位；标题、图例和字体为浏览器近似。",
+        "canvas": {
+          "width": 1000,
+          "height": 774
+        },
+        "fontFamily": "Arial, Helvetica, sans-serif",
+        "plot": {
+          "top": 101,
+          "bottom": 620,
+          "leftPanelX": 121,
+          "rightPanelX": 624,
+          "panelWidth": 342
+        },
+        "axes": {
+          "yDomain": [
+            0.4,
+            1.0
+          ],
+          "yTicks": [
+            0.4,
+            0.5,
+            0.6,
+            0.7,
+            0.8,
+            0.9,
+            1.0
+          ]
+        },
+        "series": {
+          "Retrain": {
+            "fill": "#ffffff",
+            "stroke": "#4b4b4b"
+          },
+          "Finetune": {
+            "fill": "#3f8fc4",
+            "stroke": "#4b4b4b"
+          }
+        }
+      }
+    },
+    {
+      "id": "boxplot-horizontal",
+      "title": "横向箱线图",
+      "subtitle": "横向数值轴与可见离群点",
+      "status": "validated_local_stable",
+      "statusLabel": "稳定 · 合成基准",
+      "description": "逐组恢复 Q1、中位数、Q3、上下须及可见离群点；不会把箱线图伪装成原始样本表。",
+      "metrics": [
+        {
+          "label": "组覆盖",
+          "value": "4 / 4"
+        },
+        {
+          "label": "统计量 MAE",
+          "value": "0.019"
+        }
+      ],
+      "assets": {
+        "original": "assets/basics/boxplot-horizontal/original.png",
+        "overlay": "assets/basics/boxplot-horizontal/overlay.png",
+        "recreated": "assets/basics/boxplot-horizontal/recreated.png",
+        "data": "assets/basics/boxplot-horizontal/data.csv",
+        "report": "assets/basics/boxplot-horizontal/report.json"
+      }
+    },
+    {
+      "id": "forest",
+      "title": "区间 / 森林图",
+      "subtitle": "点估计与可见区间端点",
+      "status": "visible_geometry_extracted",
+      "statusLabel": "真实图 · 几何提取",
+      "description": "从 Nature Communications Fig. 2 恢复 29 个点估计和可见区间端点；这是单例几何证据，不是稳定引擎晋级。",
+      "metrics": [
+        {
+          "label": "点覆盖",
+          "value": "29 / 29"
+        },
+        {
+          "label": "证据",
+          "value": "真实 OA 图"
+        }
+      ],
+      "assets": {
+        "original": "assets/cases/nature-blood-forest/original.jpg",
+        "overlay": "assets/cases/nature-blood-forest/overlay.png",
+        "recreated": "assets/cases/nature-blood-forest/recreated.png",
+        "data": "assets/cases/nature-blood-forest/data.csv",
+        "report": "assets/cases/nature-blood-forest/report.json"
+      }
+    },
+    {
+      "id": "nature-21043-fig6a",
+      "title": "Nature Fig. 6a — ligand–receptor bubble matrix",
+      "subtitle": "点与圆的矩阵图",
+      "status": "visible_geometry_extracted",
+      "statusLabel": "真实图 · 可见几何提取",
+      "description": "每个可见点或圆均由原图像素位置、颜色与半径提取；数据表只包含图像可见信息。",
+      "metrics": [
+        {
+          "label": "可见标记",
+          "value": "207 / 208"
+        },
+        {
+          "label": "未分离网格",
+          "value": "1"
+        }
+      ],
+      "articleUrl": "https://www.nature.com/articles/s41467-021-21043-4",
+      "journal": "Nature Communications",
+      "articleTitle": "Tumour heterogeneity and intercellular networks of nasopharyngeal carcinoma at single cell resolution",
+      "figure": "Fig. 6a",
+      "figureUrl": "https://www.nature.com/articles/s41467-021-21043-4/figures/6",
+      "assets": {
+        "original": "assets/cases/nature-21043-fig6a/original.png",
+        "overlay": "assets/cases/nature-21043-fig6a/overlay.png",
+        "recreated": "assets/cases/nature-21043-fig6a/recreated.png",
+        "data": "assets/cases/nature-21043-fig6a/data-image-extracted.csv",
+        "report": "assets/cases/nature-21043-fig6a/report.json"
+      },
+      "styleSpec": {
+        "renderer": "paper-bubble-matrix",
+        "fidelity": "visible_geometry_candidate",
+        "label": "可见点与圆 · 交互重绘",
+        "note": "悬停任一可见点或圆可读取其图像提取的位置、颜色与半径。",
+        "canvas": {
+          "width": 1120,
+          "height": 480
+        },
+        "fontFamily": "Arial, Helvetica, sans-serif",
+        "grid": {
+          "left": 300,
+          "right": 1010,
+          "top": 38,
+          "bottom": 390
+        },
+        "axes": {
+          "meanLabel": "visible marker colour and radius",
+          "sizeLabel": "visible radius (px)"
+        },
+        "rasterEvidenceInteractive": true
+      },
+      "validationDataUrl": "https://static-content.springer.com/esm/art%3A10.1038%2Fs41467-021-21043-4/MediaObjects/41467_2021_21043_MOESM8_ESM.xlsx"
+    },
+    {
+      "id": "nature-00142-fig3a",
+      "title": "Communications Engineering Fig. 3a — Mackey–Glass",
+      "subtitle": "Single time-series curve",
+      "status": "visible_geometry_candidate",
+      "statusLabel": "候选 · 可见曲线几何",
+      "description": "A continuous, colour-supported visible trace from the Mackey–Glass training panel. The table contains plotted geometry, not hidden source observations.",
+      "metrics": [
+        {
+          "label": "trace columns",
+          "value": "770"
+        },
+        {
+          "label": "证据",
+          "value": "可见像素"
+        }
+      ],
+      "articleUrl": "https://www.nature.com/articles/s44172-023-00142-8",
+      "journal": "Communications Engineering",
+      "articleTitle": "Time-series forecasting through recurrent topology",
+      "figure": "Fig. 3a",
+      "figureUrl": "https://www.nature.com/articles/s44172-023-00142-8/figures/3",
+      "assets": {
+        "original": "assets/cases/nature-00142-fig3a/original.png",
+        "overlay": "assets/cases/nature-00142-fig3a/overlay.png",
+        "recreated": "assets/cases/nature-00142-fig3a/recreated.png",
+        "data": "assets/cases/nature-00142-fig3a/data.csv",
+        "report": "assets/cases/nature-00142-fig3a/report.json"
+      },
+      "styleSpec": {
+        "renderer": "paper-native-trace-line",
+        "fidelity": "visible_geometry_candidate",
+        "label": "可见曲线 · 交互重绘",
+        "note": "悬停曲线读取原始像素坐标换算的值；连续轨迹保留每个有颜色支持的像素列。",
+        "canvas": {
+          "width": 1000,
+          "height": 315
+        },
+        "fontFamily": "Arial, Helvetica, sans-serif",
+        "plot": {
+          "left": 176,
+          "right": 945,
+          "top": 63,
+          "bottom": 252
+        },
+        "axes": {
+          "xDomain": [
+            0,
+            850
+          ],
+          "yDomain": [
+            0.4,
+            1.35
+          ],
+          "xTicks": [
+            0,
+            200,
+            400,
+            600,
+            800
+          ],
+          "yTicks": [
+            0.4,
+            0.8,
+            1.2
+          ],
+          "xLabel": "",
+          "yLabel": "Signal"
+        },
+        "series": {
+          "Mackey-Glass": {
+            "color": "#111111",
+            "hitCadence": 3
+          }
+        },
+        "rasterEvidenceInteractive": true
+      }
+    },
+    {
+      "id": "nature-00142-fig4a",
+      "title": "Communications Engineering Fig. 4a — CAN/USD",
+      "subtitle": "Monthly exchange-rate time series",
+      "status": "visible_geometry_candidate",
+      "statusLabel": "候选 · 可见曲线几何",
+      "description": "The 1973–1999 Canadian/U.S. dollar panel, retained as a continuous visible black trace.",
+      "metrics": [
+        {
+          "label": "trace columns",
+          "value": "321"
+        },
+        {
+          "label": "source",
+          "value": "visible raster"
+        }
+      ],
+      "articleUrl": "https://www.nature.com/articles/s44172-023-00142-8",
+      "journal": "Communications Engineering",
+      "articleTitle": "Time-series forecasting through recurrent topology",
+      "figure": "Fig. 4a",
+      "figureUrl": "https://www.nature.com/articles/s44172-023-00142-8/figures/4",
+      "assets": {
+        "original": "assets/cases/nature-00142-fig4a/original.png",
+        "overlay": "assets/cases/nature-00142-fig4a/overlay.png",
+        "recreated": "assets/cases/nature-00142-fig4a/recreated.png",
+        "data": "assets/cases/nature-00142-fig4a/data.csv",
+        "report": "assets/cases/nature-00142-fig4a/report.json"
+      },
+      "styleSpec": {
+        "renderer": "paper-native-trace-line",
+        "fidelity": "visible_geometry_candidate",
+        "label": "可见曲线 · 交互重绘",
+        "note": "悬停连续曲线读取精确像素换算值；不再把月度轨迹压缩为年度折线。",
+        "canvas": {
+          "width": 430,
+          "height": 280
+        },
+        "fontFamily": "Arial, Helvetica, sans-serif",
+        "plot": {
+          "left": 88,
+          "right": 408,
+          "top": 39,
+          "bottom": 223
+        },
+        "axes": {
+          "xDomain": [
+            1973,
+            1999
+          ],
+          "yDomain": [
+            0.95,
+            1.55
+          ],
+          "xTicks": [
+            1975,
+            1980,
+            1985,
+            1990,
+            1995,
+            2000
+          ],
+          "yTicks": [
+            1,
+            1.1,
+            1.2,
+            1.3,
+            1.4,
+            1.5
+          ],
+          "xLabel": "Year",
+          "yLabel": "Monthly Exchange Rate"
+        },
+        "series": {
+          "CAN/USD": {
+            "color": "#111111",
+            "hitCadence": 2
+          }
+        },
+        "rasterEvidenceInteractive": true
+      }
+    },
+    {
+      "id": "nature-02571-fig1d",
+      "title": "Nature Communications Fig. 1d — similarity decay",
+      "subtitle": "Four coloured curves with visible uncertainty marks",
+      "status": "visible_geometry_candidate",
+      "statusLabel": "候选 · 可见曲线几何",
+      "description": "Similarity versus time lag for bacteria/Eukarya at phylum and OTU resolution. The demo exposes curve candidates while keeping error bars unextracted.",
+      "metrics": [
+        {
+          "label": "visible markers",
+          "value": "164"
+        },
+        {
+          "label": "error bars",
+          "value": "not extracted"
+        }
+      ],
+      "articleUrl": "https://www.nature.com/articles/s41467-017-02571-4",
+      "journal": "Nature Communications",
+      "articleTitle": "High resolution time series reveals cohesive but short-lived communities in coastal plankton",
+      "figure": "Fig. 1d",
+      "figureUrl": "https://www.nature.com/articles/s41467-017-02571-4/figures/1",
+      "assets": {
+        "original": "assets/cases/nature-02571-fig1d/original.png",
+        "overlay": "assets/cases/nature-02571-fig1d/overlay.png",
+        "recreated": "assets/cases/nature-02571-fig1d/recreated.png",
+        "data": "assets/cases/nature-02571-fig1d/data.csv",
+        "report": "assets/cases/nature-02571-fig1d/report.json"
+      },
+      "styleSpec": {
+        "renderer": "paper-native-trace-line",
+        "fidelity": "visible_geometry_candidate",
+        "label": "可见曲线 · 交互重绘",
+        "note": "悬停每个可见日标记读取提取值；四条曲线与原始 + 标记按同一坐标框重绘。",
+        "canvas": {
+          "width": 600,
+          "height": 336
+        },
+        "fontFamily": "Arial, Helvetica, sans-serif",
+        "plot": {
+          "left": 103,
+          "right": 591,
+          "top": 45,
+          "bottom": 265
+        },
+        "axes": {
+          "xDomain": [
+            0,
+            40
+          ],
+          "yDomain": [
+            0.15,
+            1.0
+          ],
+          "xTicks": [
+            0,
+            5,
+            10,
+            15,
+            20,
+            25,
+            30,
+            35,
+            40
+          ],
+          "yTicks": [
+            0.2,
+            0.4,
+            0.6,
+            0.8,
+            1
+          ],
+          "xLabel": "Time lag (Δ days)",
+          "yLabel": "Similarity"
+        },
+        "series": {
+          "Bacteria (phylum)": {
+            "color": "#8ec3e8",
+            "marker": "plus",
+            "label": {
+              "text": "Bacteria (phylum)",
+              "x": 421,
+              "y": 91
+            }
+          },
+          "Eukarya (phylum)": {
+            "color": "#ed6e6f",
+            "marker": "plus",
+            "label": {
+              "text": "Eukarya (phylum)",
+              "x": 421,
+              "y": 124
+            }
+          },
+          "Bacteria (OTU)": {
+            "color": "#073bb7",
+            "marker": "plus",
+            "label": {
+              "text": "Bacteria (OTU)",
+              "x": 421,
+              "y": 201
+            }
+          },
+          "Eukarya (OTU)": {
+            "color": "#d81919",
+            "marker": "plus",
+            "label": {
+              "text": "Eukarya (OTU)",
+              "x": 421,
+              "y": 237
+            }
+          }
+        },
+        "panelLabel": "d",
+        "panelLabelX": 17,
+        "panelLabelY": 43,
+        "yLabelX": 32,
+        "labelFontSize": 16,
+        "tickFontSize": 14,
+        "xLabelOffset": 5,
+        "rasterEvidenceInteractive": true
+      }
+    },
+    {
+      "id": "nature-63786-fig1c",
+      "title": "Nature Communications Fig. 1c — dataset averages",
+      "subtitle": "Grouped bars with variance bars",
+      "status": "visible_geometry_candidate",
+      "statusLabel": "候选 · 可见柱形几何",
+      "description": "Dataset-average AUC-ROC panel with three methods. Values are display-level candidates because no panel-level source workbook is linked on the article page.",
+      "metrics": [
+        {
+          "label": "bars",
+          "value": "6 / 6"
+        },
+        {
+          "label": "source",
+          "value": "visible raster"
+        }
+      ],
+      "articleUrl": "https://www.nature.com/articles/s41467-025-63786-4",
+      "journal": "Nature Communications",
+      "articleTitle": "A predictive approach to enhance time-series forecasting",
+      "figure": "Fig. 1c",
+      "figureUrl": "https://www.nature.com/articles/s41467-025-63786-4/figures/1",
+      "assets": {
+        "original": "assets/cases/nature-63786-fig1c/original.png",
+        "overlay": "assets/cases/nature-63786-fig1c/overlay.png",
+        "recreated": "assets/cases/nature-63786-fig1c/recreated.png",
+        "data": "assets/cases/nature-63786-fig1c/data.csv",
+        "report": "assets/cases/nature-63786-fig1c/report.json"
+      },
+      "styleSpec": {
+        "renderer": "paper-visible-bars",
+        "fidelity": "visible_geometry_candidate",
+        "label": "可见柱形 · 交互重绘",
+        "note": "悬停可读柱高与误差范围；这里不把显示值冒充为作者原始数据。",
+        "canvas": {
+          "width": 760,
+          "height": 520
+        },
+        "fontFamily": "Arial, Helvetica, sans-serif",
+        "plot": {
+          "left": 96,
+          "right": 728,
+          "top": 52,
+          "bottom": 430,
+          "baseline": 430
+        },
+        "axes": {
+          "yDomain": [
+            0,
+            1
+          ],
+          "yTicks": [
+            0,
+            0.2,
+            0.4,
+            0.6,
+            0.8,
+            1
+          ],
+          "xLabel": "Dataset",
+          "yLabel": "AUC-ROC"
+        },
+        "series": {
+          "MViT": {
+            "color": "#99c2ff"
+          },
+          "CNN-LSTM": {
+            "color": "#ffadad"
+          },
+          "FGL": {
+            "color": "#85d685"
+          }
+        }
+      }
+    },
+    {
+      "id": "nature-19006-fig2b",
+      "title": "UpSet 复合图",
+      "subtitle": "Functional intersections across four FunC sets",
+      "status": "visible_geometry_candidate",
+      "statusLabel": "真实图 · 原像素候选",
+      "description": "从原图恢复 15 个交集柱、4×15 成员格阵和 32 个激活节点；独立 inset 仅用于显示由可见交集推导的集合总量。",
+      "metrics": [
+        {
+          "label": "visible intersections",
+          "value": "15"
+        },
+        {
+          "label": "active membership nodes",
+          "value": "32"
+        }
+      ],
+      "journal": "Nature Communications",
+      "articleTitle": "Integration of time-series meta-omics data reveals how microbial ecosystems respond to disturbance",
+      "articleUrl": "https://www.nature.com/articles/s41467-020-19006-2",
+      "figure": "Fig. 2b",
+      "figureUrl": "https://www.nature.com/articles/s41467-020-19006-2/figures/2",
+      "assets": {
+        "original": "assets/cases/nature-19006-fig2b/original.png",
+        "overlay": "assets/cases/nature-19006-fig2b/overlay.png",
+        "recreated": "assets/cases/nature-19006-fig2b/recreated.png",
+        "data": "assets/cases/nature-19006-fig2b/data-image-extracted.csv",
+        "report": "assets/cases/nature-19006-fig2b/report.json"
+      },
+      "styleSpec": {
+        "renderer": "paper-visible-upset",
+        "rasterEvidenceInteractive": true,
+        "fidelity": "visible_geometry_candidate",
+        "label": "Original-pixel lattice recreation",
+        "note": "交互层复用同尺寸复现底图；命中区域直接来自原图像素 CSV。",
+        "canvas": {
+          "width": 1200,
+          "height": 645
+        },
+        "fontFamily": "Arial, Helvetica, sans-serif"
+      }
+    },
+    {
+      "id": "nature-28348-fig7",
+      "title": "UpSet 复合图",
+      "subtitle": "Therapeutic-match intersections across samples",
+      "status": "visible_geometry_candidate",
+      "statusLabel": "真实图 · 原像素候选",
+      "description": "从原图恢复 12 个交集、5×12 成员格阵和 40 个多色激活节点；工作簿只作为独立验证。",
+      "metrics": [
+        {
+          "label": "visible intersections",
+          "value": "12"
+        },
+        {
+          "label": "active membership nodes",
+          "value": "40"
+        }
+      ],
+      "journal": "Nature Communications",
+      "articleTitle": "A platform for oncogenomic reporting and interpretation",
+      "articleUrl": "https://www.nature.com/articles/s41467-022-28348-y",
+      "figure": "Fig. 7",
+      "figureUrl": "https://www.nature.com/articles/s41467-022-28348-y/figures/7",
+      "assets": {
+        "original": "assets/cases/nature-28348-fig7/original.png",
+        "overlay": "assets/cases/nature-28348-fig7/overlay.png",
+        "recreated": "assets/cases/nature-28348-fig7/recreated.png",
+        "data": "assets/cases/nature-28348-fig7/data-image-extracted.csv",
+        "report": "assets/cases/nature-28348-fig7/report.json"
+      },
+      "styleSpec": {
+        "renderer": "paper-visible-upset",
+        "rasterEvidenceInteractive": true,
+        "fidelity": "visible_geometry_candidate",
+        "label": "Original-pixel lattice recreation",
+        "note": "交互层复用同尺寸复现底图；命中区域直接来自原图像素 CSV。",
+        "canvas": {
+          "width": 1000,
+          "height": 768
+        },
+        "fontFamily": "Arial, Helvetica, sans-serif"
+      }
+    },
+    {
+      "id": "nature-27341-fig1",
+      "title": "UpSet 复合图",
+      "subtitle": "Mutation intersections across samples",
+      "status": "visible_geometry_candidate",
+      "statusLabel": "Visible figure geometry",
+      "description": "Printed somatic-mutation intersection counts and visibly dark membership nodes recovered from the Figure 1 raster; author-level mutation records are not inferred.",
+      "metrics": [
+        {
+          "label": "printed intersections",
+          "value": "30"
+        },
+        {
+          "label": "visible sets",
+          "value": "19"
+        },
+        {
+          "label": "active membership nodes",
+          "value": "42"
+        }
+      ],
+      "articleUrl": "https://www.nature.com/articles/s41467-021-27341-1",
+      "journal": "Nature Communications",
+      "articleTitle": "The histologic phenotype of lung cancers is associated with transcriptomic features rather than genomic characteristics",
+      "figure": "Fig. 1",
+      "figureUrl": "https://www.nature.com/articles/s41467-021-27341-1/figures/1",
+      "assets": {
+        "original": "assets/cases/nature-27341-fig1/original.png",
+        "overlay": "assets/cases/nature-27341-fig1/overlay.png",
+        "recreated": "assets/cases/nature-27341-fig1/recreated.png",
+        "data": "assets/cases/nature-27341-fig1/data-image-extracted.csv",
+        "report": "assets/cases/nature-27341-fig1/report.json"
+      },
+      "styleSpec": {
+        "renderer": "paper-visible-upset",
+        "fidelity": "visible_geometry_candidate",
+        "label": "Visible-geometry replot",
+        "note": "Hover an intersection bar or membership node for its visible printed count and raster-supported membership state.",
+        "canvas": {
+          "width": 1999,
+          "height": 1579
+        },
+        "fontFamily": "Arial, Helvetica, sans-serif",
+        "layout": {
+          "left": 519,
+          "right": 1803,
+          "barsTop": 148,
+          "barsBottom": 1086,
+          "matrixTop": 1119,
+          "matrixBottom": 1499,
+          "leftBarsRight": 400,
+          "leftBarsWidth": 368,
+          "typeStripX": 1811,
+          "typeStripWidth": 42,
+          "typeTextX": 1877
+        },
+        "setBarColor": "#59b5e7",
+        "typeColors": {
+          "LCNEC": "#1b9e77",
+          "LUAD": "#d95f02",
+          "LUSC": "#7570b3",
+          "NSCLC-NOS": "#e7298a",
+          "SCLC": "#66a61e"
+        },
+        "yTickStep": 300,
+        "leftTicks": [
+          1250,
+          1000,
+          750,
+          500,
+          250,
+          0
+        ],
+        "barWidth": 25,
+        "activeRadius": 8.5,
+        "inactiveRadius": 8.2,
+        "setBarHeight": 11,
+        "setFontSize": 20,
+        "countFontSize": 21,
+        "yLabel": "number of mutations shared",
+        "yLabelX": 411,
+        "yLabelSize": 27
+      },
+      "validationDataUrl": "https://static-content.springer.com/esm/art%3A10.1038%2Fs41467-021-27341-1/MediaObjects/41467_2021_27341_MOESM10_ESM.xlsx"
+    },
+    {
+      "id": "nature-70099-fig5e",
+      "title": "散点图",
+      "subtitle": "三面板相关散点与回归线",
+      "status": "visible_geometry_candidate",
+      "statusLabel": "候选 · 校准可见散点",
+      "description": "Fig. 5e 的三个散点面板：48 个可见圆点经坐标轴校准恢复；静态图、CSV 与交互 SVG 使用同一份点数据。回归线为可见点 OLS 重拟合，浅蓝带为拟合线 ± 残差标准差。",
+      "metrics": [
+        {
+          "label": "visible points",
+          "value": "48"
+        },
+        {
+          "label": "panels",
+          "value": "3"
+        },
+        {
+          "label": "max |ΔR|",
+          "value": "0.005"
+        }
+      ],
+      "articleUrl": "https://www.nature.com/articles/s41467-026-70099-7",
+      "journal": "Nature Communications",
+      "articleTitle": "Olfactory cleft biopsy analysis of Alzheimer’s disease pathobiology across disease stages",
+      "figure": "Fig. 5e",
+      "figureUrl": "https://www.nature.com/articles/s41467-026-70099-7/figures/5",
+      "assets": {
+        "original": "assets/cases/nature-70099-fig5e/original.png",
+        "overlay": "assets/cases/nature-70099-fig5e/overlay.png",
+        "recreated": "assets/cases/nature-70099-fig5e/recreated.png",
+        "data": "assets/cases/nature-70099-fig5e/data.csv",
+        "report": "assets/cases/nature-70099-fig5e/report.json"
+      },
+      "styleSpec": {
+        "renderer": "paper-native-geometry",
+        "fidelity": "visible_geometry_candidate",
+        "label": "48 个可见散点 · 同源 SVG 重绘",
+        "note": "所有悬停点均来自下载 CSV；回归线由这 48 个可见点 OLS 重拟合，浅蓝带定义为拟合线 ± 残差标准差，不推断完全重合或被遮挡的原始观测。",
+        "canvas": {
+          "width": 1010,
+          "height": 360
+        },
+        "fontFamily": "Arial, Helvetica, sans-serif",
+        "geometryAsset": "assets/cases/nature-70099-fig5e/geometry.json"
+      }
+    },
+    {
+      "id": "nature-37200-fig8e",
+      "title": "分组柱形图",
+      "subtitle": "三面板柱、误差与可见点",
+      "status": "visible_geometry_candidate",
+      "statusLabel": "候选 · 原图像素复核",
+      "description": "Fig. 8e 三个病原菌面板的百分比存活率：保留 36 个散点候选、6 个柱形均值和与样本标准差一致的可见区间。",
+      "metrics": [
+        {
+          "label": "bars",
+          "value": "6"
+        },
+        {
+          "label": "point candidates",
+          "value": "36"
+        },
+        {
+          "label": "clean markers",
+          "value": "17"
+        }
+      ],
+      "articleUrl": "https://www.nature.com/articles/s41467-023-37200-w",
+      "journal": "Nature Communications",
+      "articleTitle": "Integrative omics identifies conserved and pathogen-specific responses of sepsis-causing bacteria",
+      "figure": "Fig. 8e",
+      "figureUrl": "https://www.nature.com/articles/s41467-023-37200-w/figures/8",
+      "assets": {
+        "original": "assets/cases/nature-37200-fig8e/original.png",
+        "overlay": "assets/cases/nature-37200-fig8e/overlay.png",
+        "recreated": "assets/cases/nature-37200-fig8e/recreated.png",
+        "data": "assets/cases/nature-37200-fig8e/data.csv",
+        "report": "assets/cases/nature-37200-fig8e/report.json"
+      },
+      "styleSpec": {
+        "renderer": "paper-native-geometry",
+        "fidelity": "visible_geometry_candidate",
+        "label": "36 个候选散点 · 原图像素重绘",
+        "note": "每组保留 6 个原图像素候选点；17 个无结构冲突，其余点保留柱框、误差线或融合簇审查状态。柱高和区间由候选点均值 ± 样本 SD 重建并与原图几何核对，不宣称作者的误差定义或精确 p 值。",
+        "canvas": {
+          "width": 1700,
+          "height": 581
+        },
+        "fontFamily": "Arial, Helvetica, sans-serif",
+        "rasterEvidenceInteractive": true
+      }
+    },
+    {
+      "id": "nature-31408-fig2d",
+      "title": "热力图",
+      "subtitle": "4 × 20 通路富集矩阵",
+      "status": "visible_geometry_candidate",
+      "statusLabel": "候选 · 色标映射",
+      "description": "Fig. 2d?80 ????????????????????20 ??????? AUC ???",
+      "metrics": [
+        {
+          "label": "cells",
+          "value": "80 / 80"
+        },
+        {
+          "label": "colour scale",
+          "value": "AUC"
+        }
+      ],
+      "articleUrl": "https://www.nature.com/articles/s41467-022-31408-y",
+      "journal": "Nature Communications",
+      "articleTitle": "A brain precursor atlas reveals the acquisition of developmental-like states in adult cerebral tumours",
+      "figure": "Fig. 2d",
+      "figureUrl": "https://www.nature.com/articles/s41467-022-31408-y/figures/2",
+      "assets": {
+        "original": "assets/cases/nature-31408-fig2d/original.png",
+        "overlay": "assets/cases/nature-31408-fig2d/overlay.png",
+        "recreated": "assets/cases/nature-31408-fig2d/recreated.png",
+        "data": "assets/cases/nature-31408-fig2d/data.csv",
+        "report": "assets/cases/nature-31408-fig2d/report.json"
+      },
+      "styleSpec": {
+        "renderer": "paper-native-geometry",
+        "fidelity": "visible_geometry_candidate",
+        "label": "色标单元格 · 交互重绘",
+        "note": "?????????????????????????????????",
+        "canvas": {
+          "width": 1712,
+          "height": 320
+        },
+        "fontFamily": "Arial, Helvetica, sans-serif",
+        "lines": [
+          {
+            "x1": 128,
+            "y1": 52,
+            "x2": 1208,
+            "y2": 52
+          },
+          {
+            "x1": 128,
+            "y1": 237,
+            "x2": 1208,
+            "y2": 237
+          },
+          {
+            "x1": 128,
+            "y1": 52,
+            "x2": 128,
+            "y2": 237
+          },
+          {
+            "x1": 1208,
+            "y1": 52,
+            "x2": 1208,
+            "y2": 237
+          }
+        ],
+        "annotations": [
+          {
+            "text": "d",
+            "x": 3,
+            "y": 25,
+            "size": 26,
+            "bold": true
+          },
+          {
+            "text": "Significantly enriched signaling pathways per cluster",
+            "x": 650,
+            "y": 25,
+            "size": 16,
+            "anchor": "middle"
+          }
+        ],
+        "rasterEvidenceInteractive": true
+      }
+    },
+    {
+      "id": "nature-06199-fig1",
+      "title": "热力图",
+      "subtitle": "带显著性底色的相关矩阵",
+      "status": "visible_geometry_candidate",
+      "statusLabel": "候选 · 色标映射",
+      "description": "Fig. 1??????????????????????????? ?1 ? 1 ??????",
+      "metrics": [
+        {
+          "label": "grid cells",
+          "value": "144"
+        },
+        {
+          "label": "colour scale",
+          "value": "−1 to 1"
+        }
+      ],
+      "articleUrl": "https://www.nature.com/articles/s41467-018-06199-w",
+      "journal": "Nature Communications",
+      "articleTitle": "Predicting nutrient content of ray-finned fishes using phylogenetic information",
+      "figure": "Fig. 1",
+      "figureUrl": "https://www.nature.com/articles/s41467-018-06199-w/figures/1",
+      "assets": {
+        "original": "assets/cases/nature-06199-fig1/original.png",
+        "overlay": "assets/cases/nature-06199-fig1/overlay.png",
+        "recreated": "assets/cases/nature-06199-fig1/recreated.png",
+        "data": "assets/cases/nature-06199-fig1/data.csv",
+        "report": "assets/cases/nature-06199-fig1/report.json"
+      },
+      "styleSpec": {
+        "renderer": "paper-native-geometry",
+        "fidelity": "visible_geometry_candidate",
+        "label": "矩阵单元格 · 交互重绘",
+        "note": "???????????????????????????????",
+        "canvas": {
+          "width": 1759,
+          "height": 1558
+        },
+        "fontFamily": "Arial, Helvetica, sans-serif",
+        "annotations": [
+          {
+            "text": "Evolutionary correlation matrix",
+            "x": 880,
+            "y": 28,
+            "size": 24,
+            "anchor": "middle"
+          }
+        ],
+        "rasterEvidenceInteractive": true
+      }
+    },
+    {
+      "id": "nature-60895-fig4c",
+      "title": "堆叠柱状图",
+      "subtitle": "每个细胞类型的上、下调基因数",
+      "status": "visible_geometry_candidate",
+      "statusLabel": "候选 · 可见堆叠几何",
+      "description": "Fig. 4c：横向堆叠段按可见端点和颜色拆分，上、下调部分可分别悬停读取。",
+      "metrics": [
+        {
+          "label": "segments",
+          "value": "22"
+        },
+        {
+          "label": "categories",
+          "value": "11"
+        }
+      ],
+      "articleUrl": "https://www.nature.com/articles/s41467-025-60895-y",
+      "journal": "Nature Communications",
+      "articleTitle": "Prdm16 regulates the postnatal fate of embryonic radial glia via Vcam1-dependent mechanisms",
+      "figure": "Fig. 4c",
+      "figureUrl": "https://www.nature.com/articles/s41467-025-60895-y/figures/4",
+      "assets": {
+        "original": "assets/cases/nature-60895-fig4c/original.png",
+        "overlay": "assets/cases/nature-60895-fig4c/overlay.png",
+        "recreated": "assets/cases/nature-60895-fig4c/recreated.png",
+        "data": "assets/cases/nature-60895-fig4c/data.csv",
+        "report": "assets/cases/nature-60895-fig4c/report.json"
+      },
+      "styleSpec": {
+        "renderer": "paper-native-geometry",
+        "fidelity": "visible_geometry_candidate",
+        "label": "可见堆叠段 · 交互重绘",
+        "note": "相邻色段在数据表中保持独立，避免把它们误读为一个总柱。",
+        "canvas": {
+          "width": 1050,
+          "height": 650
+        },
+        "fontFamily": "Arial, Helvetica, sans-serif",
+        "lines": [
+          {
+            "x1": 230,
+            "y1": 57,
+            "x2": 230,
+            "y2": 520,
+            "width": 3
+          },
+          {
+            "x1": 230,
+            "y1": 520,
+            "x2": 920,
+            "y2": 520,
+            "width": 3
+          }
+        ],
+        "annotations": [
+          {
+            "text": "c",
+            "x": 70,
+            "y": 20,
+            "size": 34,
+            "bold": true
+          },
+          {
+            "text": "Number of differentially expressed genes",
+            "x": 575,
+            "y": 585,
+            "size": 24,
+            "anchor": "middle"
+          }
+        ],
+        "rasterEvidenceInteractive": true
+      }
+    },
+    {
+      "id": "nature-51329-fig5a",
+      "title": "空间点位图",
+      "subtitle": "PDAC 区域分类与细胞概率点位",
+      "status": "partial_visible",
+      "statusLabel": "候选 · PDF 矢量点位",
+      "description": "Figure 5a 的空间点位图：从论文 PDF 直接恢复左侧 426 个分类区域点位，以及右侧 8 个细胞类型图中的 3,424 个着色点位。右图 value 仅是按图面色条反推的显示近似，不是作者原始概率或物理空间坐标。",
+      "metrics": [
+        {
+          "label": "区域点位",
+          "value": "426"
+        },
+        {
+          "label": "色彩图点位",
+          "value": "3,424"
+        },
+        {
+          "label": "地图面板",
+          "value": "1 + 8"
+        }
+      ],
+      "metricNote": "点位中心、尺寸与颜色来自 Figure 5a 可见的 PDF 矢量标记。右侧色彩图的 value 为对印刷色条的最近 CIELAB 匹配；图中没有物理坐标轴，不能据此推断细胞 ID、原始空间坐标或未渲染的概率值。",
+      "articleUrl": "https://www.nature.com/articles/s41467-024-51329-2",
+      "journal": "Nature Communications",
+      "articleTitle": "Deciphering cell–cell communication at single-cell resolution for spatial transcriptomics with subgraph-based graph attention network",
+      "figure": "Fig. 5a",
+      "figureUrl": "https://www.nature.com/articles/s41467-024-51329-2/figures/5",
+      "assets": {
+        "original": "assets/cases/nature-51329-fig5a/original.png",
+        "overlay": "assets/cases/nature-51329-fig5a/overlay.png",
+        "recreated": "assets/cases/nature-51329-fig5a/recreated.png",
+        "data": "assets/cases/nature-51329-fig5a/data.csv",
+        "report": "assets/cases/nature-51329-fig5a/report.json"
+      },
+      "styleSpec": {
+        "renderer": "paper-native-geometry",
+        "fidelity": "visible_geometry_candidate",
+        "label": "3,850 个可见 PDF 矢量点位 · 同画布命中层",
+        "note": "交互底图与数据复刻图完全同尺寸；悬停仅返回下载 CSV 中直接恢复的点位字段。分类区域点没有数值，色彩图数值仅为显示色条近似。",
+        "canvas": {
+          "width": 1834,
+          "height": 550
+        },
+        "fontFamily": "Arial, Helvetica, sans-serif",
+        "rasterEvidenceInteractive": true
+      }
+    },
+    {
+      "id": "china-mining-gakedaban-dt-300m",
+      "title": "填色等值线地图",
+      "subtitle": "高精度磁测 ΔT 上延 300 m",
+      "status": "partial_visible",
+      "statusLabel": "候选 · 可见色带与等值线",
+      "description": "从《中国矿业》补图的栅格图像恢复不规则 L 形图域、25 个可见色带、图中等值线/文字墨线层，以及 10 个经纬度分格锚点。右侧图例每隔一个色带印有数值；未印刷的中间 20 nT 级别在表中单列为规则色带推导值，不冒充原始磁测数据。",
+      "metrics": [
+        {
+          "label": "可见色带",
+          "value": "25"
+        },
+        {
+          "label": "直接图例值",
+          "value": "13"
+        },
+        {
+          "label": "格网锚点",
+          "value": "10"
+        }
+      ],
+      "metricNote": "下载 CSV 是可见图例色带的摘要；完整逐像素分类网格以 NPZ 证据资产保留。图像不能恢复原始磁测站点、作者栅格、插值/上延参数、任意位置 ΔT 值或坐标基准。",
+      "articleUrl": "http://www.chinaminingmagazine.com/en/article/doi/10.12075/j.issn.1004-4051.20240624",
+      "journal": "China Mining Magazine",
+      "articleTitle": "Study on the anomaly characteristics of high-precision magnetic survey in the Gakedaban Area of the western section of East Kunlun",
+      "figure": "Supplement — Isogram plan of extending 300 m above ΔT polarization",
+      "figureUrl": "http://www.chinaminingmagazine.com/en/supplement/d54a6c83-9a62-493c-a673-b34c60773e73",
+      "assets": {
+        "original": "assets/cases/china-mining-gakedaban-dt-300m/original.jpg",
+        "overlay": "assets/cases/china-mining-gakedaban-dt-300m/overlay.png",
+        "recreated": "assets/cases/china-mining-gakedaban-dt-300m/recreated.png",
+        "data": "assets/cases/china-mining-gakedaban-dt-300m/data.csv",
+        "report": "assets/cases/china-mining-gakedaban-dt-300m/report.json"
+      }
+    }
+  ],
+  "paperCases": [
+    {
+      "id": "nature-borneo-edge",
+      "title": "散点 + 模型曲线 + 重叠直方图",
+      "journal": "Nature Communications",
+      "figure": "Fig. 2",
+      "articleTitle": "Long-term carbon sink in Borneo’s forests halted by drought and vulnerable to edge effects",
+      "articleUrl": "https://www.nature.com/articles/s41467-017-01997-0",
+      "statusLabel": "官方源数据映射",
+      "description": "71 行作者源数据映射回 Fig. 2；其中 50 行位于散点面板可见横轴范围。",
+      "assets": {
+        "original": "assets/cases/nature-borneo-edge/original.jpg",
+        "overlay": "assets/cases/nature-borneo-edge/overlay.png",
+        "recreated": "assets/cases/nature-borneo-edge/recreated.png",
+        "data": "assets/cases/nature-borneo-edge/data.csv",
+        "report": "assets/cases/nature-borneo-edge/report.json"
+      }
+    },
+    {
+      "id": "nature-ribotie-multipanel",
+      "title": "多面板图中的彩色散点",
+      "journal": "Nature Communications",
+      "figure": "Fig. 2 · panel e",
+      "articleTitle": "Deep learning to decode sites of RNA translation in normal and cancerous tissues",
+      "articleUrl": "https://www.nature.com/articles/s41467-025-56543-0",
+      "statusLabel": "局部几何提取",
+      "description": "从复杂十面板图中路由 panel e，并恢复 18 个可分离的彩色组件。",
+      "assets": {
+        "original": "assets/cases/nature-ribotie-multipanel/original-panel-e.png",
+        "overlay": "assets/cases/nature-ribotie-multipanel/overlay.png",
+        "recreated": "assets/cases/nature-ribotie-multipanel/recreated.png",
+        "data": "assets/cases/nature-ribotie-multipanel/data.csv",
+        "report": "assets/cases/nature-ribotie-multipanel/report.json"
+      }
+    }
+  ],
+  "claimNote": "稳定状态仅指当前仓库中已通过本地基准的专用提取器。柱状图、剂量—反应曲线、论文配对箱线图与校准热力图路线仍为候选；WebPlotDigitizer 尚未进行同输入、同校准与同人工干预条件的比较。"
+}

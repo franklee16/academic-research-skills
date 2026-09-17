@@ -1,0 +1,40 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ["3.9", "3.12"]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Compile scripts
+        run: python -m py_compile scripts/package_skill.py scripts/update_radar_state.py scripts/test_update_radar_state.py scripts/check_distribution.py
+      - name: Validate skill and examples
+        run: |
+          python scripts/check_distribution.py
+          python scripts/update_radar_state.py --self-test
+          python scripts/test_update_radar_state.py
+          python scripts/package_skill.py --self-test
+          python -m json.tool assets/RADAR_STATE_TEMPLATE.json > /dev/null
+          python -m json.tool assets/RADAR_STATE_SCHEMA.json > /dev/null
+          python -m json.tool assets/OBSERVATION_TEMPLATE.json > /dev/null
+          python -m json.tool assets/OBSERVATION_SCHEMA.json > /dev/null
+          python -m json.tool assets/COVERAGE_TEMPLATE.json > /dev/null
+          python -m json.tool assets/COVERAGE_SCHEMA.json > /dev/null
+          python -m json.tool evals/evals.json > /dev/null
+          python -m json.tool evals/trigger-evals.json > /dev/null
+      - name: Verify committed upload package
+        run: |
+          python scripts/package_skill.py --out /tmp/research-defense-radar.zip
+          cmp packages/research-defense-radar.zip /tmp/research-defense-radar.zip

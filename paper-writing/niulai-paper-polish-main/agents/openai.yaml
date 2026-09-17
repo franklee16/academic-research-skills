@@ -1,0 +1,4 @@
+interface:
+  display_name: "Peer-Review Paper Rewriter"
+  short_description: "Evidence-preserving rewrites for stronger peer review"
+  default_prompt: "Use $peer-review-paper-rewriter to strengthen this manuscript for peer review without changing its scientific facts."

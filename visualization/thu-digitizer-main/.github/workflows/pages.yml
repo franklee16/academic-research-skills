@@ -1,0 +1,49 @@
+name: Deploy gallery to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - "gallery/**"
+      - ".github/workflows/pages.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: github-pages
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v5
+
+      - name: Remove non-public capability catalog
+        shell: bash
+        run: |
+          rm -f gallery/capabilities.html
+          rm -f gallery/app.js
+          rm -f gallery/styles.css
+          rm -f gallery/data/capabilities.json
+
+      - name: Upload static gallery
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: gallery
+
+      - name: Deploy GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

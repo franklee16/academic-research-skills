@@ -1,0 +1,67 @@
+{
+  "schema_version": 1,
+  "status": "needs_verified_configuration",
+  "inspection": {
+    "input_file": "measurement-source.png",
+    "input_sha256": "4dd50564058d2823dfe740ec3df49d6f451088cebd402b51d9890fdfc3282e46",
+    "file_size_bytes": 339068,
+    "media_kind": "raster",
+    "coordinate_space": "pixel",
+    "format": "PNG",
+    "mode": "RGB",
+    "width": 2050,
+    "height": 1399,
+    "appearance": {
+      "background_proposal": "light",
+      "border_median_luminance_0_255": 254.99999999999997,
+      "border_colour_span_median_0_255": 0.0,
+      "pixel_count": 2867950,
+      "role": "appearance proposal only; not chart classification or numeric evidence"
+    }
+  },
+  "route_selection": {
+    "chart_type": "donut",
+    "primary": {
+      "route_id": "raster_labelled_donut_candidate",
+      "title": "Visible-label pie/donut with annular geometry validation",
+      "chart_types": [
+        "pie",
+        "donut"
+      ],
+      "media_kinds": [
+        "raster"
+      ],
+      "coordinate_models": [
+        "polar"
+      ],
+      "mark_grammars": [
+        "visible_numeric_label",
+        "color_sector",
+        "annular_band"
+      ],
+      "maturity": "assisted_candidate",
+      "implementation": "scripts/candidate_digitize_labelled_donut.py",
+      "required_confirmations": [
+        "original_raster",
+        "panel_roi",
+        "group_centers",
+        "radial_bands",
+        "series_palette",
+        "two_pass_visible_label_transcription",
+        "label_anchors",
+        "overlay_review"
+      ],
+      "recoverable": "Explicitly visible numeric labels whose duplicate transcription agrees and whose normalized shares match independently sampled sector geometry.",
+      "non_recoverable": "Unlabeled sectors, hidden source values, raw observations, and any value inferred only from an angle.",
+      "automated_extraction": true
+    },
+    "fallback": null,
+    "decision": "needs_verified_configuration",
+    "reason": "A route is registered, but all required confirmations remain explicit before extraction."
+  },
+  "figure_spec_status": "valid_template_not_yet_verified",
+  "safety": {
+    "numeric_extraction_authorized": false,
+    "reason": "Preflight routing never converts proposed chart type, ROI, axes, or series into verified values."
+  }
+}

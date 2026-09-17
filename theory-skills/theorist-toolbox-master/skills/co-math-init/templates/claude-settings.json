@@ -1,0 +1,41 @@
+{
+  "_comment": "Per-project Claude Code settings for the AI co-mathematician system. The hooks below enforce the discipline described in Zheng et al. (2026), section 3.3-3.4: paper.tex edits cannot introduce un-justified theorems or hand-waving (in strict mode), and a workstream cannot be marked complete without an explicit reviewer approval file. To relax strict mode for this project, edit co-math-config.json (set strict_mode to false) and record the rationale in decisions.md.",
+  "permissions": {
+    "allow": [
+      "Bash(pytest:*)",
+      "Bash(python3:*)",
+      "Bash(pdflatex:*)",
+      "Bash(latexmk:*)",
+      "Bash(mkdir:*)",
+      "WebSearch",
+      "WebFetch"
+    ]
+  },
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Write|Edit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 ~/.claude/co-math/hooks/paper_tex_guard.py"
+          },
+          {
+            "type": "command",
+            "command": "python3 ~/.claude/co-math/hooks/workstream_complete_guard.py"
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 ~/.claude/co-math/hooks/blocked_workstreams_notice.py"
+          }
+        ]
+      }
+    ]
+  }
+}

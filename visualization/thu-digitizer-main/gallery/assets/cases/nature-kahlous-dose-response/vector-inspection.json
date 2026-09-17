@@ -1,0 +1,173 @@
+{
+  "schema_version": 1,
+  "input_sha256": "c9cd1feb7b8acd8435658d492824d485acec0448b01a6369cf461b7c7331aac4",
+  "page_number_1_based": 7,
+  "page_rect_pt": {
+    "x0_pt": 0.0,
+    "y0_pt": 0.0,
+    "x1_pt": 595.276001,
+    "y1_pt": 790.866028
+  },
+  "text_span_count": 242,
+  "embedded_image_count": 0,
+  "embedded_images": [],
+  "drawing_path_count": 1378,
+  "drawing_paths_with_nonempty_bounds": 643,
+  "filled_bezier_path_count": 373,
+  "path_operation_counts": [
+    {
+      "value": "c",
+      "count": 5797
+    },
+    {
+      "value": "l",
+      "count": 5102
+    },
+    {
+      "value": "re",
+      "count": 85
+    }
+  ],
+  "fill_colour_counts": [
+    {
+      "value": "#000000",
+      "count": 295
+    },
+    {
+      "value": "#ff02b1",
+      "count": 35
+    },
+    {
+      "value": "#b4b4b4",
+      "count": 27
+    },
+    {
+      "value": "#13110f",
+      "count": 24
+    },
+    {
+      "value": "#4601cb",
+      "count": 21
+    },
+    {
+      "value": "#4696cb",
+      "count": 21
+    },
+    {
+      "value": "#f88b8d",
+      "count": 21
+    },
+    {
+      "value": "#4fe2e2",
+      "count": 19
+    },
+    {
+      "value": "#50e2e2",
+      "count": 15
+    },
+    {
+      "value": "#fa9600",
+      "count": 10
+    },
+    {
+      "value": "#2d2b29",
+      "count": 4
+    },
+    {
+      "value": "#020202",
+      "count": 2
+    },
+    {
+      "value": "#161412",
+      "count": 2
+    },
+    {
+      "value": "#302f2d",
+      "count": 2
+    },
+    {
+      "value": "#0d0d0d",
+      "count": 1
+    },
+    {
+      "value": "#657e7e",
+      "count": 1
+    },
+    {
+      "value": "#b5b5b5",
+      "count": 1
+    }
+  ],
+  "stroke_colour_counts": [
+    {
+      "value": "#748d8e",
+      "count": 248
+    },
+    {
+      "value": "#ffba12",
+      "count": 238
+    },
+    {
+      "value": "#48e99d",
+      "count": 231
+    },
+    {
+      "value": "#000000",
+      "count": 116
+    },
+    {
+      "value": "#758c8e",
+      "count": 12
+    },
+    {
+      "value": "#48ea9c",
+      "count": 10
+    },
+    {
+      "value": "#ffba10",
+      "count": 10
+    },
+    {
+      "value": "#13110f",
+      "count": 3
+    },
+    {
+      "value": "#ffad12",
+      "count": 3
+    },
+    {
+      "value": "#41e98b",
+      "count": 2
+    },
+    {
+      "value": "#b4b4b4",
+      "count": 2
+    },
+    {
+      "value": "#4601cb",
+      "count": 1
+    },
+    {
+      "value": "#4696cb",
+      "count": 1
+    },
+    {
+      "value": "#4fe2e2",
+      "count": 1
+    },
+    {
+      "value": "#f88b8d",
+      "count": 1
+    },
+    {
+      "value": "#ff02b1",
+      "count": 1
+    }
+  ],
+  "composition_status": "vector_paths_detected",
+  "suggested_next_step": "Inspect drawing bounds and path geometry before attempting direct mark recovery; legend symbols and decorations can use the same vector primitives as data marks.",
+  "limitations": [
+    "A vector drawing path is not necessarily a plotted datum.",
+    "This report does not identify panel bounds, axis transforms, legends, or source-data parameters."
+  ]
+}

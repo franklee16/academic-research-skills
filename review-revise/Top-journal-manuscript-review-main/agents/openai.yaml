@@ -1,0 +1,4 @@
+interface:
+  display_name: "Top Journal Manuscript Review"
+  short_description: "Audit and rebuild manuscripts for top-journal standards"
+  default_prompt: "Review this manuscript against top-journal editorial, evidentiary, structural, and sentence-level writing standards, then prioritize the revisions needed for external review."

@@ -1,0 +1,1425 @@
+{
+  "schema_version": 1,
+  "status": "unsupported",
+  "inspection": {
+    "input_file": "F:\\AI\\thu-digitizer\\thu_digitizer_natcom_fig5a\\article.pdf",
+    "input_sha256": "ed160426494e71b3e9b37a8d42adb17b474117b6805b3ecdbab26f9d435be075",
+    "file_size_bytes": 6788301,
+    "media_kind": "pdf",
+    "coordinate_space": "pdf_pt",
+    "page_count": 18,
+    "selected_page": 10,
+    "page_selection": "user_provided",
+    "width": 595.2760009765625,
+    "height": 790.8660278320312,
+    "pdf_composition": "mixed_vector_and_raster",
+    "pdf_inspection": {
+      "page_number_1_based": 10,
+      "page_rect_pt": {
+        "x0_pt": 0.0,
+        "y0_pt": 0.0,
+        "x1_pt": 595.276001,
+        "y1_pt": 790.866028
+      },
+      "text_span_count": 362,
+      "embedded_image_count": 2,
+      "embedded_images": [
+        {
+          "xref": 348,
+          "width_px": 1384,
+          "height_px": 2310,
+          "bits_per_component": 8,
+          "colourspace": "DeviceCMYK"
+        },
+        {
+          "xref": 349,
+          "width_px": 150,
+          "height_px": 205,
+          "bits_per_component": 8,
+          "colourspace": "Indexed"
+        }
+      ],
+      "drawing_path_count": 30731,
+      "drawing_paths_with_nonempty_bounds": 30157,
+      "filled_bezier_path_count": 24735,
+      "path_operation_counts": [
+        {
+          "value": "l",
+          "count": 77835
+        },
+        {
+          "value": "c",
+          "count": 53746
+        },
+        {
+          "value": "qu",
+          "count": 971
+        },
+        {
+          "value": "re",
+          "count": 439
+        }
+      ],
+      "fill_colour_counts": [
+        {
+          "value": "#866aae",
+          "count": 6837
+        },
+        {
+          "value": "#3177aa",
+          "count": 4686
+        },
+        {
+          "value": "#f47c34",
+          "count": 4608
+        },
+        {
+          "value": "#ca3435",
+          "count": 2629
+        },
+        {
+          "value": "#479d47",
+          "count": 2088
+        },
+        {
+          "value": "#c5c6c8",
+          "count": 485
+        },
+        {
+          "value": "#606264",
+          "count": 478
+        },
+        {
+          "value": "#70be7e",
+          "count": 346
+        },
+        {
+          "value": "#43274d",
+          "count": 344
+        },
+        {
+          "value": "#ca2f2e",
+          "count": 318
+        },
+        {
+          "value": "#a24e54",
+          "count": 315
+        },
+        {
+          "value": "#1b449c",
+          "count": 306
+        },
+        {
+          "value": "#a5a7a9",
+          "count": 285
+        },
+        {
+          "value": "#f99c32",
+          "count": 259
+        },
+        {
+          "value": "#231f20",
+          "count": 251
+        },
+        {
+          "value": "#99ce83",
+          "count": 248
+        },
+        {
+          "value": "#7b3f3f",
+          "count": 201
+        },
+        {
+          "value": "#7e8082",
+          "count": 159
+        },
+        {
+          "value": "#6f6caa",
+          "count": 130
+        },
+        {
+          "value": "#45a05d",
+          "count": 113
+        },
+        {
+          "value": "#90bfd5",
+          "count": 108
+        },
+        {
+          "value": "#cb636f",
+          "count": 93
+        },
+        {
+          "value": "#43284f",
+          "count": 89
+        },
+        {
+          "value": "#3b80b1",
+          "count": 84
+        },
+        {
+          "value": "#9392be",
+          "count": 76
+        },
+        {
+          "value": "#452a51",
+          "count": 59
+        },
+        {
+          "value": "#50387d",
+          "count": 59
+        },
+        {
+          "value": "#472c55",
+          "count": 57
+        },
+        {
+          "value": "#4d4383",
+          "count": 53
+        },
+        {
+          "value": "#462b53",
+          "count": 52
+        },
+        {
+          "value": "#472c56",
+          "count": 51
+        },
+        {
+          "value": "#452950",
+          "count": 49
+        },
+        {
+          "value": "#f4d066",
+          "count": 47
+        },
+        {
+          "value": "#4d4182",
+          "count": 43
+        },
+        {
+          "value": "#f0d94b",
+          "count": 43
+        },
+        {
+          "value": "#dcddde",
+          "count": 41
+        },
+        {
+          "value": "#dd8f97",
+          "count": 41
+        },
+        {
+          "value": "#472d57",
+          "count": 40
+        },
+        {
+          "value": "#482e59",
+          "count": 39
+        },
+        {
+          "value": "#44598b",
+          "count": 37
+        },
+        {
+          "value": "#4a305d",
+          "count": 36
+        },
+        {
+          "value": "#4c3165",
+          "count": 36
+        },
+        {
+          "value": "#513174",
+          "count": 36
+        },
+        {
+          "value": "#4a305e",
+          "count": 35
+        },
+        {
+          "value": "#482e5a",
+          "count": 34
+        },
+        {
+          "value": "#492f5c",
+          "count": 33
+        },
+        {
+          "value": "#4c3164",
+          "count": 33
+        },
+        {
+          "value": "#503171",
+          "count": 33
+        },
+        {
+          "value": "#50316f",
+          "count": 32
+        },
+        {
+          "value": "#50377c",
+          "count": 32
+        },
+        {
+          "value": "#4c3162",
+          "count": 30
+        },
+        {
+          "value": "#4e3168",
+          "count": 30
+        },
+        {
+          "value": "#4a4a86",
+          "count": 29
+        },
+        {
+          "value": "#4f3b7f",
+          "count": 29
+        },
+        {
+          "value": "#513176",
+          "count": 29
+        },
+        {
+          "value": "#51347a",
+          "count": 29
+        },
+        {
+          "value": "#485089",
+          "count": 28
+        },
+        {
+          "value": "#503173",
+          "count": 28
+        },
+        {
+          "value": "#4f397e",
+          "count": 27
+        },
+        {
+          "value": "#47548a",
+          "count": 26
+        },
+        {
+          "value": "#46578a",
+          "count": 25
+        },
+        {
+          "value": "#4b4885",
+          "count": 25
+        },
+        {
+          "value": "#4e316b",
+          "count": 25
+        },
+        {
+          "value": "#4f316d",
+          "count": 25
+        },
+        {
+          "value": "#513175",
+          "count": 25
+        },
+        {
+          "value": "#494f88",
+          "count": 24
+        },
+        {
+          "value": "#4d3f81",
+          "count": 24
+        },
+        {
+          "value": "#4e3d80",
+          "count": 24
+        },
+        {
+          "value": "#50357b",
+          "count": 24
+        },
+        {
+          "value": "#43618b",
+          "count": 23
+        },
+        {
+          "value": "#4b4684",
+          "count": 23
+        },
+        {
+          "value": "#513177",
+          "count": 23
+        },
+        {
+          "value": "#435b8b",
+          "count": 22
+        },
+        {
+          "value": "#494b87",
+          "count": 22
+        },
+        {
+          "value": "#4b3160",
+          "count": 22
+        },
+        {
+          "value": "#46568a",
+          "count": 21
+        },
+        {
+          "value": "#475088",
+          "count": 21
+        },
+        {
+          "value": "#3a838c",
+          "count": 20
+        },
+        {
+          "value": "#3c738c",
+          "count": 20
+        },
+        {
+          "value": "#3d728c",
+          "count": 20
+        },
+        {
+          "value": "#445f8b",
+          "count": 20
+        },
+        {
+          "value": "#475189",
+          "count": 20
+        },
+        {
+          "value": "#4a4986",
+          "count": 20
+        },
+        {
+          "value": "#4b4785",
+          "count": 19
+        },
+        {
+          "value": "#4e316a",
+          "count": 19
+        },
+        {
+          "value": "#37908b",
+          "count": 18
+        },
+        {
+          "value": "#3b748c",
+          "count": 18
+        },
+        {
+          "value": "#3e718c",
+          "count": 18
+        },
+        {
+          "value": "#40658c",
+          "count": 18
+        },
+        {
+          "value": "#41648c",
+          "count": 18
+        },
+        {
+          "value": "#45588b",
+          "count": 18
+        },
+        {
+          "value": "#4c4484",
+          "count": 18
+        },
+        {
+          "value": "#33978a",
+          "count": 17
+        },
+        {
+          "value": "#3d708c",
+          "count": 17
+        },
+        {
+          "value": "#475289",
+          "count": 17
+        },
+        {
+          "value": "#513379",
+          "count": 17
+        },
+        {
+          "value": "#3c788c",
+          "count": 16
+        },
+        {
+          "value": "#3c7d8c",
+          "count": 16
+        },
+        {
+          "value": "#40688c",
+          "count": 16
+        },
+        {
+          "value": "#435c8b",
+          "count": 16
+        },
+        {
+          "value": "#43618c",
+          "count": 16
+        },
+        {
+          "value": "#445d8b",
+          "count": 16
+        },
+        {
+          "value": "#46558a",
+          "count": 16
+        },
+        {
+          "value": "#484e88",
+          "count": 16
+        },
+        {
+          "value": "#4e3d7f",
+          "count": 16
+        },
+        {
+          "value": "#3a818c",
+          "count": 15
+        },
+        {
+          "value": "#378c8c",
+          "count": 14
+        },
+        {
+          "value": "#445a8a",
+          "count": 14
+        },
+        {
+          "value": "#494d87",
+          "count": 14
+        },
+        {
+          "value": "#4f3e80",
+          "count": 14
+        },
+        {
+          "value": "#39828c",
+          "count": 13
+        },
+        {
+          "value": "#3c778c",
+          "count": 13
+        },
+        {
+          "value": "#3f6a8d",
+          "count": 13
+        },
+        {
+          "value": "#3f6d8c",
+          "count": 13
+        },
+        {
+          "value": "#40698c",
+          "count": 13
+        },
+        {
+          "value": "#43608b",
+          "count": 13
+        },
+        {
+          "value": "#35948b",
+          "count": 12
+        },
+        {
+          "value": "#3c7c8c",
+          "count": 12
+        },
+        {
+          "value": "#3d758c",
+          "count": 12
+        },
+        {
+          "value": "#3d7b8b",
+          "count": 12
+        },
+        {
+          "value": "#3f6e8d",
+          "count": 12
+        },
+        {
+          "value": "#406c8d",
+          "count": 12
+        },
+        {
+          "value": "#33998a",
+          "count": 11
+        },
+        {
+          "value": "#38898b",
+          "count": 11
+        },
+        {
+          "value": "#3b768c",
+          "count": 11
+        },
+        {
+          "value": "#3b808c",
+          "count": 11
+        },
+        {
+          "value": "#3c758c",
+          "count": 11
+        },
+        {
+          "value": "#40678b",
+          "count": 11
+        },
+        {
+          "value": "#41668c",
+          "count": 11
+        },
+        {
+          "value": "#368b8b",
+          "count": 10
+        },
+        {
+          "value": "#368d8c",
+          "count": 10
+        },
+        {
+          "value": "#38918b",
+          "count": 10
+        },
+        {
+          "value": "#39868c",
+          "count": 10
+        },
+        {
+          "value": "#3e6b8d",
+          "count": 10
+        },
+        {
+          "value": "#3e6f8c",
+          "count": 10
+        },
+        {
+          "value": "#42628c",
+          "count": 10
+        },
+        {
+          "value": "#42648c",
+          "count": 10
+        },
+        {
+          "value": "#349a89",
+          "count": 9
+        },
+        {
+          "value": "#36958b",
+          "count": 9
+        },
+        {
+          "value": "#379d89",
+          "count": 9
+        },
+        {
+          "value": "#379e88",
+          "count": 9
+        },
+        {
+          "value": "#38878c",
+          "count": 9
+        },
+        {
+          "value": "#39878c",
+          "count": 9
+        },
+        {
+          "value": "#3b7b8c",
+          "count": 9
+        },
+        {
+          "value": "#3cac83",
+          "count": 9
+        },
+        {
+          "value": "#3d798c",
+          "count": 9
+        },
+        {
+          "value": "#42638c",
+          "count": 9
+        },
+        {
+          "value": "#339a89",
+          "count": 8
+        },
+        {
+          "value": "#369f88",
+          "count": 8
+        },
+        {
+          "value": "#378a8c",
+          "count": 8
+        },
+        {
+          "value": "#3c7a8c",
+          "count": 8
+        },
+        {
+          "value": "#41b67e",
+          "count": 8
+        },
+        {
+          "value": "#4c8947",
+          "count": 8
+        },
+        {
+          "value": "#368b8c",
+          "count": 7
+        },
+        {
+          "value": "#37a387",
+          "count": 7
+        },
+        {
+          "value": "#3a7f8c",
+          "count": 7
+        },
+        {
+          "value": "#3a848c",
+          "count": 7
+        },
+        {
+          "value": "#3a858c",
+          "count": 7
+        },
+        {
+          "value": "#3aaa84",
+          "count": 7
+        },
+        {
+          "value": "#3ba985",
+          "count": 7
+        },
+        {
+          "value": "#3dae82",
+          "count": 7
+        },
+        {
+          "value": "#3e7195",
+          "count": 7
+        },
+        {
+          "value": "#3fb27f",
+          "count": 7
+        },
+        {
+          "value": "#7ec463",
+          "count": 7
+        },
+        {
+          "value": "#836da2",
+          "count": 7
+        },
+        {
+          "value": "#ab4447",
+          "count": 7
+        },
+        {
+          "value": "#368e8c",
+          "count": 6
+        },
+        {
+          "value": "#369b8a",
+          "count": 6
+        },
+        {
+          "value": "#37a088",
+          "count": 6
+        },
+        {
+          "value": "#388f8b",
+          "count": 6
+        },
+        {
+          "value": "#38a287",
+          "count": 6
+        },
+        {
+          "value": "#3b7e8c",
+          "count": 6
+        },
+        {
+          "value": "#3e6e8c",
+          "count": 6
+        },
+        {
+          "value": "#41678b",
+          "count": 6
+        },
+        {
+          "value": "#36938a",
+          "count": 5
+        },
+        {
+          "value": "#36a188",
+          "count": 5
+        },
+        {
+          "value": "#37928b",
+          "count": 5
+        },
+        {
+          "value": "#39a587",
+          "count": 5
+        },
+        {
+          "value": "#39a885",
+          "count": 5
+        },
+        {
+          "value": "#3bad83",
+          "count": 5
+        },
+        {
+          "value": "#4cba7a",
+          "count": 5
+        },
+        {
+          "value": "#51bb77",
+          "count": 5
+        },
+        {
+          "value": "#51bb78",
+          "count": 5
+        },
+        {
+          "value": "#5bbd73",
+          "count": 5
+        },
+        {
+          "value": "#5fbd70",
+          "count": 5
+        },
+        {
+          "value": "#636466",
+          "count": 5
+        },
+        {
+          "value": "#82c561",
+          "count": 5
+        },
+        {
+          "value": "#98cb56",
+          "count": 5
+        },
+        {
+          "value": "#35968a",
+          "count": 4
+        },
+        {
+          "value": "#359c89",
+          "count": 4
+        },
+        {
+          "value": "#369e89",
+          "count": 4
+        },
+        {
+          "value": "#36a187",
+          "count": 4
+        },
+        {
+          "value": "#3ba686",
+          "count": 4
+        },
+        {
+          "value": "#3cb380",
+          "count": 4
+        },
+        {
+          "value": "#3daf81",
+          "count": 4
+        },
+        {
+          "value": "#3db081",
+          "count": 4
+        },
+        {
+          "value": "#40b480",
+          "count": 4
+        },
+        {
+          "value": "#42b47f",
+          "count": 4
+        },
+        {
+          "value": "#43b77e",
+          "count": 4
+        },
+        {
+          "value": "#46ba7c",
+          "count": 4
+        },
+        {
+          "value": "#48ba7c",
+          "count": 4
+        },
+        {
+          "value": "#4aba7b",
+          "count": 4
+        },
+        {
+          "value": "#5cbd72",
+          "count": 4
+        },
+        {
+          "value": "#5ebd72",
+          "count": 4
+        },
+        {
+          "value": "#61be70",
+          "count": 4
+        },
+        {
+          "value": "#70c169",
+          "count": 4
+        },
+        {
+          "value": "#72c167",
+          "count": 4
+        },
+        {
+          "value": "#77c266",
+          "count": 4
+        },
+        {
+          "value": "#7cc363",
+          "count": 4
+        },
+        {
+          "value": "#7fc462",
+          "count": 4
+        },
+        {
+          "value": "#86c65e",
+          "count": 4
+        },
+        {
+          "value": "#bed649",
+          "count": 4
+        },
+        {
+          "value": "#3ba586",
+          "count": 3
+        },
+        {
+          "value": "#3eb181",
+          "count": 3
+        },
+        {
+          "value": "#4ebb79",
+          "count": 3
+        },
+        {
+          "value": "#53bb77",
+          "count": 3
+        },
+        {
+          "value": "#54bc76",
+          "count": 3
+        },
+        {
+          "value": "#56bc76",
+          "count": 3
+        },
+        {
+          "value": "#59bc74",
+          "count": 3
+        },
+        {
+          "value": "#64be6e",
+          "count": 3
+        },
+        {
+          "value": "#89c75e",
+          "count": 3
+        },
+        {
+          "value": "#94ca57",
+          "count": 3
+        },
+        {
+          "value": "#97cb57",
+          "count": 3
+        },
+        {
+          "value": "#a1ce52",
+          "count": 3
+        },
+        {
+          "value": "#abd14f",
+          "count": 3
+        },
+        {
+          "value": "#c7d646",
+          "count": 3
+        },
+        {
+          "value": "#ead849",
+          "count": 3
+        },
+        {
+          "value": "#000000",
+          "count": 2
+        },
+        {
+          "value": "#3372a1",
+          "count": 2
+        },
+        {
+          "value": "#3aa785",
+          "count": 2
+        },
+        {
+          "value": "#3bab84",
+          "count": 2
+        },
+        {
+          "value": "#3f759b",
+          "count": 2
+        },
+        {
+          "value": "#44b87d",
+          "count": 2
+        },
+        {
+          "value": "#499646",
+          "count": 2
+        },
+        {
+          "value": "#67bf6d",
+          "count": 2
+        },
+        {
+          "value": "#69bf6c",
+          "count": 2
+        },
+        {
+          "value": "#75c267",
+          "count": 2
+        },
+        {
+          "value": "#78c265",
+          "count": 2
+        },
+        {
+          "value": "#7ac364",
+          "count": 2
+        },
+        {
+          "value": "#8166a2",
+          "count": 2
+        },
+        {
+          "value": "#84c55f",
+          "count": 2
+        },
+        {
+          "value": "#87c65e",
+          "count": 2
+        },
+        {
+          "value": "#8871ab",
+          "count": 2
+        },
+        {
+          "value": "#90c959",
+          "count": 2
+        },
+        {
+          "value": "#93c958",
+          "count": 2
+        },
+        {
+          "value": "#9fcd53",
+          "count": 2
+        },
+        {
+          "value": "#a4cf52",
+          "count": 2
+        },
+        {
+          "value": "#a5cf51",
+          "count": 2
+        },
+        {
+          "value": "#afd24d",
+          "count": 2
+        },
+        {
+          "value": "#b64449",
+          "count": 2
+        },
+        {
+          "value": "#b7d54b",
+          "count": 2
+        },
+        {
+          "value": "#bbd549",
+          "count": 2
+        },
+        {
+          "value": "#be3635",
+          "count": 2
+        },
+        {
+          "value": "#c9d545",
+          "count": 2
+        },
+        {
+          "value": "#ded746",
+          "count": 2
+        },
+        {
+          "value": "#e47938",
+          "count": 2
+        },
+        {
+          "value": "#4c9362",
+          "count": 1
+        },
+        {
+          "value": "#4d8f48",
+          "count": 1
+        },
+        {
+          "value": "#577fa0",
+          "count": 1
+        },
+        {
+          "value": "#68bf6d",
+          "count": 1
+        },
+        {
+          "value": "#6cc06a",
+          "count": 1
+        },
+        {
+          "value": "#6dc06a",
+          "count": 1
+        },
+        {
+          "value": "#7673a2",
+          "count": 1
+        },
+        {
+          "value": "#7baf7f",
+          "count": 1
+        },
+        {
+          "value": "#7ebfd4",
+          "count": 1
+        },
+        {
+          "value": "#8ac75c",
+          "count": 1
+        },
+        {
+          "value": "#8dc85a",
+          "count": 1
+        },
+        {
+          "value": "#8ec85a",
+          "count": 1
+        },
+        {
+          "value": "#98595e",
+          "count": 1
+        },
+        {
+          "value": "#9bbcc1",
+          "count": 1
+        },
+        {
+          "value": "#9bcc56",
+          "count": 1
+        },
+        {
+          "value": "#9dcc54",
+          "count": 1
+        },
+        {
+          "value": "#add14e",
+          "count": 1
+        },
+        {
+          "value": "#afa3c3",
+          "count": 1
+        },
+        {
+          "value": "#b2d34d",
+          "count": 1
+        },
+        {
+          "value": "#b4bb51",
+          "count": 1
+        },
+        {
+          "value": "#b4d44c",
+          "count": 1
+        },
+        {
+          "value": "#b53e40",
+          "count": 1
+        },
+        {
+          "value": "#c1d648",
+          "count": 1
+        },
+        {
+          "value": "#d3c95c",
+          "count": 1
+        },
+        {
+          "value": "#d4d746",
+          "count": 1
+        },
+        {
+          "value": "#d5943b",
+          "count": 1
+        },
+        {
+          "value": "#d9d645",
+          "count": 1
+        },
+        {
+          "value": "#dadbdc",
+          "count": 1
+        },
+        {
+          "value": "#dcd746",
+          "count": 1
+        },
+        {
+          "value": "#e0a7bf",
+          "count": 1
+        },
+        {
+          "value": "#e3d746",
+          "count": 1
+        },
+        {
+          "value": "#e6d848",
+          "count": 1
+        },
+        {
+          "value": "#ed1c24",
+          "count": 1
+        },
+        {
+          "value": "#eed94a",
+          "count": 1
+        }
+      ],
+      "stroke_colour_counts": [
+        {
+          "value": "#231f20",
+          "count": 2234
+        },
+        {
+          "value": "#c5c6c8",
+          "count": 485
+        },
+        {
+          "value": "#70be7e",
+          "count": 346
+        },
+        {
+          "value": "#ca2f2e",
+          "count": 318
+        },
+        {
+          "value": "#a24e54",
+          "count": 315
+        },
+        {
+          "value": "#1b449c",
+          "count": 306
+        },
+        {
+          "value": "#a5a7a9",
+          "count": 284
+        },
+        {
+          "value": "#f99c32",
+          "count": 259
+        },
+        {
+          "value": "#99ce83",
+          "count": 248
+        },
+        {
+          "value": "#7b3f3f",
+          "count": 201
+        },
+        {
+          "value": "#7e8082",
+          "count": 159
+        },
+        {
+          "value": "#6f6caa",
+          "count": 130
+        },
+        {
+          "value": "#45a05d",
+          "count": 113
+        },
+        {
+          "value": "#90bfd5",
+          "count": 108
+        },
+        {
+          "value": "#cb636f",
+          "count": 93
+        },
+        {
+          "value": "#3b80b1",
+          "count": 84
+        },
+        {
+          "value": "#9392be",
+          "count": 76
+        },
+        {
+          "value": "#f4d066",
+          "count": 47
+        },
+        {
+          "value": "#dcddde",
+          "count": 41
+        },
+        {
+          "value": "#dd8f97",
+          "count": 41
+        },
+        {
+          "value": "#231a16",
+          "count": 29
+        },
+        {
+          "value": "#000000",
+          "count": 2
+        },
+        {
+          "value": "#2c3a58",
+          "count": 2
+        },
+        {
+          "value": "#43455d",
+          "count": 2
+        },
+        {
+          "value": "#499646",
+          "count": 2
+        },
+        {
+          "value": "#52735d",
+          "count": 2
+        },
+        {
+          "value": "#54a68f",
+          "count": 2
+        },
+        {
+          "value": "#6b7063",
+          "count": 2
+        },
+        {
+          "value": "#7a432d",
+          "count": 2
+        },
+        {
+          "value": "#8166a2",
+          "count": 2
+        },
+        {
+          "value": "#99d0d2",
+          "count": 2
+        },
+        {
+          "value": "#be3635",
+          "count": 2
+        },
+        {
+          "value": "#ce5541",
+          "count": 2
+        },
+        {
+          "value": "#cf3c34",
+          "count": 2
+        },
+        {
+          "value": "#e47938",
+          "count": 2
+        },
+        {
+          "value": "#ed1c24",
+          "count": 2
+        },
+        {
+          "value": "#ee2d2a",
+          "count": 2
+        },
+        {
+          "value": "#efb55b",
+          "count": 2
+        }
+      ],
+      "composition_status": "mixed_vector_and_raster",
+      "suggested_next_step": "Inspect the requested panel: axes, labels, markers, and fitted curves may be vector paths even when heatmaps or gradients are raster images.",
+      "limitations": [
+        "A vector drawing path is not necessarily a plotted datum.",
+        "This report does not identify panel bounds, axis transforms, legends, or source-data parameters."
+      ]
+    }
+  },
+  "route_selection": {
+    "chart_type": "spatial_point_map",
+    "primary": {
+      "route_id": "unknown_refuse",
+      "title": "Unknown chart: refuse numeric extraction",
+      "chart_types": [
+        "unknown"
+      ],
+      "media_kinds": [
+        "raster",
+        "pdf"
+      ],
+      "coordinate_models": [
+        "unknown"
+      ],
+      "mark_grammars": [
+        "unknown"
+      ],
+      "maturity": "refusal",
+      "implementation": null,
+      "required_confirmations": [
+        "chart_type",
+        "coordinate_model",
+        "recoverable_representation"
+      ],
+      "recoverable": "Input metadata and routing diagnostics only.",
+      "non_recoverable": "All numeric values until the chart grammar and coordinate model are verified.",
+      "automated_extraction": false
+    },
+    "fallback": null,
+    "decision": "unsupported",
+    "reason": "The chart type is not registered and must not be forced through an XY route."
+  },
+  "figure_spec_status": "valid_template_not_yet_verified",
+  "safety": {
+    "numeric_extraction_authorized": false,
+    "reason": "Preflight routing never converts proposed chart type, ROI, axes, or series into verified values."
+  }
+}

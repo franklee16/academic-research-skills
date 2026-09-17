@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "case_id": "nature-60895-fig4c",
+  "status": "visible_geometry_candidate",
+  "route": "calibrated_raster_candidate",
+  "panel_mapping": "Fig. 4c stacked horizontal differential-expression bars",
+  "input": {
+    "file": "fig4-60895.png",
+    "sha256": "d2b557ea683dd6d89125d59c066c45eee681c6b974ae3f9e816d780990772599",
+    "source_url": "https://media.springernature.com/full/springer-static/image/art%3A10.1038%2Fs41467-025-60895-y/MediaObjects/41467_2025_60895_Fig4_HTML.png",
+    "dimensions": [
+      2050,
+      2448
+    ],
+    "crop": [
+      970,
+      0,
+      2020,
+      650
+    ]
+  },
+  "rows": 22,
+  "pixel_extraction": "manually reviewed saturated-fill components in cropped original-raster pixels",
+  "coverage": {
+    "visible_coloured_segments": 21,
+    "border_occluded_segment_candidates": 1
+  },
+  "overlay_registration": {
+    "coordinate_space": "cropped original raster pixels",
+    "original_canvas": [
+      1050,
+      650
+    ],
+    "overlay_canvas": [
+      1050,
+      650
+    ],
+    "max_registration_error_px": 1,
+    "review_status": "passed"
+  },
+  "limitations": [
+    "Values remain display-level geometric candidates, not author raw observations.",
+    "The Microglia downregulated candidate is narrower than the visible separator stroke and is marked as border-occluded."
+  ]
+}

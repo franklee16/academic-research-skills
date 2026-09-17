@@ -1,0 +1,41 @@
+{
+  "skill_name": "write-economics-abstract",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Read the attached working-paper material and draft a journal-ready English abstract. Do not ask questions unless a missing fact blocks an accurate abstract.",
+      "expected_output": "A self-contained, compact abstract that accurately states random assignment, intent-to-treat magnitudes and baselines, the concentrated effect, the test-score null or other boundary, and a restrained implication without claiming an identified mechanism or welfare optimum.",
+      "files": ["evals/files/rct-transit-paper.md"],
+      "expectations": [
+        "Reports the 2.4 and/or 3.1 percentage-point result with a correct baseline or comparable interpretation.",
+        "Uses causal language only for assignment and labels the transportation channel as consistent-with rather than established.",
+        "Does not invent welfare, lifetime earnings, benefit-cost, or universal-policy claims.",
+        "Produces one natural English paragraph with high information density."
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "Rewrite the supplied coauthor abstract so it is accurate, self-contained, and suitable for an economics journal. Base the revision on the body, not the old abstract.",
+      "expected_output": "A conservative descriptive abstract that corrects 12 to 6 percent, rejects causal and natural-experiment language, omits the unsupported office-cost mechanism and mandate, and explains the panel and pre-trend limitation.",
+      "files": ["evals/files/observational-remote-work-paper.md"],
+      "expectations": [
+        "Does not describe the design as a natural experiment or remote work as causal.",
+        "Uses the supported 6 percent association rather than 12 percent.",
+        "Does not claim office-cost savings or prescribe a mandate.",
+        "Makes the linked panel and selection/pre-trend boundary clear."
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "Write an English abstract for this theory paper. Preserve the core comparison and parameter conditions; do not force empirical-identification or policy language.",
+      "expected_output": "A theory-appropriate abstract explaining the model, hump-shaped delegation and surplus result, conditions under which it disappears, and the substitutive/complementary AI contrast without fabricated data or policy effects.",
+      "files": ["evals/files/theory-ai-delegation-paper.md"],
+      "expectations": [
+        "Describes the manager-worker-AI environment and non-monotonic result.",
+        "Includes at least one essential parameter condition or the complementary-AI contrast.",
+        "Does not mention data, estimation, empirical identification, or a policy experiment.",
+        "Uses model-implied rather than empirical-causal language."
+      ]
+    }
+  ]
+}

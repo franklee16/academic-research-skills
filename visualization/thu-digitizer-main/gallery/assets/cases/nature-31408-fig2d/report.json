@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "case_id": "nature-31408-fig2d",
+  "status": "visible_geometry_candidate",
+  "route": "calibrated_raster_candidate",
+  "panel_mapping": "Fig. 2d enriched-signalling-pathway heatmap with labelled axes and colour scale",
+  "input": {
+    "file": "fig2-31408.png",
+    "sha256": "926516fa4ed66a79bdd3164824872c9e6cd6f850ca3af9c4d64755b9bb928692",
+    "crop": [
+      0,
+      960,
+      1712,
+      1280
+    ]
+  },
+  "rows": 80,
+  "pixel_extraction": "manually verified native-pixel graphical primitives",
+  "limitations": [
+    "Values are display-level geometric candidates, not author raw observations.",
+    "Text and unmeasured visual ornament are retained as layout annotations, not numeric evidence."
+  ]
+}

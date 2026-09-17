@@ -1,0 +1,74 @@
+{
+  "schema_version": 1,
+  "case_id": "nature-pamies-dots",
+  "status": "candidate",
+  "title": "Nature Biomedical Engineering Fig. 1 · 分组柱＋可见散点",
+  "source": {
+    "journal": "Nature Biomedical Engineering",
+    "article_title": "Show the dots in plots",
+    "article_url": "https://www.nature.com/articles/s41551-017-0079",
+    "figure_url": "https://www.nature.com/articles/s41551-017-0079/figures/1",
+    "figure": "Fig. 1",
+    "doi": "10.1038/s41551-017-0079",
+    "published": "2017-05-10",
+    "caption": "An individual's monthly activity and sleep quality between January 2015 and December 2016 (data points), ordered from January to December, categorized according to four-month intervals, and normalized by the respective maxima within the two years.",
+    "image_url": "https://media.springernature.com/lw1200/springer-static/image/art%3A10.1038%2Fs41551-017-0079/MediaObjects/41551_2017_Article_BFs415510170079_Fig1_HTML.jpg",
+    "source_image_license": "not_stated_on_article_page",
+    "source_data_url": "https://figshare.com/articles/dataset/May_2017_Editorial_Nature_Biomedical_Engineering/4928888",
+    "source_data_license": "CC BY 4.0",
+    "source_data_files": [
+      "bar-means.csv",
+      "bar-sd.csv",
+      "scatter.csv",
+      "p-values.csv"
+    ]
+  },
+  "source_image": {
+    "file": "original-hi.jpg",
+    "sha256": "f5e9b9b9467427d109b72d23d5944b74b5c70430b5688516e47e6669fe65bc99",
+    "width": 1200,
+    "height": 793,
+    "preflight_report": "preflight-report.json",
+    "figure_spec": "figure-spec.json"
+  },
+  "mapping": {
+    "status": "official_source_data_mapped",
+    "chart_grammar": [
+      "grouped_bar",
+      "visible_replicate_points",
+      "error_interval"
+    ],
+    "categories": [
+      "Jan–Apr 2015",
+      "May–Aug 2015",
+      "Sep–Dec 2015",
+      "Jan–Apr 2016",
+      "May–Aug 2016",
+      "Sep–Dec 2016"
+    ],
+    "series": [
+      "Flights of stairs climbed",
+      "Walking and running distance",
+      "Steps taken",
+      "Sleep quality"
+    ],
+    "displayed_statistic": "bar height = official mean; error interval = official s.d.; four points = visible monthly observations per four-month interval",
+    "summary_rows": 24,
+    "visible_points": 96,
+    "pixel_extraction": "not_run",
+    "numeric_values": "copied from official Figshare CSVs after panel/metric mapping"
+  },
+  "assets": {
+    "original": "original-hi.jpg",
+    "overlay": "overlay.png",
+    "recreated": "recreated.png",
+    "data": "data.csv",
+    "report": "report.json"
+  },
+  "limitations": [
+    "The figure is a Nature article image retained as a reference asset; its article page does not state an image redistribution licence.",
+    "Numeric values in this demo are mapped from the authors' CC BY 4.0 Figshare CSVs, not silently inferred from pixels.",
+    "The grouped-bar and pastel-bar point-overlay routes remain candidate routes; no WebPlotDigitizer same-input comparison is claimed.",
+    "The recreated canvas preserves the series colours, grouped layout, dots and error bars, but typography and significance annotation placement are approximate."
+  ]
+}

@@ -1,0 +1,118 @@
+{
+  "schema_version": 1,
+  "status": "needs_verified_configuration",
+  "source": {
+    "input_file": "F:\\AI\\thu-digitizer\\gallery\\assets\\cases\\nature-27341-fig1\\original.png",
+    "sha256": "8074417e4afa6a247e8d6b41e6fe86ad900abdec33748a88dba73da4df3f6dac",
+    "media_kind": "raster",
+    "coordinate_space": "pixel",
+    "measurement_space": "original_raster_pixels",
+    "resampling_applied": false,
+    "width": 1999,
+    "height": 1579,
+    "page": null
+  },
+  "panels": [
+    {
+      "panel_id": "panel-1",
+      "bounds": [
+        0.0,
+        0.0,
+        1999,
+        1579
+      ],
+      "bounds_verification": "proposed",
+      "plot_bounds": [
+        0.0,
+        0.0,
+        1999,
+        1579
+      ],
+      "plot_bounds_verification": "proposed",
+      "chart_type": "upset",
+      "chart_type_verification": "user_provided",
+      "coordinate_model": "lattice_composite",
+      "coordinate_model_verification": "proposed",
+      "axes": [
+        {
+          "axis_id": "column",
+          "orientation": "column",
+          "scale": "categorical",
+          "verification": "missing",
+          "anchors": []
+        },
+        {
+          "axis_id": "row",
+          "orientation": "row",
+          "scale": "categorical",
+          "verification": "missing",
+          "anchors": []
+        },
+        {
+          "axis_id": "column_value",
+          "orientation": "y",
+          "scale": "linear",
+          "verification": "missing",
+          "anchors": []
+        },
+        {
+          "axis_id": "row_value",
+          "orientation": "x",
+          "scale": "linear",
+          "verification": "missing",
+          "anchors": []
+        }
+      ],
+      "series": [],
+      "mark_grammars": [
+        "aligned_bar",
+        "row_bar",
+        "membership_cell",
+        "connector",
+        "categorical_strip"
+      ],
+      "route": {
+        "route_id": "raster_lattice_composite_candidate",
+        "maturity": "candidate",
+        "implementation": "scripts/candidate_digitize_lattice_composite.py",
+        "automated_extraction": true
+      },
+      "required_confirmations": [
+        "original_raster",
+        "panel_roi",
+        "layer_grammar",
+        "column_bar_color",
+        "row_bar_color",
+        "node_color",
+        "semantic_labels",
+        "row_value_axis",
+        "overlay_review"
+      ],
+      "confirmations": {
+        "original_raster": "missing",
+        "panel_roi": "missing",
+        "layer_grammar": "missing",
+        "column_bar_color": "missing",
+        "row_bar_color": "missing",
+        "node_color": "missing",
+        "semantic_labels": "missing",
+        "row_value_axis": "missing",
+        "overlay_review": "missing"
+      },
+      "recoverable": "Original-pixel repeated bar geometry, complete active/inactive/ambiguous cell classification, and independently validated visible values when supplied.",
+      "non_recoverable": "Hidden records, occluded cells, unverified text, and meanings not visibly encoded by the aligned layers."
+    }
+  ],
+  "evidence_contract": {
+    "required": [
+      "input_hash",
+      "panel_and_plot_bounds",
+      "calibration_anchors",
+      "immutable_extraction_csv",
+      "json_report",
+      "overlay_or_recreation",
+      "confidence_and_refusal_reasons"
+    ],
+    "source_data_role": "independent_validation_only"
+  }
+}

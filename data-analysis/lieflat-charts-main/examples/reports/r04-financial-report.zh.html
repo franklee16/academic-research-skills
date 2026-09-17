@@ -1,0 +1,375 @@
+<!doctype html>
+<html lang="zh-Hans">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>七月经营财报 — Lieflat R04 Demo</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Oswald:wght@500;600;700&family=Noto+Sans+SC:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+  /* ═══════════════════════════════════════════════════════════════
+     LIEFLAT 报告模板 04 · 月度经营财报 Demo（中文版）
+     场景：月度经营 / 投资人月更 / 财务复盘
+     排版参考："2017 Website Traffic" 浅蓝海报（左侧竖排压缩大写
+               书脊、右上角对齐节标题 + 细规线、底部 NOTABLE
+               STATISTICS 大数统计行）—— 只学排版和字体，浅蓝不学。
+     中西混排：数字走 Oswald（保留压缩感），汉字走 Noto Sans SC 黑体。
+               汉字没有压缩字形，书脊改重黑体 + 收紧字距。
+     色板正本 = color-presets.js 的 PORCELAIN 一套（青瓷蓝，明度即数据）。
+     彩色加墨规则（INK_BOOST）：数据发丝线宽 ×1.8，透明度地板 .85。
+     图表正本 = lieflat gallery：
+       图A  F2  hairline line · basics-gallery.html
+       图B  F10 dot heat      · basics-gallery.html
+       图C  F4  tick donut    · basics-gallery.html
+       图D  F5  tick rows     · basics-gallery.html
+     ═══════════════════════════════════════════════════════════════ */
+  :root{
+    /* PORCELAIN 角色 token（结构灰一律为文字色的透明档）*/
+    --bg:rgb(247,242,235); --ink:rgb(8,31,92); --muted:rgba(8,31,92,.60); --faint:rgba(8,31,92,.32); --grid:rgba(8,31,92,.16);
+    --num:'Oswald','Noto Sans SC',sans-serif;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{background:var(--bg);color:var(--ink);font-family:'Inter','Noto Sans SC',sans-serif;
+    -webkit-font-smoothing:antialiased;font-variant-numeric:tabular-nums lining-nums;
+    display:flex;justify-content:center;padding:56px 24px}
+  .sheet{width:1080px;max-width:1080px;display:grid;grid-template-columns:110px 1fr}
+
+  /* ── 书脊：重黑体竖排（学参考图4 的压缩大写）── */
+  .spine{position:relative;border-right:1px solid var(--ink)}
+  .spine .t{position:absolute;top:0;left:14px;writing-mode:vertical-rl;
+    font-family:'Noto Sans SC',sans-serif;font-weight:900;font-size:56px;line-height:1.1;
+    letter-spacing:.06em;white-space:nowrap}
+  .spine .b{position:absolute;bottom:0;left:48px;writing-mode:vertical-rl;
+    font-size:9px;font-weight:700;letter-spacing:.26em;color:var(--muted)}
+
+  .content{padding-left:40px}
+
+  /* ── 顶注 ── */
+  .tophead{display:flex;gap:18px;align-items:baseline;border-bottom:1px solid var(--ink);
+    padding-bottom:10px;margin-bottom:40px}
+  .tophead .site{font-family:var(--num);font-weight:600;font-size:13px;
+    letter-spacing:.08em;text-transform:uppercase}
+  .tophead .sep{color:var(--faint)}
+  .tophead .tag{font-size:10px;font-weight:600;letter-spacing:.12em;color:var(--muted)}
+
+  /* ── 节标题：右对齐 + 引线（学参考图4）── */
+  .secthead{display:flex;align-items:baseline;gap:14px;margin:44px 0 8px}
+  .secthead .line{flex:1;border-top:1px solid var(--ink)}
+  .secthead .t{font-family:'Noto Sans SC',sans-serif;font-weight:700;font-size:15px;
+    letter-spacing:.2em}
+  .secthead.first{margin-top:0}
+
+  .claim{font-size:13px;font-weight:700;color:var(--ink);margin:4px 0 2px}
+  .fig svg{width:100%;height:auto;display:block}
+  svg text{font-family:'Inter','Noto Sans SC',sans-serif}
+  .srcline{font-size:9px;font-weight:600;letter-spacing:.1em;
+    color:var(--faint);margin-top:8px}
+
+  .duo{display:grid;grid-template-columns:1.25fr 1fr;gap:44px}
+
+  /* ── 底部统计行（学参考图4 的 NOTABLE STATISTICS）── */
+  .stats{display:grid;grid-template-columns:1fr 1fr 1.2fr 1fr;gap:0;margin-top:14px;
+    border-top:1px solid var(--ink)}
+  .stats>div{padding:22px 20px 6px;border-right:1px dotted var(--faint)}
+  .stats>div:first-child{padding-left:0}
+  .stats>div:last-child{border-right:0;padding-right:0}
+  .stats .kpi{margin-bottom:18px}
+  .stats .kpi .v{font-family:var(--num);font-weight:700;font-size:38px;line-height:1}
+  .stats .kpi .r{font-size:10px;font-weight:700;color:var(--muted);margin-top:4px}
+  .stats .kpi .l{font-size:9.5px;font-weight:600;letter-spacing:.12em;
+    color:var(--faint);margin-top:3px}
+  .stats h4{font-family:'Noto Sans SC',sans-serif;font-weight:700;font-size:12.5px;
+    letter-spacing:.14em;margin-bottom:10px}
+  .ranked .row{display:flex;gap:12px;align-items:baseline;padding:8px 0;
+    border-bottom:1px dotted var(--faint)}
+  .ranked .row:last-child{border-bottom:0}
+  .ranked .n{font-family:var(--num);font-weight:700;font-size:24px;min-width:38px}
+  .ranked .d{font-size:10px;line-height:1.7;color:var(--muted)}
+  .ranked .d b{color:var(--ink)}
+
+  .foot{margin-top:48px;border-top:1px solid var(--ink);padding-top:12px;
+    display:flex;justify-content:space-between;font-size:9px;font-weight:600;
+    letter-spacing:.12em;color:var(--muted)}
+
+  /* ── 动画（mono-tokens MOTION.css 原样）── */
+  .pop{transform-box:fill-box;transform-origin:center;animation:pop .5s cubic-bezier(.2,.7,.3,1.3) both}
+  @keyframes pop{from{transform:scale(0)}to{transform:none}}
+  .fade{animation:fade .9s ease both}
+  @keyframes fade{from{opacity:0}}
+  .draw{stroke-dasharray:1;stroke-dashoffset:1;animation:draw 1s cubic-bezier(.4,0,.2,1) both}
+  @keyframes draw{to{stroke-dashoffset:0}}
+  @media(max-width:640px){body{padding:24px 10px}}
+  @media (prefers-reduced-motion:reduce){
+    .pop,.fade{animation:none}
+    .draw{animation:none;stroke-dasharray:none;stroke-dashoffset:0}
+  }
+</style>
+</head>
+<body>
+<div class="sheet">
+
+  <!-- ══ 书脊 ══ -->
+  <div class="spine">
+    <div class="t">七月经营财报</div>
+    <div class="b">财务 · 2026</div>
+  </div>
+
+  <div class="content">
+    <div class="tophead">
+      <span class="site">YOUR COMPANY</span><span class="sep">|</span>
+      <span class="tag">2026 年 7 月财务数据 · 全部指标环比上月</span>
+    </div>
+
+    <!-- ══ 图A · F2 hairline line：本月逐日 ══
+         模板：basics-gallery.html · "Thirty days of sign-ups" -->
+    <div class="secthead first"><span class="line"></span><span class="t">每日收入</span></div>
+    <div class="claim">收入在月中和月末各出现一次结算高峰，基本盘保持稳定</div>
+    <div class="fig"><svg id="dayline" viewBox="0 0 400 300" preserveAspectRatio="xMidYMid meet"></svg></div>
+    <div class="srcline">HAIRLINE LINE · 一点 = 一天 · 空心 = 周末 · 单位：万元</div>
+
+    <!-- ══ 图B · F10 dot heat：一周节奏 ══
+         模板：basics-gallery.html · "When support gets loud" -->
+    <div class="secthead"><span class="line"></span><span class="t">回款节奏</span></div>
+    <div class="duo">
+      <div>
+        <div class="claim">周二上午十点，是本月回款最集中的时段</div>
+        <div class="fig"><svg id="dotheat" viewBox="0 0 400 300" preserveAspectRatio="xMidYMid meet"></svg></div>
+        <div class="srcline">DOT HEAT · 7 天 × 12 小时 · 点面积 = 回款笔数</div>
+      </div>
+      <div>
+        <!-- ══ 图C · F4 tick donut：来源分布 ══
+             模板：basics-gallery.html · "Where the traffic comes from" -->
+        <div class="claim">订阅收入仍是最大来源，服务收入贡献第二增长曲线</div>
+        <div class="fig"><svg id="donut" viewBox="0 0 330 300" preserveAspectRatio="xMidYMid meet"></svg></div>
+        <div class="srcline">TICK DONUT · 一格 = 收入构成的 1%</div>
+      </div>
+    </div>
+
+    <!-- ══ 值得记住的数字 ══ -->
+    <div class="secthead"><span class="line"></span><span class="t">值得记住的数字</span></div>
+    <div class="stats">
+      <div>
+        <div class="kpi"><div class="v">¥2.84M</div><div class="r">环比 +12.6%</div><div class="l">营业收入</div></div>
+        <div class="kpi"><div class="v">¥1.94M</div><div class="r">毛利率 68.4%</div><div class="l">毛利</div></div>
+        <div class="kpi"><div class="v">¥0.62M</div><div class="r">连续第三个月为正</div><div class="l">经营现金流</div></div>
+      </div>
+      <div>
+        <div class="kpi"><div class="v">68.4%</div><div class="r">较 6 月的 65.2% 上升</div><div class="l">毛利率</div></div>
+        <div class="kpi"><div class="v">14.2</div><div class="r">按当前现金消耗估算</div><div class="l">现金可支撑月数</div></div>
+      </div>
+      <div>
+        <h4>各业务线毛利贡献</h4>
+        <!-- ══ 图D · F5 tick rows（迷你）══
+             模板：basics-gallery.html · "Six teams, shipped and counted" -->
+        <div class="fig"><svg id="rows" viewBox="0 0 260 190" preserveAspectRatio="xMidYMid meet"></svg></div>
+        <div class="srcline" style="text-align:left">TICK ROWS · 一格 = 10 万元毛利</div>
+      </div>
+      <div class="ranked">
+        <h4>本月收入贡献最高</h4>
+        <div class="row"><div class="n">46%</div><div class="d"><b>企业订阅</b> —— 占全月收入的 46%</div></div>
+        <div class="row"><div class="n">31%</div><div class="d"><b>实施服务</b> —— 连续第二个月增长</div></div>
+        <div class="row"><div class="n">15%</div><div class="d"><b>API 用量</b> —— 受大客户扩容带动</div></div>
+      </div>
+    </div>
+
+    <div class="foot">
+      <span>月度经营财报 Demo · 2026 年 7 月</span>
+      <span>演示数据 · 管理账 + Billing + Cash Flow · 8 月 1 日拉取</span>
+    </div>
+  </div>
+</div>
+
+<script>
+/* ── mono-tokens 内联（色板 / 几何 / 工具函数与正本一致）── */
+const BG='rgb(247,242,235)',TXT='rgb(8,31,92)',MUT='rgba(8,31,92,.60)',LAB='rgba(8,31,92,.72)',FAINT='rgba(8,31,92,.32)';
+const FLOOR='rgba(8,31,92,.24)',QUIET='rgba(8,31,92,.15)',GRID='rgba(8,31,92,.16)';
+const DATA='rgb(51,78,172)',DATA2='rgb(112,150,209)',HERO='rgb(8,31,92)',FAINTDATA='rgb(186,214,235)';
+const CAT4=['rgb(8,31,92)','rgb(51,78,172)','rgb(112,150,209)','rgb(186,214,235)'],HEAT=['rgb(51,78,172)','rgb(112,150,209)','rgb(186,214,235)'];
+const NS='http://www.w3.org/2000/svg';
+const el=(p,t,a)=>{const n=document.createElementNS(NS,t);for(const k in a)n.setAttribute(k,a[k]);p.appendChild(n);return n};
+const txt=(p,a,s)=>{const n=el(p,'text',a);n.textContent=s;return n};
+const tip=(n,s)=>{const t=document.createElementNS(NS,'title');t.textContent=s;n.appendChild(t)};
+const rnd=(i,k)=>Math.abs(((i*73856093)^(k*19349663))%1000)/1000;
+const D2R=Math.PI/180;
+const pol=(cx,cy,r,deg)=>[cx+r*Math.cos(deg*D2R),cy+r*Math.sin(deg*D2R)];
+const obsReveal=(id,fn)=>{
+  const n=document.getElementById(id);
+  const go=()=>{n.innerHTML='';fn(n)};
+  const io=new IntersectionObserver(es=>{if(es[0].isIntersecting){go();io.disconnect()}},{threshold:.3});
+  io.observe(n); n.style.cursor='pointer'; n.addEventListener('click',go);
+};
+
+/* ════ 图A · F2 hairline line ════
+   结构照搬 basics-gallery "hairline line"：barcode 日历地板 +
+   发丝折线 + 逐日圆点（周末空心），结算高峰放大标数。 */
+(()=>{
+const N=31;
+const val=d=>{
+  const spike=(d===5||d===6)?38:(d===19?30:0);        // 两次结算高峰
+  return 58+10*Math.sin(d/5.2)+rnd(d+1,5)*10+spike;
+};
+obsReveal('dayline',s=>{
+  const x=d=>26+d*11.4,base=254,map=v=>base-v*2.1;
+  for(let d=0;d<N;d++)
+    el(s,'line',{x1:x(d),y1:base,x2:x(d),y2:base-7,stroke:FLOOR,'stroke-width':.6,
+      class:'fade',style:`animation-delay:${d*.008}s`});
+  el(s,'line',{x1:20,y1:base,x2:380,y2:base,stroke:GRID,'stroke-width':.8,class:'fade'});
+  const vs=Array.from({length:N},(_,d)=>val(d));
+  const top=[];
+  for(const d of [...vs.keys()].sort((a,b)=>vs[b]-vs[a])){
+    if(top.every(t=>Math.abs(t-d)>=5))top.push(d);
+    if(top.length===2)break;
+  }
+  const pts=vs.map((v,d)=>`${x(d)} ${map(v)}`).join(' L ');
+  el(s,'path',{d:'M'+pts,fill:'none',stroke:DATA,'stroke-width':2.2,pathLength:1,
+    class:'draw',style:'animation-duration:1.2s'});
+  vs.forEach((v,d)=>{
+    const weekend=d%7===3||d%7===4,big=top.includes(d);
+    const dot=el(s,'circle',{cx:x(d),cy:map(v),r:big?4.2:2.1,
+      fill:weekend?BG:(big?HERO:DATA),stroke:big?HERO:DATA,'stroke-width':weekend?1.4:0,
+      class:'pop',style:`animation-delay:${.2+d*.03}s`});
+    tip(dot,`7 月 ${d+1} 日 —— ${Math.round(v)} 万元收入`);
+    if(big)txt(s,{x:x(d),y:map(v)-11,'font-size':9.5,'font-weight':800,fill:TXT,'text-anchor':'middle',
+      style:`paint-order:stroke;stroke:${BG};stroke-width:3px;animation-delay:${1+d*.01}s`,
+      class:'fade'},Math.round(v));
+  });
+  [[0,'7月1日'],[14,'7月15日'],[30,'7月31日']].forEach(([d,m])=>
+    txt(s,{x:x(d),y:base+18,'font-size':7.5,'font-weight':600,fill:MUT,'text-anchor':'middle',
+      'letter-spacing':'.06em',class:'fade'},m));
+  txt(s,{x:200,y:294,'font-size':7.5,'font-weight':600,fill:FAINT,'text-anchor':'middle',
+    'letter-spacing':'.1em',class:'fade',style:'animation-delay:1.1s'},
+    '一点 = 一天 · 空心 = 周末 · 标数 = 结算高峰');
+});
+})();
+
+/* ════ 图B · F10 dot heat ════
+   结构照搬 basics-gallery "dot heat"：7×12 网格，点面积 = 回款笔数，
+   静默格留一粒极小点，最热格虚线圈标数。 */
+(()=>{
+const DAY=['周一','周二','周三','周四','周五','周六','周日'];
+obsReveal('dotheat',s=>{
+  const x0=j=>64+j*27,y0=i=>50+i*30;
+  let max=0,mi=0,mj=0;
+  const v=(i,j)=>{
+    const day=i<5?(i===1?1.25:1):.32;
+    const hour=Math.exp(-((j-3.4)**2)/6)+.6*Math.exp(-((j-8.6)**2)/5);
+    return Math.round(day*hour*20*(0.6+rnd(i*12+j+1,j+3)*.8));
+  };
+  for(let i=0;i<7;i++)for(let j=0;j<12;j++){const t=v(i,j);if(t>max){max=t;mi=i;mj=j}}
+  for(let i=0;i<7;i++){
+    txt(s,{x:50,y:y0(i)+3,'font-size':8,'font-weight':700,fill:LAB,'text-anchor':'end',
+      'letter-spacing':'.04em',class:'fade',style:`animation-delay:${i*.05}s`},DAY[i]);
+    for(let j=0;j<12;j++){
+      const t=v(i,j),x=x0(j),y=y0(i);
+      if(!t){el(s,'circle',{cx:x,cy:y,r:.8,fill:QUIET,
+        class:'pop',style:`animation-delay:${i*.05+j*.015}s`});continue}
+      const hero=i===mi&&j===mj;
+      const dot=el(s,'circle',{cx:x,cy:y,r:1.2+Math.sqrt(t)*2.1,
+        fill:t>max*.66?HEAT[0]:t>max*.33?HEAT[1]:HEAT[2],
+        class:'pop',style:`animation-delay:${i*.05+j*.015}s`});
+      tip(dot,`${DAY[i]} ${8+j}:00 —— ${t} 笔回款`);
+      if(hero)el(s,'circle',{cx:x,cy:y,r:1.2+Math.sqrt(t)*2.1+3.4,fill:'none',
+        stroke:TXT,'stroke-width':1,'stroke-dasharray':'2 3',
+        class:'fade',style:'animation-delay:1s'});
+    }
+  }
+  for(let j=0;j<12;j+=2)
+    txt(s,{x:x0(j),y:y0(6)+26,'font-size':7,'font-weight':600,fill:FAINT,'text-anchor':'middle',
+      class:'fade',style:`animation-delay:${j*.02}s`},(8+j)+':00');
+  txt(s,{x:200,y:296,'font-size':7.5,'font-weight':600,fill:FAINT,'text-anchor':'middle',
+    'letter-spacing':'.1em',class:'fade',style:'animation-delay:1.1s'},
+    `点面积 = 回款笔数 · 虚线圈 = 峰值 ${max} 笔 · 极小点 = 安静时段`);
+});
+})();
+
+/* ════ 图C · F4 tick donut ════
+   结构照搬 basics-gallery "tick donut"：1 tick = 1%，
+   四段来源用灰阶 ladder 分段。 */
+(()=>{
+const D=[['订阅',46,CAT4[0]],['服务',31,CAT4[1]],['API',15,CAT4[2]],['其他',8,CAT4[3]]];
+obsReveal('donut',s=>{
+  const cx=170,cy=140,R0=58;
+  let k0=0;
+  D.forEach(([name,v,shade],si)=>{
+    for(let k=0;k<v;k++){
+      const idx=k0+k,a=idx*3.6-90;
+      const len=9+rnd(idx+1,si+2)*5.5;
+      const [x1,y1]=pol(cx,cy,R0,a),[x2,y2]=pol(cx,cy,R0+len,a);
+      el(s,'line',{x1,y1,x2,y2,stroke:shade,'stroke-width':1.9,
+        class:'fade',style:`animation-delay:${idx*.012}s`});
+      if(idx%10===0){
+        const [dx,dy]=pol(cx,cy,R0-5,a);
+        el(s,'circle',{cx:dx,cy:dy,r:.8,fill:FAINT,
+          class:'fade',style:`animation-delay:${idx*.012}s`});
+      }
+    }
+    const mid=(k0+v/2)*3.6-90,[lx,ly]=pol(cx,cy,R0+34,mid),[gx,gy]=pol(cx,cy,R0+18,mid);
+    el(s,'line',{x1:gx,y1:gy,x2:lx,y2:ly,stroke:FAINT,'stroke-width':.7,
+      'stroke-dasharray':'1 3',class:'fade',style:`animation-delay:${.6+si*.1}s`});
+    const anchor=Math.cos(mid*D2R)>0.3?'start':Math.cos(mid*D2R)<-0.3?'end':'middle';
+    const lab=txt(s,{x:lx,y:ly+3,'font-size':8.5,'font-weight':800,fill:shade,'text-anchor':anchor,
+      'letter-spacing':'.04em',style:`paint-order:stroke;stroke:${BG};stroke-width:3px;animation-delay:${.65+si*.1}s`,
+      class:'fade'},`${name} · ${v}`);
+    tip(lab,`${name}流量 —— 占 ${v}%`);
+    k0+=v;
+  });
+  txt(s,{x:cx,y:cy-2,'font-size':20,'font-weight':800,fill:TXT,'text-anchor':'middle',
+    class:'fade',style:'animation-delay:.9s'},'100');
+  txt(s,{x:cx,y:cy+13,'font-size':7.5,'font-weight':600,fill:MUT,'text-anchor':'middle',
+    'letter-spacing':'.08em',class:'fade',style:'animation-delay:.9s'},'格 · 一格 = 1%');
+  txt(s,{x:170,y:288,'font-size':7.5,'font-weight':600,fill:FAINT,'text-anchor':'middle',
+    'letter-spacing':'.1em',class:'fade',style:'animation-delay:1.1s'},
+    '每十格一个圆点 · 顺时针读');
+});
+})();
+
+/* ════ 图D · F5 tick rows（迷你版）════
+   结构照搬 basics-gallery "tick rows"：1 tick = 10 万元毛利。 */
+(()=>{
+const D=[['订阅',13],['服务',9],['API',6],['渠道',4],['其他',2]];
+obsReveal('rows',s=>{
+  const y0=i=>28+i*34,X0=72,PX=4.6;
+  D.forEach(([name,v],i)=>{
+    const y=y0(i);
+    txt(s,{x:64,y:y+3,'font-size':7.5,'font-weight':700,fill:LAB,'text-anchor':'end',
+      'letter-spacing':'.04em',class:'fade',style:`animation-delay:${i*.08}s`},name);
+    el(s,'line',{x1:X0,y1:y+8,x2:X0+34*PX,y2:y+8,stroke:GRID,'stroke-width':.6,
+      class:'fade',style:`animation-delay:${i*.08}s`});
+    for(let k=0;k<v;k++){
+      const x=X0+k*PX+PX/2,h=7+rnd(k+1,i+2)*5;
+      el(s,'line',{x1:x,y1:y+8,x2:x,y2:y+8-h,stroke:DATA,'stroke-width':1.6,
+        opacity:.85+rnd(k+3,i+5)*.15,class:'fade',style:`animation-delay:${i*.08+k*.012}s`});
+      if(k%5===4)el(s,'circle',{cx:x,cy:y+11.5,r:.7,fill:FAINT,
+        class:'fade',style:`animation-delay:${i*.08+k*.012}s`});
+    }
+    const lab=txt(s,{x:X0+v*PX+8,y:y+3,'font-size':9.5,'font-weight':800,fill:TXT,
+      class:'fade',style:`animation-delay:${.4+i*.08}s`},v);
+    tip(lab,`${name} —— ${v * 10} 万元毛利`);
+  });
+  txt(s,{x:130,y:186,'font-size':7,'font-weight':600,fill:FAINT,'text-anchor':'middle',
+    'letter-spacing':'.08em',class:'fade',style:'animation-delay:.9s'},
+    '一格 = 10 万元毛利 · 每五格一个圆点');
+});
+})();
+
+</script>
+<script>
+/* ── fit-width：视口比版心窄时整页等比缩小，不重排 ──
+   报告是一张版面，不是响应式网页。窄屏塌成单栏会得到一个
+   设计时不存在的版式；等比缩小则保留构图，跟 PDF 的「适合宽度」一致。
+   机制同模板 11。 */
+(()=>{
+  const sheet=document.querySelector('.sheet');
+  const W=1080;
+  const fit=()=>{
+    const cs=getComputedStyle(document.body);
+    const avail=document.documentElement.clientWidth
+      -parseFloat(cs.paddingLeft)-parseFloat(cs.paddingRight);
+    sheet.style.zoom=Math.min(1,avail/W);
+  };
+  fit();
+  addEventListener('resize',fit);
+})();
+</script>
+</body>
+</html>

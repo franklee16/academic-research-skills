@@ -1,0 +1,114 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mxfile host="app.diagrams.net" type="device" compressed="false">
+  <diagram id="roadmap" name="Page-1">
+    <mxGraphModel dx="1200" dy="780" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1200" pageHeight="780" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title-1" value="&lt;div style=&quot;font-size:20px;font-weight:700;&quot;&gt;虚构示例｜公共建筑微气候自适应调控技术路线&lt;/div&gt;&lt;div style=&quot;margin-top:6px;font-size:13px;color:#60717E;&quot;&gt;多源感知 → 状态估计 → 闭环验证&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;shadow=1;arcSize=8;fillColor=#FFFFFF;strokeColor=#AAB7C4;strokeWidth=1.5;align=center;verticalAlign=middle;fontFamily=Microsoft YaHei;fontSize=20;fontColor=#243746;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="180.00" y="20.00" width="840.00" height="76.00" as="geometry" />
+        </mxCell>
+        <mxCell id="panel-2" value="" style="rounded=1;whiteSpace=wrap;html=1;arcSize=10;fillColor=#FCF2E9;strokeColor=#E67E22;strokeWidth=1.5;fontFamily=Microsoft YaHei;" vertex="1" parent="1">
+          <mxGeometry x="30.00" y="130.00" width="364.00" height="520.00" as="geometry" />
+        </mxCell>
+        <mxCell id="number-3" value="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#E67E22;strokeColor=#E67E22;fontColor=#FFFFFF;fontFamily=Arial;fontSize=16;fontStyle=1;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="46.00" y="148.00" width="34.00" height="34.00" as="geometry" />
+        </mxCell>
+        <mxCell id="stage-4" value="环境感知" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=none;align=left;verticalAlign=middle;fontFamily=Microsoft YaHei;fontSize=17;fontStyle=1;fontColor=#E67E22;" vertex="1" parent="1">
+          <mxGeometry x="90.00" y="145.00" width="288.00" height="40.00" as="geometry" />
+        </mxCell>
+        <mxCell id="summary-5" value="&lt;div style=&quot;color:#E67E22;font-weight:700;&quot;&gt;阶段目标&lt;/div&gt;&lt;div style=&quot;margin-top:5px;color:#52616B;line-height:1.35;&quot;&gt;构建室内环境与使用状态的同步观测体系。&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;arcSize=8;fillColor=#FFFFFF;strokeColor=#F4C59C;strokeWidth=1;align=left;verticalAlign=middle;fontFamily=Microsoft YaHei;fontSize=13;fontColor=#3C4B55;spacing=10;overflow=hidden;" vertex="1" parent="1">
+          <mxGeometry x="46.00" y="198.00" width="332.00" height="82.00" as="geometry" />
+        </mxCell>
+        <mxCell id="task-6" value="&lt;div style=&quot;color:#243746;font-weight:700;&quot;&gt;多源采集&lt;/div&gt;&lt;div style=&quot;margin-top:5px;color:#52616B;line-height:1.35;&quot;&gt;同步记录温湿度、气流与空间使用状态。&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;arcSize=8;fillColor=#FFFFFF;strokeColor=#D6DEE3;strokeWidth=1;align=left;verticalAlign=middle;fontFamily=Microsoft YaHei;fontSize=12;fontColor=#243746;spacing=10;overflow=hidden;" vertex="1" parent="1">
+          <mxGeometry x="46.00" y="298.00" width="332.00" height="76.67" as="geometry" />
+        </mxCell>
+        <mxCell id="task-7" value="&lt;div style=&quot;color:#243746;font-weight:700;&quot;&gt;质量控制&lt;/div&gt;&lt;div style=&quot;margin-top:5px;color:#52616B;line-height:1.35;&quot;&gt;识别缺测和漂移，形成一致的观测序列。&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;arcSize=8;fillColor=#FFFFFF;strokeColor=#D6DEE3;strokeWidth=1;align=left;verticalAlign=middle;fontFamily=Microsoft YaHei;fontSize=12;fontColor=#243746;spacing=10;overflow=hidden;" vertex="1" parent="1">
+          <mxGeometry x="46.00" y="384.67" width="332.00" height="76.67" as="geometry" />
+        </mxCell>
+        <mxCell id="task-8" value="&lt;div style=&quot;color:#243746;font-weight:700;&quot;&gt;特征表征&lt;/div&gt;&lt;div style=&quot;margin-top:5px;color:#52616B;line-height:1.35;&quot;&gt;提取反映环境变化与人员活动的关键特征。&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;arcSize=8;fillColor=#FFFFFF;strokeColor=#D6DEE3;strokeWidth=1;align=left;verticalAlign=middle;fontFamily=Microsoft YaHei;fontSize=12;fontColor=#243746;spacing=10;overflow=hidden;" vertex="1" parent="1">
+          <mxGeometry x="46.00" y="471.33" width="332.00" height="76.67" as="geometry" />
+        </mxCell>
+        <mxCell id="output-9" value="阶段产出｜可追溯的环境状态数据" style="rounded=1;whiteSpace=wrap;html=1;arcSize=10;fillColor=#FAE3CE;strokeColor=#E67E22;strokeWidth=1.5;align=center;verticalAlign=middle;fontFamily=Microsoft YaHei;fontSize=13;fontStyle=1;fontColor=#E67E22;spacing=8;overflow=hidden;" vertex="1" parent="1">
+          <mxGeometry x="46.00" y="580.00" width="332.00" height="52.00" as="geometry" />
+        </mxCell>
+        <mxCell id="panel-10" value="" style="rounded=1;whiteSpace=wrap;html=1;arcSize=10;fillColor=#EAF5EE;strokeColor=#2E9D50;strokeWidth=1.5;fontFamily=Microsoft YaHei;" vertex="1" parent="1">
+          <mxGeometry x="418.00" y="130.00" width="364.00" height="520.00" as="geometry" />
+        </mxCell>
+        <mxCell id="number-11" value="2" style="ellipse;whiteSpace=wrap;html=1;fillColor=#2E9D50;strokeColor=#2E9D50;fontColor=#FFFFFF;fontFamily=Arial;fontSize=16;fontStyle=1;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="434.00" y="148.00" width="34.00" height="34.00" as="geometry" />
+        </mxCell>
+        <mxCell id="stage-12" value="状态建模" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=none;align=left;verticalAlign=middle;fontFamily=Microsoft YaHei;fontSize=17;fontStyle=1;fontColor=#2E9D50;" vertex="1" parent="1">
+          <mxGeometry x="478.00" y="145.00" width="288.00" height="40.00" as="geometry" />
+        </mxCell>
+        <mxCell id="summary-13" value="&lt;div style=&quot;color:#2E9D50;font-weight:700;&quot;&gt;阶段目标&lt;/div&gt;&lt;div style=&quot;margin-top:5px;color:#52616B;line-height:1.35;&quot;&gt;建立可解释的动态状态估计与响应模型。&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;arcSize=8;fillColor=#FFFFFF;strokeColor=#A1D3B0;strokeWidth=1;align=left;verticalAlign=middle;fontFamily=Microsoft YaHei;fontSize=13;fontColor=#3C4B55;spacing=10;overflow=hidden;" vertex="1" parent="1">
+          <mxGeometry x="434.00" y="198.00" width="332.00" height="82.00" as="geometry" />
+        </mxCell>
+        <mxCell id="task-14" value="&lt;div style=&quot;color:#243746;font-weight:700;&quot;&gt;状态估计&lt;/div&gt;&lt;div style=&quot;margin-top:5px;color:#52616B;line-height:1.35;&quot;&gt;融合异步观测，重建连续的微气候状态。&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;arcSize=8;fillColor=#FFFFFF;strokeColor=#D6DEE3;strokeWidth=1;align=left;verticalAlign=middle;fontFamily=Microsoft YaHei;fontSize=12;fontColor=#243746;spacing=10;overflow=hidden;" vertex="1" parent="1">
+          <mxGeometry x="434.00" y="298.00" width="332.00" height="76.67" as="geometry" />
+        </mxCell>
+        <mxCell id="task-15" value="&lt;div style=&quot;color:#243746;font-weight:700;&quot;&gt;机制约束&lt;/div&gt;&lt;div style=&quot;margin-top:5px;color:#52616B;line-height:1.35;&quot;&gt;引入传热与空气交换规律约束模型。&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;arcSize=8;fillColor=#FFFFFF;strokeColor=#D6DEE3;strokeWidth=1;align=left;verticalAlign=middle;fontFamily=Microsoft YaHei;fontSize=12;fontColor=#243746;spacing=10;overflow=hidden;" vertex="1" parent="1">
+          <mxGeometry x="434.00" y="384.67" width="332.00" height="76.67" as="geometry" />
+        </mxCell>
+        <mxCell id="task-16" value="&lt;div style=&quot;color:#243746;font-weight:700;&quot;&gt;不确定性分析&lt;/div&gt;&lt;div style=&quot;margin-top:5px;color:#52616B;line-height:1.35;&quot;&gt;量化观测误差与模型偏差对预测的影响。&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;arcSize=8;fillColor=#FFFFFF;strokeColor=#D6DEE3;strokeWidth=1;align=left;verticalAlign=middle;fontFamily=Microsoft YaHei;fontSize=12;fontColor=#243746;spacing=10;overflow=hidden;" vertex="1" parent="1">
+          <mxGeometry x="434.00" y="471.33" width="332.00" height="76.67" as="geometry" />
+        </mxCell>
+        <mxCell id="output-17" value="阶段产出｜可解释的状态预测模型" style="rounded=1;whiteSpace=wrap;html=1;arcSize=10;fillColor=#D1E9D8;strokeColor=#2E9D50;strokeWidth=1.5;align=center;verticalAlign=middle;fontFamily=Microsoft YaHei;fontSize=13;fontStyle=1;fontColor=#2E9D50;spacing=8;overflow=hidden;" vertex="1" parent="1">
+          <mxGeometry x="434.00" y="580.00" width="332.00" height="52.00" as="geometry" />
+        </mxCell>
+        <mxCell id="panel-18" value="" style="rounded=1;whiteSpace=wrap;html=1;arcSize=10;fillColor=#EAF2FD;strokeColor=#2F80ED;strokeWidth=1.5;fontFamily=Microsoft YaHei;" vertex="1" parent="1">
+          <mxGeometry x="806.00" y="130.00" width="364.00" height="520.00" as="geometry" />
+        </mxCell>
+        <mxCell id="number-19" value="3" style="ellipse;whiteSpace=wrap;html=1;fillColor=#2F80ED;strokeColor=#2F80ED;fontColor=#FFFFFF;fontFamily=Arial;fontSize=16;fontStyle=1;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="822.00" y="148.00" width="34.00" height="34.00" as="geometry" />
+        </mxCell>
+        <mxCell id="stage-20" value="策略验证" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=none;align=left;verticalAlign=middle;fontFamily=Microsoft YaHei;fontSize=17;fontStyle=1;fontColor=#2F80ED;" vertex="1" parent="1">
+          <mxGeometry x="866.00" y="145.00" width="288.00" height="40.00" as="geometry" />
+        </mxCell>
+        <mxCell id="summary-21" value="&lt;div style=&quot;color:#2F80ED;font-weight:700;&quot;&gt;阶段目标&lt;/div&gt;&lt;div style=&quot;margin-top:5px;color:#52616B;line-height:1.35;&quot;&gt;在可控场景中验证调控策略的稳定性与边界。&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;arcSize=8;fillColor=#FFFFFF;strokeColor=#A1C6F7;strokeWidth=1;align=left;verticalAlign=middle;fontFamily=Microsoft YaHei;fontSize=13;fontColor=#3C4B55;spacing=10;overflow=hidden;" vertex="1" parent="1">
+          <mxGeometry x="822.00" y="198.00" width="332.00" height="82.00" as="geometry" />
+        </mxCell>
+        <mxCell id="task-22" value="&lt;div style=&quot;color:#243746;font-weight:700;&quot;&gt;策略生成&lt;/div&gt;&lt;div style=&quot;margin-top:5px;color:#52616B;line-height:1.35;&quot;&gt;依据状态预测形成分层调控候选方案。&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;arcSize=8;fillColor=#FFFFFF;strokeColor=#D6DEE3;strokeWidth=1;align=left;verticalAlign=middle;fontFamily=Microsoft YaHei;fontSize=12;fontColor=#243746;spacing=10;overflow=hidden;" vertex="1" parent="1">
+          <mxGeometry x="822.00" y="298.00" width="332.00" height="76.67" as="geometry" />
+        </mxCell>
+        <mxCell id="task-23" value="&lt;div style=&quot;color:#243746;font-weight:700;&quot;&gt;闭环试验&lt;/div&gt;&lt;div style=&quot;margin-top:5px;color:#52616B;line-height:1.35;&quot;&gt;在变化负荷下比较候选方案与基线。&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;arcSize=8;fillColor=#FFFFFF;strokeColor=#D6DEE3;strokeWidth=1;align=left;verticalAlign=middle;fontFamily=Microsoft YaHei;fontSize=12;fontColor=#243746;spacing=10;overflow=hidden;" vertex="1" parent="1">
+          <mxGeometry x="822.00" y="384.67" width="332.00" height="76.67" as="geometry" />
+        </mxCell>
+        <mxCell id="task-24" value="&lt;div style=&quot;color:#243746;font-weight:700;&quot;&gt;边界复核&lt;/div&gt;&lt;div style=&quot;margin-top:5px;color:#52616B;line-height:1.35;&quot;&gt;归纳策略失效条件与可迁移范围。&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;arcSize=8;fillColor=#FFFFFF;strokeColor=#D6DEE3;strokeWidth=1;align=left;verticalAlign=middle;fontFamily=Microsoft YaHei;fontSize=12;fontColor=#243746;spacing=10;overflow=hidden;" vertex="1" parent="1">
+          <mxGeometry x="822.00" y="471.33" width="332.00" height="76.67" as="geometry" />
+        </mxCell>
+        <mxCell id="output-25" value="阶段产出｜调控证据与适用范围" style="rounded=1;whiteSpace=wrap;html=1;arcSize=10;fillColor=#D1E3FB;strokeColor=#2F80ED;strokeWidth=1.5;align=center;verticalAlign=middle;fontFamily=Microsoft YaHei;fontSize=13;fontStyle=1;fontColor=#2F80ED;spacing=8;overflow=hidden;" vertex="1" parent="1">
+          <mxGeometry x="822.00" y="580.00" width="332.00" height="52.00" as="geometry" />
+        </mxCell>
+        <mxCell id="sequence-26" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeWidth=2;strokeColor=#AAB7C4;dashed=0;exitX=1.000;exitY=0.500;exitDx=0;exitDy=0;entryX=0.500;entryY=0.000;entryDx=0;entryDy=0;" edge="1" parent="1" source="stage-4" target="number-11">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="378.00" y="112.00" />
+              <mxPoint x="451.00" y="112.00" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="sequence-27" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeWidth=2;strokeColor=#AAB7C4;dashed=0;exitX=1.000;exitY=0.500;exitDx=0;exitDy=0;entryX=0.500;entryY=0.000;entryDx=0;entryDy=0;" edge="1" parent="1" source="stage-12" target="number-19">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="766.00" y="112.00" />
+              <mxPoint x="839.00" y="112.00" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="final-28" value="综合目标｜形成面向公共建筑微气候的可解释调控方法与验证链条" style="rounded=1;whiteSpace=wrap;html=1;shadow=1;arcSize=10;fillColor=#FFFFFF;strokeColor=#4F6475;strokeWidth=2;align=center;verticalAlign=middle;fontFamily=Microsoft YaHei;fontSize=15;fontStyle=1;fontColor=#243746;spacing=10;overflow=hidden;" vertex="1" parent="1">
+          <mxGeometry x="180.00" y="690.00" width="840.00" height="62.00" as="geometry" />
+        </mxCell>
+        <mxCell id="converge-29" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeWidth=2;strokeColor=#AAB7C4;dashed=1;exitX=0.500;exitY=1.000;exitDx=0;exitDy=0;entryX=0.250;entryY=0.000;entryDx=0;entryDy=0;" edge="1" parent="1" source="output-9" target="final-28">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="converge-30" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeWidth=2;strokeColor=#AAB7C4;dashed=1;exitX=0.500;exitY=1.000;exitDx=0;exitDy=0;entryX=0.500;entryY=0.000;entryDx=0;entryDy=0;" edge="1" parent="1" source="output-17" target="final-28">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="converge-31" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeWidth=2;strokeColor=#AAB7C4;dashed=1;exitX=0.500;exitY=1.000;exitDx=0;exitDy=0;entryX=0.750;entryY=0.000;entryDx=0;entryDy=0;" edge="1" parent="1" source="output-25" target="final-28">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

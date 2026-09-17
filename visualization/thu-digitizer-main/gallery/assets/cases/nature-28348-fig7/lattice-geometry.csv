@@ -1,0 +1,78 @@
+kind,pixel_x,left_px,right_px,top_px,bottom_px,width_px,max_vertical_gap_px,guide_role,column_index,column_id,value,member_count,members,pixel_y,height_px,area_px,row_index,row_id,row_type,derived_total,status,foreground_fraction
+column_guide,306.0,296,317,354,373,21,0,membership_guides,1,I01,3219,5,Direct Match;Non-Synon;Position-Specific;Diagnosis Match;AMP Tier I,,,,,,,,,
+column_guide,366.0,356,377,354,373,21,0,membership_guides,2,I02,1929,4,Direct Match;Non-Synon;Position-Specific;Diagnosis Match,,,,,,,,,
+column_guide,426.0,416,437,354,373,21,0,membership_guides,3,I03,1347,2,Direct Match;Non-Synon,,,,,,,,,
+column_guide,486.5,477,497,353,373,20,0,membership_guides,4,I04,878,3,Direct Match;Non-Synon;Position-Specific,,,,,,,,,
+column_guide,547.0,537,558,354,373,21,0,membership_guides,5,I05,818,3,Direct Match;Non-Synon;Diagnosis Match,,,,,,,,,
+column_guide,607.0,597,618,354,373,21,0,membership_guides,6,I06,249,4,Direct Match;Non-Synon;Diagnosis Match;AMP Tier I,,,,,,,,,
+column_guide,667.0,657,678,354,373,21,0,membership_guides,7,I07,206,4,Direct Match;Non-Synon;Position-Specific;AMP Tier I,,,,,,,,,
+column_guide,727.0,717,738,354,373,21,0,membership_guides,8,I08,121,3,Direct Match;Non-Synon;AMP Tier I,,,,,,,,,
+column_guide,787.0,777,798,354,373,21,0,membership_guides,9,I09,14,2,Direct Match;Position-Specific,,,,,,,,,
+column_guide,847.5,838,858,353,373,20,0,membership_guides,10,I10,3,3,Direct Match;Position-Specific;Diagnosis Match,,,,,,,,,
+column_guide,908.0,898,919,354,373,21,0,membership_guides,11,I11,1,3,Direct Match;Position-Specific;AMP Tier I,,,,,,,,,
+column_guide,968.0,958,979,354,373,21,0,membership_guides,12,I12,1,4,Direct Match;Position-Specific;Diagnosis Match;AMP Tier I,,,,,,,,,
+row_bar,,66,275,343,387,,,row_bar,,,,,,364.5,44,9196,1,Direct Match,,8786.0,,
+row_bar,,66,275,402,446,,,row_bar,,,,,,423.5,44,9196,2,Non-Synon,,8767.0,,
+row_bar,,127,275,460,504,,,row_bar,,,,,,481.5,44,6512,3,Position-Specific,,6251.0,,
+row_bar,,128,275,519,563,,,row_bar,,,,,,540.5,44,6468,4,Diagnosis Match,,6219.0,,
+row_bar,,186,275,577,622,,,row_bar,,,,,,599.0,45,4005,5,AMP Tier I,,3797.0,,
+membership_cell,306.0,,,,,,,,1,I01,,,,364.5,,,1,Direct Match,,,active,0.7215363511659808
+membership_cell,306.0,,,,,,,,1,I01,,,,423.5,,,2,Non-Synon,,,active,0.7174211248285323
+membership_cell,306.0,,,,,,,,1,I01,,,,481.5,,,3,Position-Specific,,,active,0.7215363511659808
+membership_cell,306.0,,,,,,,,1,I01,,,,540.5,,,4,Diagnosis Match,,,active,0.7215363511659808
+membership_cell,306.0,,,,,,,,1,I01,,,,599.0,,,5,AMP Tier I,,,active,0.7174211248285323
+membership_cell,366.0,,,,,,,,2,I02,,,,364.5,,,1,Direct Match,,,active,0.7187928669410151
+membership_cell,366.0,,,,,,,,2,I02,,,,423.5,,,2,Non-Synon,,,active,0.7215363511659808
+membership_cell,366.0,,,,,,,,2,I02,,,,481.5,,,3,Position-Specific,,,active,0.7242798353909465
+membership_cell,366.0,,,,,,,,2,I02,,,,540.5,,,4,Diagnosis Match,,,active,0.7187928669410151
+membership_cell,366.0,,,,,,,,2,I02,,,,599.0,,,5,AMP Tier I,,,inactive,0.0
+membership_cell,426.0,,,,,,,,3,I03,,,,364.5,,,1,Direct Match,,,active,0.7270233196159122
+membership_cell,426.0,,,,,,,,3,I03,,,,423.5,,,2,Non-Synon,,,active,0.7187928669410151
+membership_cell,426.0,,,,,,,,3,I03,,,,481.5,,,3,Position-Specific,,,inactive,0.0
+membership_cell,426.0,,,,,,,,3,I03,,,,540.5,,,4,Diagnosis Match,,,inactive,0.0
+membership_cell,426.0,,,,,,,,3,I03,,,,599.0,,,5,AMP Tier I,,,inactive,0.0
+membership_cell,486.5,,,,,,,,4,I04,,,,364.5,,,1,Direct Match,,,active,0.7283950617283951
+membership_cell,486.5,,,,,,,,4,I04,,,,423.5,,,2,Non-Synon,,,active,0.7229080932784636
+membership_cell,486.5,,,,,,,,4,I04,,,,481.5,,,3,Position-Specific,,,active,0.7187928669410151
+membership_cell,486.5,,,,,,,,4,I04,,,,540.5,,,4,Diagnosis Match,,,inactive,0.0
+membership_cell,486.5,,,,,,,,4,I04,,,,599.0,,,5,AMP Tier I,,,inactive,0.0
+membership_cell,547.0,,,,,,,,5,I05,,,,364.5,,,1,Direct Match,,,active,0.7242798353909465
+membership_cell,547.0,,,,,,,,5,I05,,,,423.5,,,2,Non-Synon,,,active,0.7187928669410151
+membership_cell,547.0,,,,,,,,5,I05,,,,481.5,,,3,Position-Specific,,,inactive,0.0
+membership_cell,547.0,,,,,,,,5,I05,,,,540.5,,,4,Diagnosis Match,,,active,0.7242798353909465
+membership_cell,547.0,,,,,,,,5,I05,,,,599.0,,,5,AMP Tier I,,,inactive,0.0
+membership_cell,607.0,,,,,,,,6,I06,,,,364.5,,,1,Direct Match,,,active,0.720164609053498
+membership_cell,607.0,,,,,,,,6,I06,,,,423.5,,,2,Non-Synon,,,active,0.7215363511659808
+membership_cell,607.0,,,,,,,,6,I06,,,,481.5,,,3,Position-Specific,,,inactive,0.0
+membership_cell,607.0,,,,,,,,6,I06,,,,540.5,,,4,Diagnosis Match,,,active,0.720164609053498
+membership_cell,607.0,,,,,,,,6,I06,,,,599.0,,,5,AMP Tier I,,,active,0.7215363511659808
+membership_cell,667.0,,,,,,,,7,I07,,,,364.5,,,1,Direct Match,,,active,0.7215363511659808
+membership_cell,667.0,,,,,,,,7,I07,,,,423.5,,,2,Non-Synon,,,active,0.720164609053498
+membership_cell,667.0,,,,,,,,7,I07,,,,481.5,,,3,Position-Specific,,,active,0.7215363511659808
+membership_cell,667.0,,,,,,,,7,I07,,,,540.5,,,4,Diagnosis Match,,,inactive,0.0
+membership_cell,667.0,,,,,,,,7,I07,,,,599.0,,,5,AMP Tier I,,,active,0.720164609053498
+membership_cell,727.0,,,,,,,,8,I08,,,,364.5,,,1,Direct Match,,,active,0.7187928669410151
+membership_cell,727.0,,,,,,,,8,I08,,,,423.5,,,2,Non-Synon,,,active,0.7215363511659808
+membership_cell,727.0,,,,,,,,8,I08,,,,481.5,,,3,Position-Specific,,,inactive,0.0
+membership_cell,727.0,,,,,,,,8,I08,,,,540.5,,,4,Diagnosis Match,,,inactive,0.0
+membership_cell,727.0,,,,,,,,8,I08,,,,599.0,,,5,AMP Tier I,,,active,0.7215363511659808
+membership_cell,787.0,,,,,,,,9,I09,,,,364.5,,,1,Direct Match,,,active,0.7242798353909465
+membership_cell,787.0,,,,,,,,9,I09,,,,423.5,,,2,Non-Synon,,,inactive,0.0
+membership_cell,787.0,,,,,,,,9,I09,,,,481.5,,,3,Position-Specific,,,active,0.7215363511659808
+membership_cell,787.0,,,,,,,,9,I09,,,,540.5,,,4,Diagnosis Match,,,inactive,0.0
+membership_cell,787.0,,,,,,,,9,I09,,,,599.0,,,5,AMP Tier I,,,inactive,0.0
+membership_cell,847.5,,,,,,,,10,I10,,,,364.5,,,1,Direct Match,,,active,0.7283950617283951
+membership_cell,847.5,,,,,,,,10,I10,,,,423.5,,,2,Non-Synon,,,inactive,0.0
+membership_cell,847.5,,,,,,,,10,I10,,,,481.5,,,3,Position-Specific,,,active,0.7187928669410151
+membership_cell,847.5,,,,,,,,10,I10,,,,540.5,,,4,Diagnosis Match,,,active,0.7270233196159122
+membership_cell,847.5,,,,,,,,10,I10,,,,599.0,,,5,AMP Tier I,,,inactive,0.0
+membership_cell,908.0,,,,,,,,11,I11,,,,364.5,,,1,Direct Match,,,active,0.7256515775034293
+membership_cell,908.0,,,,,,,,11,I11,,,,423.5,,,2,Non-Synon,,,inactive,0.0
+membership_cell,908.0,,,,,,,,11,I11,,,,481.5,,,3,Position-Specific,,,active,0.720164609053498
+membership_cell,908.0,,,,,,,,11,I11,,,,540.5,,,4,Diagnosis Match,,,inactive,0.0
+membership_cell,908.0,,,,,,,,11,I11,,,,599.0,,,5,AMP Tier I,,,active,0.7187928669410151
+membership_cell,968.0,,,,,,,,12,I12,,,,364.5,,,1,Direct Match,,,active,0.7174211248285323
+membership_cell,968.0,,,,,,,,12,I12,,,,423.5,,,2,Non-Synon,,,inactive,0.0
+membership_cell,968.0,,,,,,,,12,I12,,,,481.5,,,3,Position-Specific,,,active,0.7242798353909465
+membership_cell,968.0,,,,,,,,12,I12,,,,540.5,,,4,Diagnosis Match,,,active,0.7187928669410151
+membership_cell,968.0,,,,,,,,12,I12,,,,599.0,,,5,AMP Tier I,,,active,0.720164609053498

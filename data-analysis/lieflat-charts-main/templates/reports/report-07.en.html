@@ -1,0 +1,419 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>AI Coding Culture Survey — Lieflat Report Template · Palm Bazaar</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&family=Playfair+Display:wght@700;800;900&display=swap" rel="stylesheet">
+<style>
+  /* ═══════════════════════════════════════════════════════════════
+     LIEFLAT REPORT TEMPLATE 07 · SURVEY COLLAGE POSTER
+     场景：文化/消费调研的高密度海报（社媒长图、展会物料、公众号头图）
+     排版参考：图6 "Japan Culture"（Pin Tuấn Dung）——英文小标 + 大衬线
+               标题叠排、右上导语色块、巨号数字与图表模块穿插的杂志拼贴、
+               实色卡上反白图表 —— 只学排版和字体，蓝粉配色不学。
+     刊头那行英文原为花体（Pinyon Script），2026-08 换等宽小写：
+     vibe coding 是代码圈的黑话，用代码的字写它；和底下厚重衬线中文
+     形成「终端 vs 印刷」的对比，比花体诚实。花体属于请柬语域，词不对。
+     色板正本 = color-presets.js 的 PALM 一套（色相=类目，琥珀=重点）。
+     图表正本 = lieflat gallery：
+       图A  F5  tick rows      · basics-gallery.html（常用工具）
+       图B  L3  barcode lollipop 竖排变体 · lupi-gallery.html（深绿卡反白）
+       图C  L14 hundred field  · lupi-gallery.html（兴趣触发轨道簇）
+       图D  F1  rung bars      · basics-gallery.html（信息来源）
+       图E  F5  tick rows 迷你 · basics-gallery.html（文化兴趣对比）
+     马赛克块（模仿原图 treemap）是排字 callout，面积只是示意，读数字。
+     彩色加墨（INK_BOOST）：发丝 ×1.8，透明度地板 .85。
+     数据说明：全部为虚构演示数据，仅用于验证版式。
+     ═══════════════════════════════════════════════════════════════ */
+  :root{
+    --bg:#F0EFEB; --txt:#58402E;
+    --mut:rgba(88,64,46,.60); --lab:rgba(88,64,46,.72);
+    --faint:rgba(88,64,46,.40); --quiet:rgba(88,64,46,.15); --grid:rgba(88,64,46,.16);
+    --data:#43593B; --data2:#77835A; --hero:#D4A017; --faintdata:#ACAD79; --wheat:#F2D17E;
+    --serif:'Playfair Display',Georgia,serif;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{background:var(--bg);color:var(--txt);font-family:'Inter',sans-serif;
+    -webkit-font-smoothing:antialiased;font-variant-numeric:tabular-nums lining-nums;
+    display:flex;justify-content:center;padding:56px 24px}
+  .sheet{width:980px;max-width:980px}
+
+  /* ── 刊头：等宽小标 + 大衬线叠排（学图6 左上）│ 导语色块（右上）── */
+  .head{display:grid;grid-template-columns:1.1fr 1fr;gap:36px;align-items:start}
+  .title .script{font-family:'JetBrains Mono',monospace;font-size:34px;font-weight:400;
+    line-height:1.1;letter-spacing:.02em;color:var(--data2)}
+  .title h1{font-family:var(--serif);font-size:56px;font-weight:900;line-height:1.05;
+    letter-spacing:-.03em;margin-top:6px}
+  .title h1 b{color:var(--data)}
+  .title .sub{font-size:9.5px;font-weight:700;letter-spacing:.24em;text-transform:uppercase;
+    color:var(--mut);margin-top:10px}
+  .introbox{background:var(--data);color:var(--bg);padding:22px 24px;font-size:11px;
+    line-height:1.75}
+  .introbox b{color:var(--wheat)}
+
+  /* ── 星点分隔行（学图6 的装饰行，用字符不用插画）── */
+  .stars{display:flex;justify-content:space-between;margin:26px 0 30px;color:var(--faint);
+    font-size:9px;letter-spacing:.4em;overflow:hidden;white-space:nowrap}
+
+  /* ── 拼贴网格 ── */
+  .collage{display:grid;grid-template-columns:repeat(12,1fr);gap:30px 34px}
+  .m-a{grid-column:1/6}
+  .m-b{grid-column:6/13}
+  .m-c{grid-column:1/5;align-self:end}
+  .m-d{grid-column:5/13}
+  .m-e{grid-column:1/8}
+  .m-f{grid-column:8/13}
+  .m-g{grid-column:1/6;align-self:end}
+  .m-h{grid-column:6/13}
+
+  .mod h3{font-size:11.5px;font-weight:900;letter-spacing:.11em;text-transform:uppercase;
+    margin-bottom:2px}
+  .mod .frame{border:1px solid var(--txt);display:inline-block;padding:4px 12px;
+    font-size:9px;font-weight:700;letter-spacing:.11em;text-transform:uppercase;margin-bottom:8px}
+  .fig svg{width:100%;height:auto;display:block}
+  svg text{font-family:'Inter',sans-serif}
+  .srcline{font-size:8.5px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;
+    color:var(--faint);margin-top:6px}
+
+  /* ── 深绿卡：反白图表（学图6 蓝卡）── */
+  .card{background:var(--data);padding:22px 24px 16px}
+  .card h3{color:var(--bg)}
+  .card .srcline{color:rgba(240,239,235,.45)}
+
+  /* ── 巨号数字（学图6 的 129 / 218 / 69%）── */
+  .bignum .n{font-family:var(--serif);font-size:96px;font-weight:900;line-height:.9;
+    color:var(--hero);letter-spacing:-.02em}
+  .bignum .n small{font-size:44px}
+  .bignum .cap{font-size:11px;font-weight:700;line-height:1.5;margin-top:10px;max-width:240px}
+  .bignum .cap b{color:var(--data)}
+
+  /* ── 马赛克 callout（模仿 treemap，面积示意、读数字）── */
+  .mosaic{display:grid;grid-template-columns:repeat(6,1fr);grid-auto-rows:64px;gap:6px}
+  .mosaic .cell{color:var(--bg);padding:8px 10px;display:flex;flex-direction:column;
+    justify-content:space-between}
+  .mosaic .cell .v{font-size:19px;font-weight:800}
+  .mosaic .cell .t{font-size:8px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;
+    opacity:.85}
+  .mosaic .c1{grid-column:span 3;grid-row:span 2;background:var(--data)}
+  .mosaic .c2{grid-column:span 3;background:var(--data2)}
+  .mosaic .c3{grid-column:span 2;background:var(--faintdata);color:var(--txt)}
+  .mosaic .c4{grid-column:span 1;background:var(--hero)}
+  .mosaic .c5{grid-column:span 2;background:var(--data2)}
+  .mosaic .c6{grid-column:span 2;background:var(--faintdata);color:var(--txt)}
+  .mosaic .c7{grid-column:span 2;background:var(--data)}
+
+  .foot{margin-top:52px;border-top:2px solid var(--txt);padding-top:12px;
+    display:flex;justify-content:space-between;font-size:9px;font-weight:600;
+    letter-spacing:.12em;text-transform:uppercase;color:var(--mut)}
+
+  .pop{transform-box:fill-box;transform-origin:center;animation:pop .5s cubic-bezier(.2,.7,.3,1.3) both}
+  @keyframes pop{from{transform:scale(0)}to{transform:none}}
+  .fade{animation:fade .9s ease both}
+  @keyframes fade{from{opacity:0}}
+  .draw{stroke-dasharray:1;stroke-dashoffset:1;animation:draw 1s cubic-bezier(.4,0,.2,1) both}
+  @keyframes draw{to{stroke-dashoffset:0}}
+  @media(max-width:640px){body{padding:24px 10px}}
+  @media (prefers-reduced-motion:reduce){
+    .pop,.fade{animation:none}
+    .draw{animation:none;stroke-dasharray:none;stroke-dashoffset:0}
+  }
+</style>
+</head>
+<body>
+<div class="sheet">
+
+  <!-- ══ 刊头 ══ -->
+  <div class="head">
+    <div class="title">
+      <div class="script">vibe coding</div>
+      <h1>AI Coding <b>Culture</b> Survey</h1>
+      <div class="sub">Independent developers in China · July 2026</div>
+    </div>
+    <div class="introbox">
+      In July 2026 we surveyed <b>369 independent developers</b> in China who use AI coding
+      tools. We wanted three things: where they use AI, what got them started, and where
+      they learn the craft. Respondents were 18–39, and all data is self-reported and
+      anonymous. <b>The numbers on this page are demo data.</b>
+    </div>
+  </div>
+
+  <div class="stars">✦ ✧ ✦&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;· · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · ·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;✦ ✧ ✦</div>
+
+  <!-- ══ 拼贴 ══ -->
+  <div class="collage">
+
+    <!-- 模块A · tick rows：最常用工具（学图6 左上城市条）-->
+    <div class="mod m-a">
+      <span class="frame">Most-used AI coding tools (respondents)</span>
+      <div class="fig"><svg id="tools" viewBox="0 0 400 260" preserveAspectRatio="xMidYMid meet"></svg></div>
+      <div class="srcline">Tick rows · one tick = 4 people · dot marks every fifth</div>
+    </div>
+
+    <!-- 模块B · 深绿卡竖 lollipop：想拿 AI 做的事（学图6 蓝卡 THINGS TO DO）-->
+    <div class="mod m-b card">
+      <h3>12 things people most want AI to take over</h3>
+      <div class="fig"><svg id="todo" viewBox="0 0 480 250" preserveAspectRatio="xMidYMid meet"></svg></div>
+      <div class="srcline">Lollipop · one stem = one task · height = mentions · wheat = top pick</div>
+    </div>
+
+    <!-- 模块C · 巨号数字（学图6 的 129）-->
+    <div class="mod m-c bignum">
+      <div class="n">129</div>
+      <div class="cap">respondents say <b>"write my tests"</b> is their top reason to pay, ahead of any autocomplete.</div>
+    </div>
+
+    <!-- 模块D · hundred field：入坑触发点（学图6 轨道气泡）-->
+    <div class="mod m-d">
+      <span class="frame">What got you started with AI coding (respondents · sample of 100)</span>
+      <div class="fig"><svg id="orbit" viewBox="0 0 560 300" preserveAspectRatio="xMidYMid meet"></svg></div>
+      <div class="srcline">Hundred field · one dot = one person · 41 + 27 + 19 + 13 = 100</div>
+    </div>
+
+    <!-- 模块E · rung bars：信息来源（学图6 左下高柱）-->
+    <div class="mod m-e">
+      <span class="frame">Where people learned the craft (respondents)</span>
+      <div class="fig"><svg id="sources" viewBox="0 0 520 270" preserveAspectRatio="xMidYMid meet"></svg></div>
+      <div class="srcline">Rung bars · one rung = 8 people · amber = top source</div>
+    </div>
+
+    <!-- 模块F · 巨号 % + 迷你 tick rows（学图6 的 69% 模块）-->
+    <div class="mod m-f">
+      <div class="bignum" style="margin-bottom:14px">
+        <div class="n">69<small>%</small></div>
+        <div class="cap">of respondents say <b>agent workflows</b> are the direction most worth betting on this year.</div>
+      </div>
+      <div class="fig"><svg id="interest" viewBox="0 0 400 190" preserveAspectRatio="xMidYMid meet"></svg></div>
+      <div class="srcline">Tick rows · one tick = 4 people</div>
+    </div>
+
+    <!-- 模块G · 巨号数字（学图6 的 218）-->
+    <div class="mod m-g bignum">
+      <div class="n">218</div>
+      <div class="cap">people's first AI project was <b>a tool built just for themselves</b>, not a work task.</div>
+    </div>
+
+    <!-- 模块H · 马赛克 callout（模仿图6 treemap，面积示意、读数字）-->
+    <div class="mod m-h">
+      <span class="frame">First tasks handed to AI (respondents · multi-select)</span>
+      <div class="mosaic">
+        <div class="cell c1"><span class="v">218</span><span class="t">Writing / fixing tests</span></div>
+        <div class="cell c2"><span class="v">181</span><span class="t">Reading other people's old code</span></div>
+        <div class="cell c3"><span class="v">155</span><span class="t">Scripts and automation</span></div>
+        <div class="cell c4"><span class="v">114</span><span class="t">Projects</span></div>
+        <div class="cell c5"><span class="v">110</span><span class="t">Docs / API lookups</span></div>
+        <div class="cell c6"><span class="v">92</span><span class="t">Refactoring</span></div>
+        <div class="cell c7"><span class="v">88</span><span class="t">Commits & PR descriptions</span></div>
+      </div>
+      <div class="srcline">Mosaic · area is illustrative, read the numbers · multi-select, totals can exceed 100%</div>
+    </div>
+  </div>
+
+  <div class="foot">
+    <span>AI Coding Culture Survey · Collage One-Pager</span>
+    <span>N = 369 · Demo data · Lieflat Charts</span>
+  </div>
+</div>
+
+<script>
+/* ── mono-tokens 内联（几何/工具函数与正本一致）── */
+const NS='http://www.w3.org/2000/svg';
+const el=(p,t,a)=>{const n=document.createElementNS(NS,t);for(const k in a)n.setAttribute(k,a[k]);p.appendChild(n);return n};
+const txt=(p,a,s)=>{const n=el(p,'text',a);n.textContent=s;return n};
+const tip=(n,s)=>{const t=document.createElementNS(NS,'title');t.textContent=s;n.appendChild(t)};
+const rnd=(i,k)=>Math.abs(((i*73856093)^(k*19349663))%1000)/1000;
+const D2R=Math.PI/180;
+const pol=(cx,cy,r,deg)=>[cx+r*Math.cos(deg*D2R),cy+r*Math.sin(deg*D2R)];
+const obsReveal=(id,fn)=>{
+  const n=document.getElementById(id);
+  const go=()=>{n.innerHTML='';fn(n)};
+  const io=new IntersectionObserver(es=>{if(es[0].isIntersecting){go();io.disconnect()}},{threshold:.3});
+  io.observe(n); n.style.cursor='pointer'; n.addEventListener('click',go);
+};
+
+/* ── PALM preset（color-presets.js 原值）── */
+const BG='#F0EFEB',TXT='#58402E',MUT='rgba(88,64,46,.60)',LAB='rgba(88,64,46,.72)',
+      FAINT='rgba(88,64,46,.40)',QUIET='rgba(88,64,46,.15)',GRID='rgba(88,64,46,.16)';
+const DATA='#43593B',DATA2='#77835A',HERO='#D4A017',FAINTDATA='#ACAD79',WHEAT='#F2D17E';
+const CAT4=['#43593B','#77835A','#ACAD79','#F2D17E'];
+
+/* ════ 模块A · F5 tick rows ════
+   结构照搬 basics-gallery "tick rows"：1 tick = 4 人。
+   琥珀只给榜首行。加墨：线宽 1.6，地板 .85。 */
+(()=>{
+const D=[['CLAUDE CODE',52],['CURSOR',44],['COPILOT',31],['CODEX',22],['WINDSURF',14],['OTHER',9]];
+obsReveal('tools',s=>{
+  const y0=i=>34+i*38,X0=104,PX=4.9;
+  D.forEach(([name,v],i)=>{
+    const y=y0(i),hero=i===0;
+    txt(s,{x:94,y:y+3,'font-size':8,'font-weight':700,fill:MUT,'text-anchor':'end',
+      'letter-spacing':'.04em',class:'fade',style:`animation-delay:${i*.08}s`},name);
+    el(s,'line',{x1:X0,y1:y+8,x2:X0+55*PX,y2:y+8,stroke:GRID,'stroke-width':.8,
+      class:'fade',style:`animation-delay:${i*.08}s`});
+    for(let k=0;k<v;k++){
+      const x=X0+k*PX+PX/2,h=8+rnd(k+1,i+2)*5;
+      el(s,'line',{x1:x,y1:y+8,x2:x,y2:y+8-h,stroke:hero?HERO:DATA,'stroke-width':1.6,
+        opacity:.85+rnd(k+3,i+5)*.15,class:'fade',style:`animation-delay:${i*.08+k*.01}s`});
+      if(k%5===4)el(s,'circle',{cx:x,cy:y+12,r:.9,fill:FAINTDATA,
+        class:'fade',style:`animation-delay:${i*.08+k*.01}s`});
+    }
+    const lab=txt(s,{x:X0+v*PX+9,y:y+3,'font-size':10.5,'font-weight':800,
+      fill:hero?HERO:DATA,class:'fade',style:`animation-delay:${.4+i*.08}s`},v*4);
+    tip(lab,`${name} — ${v*4} people use it regularly`);
+  });
+  txt(s,{x:200,y:252,'font-size':6.5,'font-weight':600,fill:FAINT,'text-anchor':'middle',
+    'letter-spacing':'.12em',class:'fade',style:'animation-delay:.9s'},
+    'ONE TICK = 4 PEOPLE · DOT MARKS EVERY FIFTH');
+});
+})();
+
+/* ════ 模块B · 深绿卡竖 lollipop ════
+   结构 = lupi-gallery "barcode lollipop" 的稀疏竖排版：一杆一件事，
+   杆高 = 提及人数。深卡上纸色反白，榜首换麦黄（PALM.HERODK 规则：
+   深底上琥珀读不出，强调走麦黄）。 */
+(()=>{
+const D=[['Writing tests',101],['Reading old code',76],['Automation scripts',66],['Scaffolding projects',63],['Looking up docs',62],
+         ['Refactoring',58],['Tweaking CSS',56],['PR descriptions',53],['SQL',49],['Regex',46],['Scrapers',44],['Naming things',28]];
+obsReveal('todo',s=>{
+  const X0=34,PX=37,base=196,map=v=>base-v*1.45;
+  el(s,'line',{x1:X0-12,y1:base,x2:X0+11*PX+14,y2:base,stroke:'rgba(240,239,235,.25)',
+    'stroke-width':.8,class:'fade'});
+  D.forEach(([name,v],i)=>{
+    const x=X0+i*PX,y=map(v),hero=i===0;
+    const col=hero?WHEAT:'#F0EFE9';
+    el(s,'line',{x1:x,y1:base,x2:x,y2:y,stroke:col,'stroke-width':hero?1.6:1,
+      opacity:hero?1:.8,class:'fade',style:`animation-delay:${.1+i*.05}s`});
+    const dot=el(s,'circle',{cx:x,cy:y,r:hero?5:3.4,fill:col,
+      class:'pop',style:`animation-delay:${.2+i*.05}s`});
+    tip(dot,`${name} — mentioned by ${v} people`);
+    txt(s,{x,y:y-9,'font-size':9,'font-weight':800,fill:col,'text-anchor':'middle',
+      class:'fade',style:`animation-delay:${.4+i*.05}s`},v);
+    txt(s,{x:x+3,y:base+8,'font-size':7,'font-weight':600,fill:'rgba(240,239,235,.75)',
+      'text-anchor':'end',transform:`rotate(-52 ${x+3} ${base+8})`,
+      class:'fade',style:`animation-delay:${.15+i*.05}s`},name);
+  });
+  txt(s,{x:240,y:242,'font-size':6.5,'font-weight':600,fill:'rgba(240,239,235,.5)',
+    'text-anchor':'middle','letter-spacing':'.12em',class:'fade',style:'animation-delay:.9s'},
+    'ONE STEM = ONE TASK · HEIGHT = MENTIONS');
+});
+})();
+
+/* ════ 模块D · L14 hundred field（轨道版）════
+   结构照搬 lupi-gallery "hundred field"：golden-angle 撒布 1 点 = 1 人，
+   四簇横排成轨道带（学图6 的轨道气泡阵），虚线连簇心。
+   PALM 色相=类目：CAT4 一簇一色。spoke 加墨 ×1.8。 */
+(()=>{
+const SEG=[['Colleague recommended',41,CAT4[0]],['Saw it on social',27,CAT4[1]],['Podcast / video',19,CAT4[2]],['Company required it',13,CAT4[3]]];
+const POS=[[96,150],[250,120],[386,170],[496,130]];
+obsReveal('orbit',s=>{
+  [[0,1],[1,2],[2,3]].forEach(([a,b],k)=>{
+    el(s,'line',{x1:POS[a][0],y1:POS[a][1],x2:POS[b][0],y2:POS[b][1],
+      stroke:GRID,'stroke-width':.8,'stroke-dasharray':'2 5',
+      class:'fade',style:`animation-delay:${.9+k*.1}s`});
+  });
+  SEG.forEach(([name,v,shade],ci)=>{
+    const [cx,cy]=POS[ci];
+    let edge=0;
+    for(let k=0;k<v;k++){
+      const a=k*137.508+ci*55;
+      const rr=4+Math.sqrt(k)*5.6+rnd(k+1,ci+2)*3;
+      edge=Math.max(edge,rr);
+      const [x,y]=pol(cx,cy,rr,a);
+      if(k%5===0)el(s,'line',{x1:cx,y1:cy,x2:x,y2:y,stroke:FAINTDATA,'stroke-width':1.1,
+        opacity:.85,class:'fade',style:`animation-delay:${ci*.14+k*.012}s`});
+      const dot=el(s,'circle',{cx:x,cy:y,r:1.5+rnd(k+2,ci+3)*1.7,fill:shade,opacity:.9,
+        class:'pop',style:`animation-delay:${ci*.14+k*.012}s`});
+      tip(dot,`${name} — ${v} of every 100 people`);
+    }
+    el(s,'circle',{cx,cy,r:2.4,fill:TXT,class:'pop',style:`animation-delay:${ci*.14}s`});
+    txt(s,{x:cx,y:cy+edge+14,'font-size':8.5,'font-weight':800,fill:TXT,'text-anchor':'middle',
+      'letter-spacing':'.06em',style:`paint-order:stroke;stroke:${BG};stroke-width:3px;animation-delay:${.5+ci*.12}s`,
+      class:'fade'},`${name} · ${v}`);
+  });
+  txt(s,{x:280,y:292,'font-size':7,'font-weight':600,fill:FAINT,'text-anchor':'middle',
+    'letter-spacing':'.12em',class:'fade',style:'animation-delay:1.3s'},
+    'ONE DOT = ONE PERSON · 41 + 27 + 19 + 13 = 100');
+});
+})();
+
+/* ════ 模块E · F1 rung bars ════
+   结构照搬 basics-gallery "rung bars"：1 档 = 8 人，
+   琥珀只给最大来源。 */
+(()=>{
+const D=[['Video tutorials',20],['X / Twitter',20],['Tech podcasts',17],['Community groups',17],['Official docs',16],
+         ['Friend demos',13],['Newsletters',13],['Meetups',10],['Other',6]];
+obsReveal('sources',s=>{
+  const x0=i=>44+i*54,base=216,step=6.4,HW=15;
+  D.forEach(([name,v],i)=>{
+    const x=x0(i),hero=i===0;
+    for(let k=0;k<v;k++){
+      const y=base-k*step,w=HW-1.5+rnd(k+1,i+2)*3;
+      el(s,'line',{x1:x-w,y1:y,x2:x+w,y2:y,stroke:hero?HERO:DATA,'stroke-width':1.8,
+        opacity:.85+rnd(k+2,i+4)*.15,class:'fade',style:`animation-delay:${i*.07+k*.012}s`});
+      if(k%5===4)el(s,'circle',{cx:x+HW+4.5,cy:y,r:.9,fill:FAINTDATA,
+        class:'fade',style:`animation-delay:${i*.07+k*.012}s`});
+    }
+    const topY=base-(v-1)*step;
+    const num=txt(s,{x,y:topY-9,'font-size':10.5,'font-weight':800,
+      fill:hero?HERO:DATA,'text-anchor':'middle',
+      class:'fade',style:`animation-delay:${.4+i*.07}s`},v*8);
+    tip(num,`${name} — ${v*8} people`);
+    txt(s,{x:x+3,y:base+12,'font-size':7,'font-weight':700,fill:MUT,'text-anchor':'end',
+      transform:`rotate(-46 ${x+3} ${base+12})`,
+      class:'fade',style:`animation-delay:${i*.07}s`},name);
+  });
+  el(s,'line',{x1:20,y1:base+4,x2:500,y2:base+4,stroke:GRID,'stroke-width':.8,class:'fade'});
+  txt(s,{x:260,y:264,'font-size':6.5,'font-weight':600,fill:FAINT,'text-anchor':'middle',
+    'letter-spacing':'.12em',class:'fade',style:'animation-delay:.9s'},
+    'ONE RUNG = 8 PEOPLE · DOT MARKS EVERY FIFTH');
+});
+})();
+
+/* ════ 模块F · F5 tick rows 迷你 ════
+   最看好的方向对比。琥珀只给榜首。 */
+(()=>{
+const D=[['AGENT WORKFLOWS',64],['CODE REVIEW',43],['UI GENERATION',36],['DATA ANALYSIS',28],['WRITING HELP',19]];
+obsReveal('interest',s=>{
+  const y0=i=>26+i*32,X0=104,PX=3.6;
+  D.forEach(([name,v],i)=>{
+    const y=y0(i),hero=i===0;
+    txt(s,{x:96,y:y+3,'font-size':7,'font-weight':700,fill:MUT,'text-anchor':'end',
+      'letter-spacing':'.08em',class:'fade',style:`animation-delay:${i*.08}s`},name);
+    el(s,'line',{x1:X0,y1:y+7,x2:X0+70*PX,y2:y+7,stroke:GRID,'stroke-width':.7,
+      class:'fade',style:`animation-delay:${i*.08}s`});
+    for(let k=0;k<v;k++){
+      const x=X0+k*PX+PX/2,h=7+rnd(k+1,i+2)*4;
+      el(s,'line',{x1:x,y1:y+7,x2:x,y2:y+7-h,stroke:hero?HERO:DATA,'stroke-width':1.4,
+        opacity:.85+rnd(k+3,i+5)*.15,class:'fade',style:`animation-delay:${i*.08+k*.008}s`});
+      if(k%5===4)el(s,'circle',{cx:x,cy:y+10.5,r:.8,fill:FAINTDATA,
+        class:'fade',style:`animation-delay:${i*.08+k*.008}s`});
+    }
+    const lab=txt(s,{x:X0+v*PX+8,y:y+3,'font-size':9.5,'font-weight':800,
+      fill:hero?HERO:DATA,class:'fade',style:`animation-delay:${.4+i*.08}s`},v*4);
+    tip(lab,`${name} — favored by ${v*4} people`);
+  });
+});
+})();
+
+</script>
+<script>
+/* ── fit-width：视口比版心窄时整页等比缩小，不重排 ──
+   报告是一张版面，不是响应式网页。窄屏塌成单栏会得到一个
+   设计时不存在的版式；等比缩小则保留构图，跟 PDF 的「适合宽度」一致。
+   机制同模板 11。 */
+(()=>{
+  const sheet=document.querySelector('.sheet');
+  const W=980;
+  const fit=()=>{
+    const cs=getComputedStyle(document.body);
+    const avail=document.documentElement.clientWidth
+      -parseFloat(cs.paddingLeft)-parseFloat(cs.paddingRight);
+    sheet.style.zoom=Math.min(1,avail/W);
+  };
+  fit();
+  addEventListener('resize',fit);
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+{
+  "skill_name": "paper-analysis",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Can you critically analyze this paper for me? I need to understand the methodology strengths and weaknesses. https://doi.org/10.1038/nature12373",
+      "expected_output": "A structured critical summary table with all 7 steps completed: Aerial View (overview, research question, knowledge gap), Interrogation (methodology assessment, independent conclusion), Verdict (reconciliation, alternative explanations), plus Summary Assessment, Strengths, Weaknesses, and Quick Takeaway sections.",
+      "assertions": [
+        "Output contains Summary Assessment section with quality ratings (Overall Quality, Methodological Rigor, etc.)",
+        "Output contains Phase 1: Aerial View with paper overview, research question, and knowledge gap",
+        "Output contains Phase 2: Interrogation with methodology assessment table (at least 3 dimensions rated)",
+        "Output contains Phase 3: Verdict with reconciliation and alternative explanations",
+        "Output contains Strengths section with at least 2 bullet points",
+        "Output contains Weaknesses section with at least 2 bullet points",
+        "Output contains Quick Takeaway section",
+        "Output uses structured table format with markdown tables"
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "I have a seminar coming up and need to deeply understand this paper. Can you break it down for me and highlight what the research gap is? C:\\Users\\weikaili\\Downloads\\paper.pdf",
+      "expected_output": "A structured critical summary table focusing on Phase 1 (Aerial View) for seminar prep context, with clear articulation of the research question and knowledge gap. Should also include methodology assessment and key takeaways.",
+      "assertions": [
+        "Output contains paper overview describing what kind of paper this is",
+        "Output explicitly states the research question in one sentence",
+        "Output contains knowledge gap section explaining why the research was conducted",
+        "Output contains methodology assessment with ratings",
+        "Output contains key takeaways or Quick Takeaway section",
+        "Output uses structured format with clear sections"
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "Analyze this research paper and give me the critical summary: 10.1016/j.cell.2020.03.045",
+      "expected_output": "A complete critical summary table with all sections: Summary Assessment ratings, Phase 1 (Paper overview, research question, knowledge gap), Phase 2 (Methodology assessment table, independent conclusion), Phase 3 (Reconciliation table, alternative explanations), Strengths, Weaknesses, and Quick Takeaway.",
+      "assertions": [
+        "Output contains Summary Assessment section with at least 3 dimension ratings",
+        "Output contains Phase 1: Aerial View (overview, research question, knowledge gap)",
+        "Output contains Phase 2: Interrogation with methodology assessment table",
+        "Output contains independent conclusion before reading authors' discussion",
+        "Output contains Phase 3: Verdict with reconciliation assessment",
+        "Output contains alternative explanations or confounding factors",
+        "Output contains Strengths and Weaknesses sections",
+        "Output contains Quick Takeaway section",
+        "Output uses structured table format"
+      ]
+    }
+  ]
+}

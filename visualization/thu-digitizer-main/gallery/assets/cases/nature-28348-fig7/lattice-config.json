@@ -1,0 +1,156 @@
+{
+  "schema_version": 1,
+  "source": {
+    "sha256": "3cfc049bd37f8f7a00bec3c802d973e11cc1d5907aeee1dafb83be159bfb7a75",
+    "width": 1000,
+    "height": 768,
+    "coordinate_space": "original_raster_pixels",
+    "resampling_applied": false
+  },
+  "layers": {
+    "column_bars": {
+      "role": "membership_guides",
+      "roi": [
+        275,
+        350,
+        995,
+        380
+      ],
+      "color": [
+        217,
+        95,
+        2
+      ],
+      "color_verification": "verified",
+      "tolerance": 0,
+      "width_range": [
+        20,
+        30
+      ]
+    },
+    "row_bars": {
+      "role": "row_bar",
+      "roi": [
+        60,
+        327,
+        276,
+        638
+      ],
+      "colors": [
+        [
+          190,
+          99,
+          29
+        ],
+        [
+          101,
+          149,
+          47
+        ],
+        [
+          207,
+          65,
+          137
+        ],
+        [
+          124,
+          120,
+          171
+        ],
+        [
+          29,
+          170,
+          175
+        ]
+      ],
+      "color_verification": "verified",
+      "tolerance": 0,
+      "height_range": [
+        35,
+        55
+      ],
+      "min_area": 1000,
+      "min_row_pixels": 30
+    },
+    "membership": {
+      "colors": [
+        [
+          217,
+          95,
+          2
+        ],
+        [
+          102,
+          166,
+          30
+        ],
+        [
+          231,
+          41,
+          138
+        ],
+        [
+          117,
+          112,
+          179
+        ],
+        [
+          4,
+          193,
+          200
+        ]
+      ],
+      "color_verification": "verified",
+      "tolerance": 0,
+      "patch_radius": 13,
+      "active_fraction_min": 0.3,
+      "inactive_fraction_max": 0.02
+    }
+  },
+  "semantics": {
+    "verification": "verified",
+    "column_ids": [
+      "I01",
+      "I02",
+      "I03",
+      "I04",
+      "I05",
+      "I06",
+      "I07",
+      "I08",
+      "I09",
+      "I10",
+      "I11",
+      "I12"
+    ],
+    "column_values": [
+      3219,
+      1929,
+      1347,
+      878,
+      818,
+      249,
+      206,
+      121,
+      14,
+      3,
+      1,
+      1
+    ],
+    "row_ids": [
+      "Direct Match",
+      "Non-Synon",
+      "Position-Specific",
+      "Diagnosis Match",
+      "AMP Tier I"
+    ],
+    "row_types": []
+  },
+  "validation": {
+    "max_spacing_cv": 0.02,
+    "row_value_axis": [],
+    "row_bar_edge_offset_px": 0,
+    "row_total_max_abs_error": null,
+    "top_value_max_abs_error": null
+  }
+}

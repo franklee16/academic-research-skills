@@ -1,0 +1,247 @@
+{
+  "schema_version": 1,
+  "source_contract": {
+    "sha256": "4dd50564058d2823dfe740ec3df49d6f451088cebd402b51d9890fdfc3282e46",
+    "dimensions": [
+      2050,
+      1399
+    ]
+  },
+  "panel_bounds": [
+    1000,
+    420,
+    2024,
+    634
+  ],
+  "palette": {
+    "TSK": "#ef6633",
+    "Tumor_KC_Diff": "#799ab9",
+    "Tumor_KC_Basal": "#54caf5",
+    "Tumor_KC_Cyc": "#9dcc80",
+    "Normal_KC_Cyc": "#cfdfe7",
+    "Normal_KC_Basal": "#f1a93e",
+    "Normal_KC_Diff": "#f6c74f"
+  },
+  "groups": [
+    {
+      "name": "Normal",
+      "center": [
+        1169,
+        535
+      ],
+      "radial_band": [
+        52,
+        65
+      ],
+      "labels": [
+        {
+          "series": "Normal_KC_Diff",
+          "anchor": [
+            1118,
+            542
+          ],
+          "transcription_a": "59.5",
+          "transcription_b": "59.5"
+        },
+        {
+          "series": "Tumor_KC_Cyc",
+          "anchor": [
+            1227,
+            454
+          ],
+          "transcription_a": "16.6",
+          "transcription_b": "16.6"
+        },
+        {
+          "series": "Tumor_KC_Basal",
+          "anchor": [
+            1248,
+            516
+          ],
+          "transcription_a": "18.9",
+          "transcription_b": "18.9"
+        },
+        {
+          "series": "TSK",
+          "anchor": [
+            1227,
+            592
+          ],
+          "transcription_a": "2.5",
+          "transcription_b": "2.5"
+        }
+      ]
+    },
+    {
+      "name": "AK",
+      "center": [
+        1405,
+        536
+      ],
+      "radial_band": [
+        52,
+        65
+      ],
+      "labels": [
+        {
+          "series": "Normal_KC_Diff",
+          "anchor": [
+            1327,
+            512
+          ],
+          "transcription_a": "48.7",
+          "transcription_b": "48.7"
+        },
+        {
+          "series": "Tumor_KC_Diff",
+          "anchor": [
+            1410,
+            443
+          ],
+          "transcription_a": "9.2",
+          "transcription_b": "9.2"
+        },
+        {
+          "series": "Tumor_KC_Cyc",
+          "anchor": [
+            1456,
+            469
+          ],
+          "transcription_a": "3.3",
+          "transcription_b": "3.3"
+        },
+        {
+          "series": "Tumor_KC_Basal",
+          "anchor": [
+            1490,
+            535
+          ],
+          "transcription_a": "22.2",
+          "transcription_b": "22.2"
+        },
+        {
+          "series": "TSK",
+          "anchor": [
+            1441,
+            594
+          ],
+          "transcription_a": "7.2",
+          "transcription_b": "7.2"
+        }
+      ]
+    },
+    {
+      "name": "Primary",
+      "center": [
+        1645,
+        535
+      ],
+      "radial_band": [
+        52,
+        65
+      ],
+      "labels": [
+        {
+          "series": "Normal_KC_Diff",
+          "anchor": [
+            1584,
+            447
+          ],
+          "transcription_a": "10.3",
+          "transcription_b": "10.3"
+        },
+        {
+          "series": "Tumor_KC_Diff",
+          "anchor": [
+            1720,
+            478
+          ],
+          "transcription_a": "25.9",
+          "transcription_b": "25.9"
+        },
+        {
+          "series": "Tumor_KC_Basal",
+          "anchor": [
+            1648,
+            616
+          ],
+          "transcription_a": "17.5",
+          "transcription_b": "17.5"
+        },
+        {
+          "series": "TSK",
+          "anchor": [
+            1572,
+            538
+          ],
+          "transcription_a": "16.6",
+          "transcription_b": "16.6"
+        }
+      ]
+    },
+    {
+      "name": "MET",
+      "center": [
+        1860,
+        535
+      ],
+      "radial_band": [
+        52,
+        65
+      ],
+      "labels": [
+        {
+          "series": "Normal_KC_Diff",
+          "anchor": [
+            1811,
+            452
+          ],
+          "transcription_a": "6.6",
+          "transcription_b": "6.6"
+        },
+        {
+          "series": "Normal_KC_Basal",
+          "anchor": [
+            1856,
+            443
+          ],
+          "transcription_a": "1.8",
+          "transcription_b": "1.8"
+        },
+        {
+          "series": "Tumor_KC_Diff",
+          "anchor": [
+            1895,
+            453
+          ],
+          "transcription_a": "7.2",
+          "transcription_b": "7.2"
+        },
+        {
+          "series": "Tumor_KC_Basal",
+          "anchor": [
+            1944,
+            538
+          ],
+          "transcription_a": "19.6",
+          "transcription_b": "19.6"
+        },
+        {
+          "series": "TSK",
+          "anchor": [
+            1788,
+            594
+          ],
+          "transcription_a": "38.4",
+          "transcription_b": "38.4"
+        }
+      ]
+    }
+  ],
+  "parameters": {
+    "angle_samples": 7200,
+    "color_tolerance": 20.0,
+    "minimum_sector_share_percent": 0.5,
+    "maximum_geometry_error_pp": 2.0
+  }
+}

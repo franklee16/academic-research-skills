@@ -1,0 +1,548 @@
+{
+  "schema_version": 1,
+  "extractor": "candidate_compact_scatter_distance_peaks",
+  "algorithm_version": "compact-scatter-distance-peaks-v1",
+  "deterministic_run_id": "17e3307fd14dbcde",
+  "software": {
+    "opencv": "4.13.0",
+    "numpy": "2.4.6"
+  },
+  "status": "candidate",
+  "numeric_output_authorized": true,
+  "reason": "all configured candidate gates passed",
+  "input": {
+    "file": "original.png",
+    "sha256": "e8fa3bd419c1c70c42d76b914c92ac843317c3e23499ce0113fa13c72b7b265c",
+    "dimensions": [
+      1370,
+      650
+    ]
+  },
+  "plot_bounds": [
+    172,
+    28,
+    711,
+    551
+  ],
+  "calibration": {
+    "x": {
+      "scale": "linear",
+      "anchors": [
+        {
+          "pixel": 184.5,
+          "value": 0.0
+        },
+        {
+          "pixel": 636.0,
+          "value": 0.4
+        }
+      ],
+      "pixel_slope": 0.0008859357696566996,
+      "transformed_intercept": -0.16345514950166093,
+      "residuals_pixels": [
+        -1.5664552988070573e-13,
+        0.0
+      ],
+      "rmse_transformed": 9.813077866773594e-17,
+      "max_abs_residual_transformed": 1.3877787807814457e-16,
+      "pixel_uncertainty": 0.5,
+      "fit": "robust_huber_affine_in_transformed_value_space"
+    },
+    "y": {
+      "scale": "linear",
+      "anchors": [
+        {
+          "pixel": 536.5,
+          "value": 0.0
+        },
+        {
+          "pixel": 85.5,
+          "value": 0.4
+        }
+      ],
+      "pixel_slope": -0.0008869179600886926,
+      "transformed_intercept": 0.4758314855875833,
+      "residuals_pixels": [
+        -2.503552920529726e-13,
+        1.251776460264863e-13
+      ],
+      "rmse_transformed": 1.7554167342883506e-16,
+      "max_abs_residual_transformed": 2.220446049250313e-16,
+      "pixel_uncertainty": 0.5,
+      "fit": "robust_huber_affine_in_transformed_value_space"
+    }
+  },
+  "detection": {
+    "marker_mode": "dark",
+    "marker_color": null,
+    "color_tolerance": 36.0,
+    "dark_threshold": 245,
+    "light_threshold": 225,
+    "min_radius": 2.8,
+    "max_radius": 18.0,
+    "radius_consistency_ratio": 0.72,
+    "radius_reference_pixels": 13.5906982421875,
+    "radius_cutoff_pixels": 9.785302734375,
+    "peak_window": 5,
+    "edge_margin": 3,
+    "exclude_regions": [],
+    "foreground_pixels": 7128,
+    "raw_peak_count": 13,
+    "accepted_peak_count": 11,
+    "suppressed_peak_count": 2
+  },
+  "points": [
+    {
+      "point_id": 1,
+      "pixel_x": 185.0,
+      "pixel_y": 536.0,
+      "x": 0.00044297,
+      "y": 0.00044346,
+      "x_uncertainty": 0.00039867,
+      "y_uncertainty": 0.00039911,
+      "marker_radius_evidence_pixels": 10.9845,
+      "core_foreground_fraction": 1.0,
+      "confidence": 1.0,
+      "component_id": 1,
+      "status": "visible_marker_candidate",
+      "component_peak_count": 1,
+      "value_status": "visible_marker_candidate"
+    },
+    {
+      "point_id": 2,
+      "pixel_x": 284.0,
+      "pixel_y": 61.0,
+      "x": 0.08815061,
+      "y": 0.42172949,
+      "x_uncertainty": 0.00039867,
+      "y_uncertainty": 0.00039911,
+      "marker_radius_evidence_pixels": 13.5907,
+      "core_foreground_fraction": 1.0,
+      "confidence": 1.0,
+      "component_id": 2,
+      "status": "visible_marker_candidate",
+      "component_peak_count": 1,
+      "value_status": "visible_marker_candidate"
+    },
+    {
+      "point_id": 3,
+      "pixel_x": 306.0,
+      "pixel_y": 232.0,
+      "x": 0.1076412,
+      "y": 0.27006652,
+      "x_uncertainty": 0.00039867,
+      "y_uncertainty": 0.00039911,
+      "marker_radius_evidence_pixels": 13.7845,
+      "core_foreground_fraction": 1.0,
+      "confidence": 1.0,
+      "component_id": 3,
+      "status": "visible_marker_candidate",
+      "component_peak_count": 3,
+      "value_status": "visible_marker_candidate"
+    },
+    {
+      "point_id": 4,
+      "pixel_x": 313.5,
+      "pixel_y": 247.5,
+      "x": 0.11428571,
+      "y": 0.25631929,
+      "x_uncertainty": 0.00039867,
+      "y_uncertainty": 0.00039911,
+      "marker_radius_evidence_pixels": 13.5907,
+      "core_foreground_fraction": 1.0,
+      "confidence": 1.0,
+      "component_id": 3,
+      "status": "visible_marker_candidate",
+      "component_peak_count": 3,
+      "value_status": "visible_marker_candidate"
+    },
+    {
+      "point_id": 5,
+      "pixel_x": 325.5,
+      "pixel_y": 252.0,
+      "x": 0.12491694,
+      "y": 0.25232816,
+      "x_uncertainty": 0.00039867,
+      "y_uncertainty": 0.00039911,
+      "marker_radius_evidence_pixels": 13.1814,
+      "core_foreground_fraction": 1.0,
+      "confidence": 1.0,
+      "component_id": 3,
+      "status": "visible_marker_candidate",
+      "component_peak_count": 3,
+      "value_status": "visible_marker_candidate"
+    },
+    {
+      "point_id": 6,
+      "pixel_x": 327.6667,
+      "pixel_y": 332.3333,
+      "x": 0.12683647,
+      "y": 0.18107908,
+      "x_uncertainty": 0.00039867,
+      "y_uncertainty": 0.00039911,
+      "marker_radius_evidence_pixels": 13.1814,
+      "core_foreground_fraction": 1.0,
+      "confidence": 1.0,
+      "component_id": 5,
+      "status": "visible_marker_candidate",
+      "component_peak_count": 1,
+      "value_status": "visible_marker_candidate"
+    },
+    {
+      "point_id": 7,
+      "pixel_x": 350.0,
+      "pixel_y": 388.0,
+      "x": 0.14662237,
+      "y": 0.13170732,
+      "x_uncertainty": 0.00039867,
+      "y_uncertainty": 0.00039911,
+      "marker_radius_evidence_pixels": 13.7876,
+      "core_foreground_fraction": 1.0,
+      "confidence": 1.0,
+      "component_id": 6,
+      "status": "visible_marker_candidate",
+      "component_peak_count": 3,
+      "value_status": "visible_marker_candidate"
+    },
+    {
+      "point_id": 8,
+      "pixel_x": 359.0,
+      "pixel_y": 274.0,
+      "x": 0.15459579,
+      "y": 0.23281596,
+      "x_uncertainty": 0.00039867,
+      "y_uncertainty": 0.00039911,
+      "marker_radius_evidence_pixels": 13.5907,
+      "core_foreground_fraction": 1.0,
+      "confidence": 1.0,
+      "component_id": 4,
+      "status": "visible_marker_candidate",
+      "component_peak_count": 1,
+      "value_status": "visible_marker_candidate"
+    },
+    {
+      "point_id": 9,
+      "pixel_x": 362.0,
+      "pixel_y": 388.0,
+      "x": 0.1572536,
+      "y": 0.13170732,
+      "x_uncertainty": 0.00039867,
+      "y_uncertainty": 0.00039911,
+      "marker_radius_evidence_pixels": 13.5907,
+      "core_foreground_fraction": 1.0,
+      "confidence": 1.0,
+      "component_id": 6,
+      "status": "visible_marker_candidate",
+      "component_peak_count": 3,
+      "value_status": "visible_marker_candidate"
+    },
+    {
+      "point_id": 10,
+      "pixel_x": 376.0,
+      "pixel_y": 410.0,
+      "x": 0.1696567,
+      "y": 0.11219512,
+      "x_uncertainty": 0.00039867,
+      "y_uncertainty": 0.00039911,
+      "marker_radius_evidence_pixels": 12.9845,
+      "core_foreground_fraction": 1.0,
+      "confidence": 1.0,
+      "component_id": 6,
+      "status": "visible_marker_candidate",
+      "component_peak_count": 3,
+      "value_status": "visible_marker_candidate"
+    },
+    {
+      "point_id": 11,
+      "pixel_x": 394.0,
+      "pixel_y": 467.5,
+      "x": 0.18560354,
+      "y": 0.06119734,
+      "x_uncertainty": 0.00039867,
+      "y_uncertainty": 0.00039911,
+      "marker_radius_evidence_pixels": 13.1814,
+      "core_foreground_fraction": 1.0,
+      "confidence": 1.0,
+      "component_id": 7,
+      "status": "visible_marker_candidate",
+      "component_peak_count": 1,
+      "value_status": "visible_marker_candidate"
+    }
+  ],
+  "components": [
+    {
+      "component_id": 1,
+      "bounds": [
+        175,
+        31,
+        196,
+        548
+      ],
+      "area_pixels": 1905,
+      "peak_count": 1,
+      "split_status": "single_peak"
+    },
+    {
+      "component_id": 2,
+      "bounds": [
+        271,
+        48,
+        297,
+        74
+      ],
+      "area_pixels": 595,
+      "peak_count": 1,
+      "split_status": "single_peak"
+    },
+    {
+      "component_id": 3,
+      "bounds": [
+        293,
+        219,
+        339,
+        265
+      ],
+      "area_pixels": 1370,
+      "peak_count": 3,
+      "split_status": "distance_transform_split"
+    },
+    {
+      "component_id": 4,
+      "bounds": [
+        346,
+        261,
+        372,
+        287
+      ],
+      "area_pixels": 589,
+      "peak_count": 1,
+      "split_status": "single_peak"
+    },
+    {
+      "component_id": 5,
+      "bounds": [
+        314,
+        319,
+        341,
+        346
+      ],
+      "area_pixels": 603,
+      "peak_count": 1,
+      "split_status": "single_peak"
+    },
+    {
+      "component_id": 6,
+      "bounds": [
+        336,
+        374,
+        388,
+        423
+      ],
+      "area_pixels": 1471,
+      "peak_count": 3,
+      "split_status": "distance_transform_split"
+    },
+    {
+      "component_id": 7,
+      "bounds": [
+        381,
+        454,
+        407,
+        481
+      ],
+      "area_pixels": 595,
+      "peak_count": 1,
+      "split_status": "single_peak"
+    }
+  ],
+  "suppressed_peaks": [
+    {
+      "x": 356.5,
+      "y": 388.0,
+      "radius": 13.0,
+      "plateau_pixels": 2.0,
+      "reason": "peak_too_close_to_stronger_peak",
+      "selected_peak": {
+        "x": 350.0,
+        "y": 388.0
+      },
+      "separation_pixels": 6.5,
+      "required_separation_pixels": 11.250791816711425
+    },
+    {
+      "x": 320.0,
+      "y": 250.0,
+      "radius": 12.787599563598633,
+      "plateau_pixels": 1.0,
+      "reason": "peak_too_close_to_stronger_peak",
+      "selected_peak": {
+        "x": 313.5,
+        "y": 247.5
+      },
+      "separation_pixels": 6.96419413859206,
+      "required_separation_pixels": 11.078885078430176
+    }
+  ],
+  "validation": {
+    "role": "validation only; the annotation is never used to add, remove, or move points",
+    "annotated_pearson_r": null,
+    "pearson_tolerance": 0.03,
+    "recomputed_pearson_r": -0.0034255975397239117,
+    "absolute_difference": null,
+    "status": "computed_without_annotation"
+  },
+  "required_review": [
+    "Open the overlay at original resolution and verify every accepted ring is centred on a visible marker.",
+    "Review every multi-peak component and every suppressed peak before publishing numeric output."
+  ],
+  "limitations": [
+    "This candidate recovers compact filled visible marker centres only.",
+    "Perfectly coincident, fully occluded, hollow, or non-compact markers are not recovered by this route.",
+    "A supplied correlation annotation validates the result but never changes detected geometry.",
+    "Axes, curves, text, and legends that are as thick and compact as markers may require a verified exclusion region."
+  ],
+  "case_id": "nature-09789-fig4a",
+  "panel_mapping": "Fig. 4a trial- and subject-level variance scatter",
+  "source_figure": {
+    "file": "fig4-09789.png",
+    "sha256": "c463357fc0b4e60deb656b527babd4eab37e4cf9bcee12b8cea3de3a6cf468ce",
+    "crop_original_pixels": [
+      120,
+      0,
+      1490,
+      650
+    ]
+  },
+  "visible_marker_count": 11,
+  "semantic_mapping": {
+    "basis": "reviewed legend colour and original-pixel marker-centre association after extraction",
+    "mapping": [
+      {
+        "series": "P(Switch)",
+        "fill": "#000000",
+        "point_id": 2,
+        "reviewed_center": [
+          284.0,
+          61.0
+        ],
+        "association_residual_pixels": 0.0
+      },
+      {
+        "series": "Goalie Y position",
+        "fill": "#800080",
+        "point_id": 7,
+        "reviewed_center": [
+          350.0,
+          388.0
+        ],
+        "association_residual_pixels": 0.0
+      },
+      {
+        "series": "Shooter X position",
+        "fill": "#0000ff",
+        "point_id": 6,
+        "reviewed_center": [
+          327.6667,
+          332.3333
+        ],
+        "association_residual_pixels": 0.0
+      },
+      {
+        "series": "Shooter Y position",
+        "fill": "#008080",
+        "point_id": 3,
+        "reviewed_center": [
+          306.0,
+          232.0
+        ],
+        "association_residual_pixels": 0.0
+      },
+      {
+        "series": "Goalie Y velocity",
+        "fill": "#008000",
+        "point_id": 9,
+        "reviewed_center": [
+          362.0,
+          388.0
+        ],
+        "association_residual_pixels": 0.0
+      },
+      {
+        "series": "Shooter Y velocity",
+        "fill": "#00cd00",
+        "point_id": 5,
+        "reviewed_center": [
+          325.5,
+          252.0
+        ],
+        "association_residual_pixels": 0.0
+      },
+      {
+        "series": "Opponent identity",
+        "fill": "#ffff00",
+        "point_id": 10,
+        "reviewed_center": [
+          376.0,
+          410.0
+        ],
+        "association_residual_pixels": 0.0
+      },
+      {
+        "series": "Time since last change point",
+        "fill": "#ffa500",
+        "point_id": 4,
+        "reviewed_center": [
+          313.5,
+          247.5
+        ],
+        "association_residual_pixels": 0.0
+      },
+      {
+        "series": "Opponent experience",
+        "fill": "#ff0000",
+        "point_id": 11,
+        "reviewed_center": [
+          394.0,
+          467.5
+        ],
+        "association_residual_pixels": 0.0
+      },
+      {
+        "series": "Opponent action metric",
+        "fill": "#ff69b4",
+        "point_id": 8,
+        "reviewed_center": [
+          359.0,
+          274.0
+        ],
+        "association_residual_pixels": 0.0
+      },
+      {
+        "series": "Permutations of all variables",
+        "fill": "#c0c0c0",
+        "point_id": 1,
+        "reviewed_center": [
+          185.0,
+          536.0
+        ],
+        "association_residual_pixels": 0.0
+      }
+    ]
+  },
+  "overlay_review": {
+    "status": "verified",
+    "accepted_rings": 11,
+    "multi_peak_components_reviewed": [
+      3,
+      6
+    ],
+    "suppressed_peaks_reviewed": 2
+  },
+  "primary_csv": {
+    "file": "data.csv",
+    "role": "raster-visible extraction only",
+    "rows": 11
+  },
+  "source_data_role": "not_used",
+  "webplotdigitizer_comparison": "not_compared"
+}

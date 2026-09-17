@@ -1,0 +1,61 @@
+{
+  "schema_version": 1,
+  "status": "needs_verified_configuration",
+  "inspection": {
+    "input_file": "F:\\AI\\thu-digitizer\\gallery\\assets\\cases\\nature-21043-fig6a\\original.png",
+    "input_sha256": "0733f1ddefae03c926fe64076704a9f6cd890d3e706716aea0e61711d9eb2896",
+    "file_size_bytes": 206317,
+    "media_kind": "raster",
+    "coordinate_space": "pixel",
+    "format": "PNG",
+    "mode": "RGB",
+    "width": 1120,
+    "height": 500,
+    "appearance": {
+      "background_proposal": "light",
+      "border_median_luminance_0_255": 254.99999999999997,
+      "border_colour_span_median_0_255": 0.0,
+      "pixel_count": 560000,
+      "role": "appearance proposal only; not chart classification or numeric evidence"
+    }
+  },
+  "route_selection": {
+    "chart_type": "scatter",
+    "primary": {
+      "route_id": "raster_scatter_color",
+      "title": "Colour-distinct calibrated raster scatter",
+      "chart_types": [
+        "scatter"
+      ],
+      "media_kinds": [
+        "raster"
+      ],
+      "coordinate_models": [
+        "cartesian_linear"
+      ],
+      "mark_grammars": [
+        "point"
+      ],
+      "maturity": "validated_local_stable_limited",
+      "implementation": "scripts/digitize_line_chart.py",
+      "required_confirmations": [
+        "panel_roi",
+        "plot_bounds",
+        "x_axis",
+        "y_axis",
+        "series_colors"
+      ],
+      "recoverable": "Centres of separable, colour-distinct visible markers.",
+      "non_recoverable": "Occluded points, fused same-colour clusters, and hidden source rows.",
+      "automated_extraction": true
+    },
+    "fallback": null,
+    "decision": "needs_verified_configuration",
+    "reason": "A route is registered, but all required confirmations remain explicit before extraction."
+  },
+  "figure_spec_status": "valid_template_not_yet_verified",
+  "safety": {
+    "numeric_extraction_authorized": false,
+    "reason": "Preflight routing never converts proposed chart type, ROI, axes, or series into verified values."
+  }
+}

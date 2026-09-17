@@ -1,0 +1,53 @@
+{
+  "version": 1,
+  "skills": {
+    "paper-reading-experiment-design": {
+      "source": "snake-fan/Paper-Reading-Skills",
+      "sourceType": "github",
+      "skillPath": "skills/07-experiment-design/SKILL.md",
+      "computedHash": "121796ac680552b5ee8431e2caf5804cf9eeb7086b46e452ed6569f147a23e3a"
+    },
+    "paper-reading-field-map": {
+      "source": "snake-fan/Paper-Reading-Skills",
+      "sourceType": "github",
+      "skillPath": "skills/01-field-map/SKILL.md",
+      "computedHash": "e37a685001be623a98dcfa3f5e52ada272125d87bad92037c825537ce8e7d556"
+    },
+    "paper-reading-method-commitment": {
+      "source": "snake-fan/Paper-Reading-Skills",
+      "sourceType": "github",
+      "skillPath": "skills/06-method-commitment/SKILL.md",
+      "computedHash": "21d199da22b89b2c051765a22d42740160ad5543e75b989ac9c4fff42273d0d3"
+    },
+    "paper-reading-method-inspiration": {
+      "source": "snake-fan/Paper-Reading-Skills",
+      "sourceType": "github",
+      "skillPath": "skills/05-method-inspiration/SKILL.md",
+      "computedHash": "1c21441397fc51cab9b5ed93c6a3296508b3d78068b0376d2041614854c3bea4"
+    },
+    "paper-reading-problem-reality-check": {
+      "source": "snake-fan/Paper-Reading-Skills",
+      "sourceType": "github",
+      "skillPath": "skills/03-problem-reality-check/SKILL.md",
+      "computedHash": "2091a1ffb673133fb5f11d9abe8d9504b070453950c81923fba2b547523618b0"
+    },
+    "paper-reading-research-framing": {
+      "source": "snake-fan/Paper-Reading-Skills",
+      "sourceType": "github",
+      "skillPath": "skills/08-research-framing/SKILL.md",
+      "computedHash": "e7fa79753d6b74f2e93fac6d170796d0c3ebf1dce607f6fe97fe118aebb8cd63"
+    },
+    "paper-reading-research-question": {
+      "source": "snake-fan/Paper-Reading-Skills",
+      "sourceType": "github",
+      "skillPath": "skills/02-research-question/SKILL.md",
+      "computedHash": "bd487128e43d382222b767f0ae4e9f3c37bc52b1ee3a7b22d504e4a4bcd26b92"
+    },
+    "paper-reading-theoretical-grounding": {
+      "source": "snake-fan/Paper-Reading-Skills",
+      "sourceType": "github",
+      "skillPath": "skills/04-theoretical-grounding/SKILL.md",
+      "computedHash": "9810ea2b08d829eec68ad250948b86b536e790c7f594390916f0ce47d52de30d"
+    }
+  }
+}

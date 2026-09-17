@@ -1,0 +1,47 @@
+{
+  "skill_name": "extract-figures",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Extract all figures from Draft/CBAM_20260501.docx and put them in a separate subfolder. This will be incorporated into latex file later.",
+      "expected_output": "A figures/ subfolder with 4 panel images (Figure 1, 2x2 layout), converted from EMF to 300 DPI PNG, named by content (e.g., fig1_eu_new_supplier.png), plus a README.md with mapping table, captions, and a ready-to-paste LaTeX subcaption snippet. EMF originals preserved alongside.",
+      "files": ["Draft/CBAM_20260501.docx"],
+      "assertions": [
+        {"name": "png_count", "description": "At least 4 PNG files exist in the output folder"},
+        {"name": "emf_preserved", "description": "Original EMF/WMF files are preserved alongside PNGs"},
+        {"name": "readme_exists", "description": "README.md exists in the output folder"},
+        {"name": "readme_has_latex", "description": "README contains LaTeX figure code (\\begin{figure} or \\includegraphics)"},
+        {"name": "readme_has_caption", "description": "README contains figure caption text from the document"},
+        {"name": "content_aware_naming", "description": "At least one PNG has a content-aware name (not img_\\d+\\.png pattern)"}
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "Pull the charts out of Draft/CBAM_20260501.docx — I need them for my Overleaf project.",
+      "expected_output": "Same as eval 1. Tests casual phrasing ('charts', 'Overleaf').",
+      "files": ["Draft/CBAM_20260501.docx"],
+      "assertions": [
+        {"name": "png_count", "description": "At least 4 PNG files exist in the output folder"},
+        {"name": "emf_preserved", "description": "Original EMF/WMF files are preserved alongside PNGs"},
+        {"name": "readme_exists", "description": "README.md exists in the output folder"},
+        {"name": "readme_has_latex", "description": "README contains LaTeX figure code (\\begin{figure} or \\includegraphics)"},
+        {"name": "readme_has_caption", "description": "README contains figure caption text from the document"},
+        {"name": "content_aware_naming", "description": "At least one PNG has a content-aware name (not img_\\d+\\.png pattern)"}
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "Get the images from Draft/CBAM_20260501.docx and make them LaTeX-ready.",
+      "expected_output": "Same as eval 1. Tests a shorter, more direct phrasing.",
+      "files": ["Draft/CBAM_20260501.docx"],
+      "assertions": [
+        {"name": "png_count", "description": "At least 4 PNG files exist in the output folder"},
+        {"name": "emf_preserved", "description": "Original EMF/WMF files are preserved alongside PNGs"},
+        {"name": "readme_exists", "description": "README.md exists in the output folder"},
+        {"name": "readme_has_latex", "description": "README contains LaTeX figure code (\\begin{figure} or \\includegraphics)"},
+        {"name": "readme_has_caption", "description": "README contains figure caption text from the document"},
+        {"name": "content_aware_naming", "description": "At least one PNG has a content-aware name (not img_\\d+\\.png pattern)"}
+      ]
+    }
+  ]
+}

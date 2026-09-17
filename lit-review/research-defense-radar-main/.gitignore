@@ -1,0 +1,15 @@
+# Generated packages
+dist/
+
+# User research state — never commit private project material
+research-radar/
+radar-state.json
+observations.json
+search-log.jsonl
+alerts/
+
+# Python and OS
+__pycache__/
+*.py[cod]
+.DS_Store
+Thumbs.db

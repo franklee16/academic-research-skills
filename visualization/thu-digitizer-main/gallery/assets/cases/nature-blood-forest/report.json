@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "case_id": "nature-blood-forest",
+  "status": "visible_geometry_extracted",
+  "scope": "Full Fig. 2: 29 point estimates and horizontal confidence-interval geometry.",
+  "original_sha256": "57d13b2a5d05db6a4db12a8e001acc39c42b391080bc2fc886b32f7d4b54b537",
+  "supplementary_workbook_sha256": "e11bdb4d0e030f57a76a0741b0aa21fc70dd9130204206f5b2b651b64a7a775b",
+  "observations": 29,
+  "calibration": {
+    "x": [
+      {
+        "pixel": 169.0,
+        "value": 0.0
+      },
+      {
+        "pixel": 441.0,
+        "value": 1.0
+      }
+    ],
+    "axis_type": "linear",
+    "source": "visible dashed reference lines and labeled ticks"
+  },
+  "validation": {
+    "complete_point_rows": 29,
+    "mean_geometry_confidence": 0.961
+  },
+  "source_mapping": {
+    "status": "not_mapped_in_this_build",
+    "reason": "The official 7.2 MB Supplementary Data 1-9 workbook is preserved and linked, but the current spreadsheet importer timed out before a defensible sheet-to-figure mapping was completed."
+  },
+  "limitations": [
+    "Confidence intervals are visible geometry; the report does not infer the statistical method beyond the article caption.",
+    "JPEG antialiasing and overlapping gridlines limit endpoint precision."
+  ]
+}

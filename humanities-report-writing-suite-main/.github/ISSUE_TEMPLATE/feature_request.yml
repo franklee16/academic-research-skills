@@ -1,0 +1,32 @@
+name: 功能建议
+description: 建议新的报告场景、材料处理方式或兼容性改进
+title: "[Feature] "
+labels:
+  - enhancement
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: 使用场景与问题
+      description: 说明目前在哪个真实任务中遇到了什么困难
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: 建议方案
+      description: 说明希望哪个 Skill 如何处理，不必先设计完整实现
+    validations:
+      required: true
+  - type: textarea
+    id: materials
+    attributes:
+      label: 可公开的示例
+      description: 仅提供脱敏或公开材料，不要上传真实调查对象信息
+  - type: checkboxes
+    id: scope
+    attributes:
+      label: 范围确认
+      options:
+        - label: 该建议与人文社科报告的材料审读、检索、写作或 Word 交付有关
+          required: true

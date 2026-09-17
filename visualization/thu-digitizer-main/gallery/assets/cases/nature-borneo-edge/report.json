@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "case_id": "nature-borneo-edge",
+  "status": "official_source_data_mapped",
+  "scope": "Full Fig. 2: panel a source points plus reported models; panel b source histogram geometry.",
+  "original_sha256": "ca03b4effd3427cc6adce6f09350029dd6f566357229f4e1b8005777784f34f3",
+  "source_data_sha256": "65177bbfff5ca2347e1356ebb5ef21fe836bc6a03948e142a37f88fc5c338928",
+  "source_rows": 71,
+  "panel_a_visible_rows": 50,
+  "panel_a_out_of_range_rows": 21,
+  "groups": {
+    "interior": 49,
+    "edge": 22
+  },
+  "calibration": {
+    "panel_a_x": [
+      {
+        "pixel": 70,
+        "value": 0
+      },
+      {
+        "pixel": 419,
+        "value": 2000
+      }
+    ],
+    "panel_a_y": [
+      {
+        "pixel": 169,
+        "value": 0
+      },
+      {
+        "pixel": 93,
+        "value": 4
+      }
+    ],
+    "axis_type": "linear"
+  },
+  "validation": {
+    "raster_support_within_5px": 0.46,
+    "median_nearest_ink_distance_px": 6.162,
+    "source_count_matches_caption": true,
+    "registration_denominator": "50 source rows inside the visible panel-a axis range"
+  },
+  "limitations": [
+    "The solid and dashed model curves are reconstructed from the reported breakpoint/asymptote and source points; curve parameters beyond those reported are fitted for display.",
+    "Twenty-one source rows have edge distances above the visible 2000 m panel-a axis limit; they remain in the CSV and panel-b histogram but are not drawn onto the panel-a overlay.",
+    "Raster support checks registration against visible marks; they are not independent ground-truth measurements."
+  ]
+}

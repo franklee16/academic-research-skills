@@ -1,0 +1,13 @@
+intersection,visible_count,source_count,count_error,visible_members,source_members,membership_match,validation_status
+1,3219,3219,0,Direct Match;Non-Synon;Position-Specific;Diagnosis Match;AMP Tier I,AMP Tier I;Diagnosis Match;Direct Match;Non-Synon;Position-Specific,True,validated
+2,1929,1929,0,Direct Match;Non-Synon;Position-Specific;Diagnosis Match,Diagnosis Match;Direct Match;Non-Synon;Position-Specific,True,validated
+3,1347,1347,0,Direct Match;Non-Synon,Direct Match;Non-Synon,True,validated
+4,878,878,0,Direct Match;Non-Synon;Position-Specific,Direct Match;Non-Synon;Position-Specific,True,validated
+5,818,818,0,Direct Match;Non-Synon;Diagnosis Match,Diagnosis Match;Direct Match;Non-Synon,True,validated
+6,249,249,0,Direct Match;Non-Synon;Diagnosis Match;AMP Tier I,AMP Tier I;Diagnosis Match;Direct Match;Non-Synon,True,validated
+7,206,206,0,Direct Match;Non-Synon;Position-Specific;AMP Tier I,AMP Tier I;Direct Match;Non-Synon;Position-Specific,True,validated
+8,121,121,0,Direct Match;Non-Synon;AMP Tier I,AMP Tier I;Direct Match;Non-Synon,True,validated
+9,14,14,0,Direct Match;Position-Specific,Direct Match;Position-Specific,True,validated
+10,3,3,0,Direct Match;Position-Specific;Diagnosis Match,Diagnosis Match;Direct Match;Position-Specific,True,validated
+11,1,1,0,Direct Match;Position-Specific;AMP Tier I,AMP Tier I;Direct Match;Position-Specific,True,validated
+12,1,1,0,Direct Match;Position-Specific;Diagnosis Match;AMP Tier I,AMP Tier I;Diagnosis Match;Direct Match;Position-Specific,True,validated

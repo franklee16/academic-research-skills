@@ -1,0 +1,49 @@
+.DS_Store
+*.log
+*.tmp
+.idea/
+.vscode/
+.claude/
+
+# Python
+__pycache__/
+*.pyc
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+
+# R
+.Rhistory
+.RData
+.Rproj.user/
+renv/library/
+
+# Local env and dependencies
+.env
+node_modules/
+
+# Template run outputs
+data/raw/
+data/intermediate/
+logs/
+output/
+
+# Keep the tracked replication skeleton layout.
+!examples/replication-package-skeleton/data/
+!examples/replication-package-skeleton/data/raw/
+!examples/replication-package-skeleton/data/raw/.gitkeep
+!examples/replication-package-skeleton/data/intermediate/
+!examples/replication-package-skeleton/data/intermediate/.gitkeep
+!examples/replication-package-skeleton/data/codebook/
+!examples/replication-package-skeleton/data/codebook/.gitkeep
+!examples/replication-package-skeleton/docs/
+!examples/replication-package-skeleton/docs/.gitkeep
+!examples/replication-package-skeleton/logs/
+!examples/replication-package-skeleton/logs/.gitkeep
+!examples/replication-package-skeleton/output/
+!examples/replication-package-skeleton/output/tables/
+!examples/replication-package-skeleton/output/tables/.gitkeep
+!examples/replication-package-skeleton/output/figures/
+!examples/replication-package-skeleton/output/figures/.gitkeep

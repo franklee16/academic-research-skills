@@ -1,0 +1,94 @@
+{
+  "schema_version": 1,
+  "status": "needs_verified_configuration",
+  "source": {
+    "input_file": "F:\\AI\\thu-digitizer\\gallery\\assets\\cases\\nature-00142-fig4a\\original.png",
+    "sha256": "8716ce91ae2b94c3c3add8ee5a63e8886085eee571141e19f1887fb1d91ff936",
+    "media_kind": "raster",
+    "coordinate_space": "pixel",
+    "width": 430,
+    "height": 280,
+    "page": null
+  },
+  "panels": [
+    {
+      "panel_id": "panel-1",
+      "bounds": [
+        0.0,
+        0.0,
+        430,
+        280
+      ],
+      "bounds_verification": "proposed",
+      "plot_bounds": [
+        0.0,
+        0.0,
+        430,
+        280
+      ],
+      "plot_bounds_verification": "proposed",
+      "chart_type": "line",
+      "chart_type_verification": "user_provided",
+      "coordinate_model": "cartesian_linear",
+      "coordinate_model_verification": "proposed",
+      "axes": [
+        {
+          "axis_id": "x",
+          "orientation": "x",
+          "scale": "linear",
+          "verification": "missing",
+          "anchors": []
+        },
+        {
+          "axis_id": "y",
+          "orientation": "y",
+          "scale": "linear",
+          "verification": "missing",
+          "anchors": []
+        }
+      ],
+      "series": [],
+      "mark_grammars": [
+        "curve",
+        "marker",
+        "error_interval"
+      ],
+      "route": {
+        "route_id": "raster_line_color",
+        "maturity": "validated_local_stable",
+        "implementation": "scripts/digitize_line_chart.py",
+        "automated_extraction": true
+      },
+      "required_confirmations": [
+        "panel_roi",
+        "plot_bounds",
+        "x_axis",
+        "y_axis",
+        "series_colors",
+        "sample_positions"
+      ],
+      "confirmations": {
+        "panel_roi": "missing",
+        "plot_bounds": "missing",
+        "x_axis": "missing",
+        "y_axis": "missing",
+        "series_colors": "missing",
+        "sample_positions": "missing"
+      },
+      "recoverable": "Visible colour-distinct curve samples, markers, and separately visible pale error intervals.",
+      "non_recoverable": "Hidden spans, source model parameters, and raw observations."
+    }
+  ],
+  "evidence_contract": {
+    "required": [
+      "input_hash",
+      "panel_and_plot_bounds",
+      "calibration_anchors",
+      "immutable_extraction_csv",
+      "json_report",
+      "overlay_or_recreation",
+      "confidence_and_refusal_reasons"
+    ],
+    "source_data_role": "independent_validation_only"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "name": "paper-summary-skills",
+  "owner": {
+    "name": "Yingyan Chen"
+  },
+  "plugins": [
+    {
+      "name": "paper-summary",
+      "source": "./",
+      "description": "科研文献归档、打标签与问答检索技能包。"
+    }
+  ]
+}

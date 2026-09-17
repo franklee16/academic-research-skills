@@ -1,0 +1,835 @@
+{
+  "schema_version": 1,
+  "extractor": "candidate_labelled_donut_annular_validation",
+  "algorithm_version": "1.0.0",
+  "deterministic_run_id": "e102b62307d50aab",
+  "status": "candidate",
+  "numeric_output_authorized": true,
+  "numeric_authorization_scope": "all_declared_visible_labels",
+  "input": {
+    "file": "measurement-source.png",
+    "sha256": "4dd50564058d2823dfe740ec3df49d6f451088cebd402b51d9890fdfc3282e46",
+    "dimensions": [
+      2050,
+      1399
+    ],
+    "coordinate_space": "original_raster_pixels",
+    "resampled_for_measurement": false
+  },
+  "panel_bounds": [
+    1000,
+    420,
+    2024,
+    634
+  ],
+  "parameters": {
+    "angle_samples": 7200,
+    "color_tolerance": 20.0,
+    "minimum_sector_share_percent": 0.5,
+    "transcription_tolerance": 1e-09,
+    "maximum_geometry_error_pp": 2.0
+  },
+  "recoverable_representation": "explicitly visible numeric labels validated against visible sector geometry",
+  "primary_values_normalized_or_forced_to_100": false,
+  "records": [
+    {
+      "group": "Normal",
+      "series": "Normal_KC_Diff",
+      "color": "#f6c74f",
+      "label_anchor_x": 1118,
+      "label_anchor_y": 542,
+      "transcription_a": 59.5,
+      "transcription_b": 59.5,
+      "transcriptions_match": true,
+      "status": "extracted",
+      "reason_code": "visible_label_verified",
+      "reason": "matching transcriptions and independent annular geometry validation",
+      "displayed_value_percent": 59.5,
+      "group_visible_label_sum_percent": 97.5,
+      "normalized_visible_label_share_validation_only": 61.02564102564103,
+      "geometry_share_percent_validation_only": 62.924244594014034,
+      "geometry_error_pp": 1.8986035683730051,
+      "numeric_output_authorized": true,
+      "values_normalized_or_completed": false
+    },
+    {
+      "group": "Normal",
+      "series": "Tumor_KC_Cyc",
+      "color": "#9dcc80",
+      "label_anchor_x": 1227,
+      "label_anchor_y": 454,
+      "transcription_a": 16.6,
+      "transcription_b": 16.6,
+      "transcriptions_match": true,
+      "status": "extracted",
+      "reason_code": "visible_label_verified",
+      "reason": "matching transcriptions and independent annular geometry validation",
+      "displayed_value_percent": 16.6,
+      "group_visible_label_sum_percent": 97.5,
+      "normalized_visible_label_share_validation_only": 17.02564102564103,
+      "geometry_share_percent_validation_only": 16.153515680939424,
+      "geometry_error_pp": 0.8721253447016046,
+      "numeric_output_authorized": true,
+      "values_normalized_or_completed": false
+    },
+    {
+      "group": "Normal",
+      "series": "Tumor_KC_Basal",
+      "color": "#54caf5",
+      "label_anchor_x": 1248,
+      "label_anchor_y": 516,
+      "transcription_a": 18.9,
+      "transcription_b": 18.9,
+      "transcriptions_match": true,
+      "status": "extracted",
+      "reason_code": "visible_label_verified",
+      "reason": "matching transcriptions and independent annular geometry validation",
+      "displayed_value_percent": 18.9,
+      "group_visible_label_sum_percent": 97.5,
+      "normalized_visible_label_share_validation_only": 19.384615384615383,
+      "geometry_share_percent_validation_only": 18.946011742803954,
+      "geometry_error_pp": 0.4386036418114294,
+      "numeric_output_authorized": true,
+      "values_normalized_or_completed": false
+    },
+    {
+      "group": "Normal",
+      "series": "TSK",
+      "color": "#ef6633",
+      "label_anchor_x": 1227,
+      "label_anchor_y": 592,
+      "transcription_a": 2.5,
+      "transcription_b": 2.5,
+      "transcriptions_match": true,
+      "status": "extracted",
+      "reason_code": "visible_label_verified",
+      "reason": "matching transcriptions and independent annular geometry validation",
+      "displayed_value_percent": 2.5,
+      "group_visible_label_sum_percent": 97.5,
+      "normalized_visible_label_share_validation_only": 2.5641025641025643,
+      "geometry_share_percent_validation_only": 1.9762279822425892,
+      "geometry_error_pp": 0.5878745818599751,
+      "numeric_output_authorized": true,
+      "values_normalized_or_completed": false
+    },
+    {
+      "group": "AK",
+      "series": "Normal_KC_Diff",
+      "color": "#f6c74f",
+      "label_anchor_x": 1327,
+      "label_anchor_y": 512,
+      "transcription_a": 48.7,
+      "transcription_b": 48.7,
+      "transcriptions_match": true,
+      "status": "extracted",
+      "reason_code": "visible_label_verified",
+      "reason": "matching transcriptions and independent annular geometry validation",
+      "displayed_value_percent": 48.7,
+      "group_visible_label_sum_percent": 90.60000000000001,
+      "normalized_visible_label_share_validation_only": 53.75275938189845,
+      "geometry_share_percent_validation_only": 54.79353161998267,
+      "geometry_error_pp": 1.040772238084223,
+      "numeric_output_authorized": true,
+      "values_normalized_or_completed": false
+    },
+    {
+      "group": "AK",
+      "series": "Tumor_KC_Diff",
+      "color": "#799ab9",
+      "label_anchor_x": 1410,
+      "label_anchor_y": 443,
+      "transcription_a": 9.2,
+      "transcription_b": 9.2,
+      "transcriptions_match": true,
+      "status": "extracted",
+      "reason_code": "visible_label_verified",
+      "reason": "matching transcriptions and independent annular geometry validation",
+      "displayed_value_percent": 9.2,
+      "group_visible_label_sum_percent": 90.60000000000001,
+      "normalized_visible_label_share_validation_only": 10.154525386313464,
+      "geometry_share_percent_validation_only": 9.659254981230147,
+      "geometry_error_pp": 0.49527040508331766,
+      "numeric_output_authorized": true,
+      "values_normalized_or_completed": false
+    },
+    {
+      "group": "AK",
+      "series": "Tumor_KC_Cyc",
+      "color": "#9dcc80",
+      "label_anchor_x": 1456,
+      "label_anchor_y": 469,
+      "transcription_a": 3.3,
+      "transcription_b": 3.3,
+      "transcriptions_match": true,
+      "status": "extracted",
+      "reason_code": "visible_label_verified",
+      "reason": "matching transcriptions and independent annular geometry validation",
+      "displayed_value_percent": 3.3,
+      "group_visible_label_sum_percent": 90.60000000000001,
+      "normalized_visible_label_share_validation_only": 3.6423841059602644,
+      "geometry_share_percent_validation_only": 3.0753681778804505,
+      "geometry_error_pp": 0.5670159280798139,
+      "numeric_output_authorized": true,
+      "values_normalized_or_completed": false
+    },
+    {
+      "group": "AK",
+      "series": "Tumor_KC_Basal",
+      "color": "#54caf5",
+      "label_anchor_x": 1490,
+      "label_anchor_y": 535,
+      "transcription_a": 22.2,
+      "transcription_b": 22.2,
+      "transcriptions_match": true,
+      "status": "extracted",
+      "reason_code": "visible_label_verified",
+      "reason": "matching transcriptions and independent annular geometry validation",
+      "displayed_value_percent": 22.2,
+      "group_visible_label_sum_percent": 90.60000000000001,
+      "normalized_visible_label_share_validation_only": 24.503311258278142,
+      "geometry_share_percent_validation_only": 24.92058908460872,
+      "geometry_error_pp": 0.4172778263305794,
+      "numeric_output_authorized": true,
+      "values_normalized_or_completed": false
+    },
+    {
+      "group": "AK",
+      "series": "TSK",
+      "color": "#ef6633",
+      "label_anchor_x": 1441,
+      "label_anchor_y": 594,
+      "transcription_a": 7.2,
+      "transcription_b": 7.2,
+      "transcriptions_match": true,
+      "status": "extracted",
+      "reason_code": "visible_label_verified",
+      "reason": "matching transcriptions and independent annular geometry validation",
+      "displayed_value_percent": 7.2,
+      "group_visible_label_sum_percent": 90.60000000000001,
+      "normalized_visible_label_share_validation_only": 7.947019867549668,
+      "geometry_share_percent_validation_only": 7.551256136298007,
+      "geometry_error_pp": 0.39576373125166064,
+      "numeric_output_authorized": true,
+      "values_normalized_or_completed": false
+    },
+    {
+      "group": "Primary",
+      "series": "Normal_KC_Diff",
+      "color": "#f6c74f",
+      "label_anchor_x": 1584,
+      "label_anchor_y": 447,
+      "transcription_a": 10.3,
+      "transcription_b": 10.3,
+      "transcriptions_match": true,
+      "status": "extracted",
+      "reason_code": "visible_label_verified",
+      "reason": "matching transcriptions and independent annular geometry validation",
+      "displayed_value_percent": 10.3,
+      "group_visible_label_sum_percent": 70.30000000000001,
+      "normalized_visible_label_share_validation_only": 14.651493598862018,
+      "geometry_share_percent_validation_only": 14.101646385110952,
+      "geometry_error_pp": 0.5498472137510664,
+      "numeric_output_authorized": true,
+      "values_normalized_or_completed": false
+    },
+    {
+      "group": "Primary",
+      "series": "Tumor_KC_Diff",
+      "color": "#799ab9",
+      "label_anchor_x": 1720,
+      "label_anchor_y": 478,
+      "transcription_a": 25.9,
+      "transcription_b": 25.9,
+      "transcriptions_match": true,
+      "status": "extracted",
+      "reason_code": "visible_label_verified",
+      "reason": "matching transcriptions and independent annular geometry validation",
+      "displayed_value_percent": 25.9,
+      "group_visible_label_sum_percent": 70.30000000000001,
+      "normalized_visible_label_share_validation_only": 36.84210526315789,
+      "geometry_share_percent_validation_only": 37.16535433070866,
+      "geometry_error_pp": 0.3232490675507691,
+      "numeric_output_authorized": true,
+      "values_normalized_or_completed": false
+    },
+    {
+      "group": "Primary",
+      "series": "Tumor_KC_Basal",
+      "color": "#54caf5",
+      "label_anchor_x": 1648,
+      "label_anchor_y": 616,
+      "transcription_a": 17.5,
+      "transcription_b": 17.5,
+      "transcriptions_match": true,
+      "status": "extracted",
+      "reason_code": "visible_label_verified",
+      "reason": "matching transcriptions and independent annular geometry validation",
+      "displayed_value_percent": 17.5,
+      "group_visible_label_sum_percent": 70.30000000000001,
+      "normalized_visible_label_share_validation_only": 24.893314366998574,
+      "geometry_share_percent_validation_only": 25.239799570508232,
+      "geometry_error_pp": 0.3464852035096584,
+      "numeric_output_authorized": true,
+      "values_normalized_or_completed": false
+    },
+    {
+      "group": "Primary",
+      "series": "TSK",
+      "color": "#ef6633",
+      "label_anchor_x": 1572,
+      "label_anchor_y": 538,
+      "transcription_a": 16.6,
+      "transcription_b": 16.6,
+      "transcriptions_match": true,
+      "status": "extracted",
+      "reason_code": "visible_label_verified",
+      "reason": "matching transcriptions and independent annular geometry validation",
+      "displayed_value_percent": 16.6,
+      "group_visible_label_sum_percent": 70.30000000000001,
+      "normalized_visible_label_share_validation_only": 23.613086770981507,
+      "geometry_share_percent_validation_only": 23.493199713672155,
+      "geometry_error_pp": 0.11988705730935223,
+      "numeric_output_authorized": true,
+      "values_normalized_or_completed": false
+    },
+    {
+      "group": "MET",
+      "series": "Normal_KC_Diff",
+      "color": "#f6c74f",
+      "label_anchor_x": 1811,
+      "label_anchor_y": 452,
+      "transcription_a": 6.6,
+      "transcription_b": 6.6,
+      "transcriptions_match": true,
+      "status": "extracted",
+      "reason_code": "visible_label_verified",
+      "reason": "matching transcriptions and independent annular geometry validation",
+      "displayed_value_percent": 6.6,
+      "group_visible_label_sum_percent": 73.6,
+      "normalized_visible_label_share_validation_only": 8.967391304347826,
+      "geometry_share_percent_validation_only": 8.628571428571428,
+      "geometry_error_pp": 0.33881987577639805,
+      "numeric_output_authorized": true,
+      "values_normalized_or_completed": false
+    },
+    {
+      "group": "MET",
+      "series": "Normal_KC_Basal",
+      "color": "#f1a93e",
+      "label_anchor_x": 1856,
+      "label_anchor_y": 443,
+      "transcription_a": 1.8,
+      "transcription_b": 1.8,
+      "transcriptions_match": true,
+      "status": "extracted",
+      "reason_code": "visible_label_verified",
+      "reason": "matching transcriptions and independent annular geometry validation",
+      "displayed_value_percent": 1.8,
+      "group_visible_label_sum_percent": 73.6,
+      "normalized_visible_label_share_validation_only": 2.4456521739130435,
+      "geometry_share_percent_validation_only": 1.8428571428571427,
+      "geometry_error_pp": 0.6027950310559007,
+      "numeric_output_authorized": true,
+      "values_normalized_or_completed": false
+    },
+    {
+      "group": "MET",
+      "series": "Tumor_KC_Diff",
+      "color": "#799ab9",
+      "label_anchor_x": 1895,
+      "label_anchor_y": 453,
+      "transcription_a": 7.2,
+      "transcription_b": 7.2,
+      "transcriptions_match": true,
+      "status": "extracted",
+      "reason_code": "visible_label_verified",
+      "reason": "matching transcriptions and independent annular geometry validation",
+      "displayed_value_percent": 7.2,
+      "group_visible_label_sum_percent": 73.6,
+      "normalized_visible_label_share_validation_only": 9.782608695652174,
+      "geometry_share_percent_validation_only": 9.385714285714286,
+      "geometry_error_pp": 0.3968944099378877,
+      "numeric_output_authorized": true,
+      "values_normalized_or_completed": false
+    },
+    {
+      "group": "MET",
+      "series": "Tumor_KC_Basal",
+      "color": "#54caf5",
+      "label_anchor_x": 1944,
+      "label_anchor_y": 538,
+      "transcription_a": 19.6,
+      "transcription_b": 19.6,
+      "transcriptions_match": true,
+      "status": "extracted",
+      "reason_code": "visible_label_verified",
+      "reason": "matching transcriptions and independent annular geometry validation",
+      "displayed_value_percent": 19.6,
+      "group_visible_label_sum_percent": 73.6,
+      "normalized_visible_label_share_validation_only": 26.630434782608702,
+      "geometry_share_percent_validation_only": 27.242857142857144,
+      "geometry_error_pp": 0.6124223602484413,
+      "numeric_output_authorized": true,
+      "values_normalized_or_completed": false
+    },
+    {
+      "group": "MET",
+      "series": "TSK",
+      "color": "#ef6633",
+      "label_anchor_x": 1788,
+      "label_anchor_y": 594,
+      "transcription_a": 38.4,
+      "transcription_b": 38.4,
+      "transcriptions_match": true,
+      "status": "extracted",
+      "reason_code": "visible_label_verified",
+      "reason": "matching transcriptions and independent annular geometry validation",
+      "displayed_value_percent": 38.4,
+      "group_visible_label_sum_percent": 73.6,
+      "normalized_visible_label_share_validation_only": 52.173913043478265,
+      "geometry_share_percent_validation_only": 52.9,
+      "geometry_error_pp": 0.7260869565217334,
+      "numeric_output_authorized": true,
+      "values_normalized_or_completed": false
+    }
+  ],
+  "geometry_by_group": {
+    "Normal": {
+      "center": [
+        1169,
+        535
+      ],
+      "radial_band": [
+        52,
+        65
+      ],
+      "angle_samples": 7200,
+      "classified_coverage": 0.9698611111111111,
+      "sectors": [
+        {
+          "series": "TSK",
+          "color": "#ef6633",
+          "classified_angle_count": 138,
+          "geometry_share_percent": 1.9762279822425892,
+          "mid_angle_degrees": 44.12500000000001,
+          "component_count": 1,
+          "status": "validation_geometry_only"
+        },
+        {
+          "series": "Tumor_KC_Basal",
+          "color": "#54caf5",
+          "classified_angle_count": 1323,
+          "geometry_share_percent": 18.946011742803954,
+          "mid_angle_degrees": 5.300000000000011,
+          "component_count": 1,
+          "status": "validation_geometry_only"
+        },
+        {
+          "series": "Tumor_KC_Cyc",
+          "color": "#9dcc80",
+          "classified_angle_count": 1128,
+          "geometry_share_percent": 16.153515680939424,
+          "mid_angle_degrees": -58.725,
+          "component_count": 1,
+          "status": "validation_geometry_only"
+        },
+        {
+          "series": "Normal_KC_Diff",
+          "color": "#f6c74f",
+          "classified_angle_count": 4394,
+          "geometry_share_percent": 62.924244594014034,
+          "mid_angle_degrees": 159.72500000000002,
+          "component_count": 1,
+          "status": "validation_geometry_only"
+        }
+      ],
+      "rejected_support": []
+    },
+    "AK": {
+      "center": [
+        1405,
+        536
+      ],
+      "radial_band": [
+        52,
+        65
+      ],
+      "angle_samples": 7200,
+      "classified_coverage": 0.9619444444444445,
+      "sectors": [
+        {
+          "series": "TSK",
+          "color": "#ef6633",
+          "classified_angle_count": 523,
+          "geometry_share_percent": 7.551256136298007,
+          "mid_angle_degrees": 62.45000000000001,
+          "component_count": 1,
+          "status": "validation_geometry_only"
+        },
+        {
+          "series": "Tumor_KC_Diff",
+          "color": "#799ab9",
+          "classified_angle_count": 669,
+          "geometry_share_percent": 9.659254981230147,
+          "mid_angle_degrees": -71.95,
+          "component_count": 1,
+          "status": "validation_geometry_only"
+        },
+        {
+          "series": "Tumor_KC_Basal",
+          "color": "#54caf5",
+          "classified_angle_count": 1726,
+          "geometry_share_percent": 24.92058908460872,
+          "mid_angle_degrees": 3.675000000000011,
+          "component_count": 1,
+          "status": "validation_geometry_only"
+        },
+        {
+          "series": "Tumor_KC_Cyc",
+          "color": "#9dcc80",
+          "classified_angle_count": 213,
+          "geometry_share_percent": 3.0753681778804505,
+          "mid_angle_degrees": -47.09999999999999,
+          "component_count": 1,
+          "status": "validation_geometry_only"
+        },
+        {
+          "series": "Normal_KC_Diff",
+          "color": "#f6c74f",
+          "classified_angle_count": 3795,
+          "geometry_share_percent": 54.79353161998267,
+          "mid_angle_degrees": 172.9,
+          "component_count": 1,
+          "status": "validation_geometry_only"
+        }
+      ],
+      "rejected_support": [
+        {
+          "series": "Normal_KC_Cyc",
+          "angle_count": 16,
+          "full_circle_share_percent": 0.2222222222222222,
+          "reason": "below_minimum_sector_share"
+        }
+      ]
+    },
+    "Primary": {
+      "center": [
+        1645,
+        535
+      ],
+      "radial_band": [
+        52,
+        65
+      ],
+      "angle_samples": 7200,
+      "classified_coverage": 0.9701388888888889,
+      "sectors": [
+        {
+          "series": "TSK",
+          "color": "#ef6633",
+          "classified_angle_count": 1641,
+          "geometry_share_percent": 23.493199713672155,
+          "mid_angle_degrees": 175.10000000000002,
+          "component_count": 1,
+          "status": "validation_geometry_only"
+        },
+        {
+          "series": "Tumor_KC_Diff",
+          "color": "#799ab9",
+          "classified_angle_count": 2596,
+          "geometry_share_percent": 37.16535433070866,
+          "mid_angle_degrees": -23.77499999999999,
+          "component_count": 1,
+          "status": "validation_geometry_only"
+        },
+        {
+          "series": "Tumor_KC_Basal",
+          "color": "#54caf5",
+          "classified_angle_count": 1763,
+          "geometry_share_percent": 25.239799570508232,
+          "mid_angle_degrees": 87.75000000000001,
+          "component_count": 1,
+          "status": "validation_geometry_only"
+        },
+        {
+          "series": "Normal_KC_Diff",
+          "color": "#f6c74f",
+          "classified_angle_count": 985,
+          "geometry_share_percent": 14.101646385110952,
+          "mid_angle_degrees": -116.85000000000001,
+          "component_count": 1,
+          "status": "validation_geometry_only"
+        }
+      ],
+      "rejected_support": [
+        {
+          "series": "Normal_KC_Cyc",
+          "angle_count": 14,
+          "full_circle_share_percent": 0.19444444444444445,
+          "reason": "below_minimum_sector_share"
+        }
+      ]
+    },
+    "MET": {
+      "center": [
+        1860,
+        535
+      ],
+      "radial_band": [
+        52,
+        65
+      ],
+      "angle_samples": 7200,
+      "classified_coverage": 0.9722222222222222,
+      "sectors": [
+        {
+          "series": "TSK",
+          "color": "#ef6633",
+          "classified_angle_count": 3703,
+          "geometry_share_percent": 52.9,
+          "mid_angle_degrees": 135.00000000000003,
+          "component_count": 1,
+          "status": "validation_geometry_only"
+        },
+        {
+          "series": "Tumor_KC_Diff",
+          "color": "#799ab9",
+          "classified_angle_count": 657,
+          "geometry_share_percent": 9.385714285714286,
+          "mid_angle_degrees": -73.14999999999999,
+          "component_count": 1,
+          "status": "validation_geometry_only"
+        },
+        {
+          "series": "Tumor_KC_Basal",
+          "color": "#54caf5",
+          "classified_angle_count": 1907,
+          "geometry_share_percent": 27.242857142857144,
+          "mid_angle_degrees": -7.049999999999992,
+          "component_count": 1,
+          "status": "validation_geometry_only"
+        },
+        {
+          "series": "Normal_KC_Basal",
+          "color": "#f1a93e",
+          "classified_angle_count": 129,
+          "geometry_share_percent": 1.8428571428571427,
+          "mid_angle_degrees": -95.44999999999999,
+          "component_count": 1,
+          "status": "validation_geometry_only"
+        },
+        {
+          "series": "Normal_KC_Diff",
+          "color": "#f6c74f",
+          "classified_angle_count": 604,
+          "geometry_share_percent": 8.628571428571428,
+          "mid_angle_degrees": -115.62499999999999,
+          "component_count": 1,
+          "status": "validation_geometry_only"
+        }
+      ],
+      "rejected_support": [
+        {
+          "series": "Normal_KC_Cyc",
+          "angle_count": 18,
+          "full_circle_share_percent": 0.25,
+          "reason": "below_minimum_sector_share"
+        }
+      ]
+    }
+  },
+  "coverage_ledger": {
+    "schema_version": 1,
+    "scope": "declared_visual_slots_only",
+    "expected_data_count_used": false,
+    "slot_fields": [
+      "group",
+      "series"
+    ],
+    "declared_slot_count": 18,
+    "authorized_slot_count": 18,
+    "coverage_fraction": 1.0,
+    "status_counts": {
+      "extracted": 18
+    },
+    "reason_code_counts": {
+      "visible_label_verified": 18
+    },
+    "slots": [
+      {
+        "slot": {
+          "group": "Normal",
+          "series": "Normal_KC_Diff"
+        },
+        "status": "extracted",
+        "reason_code": "visible_label_verified",
+        "numeric_output_authorized": true
+      },
+      {
+        "slot": {
+          "group": "Normal",
+          "series": "Tumor_KC_Cyc"
+        },
+        "status": "extracted",
+        "reason_code": "visible_label_verified",
+        "numeric_output_authorized": true
+      },
+      {
+        "slot": {
+          "group": "Normal",
+          "series": "Tumor_KC_Basal"
+        },
+        "status": "extracted",
+        "reason_code": "visible_label_verified",
+        "numeric_output_authorized": true
+      },
+      {
+        "slot": {
+          "group": "Normal",
+          "series": "TSK"
+        },
+        "status": "extracted",
+        "reason_code": "visible_label_verified",
+        "numeric_output_authorized": true
+      },
+      {
+        "slot": {
+          "group": "AK",
+          "series": "Normal_KC_Diff"
+        },
+        "status": "extracted",
+        "reason_code": "visible_label_verified",
+        "numeric_output_authorized": true
+      },
+      {
+        "slot": {
+          "group": "AK",
+          "series": "Tumor_KC_Diff"
+        },
+        "status": "extracted",
+        "reason_code": "visible_label_verified",
+        "numeric_output_authorized": true
+      },
+      {
+        "slot": {
+          "group": "AK",
+          "series": "Tumor_KC_Cyc"
+        },
+        "status": "extracted",
+        "reason_code": "visible_label_verified",
+        "numeric_output_authorized": true
+      },
+      {
+        "slot": {
+          "group": "AK",
+          "series": "Tumor_KC_Basal"
+        },
+        "status": "extracted",
+        "reason_code": "visible_label_verified",
+        "numeric_output_authorized": true
+      },
+      {
+        "slot": {
+          "group": "AK",
+          "series": "TSK"
+        },
+        "status": "extracted",
+        "reason_code": "visible_label_verified",
+        "numeric_output_authorized": true
+      },
+      {
+        "slot": {
+          "group": "Primary",
+          "series": "Normal_KC_Diff"
+        },
+        "status": "extracted",
+        "reason_code": "visible_label_verified",
+        "numeric_output_authorized": true
+      },
+      {
+        "slot": {
+          "group": "Primary",
+          "series": "Tumor_KC_Diff"
+        },
+        "status": "extracted",
+        "reason_code": "visible_label_verified",
+        "numeric_output_authorized": true
+      },
+      {
+        "slot": {
+          "group": "Primary",
+          "series": "Tumor_KC_Basal"
+        },
+        "status": "extracted",
+        "reason_code": "visible_label_verified",
+        "numeric_output_authorized": true
+      },
+      {
+        "slot": {
+          "group": "Primary",
+          "series": "TSK"
+        },
+        "status": "extracted",
+        "reason_code": "visible_label_verified",
+        "numeric_output_authorized": true
+      },
+      {
+        "slot": {
+          "group": "MET",
+          "series": "Normal_KC_Diff"
+        },
+        "status": "extracted",
+        "reason_code": "visible_label_verified",
+        "numeric_output_authorized": true
+      },
+      {
+        "slot": {
+          "group": "MET",
+          "series": "Normal_KC_Basal"
+        },
+        "status": "extracted",
+        "reason_code": "visible_label_verified",
+        "numeric_output_authorized": true
+      },
+      {
+        "slot": {
+          "group": "MET",
+          "series": "Tumor_KC_Diff"
+        },
+        "status": "extracted",
+        "reason_code": "visible_label_verified",
+        "numeric_output_authorized": true
+      },
+      {
+        "slot": {
+          "group": "MET",
+          "series": "Tumor_KC_Basal"
+        },
+        "status": "extracted",
+        "reason_code": "visible_label_verified",
+        "numeric_output_authorized": true
+      },
+      {
+        "slot": {
+          "group": "MET",
+          "series": "TSK"
+        },
+        "status": "extracted",
+        "reason_code": "visible_label_verified",
+        "numeric_output_authorized": true
+      }
+    ]
+  },
+  "geometry_validation": {
+    "comparison_count": 18,
+    "mean_absolute_error_pp": 0.5960996911798231,
+    "maximum_absolute_error_pp": 1.8986035683730051,
+    "role": "validation_only_never_fills_or_normalizes_a_label"
+  },
+  "limitations": [
+    "The route requires two verified transcriptions of every declared visible label.",
+    "It does not discover OCR labels, infer unlabeled sectors, or recover source observations.",
+    "Displayed values remain unchanged even when their group sum differs from 100.",
+    "Sector geometry is normalized only for independent validation and never replaces primary labels."
+  ]
+}

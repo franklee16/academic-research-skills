@@ -1,0 +1,18 @@
+{
+  "skill_name": "dril-dataset-construction",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "I am studying fiscal decentralization and need to construct a dataset on subnational borrowing autonomy. I want data for 30 countries over 20 years (2004-2023). The key variable is whether subnational governments can borrow independently from the central government. Can you help me set up a DRIL workflow to collect this data systematically from primary sources?",
+      "expected_output": "The skill should guide the user through creating a research instrument (codebook) for subnational borrowing autonomy, define the mapped unit space (30 countries x 20 years), establish an evidence policy with source hierarchy and citation contract, and explain the implementation and verification stages.",
+      "files": [],
+      "expectations": [
+        "The output includes a draft research instrument (codebook) with at least one variable defined",
+        "The output defines a mapped unit space (countries x years)",
+        "The output specifies an evidence policy with source hierarchy",
+        "The output mentions the three DRIL stages (design, implementation, verification)",
+        "The output mentions data quality mechanisms (explicit gaps, structured uncertainty, append-only ledger)"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+kind,shape,series,category,value,start_value,end_value,confidence,numeric_use_allowed,value_status,reason,pixel_x,pixel_y,width,height,fill
+rect,rect,Methanosarcina,G,46.228710462287104,0.0,46.228710462287104,0.998,false,visible_segment_candidate,,144.0,299.0,89,190.0,#a6cee3
+rect,rect,Methanocorpusculum,G,,,,,false,not_extracted,no supported rectangle for this series/category,,,,,#1f78b4
+rect,rect,Methanobrevibacter,G,20.194647201946474,46.4720194647202,66.66666666666667,0.998,false,visible_segment_candidate,,144.0,215.0,89,83.0,#b2df8a
+rect,rect,Methanocaldococcus,G,4.136253041362522,66.66666666666667,70.8029197080292,0.998,false,visible_segment_candidate,,144.0,198.0,89,17.0,#33a02c
+rect,rect,Methanospirillum,G,0.9732360097323607,71.04622871046229,72.01946472019465,0.998,false,visible_segment_candidate,,144.0,193.0,89,4.0,#fb9a99
+rect,rect,Methanoculleus,G,5.59610705596107,72.26277372262774,77.85888077858881,0.998,false,visible_segment_candidate,,144.0,169.0,89,23.0,#e31a1c
+rect,rect,Methanosphaera,G,4.136253041362522,77.85888077858881,81.99513381995133,0.998,false,visible_segment_candidate,,144.0,152.0,89,17.0,#fdbf6f
+rect,rect,Methanohalophilus,G,5.352798053527991,81.99513381995133,87.34793187347933,0.998,false,visible_segment_candidate,,144.0,130.0,89,22.0,#ff7f00
+rect,rect,Methanococcoides,G,3.8929440389294427,87.5912408759124,91.48418491484185,0.998,false,visible_segment_candidate,,144.0,113.0,89,16.0,#cab2d6
+rect,rect,Methanococcus,G,1.7031630170316276,91.72749391727494,93.43065693430657,0.998,false,visible_segment_candidate,,144.0,105.0,89,7.0,#6a3d9a
+rect,rect,other,G,6.326034063260337,93.43065693430657,99.7566909975669,0.998,false,visible_segment_candidate,,144.0,79.0,89,26.0,#bebebe
+rect,rect,Methanosarcina,K,15.085158150851582,0.0,15.085158150851582,0.998,false,visible_segment_candidate,,250.5,427.0,89,62.0,#a6cee3
+rect,rect,Methanocorpusculum,K,62.04379562043795,15.085158150851582,77.12895377128953,0.998,false,visible_segment_candidate,,250.5,172.0,89,255.0,#1f78b4
+rect,rect,Methanobrevibacter,K,1.4598540145985481,77.37226277372262,78.83211678832117,0.918,false,visible_segment_candidate,,250.5,165.0,89,6.0,#b2df8a
+rect,rect,Methanocaldococcus,K,4.379562043795616,78.83211678832117,83.21167883211679,0.998,false,visible_segment_candidate,,250.5,147.0,89,18.0,#33a02c
+rect,rect,Methanospirillum,K,14.355231143552302,83.45498783454988,97.81021897810218,0.998,false,visible_segment_candidate,,250.5,87.0,89,59.0,#fb9a99
+rect,rect,Methanoculleus,K,0.24330900243309372,98.05352798053528,98.29683698296837,0.998,false,visible_segment_candidate,,250.5,85.0,89,1.0,#e31a1c
+rect,rect,Methanosphaera,K,0.24330900243309372,98.29683698296837,98.54014598540147,0.998,false,visible_segment_candidate,,250.5,84.0,89,1.0,#fdbf6f
+rect,rect,Methanohalophilus,K,,,,,false,not_extracted,no supported rectangle for this series/category,,,,,#ff7f00
+rect,rect,Methanococcoides,K,0.2433090024330795,98.54014598540147,98.78345498783455,0.998,false,visible_segment_candidate,,250.5,83.0,89,1.0,#cab2d6
+rect,rect,Methanococcus,K,0.7299270072992812,98.78345498783455,99.51338199513383,0.998,false,visible_segment_candidate,,250.5,80.0,89,3.0,#6a3d9a
+rect,rect,other,K,,,,,false,not_extracted,no supported rectangle for this series/category,,,,,#bebebe
+rect,rect,Methanosarcina,L,34.54987834549878,0.0,34.54987834549878,0.998,false,visible_segment_candidate,,356.5,347.0,89,142.0,#a6cee3
+rect,rect,Methanocorpusculum,L,0.48661800486618034,34.54987834549878,35.03649635036496,0.998,false,visible_segment_candidate,,356.5,345.0,89,2.0,#1f78b4
+rect,rect,Methanobrevibacter,L,22.141119221411188,35.27980535279806,57.420924574209245,0.998,false,visible_segment_candidate,,356.5,253.0,89,91.0,#b2df8a
+rect,rect,Methanocaldococcus,L,11.678832116788321,57.66423357664234,69.34306569343066,0.998,false,visible_segment_candidate,,356.5,204.0,89,48.0,#33a02c
+rect,rect,Methanospirillum,L,,,,,false,not_extracted,no supported rectangle for this series/category,,,,,#fb9a99
+rect,rect,Methanoculleus,L,5.839416058394164,69.34306569343066,75.18248175182482,0.998,false,visible_segment_candidate,,356.5,180.0,89,24.0,#e31a1c
+rect,rect,Methanosphaera,L,3.8929440389294285,75.18248175182482,79.07542579075425,0.967,false,visible_segment_candidate,,356.5,164.0,89,16.0,#fdbf6f
+rect,rect,Methanohalophilus,L,7.7858880778588855,79.07542579075425,86.86131386861314,0.998,false,visible_segment_candidate,,356.5,132.0,89,32.0,#ff7f00
+rect,rect,Methanococcoides,L,4.379562043795616,87.10462287104623,91.48418491484185,0.967,false,visible_segment_candidate,,356.5,113.0,89,18.0,#cab2d6
+rect,rect,Methanococcus,L,3.649635036496349,91.48418491484185,95.1338199513382,0.998,false,visible_segment_candidate,,356.5,98.0,89,15.0,#6a3d9a
+rect,rect,other,L,4.379562043795616,95.37712895377129,99.7566909975669,0.998,false,visible_segment_candidate,,356.5,79.0,89,18.0,#bebebe

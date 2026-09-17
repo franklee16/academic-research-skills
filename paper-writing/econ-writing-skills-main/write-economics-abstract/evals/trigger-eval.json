@@ -1,0 +1,8 @@
+[
+  {"query":"请完整阅读这份已经完成主体的实证经济学论文，并撰写一段可直接放入论文的英文摘要。必须忠于正文，不要编造贡献、机制或结果。","should_trigger":true},
+  {"query":"Read my structural economics paper body and write a publication-ready English abstract. Keep model estimates, associations, counterfactuals, and causal claims distinct.","should_trigger":true},
+  {"query":"我把模型、数据、识别策略和结果都写完了，请据此重写经济学论文摘要，正式文本用英文。","should_trigger":true},
+  {"query":"Audit this economics abstract against the manuscript for factual fidelity, ordering, and length, then provide a corrected version.","should_trigger":true},
+  {"query":"请为这篇经济学论文提出一个英文标题和四个备选标题。","should_trigger":false},
+  {"query":"Review the identification assumptions in Section 3 and suggest robustness checks; do not rewrite the abstract.","should_trigger":false}
+]

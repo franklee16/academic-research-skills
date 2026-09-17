@@ -1,0 +1,425 @@
+{
+  "schema_version": 1,
+  "input_file": "original.png",
+  "input_sha256": "04efe900130ee60e291fdff77374c2283a16b0a0f0ae7a6568e6e3d134991d84",
+  "image_size": {
+    "width": 600,
+    "height": 400
+  },
+  "plot_bounds_px": {
+    "left": 78,
+    "top": 44,
+    "right": 474,
+    "bottom": 336
+  },
+  "calibration": {
+    "x": {
+      "scale": "linear",
+      "anchors": [
+        {
+          "pixel": 89.207547,
+          "value": 0.0
+        },
+        {
+          "pixel": 462.792453,
+          "value": 10.0
+        }
+      ],
+      "pixel_slope": 0.026767676743342517,
+      "transformed_intercept": -2.387878781162534,
+      "residuals_pixels": [
+        -3.318100514348998e-14,
+        -6.636201028697996e-14
+      ],
+      "rmse_transformed": 1.4043333874306805e-15,
+      "max_abs_residual_transformed": 1.7763568394002505e-15,
+      "pixel_uncertainty": 0.5,
+      "fit": "robust_huber_affine_in_transformed_value_space"
+    },
+    "y": {
+      "scale": "linear",
+      "anchors": [
+        {
+          "pixel": 336.0,
+          "value": 0.0
+        },
+        {
+          "pixel": 44.0,
+          "value": 70.0
+        }
+      ],
+      "pixel_slope": -0.2397260273972602,
+      "transformed_intercept": 80.54794520547945,
+      "residuals_pixels": [
+        1.1855913076682818e-13,
+        -0.0
+      ],
+      "rmse_transformed": 2.0097183471152322e-14,
+      "max_abs_residual_transformed": 2.842170943040401e-14,
+      "pixel_uncertainty": 0.5,
+      "fit": "robust_huber_affine_in_transformed_value_space"
+    },
+    "assumption": "robust affine fit in transformed value space"
+  },
+  "series": [
+    {
+      "name": "biodiversity",
+      "color_rgb": [
+        214,
+        39,
+        40
+      ],
+      "found_samples": 11,
+      "total_samples": 11,
+      "mean_confidence": 1.0
+    },
+    {
+      "name": "economic_language",
+      "color_rgb": [
+        31,
+        119,
+        180
+      ],
+      "found_samples": 11,
+      "total_samples": 11,
+      "mean_confidence": 1.0
+    },
+    {
+      "name": "context",
+      "color_rgb": [
+        127,
+        127,
+        127
+      ],
+      "found_samples": 11,
+      "total_samples": 11,
+      "mean_confidence": 1.0
+    }
+  ],
+  "trace_mode": "sample",
+  "traces": {},
+  "samples": {
+    "biodiversity": [
+      {
+        "y_pixel": 231.0,
+        "candidate_pixels": 29,
+        "confidence": 1.0,
+        "value": 25.171233
+      },
+      {
+        "y_pixel": 294.0,
+        "candidate_pixels": 63,
+        "confidence": 1.0,
+        "value": 10.068493
+      },
+      {
+        "y_pixel": 298.0,
+        "candidate_pixels": 63,
+        "confidence": 1.0,
+        "value": 9.109589
+      },
+      {
+        "y_pixel": 311.0,
+        "candidate_pixels": 63,
+        "confidence": 1.0,
+        "value": 5.993151
+      },
+      {
+        "y_pixel": 303.0,
+        "candidate_pixels": 63,
+        "confidence": 1.0,
+        "value": 7.910959
+      },
+      {
+        "y_pixel": 294.0,
+        "candidate_pixels": 63,
+        "confidence": 1.0,
+        "value": 10.068493
+      },
+      {
+        "y_pixel": 278.0,
+        "candidate_pixels": 63,
+        "confidence": 1.0,
+        "value": 13.90411
+      },
+      {
+        "y_pixel": 303.0,
+        "candidate_pixels": 63,
+        "confidence": 1.0,
+        "value": 7.910959
+      },
+      {
+        "y_pixel": 311.0,
+        "candidate_pixels": 64,
+        "confidence": 1.0,
+        "value": 5.993151
+      },
+      {
+        "y_pixel": 261.0,
+        "candidate_pixels": 63,
+        "confidence": 1.0,
+        "value": 17.979452
+      },
+      {
+        "y_pixel": 294.0,
+        "candidate_pixels": 63,
+        "confidence": 1.0,
+        "value": 10.068493
+      }
+    ],
+    "economic_language": [
+      {
+        "y_pixel": 171.0,
+        "candidate_pixels": 38,
+        "confidence": 1.0,
+        "value": 39.554795
+      },
+      {
+        "y_pixel": 200.0,
+        "candidate_pixels": 40,
+        "confidence": 1.0,
+        "value": 32.60274
+      },
+      {
+        "y_pixel": 234.0,
+        "candidate_pixels": 41,
+        "confidence": 1.0,
+        "value": 24.452055
+      },
+      {
+        "y_pixel": 205.0,
+        "candidate_pixels": 40,
+        "confidence": 1.0,
+        "value": 31.40411
+      },
+      {
+        "y_pixel": 192.0,
+        "candidate_pixels": 41,
+        "confidence": 1.0,
+        "value": 34.520548
+      },
+      {
+        "y_pixel": 212.0,
+        "candidate_pixels": 46,
+        "confidence": 1.0,
+        "value": 29.726027
+      },
+      {
+        "y_pixel": 159.0,
+        "candidate_pixels": 40,
+        "confidence": 1.0,
+        "value": 42.431507
+      },
+      {
+        "y_pixel": 154.0,
+        "candidate_pixels": 39,
+        "confidence": 1.0,
+        "value": 43.630137
+      },
+      {
+        "y_pixel": 183.5,
+        "candidate_pixels": 42,
+        "confidence": 1.0,
+        "value": 36.558219
+      },
+      {
+        "y_pixel": 184.0,
+        "candidate_pixels": 41,
+        "confidence": 1.0,
+        "value": 36.438356
+      },
+      {
+        "y_pixel": 171.0,
+        "candidate_pixels": 40,
+        "confidence": 1.0,
+        "value": 39.554795
+      }
+    ],
+    "context": [
+      {
+        "y_pixel": 223.0,
+        "candidate_pixels": 59,
+        "confidence": 1.0,
+        "value": 27.089041
+      },
+      {
+        "y_pixel": 282.0,
+        "candidate_pixels": 57,
+        "confidence": 1.0,
+        "value": 12.945205
+      },
+      {
+        "y_pixel": 286.0,
+        "candidate_pixels": 55,
+        "confidence": 1.0,
+        "value": 11.986301
+      },
+      {
+        "y_pixel": 278.0,
+        "candidate_pixels": 55,
+        "confidence": 1.0,
+        "value": 13.90411
+      },
+      {
+        "y_pixel": 257.0,
+        "candidate_pixels": 57,
+        "confidence": 1.0,
+        "value": 18.938356
+      },
+      {
+        "y_pixel": 253.0,
+        "candidate_pixels": 57,
+        "confidence": 1.0,
+        "value": 19.89726
+      },
+      {
+        "y_pixel": 219.0,
+        "candidate_pixels": 55,
+        "confidence": 1.0,
+        "value": 28.047945
+      },
+      {
+        "y_pixel": 190.0,
+        "candidate_pixels": 55,
+        "confidence": 1.0,
+        "value": 35.0
+      },
+      {
+        "y_pixel": 203.0,
+        "candidate_pixels": 55,
+        "confidence": 1.0,
+        "value": 31.883562
+      },
+      {
+        "y_pixel": 219.0,
+        "candidate_pixels": 55,
+        "confidence": 1.0,
+        "value": 28.047945
+      },
+      {
+        "y_pixel": 248.0,
+        "candidate_pixels": 55,
+        "confidence": 1.0,
+        "value": 21.09589
+      }
+    ]
+  },
+  "error_bars": [
+    {
+      "x": 0.0,
+      "status": "extracted",
+      "top_y_pixel": 157,
+      "bottom_y_pixel": 290,
+      "upper": 42.910959,
+      "lower": 11.027397,
+      "span_pixels": 133,
+      "confidence": 0.897
+    },
+    {
+      "x": 1.0,
+      "status": "extracted",
+      "top_y_pixel": 248,
+      "bottom_y_pixel": 315,
+      "upper": 21.09589,
+      "lower": 5.034247,
+      "span_pixels": 67,
+      "confidence": 0.838
+    },
+    {
+      "x": 2.0,
+      "status": "extracted",
+      "top_y_pixel": 253,
+      "bottom_y_pixel": 319,
+      "upper": 19.89726,
+      "lower": 4.075342,
+      "span_pixels": 66,
+      "confidence": 0.836
+    },
+    {
+      "x": 3.0,
+      "status": "extracted",
+      "top_y_pixel": 240,
+      "bottom_y_pixel": 305,
+      "upper": 23.013699,
+      "lower": 7.431507,
+      "span_pixels": 65,
+      "confidence": 0.925
+    },
+    {
+      "x": 4.0,
+      "status": "extracted",
+      "top_y_pixel": 207,
+      "bottom_y_pixel": 297,
+      "upper": 30.924658,
+      "lower": 9.349315,
+      "span_pixels": 90,
+      "confidence": 0.94
+    },
+    {
+      "x": 5.0,
+      "status": "extracted",
+      "top_y_pixel": 203,
+      "bottom_y_pixel": 303,
+      "upper": 31.883562,
+      "lower": 7.910959,
+      "span_pixels": 100,
+      "confidence": 0.837
+    },
+    {
+      "x": 6.0,
+      "status": "extracted",
+      "top_y_pixel": 163,
+      "bottom_y_pixel": 272,
+      "upper": 41.472603,
+      "lower": 15.342466,
+      "span_pixels": 109,
+      "confidence": 0.955
+    },
+    {
+      "x": 7.0,
+      "status": "extracted",
+      "top_y_pixel": 115,
+      "bottom_y_pixel": 265,
+      "upper": 52.979452,
+      "lower": 17.020548,
+      "span_pixels": 150,
+      "confidence": 0.931
+    },
+    {
+      "x": 8.0,
+      "status": "extracted",
+      "top_y_pixel": 140,
+      "bottom_y_pixel": 265,
+      "upper": 46.986301,
+      "lower": 17.020548,
+      "span_pixels": 125,
+      "confidence": 0.917
+    },
+    {
+      "x": 9.0,
+      "status": "extracted",
+      "top_y_pixel": 161,
+      "bottom_y_pixel": 278,
+      "upper": 41.952055,
+      "lower": 13.90411,
+      "span_pixels": 117,
+      "confidence": 0.86
+    },
+    {
+      "x": 10.0,
+      "status": "extracted",
+      "top_y_pixel": 203,
+      "bottom_y_pixel": 288,
+      "upper": 31.883562,
+      "lower": 11.506849,
+      "span_pixels": 85,
+      "confidence": 0.949
+    }
+  ],
+  "limitations": [
+    "Series values require distinct colors and a verified linear calibration.",
+    "A missing observation remains missing; the script does not interpolate.",
+    "Extracted error-bar geometry is not a claim about SD, SEM, or confidence intervals.",
+    "Continuity mode reports only colour-supported path columns; gap columns remain missing."
+  ]
+}

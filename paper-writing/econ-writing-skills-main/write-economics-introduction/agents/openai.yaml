@@ -1,0 +1,7 @@
+interface:
+  display_name: "Economics Introduction Writer"
+  short_description: "Draft and audit evidence-grounded economics introductions"
+  default_prompt: "Use $write-economics-introduction to draft a publication-ready English introduction from my economics manuscript and verified literature materials."
+
+policy:
+  allow_implicit_invocation: true

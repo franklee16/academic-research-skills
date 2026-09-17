@@ -1,0 +1,22 @@
+[
+  {"query":"正文、结果和文献笔记都在附件里，请完整阅读后替我写一篇可以直接放进经济学论文的英文引言。","should_trigger":true},
+  {"query":"Rewrite my economics paper introduction after the main estimates changed, and verify every contribution and citation against the supplied manuscript and papers.","should_trigger":true},
+  {"query":"请审计这篇论文引言里的研究缺口、首创性、贡献和引用是否真的有依据，不要只润色语言。","should_trigger":true},
+  {"query":"Use the completed structural model, estimation, and counterfactual sections to draft the opening section of my economics manuscript.","should_trigger":true},
+  {"query":"这是一篇纯理论经济学论文，请根据模型和命题重写引言，不要强行添加数据或实证识别。","should_trigger":true},
+  {"query":"Shorten the first two pages of my job-market paper while preserving the identification logic, main result, and literature position.","should_trigger":true},
+  {"query":"Fact-check the introduction of this historical economics paper against the archival evidence and cited literature.","should_trigger":true},
+  {"query":"我的正文已经完成但最近邻文献材料不全，请在不虚构研究空白的前提下先写一个保守的英文引言。","should_trigger":true},
+  {"query":"Restructure the introduction of this measurement paper so the estimand, selection problem, validation, and contribution appear in a natural order.","should_trigger":true},
+  {"query":"Check whether the contribution paragraph in my economics introduction overstates what the paper and references establish.","should_trigger":true},
+  {"query":"请根据论文主体写一段英文摘要，控制在150词左右。","should_trigger":false},
+  {"query":"Draft the conclusion section of my structural economics paper.","should_trigger":false},
+  {"query":"为这篇经济学论文推荐一个标题并给三个备选。","should_trigger":false},
+  {"query":"Write a standalone literature review on attendance interventions; no manuscript introduction is needed.","should_trigger":false},
+  {"query":"帮我写国家自然科学基金申请书里的研究动机和立项依据。","should_trigger":false},
+  {"query":"Act as a referee and write a peer-review report for this manuscript.","should_trigger":false},
+  {"query":"Check whether all BibTeX entries follow Chicago author-date format; do not edit prose.","should_trigger":false},
+  {"query":"Write an opening paragraph for a newspaper op-ed about artificial intelligence.","should_trigger":false},
+  {"query":"Summarize what the existing introduction says without revising or auditing it.","should_trigger":false},
+  {"query":"Turn this paper into a ten-slide conference presentation.","should_trigger":false}
+]

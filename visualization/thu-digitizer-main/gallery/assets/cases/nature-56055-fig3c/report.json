@@ -1,0 +1,88 @@
+{
+  "schema_version": 1,
+  "case_id": "nature-56055-fig3c",
+  "status": "visible_geometry_candidate",
+  "route": "raster_marker_line_candidate_plus_retained_visible_dot_components",
+  "source": {
+    "file": "original.png",
+    "sha256": "fd5fe57633c5535eedd61619cd4d60c7ca5136a523f08655a4b8c19ad8cb0078",
+    "width": 1495,
+    "height": 1278,
+    "measurement_space": "original_raster_pixels",
+    "resampling_applied": false
+  },
+  "visible_extraction": {
+    "implementation": "scripts/candidate_digitize_marker_line.py",
+    "runner": "scripts/run_marker_line_spec.py",
+    "figure_spec": "figure-spec.json",
+    "figure_spec_run_id": "marker-line-spec-db310817cbeba0b3",
+    "numeric_output_authorized": true,
+    "panels": [
+      {
+        "panel_id": "spontaneous_curvature",
+        "series": "Spontaneous curvature",
+        "run_id": "marker-line-19836f00b322ca8d",
+        "algorithm_version": "marker_line_global_path_v0.2.0-candidate",
+        "implementation_sha256": "fb87387d08e7969806baaf3d9574b92527c1fc24f0a5de4067073e7d53a94d18",
+        "declared_sample_slots": 56,
+        "authorized_markers": 56,
+        "mean_confidence": 0.970252,
+        "evidence": "marker-line-evidence/spontaneous_curvature/evidence.csv",
+        "candidate_report": "marker-line-evidence/spontaneous_curvature/report.json"
+      },
+      {
+        "panel_id": "surface_reconstruction",
+        "series": "Surface reconstruction",
+        "run_id": "marker-line-b77e1626867350e6",
+        "algorithm_version": "marker_line_global_path_v0.2.0-candidate",
+        "implementation_sha256": "fb87387d08e7969806baaf3d9574b92527c1fc24f0a5de4067073e7d53a94d18",
+        "declared_sample_slots": 56,
+        "authorized_markers": 56,
+        "mean_confidence": 0.949894,
+        "evidence": "marker-line-evidence/surface_reconstruction/evidence.csv",
+        "candidate_report": "marker-line-evidence/surface_reconstruction/report.json"
+      },
+      {
+        "panel_id": "rigid",
+        "series": "Rigid",
+        "run_id": "marker-line-eeb921e46074e7a4",
+        "algorithm_version": "marker_line_global_path_v0.2.0-candidate",
+        "implementation_sha256": "fb87387d08e7969806baaf3d9574b92527c1fc24f0a5de4067073e7d53a94d18",
+        "declared_sample_slots": 56,
+        "authorized_markers": 56,
+        "mean_confidence": 0.953576,
+        "evidence": "marker-line-evidence/rigid/evidence.csv",
+        "candidate_report": "marker-line-evidence/rigid/report.json"
+      }
+    ]
+  },
+  "coverage": {
+    "declared_curve_marker_slots": 168,
+    "authorized_curve_markers": 168,
+    "curve_marker_coverage": 1.0,
+    "retained_local_dot_components": 57
+  },
+  "primary_csv": {
+    "file": "data.csv",
+    "curve_points": 168,
+    "curve_connections": 165,
+    "local_dot_components": 57,
+    "source_data_used": false
+  },
+  "recreation": {
+    "renderer": "scripts/recreate_line_figure.py",
+    "run_id": "line-recreation-f15e4f9e64a16310",
+    "manifest": "recreation-manifest.json",
+    "png": "recreated.png",
+    "svg": "recreated.svg",
+    "pdf": "recreated.pdf",
+    "source_raster_embedded": false
+  },
+  "source_data_role": "not_used",
+  "limitations": [
+    "Curve values are visible compact-marker centres at verified sample positions, not source simulation records.",
+    "Lines connect adjacent authorized marker centres and do not recover hidden model parameters.",
+    "The 57 local cyan/green components retain visible position, colour and radius only; no hidden variable is inferred.",
+    "The marker-line route remains a candidate pending held-out real cases and a matched WebPlotDigitizer comparison."
+  ]
+}

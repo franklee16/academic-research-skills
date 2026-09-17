@@ -1,0 +1,64 @@
+{
+  "schema_version": 1,
+  "status": "needs_verified_configuration",
+  "inspection": {
+    "input_file": "F:\\AI\\thu-digitizer\\gallery\\assets\\cases\\nature-00142-fig3a\\original.png",
+    "input_sha256": "d75488f9d76321e5d5d0dbdfbd835aa3d9d111be43afaf03bb07939f3e33de41",
+    "file_size_bytes": 70867,
+    "media_kind": "raster",
+    "coordinate_space": "pixel",
+    "format": "PNG",
+    "mode": "RGB",
+    "width": 1000,
+    "height": 315,
+    "appearance": {
+      "background_proposal": "light",
+      "border_median_luminance_0_255": 254.99999999999997,
+      "border_colour_span_median_0_255": 0.0,
+      "pixel_count": 315000,
+      "role": "appearance proposal only; not chart classification or numeric evidence"
+    }
+  },
+  "route_selection": {
+    "chart_type": "line",
+    "primary": {
+      "route_id": "raster_line_color",
+      "title": "Colour-distinct calibrated raster line",
+      "chart_types": [
+        "line"
+      ],
+      "media_kinds": [
+        "raster"
+      ],
+      "coordinate_models": [
+        "cartesian_linear"
+      ],
+      "mark_grammars": [
+        "curve",
+        "marker",
+        "error_interval"
+      ],
+      "maturity": "validated_local_stable",
+      "implementation": "scripts/digitize_line_chart.py",
+      "required_confirmations": [
+        "panel_roi",
+        "plot_bounds",
+        "x_axis",
+        "y_axis",
+        "series_colors",
+        "sample_positions"
+      ],
+      "recoverable": "Visible colour-distinct curve samples, markers, and separately visible pale error intervals.",
+      "non_recoverable": "Hidden spans, source model parameters, and raw observations.",
+      "automated_extraction": true
+    },
+    "fallback": null,
+    "decision": "needs_verified_configuration",
+    "reason": "A route is registered, but all required confirmations remain explicit before extraction."
+  },
+  "figure_spec_status": "valid_template_not_yet_verified",
+  "safety": {
+    "numeric_extraction_authorized": false,
+    "reason": "Preflight routing never converts proposed chart type, ROI, axes, or series into verified values."
+  }
+}

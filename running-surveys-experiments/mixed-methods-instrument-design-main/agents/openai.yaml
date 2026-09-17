@@ -1,0 +1,4 @@
+interface:
+  display_name: "混合方法研究工具设计"
+  short_description: "同步设计问卷与访谈，并可将审核后的问卷推送为问卷星草稿"
+  default_prompt: "Use $mixed-methods-instrument-design to create an aligned questionnaire and interview guide, then prepare a Wenjuanxing draft if I request online publishing."

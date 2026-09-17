@@ -1,0 +1,4 @@
+interface:
+  display_name: "Nature Story"
+  short_description: "Engineer Nature-level scientific stories from early ideas"
+  default_prompt: "Use $nature-story to independently verify my assumptions, learn the disciplinary context, and turn my early research idea into several evidence-grounded story architectures."

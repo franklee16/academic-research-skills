@@ -1,0 +1,165 @@
+{
+  "schemaVersion": 1,
+  "generated": "2026-07-20",
+  "title": "thu-digitizer OA Figure Gallery",
+  "cases": [
+    {
+      "id": "nature-borneo-edge",
+      "featured": true,
+      "title": "边缘效应：散点、模型与重叠直方图",
+      "eyebrow": "官方源数据闭环",
+      "summary": "71 个森林样地来自 Supplementary Data 1：其中 50 个落在 Fig. 2a 的可见横轴范围，71 个全部进入 Fig. 2b；复现散点、模型曲线与双组直方图。",
+      "journal": "Nature Communications",
+      "year": 2017,
+      "articleTitle": "Long-term carbon sink in Borneo’s forests halted by drought and vulnerable to edge effects",
+      "authors": "Qie et al.",
+      "figure": "Fig. 2",
+      "doi": "10.1038/s41467-017-01997-0",
+      "articleUrl": "https://www.nature.com/articles/s41467-017-01997-0",
+      "figureUrl": "https://www.nature.com/articles/s41467-017-01997-0/figures/2",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "sourceType": "Nature Communications OA",
+      "verification": "official_source_data_mapped",
+      "verificationLabel": "官方数据逐行映射",
+      "chartTypes": [
+        "scatter",
+        "segmented model",
+        "overlapping histogram"
+      ],
+      "scope": "完整 Fig. 2",
+      "assets": {
+        "original": "assets/cases/nature-borneo-edge/original.jpg",
+        "overlay": "assets/cases/nature-borneo-edge/overlay.png",
+        "recreated": "assets/cases/nature-borneo-edge/recreated.png",
+        "data": "assets/cases/nature-borneo-edge/data.csv",
+        "report": "assets/cases/nature-borneo-edge/report.json",
+        "sourceData": "assets/cases/nature-borneo-edge/source-data.xlsx"
+      },
+      "metrics": [
+        {
+          "label": "直方图样本",
+          "value": "71"
+        },
+        {
+          "label": "可见散点",
+          "value": "50"
+        },
+        {
+          "label": "验证等级",
+          "value": "Source-mapped"
+        }
+      ]
+    },
+    {
+      "id": "nature-blood-forest",
+      "featured": true,
+      "title": "29 项血液指标的森林图",
+      "eyebrow": "复杂误差线几何",
+      "summary": "自动恢复每项指标的点估计与可见 95% CI 端点；保留官方 Supplementary Data 1–9，但本轮不把未完成的表格映射冒充数值真值。",
+      "journal": "Nature Communications",
+      "year": 2024,
+      "articleTitle": "Genetic architecture of routinely acquired blood tests in a British South Asian cohort",
+      "authors": "Jacobs et al.",
+      "figure": "Fig. 2",
+      "doi": "10.1038/s41467-024-53091-x",
+      "articleUrl": "https://www.nature.com/articles/s41467-024-53091-x",
+      "figureUrl": "https://www.nature.com/articles/s41467-024-53091-x/figures/2",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "sourceType": "Nature Communications OA",
+      "verification": "visible_geometry_extracted",
+      "verificationLabel": "像素几何验证",
+      "chartTypes": [
+        "forest plot",
+        "confidence interval",
+        "color scale"
+      ],
+      "scope": "完整 Fig. 2",
+      "assets": {
+        "original": "assets/cases/nature-blood-forest/original.jpg",
+        "overlay": "assets/cases/nature-blood-forest/overlay.png",
+        "recreated": "assets/cases/nature-blood-forest/recreated.png",
+        "data": "assets/cases/nature-blood-forest/data.csv",
+        "report": "assets/cases/nature-blood-forest/report.json",
+        "sourceData": "assets/cases/nature-blood-forest/source-data.xlsx"
+      },
+      "metrics": [
+        {
+          "label": "指标行",
+          "value": "29"
+        },
+        {
+          "label": "完整 CI",
+          "value": "29"
+        },
+        {
+          "label": "验证等级",
+          "value": "Geometry"
+        }
+      ]
+    },
+    {
+      "id": "nature-ribotie-multipanel",
+      "featured": true,
+      "title": "十面板混合图中的局部路由",
+      "eyebrow": "复杂多面板挑战",
+      "summary": "从同时含箱线图、柱图、环图、散点图、火山图和直方图的 Fig. 2 中定位 panel e，并恢复低分辨率彩色散点的可见组件。",
+      "journal": "Nature Communications",
+      "year": 2025,
+      "articleTitle": "Deep learning to decode sites of RNA translation in normal and cancerous tissues",
+      "authors": "Clauwaert et al.",
+      "figure": "Fig. 2 · panel e",
+      "doi": "10.1038/s41467-025-56543-0",
+      "articleUrl": "https://www.nature.com/articles/s41467-025-56543-0",
+      "figureUrl": "https://www.nature.com/articles/s41467-025-56543-0/figures/2",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "sourceType": "Nature Communications OA",
+      "verification": "partial_visible_geometry",
+      "verificationLabel": "局部几何 / 不过度声称",
+      "chartTypes": [
+        "multi-panel",
+        "colored scatter",
+        "panel routing"
+      ],
+      "scope": "panel e；完整原图保留",
+      "assets": {
+        "original": "assets/cases/nature-ribotie-multipanel/original.jpg",
+        "panelOriginal": "assets/cases/nature-ribotie-multipanel/original-panel-e.png",
+        "overlay": "assets/cases/nature-ribotie-multipanel/overlay.png",
+        "recreated": "assets/cases/nature-ribotie-multipanel/recreated.png",
+        "data": "assets/cases/nature-ribotie-multipanel/data.csv",
+        "report": "assets/cases/nature-ribotie-multipanel/report.json",
+        "sourceData": "assets/cases/nature-ribotie-multipanel/source-data.xlsx"
+      },
+      "metrics": [
+        {
+          "label": "可见色块",
+          "value": "18"
+        },
+        {
+          "label": "图注 n",
+          "value": "73"
+        },
+        {
+          "label": "验证等级",
+          "value": "Partial"
+        }
+      ]
+    }
+  ],
+  "challengeQueue": [
+    {
+      "id": "nature-nanopore-scatter",
+      "title": "对数坐标散点＋边际直方图＋事件轨迹",
+      "journal": "Nature Communications",
+      "year": 2019,
+      "figure": "Fig. 2",
+      "articleUrl": "https://www.nature.com/articles/s41467-018-07924-1",
+      "image": "assets/cases/nature-nanopore-scatter/original.jpg",
+      "status": "challenge_queued",
+      "note": "69.8 MB Source Data 已定位；待建立对数轴、密集重叠点与波形面板的联合证据链。"
+    }
+  ]
+}

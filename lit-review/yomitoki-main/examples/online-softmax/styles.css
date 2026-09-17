@@ -1,0 +1,1406 @@
+/* Yomitoki — canonical styles.css
+   Design system: references/design-system.md
+   Blocks: references/output-structure.md (13 blocks)
+   Copied verbatim into every reader output by scripts/assemble.py. */
+
+/* ── CSS Custom Properties ─────────────────────────────────────────────────── */
+:root {
+  --bg:           #fdfaf3;  /* warm cream */
+  --bg-card:      #fff;     /* cards, sidebar panels */
+  --bg-code:      #2e2c2a;  /* dark warm-grey code blocks */
+  --text:         #2a2622;  /* near-black warm */
+  --text-soft:    #6b635a;  /* metadata, secondary */
+  --text-code:    #e8e3d7;  /* on bg-code */
+  --accent:       #b8462e;  /* terracotta — used sparingly */
+  --accent-soft:  #f0d8cc;  /* hover backgrounds, jargon highlight */
+  --border-soft:  #e6dfd0;
+  --explain-bg:   #f4ead4;  /* 💡 box background */
+  --explain-bar:  #c8973e;  /* 💡 left bar + label color */
+}
+
+/* ── Reset & Base ──────────────────────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Crimson Pro', Georgia, serif;
+  font-size: 20.5px;
+  line-height: 1.7;
+}
+
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+/* ── Page wrapper ──────────────────────────────────────────────────────────── */
+.page-wrapper {
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* ── Two-column reader grid ────────────────────────────────────────────────── */
+.reader {
+  display: grid;
+  grid-template-columns: 1fr 400px;
+  gap: 2.5rem;
+  align-items: start;
+}
+
+article {
+  min-width: 0; /* prevent grid blowout */
+}
+
+/* ══════════════════════════════════════════════════════════════════════════════
+   BLOCK 1 — Header
+   ══════════════════════════════════════════════════════════════════════════════ */
+.paper-header {
+  border-bottom: 1px solid var(--border-soft);
+  padding: 3rem 0 2rem;
+  margin-bottom: 2rem;
+}
+
+.meta-top {
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  color: var(--text-soft);
+  margin-bottom: 0.8em;
+}
+.meta-top a { color: var(--accent); }
+
+.paper-header h1 {
+  font-family: 'Inter', sans-serif;
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 1.2;
+  margin-bottom: 0.4em;
+}
+
+.paper-header .authors {
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  color: var(--text-soft);
+  margin-bottom: 0.6em;
+}
+
+/* .punchline — italic sub-title used in some outputs */
+.paper-header .punchline {
+  font-family: 'Crimson Pro', Georgia, serif;
+  font-size: 18px;
+  font-style: italic;
+  color: var(--text);
+  margin-bottom: 1em;
+  max-width: 720px;
+}
+
+.venue-line {
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  color: var(--text-soft);
+  margin-bottom: 0.7em;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.4em;
+}
+
+.difficulty       { color: var(--accent); margin-left: 0.4em; }
+.difficulty-label { color: var(--text-soft); font-size: 12px; margin-left: 0.2em; }
+.reading-time {
+  color: var(--text-soft);
+  font-size: 12px;
+  font-family: 'Inter', sans-serif;
+  margin-left: 0.7em;
+  padding-left: 0.7em;
+  border-left: 1px solid var(--border-soft);
+}
+
+.tags { margin-top: 0.5em; }
+.tag {
+  display: inline-block;
+  background: var(--accent-soft);
+  color: var(--accent);
+  font-family: 'Inter', sans-serif;
+  font-size: 11px;
+  padding: 0.15em 0.55em;
+  border-radius: 12px;
+  margin: 0.15em 0.2em 0.15em 0;
+}
+
+/* ══════════════════════════════════════════════════════════════════════════════
+   BLOCK 2 — Prerequisites strip
+   ══════════════════════════════════════════════════════════════════════════════ */
+.prereqs {
+  margin: 1.4em 0 1.8em;
+}
+.prereqs > .label {
+  font-family: 'Inter', sans-serif;
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-soft);
+  margin-bottom: 0.5em;
+}
+.prereq-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4em;
+}
+.prereq {
+  display: inline-block;
+  position: relative;
+}
+.prereq-pill {
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-soft);
+  padding: 0.3em 0.75em;
+  border-radius: 4px;
+  cursor: pointer;
+  list-style: none;
+  color: var(--text);
+  transition: background 0.1s, border-color 0.1s, color 0.1s;
+}
+.prereq-pill:hover {
+  background: var(--accent-soft);
+  border-color: var(--accent);
+  color: var(--accent);
+}
+.prereq-pill::-webkit-details-marker { display: none; }
+.prereq[open] .prereq-pill {
+  background: var(--accent-soft);
+  border-color: var(--accent);
+  color: var(--accent);
+}
+.prereq-detail {
+  position: absolute;
+  z-index: 20;
+  background: var(--bg-card);
+  border: 1px solid var(--border-soft);
+  border-radius: 4px;
+  padding: 0.75em 1em;
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  line-height: 1.5;
+  max-width: 440px;
+  margin-top: 0.3em;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+}
+.prereq-detail p { margin-bottom: 0.4em; }
+.prereq-detail p:last-child { margin-bottom: 0; }
+.prereq-links a { display: block; color: var(--accent); }
+.prereq-links a + a { margin-top: 0.3em; }
+.prereq-links a:hover { text-decoration: underline; }
+
+/* ══════════════════════════════════════════════════════════════════════════════
+   BLOCK 3 — TL;DR card
+   ══════════════════════════════════════════════════════════════════════════════ */
+.tldr {
+  background: var(--explain-bg);
+  border-left: 4px solid var(--explain-bar);
+  border-radius: 4px;
+  padding: 1.2em 1.4em;
+  margin-bottom: 2.5rem;
+}
+.tldr > .label {
+  font-family: 'Inter', sans-serif;
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--explain-bar);
+  margin-bottom: 0.8em;
+  font-weight: 600;
+}
+.tldr-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+}
+.tldr-row {
+  display: flex;
+  gap: 1.2em;
+  align-items: baseline;
+}
+.tldr-label {
+  font-family: 'Inter', sans-serif;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--explain-bar);
+  font-weight: 600;
+  min-width: 110px;
+  flex-shrink: 0;
+}
+.tldr-text { font-size: 18px; line-height: 1.6; }
+.tldr-summary { font-size: 17px; line-height: 1.7; margin: 0; }
+
+/* ══════════════════════════════════════════════════════════════════════════════
+   BLOCK 3b — Paper Overview (richer than TL;DR — 3 stacked panels)
+   ══════════════════════════════════════════════════════════════════════════════ */
+.overview {
+  margin-bottom: 2.5rem;
+  scroll-margin-top: 2rem;
+}
+.overview > h2 {
+  font-family: 'Inter', sans-serif;
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--ink);
+  margin: 0 0 1rem 0;
+  padding-bottom: 0.4rem;
+  border-bottom: 1px solid var(--rule);
+}
+.overview-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85em;
+}
+/* New three-layer narrative layout: Problem card on its own → Background prose
+   → Solution + Contributions cards together. Each layer separated vertically. */
+.overview-problem-block {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.2em;
+}
+.overview-offering {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85em;
+  margin-top: 1.4em;
+}
+.overview-card {
+  padding: 0.9em 1.1em;
+  border-radius: 4px;
+  border-left: 3px solid var(--rule);
+  background: #fbf8f3;
+}
+.overview-card > .label {
+  font-family: 'Inter', sans-serif;
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: var(--ink);
+  margin: 0 0 0.45em 0;
+}
+.overview-card p { margin: 0.3em 0; font-size: 18px; line-height: 1.65; }
+.overview-card ul { margin: 0.3em 0 0 1.2em; padding: 0; }
+.overview-card ul li { margin: 0.35em 0; font-size: 18px; line-height: 1.6; }
+.overview-problem       { border-left-color: #c8553d; }
+.overview-problem > .label   { color: #c8553d; }
+.overview-solution      { border-left-color: #4a76b8; }
+.overview-solution > .label  { color: #4a76b8; }
+.overview-contributions { border-left-color: #5a8a52; }
+.overview-contributions > .label { color: #5a8a52; }
+
+/* Background sub-block inside Paper Overview. Styled to match overview-card
+   so all three layers (Problem, Background, Offering) align on the same
+   vertical x-axis — same border-left width, same padding-left. */
+.overview-background {
+  margin-top: 1.4em;
+  padding: 0.9em 1.1em;
+  border-radius: 4px;
+  border-left: 3px solid var(--border-soft);
+  background: transparent;
+}
+.overview-background > .label {
+  font-family: 'Inter', sans-serif;
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-soft);
+  font-weight: 600;
+  margin: 0 0 0.5em 0;
+}
+.overview-background p {
+  font-size: 18px;
+  line-height: 1.7;
+  margin: 0 0 0.85em 0;
+}
+.overview-background p:last-child { margin-bottom: 0; }
+.overview-background ol.motivation-chain {
+  margin: 0 0 0 1.2em;
+  padding: 0;
+}
+.overview-background ol.motivation-chain li {
+  font-size: 18px;
+  line-height: 1.65;
+  margin: 0.5em 0;
+}
+
+/* ══════════════════════════════════════════════════════════════════════════════
+   BLOCKS 4-12 — Paper sections
+   ══════════════════════════════════════════════════════════════════════════════ */
+.paper-section {
+  margin-bottom: 3rem;
+  scroll-margin-top: 2rem;
+}
+
+.paper-section h2 {
+  font-family: 'Inter', sans-serif;
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 0.8em;
+  padding-bottom: 0.3em;
+  border-bottom: 1px solid var(--border-soft);
+  color: var(--text);
+}
+
+.paper-section h3 {
+  font-family: 'Inter', sans-serif;
+  font-size: 17px;
+  font-weight: 600;
+  margin: 1.4em 0 0.5em;
+  color: var(--text);
+}
+
+.paper-section h4 {
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  font-style: italic;
+  margin: 1.2em 0 0.4em;
+  color: var(--text);
+}
+
+.paper-section p {
+  margin-bottom: 1em;
+  text-align: justify;
+  hyphens: auto;
+}
+
+.paper-section ul,
+.paper-section ol {
+  padding-left: 1.4em;
+  margin-bottom: 1em;
+}
+.paper-section li {
+  margin: 0.45em 0;
+  line-height: 1.6;
+}
+
+/* .subsection — wraps h3 + body + explain inside method section */
+.subsection {
+  margin-bottom: 1.4em;
+}
+
+/* Method-section subsection headings must be visibly distinct from inline
+   <strong> labels inside paragraphs; the default .paper-section h3 (17px)
+   was the same size + weight as <strong>, so a Tier-1/2 heading blended into
+   the prose. Bigger size, accent rule, numbered counter so each module has a
+   visible position in the sequence. */
+#method { counter-reset: subsection; }
+#method .subsection h3 {
+  font-size: 22px;
+  font-weight: 700;
+  margin: 2.2em 0 0.7em;
+  padding-bottom: 0.35em;
+  border-bottom: 2px solid var(--accent);
+  color: var(--text);
+}
+#method .subsection h3::before {
+  counter-increment: subsection;
+  content: counter(subsection) ". ";
+  color: var(--accent);
+  font-weight: 700;
+}
+
+/* Generic styling for free-form HTML inside .subsection body_html
+   (tables for staged pipelines, ordered/unordered lists, blockquote callouts).
+   Authors of analysis.json can drop any of these into body_html and they will
+   render consistently with the rest of the reader. */
+/* Shared table styling for both subsection tables (loss/ablation grids)
+   and top-level paper-section tables (where-this-matters, comparison). */
+.subsection table,
+.paper-section > table,
+.where-matters table {
+  border-collapse: collapse;
+  margin: 0.9em 0;
+  width: 100%;
+  font-size: 14px;
+  font-family: 'Inter', sans-serif;
+}
+.subsection table th, .subsection table td,
+.paper-section > table th, .paper-section > table td,
+.where-matters table th, .where-matters table td {
+  border: 1px solid var(--border-soft);
+  padding: 0.7em 0.9em;
+  text-align: left;
+  vertical-align: top;
+  line-height: 1.55;
+}
+.subsection table th,
+.paper-section > table th,
+.where-matters table th {
+  background: var(--bg-card);
+  font-weight: 600;
+  color: var(--text);
+  white-space: nowrap;
+  font-size: 11.5px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+.subsection table tr:nth-child(even) td,
+.paper-section > table tr:nth-child(even) td,
+.where-matters table tr:nth-child(even) td {
+  background: rgba(0,0,0,0.015);
+}
+.subsection table code,
+.paper-section > table code,
+.where-matters table code { font-size: 0.92em; }
+
+/* "Where this matters" specifically: 3-column workload/scale/impact layout.
+   Wider columns so the long technical descriptions wrap cleanly. */
+.where-matters table { table-layout: fixed; font-size: 14.5px; }
+.where-matters table col.col-workload,
+.where-matters table th:nth-child(1) { width: 22%; }
+.where-matters table th:nth-child(2) { width: 36%; }
+.where-matters table th:nth-child(3) { width: 42%; }
+.where-matters table td:first-child strong {
+  font-size: 15px;
+  color: var(--text);
+  display: block;
+  margin-bottom: 0.15em;
+}
+.where-matters table td {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+.subsection > p { margin: 0.6em 0; line-height: 1.7; }
+.subsection ul,
+.subsection ol { margin: 0.6em 0 0.6em 1.5em; padding: 0; }
+.subsection li { margin: 0.35em 0; line-height: 1.65; }
+.subsection blockquote {
+  margin: 0.9em 0;
+  padding: 0.5em 0.9em;
+  border-left: 3px solid var(--accent);
+  background: var(--bg-card);
+  font-style: italic;
+  color: var(--muted);
+}
+
+/* Inline equations rendered by KaTeX inside body_html — give display math
+   the same breathing room as the dedicated .equation-block does, and let
+   long expressions scroll horizontally instead of overflowing the column. */
+.subsection .katex-display {
+  margin: 0.9em 0;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 0.3em 0;
+  max-width: 100%;
+}
+.subsection .katex-display > .katex {
+  white-space: nowrap;
+}
+
+/* KaTeX's CDN CSS sets `.katex { font-size: 1.21em }` to make math read larger
+   than surrounding text. With body at 20.5px that pushes inline math to ~25px,
+   which looks oversized next to Crimson Pro prose. Pin inline math to the
+   parent's font size so \(G_i\) reads at the same height as the i in "size".
+   Display math still gets the 1.21em treatment from KaTeX's own .katex-display. */
+.katex { font-size: 1em; }
+.katex-display .katex { font-size: 1.1em; }
+
+/* ── BLOCK 4 — Motivation chain ── */
+.motivation-chain { padding-left: 1.4em; }
+.motivation-chain li { margin: 0.7em 0; line-height: 1.65; }
+.motivation-chain li::marker { color: var(--accent); font-weight: 600; }
+
+/* ── BLOCK 5 — Tech Timeline (custom CSS, not Mermaid) ── */
+.tech-timeline {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  gap: 0.5em;
+  margin: 1.4em 0 0.6em;
+  padding: 1.2rem;
+  background: var(--bg-card);
+  border: 1px solid var(--border-soft);
+  border-radius: 4px;
+}
+.timeline-node {
+  flex: 1 1 130px;
+  min-width: 130px;
+  background: var(--bg);
+  border: 1px solid var(--border-soft);
+  border-radius: 4px;
+  padding: 0.7em 0.85em;
+  text-align: left;
+  font-family: 'Inter', sans-serif;
+  transition: border-color 0.15s, transform 0.15s;
+}
+.timeline-node:hover {
+  border-color: var(--accent);
+  transform: translateY(-1px);
+}
+.timeline-node-current {
+  background: var(--accent-soft);
+  border-color: var(--accent);
+}
+.timeline-year {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px;
+  letter-spacing: 0.04em;
+  color: var(--accent);
+  font-weight: 600;
+  margin-bottom: 0.25em;
+}
+.timeline-label {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text);
+  line-height: 1.3;
+  margin-bottom: 0.3em;
+}
+.timeline-delta {
+  font-size: 12.5px;
+  color: var(--text-soft);
+  line-height: 1.4;
+}
+.timeline-arrow {
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+  color: var(--text-soft);
+  padding: 0 0.2em;
+  user-select: none;
+}
+.timeline-caption {
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  color: var(--text-soft);
+  margin: 0.5em 0 1em;
+}
+@media (max-width: 700px) {
+  .tech-timeline { flex-direction: column; }
+  .timeline-arrow { transform: rotate(90deg); padding: 0.2em 0; }
+}
+
+/* ── BLOCK 5 — Mermaid figure (kept for other diagrams in body) ── */
+.mermaid-figure {
+  margin: 1.8em 0;
+  padding: 1.2rem;
+  background: var(--bg-card);
+  border: 1px solid var(--border-soft);
+  border-radius: 4px;
+  text-align: center;
+  overflow-x: auto;
+}
+.mermaid-figure .mermaid {
+  margin: 0 auto;
+  font-family: 'Inter', sans-serif;
+}
+.mermaid-figure figcaption {
+  margin-top: 0.8rem;
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  color: var(--text-soft);
+  line-height: 1.5;
+  text-align: left;
+}
+
+/* ── BLOCK 6 — Paper figure (from paper PDF) ── */
+.paper-figure {
+  margin: 1.5em 0;
+  text-align: center;
+}
+.paper-figure img {
+  max-width: 100%;
+  height: auto;
+  border: 1px solid var(--border-soft);
+  border-radius: 4px;
+}
+.paper-figure figcaption {
+  font-size: 13.5px;
+  color: var(--text-soft);
+  margin-top: 0.5em;
+  text-align: left;
+  line-height: 1.5;
+  font-family: 'Inter', sans-serif;
+}
+
+/* Legacy .paper figure (from design-system.md) */
+.paper figure {
+  margin: 1.5em 0;
+  text-align: center;
+}
+.paper figure img {
+  max-width: 100%;
+  height: auto;
+}
+.paper figure figcaption,
+.figure-caption {
+  font-size: 14px;
+  color: var(--text-soft);
+  margin-top: 0.5rem;
+  text-align: left;
+  line-height: 1.5;
+  font-family: 'Inter', sans-serif;
+}
+.figure-caption .see-pdf {
+  color: var(--accent);
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+  font-style: normal;
+  margin-left: 0.4em;
+}
+
+/* ── 💡 Explainer box ── */
+.explain {
+  background: var(--explain-bg);
+  border-left: 4px solid var(--explain-bar);
+  padding: 0.9rem 1.2rem;
+  margin: 1.2em 0;
+  border-radius: 4px;
+  font-size: 15px;
+  line-height: 1.55;
+}
+.explain p { margin: 0; }
+.explain strong { color: var(--explain-bar); }
+
+/* Why-X callout — auto-tagged by assemble.py on any <p> whose first <strong>
+   reads "Why …?". Separates design-rationale paragraphs from regular prose
+   (which often have <strong> leads of their own). */
+.why-callout {
+  background: var(--bg-card);
+  border-left: 3px solid var(--accent);
+  padding: 0.85em 1.1em;
+  margin: 1.4em 0;
+  border-radius: 0 4px 4px 0;
+}
+.why-callout > strong:first-child {
+  color: var(--accent);
+}
+
+/* ── Equation block ── */
+.equation-block {
+  margin: 1.4em 0;
+  padding: 1em 1.2em;
+  background: var(--bg-card);
+  border: 1px solid var(--border-soft);
+  border-radius: 4px;
+}
+.equation-block .eq-label {
+  font-family: 'Inter', sans-serif;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text-soft);
+  margin-bottom: 0.5em;
+}
+.katex-target {
+  overflow-x: auto;
+  padding: 0.2em 0;
+}
+.symbol-table {
+  margin: 0.6em 0;
+  font-family: 'Inter', sans-serif;
+  font-size: 13.5px;
+  border-collapse: collapse;
+}
+.symbol-table td {
+  padding: 0.2em 0.6em 0.2em 0;
+  vertical-align: top;
+}
+.symbol-table .sym {
+  color: var(--accent);
+  min-width: 80px;
+}
+.eq-walkthrough {
+  font-size: 14px;
+  color: var(--text-soft);
+  padding-left: 0.7em;
+  border-left: 2px solid var(--border-soft);
+  margin-top: 0.5em;
+  font-style: italic;
+}
+
+/* Also support .equation-walkthrough from design-system.md */
+.equation-walkthrough {
+  margin: -0.4em 0 1.2em;
+  padding-left: 1rem;
+  border-left: 2px solid var(--border-soft);
+  color: var(--text-soft);
+  font-size: 15px;
+}
+.equation-walkthrough p { margin: 0; }
+
+/* ── BLOCK 7 — Results table ── */
+.results-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: 'Inter', sans-serif;
+  font-size: 13.5px;
+  margin: 1em 0;
+}
+.results-table th,
+.results-table td {
+  border-bottom: 1px solid var(--border-soft);
+  padding: 0.5em 0.8em;
+  text-align: left;
+}
+.results-table th {
+  background: rgba(0,0,0,0.03);
+  font-weight: 600;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+.results-table tr.highlight { background: var(--accent-soft); }
+.results-table tr.highlight td { font-weight: 600; color: var(--accent); }
+.results-headline {
+  font-style: italic;
+  color: var(--text);
+  margin-bottom: 0.8em;
+}
+.ablations { padding-left: 1.4em; margin-top: 0.5em; }
+.ablations li { margin: 0.5em 0; line-height: 1.65; }
+.ablations li::marker { color: var(--accent); }
+
+/* ── BLOCK 9 — Related work ── */
+.related-block { margin-bottom: 1.4em; }
+.related-block > .label {
+  font-family: 'Inter', sans-serif;
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-soft);
+  margin-bottom: 0.5em;
+}
+.related-block.closest {
+  background: var(--bg-card);
+  border-left: 3px solid var(--accent);
+  padding: 0.8em 1.1em;
+  border-radius: 0 4px 4px 0;
+}
+
+/* ── BLOCK 10 — Limitations ── */
+.lim-block { margin-bottom: 1.6em; }
+.lim-block > .label {
+  font-family: 'Inter', sans-serif;
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-soft);
+  margin-bottom: 0.5em;
+}
+.limit-list { padding-left: 1.4em; }
+.limit-list li { margin: 0.7em 0; }
+.lim { margin-bottom: 0.2em; }
+/* Counter-argument paragraph under each limitation bullet. NOT italic — italics
+   at body size strain the eye on long lines. Use a colored left border + slightly
+   muted color to mark it as supporting prose instead. */
+.lim-soften {
+  color: var(--text-soft);
+  font-size: 18px;
+  font-style: normal;
+  line-height: 1.7;
+  margin: 0.4em 0 0.6em 0;
+  padding: 0.1em 0 0.1em 0.85em;
+  border-left: 2px solid var(--border-soft);
+}
+.lim-soften em {
+  font-style: normal;
+}
+
+/* ── BLOCKS 11 & 12 — Q&A and Quiz ── */
+.section-intro {
+  color: var(--text-soft);
+  font-size: 14px;
+  margin-bottom: 1.2em;
+  font-family: 'Inter', sans-serif;
+}
+.qa-item {
+  background: var(--bg-card);
+  border: 1px solid var(--border-soft);
+  border-radius: 4px;
+  margin-bottom: 0.6em;
+  padding: 0.75em 1.1em;
+}
+.qa-item summary {
+  cursor: pointer;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text);
+  list-style: none;
+  line-height: 1.5;
+}
+.qa-badge {
+  display: inline-block;
+  font-family: 'Inter', sans-serif;
+  font-size: 10.5px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  padding: 0.15em 0.55em;
+  border-radius: 3px;
+  margin-right: 0.5em;
+  vertical-align: 0.06em;
+  border: 1px solid transparent;
+}
+.qa-badge-principle    { background: #fff4d6; color: #8a6d18; border-color: #e8d8a5; }
+.qa-badge-detail       { background: #e7f0fa; color: #2c6fad; border-color: #c1d6ea; }
+.qa-badge-intuition    { background: #f5f0e8; color: #6b635a; border-color: #e6dfd0; }
+.qa-badge-limit,
+.qa-badge-boundary     { background: #fde9e0; color: #b8462e; border-color: #f0d8cc; }
+.qa-badge-engineering  { background: #ede4f4; color: #5b3a8a; border-color: #d4c4e3; }
+.qa-badge-extension    { background: #e0f0e0; color: #2f6f3a; border-color: #c5dec8; }
+
+.qa-item summary::before {
+  content: 'Q  ';
+  color: var(--accent);
+  font-weight: 700;
+}
+.qa-item[open] summary::after    { content: '  ▾'; color: var(--text-soft); }
+.qa-item:not([open]) summary::after { content: '  ▸'; color: var(--text-soft); }
+.qa-answer {
+  margin-top: 0.8em;
+  padding-top: 0.8em;
+  border-top: 1px solid var(--border-soft);
+  line-height: 1.7;
+  font-size: 17px;
+}
+/* Block 12 — Quiz overrides the Q prefix with ?
+   Both selectors work: .quiz-item alone (from the compound class) or the full
+   .qa-item.quiz-item compound selector referenced in output-structure.md. */
+.qa-item.quiz-item summary::before,
+.quiz-item summary::before { content: '?  '; color: var(--accent); font-weight: 700; }
+
+/* ── Code snippet (inside qa-answer, coderef-card) ── */
+pre.code-snippet {
+  background: var(--bg-code);
+  color: var(--text-code);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12.5px;
+  line-height: 1.5;
+  padding: 1rem;
+  border-radius: 4px;
+  overflow-x: auto;
+  margin: 0.8em 0;
+}
+
+/* Bare <pre> / <pre><code> inside body content (pseudocode, Python snippets
+   author-embedded in body_html). Visually similar to .code-snippet but lighter
+   so it doesn't compete with the dark-themed sidebar code refs. Border + cream
+   background makes it clearly a code block, not prose. */
+.paper-section pre:not(.mermaid):not(.code-snippet),
+.subsection pre:not(.mermaid):not(.code-snippet) {
+  background: #f4ead4;
+  color: #2a2622;
+  font-family: 'JetBrains Mono', 'Menlo', monospace;
+  font-size: 15px;
+  line-height: 1.55;
+  padding: 0.9rem 1.1rem;
+  border-left: 3px solid #c8973e;
+  border-radius: 0 4px 4px 0;
+  overflow-x: auto;
+  margin: 1em 0;
+  white-space: pre;
+}
+.paper-section pre:not(.mermaid):not(.code-snippet) code,
+.subsection pre:not(.mermaid):not(.code-snippet) code {
+  background: none;
+  padding: 0;
+  font-size: inherit;
+  color: inherit;
+}
+
+/* ══════════════════════════════════════════════════════════════════════════════
+   BLOCK 13 — Sidebar (TOC + code refs + Pomodoro)
+   ══════════════════════════════════════════════════════════════════════════════ */
+.sidebar {
+  position: sticky;
+  top: 2rem;
+  align-self: start;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  color: var(--text-soft);
+}
+
+/* Generic .label used by sidebar, tldr, prereqs, related, lim-block */
+.sidebar .label,
+.label {
+  font-family: 'Inter', sans-serif;
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-soft);
+  margin-bottom: 0.5rem;
+}
+
+/* ── TOC ── */
+.toc { margin-bottom: 1.8rem; }
+.toc ol { list-style: none; padding: 0; }
+.toc li { margin: 0.25em 0; }
+.toc a {
+  color: var(--text);
+  text-decoration: none;
+  display: block;
+  padding: 0.2rem 0 0.2rem 0.6rem;
+  border-left: 2px solid transparent;
+  font-size: 13.5px;
+  line-height: 1.4;
+}
+.toc a:hover { color: var(--accent); }
+.toc a.active {
+  color: var(--accent);
+  border-left-color: var(--accent);
+  font-weight: 500;
+}
+
+/* ── Code refs panel ── */
+.coderefs-wrap { margin-bottom: 1.6rem; }
+
+.coderef-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-soft);
+  border-radius: 4px;
+  padding: 0.65rem 0.9rem;
+  margin-bottom: 0.5rem;
+}
+.coderef-card .repo {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11.5px;
+  color: var(--text);
+  font-weight: 500;
+  word-break: break-all;
+}
+.coderef-card .meta {
+  font-size: 11.5px;
+  color: var(--text-soft);
+  margin: 0.2rem 0;
+  line-height: 1.4;
+}
+.coderef-card a {
+  color: var(--accent);
+  text-decoration: none;
+  font-size: 12.5px;
+}
+.coderef-card a:hover { text-decoration: underline; }
+/* Synthesized snippets — dashed border, no background fill */
+.coderef-card.synthesized {
+  border-style: dashed;
+  background: transparent;
+}
+/* .label inside synthesized card */
+.coderef-card.synthesized .label {
+  font-size: 10px;
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: 0.3rem;
+}
+/* v3 compat alias */
+.coderef-synth-label {
+  font-size: 10px;
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: 0.3rem;
+}
+
+/* ── Pomodoro timer ── */
+.pomodoro {
+  padding-top: 1.2rem;
+  border-top: 1px solid var(--border-soft);
+  margin-top: 0;
+}
+/* ── Pomodoro — floating fixed widget (preferred placement) ── */
+.pomodoro-floating {
+  position: fixed;
+  top: 1.5rem;
+  right: 1.5rem;
+  z-index: 80;
+  width: 180px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-soft);
+  border-radius: 8px;
+  padding: 0.8rem 0.95rem 0.7rem;
+  border-top: 1px solid var(--border-soft);
+  box-shadow: 0 6px 24px rgba(0,0,0,0.10);
+  font-family: 'Inter', sans-serif;
+  cursor: grab;            /* draggable body */
+  touch-action: none;      /* allow touch drag without page scroll */
+  user-select: none;
+}
+.pomodoro-floating.dragging {
+  cursor: grabbing;
+  box-shadow: 0 12px 34px rgba(0,0,0,0.20);
+}
+.pomodoro-floating button { cursor: pointer; }  /* controls stay clickable */
+.pomodoro-floating .label {
+  font-size: 10.5px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-soft);
+  margin: 0 0 0.25em;
+}
+.pomodoro-floating .pomo-time { font-size: 24px; }
+.pomo-collapse {
+  position: absolute;
+  top: 0.3em;
+  right: 0.5em;
+  width: 22px;
+  height: 22px;
+  border: none;
+  background: transparent;
+  color: var(--text-soft);
+  cursor: pointer;
+  font-size: 14px;
+  line-height: 1;
+}
+.pomo-collapse:hover { color: var(--accent); }
+.pomodoro-floating.collapsed {
+  width: auto;
+  padding: 0.4em 0.7em;
+}
+.pomodoro-floating.collapsed .label,
+.pomodoro-floating.collapsed .pomo-display,
+.pomodoro-floating.collapsed .pomo-controls,
+.pomodoro-floating.collapsed .pomo-stats {
+  display: none;
+}
+.pomodoro-floating.collapsed::before {
+  content: '🍅';
+  margin-right: 0.3em;
+}
+.pomodoro-floating.collapsed .pomo-collapse {
+  position: static;
+  display: inline-block;
+}
+.pomodoro-floating.collapsed .pomo-collapse::before { content: '+'; }
+@media (max-width: 700px) {
+  .pomodoro-floating { width: 150px; top: 0.8rem; right: 0.8rem; }
+}
+
+/* Sidebar hint text after labels */
+.sidebar .label .hint {
+  font-size: 9.5px;
+  font-weight: 400;
+  letter-spacing: 0.03em;
+  text-transform: none;
+  color: var(--text-soft);
+  opacity: 0.8;
+  margin-left: 0.3em;
+}
+
+/* ── Code modal — full-width snippet viewer ── */
+.code-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: none;
+}
+.code-modal.open {
+  display: block;
+}
+.code-modal-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(20, 16, 12, 0.55);
+}
+.code-modal-panel {
+  position: relative;
+  width: min(85vw, 1100px);
+  max-height: 85vh;
+  margin: 5vh auto 0;
+  background: var(--bg);
+  border: 1px solid var(--border-soft);
+  border-radius: 8px;
+  box-shadow: 0 12px 48px rgba(0,0,0,0.35);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+.code-modal-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1em;
+  padding: 1em 1.4em 0.8em;
+  border-bottom: 1px solid var(--border-soft);
+  font-family: 'Inter', sans-serif;
+}
+.code-modal-meta {
+  font-size: 11px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--text-soft);
+  margin: 0 0 0.3em;
+}
+.code-modal-title {
+  margin: 0;
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--text);
+  line-height: 1.3;
+}
+.code-modal-close {
+  background: transparent;
+  border: none;
+  color: var(--text-soft);
+  font-size: 26px;
+  line-height: 1;
+  cursor: pointer;
+  padding: 0;
+  width: 32px;
+  height: 32px;
+}
+.code-modal-close:hover { color: var(--accent); }
+.code-modal-body.no-snippet {
+  background: var(--bg-card);
+  color: var(--text-soft);
+  font-style: italic;
+  white-space: pre-wrap;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  text-align: center;
+  padding: 2.5rem 1.4rem;
+}
+.code-modal-body {
+  flex: 1;
+  margin: 0;
+  padding: 1.2rem 0.5rem 1.2rem 0;
+  background: var(--bg-code);
+  color: var(--text-code);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 13px;
+  line-height: 1.55;
+  overflow: auto;
+  white-space: pre;
+  counter-reset: line;
+}
+.code-modal-body .line {
+  display: block;
+  padding-left: 4.5em;
+  padding-right: 1rem;
+  position: relative;
+  counter-increment: line;
+  min-height: 1.55em;
+}
+.code-modal-body .line::before {
+  content: attr(data-ln);
+  position: absolute;
+  left: 0;
+  width: 3.5em;
+  text-align: right;
+  color: var(--text-code);
+  opacity: 0.35;
+  font-variant-numeric: tabular-nums;
+  user-select: none;
+  padding-right: 0.6em;
+  border-right: 1px solid rgba(232, 227, 215, 0.12);
+}
+.code-modal-body .line:hover {
+  background: rgba(255,255,255,0.03);
+}
+.code-modal-body .line:hover::before {
+  opacity: 0.7;
+}
+.code-modal-footer {
+  padding: 0.7em 1.4em;
+  border-top: 1px solid var(--border-soft);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1em;
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+}
+.code-modal-note {
+  margin: 0;
+  color: var(--text-soft);
+  flex: 1;
+  font-style: italic;
+}
+.code-modal-link {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 500;
+  white-space: nowrap;
+}
+.code-modal-link:hover { text-decoration: underline; }
+
+/* Make in-sidebar snippet previews clickable (visual hint) */
+.coderef-card pre.code-snippet { cursor: pointer; position: relative; }
+.coderef-card pre.code-snippet::after {
+  content: '↗ click for full code';
+  position: absolute;
+  bottom: 4px;
+  right: 6px;
+  background: rgba(184, 70, 46, 0.85);
+  color: white;
+  font-family: 'Inter', sans-serif;
+  font-size: 10px;
+  padding: 0.15em 0.5em;
+  border-radius: 3px;
+  pointer-events: none;
+}
+.pomo-display {
+  display: flex;
+  align-items: baseline;
+  gap: 0.6em;
+  margin: 0.4em 0;
+}
+.pomo-mode {
+  font-family: 'Inter', sans-serif;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-soft);
+}
+.pomo-time {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 28px;
+  color: var(--text);
+  font-weight: 500;
+}
+.pomo-controls {
+  display: flex;
+  gap: 0.4em;
+  margin: 0.5em 0;
+}
+.pomo-btn {
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-soft);
+  color: var(--text);
+  width: 36px;
+  height: 36px;
+  border-radius: 4px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.pomo-btn:hover { border-color: var(--accent); color: var(--accent); }
+.pomo-btn.running { background: var(--accent); color: #fff; border-color: var(--accent); }
+.pomo-stats {
+  font-size: 11.5px;
+  color: var(--text-soft);
+  margin-top: 0.3em;
+}
+
+/* ── Jargon tooltip spans ── */
+.jargon {
+  border-bottom: 1px dotted var(--accent);
+  cursor: help;
+  position: relative;
+}
+.jargon:hover::after {
+  content: attr(data-gloss);
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  width: max-content;
+  min-width: 240px;
+  max-width: 340px;
+  padding: 0.5rem 0.75rem;
+  background: var(--bg-card);
+  color: var(--text);
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  line-height: 1.45;
+  border: 1px solid var(--border-soft);
+  border-radius: 4px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+  z-index: 30;
+  white-space: normal;
+  pointer-events: none;
+}
+/* Touch/click toggle — mirrors hover style but shown below the span */
+.jargon.open::after {
+  content: attr(data-gloss);
+  position: absolute;
+  top: 100%;
+  bottom: auto;
+  left: 0;
+  width: max-content;
+  min-width: 240px;
+  max-width: 340px;
+  padding: 0.5rem 0.75rem;
+  background: var(--bg-card);
+  color: var(--text);
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  line-height: 1.45;
+  border: 1px solid var(--border-soft);
+  border-radius: 4px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+  z-index: 30;
+  white-space: normal;
+  pointer-events: none;
+}
+
+/* ── Code anchors — link body phrases to sidebar code refs ── */
+.code-anchor {
+  border-bottom: 1px dashed #5a9bd4;
+  color: #2c6fad;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+.code-anchor:hover {
+  background: #e7f0fa;
+}
+.code-anchor::before {
+  content: '⟨/⟩\00a0';
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.85em;
+  color: #5a9bd4;
+  vertical-align: 0.05em;
+}
+
+/* ── Misc utility classes ── */
+.section-label {
+  font-family: 'Inter', sans-serif;
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-soft);
+  margin-bottom: 0.4em;
+}
+
+.empty-state {
+  font-size: 12px;
+  color: var(--text-soft);
+  font-style: italic;
+}
+
+.footnote {
+  font-size: 13px;
+  color: var(--text-soft);
+  border-top: 1px solid var(--border-soft);
+  padding-top: 0.6em;
+  margin-top: 2rem;
+}
+
+/* ── Mobile — < 1024px ── */
+@media (max-width: 1024px) {
+  .reader {
+    display: block;
+  }
+  .sidebar {
+    position: static;
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--border-soft);
+  }
+  .prereq-detail {
+    position: static;
+    max-width: 100%;
+    box-shadow: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .page-wrapper    { padding: 0 1rem; }
+  .paper-header h1 { font-size: 24px; }
+  .tldr-row        { flex-direction: column; gap: 0.2em; }
+  .pomo-time       { font-size: 22px; }
+}

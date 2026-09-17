@@ -1,0 +1,255 @@
+<!doctype html>
+<html lang="zh-Hans">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>小团队的全球一题 — Lieflat 报告模板 · 百点场</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+SC:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+  /* ═══════════════════════════════════════════════════════════════
+     LIEFLAT 报告模板 08 · 单位人群一页（百点场）
+     场景：一组人口级对比陈述（公益倡导页、行业白皮书开篇、政策简报）
+     排版参考：图7 "Global challenge" isotype（一个小人 = 1 亿）——
+               细规线压顶的断行大字陈述、左上图例、巨幅单位网格场、
+               底部两组体量对比 —— 只学排版和字体。
+     色板正本 = color-presets.js 的 WIRE 一套（灰阶人群 + 荧光橙主角，
+     与原图「灰色人群里点亮子集」同构）。isotype 小人翻译成 lieflat 的
+     单位点阵：一点 = 一个单位，可数。
+     图表正本 = lieflat gallery：
+       图A  单位点阵场 = L14 hundred field 的网格排布（1 点 = 60 团队）
+       图B  F6 paired rungs · basics-gallery.html（今天 vs 2030 两组）
+     数据说明：全部为虚构演示数据，仅用于验证版式。
+     ═══════════════════════════════════════════════════════════════ */
+  :root{
+    --bg:#F0F0EE; --txt:#1F1E1C;
+    --mut:rgba(31,30,28,.60); --lab:rgba(31,30,28,.72);
+    --faint:rgba(31,30,28,.32); --quiet:rgba(31,30,28,.15); --grid:rgba(31,30,28,.16);
+    --data:#22211F; --data2:#8F8E86; --hero:#F5572F; --faintdata:#C0BFB7;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{background:var(--bg);color:var(--txt);font-family:'Inter','Noto Sans SC',sans-serif;
+    -webkit-font-smoothing:antialiased;font-variant-numeric:tabular-nums lining-nums;
+    display:flex;justify-content:center;padding:64px 28px}
+  .sheet{width:880px;max-width:880px}
+
+  /* ── 断行大字陈述：细规线压顶（学图7）── */
+  .state{border-top:1px solid var(--txt);padding-top:14px}
+  .state .lead{font-size:21px;font-weight:700;line-height:1.5}
+  .state .lead b{font-weight:900}
+  h1{font-size:30px;font-weight:900;line-height:1.4;margin-bottom:6px}
+
+  .head{display:grid;grid-template-columns:200px 1fr;gap:44px;align-items:end}
+  .legend{font-size:10px;font-weight:700;color:var(--mut)}
+  .legend .rule{border-top:1px solid var(--txt);margin-bottom:10px;width:64px}
+  .legend .row{display:flex;align-items:center;gap:8px}
+  .legend .dot{width:9px;height:9px;border-radius:50%;background:var(--data)}
+
+  /* ── 双陈述行 ── */
+  .claims{display:grid;grid-template-columns:1fr 1fr;gap:44px;margin-top:40px}
+  .claims .c .num{font-size:34px;font-weight:900;letter-spacing:-.02em}
+  .claims .c:first-child .num{color:var(--hero)}
+  .claims .c:last-child .num{color:var(--txt)}
+  .claims .c .t{font-size:16.5px;font-weight:700;line-height:1.5;margin-top:2px}
+  .claims .c .src{font-size:9px;font-weight:600;letter-spacing:.08em;color:var(--faint);margin-top:6px}
+
+  .fig svg{width:100%;height:auto;display:block}
+  svg text{font-family:'Inter','Noto Sans SC',sans-serif}
+  .srcline{font-size:9px;font-weight:600;letter-spacing:.1em;color:var(--faint);margin-top:10px}
+
+  /* ── 底部两组体量对比 ── */
+  .compare{display:grid;grid-template-columns:1fr 1fr;gap:44px;margin-top:56px}
+  .compare .b .state{padding-top:12px}
+  .compare .b .t{font-size:16.5px;font-weight:700;line-height:1.55}
+  .compare .b .pct{font-size:34px;font-weight:900;margin-top:2px}
+  .compare .b:first-child .pct{color:var(--hero)}
+  .compare .b:last-child .pct{color:var(--txt)}
+
+  .bridge{margin-top:34px;border-top:1px dotted var(--faint);padding-top:12px;
+    text-align:right;font-size:14px;font-weight:700}
+  .bridge b{font-weight:900}
+
+  .foot{margin-top:56px;padding-top:12px;border-top:1px solid var(--txt);
+    display:flex;justify-content:space-between;font-size:9px;font-weight:600;
+    letter-spacing:.12em;color:var(--mut)}
+
+  .pop{transform-box:fill-box;transform-origin:center;animation:pop .5s cubic-bezier(.2,.7,.3,1.3) both}
+  @keyframes pop{from{transform:scale(0)}to{transform:none}}
+  .fade{animation:fade .9s ease both}
+  @keyframes fade{from{opacity:0}}
+  @media(max-width:640px){body{padding:24px 10px}}
+  @media (prefers-reduced-motion:reduce){.pop,.fade{animation:none}}
+</style>
+</head>
+<body>
+<div class="sheet">
+
+  <!-- ══ 头部：图例 + 大字陈述 ══ -->
+  <div class="head">
+    <div class="legend">
+      <div class="rule"></div>
+      <div style="margin-bottom:10px;letter-spacing:.14em">图例</div>
+      <div class="row"><span class="dot"></span><span>一点 = 60 个团队</span></div>
+    </div>
+    <div class="state">
+      <h1>全球约 <b>6,000</b> 个<br>十人以下的软件小团队里，</h1>
+    </div>
+  </div>
+
+  <!-- ══ 双陈述 ══ -->
+  <div class="claims">
+    <div class="c state">
+      <div class="num">2,160 个</div>
+      <div class="t">还没有任何形式的<br>发布流程</div>
+      <div class="src">演示数据 · 2026</div>
+    </div>
+    <div class="c state">
+      <div class="num">1,680 个</div>
+      <div class="t">被每周十小时以上的<br>会议拖着走</div>
+      <div class="src">演示数据 · 2026</div>
+    </div>
+  </div>
+
+  <!-- ══ 单位点阵场 ══
+       翻译自图7 的 isotype 小人网格：一点 = 60 团队，100 点 = 全体。
+       橙 = 无发布流程（36 点），墨 = 会议过载（28 点），灰 = 其余。
+       WIRE 纪律：橙只给一个主角子集。 -->
+  <div class="fig" style="margin-top:44px"><svg id="field" viewBox="0 0 880 300" preserveAspectRatio="xMidYMid meet"></svg></div>
+  <div class="srcline">UNIT FIELD · 一点 = 60 个团队 · 36 橙 + 28 墨 + 36 灰 = 100 点 · 两个子集有重叠，此处各自独立计数</div>
+
+  <!-- ══ 底部：两组 2026 vs 2030 对比 ══
+       翻译自图7 的灯泡/水滴体量对比：paired rungs，一档一个单位，可数。 -->
+  <div class="compare">
+    <div class="b">
+      <div class="state">
+        <div class="t">到 2030 年，采用异步流程<br>的小团队将增加</div>
+        <div class="pct">+45%</div>
+      </div>
+      <div class="fig"><svg id="async" viewBox="0 0 320 240" preserveAspectRatio="xMidYMid meet"></svg></div>
+      <div class="srcline">PAIRED RUNGS · 一档 = 200 个团队 · 淡 = 2026 · 橙 = 2030</div>
+    </div>
+    <div class="b">
+      <div class="state">
+        <div class="t">而每周会议时长<br>预计将下降</div>
+        <div class="pct">−20%</div>
+      </div>
+      <div class="fig"><svg id="meeting" viewBox="0 0 320 240" preserveAspectRatio="xMidYMid meet"></svg></div>
+      <div class="srcline">PAIRED RUNGS · 一档 = 1 小时/周 · 淡 = 2026 · 墨 = 2030</div>
+    </div>
+  </div>
+
+  <div class="bridge">两条线交汇处，是同一件事：<b>把协作从日历里搬进文档里。</b></div>
+
+  <div class="foot">
+    <span>小团队的全球一题 · 单位人群一页纸</span>
+    <span>全部为演示数据 · LIEFLAT CHARTS</span>
+  </div>
+</div>
+
+<script>
+/* ── mono-tokens 内联（几何/工具函数与正本一致）── */
+const NS='http://www.w3.org/2000/svg';
+const el=(p,t,a)=>{const n=document.createElementNS(NS,t);for(const k in a)n.setAttribute(k,a[k]);p.appendChild(n);return n};
+const txt=(p,a,s)=>{const n=el(p,'text',a);n.textContent=s;return n};
+const tip=(n,s)=>{const t=document.createElementNS(NS,'title');t.textContent=s;n.appendChild(t)};
+const rnd=(i,k)=>Math.abs(((i*73856093)^(k*19349663))%1000)/1000;
+const obsReveal=(id,fn)=>{
+  const n=document.getElementById(id);
+  const go=()=>{n.innerHTML='';fn(n)};
+  const io=new IntersectionObserver(es=>{if(es[0].isIntersecting){go();io.disconnect()}},{threshold:.3});
+  io.observe(n); n.style.cursor='pointer'; n.addEventListener('click',go);
+};
+
+/* ── WIRE preset（color-presets.js 原值）── */
+const BG='#F0F0EE',TXT='#1F1E1C',MUT='rgba(31,30,28,.60)',FAINT='rgba(31,30,28,.32)',
+      GRID='rgba(31,30,28,.16)';
+const DATA='#22211F',DATA2='#8F8E86',HERO='#F5572F',FAINTDATA='#C0BFB7';
+
+/* ════ 图A · 单位点阵场 ════
+   isotype 网格的 lieflat 翻译：20 列 × 5 行 = 100 点，1 点 = 60 团队。
+   前 36 点橙（无发布流程）、接 28 点墨（会议过载）、其余 36 点淡灰。
+   点径 rnd 微抖（Lupi 肌理），每 10 点列脚一粒定位点。 */
+(()=>{
+const SEG=[[36,'#F5572F','无发布流程'],[28,'#22211F','会议过载'],[36,'#C0BFB7','其余团队']];
+obsReveal('field',s=>{
+  const COLS=20,PX=44,PY=52,X0=32,Y0=40;
+  let idx=0;
+  SEG.forEach(([n,col,name],si)=>{
+    for(let k=0;k<n;k++,idx++){
+      const c=idx%COLS,r=Math.floor(idx/COLS);
+      const x=X0+c*PX+(rnd(idx+1,si+3)-.5)*4,
+            y=Y0+r*PY+(rnd(idx+2,si+7)-.5)*4;
+      const dot=el(s,'circle',{cx:x,cy:y,r:7.5+rnd(idx+3,si+5)*2.5,fill:col,
+        opacity:col==='#C0BFB7'?.85:.95,
+        class:'pop',style:`animation-delay:${idx*.012}s`});
+      tip(dot,`${name} —— 一点 = 60 个团队`);
+    }
+  });
+  // 列脚定位点：每 5 列一粒
+  for(let c=0;c<=COLS;c+=5)
+    el(s,'circle',{cx:X0+c*PX-PX/2,cy:Y0+4.6*PY+26,r:1.2,fill:FAINTDATA,
+      class:'fade',style:'animation-delay:1.2s'});
+  txt(s,{x:X0+9.5*PX,y:Y0+4.6*PY+30,'font-size':8,'font-weight':600,fill:FAINT,
+    'text-anchor':'middle','letter-spacing':'.1em',class:'fade',style:'animation-delay:1.3s'},
+    '每行 20 点 · 从左上顺序读');
+});
+})();
+
+/* ════ 图B/C · F6 paired rungs ════
+   结构照搬 basics-gallery "paired rungs"：两把梯子并肩，
+   2026 淡档、2030 实档（左橙右墨），一档一个诚实单位。 */
+const pairs=(id,was,now,unit,colNow)=>{
+  obsReveal(id,s=>{
+    const base=196,step=5.2,HW=16,xa=110,xb=210;
+    for(let k=0;k<was;k++){
+      const y=base-k*step,w=HW-1.5+rnd(k+1,3)*3;
+      el(s,'line',{x1:xa-w,y1:y,x2:xa+w,y2:y,stroke:FAINTDATA,'stroke-width':1.2,
+        opacity:.75+rnd(k+2,4)*.25,class:'fade',style:`animation-delay:${k*.014}s`});
+    }
+    for(let k=0;k<now;k++){
+      const y=base-k*step,w=HW-1.5+rnd(k+1,9)*3;
+      el(s,'line',{x1:xb-w,y1:y,x2:xb+w,y2:y,stroke:colNow,'stroke-width':1.2,
+        opacity:.8+rnd(k+2,11)*.2,class:'fade',style:`animation-delay:${.15+k*.014}s`});
+      if(k%5===4)el(s,'circle',{cx:xb+HW+5,cy:y,r:.9,fill:FAINTDATA,
+        class:'fade',style:`animation-delay:${.15+k*.014}s`});
+    }
+    const numA=txt(s,{x:xa,y:base-(was-1)*step-10,'font-size':10,'font-weight':700,
+      fill:DATA2,'text-anchor':'middle',class:'fade',style:'animation-delay:.5s'},was*unit.k);
+    const numB=txt(s,{x:xb,y:base-(now-1)*step-10,'font-size':12,'font-weight':800,
+      fill:colNow,'text-anchor':'middle',class:'fade',style:'animation-delay:.65s'},now*unit.k);
+    tip(numA,`2026 —— ${was*unit.k}${unit.t}`);
+    tip(numB,`2030 —— ${now*unit.k}${unit.t}`);
+    txt(s,{x:xa,y:base+16,'font-size':8,'font-weight':700,fill:MUT,'text-anchor':'middle',
+      'letter-spacing':'.08em',class:'fade'},'2026');
+    txt(s,{x:xb,y:base+16,'font-size':8,'font-weight':700,fill:MUT,'text-anchor':'middle',
+      'letter-spacing':'.08em',class:'fade'},'2030');
+    el(s,'line',{x1:60,y1:base+4,x2:260,y2:base+4,stroke:GRID,'stroke-width':.8,class:'fade'});
+    txt(s,{x:160,y:230,'font-size':7,'font-weight':600,fill:FAINT,'text-anchor':'middle',
+      'letter-spacing':'.1em',class:'fade',style:'animation-delay:.9s'},
+      `一档 = ${unit.k}${unit.t}`);
+  });
+};
+pairs('async',12,18,{k:200,t:' 团队'},HERO);   // 2400 → 3600 (+50%≈45% 示意)
+pairs('meeting',15,12,{k:1,t:' 小时'},DATA);    // 15 → 12 (−20%)
+
+</script>
+<script>
+/* ── fit-width：视口比版心窄时整页等比缩小，不重排 ──
+   报告是一张版面，不是响应式网页。窄屏塌成单栏会得到一个
+   设计时不存在的版式；等比缩小则保留构图，跟 PDF 的「适合宽度」一致。
+   机制同模板 11。 */
+(()=>{
+  const sheet=document.querySelector('.sheet');
+  const W=880;
+  const fit=()=>{
+    const cs=getComputedStyle(document.body);
+    const avail=document.documentElement.clientWidth
+      -parseFloat(cs.paddingLeft)-parseFloat(cs.paddingRight);
+    sheet.style.zoom=Math.min(1,avail/W);
+  };
+  fit();
+  addEventListener('resize',fit);
+})();
+</script>
+</body>
+</html>

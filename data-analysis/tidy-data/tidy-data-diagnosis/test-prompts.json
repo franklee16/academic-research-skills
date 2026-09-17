@@ -1,0 +1,73 @@
+{
+  "skill": "tidy-data-diagnosis",
+  "version": "0.1.0",
+  "source_book": "Tidy Data — Hadley Wickham",
+  "darwin_compatible": true,
+  "test_cases": [
+    {
+      "id": "should-trigger-01",
+      "type": "should_trigger",
+      "prompt": "我刚下载了一个 CSV,打开一看列名是 2019、2020、2021,行是不同国家,每个单元格是 GDP。这个结构对吗?",
+      "expected_behavior": "应激活 tidy-data-diagnosis, 识别为模式 1 (列头是值而非变量名), 建议将年份列头 melt 为 year 变量",
+      "notes": "正面场景: 列头是年份(值), 典型的模式 1"
+    },
+    {
+      "id": "should-trigger-02",
+      "type": "should_trigger",
+      "prompt": "我有一个 Excel 表,列名是 Q1_Revenue、Q2_Revenue、Q3_Revenue、Q4_Revenue,每行是一个产品。想判断数据结构是否规范",
+      "expected_behavior": "应激活 tidy-data-diagnosis, 识别为模式 1 (列头含季度信息是值), 建议将季度列 melt 为 quarter 变量",
+      "notes": "正面场景: 列名编码了时间维度的值"
+    },
+    {
+      "id": "should-trigger-03",
+      "type": "should_trigger",
+      "prompt": "这个数据集的列名叫 m014、f1524、m2534,看起来像是性别加年龄段。怎么判断这种结构合不合理?",
+      "expected_behavior": "应激活 tidy-data-diagnosis, 识别为模式 2 (一列含多个变量: 性别+年龄段), 建议先 melt 再 split",
+      "notes": "正面场景: 一列编码多变量, 直接对应 TB 数据集模式"
+    },
+    {
+      "id": "should-trigger-04",
+      "type": "should_trigger",
+      "prompt": "我的数据有 500 列,其中 365 列是每天的测量值(d1 到 d365),另外有 id 和 type 两列。type 列的值是 temperature 和 humidity。这个结构有问题吗?",
+      "expected_behavior": "应激活 tidy-data-diagnosis, 识别为模式 3 (变量同时在行 type 和列 d1-d365), 建议先 melt 再 cast",
+      "notes": "正面场景: 变量在行和列两端, 类似气象数据案例"
+    },
+    {
+      "id": "should-not-trigger-01",
+      "type": "should_not_trigger",
+      "prompt": "我的数据集有 15% 的缺失值,应该怎么处理?",
+      "expected_behavior": "不应激活 tidy-data-diagnosis, 因为这是数据质量(缺失值)问题, 不是数据结构问题",
+      "notes": "诱饵: 数据质量问题被误认为结构问题"
+    },
+    {
+      "id": "should-not-trigger-02",
+      "type": "should_not_trigger",
+      "prompt": "帮我把这个 CSV 导入 pandas,然后画个柱状图",
+      "expected_behavior": "不应激活, 这是常规数据导入和可视化操作, 不涉及结构诊断",
+      "notes": "诱饵: 一般性数据分析请求, 无结构问题信号"
+    },
+    {
+      "id": "should-not-trigger-03",
+      "type": "should_not_trigger",
+      "prompt": "这个表里有些日期格式不统一,有的写 2023-01-15 有的写 01/15/2023,帮我统一一下",
+      "expected_behavior": "不应激活, 这是日期解析/格式统一问题, 不是结构问题",
+      "notes": "诱饵: '帮我把表整理一下'的字面意思容易被误判为结构问题"
+    },
+    {
+      "id": "edge-01",
+      "type": "edge_case",
+      "prompt": "我的表有 height 和 weight 两列,每行是一个人。但我的分析需要把 height 和 weight 作为 dimension 变量的两个值,而不是独立变量。这算不算不整洁?",
+      "expected_behavior": "应激活但给出 nuanced 回答: 结构是否整洁取决于分析目的。对大多数分析, height/weight 各一列是整洁的; 但如果要做 repeated measures 或 mixed effects, 可能需要 melt 为 (person, dimension, value)。Wickham 明确讨论了这个边界",
+      "notes": "边界: 变量 vs 观察的判定取决于分析意图, 不是绝对的"
+    },
+    {
+      "id": "edge-02",
+      "type": "edge_case",
+      "prompt": "我有一个相关系数矩阵(列名和行名都是变量名),需要判断它是不是 tidy data",
+      "expected_behavior": "应激活并指出: 矩阵不是 tidy data (列头是变量名也是值), 但这是故意为之 — 矩阵格式对矩阵运算更高效。是否需要 melt 取决于后续分析是否需要 tidy 格式",
+      "notes": "边界: 非整洁格式有时是合理的, 不一定要修复"
+    }
+  ],
+  "minimum_pass_rate": 0.8,
+  "notes": "4 条 should_trigger + 3 条 should_not_trigger + 2 条 edge_case。所有 should_not_trigger 必须通过 (诱饵容错为 0)。"
+}

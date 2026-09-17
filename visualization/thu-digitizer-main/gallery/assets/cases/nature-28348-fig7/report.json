@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "case_id": "nature-28348-fig7",
+  "status": "visible_geometry_candidate",
+  "article_url": "https://www.nature.com/articles/s41467-022-28348-y",
+  "figure": "Fig. 7",
+  "input": {
+    "sha256": "3cfc049bd37f8f7a00bec3c802d973e11cc1d5907aeee1dafb83be159bfb7a75",
+    "width": 1000,
+    "height": 768,
+    "coordinate_space": "original_raster_pixels",
+    "resampling_applied": false
+  },
+  "visible_extraction": {
+    "extractor": "candidate_lattice_composite",
+    "algorithm_version": "lattice-composite-original-pixel-v2",
+    "deterministic_run_id": "2302f58fbcd3eb24",
+    "numeric_output_authorized": true,
+    "column_guide_role": "membership_guides",
+    "row_guide_role": "row_bar"
+  },
+  "coverage": {
+    "intersections": 12,
+    "set_rows": 5,
+    "membership_grid_cells": 60,
+    "active_membership_nodes": 40,
+    "ambiguous_membership_nodes": 0
+  },
+  "validation": {
+    "candidate_spacing_status": "passed",
+    "top_bars_vs_values": {
+      "status": "not_applicable_membership_derived_column_guides",
+      "reason": "column centres come from repeated membership glyphs, not value-bar edges"
+    },
+    "official_source": {
+      "status": "validated",
+      "path": "source-data.xlsx",
+      "sha256": "3705643fdd6257e8e4052e9863310b66d75c255be2225eace260590fd0be334c"
+    },
+    "source_mismatch_count": 0
+  },
+  "source_data_role": "independent_validation_only",
+  "limitations": [
+    "Intersection values and row labels are visibly transcribed; geometry and memberships are original-pixel detections.",
+    "The retained official-source reference validates the immutable image-derived table but never replaces it.",
+    "The candidate recovers visible plotted summaries, not hidden observations or connector semantics."
+  ]
+}

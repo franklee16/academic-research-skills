@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "case_id": "nature-51329-fig5a",
+  "chart_type": "spatial_point_map",
+  "status": "partial_visible",
+  "assets": {
+    "primary_csv": "data.csv",
+    "region_spots_csv": "region-spots-visible.csv",
+    "probability_spots_csv": "probability-spots-visible.csv",
+    "original": "original.png",
+    "overlay": "overlay.png",
+    "recreated": "recreated.png",
+    "preflight_report": "preflight-report.json",
+    "figure_spec": "figure-spec.json"
+  },
+  "counts": {
+    "region_spots_total": 426,
+    "region_spots_by_category": {
+      "Cancer": 137,
+      "Duct Epithelium": 72,
+      "Pancreatic": 70,
+      "Stroma": 147
+    },
+    "colour_mapped_spots_total": 3424,
+    "colour_mapped_spots_by_map": {
+      "map_11": 496,
+      "map_12": 496,
+      "map_13": 496,
+      "map_14": 496,
+      "map_21": 360,
+      "map_22": 360,
+      "map_23": 360,
+      "map_24": 360
+    },
+    "primary_csv_rows": 3850
+  }
+}

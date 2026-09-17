@@ -1,0 +1,673 @@
+row_index,column_index,embedding,biomarker,digitized_correlation,value_status,value_interval,significant_visible,fill_rgb,palette_pixel_y,palette_distance_rgb,cell_left_pixel,cell_top_pixel,cell_right_pixel,cell_bottom_pixel,status
+0,0,Z24,Age,0.2589041095890411,numeric,null,True,"204,64,58",78,2.23606797749979,82,54,113,74,candidate_visible_geometry
+0,1,Z24,Sex,-0.14383561643835618,numeric,null,True,"144,178,254",225,1.7320508075688772,114,54,145,74,candidate_visible_geometry
+0,2,Z24,MMSE,-0.11643835616438358,numeric,null,True,"159,191,255",215,2.23606797749979,146,54,177,74,candidate_visible_geometry
+0,3,Z24,Aβ42/Aβ40,-0.012328767123287676,numeric,null,False,"214,220,228",177,2.23606797749979,178,54,209,74,candidate_visible_geometry
+0,4,Z24,pTau-217,-0.05890410958904113,numeric,null,True,"192,212,245",194,1.0,210,54,241,74,candidate_visible_geometry
+0,5,Z24,TauPET,-0.07808219178082193,numeric,null,True,"182,206,250",201,1.0,242,54,273,74,candidate_visible_geometry
+0,6,Z24,ADSignCT,-0.16301369863013698,numeric,null,True,"134,169,252",232,2.23606797749979,274,54,305,74,candidate_visible_geometry
+0,7,Z24,WholeBrainCT,-0.2342465753424658,numeric,null,True,"91,122,229",258,1.0,305,54,336,74,candidate_visible_geometry
+0,8,Z24,VentricleVol,0.2643835616438356,numeric,null,True,"202,59,55",76,3.3166247903554,337,54,368,74,candidate_visible_geometry
+0,9,Z24,WMH,0.25616438356164384,numeric,null,True,"205,66,59",79,1.7320508075688772,369,54,400,74,candidate_visible_geometry
+0,10,Z24,UPDRS,0.3,clipped_high,"[0.3, null]",True,"180,4,38",63,5.0990195135927845,401,54,432,74,candidate_visible_geometry
+0,11,Z24,SAA,0.14109589041095888,numeric,null,True,"245,160,129",121,1.0,433,54,464,74,candidate_visible_geometry
+0,12,Z24,GFAP,0.17123287671232876,numeric,null,True,"240,138,108",110,2.23606797749979,465,54,496,74,candidate_visible_geometry
+0,13,Z24,NFL,0.14931506849315068,numeric,null,True,"244,154,123",118,1.7320508075688772,497,54,528,74,candidate_visible_geometry
+0,14,Z24,YKL40,0.17945205479452053,numeric,null,True,"238,132,104",107,1.7320508075688772,528,54,559,74,candidate_visible_geometry
+0,15,Z24,sTREM2,0.18493150684931506,numeric,null,True,"236,129,101",105,1.0,560,54,591,74,candidate_visible_geometry
+0,16,Z24,SYT1,-0.012328767123287676,numeric,null,False,"214,220,228",177,2.23606797749979,592,54,623,74,candidate_visible_geometry
+0,17,Z24,SNAP25,-0.05342465753424658,numeric,null,False,"195,213,244",192,1.4142135623730951,624,54,655,74,candidate_visible_geometry
+0,18,Z24,NPTX2,-0.12465753424657533,numeric,null,True,"154,187,255",218,2.0,656,54,687,74,candidate_visible_geometry
+0,19,Z24,PDGFRB,0.08630136986301368,numeric,null,True,"246,191,166",141,1.7320508075688772,688,54,719,74,candidate_visible_geometry
+0,20,Z24,S100,-0.009589041095890427,numeric,null,False,"216,220,226",176,1.7320508075688772,720,54,751,74,candidate_visible_geometry
+1,0,Z31,Age,0.3,clipped_high,"[0.3, null]",True,"180,4,38",63,5.0990195135927845,82,75,113,94,candidate_visible_geometry
+1,1,Z31,Sex,-0.06164383561643838,numeric,null,True,"191,211,246",195,2.0,114,75,145,94,candidate_visible_geometry
+1,2,Z31,MMSE,-0.2123287671232877,numeric,null,True,"102,135,237",250,2.8284271247461903,146,75,177,94,candidate_visible_geometry
+1,3,Z31,Aβ42/Aβ40,0.12191780821917808,numeric,null,True,"247,172,142",128,2.23606797749979,178,75,209,94,candidate_visible_geometry
+1,4,Z31,pTau-217,0.09726027397260273,numeric,null,True,"247,186,159",137,3.605551275463989,210,75,241,94,candidate_visible_geometry
+1,5,Z31,TauPET,0.05616438356164383,numeric,null,True,"241,205,186",152,1.0,242,75,273,94,candidate_visible_geometry
+1,6,Z31,ADSignCT,-0.25342465753424664,numeric,null,True,"81,109,219",265,1.4142135623730951,274,75,305,94,candidate_visible_geometry
+1,7,Z31,WholeBrainCT,-0.27534246575342464,numeric,null,True,"69,92,206",273,0.0,305,75,336,94,candidate_visible_geometry
+1,8,Z31,VentricleVol,0.27534246575342464,numeric,null,True,"195,46,49",72,1.7320508075688772,337,75,368,94,candidate_visible_geometry
+1,9,Z31,WMH,0.26712328767123283,numeric,null,True,"200,56,54",75,1.4142135623730951,369,75,400,94,candidate_visible_geometry
+1,10,Z31,UPDRS,0.3,clipped_high,"[0.3, null]",True,"180,4,38",63,5.0990195135927845,401,75,432,94,candidate_visible_geometry
+1,11,Z31,SAA,0.1465753424657534,numeric,null,True,"245,156,125",119,1.0,433,75,464,94,candidate_visible_geometry
+1,12,Z31,GFAP,0.2534246575342466,numeric,null,True,"207,69,60",80,2.449489742783178,465,75,496,94,candidate_visible_geometry
+1,13,Z31,NFL,0.19863013698630136,numeric,null,True,"231,116,91",100,1.4142135623730951,497,75,528,94,candidate_visible_geometry
+1,14,Z31,YKL40,0.23150684931506849,numeric,null,True,"218,90,73",88,1.4142135623730951,528,75,559,94,candidate_visible_geometry
+1,15,Z31,sTREM2,0.18767123287671234,numeric,null,True,"236,127,99",104,1.4142135623730951,560,75,591,94,candidate_visible_geometry
+1,16,Z31,SYT1,0.023287671232876672,numeric,null,False,"230,215,207",164,1.4142135623730951,592,75,623,94,candidate_visible_geometry
+1,17,Z31,SNAP25,0.06164383561643835,numeric,null,False,"242,202,181",150,1.0,624,75,655,94,candidate_visible_geometry
+1,18,Z31,NPTX2,-0.18219178082191784,numeric,null,True,"121,156,248",239,0.0,656,75,687,94,candidate_visible_geometry
+1,19,Z31,PDGFRB,0.07260273972602738,numeric,null,False,"244,197,173",146,2.0,688,75,719,94,candidate_visible_geometry
+1,20,Z31,S100,0.009589041095890372,numeric,null,False,"224,219,216",169,1.0,720,75,751,94,candidate_visible_geometry
+2,0,Z25,Age,0.3,clipped_high,"[0.3, null]",True,"180,4,38",63,5.0990195135927845,82,95,113,115,candidate_visible_geometry
+2,1,Z25,Sex,-0.19041095890410958,numeric,null,True,"115,150,245",242,1.0,114,95,145,115,candidate_visible_geometry
+2,2,Z25,MMSE,-0.3,clipped_low,"[null, -0.3]",True,"59,76,192",282,3.605551275463989,146,95,177,115,candidate_visible_geometry
+2,3,Z25,Aβ42/Aβ40,0.3,clipped_high,"[0.3, null]",True,"180,4,38",63,5.0990195135927845,178,95,209,115,candidate_visible_geometry
+2,4,Z25,pTau-217,0.3,clipped_high,"[0.3, null]",True,"180,4,38",63,5.0990195135927845,210,95,241,115,candidate_visible_geometry
+2,5,Z25,TauPET,0.3,clipped_high,"[0.3, null]",True,"180,4,38",63,5.0990195135927845,242,95,273,115,candidate_visible_geometry
+2,6,Z25,ADSignCT,-0.3,clipped_low,"[null, -0.3]",True,"59,76,192",282,3.605551275463989,274,95,305,115,candidate_visible_geometry
+2,7,Z25,WholeBrainCT,-0.3,clipped_low,"[null, -0.3]",True,"59,76,192",282,3.605551275463989,305,95,336,115,candidate_visible_geometry
+2,8,Z25,VentricleVol,0.3,clipped_high,"[0.3, null]",True,"180,4,38",63,5.0990195135927845,337,95,368,115,candidate_visible_geometry
+2,9,Z25,WMH,0.3,clipped_high,"[0.3, null]",True,"180,4,38",63,5.0990195135927845,369,95,400,115,candidate_visible_geometry
+2,10,Z25,UPDRS,0.3,clipped_high,"[0.3, null]",True,"180,4,38",63,5.0990195135927845,401,95,432,115,candidate_visible_geometry
+2,11,Z25,SAA,0.2452054794520548,numeric,null,True,"212,78,65",83,1.7320508075688772,433,95,464,115,candidate_visible_geometry
+2,12,Z25,GFAP,0.3,clipped_high,"[0.3, null]",True,"180,4,38",63,5.0990195135927845,465,95,496,115,candidate_visible_geometry
+2,13,Z25,NFL,0.2945205479452055,numeric,null,True,"183,13,40",65,2.449489742783178,497,95,528,115,candidate_visible_geometry
+2,14,Z25,YKL40,0.3,clipped_high,"[0.3, null]",True,"180,4,38",63,5.0990195135927845,528,95,559,115,candidate_visible_geometry
+2,15,Z25,sTREM2,0.3,clipped_high,"[0.3, null]",True,"180,4,38",63,5.0990195135927845,560,95,591,115,candidate_visible_geometry
+2,16,Z25,SYT1,0.14109589041095888,numeric,null,True,"245,159,128",121,1.0,592,95,623,115,candidate_visible_geometry
+2,17,Z25,SNAP25,0.2780821917808219,numeric,null,True,"193,43,48",71,2.449489742783178,624,95,655,115,candidate_visible_geometry
+2,18,Z25,NPTX2,-0.1794520547945206,numeric,null,True,"123,159,249",238,1.4142135623730951,656,95,687,115,candidate_visible_geometry
+2,19,Z25,PDGFRB,0.14109589041095888,numeric,null,True,"245,160,129",121,1.0,688,95,719,115,candidate_visible_geometry
+2,20,Z25,S100,0.1602739726027397,numeric,null,True,"242,146,116",114,2.0,720,95,751,115,candidate_visible_geometry
+3,0,Z3,Age,0.3,clipped_high,"[0.3, null]",True,"180,4,38",63,5.0990195135927845,82,116,113,136,candidate_visible_geometry
+3,1,Z3,Sex,0.009589041095890372,numeric,null,False,"223,219,217",169,1.0,114,116,145,136,candidate_visible_geometry
+3,2,Z3,MMSE,-0.24794520547945204,numeric,null,True,"85,114,223",263,1.0,146,116,177,136,candidate_visible_geometry
+3,3,Z3,Aβ42/Aβ40,0.3,clipped_high,"[0.3, null]",True,"180,4,38",63,5.0990195135927845,178,116,209,136,candidate_visible_geometry
+3,4,Z3,pTau-217,0.2917808219178082,numeric,null,True,"184,18,42",66,3.1622776601683795,210,116,241,136,candidate_visible_geometry
+3,5,Z3,TauPET,0.29726027397260274,numeric,null,True,"181,9,39",64,1.4142135623730951,242,116,273,136,candidate_visible_geometry
+3,6,Z3,ADSignCT,-0.3,clipped_low,"[null, -0.3]",True,"59,76,192",282,3.605551275463989,274,116,305,136,candidate_visible_geometry
+3,7,Z3,WholeBrainCT,-0.29726027397260274,numeric,null,True,"60,78,194",281,3.0,305,116,336,136,candidate_visible_geometry
+3,8,Z3,VentricleVol,0.2452054794520548,numeric,null,True,"212,78,65",83,1.7320508075688772,337,116,368,136,candidate_visible_geometry
+3,9,Z3,WMH,0.22054794520547943,numeric,null,True,"224,101,79",92,3.1622776601683795,369,116,400,136,candidate_visible_geometry
+3,10,Z3,UPDRS,-0.026027397260273977,numeric,null,False,"206,218,235",182,2.0,401,116,432,136,candidate_visible_geometry
+3,11,Z3,SAA,0.11643835616438356,numeric,null,True,"247,176,147",130,2.23606797749979,433,116,464,136,candidate_visible_geometry
+3,12,Z3,GFAP,0.3,clipped_high,"[0.3, null]",True,"180,4,38",63,5.0990195135927845,465,116,496,136,candidate_visible_geometry
+3,13,Z3,NFL,0.20136986301369864,numeric,null,True,"230,114,89",99,1.0,497,116,528,136,candidate_visible_geometry
+3,14,Z3,YKL40,0.28356164383561644,numeric,null,True,"190,36,46",69,2.23606797749979,528,116,559,136,candidate_visible_geometry
+3,15,Z3,sTREM2,0.19863013698630136,numeric,null,True,"231,116,91",100,1.4142135623730951,560,116,591,136,candidate_visible_geometry
+3,16,Z3,SYT1,0.15205479452054793,numeric,null,True,"243,151,120",117,1.4142135623730951,592,116,623,136,candidate_visible_geometry
+3,17,Z3,SNAP25,0.2506849315068493,numeric,null,True,"209,73,63",81,1.0,624,116,655,136,candidate_visible_geometry
+3,18,Z3,NPTX2,-0.12739726027397263,numeric,null,True,"151,184,255",219,3.0,656,116,687,136,candidate_visible_geometry
+3,19,Z3,PDGFRB,0.08630136986301368,numeric,null,True,"246,190,164",141,1.4142135623730951,688,116,719,136,candidate_visible_geometry
+3,20,Z3,S100,0.1191780821917808,numeric,null,True,"247,175,145",129,2.0,720,116,751,136,candidate_visible_geometry
+4,0,Z2,Age,0.2534246575342466,numeric,null,True,"207,69,60",80,2.449489742783178,82,137,113,156,candidate_visible_geometry
+4,1,Z2,Sex,-0.012328767123287676,numeric,null,False,"213,219,229",177,3.1622776601683795,114,137,145,156,candidate_visible_geometry
+4,2,Z2,MMSE,-0.3,clipped_low,"[null, -0.3]",True,"59,76,192",282,3.605551275463989,146,137,177,156,candidate_visible_geometry
+4,3,Z2,Aβ42/Aβ40,0.3,clipped_high,"[0.3, null]",True,"180,4,38",63,5.0990195135927845,178,137,209,156,candidate_visible_geometry
+4,4,Z2,pTau-217,0.3,clipped_high,"[0.3, null]",True,"180,4,38",63,5.0990195135927845,210,137,241,156,candidate_visible_geometry
+4,5,Z2,TauPET,0.3,clipped_high,"[0.3, null]",True,"180,4,38",63,5.0990195135927845,242,137,273,156,candidate_visible_geometry
+4,6,Z2,ADSignCT,-0.3,clipped_low,"[null, -0.3]",True,"59,76,192",282,3.605551275463989,274,137,305,156,candidate_visible_geometry
+4,7,Z2,WholeBrainCT,-0.2780821917808219,numeric,null,True,"68,90,204",274,2.0,305,137,336,156,candidate_visible_geometry
+4,8,Z2,VentricleVol,0.19863013698630136,numeric,null,True,"231,116,91",100,1.4142135623730951,337,137,368,156,candidate_visible_geometry
+4,9,Z2,WMH,0.17123287671232876,numeric,null,True,"240,138,108",110,2.23606797749979,369,137,400,156,candidate_visible_geometry
+4,10,Z2,UPDRS,-0.10273972602739728,numeric,null,False,"169,198,253",210,2.23606797749979,401,137,432,156,candidate_visible_geometry
+4,11,Z2,SAA,0.11095890410958903,numeric,null,True,"247,179,150",132,3.3166247903554,433,137,464,156,candidate_visible_geometry
+4,12,Z2,GFAP,0.2917808219178082,numeric,null,True,"184,18,42",66,3.1622776601683795,465,137,496,156,candidate_visible_geometry
+4,13,Z2,NFL,0.16849315068493148,numeric,null,True,"241,141,111",111,1.0,497,137,528,156,candidate_visible_geometry
+4,14,Z2,YKL40,0.24794520547945204,numeric,null,True,"210,75,64",82,1.0,528,137,559,156,candidate_visible_geometry
+4,15,Z2,sTREM2,0.17671232876712328,numeric,null,True,"238,134,105",108,1.0,560,137,591,156,candidate_visible_geometry
+4,16,Z2,SYT1,0.22054794520547943,numeric,null,True,"224,101,79",92,3.1622776601683795,592,137,623,156,candidate_visible_geometry
+4,17,Z2,SNAP25,0.3,clipped_high,"[0.3, null]",True,"180,4,38",63,5.0990195135927845,624,137,655,156,candidate_visible_geometry
+4,18,Z2,NPTX2,-0.10547945205479453,numeric,null,True,"167,197,254",211,1.7320508075688772,656,137,687,156,candidate_visible_geometry
+4,19,Z2,PDGFRB,0.13013698630136986,numeric,null,True,"247,166,136",125,1.0,688,137,719,156,candidate_visible_geometry
+4,20,Z2,S100,0.14931506849315068,numeric,null,True,"244,154,123",118,1.7320508075688772,720,137,751,156,candidate_visible_geometry
+5,0,Z7,Age,0.3,clipped_high,"[0.3, null]",True,"180,4,38",63,5.0990195135927845,82,157,113,177,candidate_visible_geometry
+5,1,Z7,Sex,0.05616438356164383,numeric,null,True,"241,205,186",152,1.0,114,157,145,177,candidate_visible_geometry
+5,2,Z7,MMSE,-0.3,clipped_low,"[null, -0.3]",True,"59,76,192",282,3.605551275463989,146,157,177,177,candidate_visible_geometry
+5,3,Z7,Aβ42/Aβ40,0.3,clipped_high,"[0.3, null]",True,"180,4,38",63,5.0990195135927845,178,157,209,177,candidate_visible_geometry
+5,4,Z7,pTau-217,0.3,clipped_high,"[0.3, null]",True,"180,4,38",63,5.0990195135927845,210,157,241,177,candidate_visible_geometry
+5,5,Z7,TauPET,0.3,clipped_high,"[0.3, null]",True,"180,4,38",63,5.0990195135927845,242,157,273,177,candidate_visible_geometry
+5,6,Z7,ADSignCT,-0.3,clipped_low,"[null, -0.3]",True,"59,76,192",282,3.605551275463989,274,157,305,177,candidate_visible_geometry
+5,7,Z7,WholeBrainCT,-0.3,clipped_low,"[null, -0.3]",True,"59,76,192",282,3.605551275463989,305,157,336,177,candidate_visible_geometry
+5,8,Z7,VentricleVol,0.26164383561643834,numeric,null,True,"203,62,56",77,1.7320508075688772,337,157,368,177,candidate_visible_geometry
+5,9,Z7,WMH,0.22876712328767124,numeric,null,True,"220,93,74",89,3.1622776601683795,369,157,400,177,candidate_visible_geometry
+5,10,Z7,UPDRS,-0.12465753424657533,numeric,null,False,"154,187,255",218,2.0,401,157,432,177,candidate_visible_geometry
+5,11,Z7,SAA,0.08630136986301368,numeric,null,True,"246,190,164",141,1.4142135623730951,433,157,464,177,candidate_visible_geometry
+5,12,Z7,GFAP,0.3,clipped_high,"[0.3, null]",True,"180,4,38",63,5.0990195135927845,465,157,496,177,candidate_visible_geometry
+5,13,Z7,NFL,0.21506849315068494,numeric,null,True,"226,105,82",94,2.23606797749979,497,157,528,177,candidate_visible_geometry
+5,14,Z7,YKL40,0.3,clipped_high,"[0.3, null]",True,"180,4,38",63,5.0990195135927845,528,157,559,177,candidate_visible_geometry
+5,15,Z7,sTREM2,0.24794520547945204,numeric,null,True,"210,75,64",82,1.0,560,157,591,177,candidate_visible_geometry
+5,16,Z7,SYT1,0.27534246575342464,numeric,null,True,"195,46,49",72,1.7320508075688772,592,157,623,177,candidate_visible_geometry
+5,17,Z7,SNAP25,0.3,clipped_high,"[0.3, null]",True,"180,4,38",63,5.0990195135927845,624,157,655,177,candidate_visible_geometry
+5,18,Z7,NPTX2,-0.14109589041095894,numeric,null,True,"146,180,254",224,1.7320508075688772,656,157,687,177,candidate_visible_geometry
+5,19,Z7,PDGFRB,0.16849315068493148,numeric,null,True,"241,141,111",111,1.0,688,157,719,177,candidate_visible_geometry
+5,20,Z7,S100,0.19589041095890408,numeric,null,True,"233,120,93",101,2.449489742783178,720,157,751,177,candidate_visible_geometry
+6,0,Z4,Age,0.20684931506849313,numeric,null,True,"229,112,88",97,1.0,82,178,113,198,candidate_visible_geometry
+6,1,Z4,Sex,-0.14109589041095894,numeric,null,True,"146,180,254",224,1.7320508075688772,114,178,145,198,candidate_visible_geometry
+6,2,Z4,MMSE,-0.3,clipped_low,"[null, -0.3]",True,"59,76,192",282,3.605551275463989,146,178,177,198,candidate_visible_geometry
+6,3,Z4,Aβ42/Aβ40,0.3,clipped_high,"[0.3, null]",True,"180,4,38",63,5.0990195135927845,178,178,209,198,candidate_visible_geometry
+6,4,Z4,pTau-217,0.3,clipped_high,"[0.3, null]",True,"180,4,38",63,5.0990195135927845,210,178,241,198,candidate_visible_geometry
+6,5,Z4,TauPET,0.3,clipped_high,"[0.3, null]",True,"180,4,38",63,5.0990195135927845,242,178,273,198,candidate_visible_geometry
+6,6,Z4,ADSignCT,-0.3,clipped_low,"[null, -0.3]",True,"59,76,192",282,3.605551275463989,274,178,305,198,candidate_visible_geometry
+6,7,Z4,WholeBrainCT,-0.3,clipped_low,"[null, -0.3]",True,"59,76,192",282,3.605551275463989,305,178,336,198,candidate_visible_geometry
+6,8,Z4,VentricleVol,0.23972602739726026,numeric,null,True,"215,84,69",85,2.0,337,178,368,198,candidate_visible_geometry
+6,9,Z4,WMH,0.19041095890410958,numeric,null,True,"235,125,98",103,1.4142135623730951,369,178,400,198,candidate_visible_geometry
+6,10,Z4,UPDRS,0.16849315068493148,numeric,null,False,"241,141,111",111,1.0,401,178,432,198,candidate_visible_geometry
+6,11,Z4,SAA,0.19041095890410958,numeric,null,True,"235,125,98",103,1.4142135623730951,433,178,464,198,candidate_visible_geometry
+6,12,Z4,GFAP,0.27534246575342464,numeric,null,True,"195,46,49",72,1.7320508075688772,465,178,496,198,candidate_visible_geometry
+6,13,Z4,NFL,0.22328767123287668,numeric,null,True,"221,95,75",91,2.23606797749979,497,178,528,198,candidate_visible_geometry
+6,14,Z4,YKL40,0.19863013698630136,numeric,null,True,"231,116,91",100,1.4142135623730951,528,178,559,198,candidate_visible_geometry
+6,15,Z4,sTREM2,0.1465753424657534,numeric,null,True,"245,156,125",119,1.0,560,178,591,198,candidate_visible_geometry
+6,16,Z4,SYT1,0.11095890410958903,numeric,null,True,"247,177,148",132,1.7320508075688772,592,178,623,198,candidate_visible_geometry
+6,17,Z4,SNAP25,0.28904109589041094,numeric,null,True,"187,27,44",67,3.3166247903554,624,178,655,198,candidate_visible_geometry
+6,18,Z4,NPTX2,-0.20410958904109594,numeric,null,True,"110,144,242",247,1.4142135623730951,656,178,687,198,candidate_visible_geometry
+6,19,Z4,PDGFRB,0.03698630136986297,numeric,null,False,"234,213,201",159,1.7320508075688772,688,178,719,198,candidate_visible_geometry
+6,20,Z4,S100,0.13561643835616438,numeric,null,True,"246,162,131",123,2.0,720,178,751,198,candidate_visible_geometry
+7,0,Z23,Age,0.0780821917808219,numeric,null,True,"245,194,170",144,1.0,82,199,113,219,candidate_visible_geometry
+7,1,Z23,Sex,-0.08356164383561643,numeric,null,True,"178,204,251",203,1.4142135623730951,114,199,145,219,candidate_visible_geometry
+7,2,Z23,MMSE,-0.2726027397260274,numeric,null,True,"73,97,210",272,1.4142135623730951,146,199,177,219,candidate_visible_geometry
+7,3,Z23,Aβ42/Aβ40,0.19589041095890408,numeric,null,True,"233,120,93",101,2.449489742783178,178,199,209,219,candidate_visible_geometry
+7,4,Z23,pTau-217,0.2452054794520548,numeric,null,True,"212,78,65",83,1.7320508075688772,210,199,241,219,candidate_visible_geometry
+7,5,Z23,TauPET,0.2643835616438356,numeric,null,True,"202,59,55",76,3.3166247903554,242,199,273,219,candidate_visible_geometry
+7,6,Z23,ADSignCT,-0.2342465753424658,numeric,null,True,"90,120,228",258,2.23606797749979,274,199,305,219,candidate_visible_geometry
+7,7,Z23,WholeBrainCT,-0.2123287671232877,numeric,null,True,"104,138,239",250,2.23606797749979,305,199,336,219,candidate_visible_geometry
+7,8,Z23,VentricleVol,0.15753424657534246,numeric,null,True,"243,148,117",115,1.0,337,199,368,219,candidate_visible_geometry
+7,9,Z23,WMH,0.08630136986301368,numeric,null,True,"246,190,164",141,1.4142135623730951,369,199,400,219,candidate_visible_geometry
+7,10,Z23,UPDRS,0.16301369863013698,numeric,null,False,"242,144,114",113,0.0,401,199,432,219,candidate_visible_geometry
+7,11,Z23,SAA,0.13013698630136986,numeric,null,True,"247,166,136",125,1.0,433,199,464,219,candidate_visible_geometry
+7,12,Z23,GFAP,0.16849315068493148,numeric,null,True,"241,141,111",111,1.0,465,199,496,219,candidate_visible_geometry
+7,13,Z23,NFL,0.16301369863013698,numeric,null,True,"242,144,114",113,0.0,497,199,528,219,candidate_visible_geometry
+7,14,Z23,YKL40,0.11095890410958903,numeric,null,True,"247,177,148",132,1.7320508075688772,528,199,559,219,candidate_visible_geometry
+7,15,Z23,sTREM2,0.0506849315068493,numeric,null,False,"239,206,189",154,1.4142135623730951,560,199,591,219,candidate_visible_geometry
+7,16,Z23,SYT1,0.009589041095890372,numeric,null,False,"223,219,217",169,1.0,592,199,623,219,candidate_visible_geometry
+7,17,Z23,SNAP25,0.1465753424657534,numeric,null,True,"245,157,126",119,1.7320508075688772,624,199,655,219,candidate_visible_geometry
+7,18,Z23,NPTX2,-0.152054794520548,numeric,null,True,"139,173,253",228,2.23606797749979,656,199,687,219,candidate_visible_geometry
+7,19,Z23,PDGFRB,-0.009589041095890427,numeric,null,False,"216,220,226",176,1.7320508075688772,688,199,719,219,candidate_visible_geometry
+7,20,Z23,S100,0.09726027397260273,numeric,null,True,"247,185,158",137,2.23606797749979,720,199,751,219,candidate_visible_geometry
+8,0,Z22,Age,-0.3,clipped_low,"[null, -0.3]",True,"59,76,192",282,3.605551275463989,82,219,113,239,candidate_visible_geometry
+8,1,Z22,Sex,0.06712328767123285,numeric,null,True,"243,200,178",148,1.4142135623730951,114,219,145,239,candidate_visible_geometry
+8,2,Z22,MMSE,0.2780821917808219,numeric,null,True,"193,43,48",71,2.449489742783178,146,219,177,239,candidate_visible_geometry
+8,3,Z22,Aβ42/Aβ40,-0.3,clipped_low,"[null, -0.3]",True,"59,76,192",282,3.605551275463989,178,219,209,239,candidate_visible_geometry
+8,4,Z22,pTau-217,-0.29178082191780824,numeric,null,True,"63,83,198",279,3.0,210,219,241,239,candidate_visible_geometry
+8,5,Z22,TauPET,-0.2835616438356165,numeric,null,True,"66,87,201",276,2.23606797749979,242,219,273,239,candidate_visible_geometry
+8,6,Z22,ADSignCT,0.3,clipped_high,"[0.3, null]",True,"180,4,38",63,5.0990195135927845,274,219,305,239,candidate_visible_geometry
+8,7,Z22,WholeBrainCT,0.3,clipped_high,"[0.3, null]",True,"180,4,38",63,5.0990195135927845,305,219,336,239,candidate_visible_geometry
+8,8,Z22,VentricleVol,-0.2726027397260274,numeric,null,True,"73,97,210",272,1.4142135623730951,337,219,368,239,candidate_visible_geometry
+8,9,Z22,WMH,-0.2342465753424658,numeric,null,True,"91,122,229",258,1.0,369,219,400,239,candidate_visible_geometry
+8,10,Z22,UPDRS,-0.10273972602739728,numeric,null,False,"169,198,253",210,2.23606797749979,401,219,432,239,candidate_visible_geometry
+8,11,Z22,SAA,-0.08356164383561643,numeric,null,True,"178,204,251",203,1.4142135623730951,433,219,464,239,candidate_visible_geometry
+8,12,Z22,GFAP,-0.3,clipped_low,"[null, -0.3]",True,"59,76,192",282,3.605551275463989,465,219,496,239,candidate_visible_geometry
+8,13,Z22,NFL,-0.2123287671232877,numeric,null,True,"102,135,237",250,2.8284271247461903,497,219,528,239,candidate_visible_geometry
+8,14,Z22,YKL40,-0.3,clipped_low,"[null, -0.3]",True,"59,76,192",282,3.605551275463989,528,219,559,239,candidate_visible_geometry
+8,15,Z22,sTREM2,-0.27534246575342464,numeric,null,True,"69,92,206",273,0.0,560,219,591,239,candidate_visible_geometry
+8,16,Z22,SYT1,-0.22602739726027404,numeric,null,True,"97,128,233",255,1.7320508075688772,592,219,623,239,candidate_visible_geometry
+8,17,Z22,SNAP25,-0.3,clipped_low,"[null, -0.3]",True,"59,76,192",282,3.605551275463989,624,219,655,239,candidate_visible_geometry
+8,18,Z22,NPTX2,0.12191780821917808,numeric,null,True,"247,172,142",128,2.23606797749979,656,219,687,239,candidate_visible_geometry
+8,19,Z22,PDGFRB,-0.1794520547945206,numeric,null,True,"123,159,249",238,1.4142135623730951,688,219,719,239,candidate_visible_geometry
+8,20,Z22,S100,-0.17123287671232879,numeric,null,True,"128,163,250",235,1.4142135623730951,720,219,751,239,candidate_visible_geometry
+9,0,Z30,Age,-0.3,clipped_low,"[null, -0.3]",True,"59,76,192",282,3.605551275463989,82,240,113,260,candidate_visible_geometry
+9,1,Z30,Sex,0.15205479452054793,numeric,null,True,"243,151,120",117,1.4142135623730951,114,240,145,260,candidate_visible_geometry
+9,2,Z30,MMSE,0.3,clipped_high,"[0.3, null]",True,"180,4,38",63,5.0990195135927845,146,240,177,260,candidate_visible_geometry
+9,3,Z30,Aβ42/Aβ40,-0.3,clipped_low,"[null, -0.3]",True,"59,76,192",282,3.605551275463989,178,240,209,260,candidate_visible_geometry
+9,4,Z30,pTau-217,-0.2835616438356165,numeric,null,True,"66,87,201",276,2.23606797749979,210,240,241,260,candidate_visible_geometry
+9,5,Z30,TauPET,-0.2780821917808219,numeric,null,True,"68,90,204",274,2.0,242,240,273,260,candidate_visible_geometry
+9,6,Z30,ADSignCT,0.3,clipped_high,"[0.3, null]",True,"180,4,38",63,5.0990195135927845,274,240,305,260,candidate_visible_geometry
+9,7,Z30,WholeBrainCT,0.3,clipped_high,"[0.3, null]",True,"180,4,38",63,5.0990195135927845,305,240,336,260,candidate_visible_geometry
+9,8,Z30,VentricleVol,-0.3,clipped_low,"[null, -0.3]",True,"59,76,192",282,3.605551275463989,337,240,368,260,candidate_visible_geometry
+9,9,Z30,WMH,-0.2671232876712329,numeric,null,True,"74,99,211",270,0.0,369,240,400,260,candidate_visible_geometry
+9,10,Z30,UPDRS,0.0013698630136986245,numeric,null,False,"219,220,222",172,1.4142135623730951,401,240,432,260,candidate_visible_geometry
+9,11,Z30,SAA,-0.11917808219178083,numeric,null,True,"158,190,255",216,1.4142135623730951,433,240,464,260,candidate_visible_geometry
+9,12,Z30,GFAP,-0.3,clipped_low,"[null, -0.3]",True,"59,76,192",282,3.605551275463989,465,240,496,260,candidate_visible_geometry
+9,13,Z30,NFL,-0.2561643835616439,numeric,null,True,"80,107,218",266,1.0,497,240,528,260,candidate_visible_geometry
+9,14,Z30,YKL40,-0.3,clipped_low,"[null, -0.3]",True,"59,76,192",282,3.605551275463989,528,240,559,260,candidate_visible_geometry
+9,15,Z30,sTREM2,-0.2945205479452055,numeric,null,True,"61,80,195",280,3.3166247903554,560,240,591,260,candidate_visible_geometry
+9,16,Z30,SYT1,-0.19041095890410958,numeric,null,True,"115,150,245",242,1.0,592,240,623,260,candidate_visible_geometry
+9,17,Z30,SNAP25,-0.3,clipped_low,"[null, -0.3]",True,"59,76,192",282,3.605551275463989,624,240,655,260,candidate_visible_geometry
+9,18,Z30,NPTX2,0.16849315068493148,numeric,null,True,"241,141,111",111,1.0,656,240,687,260,candidate_visible_geometry
+9,19,Z30,PDGFRB,-0.1794520547945206,numeric,null,True,"125,160,249",238,1.7320508075688772,688,240,719,260,candidate_visible_geometry
+9,20,Z30,S100,-0.1657534246575343,numeric,null,True,"133,168,252",233,1.4142135623730951,720,240,751,260,candidate_visible_geometry
+10,0,Z28,Age,-0.3,clipped_low,"[null, -0.3]",True,"59,76,192",282,3.605551275463989,82,261,113,281,candidate_visible_geometry
+10,1,Z28,Sex,0.2534246575342466,numeric,null,True,"208,71,61",80,1.4142135623730951,114,261,145,281,candidate_visible_geometry
+10,2,Z28,MMSE,0.3,clipped_high,"[0.3, null]",True,"180,4,38",63,5.0990195135927845,146,261,177,281,candidate_visible_geometry
+10,3,Z28,Aβ42/Aβ40,-0.28082191780821925,numeric,null,True,"67,88,203",275,2.23606797749979,178,261,209,281,candidate_visible_geometry
+10,4,Z28,pTau-217,-0.2397260273972603,numeric,null,True,"88,117,225",260,2.449489742783178,210,261,241,281,candidate_visible_geometry
+10,5,Z28,TauPET,-0.23698630136986304,numeric,null,True,"89,119,227",259,1.4142135623730951,242,261,273,281,candidate_visible_geometry
+10,6,Z28,ADSignCT,0.3,clipped_high,"[0.3, null]",True,"180,4,38",63,5.0990195135927845,274,261,305,281,candidate_visible_geometry
+10,7,Z28,WholeBrainCT,0.3,clipped_high,"[0.3, null]",True,"180,4,38",63,5.0990195135927845,305,261,336,281,candidate_visible_geometry
+10,8,Z28,VentricleVol,-0.3,clipped_low,"[null, -0.3]",True,"59,76,192",282,3.605551275463989,337,261,368,281,candidate_visible_geometry
+10,9,Z28,WMH,-0.3,clipped_low,"[null, -0.3]",True,"59,76,192",282,3.605551275463989,369,261,400,281,candidate_visible_geometry
+10,10,Z28,UPDRS,-0.3,clipped_low,"[null, -0.3]",True,"59,76,192",282,3.605551275463989,401,261,432,281,candidate_visible_geometry
+10,11,Z28,SAA,-0.18493150684931509,numeric,null,True,"119,154,247",240,1.4142135623730951,433,261,464,281,candidate_visible_geometry
+10,12,Z28,GFAP,-0.3,clipped_low,"[null, -0.3]",True,"59,76,192",282,3.605551275463989,465,261,496,281,candidate_visible_geometry
+10,13,Z28,NFL,-0.3,clipped_low,"[null, -0.3]",True,"59,76,192",282,3.605551275463989,497,261,528,281,candidate_visible_geometry
+10,14,Z28,YKL40,-0.3,clipped_low,"[null, -0.3]",True,"59,76,192",282,3.605551275463989,528,261,559,281,candidate_visible_geometry
+10,15,Z28,sTREM2,-0.3,clipped_low,"[null, -0.3]",True,"59,76,192",282,3.605551275463989,560,261,591,281,candidate_visible_geometry
+10,16,Z28,SYT1,-0.14383561643835618,numeric,null,True,"144,178,254",225,1.7320508075688772,592,261,623,281,candidate_visible_geometry
+10,17,Z28,SNAP25,-0.22328767123287668,numeric,null,True,"98,130,234",254,1.0,624,261,655,281,candidate_visible_geometry
+10,18,Z28,NPTX2,0.17945205479452053,numeric,null,True,"238,132,104",107,1.7320508075688772,656,261,687,281,candidate_visible_geometry
+10,19,Z28,PDGFRB,-0.18767123287671234,numeric,null,True,"118,153,246",241,1.0,688,261,719,281,candidate_visible_geometry
+10,20,Z28,S100,-0.12465753424657533,numeric,null,True,"154,187,255",218,2.0,720,261,751,281,candidate_visible_geometry
+11,0,Z9,Age,-0.3,clipped_low,"[null, -0.3]",True,"59,76,192",282,3.605551275463989,82,282,113,301,candidate_visible_geometry
+11,1,Z9,Sex,0.23424657534246573,numeric,null,True,"217,88,71",87,1.0,114,282,145,301,candidate_visible_geometry
+11,2,Z9,MMSE,0.3,clipped_high,"[0.3, null]",True,"180,4,38",63,5.0990195135927845,146,282,177,301,candidate_visible_geometry
+11,3,Z9,Aβ42/Aβ40,-0.3,clipped_low,"[null, -0.3]",True,"59,76,192",282,3.605551275463989,178,282,209,301,candidate_visible_geometry
+11,4,Z9,pTau-217,-0.2506849315068493,numeric,null,True,"84,112,222",264,0.0,210,282,241,301,candidate_visible_geometry
+11,5,Z9,TauPET,-0.2726027397260274,numeric,null,True,"73,97,210",272,1.4142135623730951,242,282,273,301,candidate_visible_geometry
+11,6,Z9,ADSignCT,0.3,clipped_high,"[0.3, null]",True,"180,4,38",63,5.0990195135927845,274,282,305,301,candidate_visible_geometry
+11,7,Z9,WholeBrainCT,0.3,clipped_high,"[0.3, null]",True,"180,4,38",63,5.0990195135927845,305,282,336,301,candidate_visible_geometry
+11,8,Z9,VentricleVol,-0.3,clipped_low,"[null, -0.3]",True,"59,76,192",282,3.605551275463989,337,282,368,301,candidate_visible_geometry
+11,9,Z9,WMH,-0.3,clipped_low,"[null, -0.3]",True,"59,76,192",282,3.605551275463989,369,282,400,301,candidate_visible_geometry
+11,10,Z9,UPDRS,-0.2945205479452055,numeric,null,True,"62,81,197",280,2.23606797749979,401,282,432,301,candidate_visible_geometry
+11,11,Z9,SAA,-0.20410958904109594,numeric,null,True,"108,143,241",247,2.0,433,282,464,301,candidate_visible_geometry
+11,12,Z9,GFAP,-0.3,clipped_low,"[null, -0.3]",True,"59,76,192",282,3.605551275463989,465,282,496,301,candidate_visible_geometry
+11,13,Z9,NFL,-0.2835616438356165,numeric,null,True,"66,87,201",276,2.23606797749979,497,282,528,301,candidate_visible_geometry
+11,14,Z9,YKL40,-0.3,clipped_low,"[null, -0.3]",True,"59,76,192",282,3.605551275463989,528,282,559,301,candidate_visible_geometry
+11,15,Z9,sTREM2,-0.28082191780821925,numeric,null,True,"67,88,203",275,2.23606797749979,560,282,591,301,candidate_visible_geometry
+11,16,Z9,SYT1,-0.09726027397260273,numeric,null,True,"171,200,253",208,1.4142135623730951,592,282,623,301,candidate_visible_geometry
+11,17,Z9,SNAP25,-0.2123287671232877,numeric,null,True,"103,136,238",250,1.7320508075688772,624,282,655,301,candidate_visible_geometry
+11,18,Z9,NPTX2,0.20958904109589038,numeric,null,True,"227,108,85",96,2.23606797749979,656,282,687,301,candidate_visible_geometry
+11,19,Z9,PDGFRB,-0.11917808219178083,numeric,null,True,"157,189,255",216,1.4142135623730951,688,282,719,301,candidate_visible_geometry
+11,20,Z9,S100,-0.16027397260273973,numeric,null,True,"136,171,253",231,1.0,720,282,751,301,candidate_visible_geometry
+12,0,Z12,Age,-0.3,clipped_low,"[null, -0.3]",True,"59,76,192",282,3.605551275463989,82,302,113,322,candidate_visible_geometry
+12,1,Z12,Sex,0.23424657534246573,numeric,null,True,"217,88,71",87,1.0,114,302,145,322,candidate_visible_geometry
+12,2,Z12,MMSE,0.3,clipped_high,"[0.3, null]",True,"180,4,38",63,5.0990195135927845,146,302,177,322,candidate_visible_geometry
+12,3,Z12,Aβ42/Aβ40,-0.28082191780821925,numeric,null,True,"67,88,203",275,2.23606797749979,178,302,209,322,candidate_visible_geometry
+12,4,Z12,pTau-217,-0.2561643835616439,numeric,null,True,"80,107,218",266,1.0,210,302,241,322,candidate_visible_geometry
+12,5,Z12,TauPET,-0.2726027397260274,numeric,null,True,"72,95,209",272,3.7416573867739413,242,302,273,322,candidate_visible_geometry
+12,6,Z12,ADSignCT,0.3,clipped_high,"[0.3, null]",True,"180,4,38",63,5.0990195135927845,274,302,305,322,candidate_visible_geometry
+12,7,Z12,WholeBrainCT,0.3,clipped_high,"[0.3, null]",True,"180,4,38",63,5.0990195135927845,305,302,336,322,candidate_visible_geometry
+12,8,Z12,VentricleVol,-0.3,clipped_low,"[null, -0.3]",True,"59,76,192",282,3.605551275463989,337,302,368,322,candidate_visible_geometry
+12,9,Z12,WMH,-0.2671232876712329,numeric,null,True,"74,99,211",270,0.0,369,302,400,322,candidate_visible_geometry
+12,10,Z12,UPDRS,-0.3,clipped_low,"[null, -0.3]",True,"59,76,192",282,3.605551275463989,401,302,432,322,candidate_visible_geometry
+12,11,Z12,SAA,-0.18219178082191784,numeric,null,True,"121,156,248",239,0.0,433,302,464,322,candidate_visible_geometry
+12,12,Z12,GFAP,-0.3,clipped_low,"[null, -0.3]",True,"59,76,192",282,3.605551275463989,465,302,496,322,candidate_visible_geometry
+12,13,Z12,NFL,-0.25890410958904114,numeric,null,True,"78,104,216",267,2.23606797749979,497,302,528,322,candidate_visible_geometry
+12,14,Z12,YKL40,-0.3,clipped_low,"[null, -0.3]",True,"59,76,192",282,3.605551275463989,528,302,559,322,candidate_visible_geometry
+12,15,Z12,sTREM2,-0.25890410958904114,numeric,null,True,"79,105,217",267,1.4142135623730951,560,302,591,322,candidate_visible_geometry
+12,16,Z12,SYT1,-0.09178082191780823,numeric,null,True,"173,201,253",206,3.0,592,302,623,322,candidate_visible_geometry
+12,17,Z12,SNAP25,-0.20958904109589044,numeric,null,True,"106,139,239",249,1.4142135623730951,624,302,655,322,candidate_visible_geometry
+12,18,Z12,NPTX2,0.22054794520547943,numeric,null,True,"223,99,78",92,2.449489742783178,656,302,687,322,candidate_visible_geometry
+12,19,Z12,PDGFRB,-0.09726027397260273,numeric,null,True,"171,200,253",208,1.4142135623730951,688,302,719,322,candidate_visible_geometry
+12,20,Z12,S100,-0.14383561643835618,numeric,null,True,"143,177,254",225,2.23606797749979,720,302,751,322,candidate_visible_geometry
+13,0,Z13,Age,-0.2561643835616439,numeric,null,True,"80,107,218",266,1.0,82,323,113,343,candidate_visible_geometry
+13,1,Z13,Sex,0.20684931506849313,numeric,null,True,"228,110,86",97,2.8284271247461903,114,323,145,343,candidate_visible_geometry
+13,2,Z13,MMSE,0.23972602739726026,numeric,null,True,"215,84,69",85,2.0,146,323,177,343,candidate_visible_geometry
+13,3,Z13,Aβ42/Aβ40,-0.13561643835616438,numeric,null,True,"148,182,255",222,1.0,178,323,209,343,candidate_visible_geometry
+13,4,Z13,pTau-217,-0.13561643835616438,numeric,null,True,"147,181,254",222,1.4142135623730951,210,323,241,343,candidate_visible_geometry
+13,5,Z13,TauPET,-0.14383561643835618,numeric,null,True,"143,177,254",225,2.23606797749979,242,323,273,343,candidate_visible_geometry
+13,6,Z13,ADSignCT,0.2452054794520548,numeric,null,True,"212,78,65",83,1.7320508075688772,274,323,305,343,candidate_visible_geometry
+13,7,Z13,WholeBrainCT,0.2726027397260274,numeric,null,True,"196,48,50",73,2.449489742783178,305,323,336,343,candidate_visible_geometry
+13,8,Z13,VentricleVol,-0.2342465753424658,numeric,null,True,"91,122,229",258,1.0,337,323,368,343,candidate_visible_geometry
+13,9,Z13,WMH,-0.2123287671232877,numeric,null,True,"103,136,238",250,1.7320508075688772,369,323,400,343,candidate_visible_geometry
+13,10,Z13,UPDRS,-0.2616438356164384,numeric,null,True,"76,102,214",268,1.4142135623730951,401,323,432,343,candidate_visible_geometry
+13,11,Z13,SAA,-0.15479452054794524,numeric,null,True,"137,172,253",229,1.4142135623730951,433,323,464,343,candidate_visible_geometry
+13,12,Z13,GFAP,-0.25890410958904114,numeric,null,True,"78,104,216",267,2.23606797749979,465,323,496,343,candidate_visible_geometry
+13,13,Z13,NFL,-0.19041095890410958,numeric,null,True,"115,150,245",242,1.0,497,323,528,343,candidate_visible_geometry
+13,14,Z13,YKL40,-0.2342465753424658,numeric,null,True,"90,120,228",258,2.23606797749979,528,323,559,343,candidate_visible_geometry
+13,15,Z13,sTREM2,-0.2123287671232877,numeric,null,True,"103,136,238",250,1.7320508075688772,560,323,591,343,candidate_visible_geometry
+13,16,Z13,SYT1,-0.05342465753424658,numeric,null,False,"195,213,244",192,1.4142135623730951,592,323,623,343,candidate_visible_geometry
+13,17,Z13,SNAP25,-0.11917808219178083,numeric,null,True,"158,190,255",216,1.4142135623730951,624,323,655,343,candidate_visible_geometry
+13,18,Z13,NPTX2,0.14109589041095888,numeric,null,True,"245,159,128",121,1.0,656,323,687,343,candidate_visible_geometry
+13,19,Z13,PDGFRB,-0.10547945205479453,numeric,null,True,"167,197,254",211,1.7320508075688772,688,323,719,343,candidate_visible_geometry
+13,20,Z13,S100,-0.06164383561643838,numeric,null,False,"188,210,247",195,1.7320508075688772,720,323,751,343,candidate_visible_geometry
+14,0,Z0,Age,-0.3,clipped_low,"[null, -0.3]",True,"59,76,192",282,3.605551275463989,82,344,113,363,candidate_visible_geometry
+14,1,Z0,Sex,0.16575342465753423,numeric,null,True,"241,143,113",112,1.4142135623730951,114,344,145,363,candidate_visible_geometry
+14,2,Z0,MMSE,0.2643835616438356,numeric,null,True,"202,59,55",76,3.3166247903554,146,344,177,363,candidate_visible_geometry
+14,3,Z0,Aβ42/Aβ40,-0.25890410958904114,numeric,null,True,"78,104,216",267,2.23606797749979,178,344,209,363,candidate_visible_geometry
+14,4,Z0,pTau-217,-0.20958904109589044,numeric,null,True,"106,139,239",249,1.4142135623730951,210,344,241,363,candidate_visible_geometry
+14,5,Z0,TauPET,-0.21780821917808219,numeric,null,True,"100,133,236",252,1.4142135623730951,242,344,273,363,candidate_visible_geometry
+14,6,Z0,ADSignCT,0.3,clipped_high,"[0.3, null]",True,"180,4,38",63,5.0990195135927845,274,344,305,363,candidate_visible_geometry
+14,7,Z0,WholeBrainCT,0.3,clipped_high,"[0.3, null]",True,"180,4,38",63,5.0990195135927845,305,344,336,363,candidate_visible_geometry
+14,8,Z0,VentricleVol,-0.2780821917808219,numeric,null,True,"68,90,204",274,2.0,337,344,368,363,candidate_visible_geometry
+14,9,Z0,WMH,-0.24794520547945204,numeric,null,True,"85,114,223",263,1.0,369,344,400,363,candidate_visible_geometry
+14,10,Z0,UPDRS,-0.2835616438356165,numeric,null,True,"66,87,201",276,2.23606797749979,401,344,432,363,candidate_visible_geometry
+14,11,Z0,SAA,-0.1794520547945206,numeric,null,True,"123,159,249",238,1.4142135623730951,433,344,464,363,candidate_visible_geometry
+14,12,Z0,GFAP,-0.3,clipped_low,"[null, -0.3]",True,"59,76,192",282,3.605551275463989,465,344,496,363,candidate_visible_geometry
+14,13,Z0,NFL,-0.2397260273972603,numeric,null,True,"88,117,225",260,2.449489742783178,497,344,528,363,candidate_visible_geometry
+14,14,Z0,YKL40,-0.28630136986301374,numeric,null,True,"64,85,200",277,1.4142135623730951,528,344,559,363,candidate_visible_geometry
+14,15,Z0,sTREM2,-0.2452054794520548,numeric,null,True,"86,115,224",262,1.0,560,344,591,363,candidate_visible_geometry
+14,16,Z0,SYT1,-0.08356164383561643,numeric,null,True,"179,205,251",203,0.0,592,344,623,363,candidate_visible_geometry
+14,17,Z0,SNAP25,-0.17397260273972603,numeric,null,True,"126,161,250",236,1.4142135623730951,624,344,655,363,candidate_visible_geometry
+14,18,Z0,NPTX2,0.19315068493150683,numeric,null,True,"233,122,95",102,2.0,656,344,687,363,candidate_visible_geometry
+14,19,Z0,PDGFRB,-0.09726027397260273,numeric,null,True,"171,200,253",208,1.4142135623730951,688,344,719,363,candidate_visible_geometry
+14,20,Z0,S100,-0.11917808219178083,numeric,null,True,"158,190,255",216,1.4142135623730951,720,344,751,363,candidate_visible_geometry
+15,0,Z6,Age,-0.3,clipped_low,"[null, -0.3]",True,"59,76,192",282,3.605551275463989,82,364,113,384,candidate_visible_geometry
+15,1,Z6,Sex,0.18219178082191778,numeric,null,True,"237,131,102",106,2.0,114,364,145,384,candidate_visible_geometry
+15,2,Z6,MMSE,0.2726027397260274,numeric,null,True,"196,48,50",73,2.449489742783178,146,364,177,384,candidate_visible_geometry
+15,3,Z6,Aβ42/Aβ40,-0.22328767123287668,numeric,null,True,"98,130,234",254,1.0,178,364,209,384,candidate_visible_geometry
+15,4,Z6,pTau-217,-0.2123287671232877,numeric,null,True,"104,138,239",250,2.23606797749979,210,364,241,384,candidate_visible_geometry
+15,5,Z6,TauPET,-0.22054794520547943,numeric,null,True,"99,132,235",253,0.0,242,364,273,384,candidate_visible_geometry
+15,6,Z6,ADSignCT,0.28904109589041094,numeric,null,True,"186,22,43",67,3.4641016151377544,274,364,305,384,candidate_visible_geometry
+15,7,Z6,WholeBrainCT,0.3,clipped_high,"[0.3, null]",True,"180,4,38",63,5.0990195135927845,305,364,336,384,candidate_visible_geometry
+15,8,Z6,VentricleVol,-0.2506849315068493,numeric,null,True,"84,112,222",264,0.0,337,364,368,384,candidate_visible_geometry
+15,9,Z6,WMH,-0.21780821917808219,numeric,null,True,"100,133,236",252,1.4142135623730951,369,364,400,384,candidate_visible_geometry
+15,10,Z6,UPDRS,-0.2342465753424658,numeric,null,True,"91,122,229",258,1.0,401,364,432,384,candidate_visible_geometry
+15,11,Z6,SAA,-0.1794520547945206,numeric,null,True,"125,160,249",238,1.7320508075688772,433,364,464,384,candidate_visible_geometry
+15,12,Z6,GFAP,-0.2835616438356165,numeric,null,True,"66,87,201",276,2.23606797749979,465,364,496,384,candidate_visible_geometry
+15,13,Z6,NFL,-0.2397260273972603,numeric,null,True,"88,117,225",260,2.449489742783178,497,364,528,384,candidate_visible_geometry
+15,14,Z6,YKL40,-0.26438356164383564,numeric,null,True,"75,100,213",269,1.7320508075688772,528,364,559,384,candidate_visible_geometry
+15,15,Z6,sTREM2,-0.2123287671232877,numeric,null,True,"103,136,238",250,1.7320508075688772,560,364,591,384,candidate_visible_geometry
+15,16,Z6,SYT1,-0.06164383561643838,numeric,null,False,"190,210,246",195,1.4142135623730951,592,364,623,384,candidate_visible_geometry
+15,17,Z6,SNAP25,-0.1657534246575343,numeric,null,True,"133,168,252",233,1.4142135623730951,624,364,655,384,candidate_visible_geometry
+15,18,Z6,NPTX2,0.22054794520547943,numeric,null,True,"223,99,78",92,2.449489742783178,656,364,687,384,candidate_visible_geometry
+15,19,Z6,PDGFRB,-0.05342465753424658,numeric,null,False,"195,213,244",192,1.4142135623730951,688,364,719,384,candidate_visible_geometry
+15,20,Z6,S100,-0.11917808219178083,numeric,null,True,"157,189,255",216,1.4142135623730951,720,364,751,384,candidate_visible_geometry
+16,0,Z1,Age,-0.19589041095890414,numeric,null,True,"112,147,243",244,1.4142135623730951,82,385,113,405,candidate_visible_geometry
+16,1,Z1,Sex,0.23972602739726026,numeric,null,True,"215,84,69",85,2.0,114,385,145,405,candidate_visible_geometry
+16,2,Z1,MMSE,0.08630136986301368,numeric,null,True,"246,190,164",141,1.4142135623730951,146,385,177,405,candidate_visible_geometry
+16,3,Z1,Aβ42/Aβ40,0.0013698630136986245,numeric,null,False,"219,220,222",172,1.4142135623730951,178,385,209,405,candidate_visible_geometry
+16,4,Z1,pTau-217,0.0506849315068493,numeric,null,False,"239,206,189",154,1.4142135623730951,210,385,241,405,candidate_visible_geometry
+16,5,Z1,TauPET,0.06164383561643835,numeric,null,True,"242,201,180",150,1.0,242,385,273,405,candidate_visible_geometry
+16,6,Z1,ADSignCT,0.12191780821917808,numeric,null,True,"247,172,142",128,2.23606797749979,274,385,305,405,candidate_visible_geometry
+16,7,Z1,WholeBrainCT,0.15205479452054793,numeric,null,True,"244,152,122",117,2.8284271247461903,305,385,336,405,candidate_visible_geometry
+16,8,Z1,VentricleVol,-0.19041095890410958,numeric,null,True,"117,151,246",242,1.7320508075688772,337,385,368,405,candidate_visible_geometry
+16,9,Z1,WMH,-0.18219178082191784,numeric,null,True,"121,156,248",239,0.0,369,385,400,405,candidate_visible_geometry
+16,10,Z1,UPDRS,-0.25890410958904114,numeric,null,True,"78,104,216",267,2.23606797749979,401,385,432,405,candidate_visible_geometry
+16,11,Z1,SAA,-0.13561643835616438,numeric,null,True,"147,181,254",222,1.4142135623730951,433,385,464,405,candidate_visible_geometry
+16,12,Z1,GFAP,-0.10547945205479453,numeric,null,True,"166,196,254",211,1.0,465,385,496,405,candidate_visible_geometry
+16,13,Z1,NFL,-0.11917808219178083,numeric,null,True,"158,190,255",216,1.4142135623730951,497,385,528,405,candidate_visible_geometry
+16,14,Z1,YKL40,-0.11369863013698633,numeric,null,True,"161,192,255",214,1.4142135623730951,528,385,559,405,candidate_visible_geometry
+16,15,Z1,sTREM2,-0.12739726027397263,numeric,null,True,"151,184,255",219,3.0,560,385,591,405,candidate_visible_geometry
+16,16,Z1,SYT1,0.045205479452054775,numeric,null,False,"237,209,194",156,3.1622776601683795,592,385,623,405,candidate_visible_geometry
+16,17,Z1,SNAP25,0.05616438356164383,numeric,null,False,"240,205,187",152,1.0,624,385,655,405,candidate_visible_geometry
+16,18,Z1,NPTX2,0.03698630136986297,numeric,null,False,"234,212,200",159,2.23606797749979,656,385,687,405,candidate_visible_geometry
+16,19,Z1,PDGFRB,-0.05890410958904113,numeric,null,False,"192,212,245",194,1.0,688,385,719,405,candidate_visible_geometry
+16,20,Z1,S100,-0.012328767123287676,numeric,null,False,"212,219,230",177,4.242640687119285,720,385,751,405,candidate_visible_geometry
+17,0,Z17,Age,-0.10273972602739728,numeric,null,True,"169,198,253",210,2.23606797749979,82,406,113,425,candidate_visible_geometry
+17,1,Z17,Sex,0.08630136986301368,numeric,null,True,"246,191,166",141,1.7320508075688772,114,406,145,425,candidate_visible_geometry
+17,2,Z17,MMSE,0.0506849315068493,numeric,null,False,"239,206,189",154,1.4142135623730951,146,406,177,425,candidate_visible_geometry
+17,3,Z17,Aβ42/Aβ40,-0.04794520547945208,numeric,null,False,"198,214,241",190,1.4142135623730951,178,406,209,425,candidate_visible_geometry
+17,4,Z17,pTau-217,-0.023287671232876728,numeric,null,False,"209,218,233",181,1.4142135623730951,210,406,241,425,candidate_visible_geometry
+17,5,Z17,TauPET,-0.009589041095890427,numeric,null,False,"216,220,226",176,1.7320508075688772,242,406,273,425,candidate_visible_geometry
+17,6,Z17,ADSignCT,0.05616438356164383,numeric,null,True,"241,205,186",152,1.0,274,406,305,425,candidate_visible_geometry
+17,7,Z17,WholeBrainCT,0.06164383561643835,numeric,null,True,"242,202,181",150,1.0,305,406,336,425,candidate_visible_geometry
+17,8,Z17,VentricleVol,-0.08082191780821918,numeric,null,True,"181,205,250",202,1.0,337,406,368,425,candidate_visible_geometry
+17,9,Z17,WMH,-0.06986301369863013,numeric,null,True,"187,209,248",198,3.1622776601683795,369,406,400,425,candidate_visible_geometry
+17,10,Z17,UPDRS,-0.13561643835616438,numeric,null,False,"148,182,255",222,1.0,401,406,432,425,candidate_visible_geometry
+17,11,Z17,SAA,-0.07808219178082193,numeric,null,True,"182,206,250",201,1.0,433,406,464,425,candidate_visible_geometry
+17,12,Z17,GFAP,-0.023287671232876728,numeric,null,False,"210,219,232",181,2.23606797749979,465,406,496,425,candidate_visible_geometry
+17,13,Z17,NFL,-0.04794520547945208,numeric,null,False,"197,214,242",190,0.0,497,406,528,425,candidate_visible_geometry
+17,14,Z17,YKL40,-0.023287671232876728,numeric,null,False,"211,219,231",181,3.3166247903554,528,406,559,425,candidate_visible_geometry
+17,15,Z17,sTREM2,-0.05890410958904113,numeric,null,False,"192,212,245",194,1.0,560,406,591,425,candidate_visible_geometry
+17,16,Z17,SYT1,0.0041095890410958735,numeric,null,False,"221,220,220",171,2.23606797749979,592,406,623,425,candidate_visible_geometry
+17,17,Z17,SNAP25,0.0013698630136986245,numeric,null,False,"219,220,222",172,1.4142135623730951,624,406,655,425,candidate_visible_geometry
+17,18,Z17,NPTX2,0.06164383561643835,numeric,null,False,"242,203,183",150,2.8284271247461903,656,406,687,425,candidate_visible_geometry
+17,19,Z17,PDGFRB,0.023287671232876672,numeric,null,False,"230,215,207",164,1.4142135623730951,688,406,719,425,candidate_visible_geometry
+17,20,Z17,S100,0.03698630136986297,numeric,null,False,"236,211,197",159,5.916079783099616,720,406,751,425,candidate_visible_geometry
+18,0,Z29,Age,-0.05890410958904113,numeric,null,True,"192,212,245",194,1.0,82,426,113,446,candidate_visible_geometry
+18,1,Z29,Sex,0.17123287671232876,numeric,null,True,"240,139,110",110,2.449489742783178,114,426,145,446,candidate_visible_geometry
+18,2,Z29,MMSE,0.08630136986301368,numeric,null,True,"246,191,166",141,1.7320508075688772,146,426,177,446,candidate_visible_geometry
+18,3,Z29,Aβ42/Aβ40,0.0041095890410958735,numeric,null,False,"222,220,219",171,1.0,178,426,209,446,candidate_visible_geometry
+18,4,Z29,pTau-217,0.03698630136986297,numeric,null,False,"234,213,201",159,1.7320508075688772,210,426,241,446,candidate_visible_geometry
+18,5,Z29,TauPET,0.031506849315068475,numeric,null,False,"233,213,203",161,1.0,242,426,273,446,candidate_visible_geometry
+18,6,Z29,ADSignCT,0.08904109589041095,numeric,null,True,"246,189,162",140,1.4142135623730951,274,426,305,446,candidate_visible_geometry
+18,7,Z29,WholeBrainCT,0.09726027397260273,numeric,null,True,"247,186,159",137,3.605551275463989,305,426,336,446,candidate_visible_geometry
+18,8,Z29,VentricleVol,-0.09726027397260273,numeric,null,True,"171,200,253",208,1.4142135623730951,337,426,368,446,candidate_visible_geometry
+18,9,Z29,WMH,-0.09726027397260273,numeric,null,True,"170,199,253",208,1.4142135623730951,369,426,400,446,candidate_visible_geometry
+18,10,Z29,UPDRS,-0.2452054794520548,numeric,null,True,"86,115,224",262,1.0,401,426,432,446,candidate_visible_geometry
+18,11,Z29,SAA,-0.10547945205479453,numeric,null,True,"167,197,254",211,1.7320508075688772,433,426,464,446,candidate_visible_geometry
+18,12,Z29,GFAP,-0.009589041095890427,numeric,null,False,"216,220,226",176,1.7320508075688772,465,426,496,446,candidate_visible_geometry
+18,13,Z29,NFL,-0.05068493150684933,numeric,null,False,"196,213,243",191,1.4142135623730951,497,426,528,446,candidate_visible_geometry
+18,14,Z29,YKL40,0.009589041095890372,numeric,null,False,"223,219,217",169,1.0,528,426,559,446,candidate_visible_geometry
+18,15,Z29,sTREM2,-0.05068493150684933,numeric,null,False,"196,213,243",191,1.4142135623730951,560,426,591,446,candidate_visible_geometry
+18,16,Z29,SYT1,0.11095890410958903,numeric,null,True,"247,179,150",132,3.3166247903554,592,426,623,446,candidate_visible_geometry
+18,17,Z29,SNAP25,0.1054794520547945,numeric,null,True,"247,181,153",134,1.0,624,426,655,446,candidate_visible_geometry
+18,18,Z29,NPTX2,0.13013698630136986,numeric,null,True,"247,166,136",125,1.0,656,426,687,446,candidate_visible_geometry
+18,19,Z29,PDGFRB,0.08630136986301368,numeric,null,True,"246,190,164",141,1.4142135623730951,688,426,719,446,candidate_visible_geometry
+18,20,Z29,S100,0.08630136986301368,numeric,null,True,"246,191,166",141,1.7320508075688772,720,426,751,446,candidate_visible_geometry
+19,0,Z18,Age,0.14109589041095888,numeric,null,True,"245,159,128",121,1.0,82,447,113,467,candidate_visible_geometry
+19,1,Z18,Sex,0.0041095890410958735,numeric,null,False,"221,220,220",171,2.23606797749979,114,447,145,467,candidate_visible_geometry
+19,2,Z18,MMSE,0.1191780821917808,numeric,null,True,"247,173,144",129,1.0,146,447,177,467,candidate_visible_geometry
+19,3,Z18,Aβ42/Aβ40,-0.10547945205479453,numeric,null,True,"167,197,254",211,1.7320508075688772,178,447,209,467,candidate_visible_geometry
+19,4,Z18,pTau-217,-0.12739726027397263,numeric,null,True,"152,185,255",219,2.23606797749979,210,447,241,467,candidate_visible_geometry
+19,5,Z18,TauPET,-0.1657534246575343,numeric,null,True,"133,168,252",233,1.4142135623730951,242,447,273,467,candidate_visible_geometry
+19,6,Z18,ADSignCT,0.06164383561643835,numeric,null,True,"242,201,180",150,1.0,274,447,305,467,candidate_visible_geometry
+19,7,Z18,WholeBrainCT,0.023287671232876672,numeric,null,False,"228,217,210",164,3.0,305,447,336,467,candidate_visible_geometry
+19,8,Z18,VentricleVol,0.03698630136986297,numeric,null,False,"234,212,200",159,2.23606797749979,337,447,368,467,candidate_visible_geometry
+19,9,Z18,WMH,0.05616438356164383,numeric,null,True,"240,205,187",152,1.0,369,447,400,467,candidate_visible_geometry
+19,10,Z18,UPDRS,0.173972602739726,numeric,null,False,"239,136,107",109,2.23606797749979,401,447,432,467,candidate_visible_geometry
+19,11,Z18,SAA,0.023287671232876672,numeric,null,False,"228,217,210",164,3.0,433,447,464,467,candidate_visible_geometry
+19,12,Z18,GFAP,-0.026027397260273977,numeric,null,False,"206,218,235",182,2.0,465,447,496,467,candidate_visible_geometry
+19,13,Z18,NFL,-0.03972602739726028,numeric,null,False,"202,216,239",187,3.0,497,447,528,467,candidate_visible_geometry
+19,14,Z18,YKL40,0.031506849315068475,numeric,null,False,"233,213,203",161,1.0,528,447,559,467,candidate_visible_geometry
+19,15,Z18,sTREM2,0.026027397260273977,numeric,null,False,"232,214,204",163,1.0,560,447,591,467,candidate_visible_geometry
+19,16,Z18,SYT1,0.0013698630136986245,numeric,null,False,"218,220,224",172,1.7320508075688772,592,447,623,467,candidate_visible_geometry
+19,17,Z18,SNAP25,-0.09726027397260273,numeric,null,True,"170,199,253",208,1.4142135623730951,624,447,655,467,candidate_visible_geometry
+19,18,Z18,NPTX2,0.03698630136986297,numeric,null,False,"236,211,197",159,5.916079783099616,656,447,687,467,candidate_visible_geometry
+19,19,Z18,PDGFRB,0.0506849315068493,numeric,null,False,"239,206,189",154,1.4142135623730951,688,447,719,467,candidate_visible_geometry
+19,20,Z18,S100,-0.05068493150684933,numeric,null,False,"196,213,243",191,1.4142135623730951,720,447,751,467,candidate_visible_geometry
+20,0,Z26,Age,0.09452054794520548,numeric,null,True,"247,188,161",138,2.0,82,468,113,487,candidate_visible_geometry
+20,1,Z26,Sex,-0.012328767123287676,numeric,null,False,"212,219,230",177,4.242640687119285,114,468,145,487,candidate_visible_geometry
+20,2,Z26,MMSE,-0.08904109589041098,numeric,null,True,"177,203,252",205,2.0,146,468,177,487,candidate_visible_geometry
+20,3,Z26,Aβ42/Aβ40,0.10821917808219178,numeric,null,True,"247,180,151",133,3.0,178,468,209,487,candidate_visible_geometry
+20,4,Z26,pTau-217,0.0506849315068493,numeric,null,False,"239,206,189",154,1.4142135623730951,210,468,241,487,candidate_visible_geometry
+20,5,Z26,TauPET,0.045205479452054775,numeric,null,False,"237,210,195",156,4.47213595499958,242,468,273,487,candidate_visible_geometry
+20,6,Z26,ADSignCT,-0.08356164383561643,numeric,null,True,"178,204,251",203,1.4142135623730951,274,468,305,487,candidate_visible_geometry
+20,7,Z26,WholeBrainCT,-0.11095890410958903,numeric,null,True,"163,194,254",213,0.0,305,468,336,487,candidate_visible_geometry
+20,8,Z26,VentricleVol,0.12465753424657533,numeric,null,True,"247,169,139",127,1.0,337,468,368,487,candidate_visible_geometry
+20,9,Z26,WMH,0.11095890410958903,numeric,null,True,"247,179,150",132,3.3166247903554,369,468,400,487,candidate_visible_geometry
+20,10,Z26,UPDRS,0.19315068493150683,numeric,null,False,"233,122,95",102,2.0,401,468,432,487,candidate_visible_geometry
+20,11,Z26,SAA,0.03698630136986297,numeric,null,False,"234,212,200",159,2.23606797749979,433,468,464,487,candidate_visible_geometry
+20,12,Z26,GFAP,0.07534246575342465,numeric,null,True,"245,196,172",145,2.449489742783178,465,468,496,487,candidate_visible_geometry
+20,13,Z26,NFL,0.0780821917808219,numeric,null,True,"245,194,170",144,1.0,497,468,528,487,candidate_visible_geometry
+20,14,Z26,YKL40,0.07260273972602738,numeric,null,True,"244,198,175",146,1.0,528,468,559,487,candidate_visible_geometry
+20,15,Z26,sTREM2,0.06164383561643835,numeric,null,False,"242,201,180",150,1.0,560,468,591,487,candidate_visible_geometry
+20,16,Z26,SYT1,-0.012328767123287676,numeric,null,False,"212,219,230",177,4.242640687119285,592,468,623,487,candidate_visible_geometry
+20,17,Z26,SNAP25,0.0506849315068493,numeric,null,False,"239,206,189",154,1.4142135623730951,624,468,655,487,candidate_visible_geometry
+20,18,Z26,NPTX2,-0.08356164383561643,numeric,null,True,"179,205,251",203,0.0,656,468,687,487,candidate_visible_geometry
+20,19,Z26,PDGFRB,-0.023287671232876728,numeric,null,False,"210,219,232",181,2.23606797749979,688,468,719,487,candidate_visible_geometry
+20,20,Z26,S100,0.03698630136986297,numeric,null,False,"235,211,198",159,4.58257569495584,720,468,751,487,candidate_visible_geometry
+21,0,Z16,Age,-0.023287671232876728,numeric,null,False,"211,219,231",181,3.3166247903554,82,488,113,508,candidate_visible_geometry
+21,1,Z16,Sex,-0.042465753424657526,numeric,null,False,"201,215,240",188,3.0,114,488,145,508,candidate_visible_geometry
+21,2,Z16,MMSE,-0.09178082191780823,numeric,null,True,"175,202,252",206,1.0,146,488,177,508,candidate_visible_geometry
+21,3,Z16,Aβ42/Aβ40,0.08082191780821918,numeric,null,True,"245,192,167",143,2.449489742783178,178,488,209,508,candidate_visible_geometry
+21,4,Z16,pTau-217,0.07260273972602738,numeric,null,True,"244,198,175",146,1.0,210,488,241,508,candidate_visible_geometry
+21,5,Z16,TauPET,0.10821917808219178,numeric,null,True,"247,180,151",133,3.0,242,488,273,508,candidate_visible_geometry
+21,6,Z16,ADSignCT,-0.06164383561643838,numeric,null,True,"190,210,246",195,1.4142135623730951,274,488,305,508,candidate_visible_geometry
+21,7,Z16,WholeBrainCT,-0.05890410958904113,numeric,null,True,"192,212,245",194,1.0,305,488,336,508,candidate_visible_geometry
+21,8,Z16,VentricleVol,0.07260273972602738,numeric,null,True,"244,197,173",146,2.0,337,488,368,508,candidate_visible_geometry
+21,9,Z16,WMH,0.023287671232876672,numeric,null,False,"230,215,207",164,1.4142135623730951,369,488,400,508,candidate_visible_geometry
+21,10,Z16,UPDRS,-0.06164383561643838,numeric,null,False,"190,210,246",195,1.4142135623730951,401,488,432,508,candidate_visible_geometry
+21,11,Z16,SAA,0.03698630136986297,numeric,null,False,"234,213,201",159,1.7320508075688772,433,488,464,508,candidate_visible_geometry
+21,12,Z16,GFAP,0.0041095890410958735,numeric,null,False,"222,220,219",171,1.0,465,488,496,508,candidate_visible_geometry
+21,13,Z16,NFL,0.045205479452054775,numeric,null,False,"237,210,195",156,4.47213595499958,497,488,528,508,candidate_visible_geometry
+21,14,Z16,YKL40,0.009589041095890372,numeric,null,False,"224,219,216",169,1.0,528,488,559,508,candidate_visible_geometry
+21,15,Z16,sTREM2,-0.012328767123287676,numeric,null,False,"212,219,230",177,4.242640687119285,560,488,591,508,candidate_visible_geometry
+21,16,Z16,SYT1,-0.05890410958904113,numeric,null,False,"192,212,245",194,1.0,592,488,623,508,candidate_visible_geometry
+21,17,Z16,SNAP25,0.015068493150684925,numeric,null,False,"226,218,213",167,1.0,624,488,655,508,candidate_visible_geometry
+21,18,Z16,NPTX2,-0.09178082191780823,numeric,null,True,"175,202,252",206,1.0,656,488,687,508,candidate_visible_geometry
+21,19,Z16,PDGFRB,-0.09726027397260273,numeric,null,True,"171,200,253",208,1.4142135623730951,688,488,719,508,candidate_visible_geometry
+21,20,Z16,S100,-0.042465753424657526,numeric,null,False,"199,215,240",188,2.23606797749979,720,488,751,508,candidate_visible_geometry
+22,0,Z15,Age,0.03698630136986297,numeric,null,False,"236,211,197",159,5.916079783099616,82,509,113,529,candidate_visible_geometry
+22,1,Z15,Sex,0.009589041095890372,numeric,null,False,"224,219,216",169,1.0,114,509,145,529,candidate_visible_geometry
+22,2,Z15,MMSE,-0.06164383561643838,numeric,null,True,"190,210,246",195,1.4142135623730951,146,509,177,529,candidate_visible_geometry
+22,3,Z15,Aβ42/Aβ40,0.05616438356164383,numeric,null,True,"241,205,186",152,1.0,178,509,209,529,candidate_visible_geometry
+22,4,Z15,pTau-217,0.015068493150684925,numeric,null,False,"226,218,213",167,1.0,210,509,241,529,candidate_visible_geometry
+22,5,Z15,TauPET,0.009589041095890372,numeric,null,False,"224,219,216",169,1.0,242,509,273,529,candidate_visible_geometry
+22,6,Z15,ADSignCT,-0.06164383561643838,numeric,null,True,"191,211,246",195,2.0,274,509,305,529,candidate_visible_geometry
+22,7,Z15,WholeBrainCT,-0.06986301369863013,numeric,null,True,"187,209,248",198,3.1622776601683795,305,509,336,529,candidate_visible_geometry
+22,8,Z15,VentricleVol,0.058904109589041076,numeric,null,True,"241,204,184",151,2.23606797749979,337,509,368,529,candidate_visible_geometry
+22,9,Z15,WMH,0.0506849315068493,numeric,null,False,"239,206,189",154,1.4142135623730951,369,509,400,529,candidate_visible_geometry
+22,10,Z15,UPDRS,-0.023287671232876728,numeric,null,False,"210,219,232",181,2.23606797749979,401,509,432,529,candidate_visible_geometry
+22,11,Z15,SAA,0.023287671232876672,numeric,null,False,"229,216,209",164,1.4142135623730951,433,509,464,529,candidate_visible_geometry
+22,12,Z15,GFAP,0.028767123287671226,numeric,null,False,"231,215,206",162,2.8284271247461903,465,509,496,529,candidate_visible_geometry
+22,13,Z15,NFL,0.026027397260273977,numeric,null,False,"232,214,204",163,1.0,497,509,528,529,candidate_visible_geometry
+22,14,Z15,YKL40,0.0013698630136986245,numeric,null,False,"218,220,224",172,1.7320508075688772,528,509,559,529,candidate_visible_geometry
+22,15,Z15,sTREM2,-0.004109589041095929,numeric,null,False,"217,220,225",174,2.23606797749979,560,509,591,529,candidate_visible_geometry
+22,16,Z15,SYT1,-0.042465753424657526,numeric,null,False,"199,215,240",188,2.23606797749979,592,509,623,529,candidate_visible_geometry
+22,17,Z15,SNAP25,0.0013698630136986245,numeric,null,False,"218,220,224",172,1.7320508075688772,624,509,655,529,candidate_visible_geometry
+22,18,Z15,NPTX2,-0.06986301369863013,numeric,null,True,"186,208,248",198,3.1622776601683795,656,509,687,529,candidate_visible_geometry
+22,19,Z15,PDGFRB,0.0013698630136986245,numeric,null,False,"219,220,222",172,1.4142135623730951,688,509,719,529,candidate_visible_geometry
+22,20,Z15,S100,-0.004109589041095929,numeric,null,False,"217,220,225",174,2.23606797749979,720,509,751,529,candidate_visible_geometry
+23,0,Z19,Age,0.05616438356164383,numeric,null,True,"240,205,187",152,1.0,82,530,113,550,candidate_visible_geometry
+23,1,Z19,Sex,-0.012328767123287676,numeric,null,False,"214,220,228",177,2.23606797749979,114,530,145,550,candidate_visible_geometry
+23,2,Z19,MMSE,-0.03424657534246578,numeric,null,False,"203,216,238",185,2.23606797749979,146,530,177,550,candidate_visible_geometry
+23,3,Z19,Aβ42/Aβ40,0.07534246575342465,numeric,null,True,"245,196,172",145,2.449489742783178,178,530,209,550,candidate_visible_geometry
+23,4,Z19,pTau-217,0.06164383561643835,numeric,null,True,"242,201,180",150,1.0,210,530,241,550,candidate_visible_geometry
+23,5,Z19,TauPET,0.0780821917808219,numeric,null,True,"245,194,170",144,1.0,242,530,273,550,candidate_visible_geometry
+23,6,Z19,ADSignCT,-0.08082191780821918,numeric,null,True,"181,205,250",202,1.0,274,530,305,550,candidate_visible_geometry
+23,7,Z19,WholeBrainCT,-0.07534246575342468,numeric,null,True,"185,208,249",200,2.449489742783178,305,530,336,550,candidate_visible_geometry
+23,8,Z19,VentricleVol,0.07534246575342465,numeric,null,True,"245,196,172",145,2.449489742783178,337,530,368,550,candidate_visible_geometry
+23,9,Z19,WMH,0.03698630136986297,numeric,null,False,"236,211,197",159,5.916079783099616,369,530,400,550,candidate_visible_geometry
+23,10,Z19,UPDRS,-0.11095890410958903,numeric,null,False,"163,194,254",213,0.0,401,530,432,550,candidate_visible_geometry
+23,11,Z19,SAA,0.03698630136986297,numeric,null,False,"234,213,201",159,1.7320508075688772,433,530,464,550,candidate_visible_geometry
+23,12,Z19,GFAP,0.03698630136986297,numeric,null,False,"234,213,201",159,1.7320508075688772,465,530,496,550,candidate_visible_geometry
+23,13,Z19,NFL,0.03698630136986297,numeric,null,False,"234,212,200",159,2.23606797749979,497,530,528,550,candidate_visible_geometry
+23,14,Z19,YKL40,0.058904109589041076,numeric,null,False,"241,204,184",151,2.23606797749979,528,530,559,550,candidate_visible_geometry
+23,15,Z19,sTREM2,0.009589041095890372,numeric,null,False,"224,219,216",169,1.0,560,530,591,550,candidate_visible_geometry
+23,16,Z19,SYT1,0.009589041095890372,numeric,null,False,"223,219,217",169,1.0,592,530,623,550,candidate_visible_geometry
+23,17,Z19,SNAP25,0.06164383561643835,numeric,null,False,"242,202,181",150,1.0,624,530,655,550,candidate_visible_geometry
+23,18,Z19,NPTX2,-0.023287671232876728,numeric,null,False,"210,219,232",181,2.23606797749979,656,530,687,550,candidate_visible_geometry
+23,19,Z19,PDGFRB,0.0041095890410958735,numeric,null,False,"221,220,220",171,2.23606797749979,688,530,719,550,candidate_visible_geometry
+23,20,Z19,S100,0.0041095890410958735,numeric,null,False,"221,220,220",171,2.23606797749979,720,530,751,550,candidate_visible_geometry
+24,0,Z5,Age,0.12739726027397258,numeric,null,True,"247,168,137",126,1.7320508075688772,82,550,113,570,candidate_visible_geometry
+24,1,Z5,Sex,0.17671232876712328,numeric,null,True,"238,134,105",108,1.0,114,550,145,570,candidate_visible_geometry
+24,2,Z5,MMSE,0.0041095890410958735,numeric,null,False,"222,220,219",171,1.0,146,550,177,570,candidate_visible_geometry
+24,3,Z5,Aβ42/Aβ40,0.026027397260273977,numeric,null,False,"232,214,204",163,1.0,178,550,209,570,candidate_visible_geometry
+24,4,Z5,pTau-217,0.009589041095890372,numeric,null,False,"223,219,217",169,1.0,210,550,241,570,candidate_visible_geometry
+24,5,Z5,TauPET,0.0041095890410958735,numeric,null,False,"222,220,219",171,1.0,242,550,273,570,candidate_visible_geometry
+24,6,Z5,ADSignCT,-0.0013698630136986245,numeric,null,False,"220,221,221",173,2.0,274,550,305,570,candidate_visible_geometry
+24,7,Z5,WholeBrainCT,0.023287671232876672,numeric,null,False,"230,215,207",164,1.4142135623730951,305,550,336,570,candidate_visible_geometry
+24,8,Z5,VentricleVol,0.0041095890410958735,numeric,null,False,"222,220,219",171,1.0,337,550,368,570,candidate_visible_geometry
+24,9,Z5,WMH,0.023287671232876672,numeric,null,False,"229,216,209",164,1.4142135623730951,369,550,400,570,candidate_visible_geometry
+24,10,Z5,UPDRS,0.06712328767123285,numeric,null,False,"243,200,178",148,1.4142135623730951,401,550,432,570,candidate_visible_geometry
+24,11,Z5,SAA,0.0041095890410958735,numeric,null,False,"222,220,219",171,1.0,433,550,464,570,candidate_visible_geometry
+24,12,Z5,GFAP,0.015068493150684925,numeric,null,False,"225,218,214",167,1.7320508075688772,465,550,496,570,candidate_visible_geometry
+24,13,Z5,NFL,-0.009589041095890427,numeric,null,False,"216,220,226",176,1.7320508075688772,497,550,528,570,candidate_visible_geometry
+24,14,Z5,YKL40,0.0013698630136986245,numeric,null,False,"218,220,224",172,1.7320508075688772,528,550,559,570,candidate_visible_geometry
+24,15,Z5,sTREM2,0.009589041095890372,numeric,null,False,"224,219,216",169,1.0,560,550,591,570,candidate_visible_geometry
+24,16,Z5,SYT1,-0.023287671232876728,numeric,null,False,"209,218,233",181,1.4142135623730951,592,550,623,570,candidate_visible_geometry
+24,17,Z5,SNAP25,-0.026027397260273977,numeric,null,False,"206,218,235",182,2.0,624,550,655,570,candidate_visible_geometry
+24,18,Z5,NPTX2,-0.012328767123287676,numeric,null,False,"213,219,229",177,3.1622776601683795,656,550,687,570,candidate_visible_geometry
+24,19,Z5,PDGFRB,-0.03424657534246578,numeric,null,False,"204,217,237",185,1.4142135623730951,688,550,719,570,candidate_visible_geometry
+24,20,Z5,S100,-0.004109589041095929,numeric,null,False,"217,220,225",174,2.23606797749979,720,550,751,570,candidate_visible_geometry
+25,0,Z11,Age,0.09999999999999998,numeric,null,True,"247,183,155",136,1.4142135623730951,82,571,113,591,candidate_visible_geometry
+25,1,Z11,Sex,-0.009589041095890427,numeric,null,False,"215,220,227",176,2.23606797749979,114,571,145,591,candidate_visible_geometry
+25,2,Z11,MMSE,0.03698630136986297,numeric,null,False,"235,211,198",159,4.58257569495584,146,571,177,591,candidate_visible_geometry
+25,3,Z11,Aβ42/Aβ40,0.0013698630136986245,numeric,null,False,"218,220,224",172,1.7320508075688772,178,571,209,591,candidate_visible_geometry
+25,4,Z11,pTau-217,-0.009589041095890427,numeric,null,False,"216,220,226",176,1.7320508075688772,210,571,241,591,candidate_visible_geometry
+25,5,Z11,TauPET,-0.009589041095890427,numeric,null,False,"215,220,227",176,2.23606797749979,242,571,273,591,candidate_visible_geometry
+25,6,Z11,ADSignCT,-0.03424657534246578,numeric,null,False,"203,216,238",185,2.23606797749979,274,571,305,591,candidate_visible_geometry
+25,7,Z11,WholeBrainCT,-0.04794520547945208,numeric,null,False,"198,214,241",190,1.4142135623730951,305,571,336,591,candidate_visible_geometry
+25,8,Z11,VentricleVol,0.03698630136986297,numeric,null,False,"235,211,198",159,4.58257569495584,337,571,368,591,candidate_visible_geometry
+25,9,Z11,WMH,0.031506849315068475,numeric,null,False,"233,213,203",161,1.0,369,571,400,591,candidate_visible_geometry
+25,10,Z11,UPDRS,-0.012328767123287676,numeric,null,False,"213,219,229",177,3.1622776601683795,401,571,432,591,candidate_visible_geometry
+25,11,Z11,SAA,0.0041095890410958735,numeric,null,False,"222,220,219",171,1.0,433,571,464,591,candidate_visible_geometry
+25,12,Z11,GFAP,0.06712328767123285,numeric,null,False,"243,200,178",148,1.4142135623730951,465,571,496,591,candidate_visible_geometry
+25,13,Z11,NFL,0.03698630136986297,numeric,null,False,"234,212,200",159,2.23606797749979,497,571,528,591,candidate_visible_geometry
+25,14,Z11,YKL40,0.05616438356164383,numeric,null,False,"241,205,186",152,1.0,528,571,559,591,candidate_visible_geometry
+25,15,Z11,sTREM2,0.045205479452054775,numeric,null,False,"238,208,192",156,1.4142135623730951,560,571,591,591,candidate_visible_geometry
+25,16,Z11,SYT1,0.0780821917808219,numeric,null,True,"245,194,170",144,1.0,592,571,623,591,candidate_visible_geometry
+25,17,Z11,SNAP25,0.03698630136986297,numeric,null,False,"234,213,201",159,1.7320508075688772,624,571,655,591,candidate_visible_geometry
+25,18,Z11,NPTX2,0.11643835616438356,numeric,null,True,"247,176,147",130,2.23606797749979,656,571,687,591,candidate_visible_geometry
+25,19,Z11,PDGFRB,0.09452054794520548,numeric,null,True,"247,188,161",138,2.0,688,571,719,591,candidate_visible_geometry
+25,20,Z11,S100,0.045205479452054775,numeric,null,False,"237,210,195",156,4.47213595499958,720,571,751,591,candidate_visible_geometry
+26,0,Z10,Age,0.026027397260273977,numeric,null,False,"232,214,204",163,1.0,82,592,113,612,candidate_visible_geometry
+26,1,Z10,Sex,0.0013698630136986245,numeric,null,False,"219,220,222",172,1.4142135623730951,114,592,145,612,candidate_visible_geometry
+26,2,Z10,MMSE,0.026027397260273977,numeric,null,False,"232,214,204",163,1.0,146,592,177,612,candidate_visible_geometry
+26,3,Z10,Aβ42/Aβ40,0.0013698630136986245,numeric,null,False,"218,220,224",172,1.7320508075688772,178,592,209,612,candidate_visible_geometry
+26,4,Z10,pTau-217,-0.012328767123287676,numeric,null,False,"212,219,230",177,4.242640687119285,210,592,241,612,candidate_visible_geometry
+26,5,Z10,TauPET,-0.042465753424657526,numeric,null,False,"199,215,240",188,2.23606797749979,242,592,273,612,candidate_visible_geometry
+26,6,Z10,ADSignCT,0.0041095890410958735,numeric,null,False,"221,220,220",171,2.23606797749979,274,592,305,612,candidate_visible_geometry
+26,7,Z10,WholeBrainCT,-0.026027397260273977,numeric,null,False,"206,218,235",182,2.0,305,592,336,612,candidate_visible_geometry
+26,8,Z10,VentricleVol,0.045205479452054775,numeric,null,False,"238,208,192",156,1.4142135623730951,337,592,368,612,candidate_visible_geometry
+26,9,Z10,WMH,0.023287671232876672,numeric,null,False,"230,215,207",164,1.4142135623730951,369,592,400,612,candidate_visible_geometry
+26,10,Z10,UPDRS,0.009589041095890372,numeric,null,False,"223,219,217",169,1.0,401,592,432,612,candidate_visible_geometry
+26,11,Z10,SAA,-0.03972602739726028,numeric,null,False,"202,216,239",187,3.0,433,592,464,612,candidate_visible_geometry
+26,12,Z10,GFAP,0.028767123287671226,numeric,null,False,"231,215,206",162,2.8284271247461903,465,592,496,612,candidate_visible_geometry
+26,13,Z10,NFL,0.0041095890410958735,numeric,null,False,"222,220,219",171,1.0,497,592,528,612,candidate_visible_geometry
+26,14,Z10,YKL40,0.0013698630136986245,numeric,null,False,"218,220,224",172,1.7320508075688772,528,592,559,612,candidate_visible_geometry
+26,15,Z10,sTREM2,-0.012328767123287676,numeric,null,False,"214,220,228",177,2.23606797749979,560,592,591,612,candidate_visible_geometry
+26,16,Z10,SYT1,0.009589041095890372,numeric,null,False,"223,219,217",169,1.0,592,592,623,612,candidate_visible_geometry
+26,17,Z10,SNAP25,-0.023287671232876728,numeric,null,False,"209,218,233",181,1.4142135623730951,624,592,655,612,candidate_visible_geometry
+26,18,Z10,NPTX2,0.03698630136986297,numeric,null,False,"235,211,198",159,4.58257569495584,656,592,687,612,candidate_visible_geometry
+26,19,Z10,PDGFRB,0.026027397260273977,numeric,null,False,"232,214,204",163,1.0,688,592,719,612,candidate_visible_geometry
+26,20,Z10,S100,-0.004109589041095929,numeric,null,False,"217,220,225",174,2.23606797749979,720,592,751,612,candidate_visible_geometry
+27,0,Z14,Age,0.023287671232876672,numeric,null,False,"229,216,209",164,1.4142135623730951,82,613,113,632,candidate_visible_geometry
+27,1,Z14,Sex,-0.023287671232876728,numeric,null,False,"210,219,232",181,2.23606797749979,114,613,145,632,candidate_visible_geometry
+27,2,Z14,MMSE,0.05616438356164383,numeric,null,True,"240,205,187",152,1.0,146,613,177,632,candidate_visible_geometry
+27,3,Z14,Aβ42/Aβ40,0.023287671232876672,numeric,null,False,"228,217,210",164,3.0,178,613,209,632,candidate_visible_geometry
+27,4,Z14,pTau-217,-0.03424657534246578,numeric,null,False,"204,217,237",185,1.4142135623730951,210,613,241,632,candidate_visible_geometry
+27,5,Z14,TauPET,-0.042465753424657526,numeric,null,False,"199,215,240",188,2.23606797749979,242,613,273,632,candidate_visible_geometry
+27,6,Z14,ADSignCT,0.03698630136986297,numeric,null,False,"234,213,201",159,1.7320508075688772,274,613,305,632,candidate_visible_geometry
+27,7,Z14,WholeBrainCT,-0.0013698630136986245,numeric,null,False,"220,221,221",173,2.0,305,613,336,632,candidate_visible_geometry
+27,8,Z14,VentricleVol,0.03698630136986297,numeric,null,False,"234,212,200",159,2.23606797749979,337,613,368,632,candidate_visible_geometry
+27,9,Z14,WMH,0.0013698630136986245,numeric,null,False,"218,220,224",172,1.7320508075688772,369,613,400,632,candidate_visible_geometry
+27,10,Z14,UPDRS,-0.042465753424657526,numeric,null,False,"199,215,240",188,2.23606797749979,401,613,432,632,candidate_visible_geometry
+27,11,Z14,SAA,-0.023287671232876728,numeric,null,False,"211,219,231",181,3.3166247903554,433,613,464,632,candidate_visible_geometry
+27,12,Z14,GFAP,0.0041095890410958735,numeric,null,False,"222,220,219",171,1.0,465,613,496,632,candidate_visible_geometry
+27,13,Z14,NFL,0.0041095890410958735,numeric,null,False,"222,220,219",171,1.0,497,613,528,632,candidate_visible_geometry
+27,14,Z14,YKL40,-0.0013698630136986245,numeric,null,False,"220,221,221",173,2.0,528,613,559,632,candidate_visible_geometry
+27,15,Z14,sTREM2,0.023287671232876672,numeric,null,False,"229,216,209",164,1.4142135623730951,560,613,591,632,candidate_visible_geometry
+27,16,Z14,SYT1,-0.023287671232876728,numeric,null,False,"209,218,233",181,1.4142135623730951,592,613,623,632,candidate_visible_geometry
+27,17,Z14,SNAP25,-0.042465753424657526,numeric,null,False,"201,215,240",188,3.0,624,613,655,632,candidate_visible_geometry
+27,18,Z14,NPTX2,0.06712328767123285,numeric,null,True,"243,199,177",148,0.0,656,613,687,632,candidate_visible_geometry
+27,19,Z14,PDGFRB,0.023287671232876672,numeric,null,False,"228,217,210",164,3.0,688,613,719,632,candidate_visible_geometry
+27,20,Z14,S100,0.0041095890410958735,numeric,null,False,"221,220,220",171,2.23606797749979,720,613,751,632,candidate_visible_geometry
+28,0,Z27,Age,-0.04794520547945208,numeric,null,False,"198,214,241",190,1.4142135623730951,82,633,113,653,candidate_visible_geometry
+28,1,Z27,Sex,-0.19589041095890414,numeric,null,True,"112,147,243",244,1.4142135623730951,114,633,145,653,candidate_visible_geometry
+28,2,Z27,MMSE,-0.05890410958904113,numeric,null,True,"192,212,245",194,1.0,146,633,177,653,candidate_visible_geometry
+28,3,Z27,Aβ42/Aβ40,-0.07808219178082193,numeric,null,True,"182,206,250",201,1.0,178,633,209,653,candidate_visible_geometry
+28,4,Z27,pTau-217,-0.06164383561643838,numeric,null,True,"190,210,246",195,1.4142135623730951,210,633,241,653,candidate_visible_geometry
+28,5,Z27,TauPET,-0.06986301369863013,numeric,null,True,"186,208,248",198,3.1622776601683795,242,633,273,653,candidate_visible_geometry
+28,6,Z27,ADSignCT,-0.042465753424657526,numeric,null,False,"199,215,240",188,2.23606797749979,274,633,305,653,candidate_visible_geometry
+28,7,Z27,WholeBrainCT,-0.08082191780821918,numeric,null,True,"181,205,250",202,1.0,305,633,336,653,candidate_visible_geometry
+28,8,Z27,VentricleVol,0.06712328767123285,numeric,null,True,"243,199,177",148,0.0,337,633,368,653,candidate_visible_geometry
+28,9,Z27,WMH,0.03698630136986297,numeric,null,False,"234,213,201",159,1.7320508075688772,369,633,400,653,candidate_visible_geometry
+28,10,Z27,UPDRS,0.3,clipped_high,"[0.3, null]",True,"180,4,38",63,5.0990195135927845,401,633,432,653,candidate_visible_geometry
+28,11,Z27,SAA,0.09452054794520548,numeric,null,True,"247,188,161",138,2.0,433,633,464,653,candidate_visible_geometry
+28,12,Z27,GFAP,0.0041095890410958735,numeric,null,False,"221,220,220",171,2.23606797749979,465,633,496,653,candidate_visible_geometry
+28,13,Z27,NFL,0.1054794520547945,numeric,null,True,"247,181,153",134,1.0,497,633,528,653,candidate_visible_geometry
+28,14,Z27,YKL40,0.0013698630136986245,numeric,null,False,"219,220,222",172,1.4142135623730951,528,633,559,653,candidate_visible_geometry
+28,15,Z27,sTREM2,0.023287671232876672,numeric,null,False,"229,216,209",164,1.4142135623730951,560,633,591,653,candidate_visible_geometry
+28,16,Z27,SYT1,-0.14383561643835618,numeric,null,True,"143,177,254",225,2.23606797749979,592,633,623,653,candidate_visible_geometry
+28,17,Z27,SNAP25,-0.12739726027397263,numeric,null,True,"152,185,255",219,2.23606797749979,624,633,655,653,candidate_visible_geometry
+28,18,Z27,NPTX2,-0.06986301369863013,numeric,null,True,"187,209,248",198,3.1622776601683795,656,633,687,653,candidate_visible_geometry
+28,19,Z27,PDGFRB,-0.04794520547945208,numeric,null,False,"197,214,242",190,0.0,688,633,719,653,candidate_visible_geometry
+28,20,Z27,S100,-0.026027397260273977,numeric,null,False,"207,218,234",182,1.4142135623730951,720,633,751,653,candidate_visible_geometry
+29,0,Z8,Age,-0.23698630136986304,numeric,null,True,"89,119,227",259,1.4142135623730951,82,654,113,674,candidate_visible_geometry
+29,1,Z8,Sex,-0.1794520547945206,numeric,null,True,"123,159,249",238,1.4142135623730951,114,654,145,674,candidate_visible_geometry
+29,2,Z8,MMSE,0.06712328767123285,numeric,null,True,"243,199,177",148,0.0,146,654,177,674,candidate_visible_geometry
+29,3,Z8,Aβ42/Aβ40,-0.18219178082191784,numeric,null,True,"122,157,248",239,1.4142135623730951,178,654,209,674,candidate_visible_geometry
+29,4,Z8,pTau-217,-0.14657534246575343,numeric,null,True,"141,176,254",226,1.7320508075688772,210,654,241,674,candidate_visible_geometry
+29,5,Z8,TauPET,-0.14383561643835618,numeric,null,True,"143,177,254",225,2.23606797749979,242,654,273,674,candidate_visible_geometry
+29,6,Z8,ADSignCT,0.09726027397260273,numeric,null,True,"247,185,158",137,2.23606797749979,274,654,305,674,candidate_visible_geometry
+29,7,Z8,WholeBrainCT,0.07260273972602738,numeric,null,True,"244,197,173",146,2.0,305,654,336,674,candidate_visible_geometry
+29,8,Z8,VentricleVol,-0.06164383561643838,numeric,null,True,"190,210,246",195,1.4142135623730951,337,654,368,674,candidate_visible_geometry
+29,9,Z8,WMH,-0.08356164383561643,numeric,null,True,"179,205,251",203,0.0,369,654,400,674,candidate_visible_geometry
+29,10,Z8,UPDRS,0.3,clipped_high,"[0.3, null]",True,"180,4,38",63,5.0990195135927845,401,654,432,674,candidate_visible_geometry
+29,11,Z8,SAA,0.03698630136986297,numeric,null,False,"236,211,197",159,5.916079783099616,433,654,464,674,candidate_visible_geometry
+29,12,Z8,GFAP,-0.14383561643835618,numeric,null,True,"144,178,254",225,1.7320508075688772,465,654,496,674,candidate_visible_geometry
+29,13,Z8,NFL,0.009589041095890372,numeric,null,False,"223,219,217",169,1.0,497,654,528,674,candidate_visible_geometry
+29,14,Z8,YKL40,-0.14657534246575343,numeric,null,True,"141,176,254",226,1.7320508075688772,528,654,559,674,candidate_visible_geometry
+29,15,Z8,sTREM2,-0.09178082191780823,numeric,null,True,"175,202,252",206,1.0,560,654,591,674,candidate_visible_geometry
+29,16,Z8,SYT1,-0.18767123287671234,numeric,null,True,"118,153,246",241,1.0,592,654,623,674,candidate_visible_geometry
+29,17,Z8,SNAP25,-0.2068493150684932,numeric,null,True,"107,141,240",248,1.4142135623730951,624,654,655,674,candidate_visible_geometry
+29,18,Z8,NPTX2,-0.023287671232876728,numeric,null,False,"209,218,233",181,1.4142135623730951,656,654,687,674,candidate_visible_geometry
+29,19,Z8,PDGFRB,-0.12739726027397263,numeric,null,True,"152,185,255",219,2.23606797749979,688,654,719,674,candidate_visible_geometry
+29,20,Z8,S100,-0.06164383561643838,numeric,null,True,"188,210,247",195,1.7320508075688772,720,654,751,674,candidate_visible_geometry
+30,0,Z20,Age,-0.2068493150684932,numeric,null,True,"107,141,240",248,1.4142135623730951,82,675,113,694,candidate_visible_geometry
+30,1,Z20,Sex,-0.09178082191780823,numeric,null,True,"174,201,252",206,1.7320508075688772,114,675,145,694,candidate_visible_geometry
+30,2,Z20,MMSE,0.07260273972602738,numeric,null,True,"244,198,175",146,1.0,146,675,177,694,candidate_visible_geometry
+30,3,Z20,Aβ42/Aβ40,-0.08904109589041098,numeric,null,True,"177,203,252",205,2.0,178,675,209,694,candidate_visible_geometry
+30,4,Z20,pTau-217,-0.06164383561643838,numeric,null,True,"191,211,246",195,2.0,210,675,241,694,candidate_visible_geometry
+30,5,Z20,TauPET,-0.08082191780821918,numeric,null,True,"181,205,250",202,1.0,242,675,273,694,candidate_visible_geometry
+30,6,Z20,ADSignCT,0.09726027397260273,numeric,null,True,"247,186,159",137,3.605551275463989,274,675,305,694,candidate_visible_geometry
+30,7,Z20,WholeBrainCT,0.0780821917808219,numeric,null,True,"245,193,169",144,1.7320508075688772,305,675,336,694,candidate_visible_geometry
+30,8,Z20,VentricleVol,-0.05890410958904113,numeric,null,True,"193,212,244",194,1.0,337,675,368,694,candidate_visible_geometry
+30,9,Z20,WMH,-0.08082191780821918,numeric,null,True,"181,205,250",202,1.0,369,675,400,694,candidate_visible_geometry
+30,10,Z20,UPDRS,-0.04794520547945208,numeric,null,False,"198,214,241",190,1.4142135623730951,401,675,432,694,candidate_visible_geometry
+30,11,Z20,SAA,-0.04794520547945208,numeric,null,False,"198,214,241",190,1.4142135623730951,433,675,464,694,candidate_visible_geometry
+30,12,Z20,GFAP,-0.10547945205479453,numeric,null,True,"166,196,254",211,1.0,465,675,496,694,candidate_visible_geometry
+30,13,Z20,NFL,-0.03424657534246578,numeric,null,False,"204,217,237",185,1.4142135623730951,497,675,528,694,candidate_visible_geometry
+30,14,Z20,YKL40,-0.09178082191780823,numeric,null,True,"174,201,252",206,1.7320508075688772,528,675,559,694,candidate_visible_geometry
+30,15,Z20,sTREM2,-0.07808219178082193,numeric,null,True,"182,206,250",201,1.0,560,675,591,694,candidate_visible_geometry
+30,16,Z20,SYT1,-0.042465753424657526,numeric,null,False,"199,215,240",188,2.23606797749979,592,675,623,694,candidate_visible_geometry
+30,17,Z20,SNAP25,-0.06986301369863013,numeric,null,True,"187,209,248",198,3.1622776601683795,624,675,655,694,candidate_visible_geometry
+30,18,Z20,NPTX2,0.047945205479452024,numeric,null,False,"239,207,191",155,1.4142135623730951,656,675,687,694,candidate_visible_geometry
+30,19,Z20,PDGFRB,-0.05068493150684933,numeric,null,False,"196,213,243",191,1.4142135623730951,688,675,719,694,candidate_visible_geometry
+30,20,Z20,S100,-0.026027397260273977,numeric,null,False,"206,218,235",182,2.0,720,675,751,694,candidate_visible_geometry
+31,0,Z21,Age,-0.21780821917808219,numeric,null,True,"100,133,236",252,1.4142135623730951,82,695,113,715,candidate_visible_geometry
+31,1,Z21,Sex,-0.009589041095890427,numeric,null,False,"216,220,226",176,1.7320508075688772,114,695,145,715,candidate_visible_geometry
+31,2,Z21,MMSE,0.08082191780821918,numeric,null,True,"245,192,167",143,2.449489742783178,146,695,177,715,candidate_visible_geometry
+31,3,Z21,Aβ42/Aβ40,-0.10547945205479453,numeric,null,True,"166,196,254",211,1.0,178,695,209,715,candidate_visible_geometry
+31,4,Z21,pTau-217,-0.10273972602739728,numeric,null,True,"169,198,253",210,2.23606797749979,210,695,241,715,candidate_visible_geometry
+31,5,Z21,TauPET,-0.09178082191780823,numeric,null,True,"173,201,253",206,3.0,242,695,273,715,candidate_visible_geometry
+31,6,Z21,ADSignCT,0.09726027397260273,numeric,null,True,"247,186,159",137,3.605551275463989,274,695,305,715,candidate_visible_geometry
+31,7,Z21,WholeBrainCT,0.09999999999999998,numeric,null,True,"247,183,155",136,1.4142135623730951,305,695,336,715,candidate_visible_geometry
+31,8,Z21,VentricleVol,-0.06164383561643838,numeric,null,True,"191,211,246",195,2.0,337,695,368,715,candidate_visible_geometry
+31,9,Z21,WMH,-0.09178082191780823,numeric,null,True,"175,202,252",206,1.0,369,695,400,715,candidate_visible_geometry
+31,10,Z21,UPDRS,0.1602739726027397,numeric,null,False,"242,146,116",114,2.0,401,695,432,715,candidate_visible_geometry
+31,11,Z21,SAA,-0.04794520547945208,numeric,null,True,"197,214,242",190,0.0,433,695,464,715,candidate_visible_geometry
+31,12,Z21,GFAP,-0.11643835616438358,numeric,null,True,"159,191,255",215,2.23606797749979,465,695,496,715,candidate_visible_geometry
+31,13,Z21,NFL,-0.03972602739726028,numeric,null,False,"202,216,239",187,3.0,497,695,528,715,candidate_visible_geometry
+31,14,Z21,YKL40,-0.13561643835616438,numeric,null,True,"147,181,254",222,1.4142135623730951,528,695,559,715,candidate_visible_geometry
+31,15,Z21,sTREM2,-0.12739726027397263,numeric,null,True,"151,184,255",219,3.0,560,695,591,715,candidate_visible_geometry
+31,16,Z21,SYT1,-0.12465753424657533,numeric,null,True,"155,188,255",218,2.449489742783178,592,695,623,715,candidate_visible_geometry
+31,17,Z21,SNAP25,-0.14657534246575343,numeric,null,True,"141,176,254",226,1.7320508075688772,624,695,655,715,candidate_visible_geometry
+31,18,Z21,NPTX2,0.009589041095890372,numeric,null,False,"223,219,217",169,1.0,656,695,687,715,candidate_visible_geometry
+31,19,Z21,PDGFRB,-0.09726027397260273,numeric,null,True,"170,199,253",208,1.4142135623730951,688,695,719,715,candidate_visible_geometry
+31,20,Z21,S100,-0.042465753424657526,numeric,null,False,"199,215,240",188,2.23606797749979,720,695,751,715,candidate_visible_geometry

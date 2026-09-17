@@ -1,0 +1,8 @@
+[
+  {"query":"请阅读这篇完成主体的实证经济学论文并提出英文标题：一个推荐标题，加三到四个强备选；所有标题都必须忠于论文核心。","should_trigger":true},
+  {"query":"Read my structural economics manuscript and propose one recommended publication-ready English title plus four defensible alternatives.","should_trigger":true},
+  {"query":"论文的模型、数据和结果都完成了，请据此重写标题并比较不同英文标题方案。","should_trigger":true},
+  {"query":"Audit the current economics paper title against the manuscript and replace any causal or mechanism overclaim with accurate candidates.","should_trigger":true},
+  {"query":"请根据论文主体撰写一节英文结论。","should_trigger":false},
+  {"query":"Copyedit the manuscript bibliography and verify citation style; do not change the title.","should_trigger":false}
+]

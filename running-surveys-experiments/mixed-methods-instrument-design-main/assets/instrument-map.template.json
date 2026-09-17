@@ -1,0 +1,96 @@
+{
+  "study": {
+    "title": "[研究题目]",
+    "mixed_methods_design": "convergent",
+    "integration_purposes": [
+      "complementarity"
+    ],
+    "timing": "concurrent",
+    "priority": "equal"
+  },
+  "research_questions": [
+    {
+      "id": "RQ1",
+      "text": "[上位混合研究问题]",
+      "strand_intent": "MIXED"
+    }
+  ],
+  "populations": [
+    {
+      "id": "P_QUAN_1",
+      "label": "[量化目标人群]",
+      "strand": "QUAN",
+      "unit_of_analysis": "individual"
+    },
+    {
+      "id": "P_QUAL_1",
+      "label": "[质性目标人群]",
+      "strand": "QUAL",
+      "unit_of_analysis": "individual"
+    }
+  ],
+  "constructs": [
+    {
+      "id": "C1",
+      "label": "[共同构念或主题]",
+      "definition": "[包含与排除边界]",
+      "rq_ids": [
+        "RQ1"
+      ]
+    }
+  ],
+  "survey_items": [
+    {
+      "id": "Q1",
+      "variable_name": "construct_indicator_1",
+      "rq_ids": [
+        "RQ1"
+      ],
+      "construct_ids": [
+        "C1"
+      ],
+      "population_ids": [
+        "P_QUAN_1"
+      ],
+      "question_text": "[问卷题面]",
+      "response_type": "single-choice",
+      "source_status": "new",
+      "source": "",
+      "wording_changed": false,
+      "validation_status": "draft-unvalidated"
+    }
+  ],
+  "interview_questions": [
+    {
+      "id": "I1",
+      "rq_ids": [
+        "RQ1"
+      ],
+      "population_ids": [
+        "P_QUAL_1"
+      ],
+      "question_role": "core",
+      "main_question": "[开放、非诱导的访谈主问题]",
+      "follow_ups": [
+        "[针对回答的澄清追问]"
+      ],
+      "probes": [
+        "[请举一个具体例子]"
+      ]
+    }
+  ],
+  "integration_links": [
+    {
+      "id": "L1",
+      "rq_id": "RQ1",
+      "survey_item_ids": [
+        "Q1"
+      ],
+      "interview_question_ids": [
+        "I1"
+      ],
+      "strategy": "compare",
+      "integration_level": "construct"
+    }
+  ]
+}

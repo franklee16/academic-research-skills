@@ -1,0 +1,66 @@
+{
+  "skill": "quality-checks-diagnosis",
+  "version": "0.1.0",
+  "source_book": "Survey Curious? Start-Up Guide — Bergman, Chinco, Hartzmark, Sussman (2020)",
+  "darwin_compatible": true,
+  "test_cases": [
+    {
+      "id": "should-trigger-01",
+      "type": "should_trigger",
+      "prompt": "Should I add attention checks to my survey? How many?",
+      "expected_behavior": "Activate quality-checks-diagnosis. Default: 1-2 well-designed attention checks, no more. Differentiate attention vs. comprehension vs. manipulation check.",
+      "notes": "Direct 'should I add attention checks' signal."
+    },
+    {
+      "id": "should-trigger-02",
+      "type": "should_trigger",
+      "prompt": "My respondents are failing checks — does that mean I should drop them or fix the survey?",
+      "expected_behavior": "Activate quality-checks-diagnosis. Depends on which check: attention failure = drop respondent; comprehension failure = rewrite instructions; manipulation failure = strengthen treatment.",
+      "notes": "Direct diagnosis question = primary signal."
+    },
+    {
+      "id": "should-trigger-03",
+      "type": "should_trigger",
+      "prompt": "I have a treatment vs. control survey and I want to verify the treatment actually landed.",
+      "expected_behavior": "Activate quality-checks-diagnosis. Use manipulation check. Recommend rating-scale or recall task about the manipulation itself.",
+      "notes": "Manipulation check = primary signal."
+    },
+    {
+      "id": "should-trigger-04",
+      "type": "should_trigger",
+      "prompt": "Comprehension check vs. attention check — what's the difference?",
+      "expected_behavior": "Activate quality-checks-diagnosis. Distinguish: attention = is respondent awake/reading; comprehension = is respondent understanding instructions; manipulation = did the treatment land. Specify examples.",
+      "notes": "Diagnostic distinction question = primary signal."
+    },
+    {
+      "id": "should-not-trigger-01",
+      "type": "should_not_trigger",
+      "prompt": "How do I write clear survey questions?",
+      "expected_behavior": "Do NOT activate quality-checks-diagnosis. This is a question-wording concern. Defer to clarity-concreteness.",
+      "notes": "Trap: 'questions' ≠ 'checks'."
+    },
+    {
+      "id": "should-not-trigger-02",
+      "type": "should_not_trigger",
+      "prompt": "How do I run a pilot?",
+      "expected_behavior": "Do NOT activate quality-checks-diagnosis. Pilot-protocol is the operational layer. Defer to pilot-protocol.",
+      "notes": "Trap: checks are deployed during pilot, but the question is operational flow."
+    },
+    {
+      "id": "should-not-trigger-03",
+      "type": "should_not_trigger",
+      "prompt": "My treatment arm has higher dropout — what do I do?",
+      "expected_behavior": "Do NOT activate quality-checks-diagnosis. This is selective attrition. Defer to selective-attrition-audit. (Quality of *checks* is per-item; quality of *respondents* per condition is selective-attrition.)",
+      "notes": "Trap: 'dropout' involves checks (some are filtered by check-failure), but the concern is condition-asymmetry, not check design."
+    },
+    {
+      "id": "edge-01",
+      "type": "edge_case",
+      "prompt": "I have 5 attention checks. Is that too many?",
+      "expected_behavior": "Edge: yes. Recommend reducing to 1-2 well-placed, especially the obvious ones. Explain: more than 2 attention checks biases the sample toward survey-savvy workers.",
+      "notes": "Edge: the user has the problem (over-checking); the fix is structural."
+    }
+  ],
+  "minimum_pass_rate": 0.85,
+  "notes": "Trap: 'my data has a problem' can match many skills; filter on which check, which failure mode, which interpretation."
+}

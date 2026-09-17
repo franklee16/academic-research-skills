@@ -1,0 +1,33 @@
+{
+  "coordinate_space": "degree_and_arcminute_labels_visible_on_graticule",
+  "longitude": {
+    "formula": "arcminute = slope * pixel_coordinate + intercept",
+    "slope": 0.004081632653061225,
+    "intercept": 53.6,
+    "anchor_residual_arcminute": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "max_abs_anchor_residual_arcminute": 0.0
+  },
+  "latitude": {
+    "formula": "arcminute = slope * pixel_coordinate + intercept",
+    "slope": -0.004083289774351972,
+    "intercept": 47.98366100524959,
+    "anchor_residual_arcminute": [
+      0.00041183036923797545,
+      0.0008178250854697922,
+      -0.0028594699726482986,
+      0.001629814517940531
+    ],
+    "max_abs_anchor_residual_arcminute": 0.0028594699726482986
+  },
+  "limitations": [
+    "The figure does not print a datum, projection, or coordinate-reference-system identifier.",
+    "The calibration is retained as a pixel-to-degree/arcminute display mapping; it is not a surveyed georeferencing claim."
+  ]
+}

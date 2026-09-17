@@ -1,0 +1,41 @@
+{
+  "skill_name": "write-economics-conclusion",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Write a polished English conclusion from the attached working-paper materials. Select only modules that add value and keep policy language within the evidence.",
+      "expected_output": "A focused conclusion that synthesizes the attendance and graduation effects, carefully describes the suggestive liquidity channel, states the urban/two-cohort boundary, and derives a restrained implication or the stated future test.",
+      "files": ["evals/files/rct-transit-paper.md"],
+      "expectations": [
+        "Preserves correct intent-to-treat magnitudes and does not convert take-up into treatment-on-the-treated effects.",
+        "Does not claim the transportation-liquidity mechanism is identified.",
+        "Does not invent benefit-cost or universal-subsidy claims.",
+        "Distills rather than repeats every outcome."
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "Rewrite the paper's conclusion so it matches the body. Remove overclaiming while preserving a useful final takeaway and concrete future research.",
+      "expected_output": "A descriptive conclusion centered on co-evolution and selection, with the 6 percent association, pre-trend boundary, unsupported mechanism removed, no mandate, and future designs clearly labeled as future work.",
+      "files": ["evals/files/observational-remote-work-paper.md"],
+      "expectations": [
+        "Rejects causal and natural-experiment language.",
+        "Does not use 12 percent, office-cost savings, or government mandates.",
+        "Connects the pre-trend limitation directly to interpretation.",
+        "Treats policy discontinuities and task-level data as future work, not current evidence."
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "Draft the English conclusion for this theory paper. Do not impose an empirical-conclusion template or invent policy recommendations.",
+      "expected_output": "A theory conclusion organized around broad lessons, the non-monotonic and complementary cases, parameter boundaries, distributional implications, and only the explicitly stated future model extensions.",
+      "files": ["evals/files/theory-ai-delegation-paper.md"],
+      "expectations": [
+        "Explains the economic mechanism and conditions rather than pretending to summarize estimates.",
+        "Distinguishes substitutive and complementary AI.",
+        "Does not claim data, welfare estimates, or policy effects.",
+        "Uses only the stated future extensions if future research is included."
+      ]
+    }
+  ]
+}

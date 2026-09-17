@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "article_doi": "10.1038/s41467-026-70284-8",
+  "figure": "8a",
+  "case_status": "partial_visible",
+  "numeric_output_authorized": true,
+  "authorization_scope": "13 accepted rows only; blank values remain for 3 unmeasured rows",
+  "visible_mark_count": 16,
+  "authorized_mark_count": 13,
+  "unmeasured_mark_count": 3,
+  "coverage": 0.8125,
+  "route": "raster_bar_candidate",
+  "registered_extractor": "scripts/candidate_digitize_bar_chart.py",
+  "expected_detection_count_passed": false,
+  "measurement_source": "exact official original raster; panel crops are review-only",
+  "input_file": "original/41467_2026_70284_Fig8_HTML.png",
+  "input_sha256": "030221d33457598cab08442d0af1d0add749a16aaa6860c4124862b2b5c07d3e",
+  "image_size": {
+    "width": 2001,
+    "height": 1235
+  },
+  "resampling_applied": false,
+  "report_invocation_count": 15,
+  "report_status_counts": {
+    "candidate": 13,
+    "low_confidence": 2
+  },
+  "grammar": {
+    "panel_scope": "top row a, comprising two horizontal diverging simple-bar subplots",
+    "scenario": "NfN-SSP1",
+    "bar_origin": 0,
+    "fill_encoding": "continuous RdBu_r by sign and magnitude; not a categorical series color",
+    "displayed_statistic": "mean across 200 ridge fits",
+    "interval_semantics": "2.5th-97.5th bootstrap percentiles"
+  },
+  "unmeasured": [
+    {
+      "panel_id": "fig8a-temperature-sensitivity",
+      "category": "TreeBL to CropR",
+      "source_report": "extraction/left-04-treebl-to-cropr-report.json",
+      "reason": "report-level low_confidence; no row from this invocation is authorized"
+    },
+    {
+      "panel_id": "fig8a-regional-contribution",
+      "category": "TreeBL to CropR",
+      "source_report": "extraction/right-06-treebl-shrub-to-cropr-report.json",
+      "reason": "report-level low_confidence; no row from this invocation is authorized"
+    },
+    {
+      "panel_id": "fig8a-regional-contribution",
+      "category": "Shrub to CropR",
+      "source_report": "extraction/right-06-treebl-shrub-to-cropr-report.json",
+      "reason": "report-level low_confidence; no row from this invocation is authorized"
+    }
+  ],
+  "limitations": [
+    "The registered extractor uses bridge_gap=1; black interval strokes split three pale fills into unsupported or mixed components.",
+    "One low-confidence invocation contains one ambiguous and one extracted detector mark; report-level low confidence means neither row is authorized in the consolidated CSV.",
+    "No value was inferred visually or copied from source data.",
+    "The official Supplementary Data 3 workbook is a regional climate summary, not the per-transition ridge coefficients/contributions used for Fig. 8a."
+  ]
+}

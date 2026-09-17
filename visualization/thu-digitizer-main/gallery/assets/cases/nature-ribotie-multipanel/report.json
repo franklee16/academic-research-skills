@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "case_id": "nature-ribotie-multipanel",
+  "status": "partial_visible_geometry",
+  "scope": "Panel e only from a ten-panel mixed-chart figure; colored point components and a visual-fit line are reconstructed.",
+  "original_sha256": "2168585fc338c07d41addb473a7ec609b697966769f8b6c37e5c6a3d3c1fa818",
+  "source_inventory_sha256": "a683d46a3d901c5eed74cbe1680479f2cd2e2a723bef65467f3c35ad163e44ce",
+  "panel_crop_px": {
+    "left": 254,
+    "top": 276,
+    "right": 501,
+    "bottom": 464
+  },
+  "observations": 18,
+  "calibration": {
+    "x": [
+      {
+        "pixel": 339,
+        "value": 14.0
+      },
+      {
+        "pixel": 489,
+        "value": 18.0
+      }
+    ],
+    "y": [
+      {
+        "pixel": 452,
+        "value": 0.0
+      },
+      {
+        "pixel": 288,
+        "value": 0.1
+      }
+    ],
+    "axis_type": "linear"
+  },
+  "validation": {
+    "article_caption_n": 73,
+    "visible_color_components": 18,
+    "coverage_vs_caption_n": 0.247
+  },
+  "limitations": [
+    "Overlapping or JPEG-merged markers may form one connected component, so component count is not asserted as sample count.",
+    "Only panel e is reconstructed; the full mixed figure remains a challenge case for panel segmentation and semantic routing.",
+    "The fitted line is for visual reconstruction and is not claimed to reproduce the article's inferential model exactly."
+  ]
+}

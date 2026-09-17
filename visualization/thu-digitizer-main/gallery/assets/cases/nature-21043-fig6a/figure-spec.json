@@ -1,0 +1,90 @@
+{
+  "schema_version": 1,
+  "status": "needs_verified_configuration",
+  "source": {
+    "input_file": "F:\\AI\\thu-digitizer\\gallery\\assets\\cases\\nature-21043-fig6a\\original.png",
+    "sha256": "0733f1ddefae03c926fe64076704a9f6cd890d3e706716aea0e61711d9eb2896",
+    "media_kind": "raster",
+    "coordinate_space": "pixel",
+    "width": 1120,
+    "height": 500,
+    "page": null
+  },
+  "panels": [
+    {
+      "panel_id": "panel-1",
+      "bounds": [
+        0.0,
+        0.0,
+        1120,
+        500
+      ],
+      "bounds_verification": "proposed",
+      "plot_bounds": [
+        0.0,
+        0.0,
+        1120,
+        500
+      ],
+      "plot_bounds_verification": "proposed",
+      "chart_type": "scatter",
+      "chart_type_verification": "user_provided",
+      "coordinate_model": "cartesian_linear",
+      "coordinate_model_verification": "proposed",
+      "axes": [
+        {
+          "axis_id": "x",
+          "orientation": "x",
+          "scale": "linear",
+          "verification": "missing",
+          "anchors": []
+        },
+        {
+          "axis_id": "y",
+          "orientation": "y",
+          "scale": "linear",
+          "verification": "missing",
+          "anchors": []
+        }
+      ],
+      "series": [],
+      "mark_grammars": [
+        "point"
+      ],
+      "route": {
+        "route_id": "raster_scatter_color",
+        "maturity": "validated_local_stable_limited",
+        "implementation": "scripts/digitize_line_chart.py",
+        "automated_extraction": true
+      },
+      "required_confirmations": [
+        "panel_roi",
+        "plot_bounds",
+        "x_axis",
+        "y_axis",
+        "series_colors"
+      ],
+      "confirmations": {
+        "panel_roi": "missing",
+        "plot_bounds": "missing",
+        "x_axis": "missing",
+        "y_axis": "missing",
+        "series_colors": "missing"
+      },
+      "recoverable": "Centres of separable, colour-distinct visible markers.",
+      "non_recoverable": "Occluded points, fused same-colour clusters, and hidden source rows."
+    }
+  ],
+  "evidence_contract": {
+    "required": [
+      "input_hash",
+      "panel_and_plot_bounds",
+      "calibration_anchors",
+      "immutable_extraction_csv",
+      "json_report",
+      "overlay_or_recreation",
+      "confidence_and_refusal_reasons"
+    ],
+    "source_data_role": "independent_validation_only"
+  }
+}

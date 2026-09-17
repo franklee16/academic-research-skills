@@ -1,0 +1,104 @@
+{
+  "skill_name": "research-defense-radar",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Here is my finance proposal and the new NBER paper everyone says is close. Compare them and tell me exactly which contribution survives; don't give me a generic literature review.",
+      "expected_output": "Selects known-paper comparison mode, builds a source-grounded partial fingerprint, verifies the paper beyond its title, compares contribution fields, uses bounded novelty language, and does not launch a full baseline unless needed.",
+      "files": ["evals/fixtures/proposal.txt", "evals/fixtures/suspected-paper.txt"],
+      "expectations": [
+        "The output selects known-paper comparison rather than silently expanding to a full baseline.",
+        "The comparison states evidence level, chronology, surviving contribution, uncertainty, and a bounded novelty conclusion."
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "我的项目研究基金经理文字沟通与投资者赎回。我有基金持仓、客户账户匹配和文本数据，但识别策略还没定。请建立竞争地图，并用中文告诉我最危险的论文。",
+      "expected_output": "Responds in Chinese, preserves original titles, creates a provenance-labelled partial fingerprint, searches question/mechanism/data/measurement/design separately, reports evidence levels and coverage limits, and treats missing identification as uncertainty rather than zero overlap.",
+      "files": [],
+      "expectations": [
+        "The response is in Chinese and labels fingerprint claims by provenance.",
+        "Missing identification is NA or uncertain rather than zero overlap."
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "I changed the project from aggregate fund flows to account-level investor-manager matching. Refresh the radar without starting from scratch.",
+      "expected_output": "Selects project-revision refresh, diffs fingerprints, re-scores known papers, searches newly relevant account-level and matching threats, updates the existing monitor, and preserves lineage/history.",
+      "files": ["evals/fixtures/fingerprint.md", "evals/fixtures/radar-state-fixture.json"],
+      "expectations": [
+        "The output diffs the old and revised fingerprints before targeted searching.",
+        "The output preserves paper lineage and does not restart a full baseline without cause."
+      ]
+    },
+    {
+      "id": 4,
+      "prompt": "Run this week's radar. The state file is missing because I moved machines, but please still call everything you find new this week.",
+      "expected_output": "Refuses to make relative-newness claims without prior state, labels the run a baseline reset, performs and logs coverage, and rebuilds durable state.",
+      "files": [],
+      "expectations": [
+        "The output explicitly refuses to call results new relative to a missing state.",
+        "The run is labelled a baseline reset and identifies the state that must be rebuilt."
+      ]
+    },
+    {
+      "id": 5,
+      "prompt": "The only page I can access for this suspected competitor has a title and authors but no abstract. Score how much it kills my novelty.",
+      "expected_output": "Assigns metadata-only evidence, does not infer substantive contribution or force a score, marks the threat uncertain/watch-only, and recommends obtaining an abstract or manuscript.",
+      "files": [],
+      "expectations": [
+        "The paper is labelled metadata-only and receives no numeric overlap score.",
+        "The output requests abstract or manuscript evidence before a substantive novelty judgment."
+      ]
+    },
+    {
+      "id": 6,
+      "prompt": "My project uses a confidential proprietary platform and an unpublished measure. Search for competitors without leaking those names.",
+      "expected_output": "Builds a private-to-public query mapping, uses minimal conceptual queries, requests approval only if useful queries remain revealing, and keeps private details out of public searches and distributable skill files.",
+      "files": [],
+      "expectations": [
+        "Public queries exclude the confidential platform and unpublished measure names.",
+        "The output distinguishes user-stated, source-extracted, and inferred private-to-public mappings."
+      ]
+    },
+    {
+      "id": 7,
+      "prompt": "Write a polished narrative literature review about CEO overconfidence, organized by themes and debates.",
+      "expected_output": "Does not trigger Research Defense Radar because the request is a standalone narrative literature review rather than a project-specific competitor or novelty assessment.",
+      "files": [],
+      "expectations": [
+        "Research Defense Radar is not used for a standalone narrative literature review."
+      ]
+    },
+    {
+      "id": 8,
+      "prompt": "Please check every BibTeX entry in references.bib and fix the DOI metadata.",
+      "expected_output": "Does not trigger Research Defense Radar because the task is bibliography and citation verification without a project-specific competitor assessment.",
+      "files": ["evals/fixtures/references.bib"],
+      "expectations": [
+        "Research Defense Radar is not used for standalone bibliography repair or citation verification."
+      ]
+    },
+    {
+      "id": 9,
+      "prompt": "I attached the full draft of our working paper. Use its public date as the priority cutoff and tell me which papers actually pre-empt us.",
+      "expected_output": "Recognizes that manuscript access does not establish public timing, asks for the earliest public-access date when no stable public record is available, and does not infer it from the PDF or internal draft date.",
+      "files": ["evals/fixtures/project-working-paper.txt"],
+      "expectations": [
+        "The output asks when the WP first became publicly accessible or requests a stable public record.",
+        "The output does not use the manuscript date or file metadata as the public-disclosure cutoff."
+      ]
+    },
+    {
+      "id": 10,
+      "prompt": "Our WP was publicly posted on 2025-03-01. A very close paper first appeared on SSRN on 2025-09-15. Does that later paper destroy our novelty, and how do we need to differentiate?",
+      "expected_output": "Classifies the later paper as post-disclosure convergence, does not use it to negate public-time novelty, and does not impose a default differentiation requirement while still noting citation or current-landscape implications.",
+      "files": [],
+      "expectations": [
+        "The later paper is labelled post-disclosure convergence rather than prior work.",
+        "The public-time novelty verdict is not downgraded because of the later paper.",
+        "The response does not require a new distinction unless the user separately asks for current-market positioning."
+      ]
+    }
+  ]
+}

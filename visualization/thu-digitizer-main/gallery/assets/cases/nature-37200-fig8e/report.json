@@ -1,0 +1,113 @@
+{
+  "schema_version": 1,
+  "case_id": "nature-37200-fig8e",
+  "status": "candidate_with_review_flags",
+  "route": "hybrid_compact_scatter_with_original_pixel_review",
+  "extraction_strategy": "hybrid",
+  "panel_mapping": "Fig. 8e percentage survival bars, visible intervals, and scatter overlays",
+  "input": {
+    "file": "original.png",
+    "sha256": "fcec6e33ba24cd5a8588ebdd04787aca74bf71a3f6955658ee3adcc24ec4e234",
+    "width": 1700,
+    "height": 581,
+    "crop": [
+      0,
+      0,
+      1700,
+      581
+    ],
+    "measurement_space": "original_raster_pixels"
+  },
+  "point_candidates": 36,
+  "point_status_counts": {
+    "error_line_overlap_candidate": 10,
+    "bar_outline_overlap_candidate": 7,
+    "visible_marker_candidate": 17,
+    "merged_cluster_candidate": 2
+  },
+  "numeric_point_rows_allowed": 17,
+  "review_layer_point_rows": 19,
+  "bar_rows": 6,
+  "interval_geometry_rows": 18,
+  "summary_consistency": [
+    {
+      "panel": "E. coli B36",
+      "category": "-",
+      "n_candidates": 6,
+      "mean": 30.2092,
+      "sample_sd": 4.8208,
+      "mean_minus_sd": 25.3884,
+      "mean_plus_sd": 35.03
+    },
+    {
+      "panel": "E. coli B36",
+      "category": "+",
+      "n_candidates": 6,
+      "mean": 49.3226,
+      "sample_sd": 11.6338,
+      "mean_minus_sd": 37.6888,
+      "mean_plus_sd": 60.9564
+    },
+    {
+      "panel": "S. aureus BPH2900",
+      "category": "-",
+      "n_candidates": 6,
+      "mean": 69.392,
+      "sample_sd": 19.0407,
+      "mean_minus_sd": 50.3513,
+      "mean_plus_sd": 88.4327
+    },
+    {
+      "panel": "S. aureus BPH2900",
+      "category": "+",
+      "n_candidates": 6,
+      "mean": 103.078,
+      "sample_sd": 27.355,
+      "mean_minus_sd": 75.723,
+      "mean_plus_sd": 130.433
+    },
+    {
+      "panel": "S. pyogenes HKU419",
+      "category": "-",
+      "n_candidates": 6,
+      "mean": 71.6868,
+      "sample_sd": 12.6656,
+      "mean_minus_sd": 59.0212,
+      "mean_plus_sd": 84.3524
+    },
+    {
+      "panel": "S. pyogenes HKU419",
+      "category": "+",
+      "n_candidates": 6,
+      "mean": 107.5073,
+      "sample_sd": 16.0102,
+      "mean_minus_sd": 91.4971,
+      "mean_plus_sd": 123.5175
+    }
+  ],
+  "interval_interpretation": "Candidate point mean plus/minus sample SD matches the visible interval geometry; the figure does not independently label the interval statistic.",
+  "significance_annotations": {
+    "E. coli B36": "**",
+    "S. aureus BPH2900": "*",
+    "S. pyogenes HKU419": "**",
+    "exact_p_values": "not_recoverable_from_image"
+  },
+  "primary_csv": {
+    "file": "data.csv",
+    "rows": 60,
+    "role": "image-visible candidates, review layers, and candidate-derived summaries"
+  },
+  "overlay": {
+    "file": "overlay.png",
+    "green": "visible_marker_candidate",
+    "orange": "bar or error-line overlap review",
+    "red": "merged_cluster_candidate"
+  },
+  "source_data_role": "not_used",
+  "webplotdigitizer_comparison": "not_compared",
+  "limitations": [
+    "Review-layer points remain candidates and are not silently promoted to accepted raw observations.",
+    "Candidate-derived mean and sample SD are retained separately from visible mark coordinates.",
+    "Printed stars are transcribed, but exact p-values and author interval semantics are not recoverable from the raster."
+  ]
+}

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Paper Insight"
+  short_description: "Read papers and generate research directions"
+  default_prompt: "Use $paper-insight to analyze this paper, compare related work, and suggest feasible future directions."

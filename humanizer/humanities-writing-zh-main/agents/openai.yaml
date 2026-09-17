@@ -1,0 +1,6 @@
+interface:
+  display_name: "人文社科写作"
+  short_description: "人文社科论文与专著写作，尤其适配文学、历史学等文史专业"
+  default_prompt: "使用 $humanities-writing-zh 处理这份人文社科论文或专著内容，先判断应采用学术写作还是成稿复核模式，再在不虚构材料、不替代学术判断的前提下给出结果。"
+policy:
+  allow_implicit_invocation: false

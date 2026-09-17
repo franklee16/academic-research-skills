@@ -1,0 +1,22 @@
+{
+  "project": "{{PROJECT_NAME}}",
+  "created": "{{DATE}}",
+  "strict_mode": {{STRICT_MODE}},
+  "paper_format": "latex",
+  "review_policy": {
+    "require_reviewer_approval_for_complete": true,
+    "require_citation_validation": true,
+    "block_theorem_without_proof_or_unproven": true,
+    "lean_accepted_in_lieu_of_proof": true,
+    "readability_pass_after_approval": true
+  },
+  "workstream_naming": "W{NNN}-{slug}",
+  "agents": {
+    "project_coordinator": "project-coordinator",
+    "literature_reviewer": "literature-reviewer",
+    "prover": "prover",
+    "coder": "coder",
+    "lean_prover": "lean-prover",
+    "paper_reviewer": "paper-reviewer"
+  }
+}

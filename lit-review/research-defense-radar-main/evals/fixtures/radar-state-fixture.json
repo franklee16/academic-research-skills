@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.1",
+  "project": {
+    "slug": "investor-manager-matching",
+    "fingerprint_path": "fingerprint.md",
+    "fingerprint_revision": "aggregate-v1",
+    "fingerprint_sha256": null,
+    "fingerprint_updated_at": "2026-08-01",
+    "public_disclosure_date": null,
+    "public_disclosure_url": null,
+    "public_disclosure_provenance": "unknown"
+  },
+  "last_attempted_scan_at": "2026-08-01",
+  "last_successful_scan_at": "2026-08-01",
+  "papers": [],
+  "runs": []
+}

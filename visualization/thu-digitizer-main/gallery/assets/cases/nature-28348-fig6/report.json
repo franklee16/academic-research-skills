@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "case_id": "nature-28348-fig6",
+  "status": "source_mapped",
+  "article_url": "https://www.nature.com/articles/s41467-022-28348-y",
+  "figure": "Fig. 6",
+  "input": {
+    "sha256": "3705643fdd6257e8e4052e9863310b66d75c255be2225eace260590fd0be334c",
+    "dimensions": [
+      1350,
+      783
+    ]
+  },
+  "source_data": {
+    "status": "official_source_data_mapped",
+    "path": "source-data.xlsx",
+    "sha256": "3705643fdd6257e8e4052e9863310b66d75c255be2225eace260590fd0be334c",
+    "mapping_note": "Workbook sheet Figure 6 supplies resource, clinical-trial frequency, term coverage and term count for both panels."
+  },
+  "coverage": {
+    "visible_records": 42,
+    "source_records_mapped": 42
+  },
+  "validation": {
+    "status": "source_mapped_replot",
+    "summary_error": 0
+  },
+  "limitations": "Source values verify plotted summaries/counts; browser font rendering remains an approximation."
+}

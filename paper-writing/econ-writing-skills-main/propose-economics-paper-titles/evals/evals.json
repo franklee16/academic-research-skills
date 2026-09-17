@@ -1,0 +1,41 @@
+{
+  "skill_name": "propose-economics-paper-titles",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Propose and rank English titles for the attached economics paper. Give one recommendation and strong alternatives with genuinely different structures.",
+      "expected_output": "Titles centered on transit support, school attendance/persistence or graduation, and possibly random assignment; no identified-mechanism, welfare-optimum, or universal-policy promise.",
+      "files": ["evals/files/rct-transit-paper.md"],
+      "expectations": [
+        "The recommended title truthfully matches the randomized design and studied outcomes.",
+        "No title claims an identified liquidity mechanism or optimal universal subsidy.",
+        "Alternatives are structurally distinct rather than synonym swaps.",
+        "Any Evidence-from construction carries real design or scope information."
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "Audit the old title and propose accurate replacements. The output should be useful to an author choosing a final economics-paper title.",
+      "expected_output": "A clear diagnosis of causal and generic-location overclaiming, followed by conservative titles about remote-work adoption and firm output or linked firm-worker evidence.",
+      "files": ["evals/files/observational-remote-work-paper.md"],
+      "expectations": [
+        "Rejects or repairs the word Causes.",
+        "Does not present the United States as an informative Evidence-from tag without justification.",
+        "Does not name office-cost savings or a causal productivity effect.",
+        "Recommended title remains distinctive and central rather than vague."
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "Generate and rank English title candidates for this theory paper. Use theory-appropriate information structures and avoid empirical or policy promises.",
+      "expected_output": "Concise titles reflecting AI precision, delegation, worker initiative/information, non-monotonicity, or substitutive versus complementary AI without claiming empirical effects.",
+      "files": ["evals/files/theory-ai-delegation-paper.md"],
+      "expectations": [
+        "No title claims estimation, evidence from data, or a policy experiment.",
+        "At least one strong candidate captures the delegation/information mechanism or substitutive-complementary contrast.",
+        "Question or colon forms appear only if they improve fit rather than fill a template.",
+        "The shortlist contains genuinely different architectures."
+      ]
+    }
+  ]
+}

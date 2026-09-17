@@ -1,0 +1,1536 @@
+{
+  "schema_version": 1,
+  "status": "visible_geometry_candidate",
+  "route": "calibrated_raster_candidate",
+  "panel_mapping": "Fig. 1d similarity versus time lag",
+  "rows": 164,
+  "observed_rows": 164,
+  "pixel_extraction": "continuity-assisted colour trace, sampled at each visibly marked day",
+  "source_data": "not directly provided for this panel",
+  "calibration": {
+    "Bacteria (phylum)": {
+      "axis_x": {
+        "scale": "linear",
+        "anchors": [
+          {
+            "pixel": 103.0,
+            "value": 0.0
+          },
+          {
+            "pixel": 591.0,
+            "value": 40.0
+          }
+        ],
+        "pixel_slope": 0.0819672131147541,
+        "transformed_intercept": -8.442622950819677,
+        "residuals_pixels": [
+          4.334310688136611e-14,
+          0.0
+        ],
+        "rmse_transformed": 2.5121479338940403e-15,
+        "max_abs_residual_transformed": 3.552713678800501e-15,
+        "pixel_uncertainty": 0.5,
+        "fit": "robust_huber_affine_in_transformed_value_space"
+      },
+      "axis_y": {
+        "scale": "linear",
+        "anchors": [
+          {
+            "pixel": 45.0,
+            "value": 1.0
+          },
+          {
+            "pixel": 265.0,
+            "value": 0.15
+          }
+        ],
+        "pixel_slope": -0.0038636363636363616,
+        "transformed_intercept": 1.173863636363636,
+        "residuals_pixels": [
+          -5.747036833353755e-14,
+          9.338934854199851e-14
+        ],
+        "rmse_transformed": 2.995802653854976e-16,
+        "max_abs_residual_transformed": 3.608224830031759e-16,
+        "pixel_uncertainty": 0.5,
+        "fit": "robust_huber_affine_in_transformed_value_space"
+      },
+      "trace": {
+        "path": [
+          {
+            "x_pixel": 103.0,
+            "y_pixel": 45.0,
+            "status": "observed",
+            "support": 1.0,
+            "peak_score": 0.9114,
+            "uncertainty_px": 0.35
+          },
+          {
+            "x_pixel": 115.2,
+            "y_pixel": 71.9851,
+            "status": "observed",
+            "support": 1.0,
+            "peak_score": 0.7072,
+            "uncertainty_px": 3.731
+          },
+          {
+            "x_pixel": 127.4,
+            "y_pixel": 78.7159,
+            "status": "observed",
+            "support": 1.0,
+            "peak_score": 0.8572,
+            "uncertainty_px": 0.6461
+          },
+          {
+            "x_pixel": 139.6,
+            "y_pixel": 81.3056,
+            "status": "observed",
+            "support": 1.0,
+            "peak_score": 0.855,
+            "uncertainty_px": 0.6603
+          },
+          {
+            "x_pixel": 151.8,
+            "y_pixel": 82.2841,
+            "status": "observed",
+            "support": 1.0,
+            "peak_score": 0.8546,
+            "uncertainty_px": 0.6632
+          },
+          {
+            "x_pixel": 164.0,
+            "y_pixel": 84.5251,
+            "status": "observed",
+            "support": 1.0,
+            "peak_score": 0.8576,
+            "uncertainty_px": 0.644
+          },
+          {
+            "x_pixel": 176.2,
+            "y_pixel": 86.5952,
+            "status": "observed",
+            "support": 1.0,
+            "peak_score": 0.8566,
+            "uncertainty_px": 0.6502
+          },
+          {
+            "x_pixel": 188.4,
+            "y_pixel": 86.4558,
+            "status": "observed",
+            "support": 1.0,
+            "peak_score": 0.8553,
+            "uncertainty_px": 0.6586
+          },
+          {
+            "x_pixel": 200.6,
+            "y_pixel": 87.3202,
+            "status": "observed",
+            "support": 1.0,
+            "peak_score": 0.855,
+            "uncertainty_px": 0.6605
+          },
+          {
+            "x_pixel": 212.8,
+            "y_pixel": 89.5929,
+            "status": "observed",
+            "support": 1.0,
+            "peak_score": 0.8554,
+            "uncertainty_px": 0.6575
+          },
+          {
+            "x_pixel": 225.0,
+            "y_pixel": 90.6074,
+            "status": "observed",
+            "support": 1.0,
+            "peak_score": 0.8551,
+            "uncertainty_px": 0.6597
+          },
+          {
+            "x_pixel": 237.2,
+            "y_pixel": 90.3615,
+            "status": "observed",
+            "support": 1.0,
+            "peak_score": 0.8532,
+            "uncertainty_px": 0.6721
+          },
+          {
+            "x_pixel": 249.4,
+            "y_pixel": 90.7728,
+            "status": "observed",
+            "support": 1.0,
+            "peak_score": 0.8535,
+            "uncertainty_px": 0.6698
+          },
+          {
+            "x_pixel": 261.6,
+            "y_pixel": 91.7614,
+            "status": "observed",
+            "support": 1.0,
+            "peak_score": 0.856,
+            "uncertainty_px": 0.6537
+          },
+          {
+            "x_pixel": 273.8,
+            "y_pixel": 91.8427,
+            "status": "observed",
+            "support": 1.0,
+            "peak_score": 0.8546,
+            "uncertainty_px": 0.6631
+          },
+          {
+            "x_pixel": 286.0,
+            "y_pixel": 92.2633,
+            "status": "observed",
+            "support": 1.0,
+            "peak_score": 0.8563,
+            "uncertainty_px": 0.6518
+          },
+          {
+            "x_pixel": 298.2,
+            "y_pixel": 92.0006,
+            "status": "observed",
+            "support": 1.0,
+            "peak_score": 0.8543,
+            "uncertainty_px": 0.6651
+          },
+          {
+            "x_pixel": 310.4,
+            "y_pixel": 94.4678,
+            "status": "observed",
+            "support": 1.0,
+            "peak_score": 0.8546,
+            "uncertainty_px": 0.663
+          },
+          {
+            "x_pixel": 322.6,
+            "y_pixel": 94.3242,
+            "status": "observed",
+            "support": 1.0,
+            "peak_score": 0.8595,
+            "uncertainty_px": 0.6316
+          },
+          {
+            "x_pixel": 334.8,
+            "y_pixel": 94.7428,
+            "status": "observed",
+            "support": 1.0,
+            "peak_score": 0.8562,
+            "uncertainty_px": 0.6528
+          },
+          {
+            "x_pixel": 347.0,
+            "y_pixel": 94.4472,
+            "status": "observed",
+            "support": 1.0,
+            "peak_score": 0.8556,
+            "uncertainty_px": 0.6566
+          },
+          {
+            "x_pixel": 359.2,
+            "y_pixel": 95.5761,
+            "status": "observed",
+            "support": 1.0,
+            "peak_score": 0.8554,
+            "uncertainty_px": 0.6577
+          },
+          {
+            "x_pixel": 371.4,
+            "y_pixel": 95.8923,
+            "status": "observed",
+            "support": 1.0,
+            "peak_score": 0.8557,
+            "uncertainty_px": 0.6558
+          },
+          {
+            "x_pixel": 383.6,
+            "y_pixel": 97.0,
+            "status": "observed",
+            "support": 1.0,
+            "peak_score": 0.8561,
+            "uncertainty_px": 0.6535
+          },
+          {
+            "x_pixel": 395.8,
+            "y_pixel": 97.8608,
+            "status": "observed",
+            "support": 1.0,
+            "peak_score": 0.8564,
+            "uncertainty_px": 0.6513
+          },
+          {
+            "x_pixel": 408.0,
+            "y_pixel": 98.3223,
+            "status": "observed",
+            "support": 1.0,
+            "peak_score": 0.8542,
+            "uncertainty_px": 0.6654
+          },
+          {
+            "x_pixel": 420.2,
+            "y_pixel": 97.7316,
+            "status": "observed",
+            "support": 1.0,
+            "peak_score": 0.8512,
+            "uncertainty_px": 0.6855
+          },
+          {
+            "x_pixel": 432.4,
+            "y_pixel": 99.41,
+            "status": "observed",
+            "support": 1.0,
+            "peak_score": 0.8543,
+            "uncertainty_px": 0.6647
+          },
+          {
+            "x_pixel": 444.6,
+            "y_pixel": 99.7931,
+            "status": "observed",
+            "support": 1.0,
+            "peak_score": 0.855,
+            "uncertainty_px": 0.6606
+          },
+          {
+            "x_pixel": 456.8,
+            "y_pixel": 101.2437,
+            "status": "observed",
+            "support": 1.0,
+            "peak_score": 0.8566,
+            "uncertainty_px": 0.6504
+          },
+          {
+            "x_pixel": 469.0,
+            "y_pixel": 101.8642,
+            "status": "observed",
+            "support": 1.0,
+            "peak_score": 0.8571,
+            "uncertainty_px": 0.6469
+          },
+          {
+            "x_pixel": 481.2,
+            "y_pixel": 103.6173,
+            "status": "observed",
+            "support": 1.0,
+            "peak_score": 0.8564,
+            "uncertainty_px": 0.6514
+          },
+          {
+            "x_pixel": 493.4,
+            "y_pixel": 102.3116,
+            "status": "observed",
+            "support": 1.0,
+            "peak_score": 0.8564,
+            "uncertainty_px": 0.6516
+          },
+          {
+            "x_pixel": 505.6,
+            "y_pixel": 104.0347,
+            "status": "observed",
+            "support": 1.0,
+            "peak_score": 0.8533,
+            "uncertainty_px": 0.6711
+          },
+          {
+            "x_pixel": 517.8,
+            "y_pixel": 104.5995,
+            "status": "observed",
+            "support": 1.0,
+            "peak_score": 0.8561,
+            "uncertainty_px": 0.653
+          },
+          {
+            "x_pixel": 530.0,
+            "y_pixel": 105.4535,
+            "status": "observed",
+            "support": 1.0,
+            "peak_score": 0.856,
+            "uncertainty_px": 0.6537
+          },
+          {
+            "x_pixel": 542.2,
+            "y_pixel": 105.4943,
+            "status": "observed",
+            "support": 1.0,
+            "peak_score": 0.8567,
+            "uncertainty_px": 0.6492
+          },
+          {
+            "x_pixel": 554.4,
+            "y_pixel": 106.2857,
+            "status": "observed",
+            "support": 1.0,
+            "peak_score": 0.8551,
+            "uncertainty_px": 0.6597
+          },
+          {
+            "x_pixel": 566.6,
+            "y_pixel": 106.6032,
+            "status": "observed",
+            "support": 1.0,
+            "peak_score": 0.8539,
+            "uncertainty_px": 0.6672
+          },
+          {
+            "x_pixel": 578.8,
+            "y_pixel": 105.9345,
+            "status": "observed",
+            "support": 1.0,
+            "peak_score": 0.8553,
+            "uncertainty_px": 0.6582
+          },
+          {
+            "x_pixel": 591.0,
+            "y_pixel": 106.6302,
+            "status": "observed",
+            "support": 1.0,
+            "peak_score": 0.8579,
+            "uncertainty_px": 0.642
+          }
+        ]
+      }
+    },
+    "Eukarya (phylum)": {
+      "axis_x": {
+        "scale": "linear",
+        "anchors": [
+          {
+            "pixel": 103.0,
+            "value": 0.0
+          },
+          {
+            "pixel": 591.0,
+            "value": 40.0
+          }
+        ],
+        "pixel_slope": 0.0819672131147541,
+        "transformed_intercept": -8.442622950819677,
+        "residuals_pixels": [
+          4.334310688136611e-14,
+          0.0
+        ],
+        "rmse_transformed": 2.5121479338940403e-15,
+        "max_abs_residual_transformed": 3.552713678800501e-15,
+        "pixel_uncertainty": 0.5,
+        "fit": "robust_huber_affine_in_transformed_value_space"
+      },
+      "axis_y": {
+        "scale": "linear",
+        "anchors": [
+          {
+            "pixel": 45.0,
+            "value": 1.0
+          },
+          {
+            "pixel": 265.0,
+            "value": 0.15
+          }
+        ],
+        "pixel_slope": -0.0038636363636363616,
+        "transformed_intercept": 1.173863636363636,
+        "residuals_pixels": [
+          -5.747036833353755e-14,
+          9.338934854199851e-14
+        ],
+        "rmse_transformed": 2.995802653854976e-16,
+        "max_abs_residual_transformed": 3.608224830031759e-16,
+        "pixel_uncertainty": 0.5,
+        "fit": "robust_huber_affine_in_transformed_value_space"
+      },
+      "trace": {
+        "path": [
+          {
+            "x_pixel": 103.0,
+            "y_pixel": 45.0,
+            "status": "observed",
+            "support": 1.0,
+            "peak_score": 0.7254,
+            "uncertainty_px": 2.4689
+          },
+          {
+            "x_pixel": 115.2,
+            "y_pixel": 100.504,
+            "status": "observed",
+            "support": 1.0,
+            "peak_score": 0.7001,
+            "uncertainty_px": 8.1287
+          },
+          {
+            "x_pixel": 127.4,
+            "y_pixel": 118.014,
+            "status": "observed",
+            "support": 1.0,
+            "peak_score": 0.8088,
+            "uncertainty_px": 1.0147
+          },
+          {
+            "x_pixel": 139.6,
+            "y_pixel": 125.2073,
+            "status": "observed",
+            "support": 1.0,
+            "peak_score": 0.8265,
+            "uncertainty_px": 0.8637
+          },
+          {
+            "x_pixel": 151.8,
+            "y_pixel": 129.7697,
+            "status": "observed",
+            "support": 1.0,
+            "peak_score": 0.8485,
+            "uncertainty_px": 0.7033
+          },
+          {
+            "x_pixel": 164.0,
+            "y_pixel": 133.3408,
+            "status": "observed",
+            "support": 1.0,
+            "peak_score": 0.8476,
+            "uncertainty_px": 0.7092
+          },
+          {
+            "x_pixel": 176.2,
+            "y_pixel": 136.1831,
+            "status": "observed",
+            "support": 1.0,
+            "peak_score": 0.8487,
+            "uncertainty_px": 0.7016
+          },
+          {
+            "x_pixel": 188.4,
+            "y_pixel": 138.3079,
+            "status": "observed",
+            "support": 1.0,
+            "peak_score": 0.8475,
+            "uncertainty_px": 0.7097
+          },
+          {
+            "x_pixel": 200.6,
+            "y_pixel": 139.0532,
+            "status": "observed",
+            "support": 1.0,
+            "peak_score": 0.8453,
+            "uncertainty_px": 0.7252
+          },
+          {
+            "x_pixel": 212.8,
+            "y_pixel": 140.7954,
+            "status": "observed",
+            "support": 1.0,
+            "peak_score": 0.8445,
+            "uncertainty_px": 0.7305
+          },
+          {
+            "x_pixel": 225.0,
+            "y_pixel": 140.1797,
+            "status": "observed",
+            "support": 1.0,
+            "peak_score": 0.8475,
+            "uncertainty_px": 0.7102
+          },
+          {
+            "x_pixel": 237.2,
+            "y_pixel": 140.4839,
+            "status": "observed",
+            "support": 1.0,
+            "peak_score": 0.8448,
+            "uncertainty_px": 0.7282
+          },
+          {
+            "x_pixel": 249.4,
+            "y_pixel": 139.8142,
+            "status": "observed",
+            "support": 1.0,
+            "peak_score": 0.8467,
+            "uncertainty_px": 0.7157
+          },
+          {
+            "x_pixel": 261.6,
+            "y_pixel": 141.0995,
+            "status": "observed",
+            "support": 1.0,
+            "peak_score": 0.8467,
+            "uncertainty_px": 0.7152
+          },
+          {
+            "x_pixel": 273.8,
+            "y_pixel": 139.0253,
+            "status": "observed",
+            "support": 1.0,
+            "peak_score": 0.8465,
+            "uncertainty_px": 0.7165
+          },
+          {
+            "x_pixel": 286.0,
+            "y_pixel": 137.2143,
+            "status": "observed",
+            "support": 1.0,
+            "peak_score": 0.8455,
+            "uncertainty_px": 0.7238
+          },
+          {
+            "x_pixel": 298.2,
+            "y_pixel": 135.8167,
+            "status": "observed",
+            "support": 1.0,
+            "peak_score": 0.8484,
+            "uncertainty_px": 0.7037
+          },
+          {
+            "x_pixel": 310.4,
+            "y_pixel": 139.1235,
+            "status": "observed",
+            "support": 1.0,
+            "peak_score": 0.8461,
+            "uncertainty_px": 0.7192
+          },
+          {
+            "x_pixel": 322.6,
+            "y_pixel": 139.2079,
+            "status": "observed",
+            "support": 1.0,
+            "peak_score": 0.8467,
+            "uncertainty_px": 0.7156
+          },
+          {
+            "x_pixel": 334.8,
+            "y_pixel": 139.0378,
+            "status": "observed",
+            "support": 1.0,
+            "peak_score": 0.8464,
+            "uncertainty_px": 0.7171
+          },
+          {
+            "x_pixel": 347.0,
+            "y_pixel": 137.1801,
+            "status": "observed",
+            "support": 1.0,
+            "peak_score": 0.8492,
+            "uncertainty_px": 0.6988
+          },
+          {
+            "x_pixel": 359.2,
+            "y_pixel": 139.7312,
+            "status": "observed",
+            "support": 1.0,
+            "peak_score": 0.8474,
+            "uncertainty_px": 0.7109
+          },
+          {
+            "x_pixel": 371.4,
+            "y_pixel": 139.6397,
+            "status": "observed",
+            "support": 1.0,
+            "peak_score": 0.8436,
+            "uncertainty_px": 0.737
+          },
+          {
+            "x_pixel": 383.6,
+            "y_pixel": 141.5282,
+            "status": "observed",
+            "support": 1.0,
+            "peak_score": 0.8461,
+            "uncertainty_px": 0.7193
+          },
+          {
+            "x_pixel": 395.8,
+            "y_pixel": 141.1936,
+            "status": "observed",
+            "support": 1.0,
+            "peak_score": 0.848,
+            "uncertainty_px": 0.7064
+          },
+          {
+            "x_pixel": 408.0,
+            "y_pixel": 145.3251,
+            "status": "observed",
+            "support": 1.0,
+            "peak_score": 0.8487,
+            "uncertainty_px": 0.7018
+          },
+          {
+            "x_pixel": 420.2,
+            "y_pixel": 144.6498,
+            "status": "observed",
+            "support": 1.0,
+            "peak_score": 0.8475,
+            "uncertainty_px": 0.7099
+          },
+          {
+            "x_pixel": 432.4,
+            "y_pixel": 142.378,
+            "status": "observed",
+            "support": 1.0,
+            "peak_score": 0.8457,
+            "uncertainty_px": 0.7224
+          },
+          {
+            "x_pixel": 444.6,
+            "y_pixel": 141.7235,
+            "status": "observed",
+            "support": 1.0,
+            "peak_score": 0.8466,
+            "uncertainty_px": 0.7164
+          },
+          {
+            "x_pixel": 456.8,
+            "y_pixel": 140.3746,
+            "status": "observed",
+            "support": 1.0,
+            "peak_score": 0.8459,
+            "uncertainty_px": 0.7208
+          },
+          {
+            "x_pixel": 469.0,
+            "y_pixel": 139.8269,
+            "status": "observed",
+            "support": 1.0,
+            "peak_score": 0.8487,
+            "uncertainty_px": 0.7017
+          },
+          {
+            "x_pixel": 481.2,
+            "y_pixel": 138.3793,
+            "status": "observed",
+            "support": 1.0,
+            "peak_score": 0.8439,
+            "uncertainty_px": 0.7346
+          },
+          {
+            "x_pixel": 493.4,
+            "y_pixel": 140.9592,
+            "status": "observed",
+            "support": 1.0,
+            "peak_score": 0.8466,
+            "uncertainty_px": 0.7164
+          },
+          {
+            "x_pixel": 505.6,
+            "y_pixel": 141.4085,
+            "status": "observed",
+            "support": 1.0,
+            "peak_score": 0.8467,
+            "uncertainty_px": 0.7153
+          },
+          {
+            "x_pixel": 517.8,
+            "y_pixel": 139.3064,
+            "status": "observed",
+            "support": 1.0,
+            "peak_score": 0.8499,
+            "uncertainty_px": 0.6941
+          },
+          {
+            "x_pixel": 530.0,
+            "y_pixel": 141.2811,
+            "status": "observed",
+            "support": 1.0,
+            "peak_score": 0.8441,
+            "uncertainty_px": 0.7333
+          },
+          {
+            "x_pixel": 542.2,
+            "y_pixel": 142.1269,
+            "status": "observed",
+            "support": 1.0,
+            "peak_score": 0.8459,
+            "uncertainty_px": 0.7209
+          },
+          {
+            "x_pixel": 554.4,
+            "y_pixel": 145.2156,
+            "status": "observed",
+            "support": 1.0,
+            "peak_score": 0.8485,
+            "uncertainty_px": 0.7029
+          },
+          {
+            "x_pixel": 566.6,
+            "y_pixel": 143.3864,
+            "status": "observed",
+            "support": 1.0,
+            "peak_score": 0.8451,
+            "uncertainty_px": 0.7263
+          },
+          {
+            "x_pixel": 578.8,
+            "y_pixel": 142.664,
+            "status": "observed",
+            "support": 1.0,
+            "peak_score": 0.8415,
+            "uncertainty_px": 0.7518
+          },
+          {
+            "x_pixel": 591.0,
+            "y_pixel": 142.1487,
+            "status": "observed",
+            "support": 1.0,
+            "peak_score": 0.8485,
+            "uncertainty_px": 0.703
+          }
+        ]
+      }
+    },
+    "Bacteria (OTU)": {
+      "axis_x": {
+        "scale": "linear",
+        "anchors": [
+          {
+            "pixel": 103.0,
+            "value": 0.0
+          },
+          {
+            "pixel": 591.0,
+            "value": 40.0
+          }
+        ],
+        "pixel_slope": 0.0819672131147541,
+        "transformed_intercept": -8.442622950819677,
+        "residuals_pixels": [
+          4.334310688136611e-14,
+          0.0
+        ],
+        "rmse_transformed": 2.5121479338940403e-15,
+        "max_abs_residual_transformed": 3.552713678800501e-15,
+        "pixel_uncertainty": 0.5,
+        "fit": "robust_huber_affine_in_transformed_value_space"
+      },
+      "axis_y": {
+        "scale": "linear",
+        "anchors": [
+          {
+            "pixel": 45.0,
+            "value": 1.0
+          },
+          {
+            "pixel": 265.0,
+            "value": 0.15
+          }
+        ],
+        "pixel_slope": -0.0038636363636363616,
+        "transformed_intercept": 1.173863636363636,
+        "residuals_pixels": [
+          -5.747036833353755e-14,
+          9.338934854199851e-14
+        ],
+        "rmse_transformed": 2.995802653854976e-16,
+        "max_abs_residual_transformed": 3.608224830031759e-16,
+        "pixel_uncertainty": 0.5,
+        "fit": "robust_huber_affine_in_transformed_value_space"
+      },
+      "trace": {
+        "path": [
+          {
+            "x_pixel": 103.0,
+            "y_pixel": 45.0,
+            "status": "observed",
+            "support": 1.0,
+            "peak_score": 0.0,
+            "uncertainty_px": null
+          },
+          {
+            "x_pixel": 115.2,
+            "y_pixel": 138.1978,
+            "status": "observed",
+            "support": 1.0,
+            "peak_score": 0.7,
+            "uncertainty_px": 11.237
+          },
+          {
+            "x_pixel": 127.4,
+            "y_pixel": 157.3445,
+            "status": "observed",
+            "support": 1.0,
+            "peak_score": 0.7746,
+            "uncertainty_px": 1.3913
+          },
+          {
+            "x_pixel": 139.6,
+            "y_pixel": 166.8597,
+            "status": "observed",
+            "support": 1.0,
+            "peak_score": 0.7989,
+            "uncertainty_px": 1.1094
+          },
+          {
+            "x_pixel": 151.8,
+            "y_pixel": 171.6161,
+            "status": "observed",
+            "support": 1.0,
+            "peak_score": 0.8334,
+            "uncertainty_px": 0.8108
+          },
+          {
+            "x_pixel": 164.0,
+            "y_pixel": 177.1896,
+            "status": "observed",
+            "support": 1.0,
+            "peak_score": 0.8377,
+            "uncertainty_px": 0.7787
+          },
+          {
+            "x_pixel": 176.2,
+            "y_pixel": 181.9709,
+            "status": "observed",
+            "support": 1.0,
+            "peak_score": 0.8369,
+            "uncertainty_px": 0.7843
+          },
+          {
+            "x_pixel": 188.4,
+            "y_pixel": 183.4972,
+            "status": "observed",
+            "support": 1.0,
+            "peak_score": 0.8339,
+            "uncertainty_px": 0.8068
+          },
+          {
+            "x_pixel": 200.6,
+            "y_pixel": 186.7559,
+            "status": "observed",
+            "support": 1.0,
+            "peak_score": 0.8323,
+            "uncertainty_px": 0.8189
+          },
+          {
+            "x_pixel": 212.8,
+            "y_pixel": 189.1082,
+            "status": "observed",
+            "support": 1.0,
+            "peak_score": 0.8279,
+            "uncertainty_px": 0.8529
+          },
+          {
+            "x_pixel": 225.0,
+            "y_pixel": 190.7696,
+            "status": "observed",
+            "support": 1.0,
+            "peak_score": 0.8269,
+            "uncertainty_px": 0.86
+          },
+          {
+            "x_pixel": 237.2,
+            "y_pixel": 192.8963,
+            "status": "observed",
+            "support": 1.0,
+            "peak_score": 0.8277,
+            "uncertainty_px": 0.8542
+          },
+          {
+            "x_pixel": 249.4,
+            "y_pixel": 193.9739,
+            "status": "observed",
+            "support": 1.0,
+            "peak_score": 0.832,
+            "uncertainty_px": 0.8209
+          },
+          {
+            "x_pixel": 261.6,
+            "y_pixel": 195.0012,
+            "status": "observed",
+            "support": 1.0,
+            "peak_score": 0.8342,
+            "uncertainty_px": 0.8044
+          },
+          {
+            "x_pixel": 273.8,
+            "y_pixel": 195.9418,
+            "status": "observed",
+            "support": 1.0,
+            "peak_score": 0.8248,
+            "uncertainty_px": 0.8767
+          },
+          {
+            "x_pixel": 286.0,
+            "y_pixel": 197.0539,
+            "status": "observed",
+            "support": 1.0,
+            "peak_score": 0.835,
+            "uncertainty_px": 0.7987
+          },
+          {
+            "x_pixel": 298.2,
+            "y_pixel": 198.6657,
+            "status": "observed",
+            "support": 1.0,
+            "peak_score": 0.8322,
+            "uncertainty_px": 0.8197
+          },
+          {
+            "x_pixel": 310.4,
+            "y_pixel": 201.059,
+            "status": "observed",
+            "support": 1.0,
+            "peak_score": 0.8317,
+            "uncertainty_px": 0.8233
+          },
+          {
+            "x_pixel": 322.6,
+            "y_pixel": 201.7754,
+            "status": "observed",
+            "support": 1.0,
+            "peak_score": 0.8258,
+            "uncertainty_px": 0.8689
+          },
+          {
+            "x_pixel": 334.8,
+            "y_pixel": 202.5532,
+            "status": "observed",
+            "support": 1.0,
+            "peak_score": 0.8279,
+            "uncertainty_px": 0.8523
+          },
+          {
+            "x_pixel": 347.0,
+            "y_pixel": 202.826,
+            "status": "observed",
+            "support": 1.0,
+            "peak_score": 0.8285,
+            "uncertainty_px": 0.8481
+          },
+          {
+            "x_pixel": 359.2,
+            "y_pixel": 204.6746,
+            "status": "observed",
+            "support": 1.0,
+            "peak_score": 0.8322,
+            "uncertainty_px": 0.8192
+          },
+          {
+            "x_pixel": 371.4,
+            "y_pixel": 205.3011,
+            "status": "observed",
+            "support": 1.0,
+            "peak_score": 0.8371,
+            "uncertainty_px": 0.7828
+          },
+          {
+            "x_pixel": 383.6,
+            "y_pixel": 207.9904,
+            "status": "observed",
+            "support": 1.0,
+            "peak_score": 0.831,
+            "uncertainty_px": 0.8288
+          },
+          {
+            "x_pixel": 395.8,
+            "y_pixel": 208.4439,
+            "status": "observed",
+            "support": 1.0,
+            "peak_score": 0.8254,
+            "uncertainty_px": 0.8724
+          },
+          {
+            "x_pixel": 408.0,
+            "y_pixel": 208.3977,
+            "status": "observed",
+            "support": 1.0,
+            "peak_score": 0.826,
+            "uncertainty_px": 0.8678
+          },
+          {
+            "x_pixel": 420.2,
+            "y_pixel": 207.6992,
+            "status": "observed",
+            "support": 1.0,
+            "peak_score": 0.8391,
+            "uncertainty_px": 0.7687
+          },
+          {
+            "x_pixel": 432.4,
+            "y_pixel": 207.9915,
+            "status": "observed",
+            "support": 1.0,
+            "peak_score": 0.8371,
+            "uncertainty_px": 0.7832
+          },
+          {
+            "x_pixel": 444.6,
+            "y_pixel": 209.4551,
+            "status": "observed",
+            "support": 1.0,
+            "peak_score": 0.8338,
+            "uncertainty_px": 0.8073
+          },
+          {
+            "x_pixel": 456.8,
+            "y_pixel": 210.1428,
+            "status": "observed",
+            "support": 1.0,
+            "peak_score": 0.8243,
+            "uncertainty_px": 0.8811
+          },
+          {
+            "x_pixel": 469.0,
+            "y_pixel": 211.272,
+            "status": "observed",
+            "support": 1.0,
+            "peak_score": 0.8264,
+            "uncertainty_px": 0.864
+          },
+          {
+            "x_pixel": 481.2,
+            "y_pixel": 211.8655,
+            "status": "observed",
+            "support": 1.0,
+            "peak_score": 0.8316,
+            "uncertainty_px": 0.8242
+          },
+          {
+            "x_pixel": 493.4,
+            "y_pixel": 212.8037,
+            "status": "observed",
+            "support": 1.0,
+            "peak_score": 0.8245,
+            "uncertainty_px": 0.8797
+          },
+          {
+            "x_pixel": 505.6,
+            "y_pixel": 214.0117,
+            "status": "observed",
+            "support": 1.0,
+            "peak_score": 0.8275,
+            "uncertainty_px": 0.8554
+          },
+          {
+            "x_pixel": 517.8,
+            "y_pixel": 216.2738,
+            "status": "observed",
+            "support": 1.0,
+            "peak_score": 0.827,
+            "uncertainty_px": 0.8597
+          },
+          {
+            "x_pixel": 530.0,
+            "y_pixel": 216.8516,
+            "status": "observed",
+            "support": 1.0,
+            "peak_score": 0.8366,
+            "uncertainty_px": 0.7868
+          },
+          {
+            "x_pixel": 542.2,
+            "y_pixel": 217.7391,
+            "status": "observed",
+            "support": 1.0,
+            "peak_score": 0.827,
+            "uncertainty_px": 0.8598
+          },
+          {
+            "x_pixel": 554.4,
+            "y_pixel": 219.6548,
+            "status": "observed",
+            "support": 1.0,
+            "peak_score": 0.8336,
+            "uncertainty_px": 0.8092
+          },
+          {
+            "x_pixel": 566.6,
+            "y_pixel": 219.823,
+            "status": "observed",
+            "support": 1.0,
+            "peak_score": 0.8367,
+            "uncertainty_px": 0.786
+          },
+          {
+            "x_pixel": 578.8,
+            "y_pixel": 219.6592,
+            "status": "observed",
+            "support": 1.0,
+            "peak_score": 0.8262,
+            "uncertainty_px": 0.8656
+          },
+          {
+            "x_pixel": 591.0,
+            "y_pixel": 218.3161,
+            "status": "observed",
+            "support": 1.0,
+            "peak_score": 0.827,
+            "uncertainty_px": 0.8599
+          }
+        ]
+      }
+    },
+    "Eukarya (OTU)": {
+      "axis_x": {
+        "scale": "linear",
+        "anchors": [
+          {
+            "pixel": 103.0,
+            "value": 0.0
+          },
+          {
+            "pixel": 591.0,
+            "value": 40.0
+          }
+        ],
+        "pixel_slope": 0.0819672131147541,
+        "transformed_intercept": -8.442622950819677,
+        "residuals_pixels": [
+          4.334310688136611e-14,
+          0.0
+        ],
+        "rmse_transformed": 2.5121479338940403e-15,
+        "max_abs_residual_transformed": 3.552713678800501e-15,
+        "pixel_uncertainty": 0.5,
+        "fit": "robust_huber_affine_in_transformed_value_space"
+      },
+      "axis_y": {
+        "scale": "linear",
+        "anchors": [
+          {
+            "pixel": 45.0,
+            "value": 1.0
+          },
+          {
+            "pixel": 265.0,
+            "value": 0.15
+          }
+        ],
+        "pixel_slope": -0.0038636363636363616,
+        "transformed_intercept": 1.173863636363636,
+        "residuals_pixels": [
+          -5.747036833353755e-14,
+          9.338934854199851e-14
+        ],
+        "rmse_transformed": 2.995802653854976e-16,
+        "max_abs_residual_transformed": 3.608224830031759e-16,
+        "pixel_uncertainty": 0.5,
+        "fit": "robust_huber_affine_in_transformed_value_space"
+      },
+      "trace": {
+        "path": [
+          {
+            "x_pixel": 103.0,
+            "y_pixel": 45.0,
+            "status": "observed",
+            "support": 1.0,
+            "peak_score": 0.7018,
+            "uncertainty_px": 5.0901
+          },
+          {
+            "x_pixel": 115.2,
+            "y_pixel": 158.6215,
+            "status": "observed",
+            "support": 1.0,
+            "peak_score": 0.7,
+            "uncertainty_px": 15.3248
+          },
+          {
+            "x_pixel": 127.4,
+            "y_pixel": 192.8173,
+            "status": "observed",
+            "support": 1.0,
+            "peak_score": 0.7388,
+            "uncertainty_px": 2.045
+          },
+          {
+            "x_pixel": 139.6,
+            "y_pixel": 203.6847,
+            "status": "observed",
+            "support": 1.0,
+            "peak_score": 0.7774,
+            "uncertainty_px": 1.3548
+          },
+          {
+            "x_pixel": 151.8,
+            "y_pixel": 210.8569,
+            "status": "observed",
+            "support": 1.0,
+            "peak_score": 0.8154,
+            "uncertainty_px": 0.9557
+          },
+          {
+            "x_pixel": 164.0,
+            "y_pixel": 216.2272,
+            "status": "observed",
+            "support": 1.0,
+            "peak_score": 0.8325,
+            "uncertainty_px": 0.8169
+          },
+          {
+            "x_pixel": 176.2,
+            "y_pixel": 221.6676,
+            "status": "observed",
+            "support": 1.0,
+            "peak_score": 0.8306,
+            "uncertainty_px": 0.8313
+          },
+          {
+            "x_pixel": 188.4,
+            "y_pixel": 224.8377,
+            "status": "observed",
+            "support": 1.0,
+            "peak_score": 0.8278,
+            "uncertainty_px": 0.8534
+          },
+          {
+            "x_pixel": 200.6,
+            "y_pixel": 227.5321,
+            "status": "observed",
+            "support": 1.0,
+            "peak_score": 0.8339,
+            "uncertainty_px": 0.8069
+          },
+          {
+            "x_pixel": 212.8,
+            "y_pixel": 230.2146,
+            "status": "observed",
+            "support": 1.0,
+            "peak_score": 0.8215,
+            "uncertainty_px": 0.9035
+          },
+          {
+            "x_pixel": 225.0,
+            "y_pixel": 232.283,
+            "status": "observed",
+            "support": 1.0,
+            "peak_score": 0.8274,
+            "uncertainty_px": 0.8561
+          },
+          {
+            "x_pixel": 237.2,
+            "y_pixel": 234.4368,
+            "status": "observed",
+            "support": 1.0,
+            "peak_score": 0.833,
+            "uncertainty_px": 0.8134
+          },
+          {
+            "x_pixel": 249.4,
+            "y_pixel": 236.4795,
+            "status": "observed",
+            "support": 1.0,
+            "peak_score": 0.8298,
+            "uncertainty_px": 0.8381
+          },
+          {
+            "x_pixel": 261.6,
+            "y_pixel": 237.3576,
+            "status": "observed",
+            "support": 1.0,
+            "peak_score": 0.8171,
+            "uncertainty_px": 0.9411
+          },
+          {
+            "x_pixel": 273.8,
+            "y_pixel": 237.6912,
+            "status": "observed",
+            "support": 1.0,
+            "peak_score": 0.8266,
+            "uncertainty_px": 0.8626
+          },
+          {
+            "x_pixel": 286.0,
+            "y_pixel": 238.0553,
+            "status": "observed",
+            "support": 1.0,
+            "peak_score": 0.8344,
+            "uncertainty_px": 0.8033
+          },
+          {
+            "x_pixel": 298.2,
+            "y_pixel": 237.3266,
+            "status": "observed",
+            "support": 1.0,
+            "peak_score": 0.8207,
+            "uncertainty_px": 0.9101
+          },
+          {
+            "x_pixel": 310.4,
+            "y_pixel": 238.8068,
+            "status": "observed",
+            "support": 1.0,
+            "peak_score": 0.8193,
+            "uncertainty_px": 0.9219
+          },
+          {
+            "x_pixel": 322.6,
+            "y_pixel": 238.6407,
+            "status": "observed",
+            "support": 1.0,
+            "peak_score": 0.8212,
+            "uncertainty_px": 0.9061
+          },
+          {
+            "x_pixel": 334.8,
+            "y_pixel": 238.7473,
+            "status": "observed",
+            "support": 1.0,
+            "peak_score": 0.829,
+            "uncertainty_px": 0.8438
+          },
+          {
+            "x_pixel": 347.0,
+            "y_pixel": 238.1165,
+            "status": "observed",
+            "support": 1.0,
+            "peak_score": 0.8251,
+            "uncertainty_px": 0.875
+          },
+          {
+            "x_pixel": 359.2,
+            "y_pixel": 240.2717,
+            "status": "observed",
+            "support": 1.0,
+            "peak_score": 0.8257,
+            "uncertainty_px": 0.8699
+          },
+          {
+            "x_pixel": 371.4,
+            "y_pixel": 241.1637,
+            "status": "observed",
+            "support": 1.0,
+            "peak_score": 0.8296,
+            "uncertainty_px": 0.8394
+          },
+          {
+            "x_pixel": 383.6,
+            "y_pixel": 243.3334,
+            "status": "observed",
+            "support": 1.0,
+            "peak_score": 0.8234,
+            "uncertainty_px": 0.8886
+          },
+          {
+            "x_pixel": 395.8,
+            "y_pixel": 244.2974,
+            "status": "observed",
+            "support": 1.0,
+            "peak_score": 0.8253,
+            "uncertainty_px": 0.8732
+          },
+          {
+            "x_pixel": 408.0,
+            "y_pixel": 246.0069,
+            "status": "observed",
+            "support": 1.0,
+            "peak_score": 0.8301,
+            "uncertainty_px": 0.8355
+          },
+          {
+            "x_pixel": 420.2,
+            "y_pixel": 246.1147,
+            "status": "observed",
+            "support": 1.0,
+            "peak_score": 0.8253,
+            "uncertainty_px": 0.873
+          },
+          {
+            "x_pixel": 432.4,
+            "y_pixel": 245.5515,
+            "status": "observed",
+            "support": 1.0,
+            "peak_score": 0.8237,
+            "uncertainty_px": 0.8856
+          },
+          {
+            "x_pixel": 444.6,
+            "y_pixel": 245.9291,
+            "status": "observed",
+            "support": 1.0,
+            "peak_score": 0.8378,
+            "uncertainty_px": 0.7777
+          },
+          {
+            "x_pixel": 456.8,
+            "y_pixel": 245.7836,
+            "status": "observed",
+            "support": 1.0,
+            "peak_score": 0.8348,
+            "uncertainty_px": 0.8003
+          },
+          {
+            "x_pixel": 469.0,
+            "y_pixel": 247.104,
+            "status": "observed",
+            "support": 1.0,
+            "peak_score": 0.8306,
+            "uncertainty_px": 0.8317
+          },
+          {
+            "x_pixel": 481.2,
+            "y_pixel": 247.8325,
+            "status": "observed",
+            "support": 1.0,
+            "peak_score": 0.8195,
+            "uncertainty_px": 0.9203
+          },
+          {
+            "x_pixel": 493.4,
+            "y_pixel": 249.5665,
+            "status": "observed",
+            "support": 1.0,
+            "peak_score": 0.8349,
+            "uncertainty_px": 0.799
+          },
+          {
+            "x_pixel": 505.6,
+            "y_pixel": 251.4643,
+            "status": "observed",
+            "support": 1.0,
+            "peak_score": 0.8249,
+            "uncertainty_px": 0.8763
+          },
+          {
+            "x_pixel": 517.8,
+            "y_pixel": 251.9468,
+            "status": "observed",
+            "support": 1.0,
+            "peak_score": 0.8217,
+            "uncertainty_px": 0.9021
+          },
+          {
+            "x_pixel": 530.0,
+            "y_pixel": 253.2077,
+            "status": "observed",
+            "support": 1.0,
+            "peak_score": 0.8218,
+            "uncertainty_px": 0.9014
+          },
+          {
+            "x_pixel": 542.2,
+            "y_pixel": 253.2265,
+            "status": "observed",
+            "support": 1.0,
+            "peak_score": 0.8279,
+            "uncertainty_px": 0.8522
+          },
+          {
+            "x_pixel": 554.4,
+            "y_pixel": 255.3976,
+            "status": "observed",
+            "support": 1.0,
+            "peak_score": 0.8228,
+            "uncertainty_px": 0.8932
+          },
+          {
+            "x_pixel": 566.6,
+            "y_pixel": 254.717,
+            "status": "observed",
+            "support": 1.0,
+            "peak_score": 0.8212,
+            "uncertainty_px": 0.9067
+          },
+          {
+            "x_pixel": 578.8,
+            "y_pixel": 254.3884,
+            "status": "observed",
+            "support": 1.0,
+            "peak_score": 0.8248,
+            "uncertainty_px": 0.8767
+          },
+          {
+            "x_pixel": 591.0,
+            "y_pixel": 253.8961,
+            "status": "observed",
+            "support": 1.0,
+            "peak_score": 0.8247,
+            "uncertainty_px": 0.8776
+          }
+        ]
+      }
+    }
+  },
+  "limitations": [
+    "Each value is a calibrated visible curve/marker position, not an inferred replicate summary.",
+    "Error-bar geometry remains separate and is not represented as a source SD or SEM claim."
+  ]
+}

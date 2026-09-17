@@ -1,0 +1,11 @@
+axis,pixel_coordinate,degree_component,arcminute,label_visible
+longitude,98.0,163,54,163°54′
+longitude,343.0,163,55,163°55′
+longitude,588.0,163,56,163°56′
+longitude,833.0,163,57,163°57′
+longitude,1078.0,163,58,163°58′
+longitude,1323.0,163,59,163°59′
+latitude,241.0,40,47,40°47′
+latitude,486.0,40,46,40°46′
+latitude,730.0,40,45,40°45′
+latitude,976.0,40,44,40°44′

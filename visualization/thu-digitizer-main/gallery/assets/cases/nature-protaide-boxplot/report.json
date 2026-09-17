@@ -1,0 +1,2241 @@
+{
+  "schema_version": 1,
+  "case_id": "nature-protaide-boxplot",
+  "status": "candidate_visible_geometry",
+  "family": "paired_vertical_boxplot",
+  "article": {
+    "title": "A deep joint-learning proteomics model for diagnosis of six conditions associated with dementia",
+    "journal": "Nature Medicine",
+    "year": 2026,
+    "doi": "10.1038/s41591-026-04303-y",
+    "figure": "Fig. 4b",
+    "article_url": "https://www.nature.com/articles/s41591-026-04303-y",
+    "figure_url": "https://www.nature.com/articles/s41591-026-04303-y/figures/4",
+    "image_url": "https://media.springernature.com/full/springer-static/image/art%3A10.1038%2Fs41591-026-04303-y/MediaObjects/41591_2026_4303_Fig4_HTML.png",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/"
+  },
+  "input": {
+    "file": "original.png",
+    "sha256": "2f8d0de53147ff453ba8dc6dbdfc4c61d6a77896ddebba295aa8359b8cf8db9a",
+    "dimensions": [
+      1000,
+      770
+    ],
+    "crop_from_full_figure": [
+      0,
+      650,
+      1000,
+      1420
+    ]
+  },
+  "calibration": {
+    "y_axis": [
+      99,
+      1.0,
+      619,
+      0.4
+    ],
+    "value_per_pixel": 0.0011538461538461537,
+    "assumption": "verified linear BCA and AUC axes with visible 0.4 and 1.0 ticks"
+  },
+  "stable_baseline": {
+    "route": "digitize_boxplot.extract_boxplots",
+    "status": "low_confidence",
+    "reason": "filled Finetune interiors are split by the median; Retrain interiors match the background; outliers share the line colour",
+    "panels": {
+      "BCA": {
+        "orientation": "vertical",
+        "groups": [
+          {
+            "q1": 0.7046153846153846,
+            "median": null,
+            "q3": 0.708076923076923,
+            "lower_whisker": null,
+            "upper_whisker": null,
+            "outliers": [],
+            "status": "low_confidence",
+            "reason": "missing median line; missing upper whisker cap connected to the whisker spine; missing lower whisker cap connected to the whisker spine",
+            "category_center_pixel": 165.0,
+            "box_bounds_pixel": [
+              156,
+              352,
+              174,
+              355
+            ]
+          },
+          {
+            "q1": 0.6965384615384616,
+            "median": null,
+            "q3": 0.6988461538461539,
+            "lower_whisker": null,
+            "upper_whisker": null,
+            "outliers": [],
+            "status": "low_confidence",
+            "reason": "missing median line; missing upper whisker cap connected to the whisker spine; missing lower whisker cap connected to the whisker spine",
+            "category_center_pixel": 165.0,
+            "box_bounds_pixel": [
+              156,
+              360,
+              174,
+              362
+            ]
+          },
+          {
+            "q1": 0.7276923076923076,
+            "median": null,
+            "q3": 0.7311538461538463,
+            "lower_whisker": null,
+            "upper_whisker": null,
+            "outliers": [],
+            "status": "low_confidence",
+            "reason": "missing median line; missing upper whisker cap connected to the whisker spine; missing lower whisker cap connected to the whisker spine",
+            "category_center_pixel": 232.0,
+            "box_bounds_pixel": [
+              223,
+              332,
+              241,
+              335
+            ]
+          },
+          {
+            "q1": 0.6803846153846154,
+            "median": null,
+            "q3": 0.6884615384615385,
+            "lower_whisker": null,
+            "upper_whisker": null,
+            "outliers": [],
+            "status": "low_confidence",
+            "reason": "missing median line; missing upper whisker cap connected to the whisker spine; missing lower whisker cap connected to the whisker spine",
+            "category_center_pixel": 298.5,
+            "box_bounds_pixel": [
+              290,
+              369,
+              307,
+              376
+            ]
+          },
+          {
+            "q1": 0.6642307692307692,
+            "median": null,
+            "q3": 0.6757692307692308,
+            "lower_whisker": null,
+            "upper_whisker": null,
+            "outliers": [],
+            "status": "low_confidence",
+            "reason": "missing median line; missing upper whisker cap connected to the whisker spine; missing lower whisker cap connected to the whisker spine",
+            "category_center_pixel": 298.5,
+            "box_bounds_pixel": [
+              290,
+              380,
+              307,
+              390
+            ]
+          },
+          {
+            "q1": 0.5592307692307692,
+            "median": null,
+            "q3": 0.5776923076923077,
+            "lower_whisker": null,
+            "upper_whisker": null,
+            "outliers": [],
+            "status": "low_confidence",
+            "reason": "missing median line; missing upper whisker cap connected to the whisker spine; missing lower whisker cap connected to the whisker spine",
+            "category_center_pixel": 365.5,
+            "box_bounds_pixel": [
+              357,
+              465,
+              374,
+              481
+            ]
+          },
+          {
+            "q1": 0.5188461538461538,
+            "median": null,
+            "q3": 0.5546153846153846,
+            "lower_whisker": null,
+            "upper_whisker": null,
+            "outliers": [],
+            "status": "low_confidence",
+            "reason": "missing median line; missing upper whisker cap connected to the whisker spine; missing lower whisker cap connected to the whisker spine",
+            "category_center_pixel": 365.5,
+            "box_bounds_pixel": [
+              357,
+              485,
+              374,
+              516
+            ]
+          },
+          {
+            "q1": 0.6203846153846153,
+            "median": null,
+            "q3": 0.6273076923076923,
+            "lower_whisker": null,
+            "upper_whisker": null,
+            "outliers": [],
+            "status": "low_confidence",
+            "reason": "missing median line; missing upper whisker cap connected to the whisker spine; missing lower whisker cap connected to the whisker spine",
+            "category_center_pixel": 432.5,
+            "box_bounds_pixel": [
+              424,
+              422,
+              441,
+              428
+            ]
+          },
+          {
+            "q1": 0.5996153846153847,
+            "median": null,
+            "q3": 0.6157692307692308,
+            "lower_whisker": null,
+            "upper_whisker": null,
+            "outliers": [],
+            "status": "low_confidence",
+            "reason": "missing median line; missing upper whisker cap connected to the whisker spine; missing lower whisker cap connected to the whisker spine",
+            "category_center_pixel": 432.5,
+            "box_bounds_pixel": [
+              424,
+              432,
+              441,
+              446
+            ]
+          }
+        ],
+        "status": "low_confidence",
+        "reason": "one or more groups lack required boxplot evidence"
+      },
+      "AUC": {
+        "orientation": "vertical",
+        "groups": [
+          {
+            "q1": 0.7646153846153847,
+            "median": null,
+            "q3": 0.7715384615384615,
+            "lower_whisker": 0.7501923076923077,
+            "upper_whisker": null,
+            "outliers": [],
+            "status": "low_confidence",
+            "reason": "missing median line; missing upper whisker cap connected to the whisker spine",
+            "category_center_pixel": 668.5,
+            "box_bounds_pixel": [
+              660,
+              297,
+              677,
+              303
+            ]
+          },
+          {
+            "q1": 0.8153846153846154,
+            "median": null,
+            "q3": 0.8165384615384615,
+            "lower_whisker": null,
+            "upper_whisker": null,
+            "outliers": [],
+            "status": "low_confidence",
+            "reason": "missing median line; missing upper whisker cap connected to the whisker spine; missing lower whisker cap connected to the whisker spine",
+            "category_center_pixel": 735.0,
+            "box_bounds_pixel": [
+              726,
+              258,
+              744,
+              259
+            ]
+          },
+          {
+            "q1": 0.7403846153846154,
+            "median": null,
+            "q3": 0.7438461538461538,
+            "lower_whisker": null,
+            "upper_whisker": null,
+            "outliers": [],
+            "status": "low_confidence",
+            "reason": "missing median line; missing upper whisker cap connected to the whisker spine; missing lower whisker cap connected to the whisker spine",
+            "category_center_pixel": 802.0,
+            "box_bounds_pixel": [
+              793,
+              321,
+              811,
+              324
+            ]
+          },
+          {
+            "q1": 0.7276923076923076,
+            "median": null,
+            "q3": 0.7357692307692307,
+            "lower_whisker": null,
+            "upper_whisker": null,
+            "outliers": [],
+            "status": "low_confidence",
+            "reason": "missing median line; missing upper whisker cap connected to the whisker spine; missing lower whisker cap connected to the whisker spine",
+            "category_center_pixel": 802.0,
+            "box_bounds_pixel": [
+              793,
+              328,
+              811,
+              335
+            ]
+          },
+          {
+            "q1": 0.5696153846153846,
+            "median": null,
+            "q3": 0.5926923076923077,
+            "lower_whisker": null,
+            "upper_whisker": null,
+            "outliers": [],
+            "status": "low_confidence",
+            "reason": "missing median line; missing upper whisker cap connected to the whisker spine; missing lower whisker cap connected to the whisker spine",
+            "category_center_pixel": 869.0,
+            "box_bounds_pixel": [
+              860,
+              452,
+              878,
+              472
+            ]
+          },
+          {
+            "q1": 0.543076923076923,
+            "median": null,
+            "q3": 0.565,
+            "lower_whisker": null,
+            "upper_whisker": null,
+            "outliers": [],
+            "status": "low_confidence",
+            "reason": "missing median line; missing upper whisker cap connected to the whisker spine; missing lower whisker cap connected to the whisker spine",
+            "category_center_pixel": 869.0,
+            "box_bounds_pixel": [
+              860,
+              476,
+              878,
+              495
+            ]
+          },
+          {
+            "q1": 0.6792307692307693,
+            "median": null,
+            "q3": 0.6826923076923077,
+            "lower_whisker": null,
+            "upper_whisker": null,
+            "outliers": [],
+            "status": "low_confidence",
+            "reason": "missing median line; ambiguous upper whisker cap candidates connected to the whisker spine; missing lower whisker cap connected to the whisker spine",
+            "category_center_pixel": 936.0,
+            "box_bounds_pixel": [
+              927,
+              374,
+              945,
+              377
+            ]
+          }
+        ],
+        "status": "low_confidence",
+        "reason": "one or more groups lack required boxplot evidence"
+      }
+    }
+  },
+  "candidate_extraction": {
+    "route": "candidate_outline_boxplot_geometry.extract_outline_boxplots",
+    "status": "candidate_visible_geometry",
+    "box_groups_extracted": 20,
+    "box_groups_visible": 20,
+    "visible_outliers_extracted": 9,
+    "raster_coincident_medians": 1,
+    "minimum_rectangle_side_support": 1.0,
+    "panels": {
+      "BCA": {
+        "schema_version": 1,
+        "route": "candidate_outline_boxplot_geometry",
+        "status": "candidate",
+        "reason": "",
+        "orientation": "vertical",
+        "plot_bounds": [
+          119,
+          99,
+          462,
+          619
+        ],
+        "calibration": {
+          "y_axis": [
+            99,
+            1.0,
+            619,
+            0.4
+          ]
+        },
+        "colors": {
+          "line": "#464646",
+          "filled_series": {
+            "Finetune": "#4685bd"
+          }
+        },
+        "parameters": {
+          "tolerance": 18,
+          "minimum_box_width": 17,
+          "maximum_box_width": 32
+        },
+        "detected_box_width_pixels": 23.0,
+        "detected_centres": [
+          143.0,
+          165.0,
+          210.0,
+          232.0,
+          277.0,
+          298.5,
+          344.0,
+          365.5,
+          411.0,
+          432.5
+        ],
+        "centre_detection_strokes": [
+          {
+            "row_start": 326,
+            "row_end": 327,
+            "run_left": 221,
+            "run_right": 243,
+            "maximum_run": 23,
+            "row_center": 326.5,
+            "run_center": 232.0
+          },
+          {
+            "row_start": 330,
+            "row_end": 331,
+            "run_left": 221,
+            "run_right": 243,
+            "maximum_run": 23,
+            "row_center": 330.5,
+            "run_center": 232.0
+          },
+          {
+            "row_start": 337,
+            "row_end": 338,
+            "run_left": 221,
+            "run_right": 243,
+            "maximum_run": 23,
+            "row_center": 337.5,
+            "run_center": 232.0
+          },
+          {
+            "row_start": 350,
+            "row_end": 351,
+            "run_left": 154,
+            "run_right": 176,
+            "maximum_run": 23,
+            "row_center": 350.5,
+            "run_center": 165.0
+          },
+          {
+            "row_start": 357,
+            "row_end": 358,
+            "run_left": 154,
+            "run_right": 176,
+            "maximum_run": 23,
+            "row_center": 357.5,
+            "run_center": 165.0
+          },
+          {
+            "row_start": 364,
+            "row_end": 365,
+            "run_left": 154,
+            "run_right": 176,
+            "maximum_run": 23,
+            "row_center": 364.5,
+            "run_center": 165.0
+          },
+          {
+            "row_start": 366,
+            "row_end": 367,
+            "run_left": 287,
+            "run_right": 310,
+            "maximum_run": 24,
+            "row_center": 366.5,
+            "run_center": 298.5
+          },
+          {
+            "row_start": 378,
+            "row_end": 379,
+            "run_left": 287,
+            "run_right": 310,
+            "maximum_run": 24,
+            "row_center": 378.5,
+            "run_center": 298.5
+          },
+          {
+            "row_start": 381,
+            "row_end": 382,
+            "run_left": 266,
+            "run_right": 288,
+            "maximum_run": 23,
+            "row_center": 381.5,
+            "run_center": 277.0
+          },
+          {
+            "row_start": 420,
+            "row_end": 421,
+            "run_left": 421,
+            "run_right": 444,
+            "maximum_run": 24,
+            "row_center": 420.5,
+            "run_center": 432.5
+          },
+          {
+            "row_start": 423,
+            "row_end": 424,
+            "run_left": 132,
+            "run_right": 154,
+            "maximum_run": 23,
+            "row_center": 423.5,
+            "run_center": 143.0
+          },
+          {
+            "row_start": 426,
+            "row_end": 427,
+            "run_left": 266,
+            "run_right": 288,
+            "maximum_run": 23,
+            "row_center": 426.5,
+            "run_center": 277.0
+          },
+          {
+            "row_start": 426,
+            "row_end": 427,
+            "run_left": 400,
+            "run_right": 422,
+            "maximum_run": 23,
+            "row_center": 426.5,
+            "run_center": 411.0
+          },
+          {
+            "row_start": 428,
+            "row_end": 428,
+            "run_left": 199,
+            "run_right": 221,
+            "maximum_run": 23,
+            "row_center": 428.0,
+            "run_center": 210.0
+          },
+          {
+            "row_start": 429,
+            "row_end": 430,
+            "run_left": 421,
+            "run_right": 444,
+            "maximum_run": 24,
+            "row_center": 429.5,
+            "run_center": 432.5
+          },
+          {
+            "row_start": 438,
+            "row_end": 439,
+            "run_left": 132,
+            "run_right": 154,
+            "maximum_run": 23,
+            "row_center": 438.5,
+            "run_center": 143.0
+          },
+          {
+            "row_start": 441,
+            "row_end": 441,
+            "run_left": 199,
+            "run_right": 221,
+            "maximum_run": 23,
+            "row_center": 441.0,
+            "run_center": 210.0
+          },
+          {
+            "row_start": 442,
+            "row_end": 443,
+            "run_left": 400,
+            "run_right": 422,
+            "maximum_run": 23,
+            "row_center": 442.5,
+            "run_center": 411.0
+          },
+          {
+            "row_start": 448,
+            "row_end": 448,
+            "run_left": 421,
+            "run_right": 444,
+            "maximum_run": 24,
+            "row_center": 448.0,
+            "run_center": 432.5
+          },
+          {
+            "row_start": 462,
+            "row_end": 463,
+            "run_left": 199,
+            "run_right": 221,
+            "maximum_run": 23,
+            "row_center": 462.5,
+            "run_center": 210.0
+          },
+          {
+            "row_start": 463,
+            "row_end": 463,
+            "run_left": 354,
+            "run_right": 377,
+            "maximum_run": 24,
+            "row_center": 463.0,
+            "run_center": 365.5
+          },
+          {
+            "row_start": 468,
+            "row_end": 468,
+            "run_left": 400,
+            "run_right": 422,
+            "maximum_run": 23,
+            "row_center": 468.0,
+            "run_center": 411.0
+          },
+          {
+            "row_start": 483,
+            "row_end": 483,
+            "run_left": 354,
+            "run_right": 377,
+            "maximum_run": 24,
+            "row_center": 483.0,
+            "run_center": 365.5
+          },
+          {
+            "row_start": 492,
+            "row_end": 493,
+            "run_left": 333,
+            "run_right": 355,
+            "maximum_run": 23,
+            "row_center": 492.5,
+            "run_center": 344.0
+          },
+          {
+            "row_start": 509,
+            "row_end": 509,
+            "run_left": 132,
+            "run_right": 154,
+            "maximum_run": 23,
+            "row_center": 509.0,
+            "run_center": 143.0
+          },
+          {
+            "row_start": 511,
+            "row_end": 511,
+            "run_left": 333,
+            "run_right": 355,
+            "maximum_run": 23,
+            "row_center": 511.0,
+            "run_center": 344.0
+          },
+          {
+            "row_start": 518,
+            "row_end": 519,
+            "run_left": 354,
+            "run_right": 377,
+            "maximum_run": 24,
+            "row_center": 518.5,
+            "run_center": 365.5
+          },
+          {
+            "row_start": 532,
+            "row_end": 533,
+            "run_left": 333,
+            "run_right": 355,
+            "maximum_run": 23,
+            "row_center": 532.5,
+            "run_center": 344.0
+          },
+          {
+            "row_start": 619,
+            "row_end": 619,
+            "run_left": 121,
+            "run_right": 152,
+            "maximum_run": 32,
+            "row_center": 619.0,
+            "run_center": 136.5
+          }
+        ],
+        "groups": [
+          {
+            "category_center_pixel": 143.0,
+            "series": "Retrain",
+            "q1": 0.5269230769230769,
+            "median": 0.6082692307692308,
+            "q3": 0.625576923076923,
+            "lower_whisker": 0.4986538461538462,
+            "upper_whisker": 0.6625,
+            "outliers": [],
+            "status": "candidate",
+            "reason": "",
+            "box_strokes_pixel": {
+              "q3": 423.5,
+              "median": 438.5,
+              "q1": 509.0
+            },
+            "whisker_strokes_pixel": {
+              "upper": 391.5,
+              "lower": 533.5,
+              "upper_coincident_with_q3": false,
+              "lower_coincident_with_q1": false
+            },
+            "fill_support": {
+              "Finetune": 0.0
+            },
+            "stroke_diagnostic": {
+              "score": 8.0,
+              "side_score": 1.0,
+              "width_scores": [
+                1.0,
+                1.0
+              ],
+              "span_pixels": 85.5,
+              "median_coincident_with_q1": false,
+              "median_coincident_with_q3": false,
+              "median_fraction": 0.17543859649122806
+            },
+            "upper_cap_evidence": {
+              "checked": [
+                {
+                  "row_center": 391.5,
+                  "distance": 32.0,
+                  "spine_coverage": 1.0
+                }
+              ],
+              "status": "connected"
+            },
+            "lower_cap_evidence": {
+              "checked": [
+                {
+                  "row_center": 533.5,
+                  "distance": 24.5,
+                  "spine_coverage": 1.0
+                }
+              ],
+              "status": "connected"
+            }
+          },
+          {
+            "category_center_pixel": 165.0,
+            "series": "Finetune",
+            "q1": 0.6936538461538462,
+            "median": 0.7017307692307693,
+            "q3": 0.7098076923076924,
+            "lower_whisker": 0.6775,
+            "upper_whisker": 0.7201923076923077,
+            "outliers": [
+              {
+                "center_pixel": [
+                  165.0,
+                  384.0
+                ],
+                "value": 0.6711538461538462,
+                "ring_score": 37
+              }
+            ],
+            "status": "candidate",
+            "reason": "",
+            "box_strokes_pixel": {
+              "q3": 350.5,
+              "median": 357.5,
+              "q1": 364.5
+            },
+            "whisker_strokes_pixel": {
+              "upper": 341.5,
+              "lower": 378.5,
+              "upper_coincident_with_q3": false,
+              "lower_coincident_with_q1": false
+            },
+            "fill_support": {
+              "Finetune": 0.6363636363636364
+            },
+            "stroke_diagnostic": {
+              "score": 7.405797101449275,
+              "side_score": 1.0,
+              "width_scores": [
+                1.0,
+                1.0
+              ],
+              "span_pixels": 14.0,
+              "median_coincident_with_q1": false,
+              "median_coincident_with_q3": false,
+              "median_fraction": 0.5
+            },
+            "upper_cap_evidence": {
+              "checked": [
+                {
+                  "row_center": 341.5,
+                  "distance": 9.0,
+                  "spine_coverage": 1.0
+                }
+              ],
+              "status": "connected"
+            },
+            "lower_cap_evidence": {
+              "checked": [
+                {
+                  "row_center": 378.5,
+                  "distance": 14.0,
+                  "spine_coverage": 1.0
+                }
+              ],
+              "status": "connected"
+            }
+          },
+          {
+            "category_center_pixel": 210.0,
+            "series": "Retrain",
+            "q1": 0.5805769230769231,
+            "median": 0.6053846153846154,
+            "q3": 0.6203846153846153,
+            "lower_whisker": 0.5413461538461539,
+            "upper_whisker": 0.6590384615384616,
+            "outliers": [
+              {
+                "center_pixel": [
+                  210.0,
+                  527.0
+                ],
+                "value": 0.5061538461538462,
+                "ring_score": 46
+              }
+            ],
+            "status": "candidate",
+            "reason": "",
+            "box_strokes_pixel": {
+              "q3": 428.0,
+              "median": 441.0,
+              "q1": 462.5
+            },
+            "whisker_strokes_pixel": {
+              "upper": 394.5,
+              "lower": 496.5,
+              "upper_coincident_with_q3": false,
+              "lower_coincident_with_q1": false
+            },
+            "fill_support": {
+              "Finetune": 0.0
+            },
+            "stroke_diagnostic": {
+              "score": 8.0,
+              "side_score": 1.0,
+              "width_scores": [
+                1.0,
+                1.0
+              ],
+              "span_pixels": 34.5,
+              "median_coincident_with_q1": false,
+              "median_coincident_with_q3": false,
+              "median_fraction": 0.37681159420289856
+            },
+            "upper_cap_evidence": {
+              "checked": [
+                {
+                  "row_center": 394.5,
+                  "distance": 33.5,
+                  "spine_coverage": 1.0
+                }
+              ],
+              "status": "connected"
+            },
+            "lower_cap_evidence": {
+              "checked": [
+                {
+                  "row_center": 496.5,
+                  "distance": 34.0,
+                  "spine_coverage": 1.0
+                }
+              ],
+              "status": "connected"
+            }
+          },
+          {
+            "category_center_pixel": 232.0,
+            "series": "Finetune",
+            "q1": 0.7248076923076923,
+            "median": 0.7328846153846154,
+            "q3": 0.7375,
+            "lower_whisker": 0.7063461538461538,
+            "upper_whisker": 0.7478846153846154,
+            "outliers": [],
+            "status": "candidate",
+            "reason": "",
+            "box_strokes_pixel": {
+              "q3": 326.5,
+              "median": 330.5,
+              "q1": 337.5
+            },
+            "whisker_strokes_pixel": {
+              "upper": 317.5,
+              "lower": 353.5,
+              "upper_coincident_with_q3": false,
+              "lower_coincident_with_q1": false
+            },
+            "fill_support": {
+              "Finetune": 0.5026455026455027
+            },
+            "stroke_diagnostic": {
+              "score": 7.318840579710145,
+              "side_score": 1.0,
+              "width_scores": [
+                1.0,
+                1.0
+              ],
+              "span_pixels": 11.0,
+              "median_coincident_with_q1": false,
+              "median_coincident_with_q3": false,
+              "median_fraction": 0.36363636363636365
+            },
+            "upper_cap_evidence": {
+              "checked": [
+                {
+                  "row_center": 317.5,
+                  "distance": 9.0,
+                  "spine_coverage": 1.0
+                }
+              ],
+              "status": "connected"
+            },
+            "lower_cap_evidence": {
+              "checked": [
+                {
+                  "row_center": 353.5,
+                  "distance": 16.0,
+                  "spine_coverage": 1.0
+                }
+              ],
+              "status": "connected"
+            }
+          },
+          {
+            "category_center_pixel": 277.0,
+            "series": "Retrain",
+            "q1": 0.6221153846153846,
+            "median": 0.6613461538461538,
+            "q3": 0.6740384615384616,
+            "lower_whisker": 0.5926923076923077,
+            "upper_whisker": 0.7167307692307693,
+            "outliers": [
+              {
+                "center_pixel": [
+                  277.0,
+                  499.0
+                ],
+                "value": 0.5384615384615384,
+                "ring_score": 23
+              },
+              {
+                "center_pixel": [
+                  277.0,
+                  533.0
+                ],
+                "value": 0.49923076923076926,
+                "ring_score": 27
+              }
+            ],
+            "status": "candidate",
+            "reason": "",
+            "box_strokes_pixel": {
+              "q3": 381.5,
+              "median": 392.5,
+              "q1": 426.5
+            },
+            "whisker_strokes_pixel": {
+              "upper": 344.5,
+              "lower": 452.0,
+              "upper_coincident_with_q3": false,
+              "lower_coincident_with_q1": false
+            },
+            "fill_support": {
+              "Finetune": 0.0
+            },
+            "stroke_diagnostic": {
+              "score": 8.0,
+              "side_score": 1.0,
+              "width_scores": [
+                1.0,
+                1.0
+              ],
+              "span_pixels": 45.0,
+              "median_coincident_with_q1": false,
+              "median_coincident_with_q3": false,
+              "median_fraction": 0.24444444444444444
+            },
+            "upper_cap_evidence": {
+              "checked": [
+                {
+                  "row_center": 344.5,
+                  "distance": 37.0,
+                  "spine_coverage": 1.0
+                }
+              ],
+              "status": "connected"
+            },
+            "lower_cap_evidence": {
+              "checked": [
+                {
+                  "row_center": 452.0,
+                  "distance": 25.5,
+                  "spine_coverage": 1.0
+                }
+              ],
+              "status": "connected"
+            }
+          },
+          {
+            "category_center_pixel": 298.5,
+            "series": "Finetune",
+            "q1": 0.6613461538461538,
+            "median": 0.6775,
+            "q3": 0.6913461538461538,
+            "lower_whisker": 0.6359615384615385,
+            "upper_whisker": 0.7219230769230769,
+            "outliers": [],
+            "status": "candidate",
+            "reason": "",
+            "box_strokes_pixel": {
+              "q3": 366.5,
+              "median": 378.5,
+              "q1": 392.5
+            },
+            "whisker_strokes_pixel": {
+              "upper": 340.0,
+              "lower": 414.5,
+              "upper_coincident_with_q3": false,
+              "lower_coincident_with_q1": false
+            },
+            "fill_support": {
+              "Finetune": 0.7434782608695653
+            },
+            "stroke_diagnostic": {
+              "score": 7.405797101449275,
+              "side_score": 1.0,
+              "width_scores": [
+                0.9565217391304348,
+                0.6956521739130435
+              ],
+              "span_pixels": 26.0,
+              "median_coincident_with_q1": false,
+              "median_coincident_with_q3": false,
+              "median_fraction": 0.46153846153846156
+            },
+            "upper_cap_evidence": {
+              "checked": [
+                {
+                  "row_center": 340.0,
+                  "distance": 26.5,
+                  "spine_coverage": 1.0
+                }
+              ],
+              "status": "connected"
+            },
+            "lower_cap_evidence": {
+              "checked": [
+                {
+                  "row_center": 414.5,
+                  "distance": 22.0,
+                  "spine_coverage": 1.0
+                }
+              ],
+              "status": "connected"
+            }
+          },
+          {
+            "category_center_pixel": 344.0,
+            "series": "Retrain",
+            "q1": 0.4998076923076924,
+            "median": 0.5246153846153847,
+            "q3": 0.5459615384615385,
+            "lower_whisker": 0.45942307692307693,
+            "upper_whisker": 0.5828846153846154,
+            "outliers": [],
+            "status": "candidate",
+            "reason": "",
+            "box_strokes_pixel": {
+              "q3": 492.5,
+              "median": 511.0,
+              "q1": 532.5
+            },
+            "whisker_strokes_pixel": {
+              "upper": 460.5,
+              "lower": 567.5,
+              "upper_coincident_with_q3": false,
+              "lower_coincident_with_q1": false
+            },
+            "fill_support": {
+              "Finetune": 0.0
+            },
+            "stroke_diagnostic": {
+              "score": 8.0,
+              "side_score": 1.0,
+              "width_scores": [
+                1.0,
+                1.0
+              ],
+              "span_pixels": 40.0,
+              "median_coincident_with_q1": false,
+              "median_coincident_with_q3": false,
+              "median_fraction": 0.4625
+            },
+            "upper_cap_evidence": {
+              "checked": [
+                {
+                  "row_center": 460.5,
+                  "distance": 32.0,
+                  "spine_coverage": 1.0
+                }
+              ],
+              "status": "connected"
+            },
+            "lower_cap_evidence": {
+              "checked": [
+                {
+                  "row_center": 567.5,
+                  "distance": 35.0,
+                  "spine_coverage": 1.0
+                }
+              ],
+              "status": "connected"
+            }
+          },
+          {
+            "category_center_pixel": 365.5,
+            "series": "Finetune",
+            "q1": 0.5159615384615385,
+            "median": 0.556923076923077,
+            "q3": 0.5800000000000001,
+            "lower_whisker": 0.4888461538461538,
+            "upper_whisker": 0.6169230769230769,
+            "outliers": [],
+            "status": "candidate",
+            "reason": "",
+            "box_strokes_pixel": {
+              "q3": 463.0,
+              "median": 483.0,
+              "q1": 518.5
+            },
+            "whisker_strokes_pixel": {
+              "upper": 431.0,
+              "lower": 542.0,
+              "upper_coincident_with_q3": false,
+              "lower_coincident_with_q1": false
+            },
+            "fill_support": {
+              "Finetune": 0.8480769230769231
+            },
+            "stroke_diagnostic": {
+              "score": 7.913043478260869,
+              "side_score": 1.0,
+              "width_scores": [
+                0.9565217391304348,
+                0.9565217391304348
+              ],
+              "span_pixels": 55.5,
+              "median_coincident_with_q1": false,
+              "median_coincident_with_q3": false,
+              "median_fraction": 0.36036036036036034
+            },
+            "upper_cap_evidence": {
+              "checked": [
+                {
+                  "row_center": 431.0,
+                  "distance": 32.0,
+                  "spine_coverage": 1.0
+                }
+              ],
+              "status": "connected"
+            },
+            "lower_cap_evidence": {
+              "checked": [
+                {
+                  "row_center": 542.0,
+                  "distance": 23.5,
+                  "spine_coverage": 1.0
+                }
+              ],
+              "status": "connected"
+            }
+          },
+          {
+            "category_center_pixel": 411.0,
+            "series": "Retrain",
+            "q1": 0.5742307692307692,
+            "median": 0.6036538461538461,
+            "q3": 0.6221153846153846,
+            "lower_whisker": 0.5061538461538462,
+            "upper_whisker": 0.640576923076923,
+            "outliers": [
+              {
+                "center_pixel": [
+                  411.0,
+                  533.0
+                ],
+                "value": 0.49923076923076926,
+                "ring_score": 22
+              }
+            ],
+            "status": "candidate",
+            "reason": "",
+            "box_strokes_pixel": {
+              "q3": 426.5,
+              "median": 442.5,
+              "q1": 468.0
+            },
+            "whisker_strokes_pixel": {
+              "upper": 410.5,
+              "lower": 527.0,
+              "upper_coincident_with_q3": false,
+              "lower_coincident_with_q1": false
+            },
+            "fill_support": {
+              "Finetune": 0.0
+            },
+            "stroke_diagnostic": {
+              "score": 8.0,
+              "side_score": 1.0,
+              "width_scores": [
+                1.0,
+                1.0
+              ],
+              "span_pixels": 41.5,
+              "median_coincident_with_q1": false,
+              "median_coincident_with_q3": false,
+              "median_fraction": 0.3855421686746988
+            },
+            "upper_cap_evidence": {
+              "checked": [
+                {
+                  "row_center": 410.5,
+                  "distance": 16.0,
+                  "spine_coverage": 1.0
+                }
+              ],
+              "status": "connected"
+            },
+            "lower_cap_evidence": {
+              "checked": [
+                {
+                  "row_center": 527.0,
+                  "distance": 59.0,
+                  "spine_coverage": 1.0
+                }
+              ],
+              "status": "connected"
+            }
+          },
+          {
+            "category_center_pixel": 432.5,
+            "series": "Finetune",
+            "q1": 0.5973076923076923,
+            "median": 0.6186538461538462,
+            "q3": 0.6290384615384615,
+            "lower_whisker": 0.5794230769230769,
+            "upper_whisker": 0.6440384615384616,
+            "outliers": [],
+            "status": "candidate",
+            "reason": "",
+            "box_strokes_pixel": {
+              "q3": 420.5,
+              "median": 429.5,
+              "q1": 448.0
+            },
+            "whisker_strokes_pixel": {
+              "upper": 407.5,
+              "lower": 463.5,
+              "upper_coincident_with_q3": false,
+              "lower_coincident_with_q1": false
+            },
+            "fill_support": {
+              "Finetune": 0.792
+            },
+            "stroke_diagnostic": {
+              "score": 7.7101449275362315,
+              "side_score": 1.0,
+              "width_scores": [
+                0.9565217391304348,
+                0.9565217391304348
+              ],
+              "span_pixels": 27.5,
+              "median_coincident_with_q1": false,
+              "median_coincident_with_q3": false,
+              "median_fraction": 0.32727272727272727
+            },
+            "upper_cap_evidence": {
+              "checked": [
+                {
+                  "row_center": 407.5,
+                  "distance": 13.0,
+                  "spine_coverage": 1.0
+                }
+              ],
+              "status": "connected"
+            },
+            "lower_cap_evidence": {
+              "checked": [
+                {
+                  "row_center": 463.5,
+                  "distance": 15.5,
+                  "spine_coverage": 1.0
+                }
+              ],
+              "status": "connected"
+            }
+          }
+        ],
+        "limitations": [
+          "Only the visible five-number summaries and visible outlier rings are recovered.",
+          "The underlying 20 repeat-level observations are not reconstructed.",
+          "A raster-coincident median or whisker is reported at the visible quartile row with an explicit diagnostic flag.",
+          "This route remains candidate until held-out robustness and comparative promotion gates are complete."
+        ]
+      },
+      "AUC": {
+        "schema_version": 1,
+        "route": "candidate_outline_boxplot_geometry",
+        "status": "candidate",
+        "reason": "",
+        "orientation": "vertical",
+        "plot_bounds": [
+          624,
+          99,
+          966,
+          619
+        ],
+        "calibration": {
+          "y_axis": [
+            99,
+            1.0,
+            619,
+            0.4
+          ]
+        },
+        "colors": {
+          "line": "#464646",
+          "filled_series": {
+            "Finetune": "#4685bd"
+          }
+        },
+        "parameters": {
+          "tolerance": 18,
+          "minimum_box_width": 17,
+          "maximum_box_width": 32
+        },
+        "detected_box_width_pixels": 24.0,
+        "detected_centres": [
+          646.5,
+          668.5,
+          713.5,
+          735.0,
+          780.5,
+          802.0,
+          847.5,
+          869.0,
+          914.5,
+          936.0
+        ],
+        "centre_detection_strokes": [
+          {
+            "row_start": 256,
+            "row_end": 256,
+            "run_left": 724,
+            "run_right": 746,
+            "maximum_run": 23,
+            "row_center": 256.0,
+            "run_center": 735.0
+          },
+          {
+            "row_start": 260,
+            "row_end": 261,
+            "run_left": 724,
+            "run_right": 746,
+            "maximum_run": 23,
+            "row_center": 260.5,
+            "run_center": 735.0
+          },
+          {
+            "row_start": 263,
+            "row_end": 264,
+            "run_left": 724,
+            "run_right": 746,
+            "maximum_run": 23,
+            "row_center": 263.5,
+            "run_center": 735.0
+          },
+          {
+            "row_start": 291,
+            "row_end": 292,
+            "run_left": 657,
+            "run_right": 680,
+            "maximum_run": 24,
+            "row_center": 291.5,
+            "run_center": 668.5
+          },
+          {
+            "row_start": 294,
+            "row_end": 295,
+            "run_left": 657,
+            "run_right": 680,
+            "maximum_run": 24,
+            "row_center": 294.5,
+            "run_center": 668.5
+          },
+          {
+            "row_start": 304,
+            "row_end": 305,
+            "run_left": 657,
+            "run_right": 680,
+            "maximum_run": 24,
+            "row_center": 304.5,
+            "run_center": 668.5
+          },
+          {
+            "row_start": 315,
+            "row_end": 315,
+            "run_left": 769,
+            "run_right": 792,
+            "maximum_run": 24,
+            "row_center": 315.0,
+            "run_center": 780.5
+          },
+          {
+            "row_start": 319,
+            "row_end": 319,
+            "run_left": 791,
+            "run_right": 813,
+            "maximum_run": 23,
+            "row_center": 319.0,
+            "run_center": 802.0
+          },
+          {
+            "row_start": 325,
+            "row_end": 326,
+            "run_left": 791,
+            "run_right": 813,
+            "maximum_run": 23,
+            "row_center": 325.5,
+            "run_center": 802.0
+          },
+          {
+            "row_start": 333,
+            "row_end": 334,
+            "run_left": 769,
+            "run_right": 792,
+            "maximum_run": 24,
+            "row_center": 333.5,
+            "run_center": 780.5
+          },
+          {
+            "row_start": 336,
+            "row_end": 337,
+            "run_left": 791,
+            "run_right": 813,
+            "maximum_run": 23,
+            "row_center": 336.5,
+            "run_center": 802.0
+          },
+          {
+            "row_start": 367,
+            "row_end": 368,
+            "run_left": 635,
+            "run_right": 658,
+            "maximum_run": 24,
+            "row_center": 367.5,
+            "run_center": 646.5
+          },
+          {
+            "row_start": 368,
+            "row_end": 368,
+            "run_left": 769,
+            "run_right": 792,
+            "maximum_run": 24,
+            "row_center": 368.0,
+            "run_center": 780.5
+          },
+          {
+            "row_start": 370,
+            "row_end": 373,
+            "run_left": 925,
+            "run_right": 947,
+            "maximum_run": 23,
+            "row_center": 371.5,
+            "run_center": 936.0
+          },
+          {
+            "row_start": 379,
+            "row_end": 379,
+            "run_left": 925,
+            "run_right": 947,
+            "maximum_run": 23,
+            "row_center": 379.0,
+            "run_center": 936.0
+          },
+          {
+            "row_start": 380,
+            "row_end": 381,
+            "run_left": 635,
+            "run_right": 658,
+            "maximum_run": 24,
+            "row_center": 380.5,
+            "run_center": 646.5
+          },
+          {
+            "row_start": 382,
+            "row_end": 382,
+            "run_left": 702,
+            "run_right": 725,
+            "maximum_run": 24,
+            "row_center": 382.0,
+            "run_center": 713.5
+          },
+          {
+            "row_start": 389,
+            "row_end": 390,
+            "run_left": 903,
+            "run_right": 926,
+            "maximum_run": 24,
+            "row_center": 389.5,
+            "run_center": 914.5
+          },
+          {
+            "row_start": 397,
+            "row_end": 397,
+            "run_left": 702,
+            "run_right": 725,
+            "maximum_run": 24,
+            "row_center": 397.0,
+            "run_center": 713.5
+          },
+          {
+            "row_start": 399,
+            "row_end": 400,
+            "run_left": 635,
+            "run_right": 658,
+            "maximum_run": 24,
+            "row_center": 399.5,
+            "run_center": 646.5
+          },
+          {
+            "row_start": 404,
+            "row_end": 405,
+            "run_left": 903,
+            "run_right": 926,
+            "maximum_run": 24,
+            "row_center": 404.5,
+            "run_center": 914.5
+          },
+          {
+            "row_start": 409,
+            "row_end": 409,
+            "run_left": 702,
+            "run_right": 725,
+            "maximum_run": 24,
+            "row_center": 409.0,
+            "run_center": 713.5
+          },
+          {
+            "row_start": 424,
+            "row_end": 424,
+            "run_left": 903,
+            "run_right": 926,
+            "maximum_run": 24,
+            "row_center": 424.0,
+            "run_center": 914.5
+          },
+          {
+            "row_start": 449,
+            "row_end": 450,
+            "run_left": 858,
+            "run_right": 880,
+            "maximum_run": 23,
+            "row_center": 449.5,
+            "run_center": 869.0
+          },
+          {
+            "row_start": 467,
+            "row_end": 468,
+            "run_left": 836,
+            "run_right": 859,
+            "maximum_run": 24,
+            "row_center": 467.5,
+            "run_center": 847.5
+          },
+          {
+            "row_start": 473,
+            "row_end": 474,
+            "run_left": 858,
+            "run_right": 880,
+            "maximum_run": 23,
+            "row_center": 473.5,
+            "run_center": 869.0
+          },
+          {
+            "row_start": 482,
+            "row_end": 483,
+            "run_left": 836,
+            "run_right": 859,
+            "maximum_run": 24,
+            "row_center": 482.5,
+            "run_center": 847.5
+          },
+          {
+            "row_start": 497,
+            "row_end": 498,
+            "run_left": 858,
+            "run_right": 880,
+            "maximum_run": 23,
+            "row_center": 497.5,
+            "run_center": 869.0
+          },
+          {
+            "row_start": 519,
+            "row_end": 520,
+            "run_left": 836,
+            "run_right": 859,
+            "maximum_run": 24,
+            "row_center": 519.5,
+            "run_center": 847.5
+          },
+          {
+            "row_start": 618,
+            "row_end": 618,
+            "run_left": 626,
+            "run_right": 656,
+            "maximum_run": 31,
+            "row_center": 618.0,
+            "run_center": 641.0
+          }
+        ],
+        "groups": [
+          {
+            "category_center_pixel": 646.5,
+            "series": "Retrain",
+            "q1": 0.6532692307692308,
+            "median": 0.6751923076923076,
+            "q3": 0.6901923076923078,
+            "lower_whisker": 0.6411538461538462,
+            "upper_whisker": 0.7282692307692308,
+            "outliers": [
+              {
+                "center_pixel": [
+                  646.5,
+                  452.0
+                ],
+                "value": 0.5926923076923077,
+                "ring_score": 28
+              }
+            ],
+            "status": "candidate",
+            "reason": "",
+            "box_strokes_pixel": {
+              "q3": 367.5,
+              "median": 380.5,
+              "q1": 399.5
+            },
+            "whisker_strokes_pixel": {
+              "upper": 334.5,
+              "lower": 410.0,
+              "upper_coincident_with_q3": false,
+              "lower_coincident_with_q1": false
+            },
+            "fill_support": {
+              "Finetune": 0.0
+            },
+            "stroke_diagnostic": {
+              "score": 7.888888888888889,
+              "side_score": 1.0,
+              "width_scores": [
+                1.0,
+                1.0
+              ],
+              "span_pixels": 32.0,
+              "median_coincident_with_q1": false,
+              "median_coincident_with_q3": false,
+              "median_fraction": 0.40625
+            },
+            "upper_cap_evidence": {
+              "checked": [
+                {
+                  "row_center": 334.5,
+                  "distance": 33.0,
+                  "spine_coverage": 1.0
+                }
+              ],
+              "status": "connected"
+            },
+            "lower_cap_evidence": {
+              "checked": [
+                {
+                  "row_center": 410.0,
+                  "distance": 10.5,
+                  "spine_coverage": 1.0
+                }
+              ],
+              "status": "connected"
+            }
+          },
+          {
+            "category_center_pixel": 668.5,
+            "series": "Finetune",
+            "q1": 0.7628846153846154,
+            "median": 0.7744230769230769,
+            "q3": 0.7778846153846154,
+            "lower_whisker": 0.7501923076923077,
+            "upper_whisker": 0.7865384615384615,
+            "outliers": [
+              {
+                "center_pixel": [
+                  668.5,
+                  324.0
+                ],
+                "value": 0.7403846153846154,
+                "ring_score": 19
+              }
+            ],
+            "status": "candidate",
+            "reason": "",
+            "box_strokes_pixel": {
+              "q3": 291.5,
+              "median": 294.5,
+              "q1": 304.5
+            },
+            "whisker_strokes_pixel": {
+              "upper": 284.0,
+              "lower": 315.5,
+              "upper_coincident_with_q3": false,
+              "lower_coincident_with_q1": false
+            },
+            "fill_support": {
+              "Finetune": 0.5714285714285714
+            },
+            "stroke_diagnostic": {
+              "score": 7.361111111111111,
+              "side_score": 1.0,
+              "width_scores": [
+                1.0,
+                1.0
+              ],
+              "span_pixels": 13.0,
+              "median_coincident_with_q1": false,
+              "median_coincident_with_q3": false,
+              "median_fraction": 0.23076923076923078
+            },
+            "upper_cap_evidence": {
+              "checked": [
+                {
+                  "row_center": 284.0,
+                  "distance": 7.5,
+                  "spine_coverage": 1.0
+                }
+              ],
+              "status": "connected"
+            },
+            "lower_cap_evidence": {
+              "checked": [
+                {
+                  "row_center": 315.5,
+                  "distance": 11.0,
+                  "spine_coverage": 1.0
+                }
+              ],
+              "status": "connected"
+            }
+          },
+          {
+            "category_center_pixel": 713.5,
+            "series": "Retrain",
+            "q1": 0.6423076923076922,
+            "median": 0.6561538461538462,
+            "q3": 0.6734615384615386,
+            "lower_whisker": 0.6198076923076923,
+            "upper_whisker": 0.7040384615384615,
+            "outliers": [],
+            "status": "candidate",
+            "reason": "",
+            "box_strokes_pixel": {
+              "q3": 382.0,
+              "median": 397.0,
+              "q1": 409.0
+            },
+            "whisker_strokes_pixel": {
+              "upper": 355.5,
+              "lower": 428.5,
+              "upper_coincident_with_q3": false,
+              "lower_coincident_with_q1": false
+            },
+            "fill_support": {
+              "Finetune": 0.0
+            },
+            "stroke_diagnostic": {
+              "score": 7.75,
+              "side_score": 1.0,
+              "width_scores": [
+                1.0,
+                1.0
+              ],
+              "span_pixels": 27.0,
+              "median_coincident_with_q1": false,
+              "median_coincident_with_q3": false,
+              "median_fraction": 0.5555555555555556
+            },
+            "upper_cap_evidence": {
+              "checked": [
+                {
+                  "row_center": 355.5,
+                  "distance": 26.5,
+                  "spine_coverage": 1.0
+                }
+              ],
+              "status": "connected"
+            },
+            "lower_cap_evidence": {
+              "checked": [
+                {
+                  "row_center": 428.5,
+                  "distance": 19.5,
+                  "spine_coverage": 1.0
+                }
+              ],
+              "status": "connected"
+            }
+          },
+          {
+            "category_center_pixel": 735.0,
+            "series": "Finetune",
+            "q1": 0.8101923076923077,
+            "median": 0.8136538461538462,
+            "q3": 0.8188461538461538,
+            "lower_whisker": 0.8003846153846154,
+            "upper_whisker": 0.8257692307692308,
+            "outliers": [
+              {
+                "center_pixel": [
+                  735.0,
+                  278.0
+                ],
+                "value": 0.7934615384615384,
+                "ring_score": 26
+              }
+            ],
+            "status": "candidate",
+            "reason": "",
+            "box_strokes_pixel": {
+              "q3": 256.0,
+              "median": 260.5,
+              "q1": 263.5
+            },
+            "whisker_strokes_pixel": {
+              "upper": 250.0,
+              "lower": 272.0,
+              "upper_coincident_with_q3": false,
+              "lower_coincident_with_q1": false
+            },
+            "fill_support": {
+              "Finetune": 0.3619047619047619
+            },
+            "stroke_diagnostic": {
+              "score": 7.125,
+              "side_score": 1.0,
+              "width_scores": [
+                0.9583333333333334,
+                0.9583333333333334
+              ],
+              "span_pixels": 7.5,
+              "median_coincident_with_q1": false,
+              "median_coincident_with_q3": false,
+              "median_fraction": 0.6
+            },
+            "upper_cap_evidence": {
+              "checked": [
+                {
+                  "row_center": 250.0,
+                  "distance": 6.0,
+                  "spine_coverage": 1.0
+                }
+              ],
+              "status": "connected"
+            },
+            "lower_cap_evidence": {
+              "checked": [
+                {
+                  "row_center": 272.0,
+                  "distance": 8.5,
+                  "spine_coverage": 1.0
+                }
+              ],
+              "status": "connected"
+            }
+          },
+          {
+            "category_center_pixel": 780.5,
+            "series": "Retrain",
+            "q1": 0.6896153846153846,
+            "median": 0.729423076923077,
+            "q3": 0.7507692307692307,
+            "lower_whisker": 0.6440384615384616,
+            "upper_whisker": 0.8061538461538462,
+            "outliers": [],
+            "status": "candidate",
+            "reason": "",
+            "box_strokes_pixel": {
+              "q3": 315.0,
+              "median": 333.5,
+              "q1": 368.0
+            },
+            "whisker_strokes_pixel": {
+              "upper": 267.0,
+              "lower": 407.5,
+              "upper_coincident_with_q3": false,
+              "lower_coincident_with_q1": false
+            },
+            "fill_support": {
+              "Finetune": 0.0
+            },
+            "stroke_diagnostic": {
+              "score": 8.0,
+              "side_score": 1.0,
+              "width_scores": [
+                1.0,
+                1.0
+              ],
+              "span_pixels": 53.0,
+              "median_coincident_with_q1": false,
+              "median_coincident_with_q3": false,
+              "median_fraction": 0.3490566037735849
+            },
+            "upper_cap_evidence": {
+              "checked": [
+                {
+                  "row_center": 267.0,
+                  "distance": 48.0,
+                  "spine_coverage": 1.0
+                }
+              ],
+              "status": "connected"
+            },
+            "lower_cap_evidence": {
+              "checked": [
+                {
+                  "row_center": 407.5,
+                  "distance": 39.5,
+                  "spine_coverage": 1.0
+                }
+              ],
+              "status": "connected"
+            }
+          },
+          {
+            "category_center_pixel": 802.0,
+            "series": "Finetune",
+            "q1": 0.7259615384615384,
+            "median": 0.7386538461538461,
+            "q3": 0.7461538461538462,
+            "lower_whisker": 0.6994230769230769,
+            "upper_whisker": 0.7559615384615385,
+            "outliers": [],
+            "status": "candidate",
+            "reason": "",
+            "box_strokes_pixel": {
+              "q3": 319.0,
+              "median": 325.5,
+              "q1": 336.5
+            },
+            "whisker_strokes_pixel": {
+              "upper": 310.5,
+              "lower": 359.5,
+              "upper_coincident_with_q3": false,
+              "lower_coincident_with_q1": false
+            },
+            "fill_support": {
+              "Finetune": 0.7108843537414966
+            },
+            "stroke_diagnostic": {
+              "score": 7.402777777777778,
+              "side_score": 1.0,
+              "width_scores": [
+                0.9583333333333334,
+                0.9583333333333334
+              ],
+              "span_pixels": 17.5,
+              "median_coincident_with_q1": false,
+              "median_coincident_with_q3": false,
+              "median_fraction": 0.37142857142857144
+            },
+            "upper_cap_evidence": {
+              "checked": [
+                {
+                  "row_center": 310.5,
+                  "distance": 8.5,
+                  "spine_coverage": 1.0
+                }
+              ],
+              "status": "connected"
+            },
+            "lower_cap_evidence": {
+              "checked": [
+                {
+                  "row_center": 359.5,
+                  "distance": 23.0,
+                  "spine_coverage": 1.0
+                }
+              ],
+              "status": "connected"
+            }
+          },
+          {
+            "category_center_pixel": 847.5,
+            "series": "Retrain",
+            "q1": 0.5148076923076923,
+            "median": 0.5575,
+            "q3": 0.5748076923076924,
+            "lower_whisker": 0.4657692307692307,
+            "upper_whisker": 0.6215384615384616,
+            "outliers": [],
+            "status": "candidate",
+            "reason": "",
+            "box_strokes_pixel": {
+              "q3": 467.5,
+              "median": 482.5,
+              "q1": 519.5
+            },
+            "whisker_strokes_pixel": {
+              "upper": 427.0,
+              "lower": 562.0,
+              "upper_coincident_with_q3": false,
+              "lower_coincident_with_q1": false
+            },
+            "fill_support": {
+              "Finetune": 0.0
+            },
+            "stroke_diagnostic": {
+              "score": 8.0,
+              "side_score": 1.0,
+              "width_scores": [
+                1.0,
+                1.0
+              ],
+              "span_pixels": 52.0,
+              "median_coincident_with_q1": false,
+              "median_coincident_with_q3": false,
+              "median_fraction": 0.28846153846153844
+            },
+            "upper_cap_evidence": {
+              "checked": [
+                {
+                  "row_center": 427.0,
+                  "distance": 40.5,
+                  "spine_coverage": 1.0
+                }
+              ],
+              "status": "connected"
+            },
+            "lower_cap_evidence": {
+              "checked": [
+                {
+                  "row_center": 562.0,
+                  "distance": 42.5,
+                  "spine_coverage": 1.0
+                }
+              ],
+              "status": "connected"
+            }
+          },
+          {
+            "category_center_pixel": 869.0,
+            "series": "Finetune",
+            "q1": 0.5401923076923076,
+            "median": 0.5678846153846154,
+            "q3": 0.5955769230769231,
+            "lower_whisker": 0.4986538461538462,
+            "upper_whisker": 0.6648076923076923,
+            "outliers": [],
+            "status": "candidate",
+            "reason": "",
+            "box_strokes_pixel": {
+              "q3": 449.5,
+              "median": 473.5,
+              "q1": 497.5
+            },
+            "whisker_strokes_pixel": {
+              "upper": 389.5,
+              "lower": 533.5,
+              "upper_coincident_with_q3": false,
+              "lower_coincident_with_q1": false
+            },
+            "fill_support": {
+              "Finetune": 0.8243386243386244
+            },
+            "stroke_diagnostic": {
+              "score": 7.916666666666667,
+              "side_score": 1.0,
+              "width_scores": [
+                0.9583333333333334,
+                0.9583333333333334
+              ],
+              "span_pixels": 48.0,
+              "median_coincident_with_q1": false,
+              "median_coincident_with_q3": false,
+              "median_fraction": 0.5
+            },
+            "upper_cap_evidence": {
+              "checked": [
+                {
+                  "row_center": 389.5,
+                  "distance": 60.0,
+                  "spine_coverage": 1.0
+                }
+              ],
+              "status": "connected"
+            },
+            "lower_cap_evidence": {
+              "checked": [
+                {
+                  "row_center": 533.5,
+                  "distance": 36.0,
+                  "spine_coverage": 1.0
+                }
+              ],
+              "status": "connected"
+            }
+          },
+          {
+            "category_center_pixel": 914.5,
+            "series": "Retrain",
+            "q1": 0.625,
+            "median": 0.6475,
+            "q3": 0.6648076923076923,
+            "lower_whisker": 0.5805769230769231,
+            "upper_whisker": 0.7075,
+            "outliers": [],
+            "status": "candidate",
+            "reason": "",
+            "box_strokes_pixel": {
+              "q3": 389.5,
+              "median": 404.5,
+              "q1": 424.0
+            },
+            "whisker_strokes_pixel": {
+              "upper": 352.5,
+              "lower": 462.5,
+              "upper_coincident_with_q3": false,
+              "lower_coincident_with_q1": false
+            },
+            "fill_support": {
+              "Finetune": 0.0
+            },
+            "stroke_diagnostic": {
+              "score": 7.958333333333333,
+              "side_score": 1.0,
+              "width_scores": [
+                1.0,
+                1.0
+              ],
+              "span_pixels": 34.5,
+              "median_coincident_with_q1": false,
+              "median_coincident_with_q3": false,
+              "median_fraction": 0.43478260869565216
+            },
+            "upper_cap_evidence": {
+              "checked": [
+                {
+                  "row_center": 352.5,
+                  "distance": 37.0,
+                  "spine_coverage": 1.0
+                }
+              ],
+              "status": "connected"
+            },
+            "lower_cap_evidence": {
+              "checked": [
+                {
+                  "row_center": 462.5,
+                  "distance": 38.5,
+                  "spine_coverage": 1.0
+                }
+              ],
+              "status": "connected"
+            }
+          },
+          {
+            "category_center_pixel": 936.0,
+            "series": "Finetune",
+            "q1": 0.676923076923077,
+            "median": 0.676923076923077,
+            "q3": 0.6855769230769231,
+            "lower_whisker": 0.6728846153846154,
+            "upper_whisker": 0.6994230769230769,
+            "outliers": [
+              {
+                "center_pixel": [
+                  936.0,
+                  410.0
+                ],
+                "value": 0.6411538461538462,
+                "ring_score": 68
+              }
+            ],
+            "status": "candidate",
+            "reason": "",
+            "box_strokes_pixel": {
+              "q3": 371.5,
+              "median": 379.0,
+              "q1": 379.0
+            },
+            "whisker_strokes_pixel": {
+              "upper": 359.5,
+              "lower": 382.5,
+              "upper_coincident_with_q3": false,
+              "lower_coincident_with_q1": false
+            },
+            "fill_support": {
+              "Finetune": 0.9047619047619048
+            },
+            "stroke_diagnostic": {
+              "score": 7.125,
+              "side_score": 1.0,
+              "width_scores": [
+                0.9583333333333334,
+                0.9583333333333334
+              ],
+              "span_pixels": 7.5,
+              "median_coincident_with_q1": true,
+              "median_coincident_with_q3": false,
+              "median_fraction": 1.0
+            },
+            "upper_cap_evidence": {
+              "checked": [
+                {
+                  "row_center": 359.5,
+                  "distance": 12.0,
+                  "spine_coverage": 1.0
+                }
+              ],
+              "status": "connected"
+            },
+            "lower_cap_evidence": {
+              "checked": [
+                {
+                  "row_center": 382.5,
+                  "distance": 3.5,
+                  "spine_coverage": 1.0
+                }
+              ],
+              "status": "connected"
+            }
+          }
+        ],
+        "limitations": [
+          "Only the visible five-number summaries and visible outlier rings are recovered.",
+          "The underlying 20 repeat-level observations are not reconstructed.",
+          "A raster-coincident median or whisker is reported at the visible quartile row with an explicit diagnostic flag.",
+          "This route remains candidate until held-out robustness and comparative promotion gates are complete."
+        ]
+      }
+    }
+  },
+  "output_rows": 20,
+  "recreation_scope": "visible five-number summaries and visible outlier rings only",
+  "source_data_validation": {
+    "status": "not_comparable",
+    "reason": "the official supplementary workbook exposes comparison P values, not the 20 repeat-level values used to draw Fig. 4b",
+    "source_url": "https://static-content.springer.com/esm/art%3A10.1038%2Fs41591-026-04303-y/MediaObjects/41591_2026_4303_MOESM3_ESM.xlsx"
+  },
+  "webplotdigitizer_comparison": "not_compared",
+  "limitations": [
+    "The 20 repeat-level observations cannot be recovered from the boxplot raster and are not fabricated.",
+    "Values are quantized by the official raster at approximately 0.001154 axis units per pixel.",
+    "When a median or whisker is not separately raster-resolvable, the candidate reports the visible pixel-row coincidence and records an explicit flag.",
+    "The outline route remains candidate pending held-out publication figures and a fair same-input WebPlotDigitizer comparison."
+  ]
+}

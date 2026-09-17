@@ -1,0 +1,66 @@
+{
+  "skill": "survey-design-checklist",
+  "version": "0.1.0",
+  "source_book": "Survey Curious? Start-Up Guide — Bergman, Chinco, Hartzmark, Sussman (2020)",
+  "darwin_compatible": true,
+  "test_cases": [
+    {
+      "id": "should-trigger-01",
+      "type": "should_trigger",
+      "prompt": "I'm designing a survey to measure investor risk preferences. What should I think about before writing the questions?",
+      "expected_behavior": "Activate survey-design-checklist. Walk through the three-constraint check (ability × willingness × interpretation) as the upstream gate before any question is fixed.",
+      "notes": "Direct trigger: 'designing a survey' + 'what should I think about' = upstream gate concern."
+    },
+    {
+      "id": "should-trigger-02",
+      "type": "should_trigger",
+      "prompt": "Here's my draft question: 'How do you think the market will perform short-term?' Is this a good survey question?",
+      "expected_behavior": "Activate survey-design-checklist. Run the three-constraint check on this item. Likely flag interpretation (attribute substitution risk on 'market' and 'short-term'). Defer to clarity-concreteness for the wording fix.",
+      "notes": "Specific draft + 'is this good' = primary signal."
+    },
+    {
+      "id": "should-trigger-03",
+      "type": "should_trigger",
+      "prompt": "I have a survey draft with 12 items. Can you review it before I run pilot?",
+      "expected_behavior": "Activate survey-design-checklist (umbrella). Either run the three-constraint check across all 12 items, or split: this skill handles the per-question gate; clarity-concreteness and avoid-leading-questions handle specific fixes.",
+      "notes": "Whole-instrument review before pilot = the umbrella firing."
+    },
+    {
+      "id": "should-trigger-04",
+      "type": "should_trigger",
+      "prompt": "I'm setting up an online experiment on household finance. What's the best-practice checklist for question design?",
+      "expected_behavior": "Activate survey-design-checklist. Explain the three-layer framework (questions → operations → platform) and focus on the question-design layer with the three-constraint check.",
+      "notes": "Use of 'best-practice checklist' on design = primary signal."
+    },
+    {
+      "id": "should-not-trigger-01",
+      "type": "should_not_trigger",
+      "prompt": "My survey just finished. Can I claim that '63% of investors are risk-averse'?",
+      "expected_behavior": "Do NOT primarily activate survey-design-checklist. The user has results, not draft questions. Defer to relative-vs-absolute (interpretation of the level claim). Survey-design-checklist is wrong layer.",
+      "notes": "Trap: 'survey' word is in both, but context is post-collection not pre-design."
+    },
+    {
+      "id": "should-not-trigger-02",
+      "type": "should_not_trigger",
+      "prompt": "Should I run my survey on MTurk, Prolific, or CloudResearch?",
+      "expected_behavior": "Do NOT activate survey-design-checklist. This is a platform-selection concern. Defer to platform-selection.",
+      "notes": "Trap: question is about survey logistics, not question design."
+    },
+    {
+      "id": "should-not-trigger-03",
+      "type": "should_not_trigger",
+      "prompt": "Should my survey include attention checks? How many?",
+      "expected_behavior": "Do NOT activate survey-design-checklist. The user has a specific question about checks. Defer to quality-checks-diagnosis.",
+      "notes": "Trap: 'should I ...' framing could pull in this skill; but the question is check-design, which is in a different skill."
+    },
+    {
+      "id": "edge-01",
+      "type": "edge_case",
+      "prompt": "I want to study what makes investors take risks. Should I run a survey or use brokerage data?",
+      "expected_behavior": "Edge: this is method-choice, not question design. Survey-design-checklist should NOT fire — the better answer is to clarify whether a survey is the right tool at all. Acknowledge the upstream question and offer guidance on tradeoffs.",
+      "notes": "Edge: this is one step above the skill's purview. Don't fire unless the user already decided on a survey."
+    }
+  ],
+  "minimum_pass_rate": 0.85,
+  "notes": "Trap of the month: every prompt mentioning 'survey' will look like a trigger. Discipline: the umbrella fires only at the design-by-questions stage. Result interpretation, platform selection, and check-design belong to other skills."
+}

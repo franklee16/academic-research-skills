@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 私密安全报告
+    url: https://github.com/xuedai-mayi/humanities-report-writing-suite/security/advisories/new
+    about: 涉及文件覆盖、隐私泄露、密钥或恶意内容时，请使用私密漏洞报告

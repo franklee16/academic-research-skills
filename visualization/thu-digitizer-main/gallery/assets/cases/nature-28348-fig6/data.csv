@@ -1,0 +1,43 @@
+record_id,kind,panel,series,frequency,value,number_of_terms,metric,source_status
+1,bar,drug,ChEMBL,1,0.04,4555,term coverage,official_source_data_mapped
+2,bar,drug,ChEMBL,10,0.55,1384,term coverage,official_source_data_mapped
+3,bar,drug,ChEMBL,100,0.88,246,term coverage,official_source_data_mapped
+4,bar,drug,ChEMBL+,1,0.08,8254,term coverage,official_source_data_mapped
+5,bar,drug,ChEMBL+,10,0.67,1690,term coverage,official_source_data_mapped
+6,bar,drug,ChEMBL+,100,0.91,255,term coverage,official_source_data_mapped
+7,bar,drug,Combined,1,0.12,13298,term coverage,official_source_data_mapped
+8,bar,drug,Combined,10,0.81,2034,term coverage,official_source_data_mapped
+9,bar,drug,Combined,100,0.96,269,term coverage,official_source_data_mapped
+10,bar,drug,DrugBank,1,0.03,3673,term coverage,official_source_data_mapped
+11,bar,drug,DrugBank,10,0.49,1226,term coverage,official_source_data_mapped
+12,bar,drug,DrugBank,100,0.8,224,term coverage,official_source_data_mapped
+13,bar,drug,DrugBank+,1,0.06,6556,term coverage,official_source_data_mapped
+14,bar,drug,DrugBank+,10,0.63,1574,term coverage,official_source_data_mapped
+15,bar,drug,DrugBank+,100,0.91,253,term coverage,official_source_data_mapped
+16,bar,drug,FDA SRS,1,0.04,4630,term coverage,official_source_data_mapped
+17,bar,drug,FDA SRS,10,0.55,1370,term coverage,official_source_data_mapped
+18,bar,drug,FDA SRS,100,0.87,242,term coverage,official_source_data_mapped
+19,bar,drug,NCIt,1,0.02,1802,term coverage,official_source_data_mapped
+20,bar,drug,NCIt,10,0.31,768,term coverage,official_source_data_mapped
+21,bar,drug,NCIt,100,0.72,200,term coverage,official_source_data_mapped
+22,bar,drug,NCIt+,1,0.09,9660,term coverage,official_source_data_mapped
+23,bar,drug,NCIt+,10,0.74,1861,term coverage,official_source_data_mapped
+24,bar,drug,NCIt+,100,0.95,266,term coverage,official_source_data_mapped
+25,bar,disease,Combined,1,0.14,11768,term coverage,official_source_data_mapped
+26,bar,disease,Combined,10,0.42,2961,term coverage,official_source_data_mapped
+27,bar,disease,Combined,100,0.63,486,term coverage,official_source_data_mapped
+28,bar,disease,Disease Ontology,1,0.04,3081,term coverage,official_source_data_mapped
+29,bar,disease,Disease Ontology,10,0.17,1186,term coverage,official_source_data_mapped
+30,bar,disease,Disease Ontology,100,0.38,293,term coverage,official_source_data_mapped
+31,bar,disease,Disease Ontology+,1,0.06,4754,term coverage,official_source_data_mapped
+32,bar,disease,Disease Ontology+,10,0.23,1590,term coverage,official_source_data_mapped
+33,bar,disease,Disease Ontology+,100,0.47,363,term coverage,official_source_data_mapped
+34,bar,disease,NCIt,1,0.04,3062,term coverage,official_source_data_mapped
+35,bar,disease,NCIt,10,0.11,759,term coverage,official_source_data_mapped
+36,bar,disease,NCIt,100,0.14,107,term coverage,official_source_data_mapped
+37,bar,disease,NCIt+,1,0.11,9738,term coverage,official_source_data_mapped
+38,bar,disease,NCIt+,10,0.36,2504,term coverage,official_source_data_mapped
+39,bar,disease,NCIt+,100,0.54,413,term coverage,official_source_data_mapped
+40,bar,disease,OncoTree,1,0.0,340,term coverage,official_source_data_mapped
+41,bar,disease,OncoTree,10,0.02,136,term coverage,official_source_data_mapped
+42,bar,disease,OncoTree,100,0.04,28,term coverage,official_source_data_mapped

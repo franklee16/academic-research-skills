@@ -1,0 +1,5 @@
+interface:
+  display_name: "Econometric Research Writing"
+  short_description: "Research grilling, econometrics, citations, and DOCX output"
+  # Note: The '$' prefix is platform-specific syntax used by some agent runtimes to refer to local skills.
+  default_prompt: "Use $econometric-research-writing to grill my empirical design with data-grounded questions and recommended answers before running the agreed analysis."

@@ -1,0 +1,50 @@
+record_id,metric,source_value,recreated_value,absolute_error,validation_status
+1,set total vs calibrated left bar,170,170.1,0.1,derived_exact_and_pixel_validated
+2,set total vs calibrated left bar,145,142.9,2.1,derived_exact_and_pixel_validated
+3,set total vs calibrated left bar,555,557.8,2.8,derived_exact_and_pixel_validated
+4,set total vs calibrated left bar,589,588.4,0.6,derived_exact_and_pixel_validated
+5,set total vs calibrated left bar,537,537.4,0.4,derived_exact_and_pixel_validated
+6,set total vs calibrated left bar,308,306.1,1.9,derived_exact_and_pixel_validated
+7,set total vs calibrated left bar,310,309.5,0.5,derived_exact_and_pixel_validated
+8,set total vs calibrated left bar,150,149.7,0.3,derived_exact_and_pixel_validated
+9,set total vs calibrated left bar,227,227.9,0.9,derived_exact_and_pixel_validated
+10,set total vs calibrated left bar,479,479.6,0.6,derived_exact_and_pixel_validated
+11,set total vs calibrated left bar,565,564.6,0.4,derived_exact_and_pixel_validated
+12,set total vs calibrated left bar,181,180.3,0.7,derived_exact_and_pixel_validated
+13,set total vs calibrated left bar,150,149.7,0.3,derived_exact_and_pixel_validated
+14,set total vs calibrated left bar,904,904.8,0.8,derived_exact_and_pixel_validated
+15,set total vs calibrated left bar,1227,1227.9,0.9,derived_exact_and_pixel_validated
+16,set total vs calibrated left bar,688,687.1,0.9,derived_exact_and_pixel_validated
+17,set total vs calibrated left bar,691,690.5,0.5,derived_exact_and_pixel_validated
+18,set total vs calibrated left bar,885,884.4,0.6,derived_exact_and_pixel_validated
+19,set total vs calibrated left bar,1080,1081.6,1.6,derived_exact_and_pixel_validated
+20,printed intersection count,998,998,0,printed_label_transcribed
+21,printed intersection count,802,802,0,printed_label_transcribed
+22,printed intersection count,684,684,0,printed_label_transcribed
+23,printed intersection count,675,675,0,printed_label_transcribed
+24,printed intersection count,500,500,0,printed_label_transcribed
+25,printed intersection count,441,441,0,printed_label_transcribed
+26,printed intersection count,287,287,0,printed_label_transcribed
+27,printed intersection count,278,278,0,printed_label_transcribed
+28,printed intersection count,229,229,0,printed_label_transcribed
+29,printed intersection count,124,124,0,printed_label_transcribed
+30,printed intersection count,117,117,0,printed_label_transcribed
+31,printed intersection count,110,110,0,printed_label_transcribed
+32,printed intersection count,110,110,0,printed_label_transcribed
+33,printed intersection count,108,108,0,printed_label_transcribed
+34,printed intersection count,83,83,0,printed_label_transcribed
+35,printed intersection count,71,71,0,printed_label_transcribed
+36,printed intersection count,62,62,0,printed_label_transcribed
+37,printed intersection count,41,41,0,printed_label_transcribed
+38,printed intersection count,40,40,0,printed_label_transcribed
+39,printed intersection count,40,40,0,printed_label_transcribed
+40,printed intersection count,39,39,0,printed_label_transcribed
+41,printed intersection count,38,38,0,printed_label_transcribed
+42,printed intersection count,37,37,0,printed_label_transcribed
+43,printed intersection count,28,28,0,printed_label_transcribed
+44,printed intersection count,23,23,0,printed_label_transcribed
+45,printed intersection count,21,21,0,printed_label_transcribed
+46,printed intersection count,16,16,0,printed_label_transcribed
+47,printed intersection count,9,9,0,printed_label_transcribed
+48,printed intersection count,7,7,0,printed_label_transcribed
+49,printed intersection count,4,4,0,printed_label_transcribed

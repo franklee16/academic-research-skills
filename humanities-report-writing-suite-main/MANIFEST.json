@@ -1,0 +1,57 @@
+{
+  "bundle_name": "humanities-report-writing-suite",
+  "bundle_version": "2.0.0",
+  "language": "zh-CN",
+  "type": "multi-skill-installer-bundle",
+  "contains_executable_scripts": false,
+  "install_order": [
+    "humanizer",
+    "source-grounded-research",
+    "word-report-delivery",
+    "humanities-report-writer"
+  ],
+  "skills": [
+    {
+      "name": "humanizer",
+      "version": "2.9.1",
+      "required": true,
+      "role": "final Chinese prose review",
+      "license": "MIT",
+      "copyright": "Copyright (c) 2025 Siqi Chen",
+      "upstream": "https://github.com/blader/humanizer",
+      "upstream_commit": "523374dee72d67c7b2b5f858ea0094ffda49c3ac",
+      "path": "skills/humanizer",
+      "skill_sha256": "70938F3CCE25970E1DED5FDD194B755C03F1E4E4FA76820958CE78F86B677B1A",
+      "license_sha256": "4AC4810254AB36D45419141AEB8E69BF50652CFAFE5B2DAB947D06D44E5CBF96"
+    },
+    {
+      "name": "source-grounded-research",
+      "version": "1.0.0",
+      "required_when": "web research, current facts, examples, policies, literature or citations are requested",
+      "role": "source discovery and verification",
+      "license": "bundle-authored",
+      "path": "skills/source-grounded-research"
+    },
+    {
+      "name": "word-report-delivery",
+      "version": "1.0.0",
+      "required_when": "a Word or .docx deliverable is requested",
+      "role": "Word formatting, generation and visual verification",
+      "license": "bundle-authored",
+      "path": "skills/word-report-delivery"
+    },
+    {
+      "name": "humanities-report-writer",
+      "version": "2.0.0",
+      "required": true,
+      "role": "orchestrator for material review, evidence control and report writing",
+      "license": "bundle-authored",
+      "path": "skills/humanities-report-writer",
+      "dependencies": [
+        "humanizer",
+        "source-grounded-research when web research is requested",
+        "word-report-delivery when Word output is requested"
+      ]
+    }
+  ]
+}

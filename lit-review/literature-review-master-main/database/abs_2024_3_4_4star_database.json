@@ -1,0 +1,2810 @@
+[
+  {
+    "id": "1",
+    "field": "ACCOUNT",
+    "title": "Accounting Review",
+    "ajg_2024": "4*"
+  },
+  {
+    "id": "2",
+    "field": "ACCOUNT",
+    "title": "Accounting, Organizations and Society",
+    "ajg_2024": "4*"
+  },
+  {
+    "id": "3",
+    "field": "ACCOUNT",
+    "title": "Journal of Accounting and Economics",
+    "ajg_2024": "4*"
+  },
+  {
+    "id": "4",
+    "field": "ACCOUNT",
+    "title": "Journal of Accounting Research",
+    "ajg_2024": "4*"
+  },
+  {
+    "id": "119",
+    "field": "ECON",
+    "title": "American Economic Review",
+    "ajg_2024": "4*"
+  },
+  {
+    "id": "120",
+    "field": "ECON",
+    "title": "Annals of Statistics",
+    "ajg_2024": "4*"
+  },
+  {
+    "id": "121",
+    "field": "ECON",
+    "title": "Econometrica",
+    "ajg_2024": "4*"
+  },
+  {
+    "id": "122",
+    "field": "ECON",
+    "title": "Journal of Political Economy",
+    "ajg_2024": "4*"
+  },
+  {
+    "id": "123",
+    "field": "ECON",
+    "title": "Quarterly Journal of Economics",
+    "ajg_2024": "4*"
+  },
+  {
+    "id": "124",
+    "field": "ECON",
+    "title": "Review of Economic Studies",
+    "ajg_2024": "4*"
+  },
+  {
+    "id": "474",
+    "field": "ENT-SBM",
+    "title": "Entrepreneurship Theory and Practice",
+    "ajg_2024": "4*"
+  },
+  {
+    "id": "475",
+    "field": "ENT-SBM",
+    "title": "Journal of Business Venturing",
+    "ajg_2024": "4*"
+  },
+  {
+    "id": "510",
+    "field": "ETHICS-CSR-MAN",
+    "title": "Academy of Management Annals",
+    "ajg_2024": "4*"
+  },
+  {
+    "id": "511",
+    "field": "ETHICS-CSR-MAN",
+    "title": "Academy of Management Journal",
+    "ajg_2024": "4*"
+  },
+  {
+    "id": "512",
+    "field": "ETHICS-CSR-MAN",
+    "title": "Academy of Management Review",
+    "ajg_2024": "4*"
+  },
+  {
+    "id": "513",
+    "field": "ETHICS-CSR-MAN",
+    "title": "Administrative Science Quarterly",
+    "ajg_2024": "4*"
+  },
+  {
+    "id": "514",
+    "field": "ETHICS-CSR-MAN",
+    "title": "Journal of Management",
+    "ajg_2024": "4*"
+  },
+  {
+    "id": "621",
+    "field": "FINANCE",
+    "title": "Journal of Finance",
+    "ajg_2024": "4*"
+  },
+  {
+    "id": "622",
+    "field": "FINANCE",
+    "title": "Journal of Financial Economics",
+    "ajg_2024": "4*"
+  },
+  {
+    "id": "623",
+    "field": "FINANCE",
+    "title": "Review of Financial Studies",
+    "ajg_2024": "4*"
+  },
+  {
+    "id": "747",
+    "field": "HRM&EMP",
+    "title": "Human Resource Management Journal (UK)",
+    "ajg_2024": "4*"
+  },
+  {
+    "id": "805",
+    "field": "IB&AREA",
+    "title": "Journal of International Business Studies",
+    "ajg_2024": "4*"
+  },
+  {
+    "id": "861",
+    "field": "INFO MAN",
+    "title": "Information Systems Research",
+    "ajg_2024": "4*"
+  },
+  {
+    "id": "862",
+    "field": "INFO MAN",
+    "title": "Journal of the Association for Information Systems",
+    "ajg_2024": "4*"
+  },
+  {
+    "id": "863",
+    "field": "INFO MAN",
+    "title": "MIS Quarterly: Management Information Systems",
+    "ajg_2024": "4*"
+  },
+  {
+    "id": "964",
+    "field": "INNOV",
+    "title": "Research Policy",
+    "ajg_2024": "4*"
+  },
+  {
+    "id": "1007",
+    "field": "MDEV&EDU",
+    "title": "Academy of Management Learning and Education",
+    "ajg_2024": "4*"
+  },
+  {
+    "id": "1064",
+    "field": "MKT",
+    "title": "Journal of Consumer Psychology",
+    "ajg_2024": "4*"
+  },
+  {
+    "id": "1065",
+    "field": "MKT",
+    "title": "Journal of Consumer Research",
+    "ajg_2024": "4*"
+  },
+  {
+    "id": "1066",
+    "field": "MKT",
+    "title": "Journal of Marketing",
+    "ajg_2024": "4*"
+  },
+  {
+    "id": "1067",
+    "field": "MKT",
+    "title": "Journal of Marketing Research",
+    "ajg_2024": "4*"
+  },
+  {
+    "id": "1068",
+    "field": "MKT",
+    "title": "Journal of the Academy of Marketing Science",
+    "ajg_2024": "4*"
+  },
+  {
+    "id": "1069",
+    "field": "MKT",
+    "title": "Marketing Science",
+    "ajg_2024": "4*"
+  },
+  {
+    "id": "1142",
+    "field": "OPS&TECH",
+    "title": "Journal of Operations Management",
+    "ajg_2024": "4*"
+  },
+  {
+    "id": "1216",
+    "field": "OR&MANSCI",
+    "title": "Management Science",
+    "ajg_2024": "4*"
+  },
+  {
+    "id": "1217",
+    "field": "OR&MANSCI",
+    "title": "Operations Research",
+    "ajg_2024": "4*"
+  },
+  {
+    "id": "1293",
+    "field": "ORG STUD",
+    "title": "Organization Science",
+    "ajg_2024": "4*"
+  },
+  {
+    "id": "1331",
+    "field": "PSYCH (GENERAL)",
+    "title": "Psychological Science",
+    "ajg_2024": "4*"
+  },
+  {
+    "id": "1403",
+    "field": "PSYCH (WOP-OB)",
+    "title": "Journal of Applied Psychology",
+    "ajg_2024": "4*"
+  },
+  {
+    "id": "1404",
+    "field": "PSYCH (WOP-OB)",
+    "title": "Personnel Psychology",
+    "ajg_2024": "4*"
+  },
+  {
+    "id": "1470",
+    "field": "PUB SEC",
+    "title": "Public Administration Review",
+    "ajg_2024": "4*"
+  },
+  {
+    "id": "1681",
+    "field": "SOC SCI",
+    "title": "American Journal of Political Science",
+    "ajg_2024": "4*"
+  },
+  {
+    "id": "1682",
+    "field": "SOC SCI",
+    "title": "American Journal of Sociology",
+    "ajg_2024": "4*"
+  },
+  {
+    "id": "1683",
+    "field": "SOC SCI",
+    "title": "American Political Science Review",
+    "ajg_2024": "4*"
+  },
+  {
+    "id": "1684",
+    "field": "SOC SCI",
+    "title": "American Sociological Review",
+    "ajg_2024": "4*"
+  },
+  {
+    "id": "1685",
+    "field": "SOC SCI",
+    "title": "Annual Review of Sociology",
+    "ajg_2024": "4*"
+  },
+  {
+    "id": "1796",
+    "field": "STRAT",
+    "title": "Strategic Management Journal",
+    "ajg_2024": "4*"
+  },
+  {
+    "id": "5",
+    "field": "ACCOUNT",
+    "title": "Contemporary Accounting Research",
+    "ajg_2024": "4"
+  },
+  {
+    "id": "6",
+    "field": "ACCOUNT",
+    "title": "Review of Accounting Studies",
+    "ajg_2024": "4"
+  },
+  {
+    "id": "90",
+    "field": "BUS HIST & ECON HIST",
+    "title": "Business History",
+    "ajg_2024": "4"
+  },
+  {
+    "id": "91",
+    "field": "BUS HIST & ECON HIST",
+    "title": "Business History Review",
+    "ajg_2024": "4"
+  },
+  {
+    "id": "92",
+    "field": "BUS HIST & ECON HIST",
+    "title": "Economic History Review",
+    "ajg_2024": "4"
+  },
+  {
+    "id": "125",
+    "field": "ECON",
+    "title": "American Economic Journal: Applied Economics",
+    "ajg_2024": "4"
+  },
+  {
+    "id": "126",
+    "field": "ECON",
+    "title": "American Economic Journal: Macroeconomics",
+    "ajg_2024": "4"
+  },
+  {
+    "id": "127",
+    "field": "ECON",
+    "title": "Biometrika",
+    "ajg_2024": "4"
+  },
+  {
+    "id": "128",
+    "field": "ECON",
+    "title": "Econometric Theory",
+    "ajg_2024": "4"
+  },
+  {
+    "id": "129",
+    "field": "ECON",
+    "title": "Economic Journal",
+    "ajg_2024": "4"
+  },
+  {
+    "id": "130",
+    "field": "ECON",
+    "title": "International Economic Review",
+    "ajg_2024": "4"
+  },
+  {
+    "id": "131",
+    "field": "ECON",
+    "title": "Journal of Business and Economic Statistics",
+    "ajg_2024": "4"
+  },
+  {
+    "id": "132",
+    "field": "ECON",
+    "title": "Journal of Econometrics",
+    "ajg_2024": "4"
+  },
+  {
+    "id": "133",
+    "field": "ECON",
+    "title": "Journal of Economic Literature",
+    "ajg_2024": "4"
+  },
+  {
+    "id": "134",
+    "field": "ECON",
+    "title": "Journal of Economic Perspectives",
+    "ajg_2024": "4"
+  },
+  {
+    "id": "135",
+    "field": "ECON",
+    "title": "Journal of Economic Theory",
+    "ajg_2024": "4"
+  },
+  {
+    "id": "136",
+    "field": "ECON",
+    "title": "Journal of International Economics",
+    "ajg_2024": "4"
+  },
+  {
+    "id": "137",
+    "field": "ECON",
+    "title": "Journal of Labor Economics",
+    "ajg_2024": "4"
+  },
+  {
+    "id": "138",
+    "field": "ECON",
+    "title": "Journal of Monetary Economics",
+    "ajg_2024": "4"
+  },
+  {
+    "id": "139",
+    "field": "ECON",
+    "title": "Journal of the American Statistical Association",
+    "ajg_2024": "4"
+  },
+  {
+    "id": "140",
+    "field": "ECON",
+    "title": "Journal of the European Economic Association",
+    "ajg_2024": "4"
+  },
+  {
+    "id": "141",
+    "field": "ECON",
+    "title": "Journal of the Royal Statistical Society. Series B: Statistical Methodology",
+    "ajg_2024": "4"
+  },
+  {
+    "id": "142",
+    "field": "ECON",
+    "title": "Quantitative Economics",
+    "ajg_2024": "4"
+  },
+  {
+    "id": "143",
+    "field": "ECON",
+    "title": "RAND Journal of Economics",
+    "ajg_2024": "4"
+  },
+  {
+    "id": "144",
+    "field": "ECON",
+    "title": "Review of Economics and Statistics",
+    "ajg_2024": "4"
+  },
+  {
+    "id": "145",
+    "field": "ECON",
+    "title": "Theoretical Economics",
+    "ajg_2024": "4"
+  },
+  {
+    "id": "476",
+    "field": "ENT-SBM",
+    "title": "Strategic Entrepreneurship Journal",
+    "ajg_2024": "4"
+  },
+  {
+    "id": "515",
+    "field": "ETHICS-CSR-MAN",
+    "title": "Academy of Management Perspectives",
+    "ajg_2024": "4"
+  },
+  {
+    "id": "516",
+    "field": "ETHICS-CSR-MAN",
+    "title": "British Journal of Management",
+    "ajg_2024": "4"
+  },
+  {
+    "id": "517",
+    "field": "ETHICS-CSR-MAN",
+    "title": "Journal of Management Studies",
+    "ajg_2024": "4"
+  },
+  {
+    "id": "624",
+    "field": "FINANCE",
+    "title": "Journal of Corporate Finance",
+    "ajg_2024": "4"
+  },
+  {
+    "id": "625",
+    "field": "FINANCE",
+    "title": "Journal of Financial and Quantitative Analysis",
+    "ajg_2024": "4"
+  },
+  {
+    "id": "626",
+    "field": "FINANCE",
+    "title": "Journal of Financial Intermediation",
+    "ajg_2024": "4"
+  },
+  {
+    "id": "627",
+    "field": "FINANCE",
+    "title": "Journal of Money, Credit and Banking",
+    "ajg_2024": "4"
+  },
+  {
+    "id": "628",
+    "field": "FINANCE",
+    "title": "Review of Finance",
+    "ajg_2024": "4"
+  },
+  {
+    "id": "748",
+    "field": "HRM&EMP",
+    "title": "British Journal of Industrial Relations",
+    "ajg_2024": "4"
+  },
+  {
+    "id": "749",
+    "field": "HRM&EMP",
+    "title": "Human Resource Management (USA)",
+    "ajg_2024": "4"
+  },
+  {
+    "id": "750",
+    "field": "HRM&EMP",
+    "title": "Industrial Relations",
+    "ajg_2024": "4"
+  },
+  {
+    "id": "751",
+    "field": "HRM&EMP",
+    "title": "Work, Employment and Society",
+    "ajg_2024": "4"
+  },
+  {
+    "id": "806",
+    "field": "IB&AREA",
+    "title": "Journal of World Business",
+    "ajg_2024": "4"
+  },
+  {
+    "id": "864",
+    "field": "INFO MAN",
+    "title": "European Journal of Information Systems",
+    "ajg_2024": "4"
+  },
+  {
+    "id": "865",
+    "field": "INFO MAN",
+    "title": "Information Systems Journal",
+    "ajg_2024": "4"
+  },
+  {
+    "id": "866",
+    "field": "INFO MAN",
+    "title": "Journal of Information Technology",
+    "ajg_2024": "4"
+  },
+  {
+    "id": "867",
+    "field": "INFO MAN",
+    "title": "Journal of Management Information Systems",
+    "ajg_2024": "4"
+  },
+  {
+    "id": "868",
+    "field": "INFO MAN",
+    "title": "Journal of Strategic Information Systems",
+    "ajg_2024": "4"
+  },
+  {
+    "id": "965",
+    "field": "INNOV",
+    "title": "Journal of Product Innovation Management",
+    "ajg_2024": "4"
+  },
+  {
+    "id": "1070",
+    "field": "MKT",
+    "title": "International Journal of Research in Marketing",
+    "ajg_2024": "4"
+  },
+  {
+    "id": "1071",
+    "field": "MKT",
+    "title": "Journal of Retailing",
+    "ajg_2024": "4"
+  },
+  {
+    "id": "1143",
+    "field": "OPS&TECH",
+    "title": "International Journal of Operations and Production Management",
+    "ajg_2024": "4"
+  },
+  {
+    "id": "1144",
+    "field": "OPS&TECH",
+    "title": "Journal of Supply Chain Management",
+    "ajg_2024": "4"
+  },
+  {
+    "id": "1145",
+    "field": "OPS&TECH",
+    "title": "Production and Operations Management",
+    "ajg_2024": "4"
+  },
+  {
+    "id": "1218",
+    "field": "OR&MANSCI",
+    "title": "European Journal of Operational Research",
+    "ajg_2024": "4"
+  },
+  {
+    "id": "1219",
+    "field": "OR&MANSCI",
+    "title": "IEEE Transactions on Evolutionary Computation",
+    "ajg_2024": "4"
+  },
+  {
+    "id": "1220",
+    "field": "OR&MANSCI",
+    "title": "Mathematical Programming",
+    "ajg_2024": "4"
+  },
+  {
+    "id": "1294",
+    "field": "ORG STUD",
+    "title": "Human Relations",
+    "ajg_2024": "4"
+  },
+  {
+    "id": "1295",
+    "field": "ORG STUD",
+    "title": "Leadership Quarterly",
+    "ajg_2024": "4"
+  },
+  {
+    "id": "1296",
+    "field": "ORG STUD",
+    "title": "Organization Studies",
+    "ajg_2024": "4"
+  },
+  {
+    "id": "1297",
+    "field": "ORG STUD",
+    "title": "Organizational Research Methods",
+    "ajg_2024": "4"
+  },
+  {
+    "id": "1332",
+    "field": "PSYCH (GENERAL)",
+    "title": "Annual Review of Psychology",
+    "ajg_2024": "4"
+  },
+  {
+    "id": "1333",
+    "field": "PSYCH (GENERAL)",
+    "title": "Behavioral and Brain Sciences",
+    "ajg_2024": "4"
+  },
+  {
+    "id": "1334",
+    "field": "PSYCH (GENERAL)",
+    "title": "Cognition",
+    "ajg_2024": "4"
+  },
+  {
+    "id": "1335",
+    "field": "PSYCH (GENERAL)",
+    "title": "Current Directions in Psychological Science",
+    "ajg_2024": "4"
+  },
+  {
+    "id": "1336",
+    "field": "PSYCH (GENERAL)",
+    "title": "Journal of Experimental Psychology: Applied",
+    "ajg_2024": "4"
+  },
+  {
+    "id": "1337",
+    "field": "PSYCH (GENERAL)",
+    "title": "Journal of Experimental Psychology: General",
+    "ajg_2024": "4"
+  },
+  {
+    "id": "1338",
+    "field": "PSYCH (GENERAL)",
+    "title": "Journal of Experimental Social Psychology",
+    "ajg_2024": "4"
+  },
+  {
+    "id": "1339",
+    "field": "PSYCH (GENERAL)",
+    "title": "Journal of Personality and Social Psychology",
+    "ajg_2024": "4"
+  },
+  {
+    "id": "1340",
+    "field": "PSYCH (GENERAL)",
+    "title": "Nature Human Behaviour",
+    "ajg_2024": "4"
+  },
+  {
+    "id": "1341",
+    "field": "PSYCH (GENERAL)",
+    "title": "Personality and Social Psychology Bulletin",
+    "ajg_2024": "4"
+  },
+  {
+    "id": "1342",
+    "field": "PSYCH (GENERAL)",
+    "title": "Psychological Bulletin",
+    "ajg_2024": "4"
+  },
+  {
+    "id": "1343",
+    "field": "PSYCH (GENERAL)",
+    "title": "Psychological Review",
+    "ajg_2024": "4"
+  },
+  {
+    "id": "1405",
+    "field": "PSYCH (WOP-OB)",
+    "title": "Journal of Occupational and Organizational Psychology",
+    "ajg_2024": "4"
+  },
+  {
+    "id": "1406",
+    "field": "PSYCH (WOP-OB)",
+    "title": "Journal of Occupational Health Psychology",
+    "ajg_2024": "4"
+  },
+  {
+    "id": "1407",
+    "field": "PSYCH (WOP-OB)",
+    "title": "Journal of Organizational Behavior",
+    "ajg_2024": "4"
+  },
+  {
+    "id": "1408",
+    "field": "PSYCH (WOP-OB)",
+    "title": "Journal of Vocational Behavior",
+    "ajg_2024": "4"
+  },
+  {
+    "id": "1409",
+    "field": "PSYCH (WOP-OB)",
+    "title": "Organizational Behavior and Human Decision Processes",
+    "ajg_2024": "4"
+  },
+  {
+    "id": "1410",
+    "field": "PSYCH (WOP-OB)",
+    "title": "Work and Stress",
+    "ajg_2024": "4"
+  },
+  {
+    "id": "1471",
+    "field": "PUB SEC",
+    "title": "Governance",
+    "ajg_2024": "4"
+  },
+  {
+    "id": "1472",
+    "field": "PUB SEC",
+    "title": "Journal of Public Administration Research and Theory",
+    "ajg_2024": "4"
+  },
+  {
+    "id": "1473",
+    "field": "PUB SEC",
+    "title": "Public Administration",
+    "ajg_2024": "4"
+  },
+  {
+    "id": "1474",
+    "field": "PUB SEC",
+    "title": "Public Management Review",
+    "ajg_2024": "4"
+  },
+  {
+    "id": "1541",
+    "field": "REGIONAL STUDIES, PLANNING AND ENVIRONMENT",
+    "title": "Economic Geography",
+    "ajg_2024": "4"
+  },
+  {
+    "id": "1542",
+    "field": "REGIONAL STUDIES, PLANNING AND ENVIRONMENT",
+    "title": "Journal of Economic Geography",
+    "ajg_2024": "4"
+  },
+  {
+    "id": "1543",
+    "field": "REGIONAL STUDIES, PLANNING AND ENVIRONMENT",
+    "title": "Regional Studies",
+    "ajg_2024": "4"
+  },
+  {
+    "id": "1573",
+    "field": "SECTOR",
+    "title": "Annals of Tourism Research",
+    "ajg_2024": "4"
+  },
+  {
+    "id": "1574",
+    "field": "SECTOR",
+    "title": "Journal of Service Research",
+    "ajg_2024": "4"
+  },
+  {
+    "id": "1575",
+    "field": "SECTOR",
+    "title": "Journal of Travel Research",
+    "ajg_2024": "4"
+  },
+  {
+    "id": "1576",
+    "field": "SECTOR",
+    "title": "Tourism Management",
+    "ajg_2024": "4"
+  },
+  {
+    "id": "1577",
+    "field": "SECTOR",
+    "title": "Transportation Research, Series B: Methodological",
+    "ajg_2024": "4"
+  },
+  {
+    "id": "1686",
+    "field": "SOC SCI",
+    "title": "Environment and Planning D: Society and Space",
+    "ajg_2024": "4"
+  },
+  {
+    "id": "1687",
+    "field": "SOC SCI",
+    "title": "International Organization",
+    "ajg_2024": "4"
+  },
+  {
+    "id": "1688",
+    "field": "SOC SCI",
+    "title": "International Studies Quarterly",
+    "ajg_2024": "4"
+  },
+  {
+    "id": "1689",
+    "field": "SOC SCI",
+    "title": "Journal of Politics",
+    "ajg_2024": "4"
+  },
+  {
+    "id": "1690",
+    "field": "SOC SCI",
+    "title": "Risk Analysis",
+    "ajg_2024": "4"
+  },
+  {
+    "id": "1691",
+    "field": "SOC SCI",
+    "title": "Social Science and Medicine",
+    "ajg_2024": "4"
+  },
+  {
+    "id": "1692",
+    "field": "SOC SCI",
+    "title": "Socio-Economic Review",
+    "ajg_2024": "4"
+  },
+  {
+    "id": "1693",
+    "field": "SOC SCI",
+    "title": "Sociology",
+    "ajg_2024": "4"
+  },
+  {
+    "id": "1797",
+    "field": "STRAT",
+    "title": "Global Strategy Journal",
+    "ajg_2024": "4"
+  },
+  {
+    "id": "1798",
+    "field": "STRAT",
+    "title": "Long Range Planning",
+    "ajg_2024": "4"
+  },
+  {
+    "id": "7",
+    "field": "ACCOUNT",
+    "title": "Abacus",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "8",
+    "field": "ACCOUNT",
+    "title": "Accounting and Business Research",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "9",
+    "field": "ACCOUNT",
+    "title": "Accounting Forum",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "10",
+    "field": "ACCOUNT",
+    "title": "Accounting Horizons",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "11",
+    "field": "ACCOUNT",
+    "title": "Accounting, Auditing and Accountability Journal",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "12",
+    "field": "ACCOUNT",
+    "title": "Auditing",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "13",
+    "field": "ACCOUNT",
+    "title": "Behavioral Research in Accounting",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "14",
+    "field": "ACCOUNT",
+    "title": "British Accounting Review",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "15",
+    "field": "ACCOUNT",
+    "title": "British Tax Review",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "16",
+    "field": "ACCOUNT",
+    "title": "Critical Perspectives on Accounting",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "17",
+    "field": "ACCOUNT",
+    "title": "European Accounting Review",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "18",
+    "field": "ACCOUNT",
+    "title": "Financial Accountability and Management",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "19",
+    "field": "ACCOUNT",
+    "title": "Foundations and Trends in Accounting",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "20",
+    "field": "ACCOUNT",
+    "title": "International Journal of Accounting",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "21",
+    "field": "ACCOUNT",
+    "title": "Journal of Accounting and Public Policy",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "22",
+    "field": "ACCOUNT",
+    "title": "Journal of Accounting Literature",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "23",
+    "field": "ACCOUNT",
+    "title": "Journal of Accounting, Auditing and Finance",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "24",
+    "field": "ACCOUNT",
+    "title": "Journal of Business Finance and Accounting",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "25",
+    "field": "ACCOUNT",
+    "title": "Journal of Financial Reporting",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "26",
+    "field": "ACCOUNT",
+    "title": "Journal of International Accounting, Auditing and Taxation",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "27",
+    "field": "ACCOUNT",
+    "title": "Journal of the American Taxation Association",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "28",
+    "field": "ACCOUNT",
+    "title": "Management Accounting Research",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "93",
+    "field": "BUS HIST & ECON HIST",
+    "title": "Enterprise and Society",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "94",
+    "field": "BUS HIST & ECON HIST",
+    "title": "European Review of Economic History",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "95",
+    "field": "BUS HIST & ECON HIST",
+    "title": "Explorations in Economic History",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "96",
+    "field": "BUS HIST & ECON HIST",
+    "title": "Journal of Economic History",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "146",
+    "field": "ECON",
+    "title": "American Economic Journal: Economic Policy",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "147",
+    "field": "ECON",
+    "title": "American Economic Journal: Microeconomics",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "148",
+    "field": "ECON",
+    "title": "American Economic Review: Insights",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "149",
+    "field": "ECON",
+    "title": "American Journal of Agricultural Economics",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "150",
+    "field": "ECON",
+    "title": "Annual Review of Economics",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "151",
+    "field": "ECON",
+    "title": "Brookings Papers on Economic Activity",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "152",
+    "field": "ECON",
+    "title": "Cambridge Journal of Economics",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "153",
+    "field": "ECON",
+    "title": "Canadian Journal of Economics",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "154",
+    "field": "ECON",
+    "title": "Computational Statistics and Data Analysis",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "155",
+    "field": "ECON",
+    "title": "Ecological Economics",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "156",
+    "field": "ECON",
+    "title": "Econometric Reviews",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "157",
+    "field": "ECON",
+    "title": "Econometrics Journal",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "158",
+    "field": "ECON",
+    "title": "Economic Development and Cultural Change",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "159",
+    "field": "ECON",
+    "title": "Economic Inquiry",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "160",
+    "field": "ECON",
+    "title": "Economic Policy",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "161",
+    "field": "ECON",
+    "title": "Economic Theory",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "162",
+    "field": "ECON",
+    "title": "Economica",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "163",
+    "field": "ECON",
+    "title": "Economics Letters",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "164",
+    "field": "ECON",
+    "title": "Energy Economics",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "165",
+    "field": "ECON",
+    "title": "Environmental and Resource Economics",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "166",
+    "field": "ECON",
+    "title": "European Economic Review",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "167",
+    "field": "ECON",
+    "title": "European Review of Agricultural Economics",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "168",
+    "field": "ECON",
+    "title": "Experimental Economics",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "169",
+    "field": "ECON",
+    "title": "Games and Economic Behavior",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "170",
+    "field": "ECON",
+    "title": "Health Economics (United Kingdom)",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "171",
+    "field": "ECON",
+    "title": "IMF Economic Review",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "172",
+    "field": "ECON",
+    "title": "International Journal of Industrial Organization",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "173",
+    "field": "ECON",
+    "title": "International Statistical Review",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "174",
+    "field": "ECON",
+    "title": "Journal of Agricultural Economics",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "175",
+    "field": "ECON",
+    "title": "Journal of Applied Econometrics",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "176",
+    "field": "ECON",
+    "title": "Journal of Comparative Economics",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "177",
+    "field": "ECON",
+    "title": "Journal of Computational and Graphical Statistics",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "178",
+    "field": "ECON",
+    "title": "Journal of Development Economics",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "179",
+    "field": "ECON",
+    "title": "Journal of Economic Behavior and Organization",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "180",
+    "field": "ECON",
+    "title": "Journal of Economic Dynamics and Control",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "181",
+    "field": "ECON",
+    "title": "Journal of Economic Growth",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "182",
+    "field": "ECON",
+    "title": "Journal of Environmental Economics and Management",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "183",
+    "field": "ECON",
+    "title": "Journal of Health Economics",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "184",
+    "field": "ECON",
+    "title": "Journal of Human Capital",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "185",
+    "field": "ECON",
+    "title": "Journal of Human Resources",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "186",
+    "field": "ECON",
+    "title": "Journal of Industrial Economics",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "187",
+    "field": "ECON",
+    "title": "Journal of Institutional Economics",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "188",
+    "field": "ECON",
+    "title": "Journal of Law and Economics",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "189",
+    "field": "ECON",
+    "title": "Journal of Law, Economics, and Organization",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "190",
+    "field": "ECON",
+    "title": "Journal of Legal Studies",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "191",
+    "field": "ECON",
+    "title": "Journal of Mathematical Economics",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "192",
+    "field": "ECON",
+    "title": "Journal of Multivariate Analysis",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "193",
+    "field": "ECON",
+    "title": "Journal of Population Economics",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "194",
+    "field": "ECON",
+    "title": "Journal of Public Economics",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "195",
+    "field": "ECON",
+    "title": "Journal of Risk and Uncertainty",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "196",
+    "field": "ECON",
+    "title": "Journal of the Association of Environmental and Resource Economists",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "197",
+    "field": "ECON",
+    "title": "Journal of the Royal Statistical Society. Series A: Statistics in Society",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "198",
+    "field": "ECON",
+    "title": "Journal of the Royal Statistical Society. Series C: Applied Statistics",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "199",
+    "field": "ECON",
+    "title": "Journal of Time Series Analysis",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "200",
+    "field": "ECON",
+    "title": "Journal of Urban Economics",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "201",
+    "field": "ECON",
+    "title": "Labour Economics",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "202",
+    "field": "ECON",
+    "title": "Land Economics",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "203",
+    "field": "ECON",
+    "title": "Oxford Bulletin of Economics and Statistics",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "204",
+    "field": "ECON",
+    "title": "Oxford Economic Papers",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "205",
+    "field": "ECON",
+    "title": "Public Choice",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "206",
+    "field": "ECON",
+    "title": "Real Estate Economics",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "207",
+    "field": "ECON",
+    "title": "Review of Economic Dynamics",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "208",
+    "field": "ECON",
+    "title": "Review of Income and Wealth",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "209",
+    "field": "ECON",
+    "title": "Scandinavian Journal of Economics",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "210",
+    "field": "ECON",
+    "title": "Scandinavian Journal of Statistics",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "211",
+    "field": "ECON",
+    "title": "Social Choice and Welfare",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "212",
+    "field": "ECON",
+    "title": "World Bank Economic Review",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "477",
+    "field": "ENT-SBM",
+    "title": "Entrepreneurship and Regional Development",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "478",
+    "field": "ENT-SBM",
+    "title": "Family Business Review",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "479",
+    "field": "ENT-SBM",
+    "title": "International Journal of Entrepreneurial Behaviour and Research",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "480",
+    "field": "ENT-SBM",
+    "title": "International Small Business Journal",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "481",
+    "field": "ENT-SBM",
+    "title": "Journal of Small Business Management",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "482",
+    "field": "ENT-SBM",
+    "title": "Small Business Economics",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "518",
+    "field": "ETHICS-CSR-MAN",
+    "title": "Academy of Management Discoveries",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "519",
+    "field": "ETHICS-CSR-MAN",
+    "title": "Business and Society",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "520",
+    "field": "ETHICS-CSR-MAN",
+    "title": "Business Ethics Quarterly",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "521",
+    "field": "ETHICS-CSR-MAN",
+    "title": "California Management Review",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "522",
+    "field": "ETHICS-CSR-MAN",
+    "title": "European Management Review",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "523",
+    "field": "ETHICS-CSR-MAN",
+    "title": "Gender and Society",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "524",
+    "field": "ETHICS-CSR-MAN",
+    "title": "Gender, Work and Organization",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "525",
+    "field": "ETHICS-CSR-MAN",
+    "title": "Harvard Business Review",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "526",
+    "field": "ETHICS-CSR-MAN",
+    "title": "International Journal of Management Reviews",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "527",
+    "field": "ETHICS-CSR-MAN",
+    "title": "Journal of Business Ethics",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "528",
+    "field": "ETHICS-CSR-MAN",
+    "title": "Journal of Business Research",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "529",
+    "field": "ETHICS-CSR-MAN",
+    "title": "Journal of Management Inquiry",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "530",
+    "field": "ETHICS-CSR-MAN",
+    "title": "MIT Sloan Management Review",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "629",
+    "field": "FINANCE",
+    "title": "Annual Review of Financial Economics",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "630",
+    "field": "FINANCE",
+    "title": "Corporate Governance: An International Review",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "631",
+    "field": "FINANCE",
+    "title": "European Financial Management",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "632",
+    "field": "FINANCE",
+    "title": "European Journal of Finance",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "633",
+    "field": "FINANCE",
+    "title": "Finance and Stochastics",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "634",
+    "field": "FINANCE",
+    "title": "Financial Analysts Journal",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "635",
+    "field": "FINANCE",
+    "title": "Financial Management",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "636",
+    "field": "FINANCE",
+    "title": "Financial Markets, Institutions and Instruments",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "637",
+    "field": "FINANCE",
+    "title": "Financial Review",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "638",
+    "field": "FINANCE",
+    "title": "Insurance: Mathematics and Economics",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "639",
+    "field": "FINANCE",
+    "title": "International Journal of Central Banking",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "640",
+    "field": "FINANCE",
+    "title": "International Journal of Finance and Economics",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "641",
+    "field": "FINANCE",
+    "title": "International Review of Financial Analysis",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "642",
+    "field": "FINANCE",
+    "title": "Journal of Banking and Finance",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "643",
+    "field": "FINANCE",
+    "title": "Journal of Commodity Markets",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "644",
+    "field": "FINANCE",
+    "title": "Journal of Empirical Finance",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "645",
+    "field": "FINANCE",
+    "title": "Journal of Financial Econometrics",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "646",
+    "field": "FINANCE",
+    "title": "Journal of Financial Markets",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "647",
+    "field": "FINANCE",
+    "title": "Journal of Financial Research",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "648",
+    "field": "FINANCE",
+    "title": "Journal of Financial Services Research",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "649",
+    "field": "FINANCE",
+    "title": "Journal of Financial Stability",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "650",
+    "field": "FINANCE",
+    "title": "Journal of Futures Markets",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "651",
+    "field": "FINANCE",
+    "title": "Journal of International Financial Markets, Institutions and Money",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "652",
+    "field": "FINANCE",
+    "title": "Journal of International Money and Finance",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "653",
+    "field": "FINANCE",
+    "title": "Journal of Portfolio Management",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "654",
+    "field": "FINANCE",
+    "title": "Journal of Real Estate Finance and Economics",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "655",
+    "field": "FINANCE",
+    "title": "Journal of Risk and Insurance",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "656",
+    "field": "FINANCE",
+    "title": "Mathematical Finance",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "657",
+    "field": "FINANCE",
+    "title": "Quantitative Finance",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "658",
+    "field": "FINANCE",
+    "title": "Review of Asset Pricing Studies",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "659",
+    "field": "FINANCE",
+    "title": "Review of Corporate Finance Studies",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "660",
+    "field": "FINANCE",
+    "title": "Review of Quantitative Finance and Accounting",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "752",
+    "field": "HRM&EMP",
+    "title": "Economic and Industrial Democracy",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "753",
+    "field": "HRM&EMP",
+    "title": "European Journal of Industrial Relations",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "754",
+    "field": "HRM&EMP",
+    "title": "Human Resource Management Review",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "755",
+    "field": "HRM&EMP",
+    "title": "ILR Review",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "756",
+    "field": "HRM&EMP",
+    "title": "Industrial Law Journal",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "757",
+    "field": "HRM&EMP",
+    "title": "Industrial Relations Journal",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "758",
+    "field": "HRM&EMP",
+    "title": "International Journal of Human Resource Management",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "759",
+    "field": "HRM&EMP",
+    "title": "New Technology, Work and Employment",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "760",
+    "field": "HRM&EMP",
+    "title": "Work and Occupations",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "807",
+    "field": "IB&AREA",
+    "title": "African Affairs",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "808",
+    "field": "IB&AREA",
+    "title": "Asia Pacific Journal of Management",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "809",
+    "field": "IB&AREA",
+    "title": "International Business Review",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "810",
+    "field": "IB&AREA",
+    "title": "Journal of Common Market Studies",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "811",
+    "field": "IB&AREA",
+    "title": "Journal of International Business Policy",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "812",
+    "field": "IB&AREA",
+    "title": "Journal of International Management",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "813",
+    "field": "IB&AREA",
+    "title": "Management and Organization Review",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "814",
+    "field": "IB&AREA",
+    "title": "Management International Review",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "815",
+    "field": "IB&AREA",
+    "title": "Multinational Business Review",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "869",
+    "field": "INFO MAN",
+    "title": "Decision Support Systems",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "870",
+    "field": "INFO MAN",
+    "title": "Government Information Quarterly",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "871",
+    "field": "INFO MAN",
+    "title": "Information and Management",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "872",
+    "field": "INFO MAN",
+    "title": "Information and Organization",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "873",
+    "field": "INFO MAN",
+    "title": "Information Society",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "874",
+    "field": "INFO MAN",
+    "title": "Information Systems Frontiers",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "875",
+    "field": "INFO MAN",
+    "title": "Information Technology and People",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "876",
+    "field": "INFO MAN",
+    "title": "International Journal of Electronic Commerce",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "877",
+    "field": "INFO MAN",
+    "title": "Internet Research",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "878",
+    "field": "INFO MAN",
+    "title": "Journal of Computer-Mediated Communication",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "879",
+    "field": "INFO MAN",
+    "title": "Journal of the Association for Information Science and Technology (JASIST)",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "966",
+    "field": "INNOV",
+    "title": "Industry and Innovation",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "967",
+    "field": "INNOV",
+    "title": "Journal of Technology Transfer",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "968",
+    "field": "INNOV",
+    "title": "R and D Management",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "969",
+    "field": "INNOV",
+    "title": "Technological Forecasting and Social Change",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "970",
+    "field": "INNOV",
+    "title": "Technovation",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "1008",
+    "field": "MDEV&EDU",
+    "title": "Management Learning",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "1009",
+    "field": "MDEV&EDU",
+    "title": "Studies in Higher Education",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "1072",
+    "field": "MKT",
+    "title": "European Journal of Marketing",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "1073",
+    "field": "MKT",
+    "title": "Industrial Marketing Management",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "1074",
+    "field": "MKT",
+    "title": "International Marketing Review",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "1075",
+    "field": "MKT",
+    "title": "Journal of Advertising",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "1076",
+    "field": "MKT",
+    "title": "Journal of Advertising Research",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "1077",
+    "field": "MKT",
+    "title": "Journal of Interactive Marketing",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "1078",
+    "field": "MKT",
+    "title": "Journal of International Marketing",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "1079",
+    "field": "MKT",
+    "title": "Journal of Public Policy and Marketing",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "1080",
+    "field": "MKT",
+    "title": "Marketing Letters",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "1081",
+    "field": "MKT",
+    "title": "Marketing Theory",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "1082",
+    "field": "MKT",
+    "title": "Psychology and Marketing",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "1083",
+    "field": "MKT",
+    "title": "Quantitative Marketing and Economics",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "1146",
+    "field": "OPS&TECH",
+    "title": "Computers in Industry",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "1147",
+    "field": "OPS&TECH",
+    "title": "IEEE Transactions on Engineering Management",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "1148",
+    "field": "OPS&TECH",
+    "title": "International Journal of Production Economics",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "1149",
+    "field": "OPS&TECH",
+    "title": "International Journal of Production Research",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "1150",
+    "field": "OPS&TECH",
+    "title": "Journal of Business Logistics",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "1151",
+    "field": "OPS&TECH",
+    "title": "Journal of Purchasing and Supply Management",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "1152",
+    "field": "OPS&TECH",
+    "title": "Manufacturing and Service Operations Management",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "1153",
+    "field": "OPS&TECH",
+    "title": "Production Planning and Control",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "1154",
+    "field": "OPS&TECH",
+    "title": "Supply Chain Management",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "1221",
+    "field": "OR&MANSCI",
+    "title": "ACM Transactions on Modeling and Computer Simulation",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "1222",
+    "field": "OR&MANSCI",
+    "title": "Annals of Operations Research",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "1223",
+    "field": "OR&MANSCI",
+    "title": "Computational Optimization and Applications",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "1224",
+    "field": "OR&MANSCI",
+    "title": "Computers and Operations Research",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "1225",
+    "field": "OR&MANSCI",
+    "title": "Decision Sciences",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "1226",
+    "field": "OR&MANSCI",
+    "title": "Evolutionary Computation",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "1227",
+    "field": "OR&MANSCI",
+    "title": "Fuzzy Optimization and Decision Making",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "1228",
+    "field": "OR&MANSCI",
+    "title": "IEEE Transactions on Cybernetics",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "1229",
+    "field": "OR&MANSCI",
+    "title": "IEEE Transactions on Systems, Man, and Cybernetics: Systems",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "1230",
+    "field": "OR&MANSCI",
+    "title": "IISE Transactions",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "1231",
+    "field": "OR&MANSCI",
+    "title": "INFORMS Journal on Computing",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "1232",
+    "field": "OR&MANSCI",
+    "title": "International Journal of Forecasting",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "1233",
+    "field": "OR&MANSCI",
+    "title": "Journal of Heuristics",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "1234",
+    "field": "OR&MANSCI",
+    "title": "Journal of Optimization Theory and Applications",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "1235",
+    "field": "OR&MANSCI",
+    "title": "Journal of the Operational Research Society",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "1236",
+    "field": "OR&MANSCI",
+    "title": "Mathematics of Operations Research",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "1237",
+    "field": "OR&MANSCI",
+    "title": "Naval Research Logistics",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "1238",
+    "field": "OR&MANSCI",
+    "title": "Omega",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "1239",
+    "field": "OR&MANSCI",
+    "title": "OR Spectrum",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "1240",
+    "field": "OR&MANSCI",
+    "title": "Reliability Engineering and System Safety",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "1241",
+    "field": "OR&MANSCI",
+    "title": "SIAM Journal on Optimization",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "1242",
+    "field": "OR&MANSCI",
+    "title": "Transportation Science",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "1298",
+    "field": "ORG STUD",
+    "title": "Group and Organization Management",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "1299",
+    "field": "ORG STUD",
+    "title": "Organization",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "1300",
+    "field": "ORG STUD",
+    "title": "Organization and Environment",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "1301",
+    "field": "ORG STUD",
+    "title": "Organizational Dynamics",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "1302",
+    "field": "ORG STUD",
+    "title": "Research in Organizational Behavior",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "1303",
+    "field": "ORG STUD",
+    "title": "Research in the Sociology of Organizations",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "1344",
+    "field": "PSYCH (GENERAL)",
+    "title": "British Journal of Psychology",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "1345",
+    "field": "PSYCH (GENERAL)",
+    "title": "British Journal of Social Psychology",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "1346",
+    "field": "PSYCH (GENERAL)",
+    "title": "Cognitive Science",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "1347",
+    "field": "PSYCH (GENERAL)",
+    "title": "European Journal of Social Psychology",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "1348",
+    "field": "PSYCH (GENERAL)",
+    "title": "Journal of Behavioral Decision Making",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "1349",
+    "field": "PSYCH (GENERAL)",
+    "title": "Journal of Conflict Resolution",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "1350",
+    "field": "PSYCH (GENERAL)",
+    "title": "Journal of Cross-Cultural Psychology",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "1351",
+    "field": "PSYCH (GENERAL)",
+    "title": "Journal of Environmental Psychology",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "1352",
+    "field": "PSYCH (GENERAL)",
+    "title": "Journal of Experimental Psychology: Learning Memory and Cognition",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "1353",
+    "field": "PSYCH (GENERAL)",
+    "title": "Journal of Mathematical Psychology",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "1354",
+    "field": "PSYCH (GENERAL)",
+    "title": "Journal of Personality",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "1355",
+    "field": "PSYCH (GENERAL)",
+    "title": "Judgment and Decision Making",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "1356",
+    "field": "PSYCH (GENERAL)",
+    "title": "Personality and Individual Differences",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "1357",
+    "field": "PSYCH (GENERAL)",
+    "title": "Psychological Research",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "1358",
+    "field": "PSYCH (GENERAL)",
+    "title": "Psychology of Women Quarterly",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "1359",
+    "field": "PSYCH (GENERAL)",
+    "title": "Psychometrika",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "1360",
+    "field": "PSYCH (GENERAL)",
+    "title": "Quarterly Journal of Experimental Psychology",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "1361",
+    "field": "PSYCH (GENERAL)",
+    "title": "Social Psychological and Personality Science",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "1362",
+    "field": "PSYCH (GENERAL)",
+    "title": "Stress and Health",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "1411",
+    "field": "PSYCH (WOP-OB)",
+    "title": "Accident Analysis and Prevention",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "1412",
+    "field": "PSYCH (WOP-OB)",
+    "title": "Applied Ergonomics",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "1413",
+    "field": "PSYCH (WOP-OB)",
+    "title": "Applied Psychology",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "1414",
+    "field": "PSYCH (WOP-OB)",
+    "title": "Ergonomics",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "1415",
+    "field": "PSYCH (WOP-OB)",
+    "title": "European Journal of Work and Organizational Psychology",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "1416",
+    "field": "PSYCH (WOP-OB)",
+    "title": "Human Factors",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "1417",
+    "field": "PSYCH (WOP-OB)",
+    "title": "Human Performance",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "1418",
+    "field": "PSYCH (WOP-OB)",
+    "title": "International Journal of Rehabilitation Research",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "1419",
+    "field": "PSYCH (WOP-OB)",
+    "title": "Journal of Business and Psychology",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "1420",
+    "field": "PSYCH (WOP-OB)",
+    "title": "Journal of Managerial Psychology",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "1421",
+    "field": "PSYCH (WOP-OB)",
+    "title": "Journal of School Psychology",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "1422",
+    "field": "PSYCH (WOP-OB)",
+    "title": "Occupational and Environmental Medicine",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "1423",
+    "field": "PSYCH (WOP-OB)",
+    "title": "Scandinavian Journal of Work, Environment and Health",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "1475",
+    "field": "PUB SEC",
+    "title": "American Review of Public Administration",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "1476",
+    "field": "PUB SEC",
+    "title": "Environment and Planning C: Politics and Space",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "1477",
+    "field": "PUB SEC",
+    "title": "Health Services Research",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "1478",
+    "field": "PUB SEC",
+    "title": "International Public Management Journal",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "1479",
+    "field": "PUB SEC",
+    "title": "International Review of Administrative Sciences",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "1480",
+    "field": "PUB SEC",
+    "title": "Journal of European Public Policy",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "1481",
+    "field": "PUB SEC",
+    "title": "Journal of Policy Analysis and Management",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "1482",
+    "field": "PUB SEC",
+    "title": "Milbank Quarterly",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "1483",
+    "field": "PUB SEC",
+    "title": "Policy and Politics",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "1484",
+    "field": "PUB SEC",
+    "title": "Policy Studies Journal",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "1485",
+    "field": "PUB SEC",
+    "title": "Regulation and Governance",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "1544",
+    "field": "REGIONAL STUDIES, PLANNING AND ENVIRONMENT",
+    "title": "Cambridge Journal of Regions, Economy and Society",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "1545",
+    "field": "REGIONAL STUDIES, PLANNING AND ENVIRONMENT",
+    "title": "Environment and Planning A",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "1546",
+    "field": "REGIONAL STUDIES, PLANNING AND ENVIRONMENT",
+    "title": "European Urban and Regional Studies",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "1547",
+    "field": "REGIONAL STUDIES, PLANNING AND ENVIRONMENT",
+    "title": "Global Environmental Change",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "1548",
+    "field": "REGIONAL STUDIES, PLANNING AND ENVIRONMENT",
+    "title": "Journal of Regional Science",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "1549",
+    "field": "REGIONAL STUDIES, PLANNING AND ENVIRONMENT",
+    "title": "Journal of Rural Studies",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "1550",
+    "field": "REGIONAL STUDIES, PLANNING AND ENVIRONMENT",
+    "title": "Papers in Regional Science",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "1551",
+    "field": "REGIONAL STUDIES, PLANNING AND ENVIRONMENT",
+    "title": "Regional Science and Urban Economics",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "1552",
+    "field": "REGIONAL STUDIES, PLANNING AND ENVIRONMENT",
+    "title": "Urban Studies",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "1578",
+    "field": "SECTOR",
+    "title": "Energy Journal",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "1579",
+    "field": "SECTOR",
+    "title": "European Sport Management Quarterly",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "1580",
+    "field": "SECTOR",
+    "title": "Food Policy",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "1581",
+    "field": "SECTOR",
+    "title": "International Journal of Contemporary Hospitality Management",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "1582",
+    "field": "SECTOR",
+    "title": "International Journal of Hospitality Management",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "1583",
+    "field": "SECTOR",
+    "title": "Journal of Sustainable Tourism",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "1584",
+    "field": "SECTOR",
+    "title": "Nonprofit and Voluntary Sector Quarterly",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "1585",
+    "field": "SECTOR",
+    "title": "Transportation Research, Part A: Policy and Practice",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "1586",
+    "field": "SECTOR",
+    "title": "Transportation Research, Part D: Transport and Environment",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "1587",
+    "field": "SECTOR",
+    "title": "Transportation Research, Part E: Logistics and Transportation Review",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "1694",
+    "field": "SOC SCI",
+    "title": "Antipode",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "1695",
+    "field": "SOC SCI",
+    "title": "British Journal of Sociology",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "1696",
+    "field": "SOC SCI",
+    "title": "Business Strategy and the Environment",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "1697",
+    "field": "SOC SCI",
+    "title": "Development and Change",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "1698",
+    "field": "SOC SCI",
+    "title": "Economy and Society",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "1699",
+    "field": "SOC SCI",
+    "title": "Electoral Studies",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "1700",
+    "field": "SOC SCI",
+    "title": "Environmental Science & Technology",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "1701",
+    "field": "SOC SCI",
+    "title": "Environmental Science and Policy",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "1702",
+    "field": "SOC SCI",
+    "title": "European Sociological Review",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "1703",
+    "field": "SOC SCI",
+    "title": "Global Networks",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "1704",
+    "field": "SOC SCI",
+    "title": "Industrial and Corporate Change",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "1705",
+    "field": "SOC SCI",
+    "title": "Journal of Cultural Economy",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "1706",
+    "field": "SOC SCI",
+    "title": "Journal of Development Studies",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "1707",
+    "field": "SOC SCI",
+    "title": "Journal of European Social Policy",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "1708",
+    "field": "SOC SCI",
+    "title": "Journal of Social Policy",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "1709",
+    "field": "SOC SCI",
+    "title": "New Political Economy",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "1710",
+    "field": "SOC SCI",
+    "title": "Politics and Society",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "1711",
+    "field": "SOC SCI",
+    "title": "Progress in Human Geography",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "1712",
+    "field": "SOC SCI",
+    "title": "Public Opinion Quarterly",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "1713",
+    "field": "SOC SCI",
+    "title": "Quarterly Journal of Political Science",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "1714",
+    "field": "SOC SCI",
+    "title": "Research in Social Stratification and Mobility",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "1715",
+    "field": "SOC SCI",
+    "title": "Review of International Political Economy",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "1716",
+    "field": "SOC SCI",
+    "title": "Social Forces",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "1717",
+    "field": "SOC SCI",
+    "title": "Social Science Research",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "1718",
+    "field": "SOC SCI",
+    "title": "Sociological Methodology",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "1719",
+    "field": "SOC SCI",
+    "title": "Sociological Review",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "1720",
+    "field": "SOC SCI",
+    "title": "Sociology of Health and Illness",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "1721",
+    "field": "SOC SCI",
+    "title": "Theory, Culture and Society",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "1722",
+    "field": "SOC SCI",
+    "title": "West European Politics",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "1723",
+    "field": "SOC SCI",
+    "title": "World Development",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "1799",
+    "field": "STRAT",
+    "title": "Strategic Organization",
+    "ajg_2024": "3"
+  },
+  {
+    "id": "1800",
+    "field": "STRAT",
+    "title": "Strategy Science",
+    "ajg_2024": "3"
+  }
+]

@@ -1,0 +1,52 @@
+kind,series,category,x,y,value,pixel_x,pixel_y,x2,y2,fit_intercept,fit_slope,residual_sd,recomputed_r,annotated_r,annotated_p,stroke,stroke_width,value_status,point_id,radius,fill,x_uncertainty_approx,y_uncertainty_approx,marker_radius_evidence_pixels
+line,Aβ42/Aβ40 ratio,OLS refit from extracted visible points,0.028246,2.032447,OLS refit,117.0,194.069,329.5,257.251,2.280474321,-8.781097054,0.310823426,-0.566524486,-0.57,0.018,#0058A2,2.35,refit_from_extracted_visible_points,,,,,,
+line,MoCA,OLS refit from extracted visible points,9.025633,2.262858,OLS refit,414.0,171.834,627.0,221.437,2.484151062,-0.02451827,0.399300751,-0.335320142,-0.34,0.17,#0058A2,2.35,refit_from_extracted_visible_points,,,,,,
+line,p-Tau-181,OLS refit from extracted visible points,26.388889,1.731636,OLS refit,711.0,223.097,924.333,207.97,1.710692853,0.000793618,0.353896238,0.123837135,0.12,0.66,#0058A2,2.35,refit_from_extracted_visible_points,,,,,,
+point,Aβ42/Aβ40 ratio,visible point,0.028246,1.743007,1.743007,117.0,222.0,,,,,,,,,,,visible_marker_extracted,1,5.8,#282829,0.000263,0.00801,5.394
+point,Aβ42/Aβ40 ratio,visible point,0.030175,2.509841,2.509841,122.5,148.0,,,,,,,,,,,visible_marker_extracted,2,5.8,#282829,0.000263,0.00801,5.394
+point,Aβ42/Aβ40 ratio,visible point,0.033158,1.919172,1.919172,131.0,205.0,,,,,,,,,,,visible_marker_extracted,3,5.8,#282829,0.000263,0.00801,5.394
+point,Aβ42/Aβ40 ratio,visible point,0.035965,2.064248,2.064248,139.0,191.0,,,,,,,,,,,visible_marker_extracted,4,5.8,#282829,0.000263,0.00801,5.394
+point,Aβ42/Aβ40 ratio,visible point,0.035965,1.483942,1.483942,139.0,247.0,,,,,,,,,,,visible_marker_extracted,5,5.8,#282829,0.000263,0.00801,5.6
+point,Aβ42/Aβ40 ratio,visible point,0.039123,1.877721,1.877721,148.0,209.0,,,,,,,,,,,visible_marker_extracted,6,5.8,#282829,0.000263,0.00801,5.6
+point,Aβ42/Aβ40 ratio,visible point,0.04193,2.074611,2.074611,156.0,190.0,,,,,,,,,,,visible_marker_extracted,7,5.8,#282829,0.000263,0.00801,5.394
+point,Aβ42/Aβ40 ratio,visible point,0.042105,2.46839,2.46839,156.5,152.0,,,,,,,,,,,visible_marker_extracted,8,5.8,#282829,0.000263,0.00801,5.394
+point,Aβ42/Aβ40 ratio,visible point,0.044035,1.856996,1.856996,162.0,211.0,,,,,,,,,,,visible_marker_extracted,9,5.8,#282829,0.000263,0.00801,5.394
+point,Aβ42/Aβ40 ratio,visible point,0.049064,1.749916,1.749916,176.333,221.333,,,,,,,,,,,visible_marker_extracted,10,5.8,#282829,0.000263,0.00801,5.197
+point,Aβ42/Aβ40 ratio,visible point,0.053158,2.219687,2.219687,188.0,176.0,,,,,,,,,,,visible_marker_extracted,11,5.8,#282829,0.000263,0.00801,5.6
+point,Aβ42/Aβ40 ratio,visible point,0.05614,1.463216,1.463216,196.5,249.0,,,,,,,,,,,visible_marker_extracted,12,5.8,#282829,0.000263,0.00801,5.394
+point,Aβ42/Aβ40 ratio,visible point,0.057018,1.287052,1.287052,199.0,266.0,,,,,,,,,,,visible_marker_extracted,13,5.8,#282829,0.000263,0.00801,5.794
+point,Aβ42/Aβ40 ratio,visible point,0.077895,1.582387,1.582387,258.5,237.5,,,,,,,,,,,visible_marker_extracted,14,5.8,#282829,0.000263,0.00801,5.197
+point,Aβ42/Aβ40 ratio,visible point,0.09,1.577205,1.577205,293.0,238.0,,,,,,,,,,,visible_marker_extracted,15,5.8,#282829,0.000263,0.00801,5.794
+point,Aβ42/Aβ40 ratio,visible point,0.094912,1.494304,1.494304,307.0,246.0,,,,,,,,,,,visible_marker_extracted,16,5.8,#282829,0.000263,0.00801,5.794
+point,Aβ42/Aβ40 ratio,visible point,0.102807,1.390678,1.390678,329.5,256.0,,,,,,,,,,,visible_marker_extracted,17,5.8,#282829,0.000263,0.00801,5.394
+point,MoCA,visible point,9.025633,1.919172,1.919172,414.0,205.0,,,,,,,,,,,visible_marker_extracted,1,5.8,#282829,0.075119,0.00801,5.394
+point,MoCA,visible point,20.0,2.46839,2.46839,525.5,152.0,,,,,,,,,,,visible_marker_extracted,2,5.8,#282829,0.075119,0.00801,5.394
+point,MoCA,visible point,20.984248,1.867359,1.867359,535.5,210.0,,,,,,,,,,,visible_marker_extracted,3,5.8,#282829,0.075119,0.00801,5.394
+point,MoCA,visible point,20.984248,1.743007,1.743007,535.5,222.0,,,,,,,,,,,visible_marker_extracted,4,5.8,#282829,0.075119,0.00801,5.394
+point,MoCA,visible point,21.033461,2.592742,2.592742,536.0,140.0,,,,,,,,,,,visible_marker_extracted,5,5.8,#282829,0.075119,0.00801,5.794
+point,MoCA,visible point,26.003914,2.509841,2.509841,586.5,148.0,,,,,,,,,,,visible_marker_extracted,6,5.8,#282829,0.075119,0.00801,5.394
+point,MoCA,visible point,28.021622,2.074611,2.074611,607.0,190.0,,,,,,,,,,,visible_marker_extracted,7,5.8,#282829,0.075119,0.00801,6.197
+point,MoCA,visible point,28.021622,1.577205,1.577205,607.0,238.0,,,,,,,,,,,visible_marker_extracted,8,5.8,#282829,0.075119,0.00801,6.197
+point,MoCA,visible point,28.021622,1.494304,1.494304,607.0,246.0,,,,,,,,,,,visible_marker_extracted,9,5.8,#282829,0.075119,0.00801,6.394
+point,MoCA,visible point,28.021622,1.395859,1.395859,607.0,255.5,,,,,,,,,,,visible_marker_extracted,10,5.8,#282829,0.075119,0.00801,5.6
+point,MoCA,visible point,28.021622,1.287052,1.287052,607.0,266.0,,,,,,,,,,,visible_marker_extracted,11,5.8,#282829,0.075119,0.00801,5.794
+point,MoCA,visible point,28.907446,1.483942,1.483942,616.0,247.0,,,,,,,,,,,visible_marker_extracted,12,5.8,#282829,0.075119,0.00801,6.397
+point,MoCA,visible point,29.005871,1.75337,1.75337,617.0,221.0,,,,,,,,,,,visible_marker_extracted,13,5.8,#282829,0.075119,0.00801,5.394
+point,MoCA,visible point,29.005871,1.572024,1.572024,617.0,238.5,,,,,,,,,,,visible_marker_extracted,14,5.8,#282829,0.075119,0.00801,5.794
+point,MoCA,visible point,29.990119,2.219687,2.219687,627.0,176.0,,,,,,,,,,,visible_marker_extracted,15,5.8,#282829,0.075119,0.00801,5.794
+point,MoCA,visible point,29.990119,1.856996,1.856996,627.0,211.0,,,,,,,,,,,visible_marker_extracted,16,5.8,#282829,0.075119,0.00801,5.394
+point,p-Tau-181,visible point,26.388889,1.494304,1.494304,711.0,246.0,,,,,,,,,,,visible_marker_extracted,1,5.8,#282829,0.694444,0.00801,5.794
+point,p-Tau-181,visible point,28.240741,2.219687,2.219687,713.0,176.0,,,,,,,,,,,visible_marker_extracted,2,5.8,#282829,0.694444,0.00801,5.794
+point,p-Tau-181,visible point,30.092593,1.577205,1.577205,715.0,238.0,,,,,,,,,,,visible_marker_extracted,3,5.8,#282829,0.694444,0.00801,5.794
+point,p-Tau-181,visible point,30.092593,1.287052,1.287052,715.0,266.0,,,,,,,,,,,visible_marker_extracted,4,5.8,#282829,0.694444,0.00801,5.794
+point,p-Tau-181,visible point,37.5,1.401041,1.401041,723.0,255.0,,,,,,,,,,,visible_marker_extracted,5,5.8,#282829,0.694444,0.00801,5.794
+point,p-Tau-181,visible point,38.425926,2.064248,2.064248,724.0,191.0,,,,,,,,,,,visible_marker_extracted,6,5.8,#282829,0.694444,0.00801,5.394
+point,p-Tau-181,visible point,38.425926,1.463216,1.463216,724.0,249.0,,,,,,,,,,,visible_marker_extracted,7,5.8,#282829,0.694444,0.00801,6.0
+point,p-Tau-181,visible point,46.759259,1.75337,1.75337,733.0,221.0,,,,,,,,,,,visible_marker_extracted,8,5.8,#282829,0.694444,0.00801,5.394
+point,p-Tau-181,visible point,47.222222,1.582387,1.582387,733.5,237.5,,,,,,,,,,,visible_marker_extracted,9,5.8,#282829,0.694444,0.00801,5.197
+point,p-Tau-181,visible point,62.5,2.509841,2.509841,750.0,148.0,,,,,,,,,,,visible_marker_extracted,10,5.8,#282829,0.694444,0.00801,5.794
+point,p-Tau-181,visible point,62.5,2.074611,2.074611,750.0,190.0,,,,,,,,,,,visible_marker_extracted,11,5.8,#282829,0.694444,0.00801,5.394
+point,p-Tau-181,visible point,73.148148,1.743007,1.743007,761.5,222.0,,,,,,,,,,,visible_marker_extracted,12,5.8,#282829,0.694444,0.00801,5.394
+point,p-Tau-181,visible point,89.351852,1.867359,1.867359,779.0,210.0,,,,,,,,,,,visible_marker_extracted,13,5.8,#282829,0.694444,0.00801,5.794
+point,p-Tau-181,visible point,143.981481,1.483942,1.483942,838.0,247.0,,,,,,,,,,,visible_marker_extracted,14,5.8,#282829,0.694444,0.00801,5.794
+point,p-Tau-181,visible point,223.919753,1.915717,1.915717,924.333,205.333,,,,,,,,,,,visible_marker_extracted,15,5.8,#282829,0.694444,0.00801,5.197

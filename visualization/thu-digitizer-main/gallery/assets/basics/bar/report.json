@@ -1,0 +1,3023 @@
+{
+  "schema_version": 1,
+  "family": "bar_chart_candidate",
+  "candidate_module": "candidate_digitize_bar_chart.py",
+  "privacy": "All fixtures are deterministic and locally generated synthetic data.",
+  "gallery_role": "taxonomy_and_visual-stressor_reference_only; not numeric ground truth",
+  "gallery_references": [
+    "https://uu543493-83c1-74a94416.nma1.seetacloud.com:8448/#/panel/geography/geography/grouped_bar/10-1038-s41467-026-69560-4__fig05_a",
+    "https://uu543493-83c1-74a94416.nma1.seetacloud.com:8448/#/panel/environment/environment/stacked_bar/10-1038-s41467-026-70705-8__fig02_b"
+  ],
+  "comparison": {
+    "current_stable": "not_available_for_dedicated_bar_extraction",
+    "webplotdigitizer": "not_compared; assisted comparison still required before promotion"
+  },
+  "status": "passed",
+  "failure_reason": "",
+  "variants": [
+    {
+      "name": "grouped_vertical_clean",
+      "expected_status": "candidate",
+      "status": "candidate",
+      "raster_dimensions": [
+        700,
+        480
+      ],
+      "plot_bounds": [
+        91,
+        48,
+        538,
+        403
+      ],
+      "value_axis": [
+        48.0,
+        10.0,
+        403.2,
+        -5.0
+      ],
+      "orientation": "vertical",
+      "layout": "grouped",
+      "categories": [
+        {
+          "name": "A",
+          "center_pixel": 158.72093023255815
+        },
+        {
+          "name": "B",
+          "center_pixel": 262.90697674418607
+        },
+        {
+          "name": "C",
+          "center_pixel": 367.09302325581393
+        },
+        {
+          "name": "D",
+          "center_pixel": 471.27906976744185
+        }
+      ],
+      "series_colors": {
+        "red": "#d62728",
+        "blue": "#1f77b4"
+      },
+      "expected_stack_total": null,
+      "error_color": "#595959",
+      "truth": [
+        {
+          "category": "A",
+          "series": "red",
+          "value": -3.0,
+          "error_lower_value": -3.7,
+          "error_upper_value": -2.3,
+          "error_lower_pixel": 372.416,
+          "error_upper_pixel": 339.264
+        },
+        {
+          "category": "A",
+          "series": "blue",
+          "value": 5.0,
+          "error_lower_value": 4.4,
+          "error_upper_value": 5.6,
+          "error_lower_pixel": 180.608,
+          "error_upper_pixel": 152.192
+        },
+        {
+          "category": "B",
+          "series": "red",
+          "value": 4.0,
+          "error_lower_value": 3.1,
+          "error_upper_value": 4.9,
+          "error_lower_pixel": 211.392,
+          "error_upper_pixel": 168.76799999999997
+        },
+        {
+          "category": "B",
+          "series": "blue",
+          "value": -2.0,
+          "error_lower_value": -2.7,
+          "error_upper_value": -1.3,
+          "error_lower_pixel": 348.736,
+          "error_upper_pixel": 315.584
+        },
+        {
+          "category": "C",
+          "series": "red",
+          "value": 7.0,
+          "error_lower_value": 6.2,
+          "error_upper_value": 7.8,
+          "error_lower_pixel": 137.98399999999998,
+          "error_upper_pixel": 100.096
+        },
+        {
+          "category": "C",
+          "series": "blue",
+          "value": 3.0,
+          "error_lower_value": 2.5,
+          "error_upper_value": 3.5,
+          "error_lower_pixel": 225.6,
+          "error_upper_pixel": 201.92
+        },
+        {
+          "category": "D",
+          "series": "red",
+          "value": 2.0,
+          "error_lower_value": 1.4,
+          "error_upper_value": 2.6,
+          "error_lower_pixel": 251.648,
+          "error_upper_pixel": 223.232
+        },
+        {
+          "category": "D",
+          "series": "blue",
+          "value": 6.0,
+          "error_lower_value": 5.2,
+          "error_upper_value": 6.8,
+          "error_lower_pixel": 161.664,
+          "error_upper_pixel": 123.77600000000001
+        }
+      ],
+      "extraction": {
+        "schema_version": 1,
+        "extractor_status": "candidate",
+        "status": "candidate",
+        "input_file": "grouped_vertical_clean.png",
+        "input_sha256": "1e2e9b1675195f8cbe0d3b86dfda466b45e600b1ccaf094a38f387ba8bb03d8c",
+        "image_size": {
+          "width": 700,
+          "height": 480
+        },
+        "orientation": "vertical",
+        "layout": "grouped",
+        "plot_bounds": [
+          91,
+          48,
+          538,
+          403
+        ],
+        "value_axis": [
+          48.0,
+          10.0,
+          403.2,
+          -5.0
+        ],
+        "axis_assumption": "verified linear value axis",
+        "baseline_value": 0.0,
+        "baseline_pixel": 284.8,
+        "categories": [
+          {
+            "name": "A",
+            "center_pixel": 158.72093023255815
+          },
+          {
+            "name": "B",
+            "center_pixel": 262.90697674418607
+          },
+          {
+            "name": "C",
+            "center_pixel": 367.09302325581393
+          },
+          {
+            "name": "D",
+            "center_pixel": 471.27906976744185
+          }
+        ],
+        "series": [
+          {
+            "name": "red",
+            "color": "#d62728"
+          },
+          {
+            "name": "blue",
+            "color": "#1f77b4"
+          }
+        ],
+        "parameters": {
+          "tolerance": 28.0,
+          "min_area": 30,
+          "min_bar_thickness": 3,
+          "min_bar_length": 2,
+          "min_fill_ratio": 0.55,
+          "bridge_gap": 1,
+          "category_tolerance_px": 50.00930232558137,
+          "baseline_tolerance_px": 3.0,
+          "stack_gap_tolerance_px": 3.0,
+          "expected_stack_total": null,
+          "stack_total_tolerance": 0.75,
+          "error_color": "#595959",
+          "error_tolerance": 24.0,
+          "error_search_radius": 2,
+          "error_min_span": 4
+        },
+        "marks": [
+          {
+            "category": "A",
+            "requested_category_pixel": 158.72093023255815,
+            "series": "red",
+            "color": "#d62728",
+            "status": "extracted",
+            "confidence": 0.915,
+            "component_category_pixel": 140.0,
+            "component": {
+              "area": 2361.0,
+              "left_pixel": 123.0,
+              "right_pixel": 157.0,
+              "top_pixel": 285.0,
+              "bottom_pixel": 356.0,
+              "width_pixels": 34.0,
+              "height_pixels": 71.0,
+              "cross_extent_pixels": 34.0,
+              "value_extent_pixels": 71.0,
+              "fill_ratio": 0.9780447390223695,
+              "category_pixel": 140.0,
+              "category_distance_pixels": 18.720930232558146
+            },
+            "baseline_pixel": 284.8,
+            "start_pixel": 285.0,
+            "end_pixel": 356.0,
+            "start_value": 0.0,
+            "end_value": -3.006756756756758,
+            "value": -3.006756756756758,
+            "error_bar": {
+              "status": "extracted",
+              "lower_pixel": 372.0,
+              "upper_pixel": 339.0,
+              "lower_value": -3.6824324324324333,
+              "upper_value": -2.288851351351351,
+              "span_pixels": 33.0,
+              "confidence": 1.0,
+              "semantic_type": "visible_interval_only"
+            }
+          },
+          {
+            "category": "A",
+            "requested_category_pixel": 158.72093023255815,
+            "series": "blue",
+            "color": "#1f77b4",
+            "status": "extracted",
+            "confidence": 0.92,
+            "component_category_pixel": 177.5,
+            "component": {
+              "area": 3888.0,
+              "left_pixel": 161.0,
+              "right_pixel": 194.0,
+              "top_pixel": 166.0,
+              "bottom_pixel": 285.0,
+              "width_pixels": 33.0,
+              "height_pixels": 119.0,
+              "cross_extent_pixels": 33.0,
+              "value_extent_pixels": 119.0,
+              "fill_ratio": 0.9900687547746372,
+              "category_pixel": 177.5,
+              "category_distance_pixels": 18.779069767441854
+            },
+            "baseline_pixel": 284.8,
+            "start_pixel": 285.0,
+            "end_pixel": 166.0,
+            "start_value": 0.0,
+            "end_value": 5.016891891891892,
+            "value": 5.016891891891892,
+            "error_bar": {
+              "status": "extracted",
+              "lower_pixel": 181.0,
+              "upper_pixel": 152.0,
+              "lower_value": 4.383445945945946,
+              "upper_value": 5.608108108108108,
+              "span_pixels": 29.0,
+              "confidence": 1.0,
+              "semantic_type": "visible_interval_only"
+            }
+          },
+          {
+            "category": "B",
+            "requested_category_pixel": 262.90697674418607,
+            "series": "red",
+            "color": "#d62728",
+            "status": "extracted",
+            "confidence": 0.916,
+            "component_category_pixel": 244.0,
+            "component": {
+              "area": 3167.0,
+              "left_pixel": 227.0,
+              "right_pixel": 261.0,
+              "top_pixel": 190.0,
+              "bottom_pixel": 285.0,
+              "width_pixels": 34.0,
+              "height_pixels": 95.0,
+              "cross_extent_pixels": 34.0,
+              "value_extent_pixels": 95.0,
+              "fill_ratio": 0.9804953560371517,
+              "category_pixel": 244.0,
+              "category_distance_pixels": 18.906976744186068
+            },
+            "baseline_pixel": 284.8,
+            "start_pixel": 285.0,
+            "end_pixel": 190.0,
+            "start_value": 0.0,
+            "end_value": 4.003378378378378,
+            "value": 4.003378378378378,
+            "error_bar": {
+              "status": "extracted",
+              "lower_pixel": 211.0,
+              "upper_pixel": 169.0,
+              "lower_value": 3.1165540540540535,
+              "upper_value": 4.890202702702703,
+              "span_pixels": 42.0,
+              "confidence": 1.0,
+              "semantic_type": "visible_interval_only"
+            }
+          },
+          {
+            "category": "B",
+            "requested_category_pixel": 262.90697674418607,
+            "series": "blue",
+            "color": "#1f77b4",
+            "status": "extracted",
+            "confidence": 0.914,
+            "component_category_pixel": 281.5,
+            "component": {
+              "area": 1512.0,
+              "left_pixel": 265.0,
+              "right_pixel": 298.0,
+              "top_pixel": 285.0,
+              "bottom_pixel": 332.0,
+              "width_pixels": 33.0,
+              "height_pixels": 47.0,
+              "cross_extent_pixels": 33.0,
+              "value_extent_pixels": 47.0,
+              "fill_ratio": 0.9748549323017408,
+              "category_pixel": 281.5,
+              "category_distance_pixels": 18.593023255813932
+            },
+            "baseline_pixel": 284.8,
+            "start_pixel": 285.0,
+            "end_pixel": 332.0,
+            "start_value": 0.0,
+            "end_value": -1.9932432432432439,
+            "value": -1.9932432432432439,
+            "error_bar": {
+              "status": "extracted",
+              "lower_pixel": 349.0,
+              "upper_pixel": 316.0,
+              "lower_value": -2.711148648648649,
+              "upper_value": -1.3175675675675684,
+              "span_pixels": 33.0,
+              "confidence": 1.0,
+              "semantic_type": "visible_interval_only"
+            }
+          },
+          {
+            "category": "C",
+            "requested_category_pixel": 367.09302325581393,
+            "series": "red",
+            "color": "#d62728",
+            "status": "extracted",
+            "confidence": 0.921,
+            "component_category_pixel": 348.5,
+            "component": {
+              "area": 5419.0,
+              "left_pixel": 332.0,
+              "right_pixel": 365.0,
+              "top_pixel": 119.0,
+              "bottom_pixel": 285.0,
+              "width_pixels": 33.0,
+              "height_pixels": 166.0,
+              "cross_extent_pixels": 33.0,
+              "value_extent_pixels": 166.0,
+              "fill_ratio": 0.9892296458561519,
+              "category_pixel": 348.5,
+              "category_distance_pixels": 18.593023255813932
+            },
+            "baseline_pixel": 284.8,
+            "start_pixel": 285.0,
+            "end_pixel": 119.0,
+            "start_value": 0.0,
+            "end_value": 7.0016891891891895,
+            "value": 7.0016891891891895,
+            "error_bar": {
+              "status": "extracted",
+              "lower_pixel": 138.0,
+              "upper_pixel": 100.0,
+              "lower_value": 6.199324324324325,
+              "upper_value": 7.804054054054054,
+              "span_pixels": 38.0,
+              "confidence": 1.0,
+              "semantic_type": "visible_interval_only"
+            }
+          },
+          {
+            "category": "C",
+            "requested_category_pixel": 367.09302325581393,
+            "series": "blue",
+            "color": "#1f77b4",
+            "status": "extracted",
+            "confidence": 0.918,
+            "component_category_pixel": 386.0,
+            "component": {
+              "area": 2381.0,
+              "left_pixel": 369.0,
+              "right_pixel": 403.0,
+              "top_pixel": 214.0,
+              "bottom_pixel": 285.0,
+              "width_pixels": 34.0,
+              "height_pixels": 71.0,
+              "cross_extent_pixels": 34.0,
+              "value_extent_pixels": 71.0,
+              "fill_ratio": 0.9863297431648715,
+              "category_pixel": 386.0,
+              "category_distance_pixels": 18.906976744186068
+            },
+            "baseline_pixel": 284.8,
+            "start_pixel": 285.0,
+            "end_pixel": 214.0,
+            "start_value": 0.0,
+            "end_value": 2.989864864864865,
+            "value": 2.989864864864865,
+            "error_bar": {
+              "status": "extracted",
+              "lower_pixel": 226.0,
+              "upper_pixel": 202.0,
+              "lower_value": 2.483108108108108,
+              "upper_value": 3.496621621621621,
+              "span_pixels": 24.0,
+              "confidence": 1.0,
+              "semantic_type": "visible_interval_only"
+            }
+          },
+          {
+            "category": "D",
+            "requested_category_pixel": 471.27906976744185,
+            "series": "red",
+            "color": "#d62728",
+            "status": "extracted",
+            "confidence": 0.91,
+            "component_category_pixel": 452.5,
+            "component": {
+              "area": 1533.0,
+              "left_pixel": 436.0,
+              "right_pixel": 469.0,
+              "top_pixel": 237.0,
+              "bottom_pixel": 285.0,
+              "width_pixels": 33.0,
+              "height_pixels": 48.0,
+              "cross_extent_pixels": 33.0,
+              "value_extent_pixels": 48.0,
+              "fill_ratio": 0.9678030303030303,
+              "category_pixel": 452.5,
+              "category_distance_pixels": 18.779069767441854
+            },
+            "baseline_pixel": 284.8,
+            "start_pixel": 285.0,
+            "end_pixel": 237.0,
+            "start_value": 0.0,
+            "end_value": 2.0185810810810807,
+            "value": 2.0185810810810807,
+            "error_bar": {
+              "status": "extracted",
+              "lower_pixel": 252.0,
+              "upper_pixel": 223.0,
+              "lower_value": 1.385135135135135,
+              "upper_value": 2.6097972972972974,
+              "span_pixels": 29.0,
+              "confidence": 1.0,
+              "semantic_type": "visible_interval_only"
+            }
+          },
+          {
+            "category": "D",
+            "requested_category_pixel": 471.27906976744185,
+            "series": "blue",
+            "color": "#1f77b4",
+            "status": "extracted",
+            "confidence": 0.921,
+            "component_category_pixel": 490.0,
+            "component": {
+              "area": 4781.0,
+              "left_pixel": 473.0,
+              "right_pixel": 507.0,
+              "top_pixel": 143.0,
+              "bottom_pixel": 285.0,
+              "width_pixels": 34.0,
+              "height_pixels": 142.0,
+              "cross_extent_pixels": 34.0,
+              "value_extent_pixels": 142.0,
+              "fill_ratio": 0.9902651201325601,
+              "category_pixel": 490.0,
+              "category_distance_pixels": 18.720930232558146
+            },
+            "baseline_pixel": 284.8,
+            "start_pixel": 285.0,
+            "end_pixel": 143.0,
+            "start_value": 0.0,
+            "end_value": 5.988175675675675,
+            "value": 5.988175675675675,
+            "error_bar": {
+              "status": "extracted",
+              "lower_pixel": 162.0,
+              "upper_pixel": 124.0,
+              "lower_value": 5.1858108108108105,
+              "upper_value": 6.79054054054054,
+              "span_pixels": 38.0,
+              "confidence": 1.0,
+              "semantic_type": "visible_interval_only"
+            }
+          }
+        ],
+        "rejected_components": [],
+        "stack_diagnostics": [],
+        "summary": {
+          "expected_mark_count": 8,
+          "extracted_mark_count": 8,
+          "missing_mark_count": 0,
+          "ambiguous_mark_count": 0,
+          "rejected_component_count": 0,
+          "error_bar_missing_count": 0,
+          "mean_confidence": 0.917
+        },
+        "limitations": [
+          "Only visible colour-distinct rectangles are measured; source observations are not recovered.",
+          "Category centres, the plot region, orientation, layout, and linear calibration must be verified.",
+          "A missing segment is not converted to a zero value.",
+          "Error intervals describe visible endpoints only; SD, SEM, or confidence-interval semantics are unknown.",
+          "Facets, insets, photos, 3D projections, gradients, hatching, and overlapping same-colour marks require separate routing."
+        ]
+      },
+      "metrics": {
+        "expected_mark_count": 8,
+        "extracted_mark_count": 8,
+        "matched_mark_count": 8,
+        "unmatched_prediction_count": 0,
+        "missing_truth_count": 0,
+        "precision": 1.0,
+        "coverage": 1.0,
+        "f1": 1.0,
+        "mae": 0.009501689189189255,
+        "p95_abs_error": 0.01798986486486469,
+        "max_abs_error": 0.018581081081080697,
+        "error_endpoint_p95_px": 0.4159999999999968,
+        "error_endpoint_max_px": 0.4159999999999968,
+        "expected_error_bar_count": 8,
+        "extracted_error_bar_count": 8,
+        "error_bar_coverage": 1.0
+      },
+      "overlay": "grouped_vertical_clean_overlay.png",
+      "recreation": "grouped_vertical_clean_recreation.png",
+      "image_hash_sha256": "1e2e9b1675195f8cbe0d3b86dfda466b45e600b1ccaf094a38f387ba8bb03d8c",
+      "benchmark_status": "passed",
+      "failure_reason": ""
+    },
+    {
+      "name": "grouped_vertical_lowres_jpeg",
+      "expected_status": "partial_visible",
+      "status": "partial_visible",
+      "raster_dimensions": [
+        385,
+        264
+      ],
+      "plot_bounds": [
+        50,
+        26,
+        296,
+        222
+      ],
+      "value_axis": [
+        26.400000000000002,
+        10.0,
+        221.76000000000002,
+        -5.0
+      ],
+      "orientation": "vertical",
+      "layout": "grouped",
+      "categories": [
+        {
+          "name": "A",
+          "center_pixel": 87.29651162790698
+        },
+        {
+          "name": "B",
+          "center_pixel": 144.59883720930236
+        },
+        {
+          "name": "C",
+          "center_pixel": 201.90116279069767
+        },
+        {
+          "name": "D",
+          "center_pixel": 259.20348837209303
+        }
+      ],
+      "series_colors": {
+        "red": "#d62728",
+        "blue": "#1f77b4"
+      },
+      "expected_stack_total": null,
+      "error_color": "#595959",
+      "truth": [
+        {
+          "category": "A",
+          "series": "red",
+          "value": -3.0,
+          "error_lower_value": -3.7,
+          "error_upper_value": -2.3,
+          "error_lower_pixel": 204.8288,
+          "error_upper_pixel": 186.59520000000003
+        },
+        {
+          "category": "A",
+          "series": "blue",
+          "value": 5.0,
+          "error_lower_value": 4.4,
+          "error_upper_value": 5.6,
+          "error_lower_pixel": 99.33440000000002,
+          "error_upper_pixel": 83.7056
+        },
+        {
+          "category": "B",
+          "series": "red",
+          "value": 4.0,
+          "error_lower_value": 3.1,
+          "error_upper_value": 4.9,
+          "error_lower_pixel": 116.2656,
+          "error_upper_pixel": 92.82239999999999
+        },
+        {
+          "category": "B",
+          "series": "blue",
+          "value": -2.0,
+          "error_lower_value": -2.7,
+          "error_upper_value": -1.3,
+          "error_lower_pixel": 191.8048,
+          "error_upper_pixel": 173.5712
+        },
+        {
+          "category": "C",
+          "series": "red",
+          "value": 7.0,
+          "error_lower_value": 6.2,
+          "error_upper_value": 7.8,
+          "error_lower_pixel": 75.8912,
+          "error_upper_pixel": 55.052800000000005
+        },
+        {
+          "category": "C",
+          "series": "blue",
+          "value": 3.0,
+          "error_lower_value": 2.5,
+          "error_upper_value": 3.5,
+          "error_lower_pixel": 124.08000000000001,
+          "error_upper_pixel": 111.056
+        },
+        {
+          "category": "D",
+          "series": "red",
+          "value": 2.0,
+          "error_lower_value": 1.4,
+          "error_upper_value": 2.6,
+          "error_lower_pixel": 138.40640000000002,
+          "error_upper_pixel": 122.7776
+        },
+        {
+          "category": "D",
+          "series": "blue",
+          "value": 6.0,
+          "error_lower_value": 5.2,
+          "error_upper_value": 6.8,
+          "error_lower_pixel": 88.9152,
+          "error_upper_pixel": 68.0768
+        }
+      ],
+      "extraction": {
+        "schema_version": 1,
+        "extractor_status": "candidate",
+        "status": "partial_visible",
+        "input_file": "grouped_vertical_lowres.jpg",
+        "input_sha256": "6f07b972aa7910618962fa51f0f553210578dd81659df7eafb5212b71cc2360b",
+        "image_size": {
+          "width": 385,
+          "height": 264
+        },
+        "orientation": "vertical",
+        "layout": "grouped",
+        "plot_bounds": [
+          50,
+          26,
+          296,
+          222
+        ],
+        "value_axis": [
+          26.400000000000002,
+          10.0,
+          221.76000000000002,
+          -5.0
+        ],
+        "axis_assumption": "verified linear value axis",
+        "baseline_value": 0.0,
+        "baseline_pixel": 156.64000000000001,
+        "categories": [
+          {
+            "name": "A",
+            "center_pixel": 87.29651162790698
+          },
+          {
+            "name": "B",
+            "center_pixel": 144.59883720930236
+          },
+          {
+            "name": "C",
+            "center_pixel": 201.90116279069767
+          },
+          {
+            "name": "D",
+            "center_pixel": 259.20348837209303
+          }
+        ],
+        "series": [
+          {
+            "name": "red",
+            "color": "#d62728"
+          },
+          {
+            "name": "blue",
+            "color": "#1f77b4"
+          }
+        ],
+        "parameters": {
+          "tolerance": 82.0,
+          "min_area": 12,
+          "min_bar_thickness": 2,
+          "min_bar_length": 2,
+          "min_fill_ratio": 0.3,
+          "bridge_gap": 2,
+          "category_tolerance_px": 27.505116279069746,
+          "baseline_tolerance_px": 4.0,
+          "stack_gap_tolerance_px": 4.0,
+          "expected_stack_total": null,
+          "stack_total_tolerance": 0.75,
+          "error_color": "#595959",
+          "error_tolerance": 90.0,
+          "error_search_radius": 2,
+          "error_min_span": 4
+        },
+        "marks": [
+          {
+            "category": "A",
+            "requested_category_pixel": 87.29651162790698,
+            "series": "red",
+            "color": "#d62728",
+            "status": "extracted",
+            "confidence": 0.921,
+            "component_category_pixel": 77.0,
+            "component": {
+              "area": 696.0,
+              "left_pixel": 68.0,
+              "right_pixel": 86.0,
+              "top_pixel": 157.0,
+              "bottom_pixel": 196.0,
+              "width_pixels": 18.0,
+              "height_pixels": 39.0,
+              "cross_extent_pixels": 18.0,
+              "value_extent_pixels": 39.0,
+              "fill_ratio": 0.9914529914529915,
+              "category_pixel": 77.0,
+              "category_distance_pixels": 10.29651162790698
+            },
+            "baseline_pixel": 156.64000000000001,
+            "start_pixel": 157.0,
+            "end_pixel": 196.0,
+            "start_value": 0.0,
+            "end_value": -3.0221130221130217,
+            "value": -3.0221130221130217,
+            "error_bar": {
+              "status": "not_extracted",
+              "reason": "visible interval does not bracket the bar endpoint on both sides"
+            }
+          },
+          {
+            "category": "A",
+            "requested_category_pixel": 87.29651162790698,
+            "series": "blue",
+            "color": "#1f77b4",
+            "status": "extracted",
+            "confidence": 0.893,
+            "component_category_pixel": 98.0,
+            "component": {
+              "area": 1111.0,
+              "left_pixel": 89.0,
+              "right_pixel": 107.0,
+              "top_pixel": 91.0,
+              "bottom_pixel": 157.0,
+              "width_pixels": 18.0,
+              "height_pixels": 66.0,
+              "cross_extent_pixels": 18.0,
+              "value_extent_pixels": 66.0,
+              "fill_ratio": 0.9351851851851852,
+              "category_pixel": 98.0,
+              "category_distance_pixels": 10.70348837209302
+            },
+            "baseline_pixel": 156.64000000000001,
+            "start_pixel": 157.0,
+            "end_pixel": 91.0,
+            "start_value": 0.0,
+            "end_value": 5.03992628992629,
+            "value": 5.03992628992629,
+            "error_bar": {
+              "status": "extracted",
+              "lower_pixel": 100.0,
+              "upper_pixel": 84.0,
+              "lower_value": 4.3488943488943494,
+              "upper_value": 5.577395577395579,
+              "span_pixels": 16.0,
+              "confidence": 1.0,
+              "semantic_type": "visible_interval_only"
+            }
+          },
+          {
+            "category": "B",
+            "requested_category_pixel": 144.59883720930236,
+            "series": "red",
+            "color": "#d62728",
+            "status": "extracted",
+            "confidence": 0.919,
+            "component_category_pixel": 134.0,
+            "component": {
+              "area": 927.0,
+              "left_pixel": 125.0,
+              "right_pixel": 143.0,
+              "top_pixel": 105.0,
+              "bottom_pixel": 157.0,
+              "width_pixels": 18.0,
+              "height_pixels": 52.0,
+              "cross_extent_pixels": 18.0,
+              "value_extent_pixels": 52.0,
+              "fill_ratio": 0.9903846153846154,
+              "category_pixel": 134.0,
+              "category_distance_pixels": 10.59883720930236
+            },
+            "baseline_pixel": 156.64000000000001,
+            "start_pixel": 157.0,
+            "end_pixel": 105.0,
+            "start_value": 0.0,
+            "end_value": 3.964987714987715,
+            "value": 3.964987714987715,
+            "error_bar": {
+              "status": "not_extracted",
+              "reason": "visible interval does not bracket the bar endpoint on both sides"
+            }
+          },
+          {
+            "category": "B",
+            "requested_category_pixel": 144.59883720930236,
+            "series": "blue",
+            "color": "#1f77b4",
+            "status": "extracted",
+            "confidence": 0.912,
+            "component_category_pixel": 155.0,
+            "component": {
+              "area": 455.0,
+              "left_pixel": 146.0,
+              "right_pixel": 164.0,
+              "top_pixel": 157.0,
+              "bottom_pixel": 183.0,
+              "width_pixels": 18.0,
+              "height_pixels": 26.0,
+              "cross_extent_pixels": 18.0,
+              "value_extent_pixels": 26.0,
+              "fill_ratio": 0.9722222222222222,
+              "category_pixel": 155.0,
+              "category_distance_pixels": 10.40116279069764
+            },
+            "baseline_pixel": 156.64000000000001,
+            "start_pixel": 157.0,
+            "end_pixel": 183.0,
+            "start_value": 0.0,
+            "end_value": -2.023955773955773,
+            "value": -2.023955773955773,
+            "error_bar": {
+              "status": "extracted",
+              "lower_pixel": 191.0,
+              "upper_pixel": 171.0,
+              "lower_value": -2.638206388206388,
+              "upper_value": -1.1025798525798525,
+              "span_pixels": 20.0,
+              "confidence": 1.0,
+              "semantic_type": "visible_interval_only"
+            }
+          },
+          {
+            "category": "C",
+            "requested_category_pixel": 201.90116279069767,
+            "series": "red",
+            "color": "#d62728",
+            "status": "extracted",
+            "confidence": 0.901,
+            "component_category_pixel": 192.0,
+            "component": {
+              "area": 1538.0,
+              "left_pixel": 183.0,
+              "right_pixel": 201.0,
+              "top_pixel": 66.0,
+              "bottom_pixel": 157.0,
+              "width_pixels": 18.0,
+              "height_pixels": 91.0,
+              "cross_extent_pixels": 18.0,
+              "value_extent_pixels": 91.0,
+              "fill_ratio": 0.938949938949939,
+              "category_pixel": 192.0,
+              "category_distance_pixels": 9.901162790697668
+            },
+            "baseline_pixel": 156.64000000000001,
+            "start_pixel": 157.0,
+            "end_pixel": 66.0,
+            "start_value": 0.0,
+            "end_value": 6.95945945945946,
+            "value": 6.95945945945946,
+            "error_bar": {
+              "status": "extracted",
+              "lower_pixel": 75.0,
+              "upper_pixel": 55.0,
+              "lower_value": 6.268427518427519,
+              "upper_value": 7.804054054054054,
+              "span_pixels": 20.0,
+              "confidence": 0.976,
+              "semantic_type": "visible_interval_only"
+            }
+          },
+          {
+            "category": "C",
+            "requested_category_pixel": 201.90116279069767,
+            "series": "blue",
+            "color": "#1f77b4",
+            "status": "extracted",
+            "confidence": 0.926,
+            "component_category_pixel": 212.0,
+            "component": {
+              "area": 701.0,
+              "left_pixel": 203.0,
+              "right_pixel": 221.0,
+              "top_pixel": 118.0,
+              "bottom_pixel": 157.0,
+              "width_pixels": 18.0,
+              "height_pixels": 39.0,
+              "cross_extent_pixels": 18.0,
+              "value_extent_pixels": 39.0,
+              "fill_ratio": 0.9985754985754985,
+              "category_pixel": 212.0,
+              "category_distance_pixels": 10.098837209302332
+            },
+            "baseline_pixel": 156.64000000000001,
+            "start_pixel": 157.0,
+            "end_pixel": 118.0,
+            "start_value": 0.0,
+            "end_value": 2.9668304668304675,
+            "value": 2.9668304668304675,
+            "error_bar": {
+              "status": "extracted",
+              "lower_pixel": 125.0,
+              "upper_pixel": 111.0,
+              "lower_value": 2.4293611793611802,
+              "upper_value": 3.5042997542997547,
+              "span_pixels": 14.0,
+              "confidence": 1.0,
+              "semantic_type": "visible_interval_only"
+            }
+          },
+          {
+            "category": "D",
+            "requested_category_pixel": 259.20348837209303,
+            "series": "red",
+            "color": "#d62728",
+            "status": "extracted",
+            "confidence": 0.905,
+            "component_category_pixel": 249.0,
+            "component": {
+              "area": 463.0,
+              "left_pixel": 240.0,
+              "right_pixel": 258.0,
+              "top_pixel": 130.0,
+              "bottom_pixel": 157.0,
+              "width_pixels": 18.0,
+              "height_pixels": 27.0,
+              "cross_extent_pixels": 18.0,
+              "value_extent_pixels": 27.0,
+              "fill_ratio": 0.9526748971193416,
+              "category_pixel": 249.0,
+              "category_distance_pixels": 10.203488372093034
+            },
+            "baseline_pixel": 156.64000000000001,
+            "start_pixel": 157.0,
+            "end_pixel": 130.0,
+            "start_value": 0.0,
+            "end_value": 2.045454545454546,
+            "value": 2.045454545454546,
+            "error_bar": {
+              "status": "extracted",
+              "lower_pixel": 138.0,
+              "upper_pixel": 123.0,
+              "lower_value": 1.4312039312039317,
+              "upper_value": 2.582923832923833,
+              "span_pixels": 15.0,
+              "confidence": 0.969,
+              "semantic_type": "visible_interval_only"
+            }
+          },
+          {
+            "category": "D",
+            "requested_category_pixel": 259.20348837209303,
+            "series": "blue",
+            "color": "#1f77b4",
+            "status": "extracted",
+            "confidence": 0.919,
+            "component_category_pixel": 269.5,
+            "component": {
+              "area": 1481.0,
+              "left_pixel": 260.0,
+              "right_pixel": 279.0,
+              "top_pixel": 78.0,
+              "bottom_pixel": 157.0,
+              "width_pixels": 19.0,
+              "height_pixels": 79.0,
+              "cross_extent_pixels": 19.0,
+              "value_extent_pixels": 79.0,
+              "fill_ratio": 0.9866755496335776,
+              "category_pixel": 269.5,
+              "category_distance_pixels": 10.296511627906966
+            },
+            "baseline_pixel": 156.64000000000001,
+            "start_pixel": 157.0,
+            "end_pixel": 78.0,
+            "start_value": 0.0,
+            "end_value": 6.038083538083539,
+            "value": 6.038083538083539,
+            "error_bar": {
+              "status": "extracted",
+              "lower_pixel": 91.0,
+              "upper_pixel": 68.0,
+              "lower_value": 5.03992628992629,
+              "upper_value": 6.805896805896807,
+              "span_pixels": 23.0,
+              "confidence": 1.0,
+              "semantic_type": "visible_interval_only"
+            }
+          }
+        ],
+        "rejected_components": [],
+        "stack_diagnostics": [],
+        "summary": {
+          "expected_mark_count": 8,
+          "extracted_mark_count": 8,
+          "missing_mark_count": 0,
+          "ambiguous_mark_count": 0,
+          "rejected_component_count": 0,
+          "error_bar_missing_count": 2,
+          "mean_confidence": 0.912
+        },
+        "limitations": [
+          "Only visible colour-distinct rectangles are measured; source observations are not recovered.",
+          "Category centres, the plot region, orientation, layout, and linear calibration must be verified.",
+          "A missing segment is not converted to a zero value.",
+          "Error intervals describe visible endpoints only; SD, SEM, or confidence-interval semantics are unknown.",
+          "Facets, insets, photos, 3D projections, gradients, hatching, and overlapping same-colour marks require separate routing."
+        ]
+      },
+      "metrics": {
+        "expected_mark_count": 8,
+        "extracted_mark_count": 8,
+        "matched_mark_count": 8,
+        "unmatched_prediction_count": 0,
+        "missing_truth_count": 0,
+        "precision": 1.0,
+        "coverage": 1.0,
+        "f1": 1.0,
+        "mae": 0.03478194103194099,
+        "p95_abs_error": 0.043734643734643926,
+        "max_abs_error": 0.04545454545454586,
+        "error_endpoint_p95_px": 2.3036800000000026,
+        "error_endpoint_max_px": 2.5712000000000046,
+        "expected_error_bar_count": 8,
+        "extracted_error_bar_count": 6,
+        "error_bar_coverage": 0.75
+      },
+      "overlay": "grouped_vertical_lowres_jpeg_overlay.png",
+      "recreation": "grouped_vertical_lowres_jpeg_recreation.png",
+      "image_hash_sha256": "6f07b972aa7910618962fa51f0f553210578dd81659df7eafb5212b71cc2360b",
+      "benchmark_status": "passed",
+      "failure_reason": ""
+    },
+    {
+      "name": "grouped_horizontal_clean",
+      "expected_status": "candidate",
+      "status": "candidate",
+      "raster_dimensions": [
+        700,
+        480
+      ],
+      "plot_bounds": [
+        91,
+        48,
+        538,
+        403
+      ],
+      "value_axis": [
+        91.0,
+        -5.0,
+        539.0,
+        10.0
+      ],
+      "orientation": "horizontal",
+      "layout": "grouped",
+      "categories": [
+        {
+          "name": "A",
+          "center_pixel": 349.5069767441861
+        },
+        {
+          "name": "B",
+          "center_pixel": 266.90232558139536
+        },
+        {
+          "name": "C",
+          "center_pixel": 184.2976744186047
+        },
+        {
+          "name": "D",
+          "center_pixel": 101.69302325581396
+        }
+      ],
+      "series_colors": {
+        "red": "#d62728",
+        "blue": "#1f77b4"
+      },
+      "expected_stack_total": null,
+      "error_color": "#595959",
+      "truth": [
+        {
+          "category": "A",
+          "series": "red",
+          "value": -3.0,
+          "error_lower_value": -3.7,
+          "error_upper_value": -2.3,
+          "error_lower_pixel": 129.82666666666665,
+          "error_upper_pixel": 171.64000000000001
+        },
+        {
+          "category": "A",
+          "series": "blue",
+          "value": 5.0,
+          "error_lower_value": 4.4,
+          "error_upper_value": 5.6,
+          "error_lower_pixel": 371.74666666666667,
+          "error_upper_pixel": 407.5866666666667
+        },
+        {
+          "category": "B",
+          "series": "red",
+          "value": 4.0,
+          "error_lower_value": 3.1,
+          "error_upper_value": 4.9,
+          "error_lower_pixel": 332.91999999999996,
+          "error_upper_pixel": 386.68
+        },
+        {
+          "category": "B",
+          "series": "blue",
+          "value": -2.0,
+          "error_lower_value": -2.7,
+          "error_upper_value": -1.3,
+          "error_lower_pixel": 159.69333333333333,
+          "error_upper_pixel": 201.50666666666666
+        },
+        {
+          "category": "C",
+          "series": "red",
+          "value": 7.0,
+          "error_lower_value": 6.2,
+          "error_upper_value": 7.8,
+          "error_lower_pixel": 425.5066666666666,
+          "error_upper_pixel": 473.29333333333335
+        },
+        {
+          "category": "C",
+          "series": "blue",
+          "value": 3.0,
+          "error_lower_value": 2.5,
+          "error_upper_value": 3.5,
+          "error_lower_pixel": 315.0,
+          "error_upper_pixel": 344.8666666666667
+        },
+        {
+          "category": "D",
+          "series": "red",
+          "value": 2.0,
+          "error_lower_value": 1.4,
+          "error_upper_value": 2.6,
+          "error_lower_pixel": 282.14666666666665,
+          "error_upper_pixel": 317.9866666666667
+        },
+        {
+          "category": "D",
+          "series": "blue",
+          "value": 6.0,
+          "error_lower_value": 5.2,
+          "error_upper_value": 6.8,
+          "error_lower_pixel": 395.64,
+          "error_upper_pixel": 443.4266666666667
+        }
+      ],
+      "extraction": {
+        "schema_version": 1,
+        "extractor_status": "candidate",
+        "status": "candidate",
+        "input_file": "grouped_horizontal_clean.png",
+        "input_sha256": "856b4595aab0bd16c176dede1cb4aeba50aac1fb23a7834cfa4c9dcf0c030db7",
+        "image_size": {
+          "width": 700,
+          "height": 480
+        },
+        "orientation": "horizontal",
+        "layout": "grouped",
+        "plot_bounds": [
+          91,
+          48,
+          538,
+          403
+        ],
+        "value_axis": [
+          91.0,
+          -5.0,
+          539.0,
+          10.0
+        ],
+        "axis_assumption": "verified linear value axis",
+        "baseline_value": 0.0,
+        "baseline_pixel": 240.33333333333334,
+        "categories": [
+          {
+            "name": "A",
+            "center_pixel": 349.5069767441861
+          },
+          {
+            "name": "B",
+            "center_pixel": 266.90232558139536
+          },
+          {
+            "name": "C",
+            "center_pixel": 184.2976744186047
+          },
+          {
+            "name": "D",
+            "center_pixel": 101.69302325581396
+          }
+        ],
+        "series": [
+          {
+            "name": "red",
+            "color": "#d62728"
+          },
+          {
+            "name": "blue",
+            "color": "#1f77b4"
+          }
+        ],
+        "parameters": {
+          "tolerance": 28.0,
+          "min_area": 30,
+          "min_bar_thickness": 3,
+          "min_bar_length": 2,
+          "min_fill_ratio": 0.55,
+          "bridge_gap": 1,
+          "category_tolerance_px": 39.65023255813952,
+          "baseline_tolerance_px": 3.0,
+          "stack_gap_tolerance_px": 3.0,
+          "expected_stack_total": null,
+          "stack_total_tolerance": 0.75,
+          "error_color": "#595959",
+          "error_tolerance": 24.0,
+          "error_search_radius": 2,
+          "error_min_span": 4
+        },
+        "marks": [
+          {
+            "category": "A",
+            "requested_category_pixel": 349.5069767441861,
+            "series": "red",
+            "color": "#d62728",
+            "status": "extracted",
+            "confidence": 0.913,
+            "component_category_pixel": 364.5,
+            "component": {
+              "area": 2340.0,
+              "left_pixel": 151.0,
+              "right_pixel": 240.0,
+              "top_pixel": 351.0,
+              "bottom_pixel": 378.0,
+              "width_pixels": 89.0,
+              "height_pixels": 27.0,
+              "cross_extent_pixels": 27.0,
+              "value_extent_pixels": 89.0,
+              "fill_ratio": 0.9737827715355806,
+              "category_pixel": 364.5,
+              "category_distance_pixels": 14.99302325581391
+            },
+            "baseline_pixel": 240.33333333333334,
+            "start_pixel": 240.0,
+            "end_pixel": 151.0,
+            "start_value": 0.0,
+            "end_value": -2.9910714285714284,
+            "value": -2.9910714285714284,
+            "error_bar": {
+              "status": "extracted",
+              "lower_pixel": 130.0,
+              "upper_pixel": 172.0,
+              "lower_value": -3.694196428571429,
+              "upper_value": -2.2879464285714284,
+              "span_pixels": 42.0,
+              "confidence": 1.0,
+              "semantic_type": "visible_interval_only"
+            }
+          },
+          {
+            "category": "A",
+            "requested_category_pixel": 349.5069767441861,
+            "series": "blue",
+            "color": "#1f77b4",
+            "status": "extracted",
+            "confidence": 0.92,
+            "component_category_pixel": 334.5,
+            "component": {
+              "area": 4007.0,
+              "left_pixel": 240.0,
+              "right_pixel": 390.0,
+              "top_pixel": 321.0,
+              "bottom_pixel": 348.0,
+              "width_pixels": 150.0,
+              "height_pixels": 27.0,
+              "cross_extent_pixels": 27.0,
+              "value_extent_pixels": 150.0,
+              "fill_ratio": 0.9893827160493828,
+              "category_pixel": 334.5,
+              "category_distance_pixels": 15.00697674418609
+            },
+            "baseline_pixel": 240.33333333333334,
+            "start_pixel": 240.0,
+            "end_pixel": 390.0,
+            "start_value": 0.0,
+            "end_value": 5.0111607142857135,
+            "value": 5.0111607142857135,
+            "error_bar": {
+              "status": "extracted",
+              "lower_pixel": 372.0,
+              "upper_pixel": 408.0,
+              "lower_value": 4.408482142857142,
+              "upper_value": 5.6138392857142865,
+              "span_pixels": 36.0,
+              "confidence": 1.0,
+              "semantic_type": "visible_interval_only"
+            }
+          },
+          {
+            "category": "B",
+            "requested_category_pixel": 266.90232558139536,
+            "series": "red",
+            "color": "#d62728",
+            "status": "extracted",
+            "confidence": 0.913,
+            "component_category_pixel": 282.0,
+            "component": {
+              "area": 3047.0,
+              "left_pixel": 240.0,
+              "right_pixel": 360.0,
+              "top_pixel": 269.0,
+              "bottom_pixel": 295.0,
+              "width_pixels": 120.0,
+              "height_pixels": 26.0,
+              "cross_extent_pixels": 26.0,
+              "value_extent_pixels": 120.0,
+              "fill_ratio": 0.9766025641025641,
+              "category_pixel": 282.0,
+              "category_distance_pixels": 15.09767441860464
+            },
+            "baseline_pixel": 240.33333333333334,
+            "start_pixel": 240.0,
+            "end_pixel": 360.0,
+            "start_value": 0.0,
+            "end_value": 4.006696428571429,
+            "value": 4.006696428571429,
+            "error_bar": {
+              "status": "extracted",
+              "lower_pixel": 333.0,
+              "upper_pixel": 387.0,
+              "lower_value": 3.102678571428571,
+              "upper_value": 4.9107142857142865,
+              "span_pixels": 54.0,
+              "confidence": 1.0,
+              "semantic_type": "visible_interval_only"
+            }
+          },
+          {
+            "category": "B",
+            "requested_category_pixel": 266.90232558139536,
+            "series": "blue",
+            "color": "#1f77b4",
+            "status": "extracted",
+            "confidence": 0.91,
+            "component_category_pixel": 252.0,
+            "component": {
+              "area": 1483.0,
+              "left_pixel": 181.0,
+              "right_pixel": 240.0,
+              "top_pixel": 239.0,
+              "bottom_pixel": 265.0,
+              "width_pixels": 59.0,
+              "height_pixels": 26.0,
+              "cross_extent_pixels": 26.0,
+              "value_extent_pixels": 59.0,
+              "fill_ratio": 0.9667535853976532,
+              "category_pixel": 252.0,
+              "category_distance_pixels": 14.90232558139536
+            },
+            "baseline_pixel": 240.33333333333334,
+            "start_pixel": 240.0,
+            "end_pixel": 181.0,
+            "start_value": 0.0,
+            "end_value": -1.9866071428571428,
+            "value": -1.9866071428571428,
+            "error_bar": {
+              "status": "extracted",
+              "lower_pixel": 160.0,
+              "upper_pixel": 202.0,
+              "lower_value": -2.689732142857143,
+              "upper_value": -1.2834821428571428,
+              "span_pixels": 42.0,
+              "confidence": 1.0,
+              "semantic_type": "visible_interval_only"
+            }
+          },
+          {
+            "category": "C",
+            "requested_category_pixel": 184.2976744186047,
+            "series": "red",
+            "color": "#d62728",
+            "status": "extracted",
+            "confidence": 0.92,
+            "component_category_pixel": 199.0,
+            "component": {
+              "area": 5369.0,
+              "left_pixel": 240.0,
+              "right_pixel": 449.0,
+              "top_pixel": 186.0,
+              "bottom_pixel": 212.0,
+              "width_pixels": 209.0,
+              "height_pixels": 26.0,
+              "cross_extent_pixels": 26.0,
+              "value_extent_pixels": 209.0,
+              "fill_ratio": 0.9880382775119617,
+              "category_pixel": 199.0,
+              "category_distance_pixels": 14.702325581395314
+            },
+            "baseline_pixel": 240.33333333333334,
+            "start_pixel": 240.0,
+            "end_pixel": 449.0,
+            "start_value": 0.0,
+            "end_value": 6.986607142857142,
+            "value": 6.986607142857142,
+            "error_bar": {
+              "status": "extracted",
+              "lower_pixel": 426.0,
+              "upper_pixel": 473.0,
+              "lower_value": 6.216517857142858,
+              "upper_value": 7.790178571428571,
+              "span_pixels": 47.0,
+              "confidence": 1.0,
+              "semantic_type": "visible_interval_only"
+            }
+          },
+          {
+            "category": "C",
+            "requested_category_pixel": 184.2976744186047,
+            "series": "blue",
+            "color": "#1f77b4",
+            "status": "extracted",
+            "confidence": 0.919,
+            "component_category_pixel": 169.5,
+            "component": {
+              "area": 2393.0,
+              "left_pixel": 240.0,
+              "right_pixel": 330.0,
+              "top_pixel": 156.0,
+              "bottom_pixel": 183.0,
+              "width_pixels": 90.0,
+              "height_pixels": 27.0,
+              "cross_extent_pixels": 27.0,
+              "value_extent_pixels": 90.0,
+              "fill_ratio": 0.9847736625514403,
+              "category_pixel": 169.5,
+              "category_distance_pixels": 14.797674418604686
+            },
+            "baseline_pixel": 240.33333333333334,
+            "start_pixel": 240.0,
+            "end_pixel": 330.0,
+            "start_value": 0.0,
+            "end_value": 3.0022321428571423,
+            "value": 3.0022321428571423,
+            "error_bar": {
+              "status": "extracted",
+              "lower_pixel": 315.0,
+              "upper_pixel": 345.0,
+              "lower_value": 2.5,
+              "upper_value": 3.5044642857142865,
+              "span_pixels": 30.0,
+              "confidence": 1.0,
+              "semantic_type": "visible_interval_only"
+            }
+          },
+          {
+            "category": "D",
+            "requested_category_pixel": 101.69302325581396,
+            "series": "red",
+            "color": "#d62728",
+            "status": "extracted",
+            "confidence": 0.91,
+            "component_category_pixel": 116.5,
+            "component": {
+              "area": 1565.0,
+              "left_pixel": 240.0,
+              "right_pixel": 300.0,
+              "top_pixel": 103.0,
+              "bottom_pixel": 130.0,
+              "width_pixels": 60.0,
+              "height_pixels": 27.0,
+              "cross_extent_pixels": 27.0,
+              "value_extent_pixels": 60.0,
+              "fill_ratio": 0.9660493827160493,
+              "category_pixel": 116.5,
+              "category_distance_pixels": 14.806976744186045
+            },
+            "baseline_pixel": 240.33333333333334,
+            "start_pixel": 240.0,
+            "end_pixel": 300.0,
+            "start_value": 0.0,
+            "end_value": 1.9977678571428568,
+            "value": 1.9977678571428568,
+            "error_bar": {
+              "status": "extracted",
+              "lower_pixel": 282.0,
+              "upper_pixel": 318.0,
+              "lower_value": 1.3950892857142856,
+              "upper_value": 2.600446428571429,
+              "span_pixels": 36.0,
+              "confidence": 1.0,
+              "semantic_type": "visible_interval_only"
+            }
+          },
+          {
+            "category": "D",
+            "requested_category_pixel": 101.69302325581396,
+            "series": "blue",
+            "color": "#1f77b4",
+            "status": "extracted",
+            "confidence": 0.921,
+            "component_category_pixel": 87.0,
+            "component": {
+              "area": 4625.0,
+              "left_pixel": 240.0,
+              "right_pixel": 420.0,
+              "top_pixel": 74.0,
+              "bottom_pixel": 100.0,
+              "width_pixels": 180.0,
+              "height_pixels": 26.0,
+              "cross_extent_pixels": 26.0,
+              "value_extent_pixels": 180.0,
+              "fill_ratio": 0.9882478632478633,
+              "category_pixel": 87.0,
+              "category_distance_pixels": 14.693023255813955
+            },
+            "baseline_pixel": 240.33333333333334,
+            "start_pixel": 240.0,
+            "end_pixel": 420.0,
+            "start_value": 0.0,
+            "end_value": 6.015625,
+            "value": 6.015625,
+            "error_bar": {
+              "status": "extracted",
+              "lower_pixel": 396.0,
+              "upper_pixel": 443.0,
+              "lower_value": 5.212053571428571,
+              "upper_value": 6.7857142857142865,
+              "span_pixels": 47.0,
+              "confidence": 1.0,
+              "semantic_type": "visible_interval_only"
+            }
+          }
+        ],
+        "rejected_components": [],
+        "stack_diagnostics": [],
+        "summary": {
+          "expected_mark_count": 8,
+          "extracted_mark_count": 8,
+          "missing_mark_count": 0,
+          "ambiguous_mark_count": 0,
+          "rejected_component_count": 0,
+          "error_bar_missing_count": 0,
+          "mean_confidence": 0.916
+        },
+        "limitations": [
+          "Only visible colour-distinct rectangles are measured; source observations are not recovered.",
+          "Category centres, the plot region, orientation, layout, and linear calibration must be verified.",
+          "A missing segment is not converted to a zero value.",
+          "Error intervals describe visible endpoints only; SD, SEM, or confidence-interval semantics are unknown.",
+          "Facets, insets, photos, 3D projections, gradients, hatching, and overlapping same-colour marks require separate routing."
+        ]
+      },
+      "metrics": {
+        "expected_mark_count": 8,
+        "extracted_mark_count": 8,
+        "matched_mark_count": 8,
+        "unmatched_prediction_count": 0,
+        "missing_truth_count": 0,
+        "precision": 1.0,
+        "coverage": 1.0,
+        "f1": 1.0,
+        "mae": 0.009207589285714302,
+        "p95_abs_error": 0.014843750000000176,
+        "max_abs_error": 0.015625,
+        "error_endpoint_p95_px": 0.4933333333333536,
+        "error_endpoint_max_px": 0.49333333333339624,
+        "expected_error_bar_count": 8,
+        "extracted_error_bar_count": 8,
+        "error_bar_coverage": 1.0
+      },
+      "overlay": "grouped_horizontal_clean_overlay.png",
+      "recreation": "grouped_horizontal_clean_recreation.png",
+      "image_hash_sha256": "856b4595aab0bd16c176dede1cb4aeba50aac1fb23a7834cfa4c9dcf0c030db7",
+      "benchmark_status": "passed",
+      "failure_reason": ""
+    },
+    {
+      "name": "stacked_vertical_clean",
+      "expected_status": "candidate",
+      "status": "candidate",
+      "raster_dimensions": [
+        700,
+        480
+      ],
+      "plot_bounds": [
+        91,
+        48,
+        538,
+        403
+      ],
+      "value_axis": [
+        48.0,
+        80.0,
+        403.2,
+        0.0
+      ],
+      "orientation": "vertical",
+      "layout": "stacked",
+      "categories": [
+        {
+          "name": "A",
+          "center_pixel": 158.72093023255815
+        },
+        {
+          "name": "B",
+          "center_pixel": 262.90697674418607
+        },
+        {
+          "name": "C",
+          "center_pixel": 367.09302325581393
+        },
+        {
+          "name": "D",
+          "center_pixel": 471.27906976744185
+        }
+      ],
+      "series_colors": {
+        "red": "#d62728",
+        "blue": "#1f77b4",
+        "green": "#2ca02c"
+      },
+      "expected_stack_total": null,
+      "error_color": null,
+      "truth": [
+        {
+          "category": "A",
+          "series": "red",
+          "value": 18.0
+        },
+        {
+          "category": "A",
+          "series": "blue",
+          "value": 27.0
+        },
+        {
+          "category": "A",
+          "series": "green",
+          "value": 16.0
+        },
+        {
+          "category": "B",
+          "series": "red",
+          "value": 22.0
+        },
+        {
+          "category": "B",
+          "series": "blue",
+          "value": 19.0
+        },
+        {
+          "category": "B",
+          "series": "green",
+          "value": 23.0
+        },
+        {
+          "category": "C",
+          "series": "red",
+          "value": 14.0
+        },
+        {
+          "category": "C",
+          "series": "blue",
+          "value": 31.0
+        },
+        {
+          "category": "C",
+          "series": "green",
+          "value": 20.0
+        },
+        {
+          "category": "D",
+          "series": "red",
+          "value": 25.0
+        },
+        {
+          "category": "D",
+          "series": "blue",
+          "value": 18.0
+        },
+        {
+          "category": "D",
+          "series": "green",
+          "value": 28.0
+        }
+      ],
+      "extraction": {
+        "schema_version": 1,
+        "extractor_status": "candidate",
+        "status": "candidate",
+        "input_file": "stacked_vertical_clean.png",
+        "input_sha256": "e62b9b50b40303bb0a24c6b3a2dc637a3c30b2bfdc1d3ff68f6766d39bc521b6",
+        "image_size": {
+          "width": 700,
+          "height": 480
+        },
+        "orientation": "vertical",
+        "layout": "stacked",
+        "plot_bounds": [
+          91,
+          48,
+          538,
+          403
+        ],
+        "value_axis": [
+          48.0,
+          80.0,
+          403.2,
+          0.0
+        ],
+        "axis_assumption": "verified linear value axis",
+        "baseline_value": 0.0,
+        "baseline_pixel": 403.2,
+        "categories": [
+          {
+            "name": "A",
+            "center_pixel": 158.72093023255815
+          },
+          {
+            "name": "B",
+            "center_pixel": 262.90697674418607
+          },
+          {
+            "name": "C",
+            "center_pixel": 367.09302325581393
+          },
+          {
+            "name": "D",
+            "center_pixel": 471.27906976744185
+          }
+        ],
+        "series": [
+          {
+            "name": "red",
+            "color": "#d62728"
+          },
+          {
+            "name": "blue",
+            "color": "#1f77b4"
+          },
+          {
+            "name": "green",
+            "color": "#2ca02c"
+          }
+        ],
+        "parameters": {
+          "tolerance": 28.0,
+          "min_area": 30,
+          "min_bar_thickness": 3,
+          "min_bar_length": 2,
+          "min_fill_ratio": 0.55,
+          "bridge_gap": 1,
+          "category_tolerance_px": 50.00930232558137,
+          "baseline_tolerance_px": 3.0,
+          "stack_gap_tolerance_px": 3.0,
+          "expected_stack_total": null,
+          "stack_total_tolerance": 0.75,
+          "error_color": null,
+          "error_tolerance": 24.0,
+          "error_search_radius": 2,
+          "error_min_span": 4
+        },
+        "marks": [
+          {
+            "category": "A",
+            "requested_category_pixel": 158.72093023255815,
+            "series": "red",
+            "color": "#d62728",
+            "status": "extracted",
+            "confidence": 0.997,
+            "component_category_pixel": 159.5,
+            "component": {
+              "area": 4661.0,
+              "left_pixel": 130.0,
+              "right_pixel": 189.0,
+              "top_pixel": 324.0,
+              "bottom_pixel": 403.0,
+              "width_pixels": 59.0,
+              "height_pixels": 79.0,
+              "cross_extent_pixels": 59.0,
+              "value_extent_pixels": 79.0,
+              "fill_ratio": 1.0,
+              "category_pixel": 159.5,
+              "category_distance_pixels": 0.7790697674418539
+            },
+            "baseline_pixel": 403.2,
+            "start_pixel": 403.0,
+            "end_pixel": 324.0,
+            "start_value": 0.04504504504504325,
+            "end_value": 17.83783783783784,
+            "value": 17.792792792792795
+          },
+          {
+            "category": "A",
+            "requested_category_pixel": 158.72093023255815,
+            "series": "blue",
+            "color": "#1f77b4",
+            "status": "extracted",
+            "confidence": 0.997,
+            "component_category_pixel": 159.5,
+            "component": {
+              "area": 7021.0,
+              "left_pixel": 130.0,
+              "right_pixel": 189.0,
+              "top_pixel": 204.0,
+              "bottom_pixel": 323.0,
+              "width_pixels": 59.0,
+              "height_pixels": 119.0,
+              "cross_extent_pixels": 59.0,
+              "value_extent_pixels": 119.0,
+              "fill_ratio": 1.0,
+              "category_pixel": 159.5,
+              "category_distance_pixels": 0.7790697674418539
+            },
+            "baseline_pixel": 403.2,
+            "start_pixel": 323.0,
+            "end_pixel": 204.0,
+            "start_value": 18.063063063063062,
+            "end_value": 44.86486486486486,
+            "value": 26.8018018018018
+          },
+          {
+            "category": "A",
+            "requested_category_pixel": 158.72093023255815,
+            "series": "green",
+            "color": "#2ca02c",
+            "status": "extracted",
+            "confidence": 0.997,
+            "component_category_pixel": 159.5,
+            "component": {
+              "area": 4130.0,
+              "left_pixel": 130.0,
+              "right_pixel": 189.0,
+              "top_pixel": 133.0,
+              "bottom_pixel": 203.0,
+              "width_pixels": 59.0,
+              "height_pixels": 70.0,
+              "cross_extent_pixels": 59.0,
+              "value_extent_pixels": 70.0,
+              "fill_ratio": 1.0,
+              "category_pixel": 159.5,
+              "category_distance_pixels": 0.7790697674418539
+            },
+            "baseline_pixel": 403.2,
+            "start_pixel": 203.0,
+            "end_pixel": 133.0,
+            "start_value": 45.09009009009009,
+            "end_value": 60.85585585585585,
+            "value": 15.765765765765764
+          },
+          {
+            "category": "B",
+            "requested_category_pixel": 262.90697674418607,
+            "series": "red",
+            "color": "#d62728",
+            "status": "extracted",
+            "confidence": 0.998,
+            "component_category_pixel": 263.5,
+            "component": {
+              "area": 5664.0,
+              "left_pixel": 234.0,
+              "right_pixel": 293.0,
+              "top_pixel": 307.0,
+              "bottom_pixel": 403.0,
+              "width_pixels": 59.0,
+              "height_pixels": 96.0,
+              "cross_extent_pixels": 59.0,
+              "value_extent_pixels": 96.0,
+              "fill_ratio": 1.0,
+              "category_pixel": 263.5,
+              "category_distance_pixels": 0.5930232558139323
+            },
+            "baseline_pixel": 403.2,
+            "start_pixel": 403.0,
+            "end_pixel": 307.0,
+            "start_value": 0.04504504504504325,
+            "end_value": 21.666666666666664,
+            "value": 21.62162162162162
+          },
+          {
+            "category": "B",
+            "requested_category_pixel": 262.90697674418607,
+            "series": "blue",
+            "color": "#1f77b4",
+            "status": "extracted",
+            "confidence": 0.998,
+            "component_category_pixel": 263.5,
+            "component": {
+              "area": 4956.0,
+              "left_pixel": 234.0,
+              "right_pixel": 293.0,
+              "top_pixel": 222.0,
+              "bottom_pixel": 306.0,
+              "width_pixels": 59.0,
+              "height_pixels": 84.0,
+              "cross_extent_pixels": 59.0,
+              "value_extent_pixels": 84.0,
+              "fill_ratio": 1.0,
+              "category_pixel": 263.5,
+              "category_distance_pixels": 0.5930232558139323
+            },
+            "baseline_pixel": 403.2,
+            "start_pixel": 306.0,
+            "end_pixel": 222.0,
+            "start_value": 21.891891891891888,
+            "end_value": 40.81081081081081,
+            "value": 18.91891891891892
+          },
+          {
+            "category": "B",
+            "requested_category_pixel": 262.90697674418607,
+            "series": "green",
+            "color": "#2ca02c",
+            "status": "extracted",
+            "confidence": 0.998,
+            "component_category_pixel": 263.5,
+            "component": {
+              "area": 5959.0,
+              "left_pixel": 234.0,
+              "right_pixel": 293.0,
+              "top_pixel": 120.0,
+              "bottom_pixel": 221.0,
+              "width_pixels": 59.0,
+              "height_pixels": 101.0,
+              "cross_extent_pixels": 59.0,
+              "value_extent_pixels": 101.0,
+              "fill_ratio": 1.0,
+              "category_pixel": 263.5,
+              "category_distance_pixels": 0.5930232558139323
+            },
+            "baseline_pixel": 403.2,
+            "start_pixel": 221.0,
+            "end_pixel": 120.0,
+            "start_value": 41.03603603603604,
+            "end_value": 63.78378378378378,
+            "value": 22.747747747747745
+          },
+          {
+            "category": "C",
+            "requested_category_pixel": 367.09302325581393,
+            "series": "red",
+            "color": "#d62728",
+            "status": "extracted",
+            "confidence": 0.998,
+            "component_category_pixel": 367.5,
+            "component": {
+              "area": 3599.0,
+              "left_pixel": 338.0,
+              "right_pixel": 397.0,
+              "top_pixel": 342.0,
+              "bottom_pixel": 403.0,
+              "width_pixels": 59.0,
+              "height_pixels": 61.0,
+              "cross_extent_pixels": 59.0,
+              "value_extent_pixels": 61.0,
+              "fill_ratio": 1.0,
+              "category_pixel": 367.5,
+              "category_distance_pixels": 0.40697674418606766
+            },
+            "baseline_pixel": 403.2,
+            "start_pixel": 403.0,
+            "end_pixel": 342.0,
+            "start_value": 0.04504504504504325,
+            "end_value": 13.783783783783775,
+            "value": 13.738738738738732
+          },
+          {
+            "category": "C",
+            "requested_category_pixel": 367.09302325581393,
+            "series": "blue",
+            "color": "#1f77b4",
+            "status": "extracted",
+            "confidence": 0.998,
+            "component_category_pixel": 367.5,
+            "component": {
+              "area": 8083.0,
+              "left_pixel": 338.0,
+              "right_pixel": 397.0,
+              "top_pixel": 204.0,
+              "bottom_pixel": 341.0,
+              "width_pixels": 59.0,
+              "height_pixels": 137.0,
+              "cross_extent_pixels": 59.0,
+              "value_extent_pixels": 137.0,
+              "fill_ratio": 1.0,
+              "category_pixel": 367.5,
+              "category_distance_pixels": 0.40697674418606766
+            },
+            "baseline_pixel": 403.2,
+            "start_pixel": 341.0,
+            "end_pixel": 204.0,
+            "start_value": 14.009009009009006,
+            "end_value": 44.86486486486486,
+            "value": 30.855855855855857
+          },
+          {
+            "category": "C",
+            "requested_category_pixel": 367.09302325581393,
+            "series": "green",
+            "color": "#2ca02c",
+            "status": "extracted",
+            "confidence": 0.998,
+            "component_category_pixel": 367.5,
+            "component": {
+              "area": 5133.0,
+              "left_pixel": 338.0,
+              "right_pixel": 397.0,
+              "top_pixel": 116.0,
+              "bottom_pixel": 203.0,
+              "width_pixels": 59.0,
+              "height_pixels": 87.0,
+              "cross_extent_pixels": 59.0,
+              "value_extent_pixels": 87.0,
+              "fill_ratio": 1.0,
+              "category_pixel": 367.5,
+              "category_distance_pixels": 0.40697674418606766
+            },
+            "baseline_pixel": 403.2,
+            "start_pixel": 203.0,
+            "end_pixel": 116.0,
+            "start_value": 45.09009009009009,
+            "end_value": 64.68468468468468,
+            "value": 19.594594594594597
+          },
+          {
+            "category": "D",
+            "requested_category_pixel": 471.27906976744185,
+            "series": "red",
+            "color": "#d62728",
+            "status": "extracted",
+            "confidence": 0.999,
+            "component_category_pixel": 471.5,
+            "component": {
+              "area": 6490.0,
+              "left_pixel": 442.0,
+              "right_pixel": 501.0,
+              "top_pixel": 293.0,
+              "bottom_pixel": 403.0,
+              "width_pixels": 59.0,
+              "height_pixels": 110.0,
+              "cross_extent_pixels": 59.0,
+              "value_extent_pixels": 110.0,
+              "fill_ratio": 1.0,
+              "category_pixel": 471.5,
+              "category_distance_pixels": 0.22093023255814614
+            },
+            "baseline_pixel": 403.2,
+            "start_pixel": 403.0,
+            "end_pixel": 293.0,
+            "start_value": 0.04504504504504325,
+            "end_value": 24.81981981981982,
+            "value": 24.774774774774777
+          },
+          {
+            "category": "D",
+            "requested_category_pixel": 471.27906976744185,
+            "series": "blue",
+            "color": "#1f77b4",
+            "status": "extracted",
+            "confidence": 0.999,
+            "component_category_pixel": 471.5,
+            "component": {
+              "area": 4661.0,
+              "left_pixel": 442.0,
+              "right_pixel": 501.0,
+              "top_pixel": 213.0,
+              "bottom_pixel": 292.0,
+              "width_pixels": 59.0,
+              "height_pixels": 79.0,
+              "cross_extent_pixels": 59.0,
+              "value_extent_pixels": 79.0,
+              "fill_ratio": 1.0,
+              "category_pixel": 471.5,
+              "category_distance_pixels": 0.22093023255814614
+            },
+            "baseline_pixel": 403.2,
+            "start_pixel": 292.0,
+            "end_pixel": 213.0,
+            "start_value": 25.045045045045043,
+            "end_value": 42.83783783783784,
+            "value": 17.792792792792795
+          },
+          {
+            "category": "D",
+            "requested_category_pixel": 471.27906976744185,
+            "series": "green",
+            "color": "#2ca02c",
+            "status": "extracted",
+            "confidence": 0.999,
+            "component_category_pixel": 471.5,
+            "component": {
+              "area": 7257.0,
+              "left_pixel": 442.0,
+              "right_pixel": 501.0,
+              "top_pixel": 89.0,
+              "bottom_pixel": 212.0,
+              "width_pixels": 59.0,
+              "height_pixels": 123.0,
+              "cross_extent_pixels": 59.0,
+              "value_extent_pixels": 123.0,
+              "fill_ratio": 1.0,
+              "category_pixel": 471.5,
+              "category_distance_pixels": 0.22093023255814614
+            },
+            "baseline_pixel": 403.2,
+            "start_pixel": 212.0,
+            "end_pixel": 89.0,
+            "start_value": 43.06306306306306,
+            "end_value": 70.76576576576576,
+            "value": 27.7027027027027
+          }
+        ],
+        "rejected_components": [],
+        "stack_diagnostics": [],
+        "summary": {
+          "expected_mark_count": 12,
+          "extracted_mark_count": 12,
+          "missing_mark_count": 0,
+          "ambiguous_mark_count": 0,
+          "rejected_component_count": 0,
+          "error_bar_missing_count": 0,
+          "mean_confidence": 0.998
+        },
+        "limitations": [
+          "Only visible colour-distinct rectangles are measured; source observations are not recovered.",
+          "Category centres, the plot region, orientation, layout, and linear calibration must be verified.",
+          "A missing segment is not converted to a zero value.",
+          "Error intervals describe visible endpoints only; SD, SEM, or confidence-interval semantics are unknown.",
+          "Facets, insets, photos, 3D projections, gradients, hatching, and overlapping same-colour marks require separate routing."
+        ]
+      },
+      "metrics": {
+        "expected_mark_count": 12,
+        "extracted_mark_count": 12,
+        "matched_mark_count": 12,
+        "unmatched_prediction_count": 0,
+        "missing_truth_count": 0,
+        "precision": 1.0,
+        "coverage": 1.0,
+        "f1": 1.0,
+        "mae": 0.24099099099099122,
+        "p95_abs_error": 0.39054054054054,
+        "max_abs_error": 0.4054054054054035,
+        "error_endpoint_p95_px": null,
+        "error_endpoint_max_px": null,
+        "expected_error_bar_count": 0,
+        "extracted_error_bar_count": 0,
+        "error_bar_coverage": null
+      },
+      "overlay": "stacked_vertical_clean_overlay.png",
+      "recreation": "stacked_vertical_clean_recreation.png",
+      "image_hash_sha256": "e62b9b50b40303bb0a24c6b3a2dc637a3c30b2bfdc1d3ff68f6766d39bc521b6",
+      "benchmark_status": "passed",
+      "failure_reason": ""
+    },
+    {
+      "name": "percent_stacked_horizontal_dark",
+      "expected_status": "candidate",
+      "status": "candidate",
+      "raster_dimensions": [
+        700,
+        480
+      ],
+      "plot_bounds": [
+        91,
+        48,
+        538,
+        403
+      ],
+      "value_axis": [
+        91.0,
+        0.0,
+        539.0,
+        100.0
+      ],
+      "orientation": "horizontal",
+      "layout": "percent_stacked",
+      "categories": [
+        {
+          "name": "A",
+          "center_pixel": 349.5069767441861
+        },
+        {
+          "name": "B",
+          "center_pixel": 266.90232558139536
+        },
+        {
+          "name": "C",
+          "center_pixel": 184.2976744186047
+        },
+        {
+          "name": "D",
+          "center_pixel": 101.69302325581396
+        }
+      ],
+      "series_colors": {
+        "red": "#d62728",
+        "blue": "#1f77b4",
+        "green": "#2ca02c"
+      },
+      "expected_stack_total": 100.0,
+      "error_color": null,
+      "truth": [
+        {
+          "category": "A",
+          "series": "red",
+          "value": 20.0
+        },
+        {
+          "category": "A",
+          "series": "blue",
+          "value": 30.0
+        },
+        {
+          "category": "A",
+          "series": "green",
+          "value": 50.0
+        },
+        {
+          "category": "B",
+          "series": "red",
+          "value": 35.0
+        },
+        {
+          "category": "B",
+          "series": "blue",
+          "value": 20.0
+        },
+        {
+          "category": "B",
+          "series": "green",
+          "value": 45.0
+        },
+        {
+          "category": "C",
+          "series": "red",
+          "value": 15.0
+        },
+        {
+          "category": "C",
+          "series": "blue",
+          "value": 45.0
+        },
+        {
+          "category": "C",
+          "series": "green",
+          "value": 40.0
+        },
+        {
+          "category": "D",
+          "series": "red",
+          "value": 30.0
+        },
+        {
+          "category": "D",
+          "series": "blue",
+          "value": 25.0
+        },
+        {
+          "category": "D",
+          "series": "green",
+          "value": 45.0
+        }
+      ],
+      "extraction": {
+        "schema_version": 1,
+        "extractor_status": "candidate",
+        "status": "candidate",
+        "input_file": "percent_stacked_horizontal_dark.png",
+        "input_sha256": "6dc93e9fc714d4d23764a455209ea183469f9cb9cc371fe2dc7d704b85225a2f",
+        "image_size": {
+          "width": 700,
+          "height": 480
+        },
+        "orientation": "horizontal",
+        "layout": "percent_stacked",
+        "plot_bounds": [
+          91,
+          48,
+          538,
+          403
+        ],
+        "value_axis": [
+          91.0,
+          0.0,
+          539.0,
+          100.0
+        ],
+        "axis_assumption": "verified linear value axis",
+        "baseline_value": 0.0,
+        "baseline_pixel": 91.0,
+        "categories": [
+          {
+            "name": "A",
+            "center_pixel": 349.5069767441861
+          },
+          {
+            "name": "B",
+            "center_pixel": 266.90232558139536
+          },
+          {
+            "name": "C",
+            "center_pixel": 184.2976744186047
+          },
+          {
+            "name": "D",
+            "center_pixel": 101.69302325581396
+          }
+        ],
+        "series": [
+          {
+            "name": "red",
+            "color": "#d62728"
+          },
+          {
+            "name": "blue",
+            "color": "#1f77b4"
+          },
+          {
+            "name": "green",
+            "color": "#2ca02c"
+          }
+        ],
+        "parameters": {
+          "tolerance": 28.0,
+          "min_area": 30,
+          "min_bar_thickness": 3,
+          "min_bar_length": 2,
+          "min_fill_ratio": 0.55,
+          "bridge_gap": 1,
+          "category_tolerance_px": 39.65023255813952,
+          "baseline_tolerance_px": 3.0,
+          "stack_gap_tolerance_px": 3.0,
+          "expected_stack_total": 100.0,
+          "stack_total_tolerance": 0.75,
+          "error_color": null,
+          "error_tolerance": 24.0,
+          "error_search_radius": 2,
+          "error_min_span": 4
+        },
+        "marks": [
+          {
+            "category": "A",
+            "requested_category_pixel": 349.5069767441861,
+            "series": "red",
+            "color": "#d62728",
+            "status": "extracted",
+            "confidence": 0.998,
+            "component_category_pixel": 350.0,
+            "component": {
+              "area": 4094.0,
+              "left_pixel": 92.0,
+              "right_pixel": 181.0,
+              "top_pixel": 327.0,
+              "bottom_pixel": 373.0,
+              "width_pixels": 89.0,
+              "height_pixels": 46.0,
+              "cross_extent_pixels": 46.0,
+              "value_extent_pixels": 89.0,
+              "fill_ratio": 1.0,
+              "category_pixel": 350.0,
+              "category_distance_pixels": 0.4930232558139096
+            },
+            "baseline_pixel": 91.0,
+            "start_pixel": 92.0,
+            "end_pixel": 181.0,
+            "start_value": 0.22321428571428573,
+            "end_value": 20.089285714285715,
+            "value": 19.86607142857143
+          },
+          {
+            "category": "A",
+            "requested_category_pixel": 349.5069767441861,
+            "series": "blue",
+            "color": "#1f77b4",
+            "status": "extracted",
+            "confidence": 0.998,
+            "component_category_pixel": 350.0,
+            "component": {
+              "area": 6118.0,
+              "left_pixel": 182.0,
+              "right_pixel": 315.0,
+              "top_pixel": 327.0,
+              "bottom_pixel": 373.0,
+              "width_pixels": 133.0,
+              "height_pixels": 46.0,
+              "cross_extent_pixels": 46.0,
+              "value_extent_pixels": 133.0,
+              "fill_ratio": 1.0,
+              "category_pixel": 350.0,
+              "category_distance_pixels": 0.4930232558139096
+            },
+            "baseline_pixel": 91.0,
+            "start_pixel": 182.0,
+            "end_pixel": 315.0,
+            "start_value": 20.3125,
+            "end_value": 50.0,
+            "value": 29.6875
+          },
+          {
+            "category": "A",
+            "requested_category_pixel": 349.5069767441861,
+            "series": "green",
+            "color": "#2ca02c",
+            "status": "extracted",
+            "confidence": 0.998,
+            "component_category_pixel": 350.0,
+            "component": {
+              "area": 10258.0,
+              "left_pixel": 316.0,
+              "right_pixel": 539.0,
+              "top_pixel": 327.0,
+              "bottom_pixel": 373.0,
+              "width_pixels": 223.0,
+              "height_pixels": 46.0,
+              "cross_extent_pixels": 46.0,
+              "value_extent_pixels": 223.0,
+              "fill_ratio": 1.0,
+              "category_pixel": 350.0,
+              "category_distance_pixels": 0.4930232558139096
+            },
+            "baseline_pixel": 91.0,
+            "start_pixel": 316.0,
+            "end_pixel": 539.0,
+            "start_value": 50.223214285714285,
+            "end_value": 100.0,
+            "value": 49.776785714285715
+          },
+          {
+            "category": "B",
+            "requested_category_pixel": 266.90232558139536,
+            "series": "red",
+            "color": "#d62728",
+            "status": "extracted",
+            "confidence": 0.997,
+            "component_category_pixel": 267.5,
+            "component": {
+              "area": 7332.0,
+              "left_pixel": 92.0,
+              "right_pixel": 248.0,
+              "top_pixel": 244.0,
+              "bottom_pixel": 291.0,
+              "width_pixels": 156.0,
+              "height_pixels": 47.0,
+              "cross_extent_pixels": 47.0,
+              "value_extent_pixels": 156.0,
+              "fill_ratio": 1.0,
+              "category_pixel": 267.5,
+              "category_distance_pixels": 0.5976744186046403
+            },
+            "baseline_pixel": 91.0,
+            "start_pixel": 92.0,
+            "end_pixel": 248.0,
+            "start_value": 0.22321428571428573,
+            "end_value": 35.044642857142854,
+            "value": 34.82142857142857
+          },
+          {
+            "category": "B",
+            "requested_category_pixel": 266.90232558139536,
+            "series": "blue",
+            "color": "#1f77b4",
+            "status": "extracted",
+            "confidence": 0.997,
+            "component_category_pixel": 267.5,
+            "component": {
+              "area": 4136.0,
+              "left_pixel": 249.0,
+              "right_pixel": 337.0,
+              "top_pixel": 244.0,
+              "bottom_pixel": 291.0,
+              "width_pixels": 88.0,
+              "height_pixels": 47.0,
+              "cross_extent_pixels": 47.0,
+              "value_extent_pixels": 88.0,
+              "fill_ratio": 1.0,
+              "category_pixel": 267.5,
+              "category_distance_pixels": 0.5976744186046403
+            },
+            "baseline_pixel": 91.0,
+            "start_pixel": 249.0,
+            "end_pixel": 337.0,
+            "start_value": 35.267857142857146,
+            "end_value": 54.910714285714285,
+            "value": 19.64285714285714
+          },
+          {
+            "category": "B",
+            "requested_category_pixel": 266.90232558139536,
+            "series": "green",
+            "color": "#2ca02c",
+            "status": "extracted",
+            "confidence": 0.997,
+            "component_category_pixel": 267.5,
+            "component": {
+              "area": 9447.0,
+              "left_pixel": 338.0,
+              "right_pixel": 539.0,
+              "top_pixel": 244.0,
+              "bottom_pixel": 291.0,
+              "width_pixels": 201.0,
+              "height_pixels": 47.0,
+              "cross_extent_pixels": 47.0,
+              "value_extent_pixels": 201.0,
+              "fill_ratio": 1.0,
+              "category_pixel": 267.5,
+              "category_distance_pixels": 0.5976744186046403
+            },
+            "baseline_pixel": 91.0,
+            "start_pixel": 338.0,
+            "end_pixel": 539.0,
+            "start_value": 55.13392857142857,
+            "end_value": 100.0,
+            "value": 44.86607142857143
+          },
+          {
+            "category": "C",
+            "requested_category_pixel": 184.2976744186047,
+            "series": "red",
+            "color": "#d62728",
+            "status": "extracted",
+            "confidence": 0.999,
+            "component_category_pixel": 184.5,
+            "component": {
+              "area": 3102.0,
+              "left_pixel": 92.0,
+              "right_pixel": 158.0,
+              "top_pixel": 161.0,
+              "bottom_pixel": 208.0,
+              "width_pixels": 66.0,
+              "height_pixels": 47.0,
+              "cross_extent_pixels": 47.0,
+              "value_extent_pixels": 66.0,
+              "fill_ratio": 1.0,
+              "category_pixel": 184.5,
+              "category_distance_pixels": 0.2023255813953142
+            },
+            "baseline_pixel": 91.0,
+            "start_pixel": 92.0,
+            "end_pixel": 158.0,
+            "start_value": 0.22321428571428573,
+            "end_value": 14.955357142857142,
+            "value": 14.732142857142856
+          },
+          {
+            "category": "C",
+            "requested_category_pixel": 184.2976744186047,
+            "series": "blue",
+            "color": "#1f77b4",
+            "status": "extracted",
+            "confidence": 0.999,
+            "component_category_pixel": 184.5,
+            "component": {
+              "area": 9447.0,
+              "left_pixel": 159.0,
+              "right_pixel": 360.0,
+              "top_pixel": 161.0,
+              "bottom_pixel": 208.0,
+              "width_pixels": 201.0,
+              "height_pixels": 47.0,
+              "cross_extent_pixels": 47.0,
+              "value_extent_pixels": 201.0,
+              "fill_ratio": 1.0,
+              "category_pixel": 184.5,
+              "category_distance_pixels": 0.2023255813953142
+            },
+            "baseline_pixel": 91.0,
+            "start_pixel": 159.0,
+            "end_pixel": 360.0,
+            "start_value": 15.178571428571429,
+            "end_value": 60.044642857142854,
+            "value": 44.86607142857142
+          },
+          {
+            "category": "C",
+            "requested_category_pixel": 184.2976744186047,
+            "series": "green",
+            "color": "#2ca02c",
+            "status": "extracted",
+            "confidence": 0.999,
+            "component_category_pixel": 184.5,
+            "component": {
+              "area": 8366.0,
+              "left_pixel": 361.0,
+              "right_pixel": 539.0,
+              "top_pixel": 161.0,
+              "bottom_pixel": 208.0,
+              "width_pixels": 178.0,
+              "height_pixels": 47.0,
+              "cross_extent_pixels": 47.0,
+              "value_extent_pixels": 178.0,
+              "fill_ratio": 1.0,
+              "category_pixel": 184.5,
+              "category_distance_pixels": 0.2023255813953142
+            },
+            "baseline_pixel": 91.0,
+            "start_pixel": 361.0,
+            "end_pixel": 539.0,
+            "start_value": 60.267857142857146,
+            "end_value": 100.0,
+            "value": 39.732142857142854
+          },
+          {
+            "category": "D",
+            "requested_category_pixel": 101.69302325581396,
+            "series": "red",
+            "color": "#d62728",
+            "status": "extracted",
+            "confidence": 0.996,
+            "component_category_pixel": 102.5,
+            "component": {
+              "area": 6251.0,
+              "left_pixel": 92.0,
+              "right_pixel": 225.0,
+              "top_pixel": 79.0,
+              "bottom_pixel": 126.0,
+              "width_pixels": 133.0,
+              "height_pixels": 47.0,
+              "cross_extent_pixels": 47.0,
+              "value_extent_pixels": 133.0,
+              "fill_ratio": 1.0,
+              "category_pixel": 102.5,
+              "category_distance_pixels": 0.8069767441860449
+            },
+            "baseline_pixel": 91.0,
+            "start_pixel": 92.0,
+            "end_pixel": 225.0,
+            "start_value": 0.22321428571428573,
+            "end_value": 29.910714285714285,
+            "value": 29.6875
+          },
+          {
+            "category": "D",
+            "requested_category_pixel": 101.69302325581396,
+            "series": "blue",
+            "color": "#1f77b4",
+            "status": "extracted",
+            "confidence": 0.996,
+            "component_category_pixel": 102.5,
+            "component": {
+              "area": 5217.0,
+              "left_pixel": 226.0,
+              "right_pixel": 337.0,
+              "top_pixel": 79.0,
+              "bottom_pixel": 126.0,
+              "width_pixels": 111.0,
+              "height_pixels": 47.0,
+              "cross_extent_pixels": 47.0,
+              "value_extent_pixels": 111.0,
+              "fill_ratio": 1.0,
+              "category_pixel": 102.5,
+              "category_distance_pixels": 0.8069767441860449
+            },
+            "baseline_pixel": 91.0,
+            "start_pixel": 226.0,
+            "end_pixel": 337.0,
+            "start_value": 30.133928571428573,
+            "end_value": 54.910714285714285,
+            "value": 24.77678571428571
+          },
+          {
+            "category": "D",
+            "requested_category_pixel": 101.69302325581396,
+            "series": "green",
+            "color": "#2ca02c",
+            "status": "extracted",
+            "confidence": 0.996,
+            "component_category_pixel": 102.5,
+            "component": {
+              "area": 9447.0,
+              "left_pixel": 338.0,
+              "right_pixel": 539.0,
+              "top_pixel": 79.0,
+              "bottom_pixel": 126.0,
+              "width_pixels": 201.0,
+              "height_pixels": 47.0,
+              "cross_extent_pixels": 47.0,
+              "value_extent_pixels": 201.0,
+              "fill_ratio": 1.0,
+              "category_pixel": 102.5,
+              "category_distance_pixels": 0.8069767441860449
+            },
+            "baseline_pixel": 91.0,
+            "start_pixel": 338.0,
+            "end_pixel": 539.0,
+            "start_value": 55.13392857142857,
+            "end_value": 100.0,
+            "value": 44.86607142857143
+          }
+        ],
+        "rejected_components": [],
+        "stack_diagnostics": [
+          {
+            "kind": "stack_total",
+            "category": "A",
+            "expected": 100.0,
+            "observed_positive_total": 99.33035714285714,
+            "difference": -0.6696428571428612,
+            "within_tolerance": true
+          },
+          {
+            "kind": "stack_total",
+            "category": "B",
+            "expected": 100.0,
+            "observed_positive_total": 99.33035714285714,
+            "difference": -0.6696428571428612,
+            "within_tolerance": true
+          },
+          {
+            "kind": "stack_total",
+            "category": "C",
+            "expected": 100.0,
+            "observed_positive_total": 99.33035714285714,
+            "difference": -0.6696428571428612,
+            "within_tolerance": true
+          },
+          {
+            "kind": "stack_total",
+            "category": "D",
+            "expected": 100.0,
+            "observed_positive_total": 99.33035714285714,
+            "difference": -0.6696428571428612,
+            "within_tolerance": true
+          }
+        ],
+        "summary": {
+          "expected_mark_count": 12,
+          "extracted_mark_count": 12,
+          "missing_mark_count": 0,
+          "ambiguous_mark_count": 0,
+          "rejected_component_count": 0,
+          "error_bar_missing_count": 0,
+          "mean_confidence": 0.998
+        },
+        "limitations": [
+          "Only visible colour-distinct rectangles are measured; source observations are not recovered.",
+          "Category centres, the plot region, orientation, layout, and linear calibration must be verified.",
+          "A missing segment is not converted to a zero value.",
+          "Error intervals describe visible endpoints only; SD, SEM, or confidence-interval semantics are unknown.",
+          "Facets, insets, photos, 3D projections, gradients, hatching, and overlapping same-colour marks require separate routing."
+        ]
+      },
+      "metrics": {
+        "expected_mark_count": 12,
+        "extracted_mark_count": 12,
+        "matched_mark_count": 12,
+        "unmatched_prediction_count": 0,
+        "missing_truth_count": 0,
+        "precision": 1.0,
+        "coverage": 1.0,
+        "f1": 1.0,
+        "mae": 0.22321428571428661,
+        "p95_abs_error": 0.33258928571428753,
+        "max_abs_error": 0.3571428571428612,
+        "error_endpoint_p95_px": null,
+        "error_endpoint_max_px": null,
+        "expected_error_bar_count": 0,
+        "extracted_error_bar_count": 0,
+        "error_bar_coverage": null
+      },
+      "overlay": "percent_stacked_horizontal_dark_overlay.png",
+      "recreation": "percent_stacked_horizontal_dark_recreation.png",
+      "image_hash_sha256": "6dc93e9fc714d4d23764a455209ea183469f9cb9cc371fe2dc7d704b85225a2f",
+      "benchmark_status": "passed",
+      "failure_reason": ""
+    },
+    {
+      "name": "grouped_ambiguous_duplicate",
+      "expected_status": "low_confidence",
+      "status": "low_confidence",
+      "raster_dimensions": [
+        200,
+        140
+      ],
+      "plot_bounds": [
+        20,
+        15,
+        180,
+        105
+      ],
+      "value_axis": [
+        15.0,
+        9.0,
+        105.0,
+        0.0
+      ],
+      "orientation": "vertical",
+      "layout": "grouped",
+      "categories": [
+        {
+          "name": "A",
+          "center_pixel": 100.0
+        }
+      ],
+      "series_colors": {
+        "red": "#d62728"
+      },
+      "expected_stack_total": null,
+      "error_color": null,
+      "truth": [
+        {
+          "category": "A",
+          "series": "red",
+          "value": null
+        }
+      ],
+      "extraction": {
+        "schema_version": 1,
+        "extractor_status": "candidate",
+        "status": "low_confidence",
+        "input_file": "grouped_ambiguous_duplicate.png",
+        "input_sha256": "41fa4b269b08f46c99c0b49ca4b97ddb599400d92432cb37923bdd09586cea56",
+        "image_size": {
+          "width": 200,
+          "height": 140
+        },
+        "orientation": "vertical",
+        "layout": "grouped",
+        "plot_bounds": [
+          20,
+          15,
+          180,
+          105
+        ],
+        "value_axis": [
+          15.0,
+          9.0,
+          105.0,
+          0.0
+        ],
+        "axis_assumption": "verified linear value axis",
+        "baseline_value": 0.0,
+        "baseline_pixel": 105.0,
+        "categories": [
+          {
+            "name": "A",
+            "center_pixel": 100.0
+          }
+        ],
+        "series": [
+          {
+            "name": "red",
+            "color": "#d62728"
+          }
+        ],
+        "parameters": {
+          "tolerance": 1.0,
+          "min_area": 20,
+          "min_bar_thickness": 3,
+          "min_bar_length": 2,
+          "min_fill_ratio": 0.55,
+          "bridge_gap": 1,
+          "category_tolerance_px": 80.0,
+          "baseline_tolerance_px": 3.0,
+          "stack_gap_tolerance_px": 3.0,
+          "expected_stack_total": null,
+          "stack_total_tolerance": 0.75,
+          "error_color": null,
+          "error_tolerance": 24.0,
+          "error_search_radius": 2,
+          "error_min_span": 4
+        },
+        "marks": [
+          {
+            "category": "A",
+            "requested_category_pixel": 100.0,
+            "series": "red",
+            "color": "#d62728",
+            "status": "low_confidence",
+            "reason": "multiple supported rectangles map to this series/category",
+            "candidate_count": 2,
+            "candidates": [
+              {
+                "area": 1050.0,
+                "left_pixel": 110.0,
+                "right_pixel": 125.0,
+                "top_pixel": 35.0,
+                "bottom_pixel": 105.0,
+                "width_pixels": 15.0,
+                "height_pixels": 70.0,
+                "cross_extent_pixels": 15.0,
+                "value_extent_pixels": 70.0,
+                "fill_ratio": 1.0,
+                "category_pixel": 117.5,
+                "category_distance_pixels": 17.5
+              },
+              {
+                "area": 900.0,
+                "left_pixel": 75.0,
+                "right_pixel": 90.0,
+                "top_pixel": 45.0,
+                "bottom_pixel": 105.0,
+                "width_pixels": 15.0,
+                "height_pixels": 60.0,
+                "cross_extent_pixels": 15.0,
+                "value_extent_pixels": 60.0,
+                "fill_ratio": 1.0,
+                "category_pixel": 82.5,
+                "category_distance_pixels": 17.5
+              }
+            ]
+          }
+        ],
+        "rejected_components": [],
+        "stack_diagnostics": [],
+        "summary": {
+          "expected_mark_count": 1,
+          "extracted_mark_count": 0,
+          "missing_mark_count": 0,
+          "ambiguous_mark_count": 1,
+          "rejected_component_count": 0,
+          "error_bar_missing_count": 0,
+          "mean_confidence": 0.0
+        },
+        "limitations": [
+          "Only visible colour-distinct rectangles are measured; source observations are not recovered.",
+          "Category centres, the plot region, orientation, layout, and linear calibration must be verified.",
+          "A missing segment is not converted to a zero value.",
+          "Error intervals describe visible endpoints only; SD, SEM, or confidence-interval semantics are unknown.",
+          "Facets, insets, photos, 3D projections, gradients, hatching, and overlapping same-colour marks require separate routing."
+        ]
+      },
+      "metrics": {
+        "expected_mark_count": 0,
+        "extracted_mark_count": 0,
+        "matched_mark_count": 0,
+        "unmatched_prediction_count": 0,
+        "missing_truth_count": 0,
+        "precision": 0.0,
+        "coverage": 0.0,
+        "f1": 0.0,
+        "mae": null,
+        "p95_abs_error": null,
+        "max_abs_error": null,
+        "error_endpoint_p95_px": null,
+        "error_endpoint_max_px": null,
+        "expected_error_bar_count": 0,
+        "extracted_error_bar_count": 0,
+        "error_bar_coverage": null
+      },
+      "overlay": "grouped_ambiguous_duplicate_overlay.png",
+      "recreation": "grouped_ambiguous_duplicate_recreation.png",
+      "image_hash_sha256": "41fa4b269b08f46c99c0b49ca4b97ddb599400d92432cb37923bdd09586cea56",
+      "benchmark_status": "rejected_as_expected",
+      "failure_reason": ""
+    }
+  ]
+}

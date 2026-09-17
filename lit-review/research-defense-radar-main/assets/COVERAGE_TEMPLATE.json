@@ -1,0 +1,13 @@
+[
+  {
+    "source": "Replace with source or index name",
+    "source_url": "https://example.org/search",
+    "query_family": "question",
+    "query": "privacy-safe search query",
+    "checked_at": "2026-08-24",
+    "status": "partial",
+    "required": true,
+    "evidence_level_reached": "M",
+    "notes": "Replace with coverage limitations or mark completed."
+  }
+]

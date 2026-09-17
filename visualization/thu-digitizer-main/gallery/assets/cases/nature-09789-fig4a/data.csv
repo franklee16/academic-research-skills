@@ -1,0 +1,12 @@
+kind,series,category,x,y,value,pixel_x,pixel_y,radius,fill,x_uncertainty,y_uncertainty,detection_radius_pixels,confidence,component_id,component_peak_count,value_status
+point,P(Switch),visible marker,0.08815061,0.42172949,0.42172949,284.0,61.0,13.5,#000000,0.00039867,0.00039911,13.5907,1.0,2,1,visible_marker_candidate
+point,Goalie Y position,visible marker,0.14662237,0.13170732,0.13170732,350.0,388.0,13.5,#800080,0.00039867,0.00039911,13.7876,1.0,6,3,visible_marker_candidate
+point,Shooter X position,visible marker,0.12683647,0.18107908,0.18107908,327.6667,332.3333,13.5,#0000ff,0.00039867,0.00039911,13.1814,1.0,5,1,visible_marker_candidate
+point,Shooter Y position,visible marker,0.1076412,0.27006652,0.27006652,306.0,232.0,13.5,#008080,0.00039867,0.00039911,13.7845,1.0,3,3,visible_marker_candidate
+point,Goalie Y velocity,visible marker,0.1572536,0.13170732,0.13170732,362.0,388.0,13.5,#008000,0.00039867,0.00039911,13.5907,1.0,6,3,visible_marker_candidate
+point,Shooter Y velocity,visible marker,0.12491694,0.25232816,0.25232816,325.5,252.0,13.5,#00cd00,0.00039867,0.00039911,13.1814,1.0,3,3,visible_marker_candidate
+point,Opponent identity,visible marker,0.1696567,0.11219512,0.11219512,376.0,410.0,13.5,#ffff00,0.00039867,0.00039911,12.9845,1.0,6,3,visible_marker_candidate
+point,Time since last change point,visible marker,0.11428571,0.25631929,0.25631929,313.5,247.5,13.5,#ffa500,0.00039867,0.00039911,13.5907,1.0,3,3,visible_marker_candidate
+point,Opponent experience,visible marker,0.18560354,0.06119734,0.06119734,394.0,467.5,13.5,#ff0000,0.00039867,0.00039911,13.1814,1.0,7,1,visible_marker_candidate
+point,Opponent action metric,visible marker,0.15459579,0.23281596,0.23281596,359.0,274.0,13.5,#ff69b4,0.00039867,0.00039911,13.5907,1.0,4,1,visible_marker_candidate
+point,Permutations of all variables,visible marker,0.00044297,0.00044346,0.00044346,185.0,536.0,10.5,#c0c0c0,0.00039867,0.00039911,10.9845,1.0,1,1,visible_marker_candidate

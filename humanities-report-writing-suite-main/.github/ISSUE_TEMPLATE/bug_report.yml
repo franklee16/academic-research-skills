@@ -1,0 +1,58 @@
+name: 错误报告
+description: 报告安装、调用、内容处理或 Word 交付中的可复现问题
+title: "[Bug] "
+labels:
+  - bug
+body:
+  - type: markdown
+    attributes:
+      value: |
+        请不要上传真实姓名、联系方式、未公开问卷、访谈原文或其他敏感材料。安全问题请使用仓库 Security 页面的私密漏洞报告。
+  - type: input
+    id: environment
+    attributes:
+      label: 使用环境
+      description: AI 或代理框架、版本、操作系统和安装方式
+      placeholder: 例如 Codex Desktop，Windows 11，手动安装
+    validations:
+      required: true
+  - type: dropdown
+    id: skill
+    attributes:
+      label: 涉及的 Skill
+      options:
+        - humanities-report-writer
+        - humanizer
+        - source-grounded-research
+        - word-report-delivery
+        - 安装包或多个 Skill
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: 复现步骤
+      description: 使用脱敏后的最小示例说明如何稳定复现
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: 预期结果
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: 实际结果
+    validations:
+      required: true
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: 提交前确认
+      options:
+        - label: 我已经搜索过现有 Issue
+          required: true
+        - label: 我已经删除或替换个人信息和未公开材料
+          required: true

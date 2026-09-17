@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "case_id": "nature-62086-fig5",
+  "status": "source_mapped",
+  "article_url": "https://www.nature.com/articles/s41467-025-62086-1",
+  "figure": "Fig. 5",
+  "input": {
+    "sha256": "b996daeb19e139b8414c8746ec6723e4fd1923435b28f79b0e6f1069fbf1a3ae",
+    "dimensions": [
+      996,
+      1098
+    ]
+  },
+  "source_data": {
+    "status": "official_source_data_mapped",
+    "path": "source-data.xlsx",
+    "sha256": "b996daeb19e139b8414c8746ec6723e4fd1923435b28f79b0e6f1069fbf1a3ae",
+    "mapping_note": "Workbook sheet Figure 5 supplies all four panel means and SEMs; x bin centres are recorded as display geometry."
+  },
+  "coverage": {
+    "visible_records": 28,
+    "source_records_mapped": 28
+  },
+  "validation": {
+    "status": "source_mapped_replot",
+    "summary_error": 0
+  },
+  "limitations": "Source values verify plotted summaries/counts; browser font rendering remains an approximation.",
+  "panels": [
+    "A tuning",
+    "A RF distance",
+    "B tuning",
+    "B RF distance"
+  ]
+}

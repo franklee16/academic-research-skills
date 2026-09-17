@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/SuperJayLiu/research-defense-radar/assets/COVERAGE_SCHEMA.json",
+  "title": "Research Defense Radar coverage entries",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "required": ["source", "query_family", "checked_at", "status"],
+    "properties": {
+      "source": {"type": "string", "minLength": 1},
+      "source_url": {"type": ["string", "null"], "format": "uri"},
+      "query_family": {"type": "string", "minLength": 1},
+      "query": {"type": ["string", "null"]},
+      "checked_at": {"type": "string", "format": "date"},
+      "status": {"enum": ["completed", "partial", "inaccessible", "not_applicable"]},
+      "required": {"type": "boolean"},
+      "evidence_level_reached": {"enum": ["M", "A", "F", null]},
+      "notes": {"type": ["string", "null"]}
+    },
+    "additionalProperties": true
+  }
+}

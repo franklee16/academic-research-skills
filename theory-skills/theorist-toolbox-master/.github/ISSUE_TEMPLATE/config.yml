@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 💬 Discussions (questions, prompt-sharing, ideas)
+    url: https://github.com/morankor/theorist-toolbox/discussions
+    about: For questions, sharing prompts, or chatting about LLM-assisted theory. Use issues for concrete bugs and proposals.
+  - name: 🗺️ Roadmap RFC
+    url: https://github.com/morankor/theorist-toolbox/issues?q=is%3Aissue+label%3ARFC
+    about: Weigh in on where the toolbox is headed.

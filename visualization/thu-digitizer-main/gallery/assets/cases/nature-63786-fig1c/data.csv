@@ -1,0 +1,7 @@
+category,series,value,pixel_start,pixel_end,confidence,value_status,error_lower,error_upper,error_lower_pixel,error_upper_pixel,error_confidence,error_status
+CHBMIT,MViT,0.5575396825396826,518.0,237.0,0.896,visible_geometry_observed,0.5198412698412699,0.5972222222222222,256.0,217.0,1.0,visible_interval_observed
+CHBMIT,CNN-LSTM,0.5773809523809523,518.0,227.0,0.997,visible_geometry_observed,0.5218253968253969,0.6349206349206349,255.0,198.0,1.0,visible_interval_observed
+CHBMIT,FGL,0.8373015873015873,518.0,96.0,0.894,visible_geometry_observed,0.8154761904761905,0.8591269841269841,107.0,85.0,1.0,visible_interval_observed
+AES,MViT,0.626984126984127,518.0,202.0,0.895,visible_geometry_observed,0.6071428571428571,0.6507936507936508,212.0,190.0,1.0,visible_interval_observed
+AES,CNN-LSTM,0.7757936507936508,518.0,127.0,0.952,visible_geometry_observed,,,,,,not_extracted_needs_manual_review
+AES,FGL,0.8452380952380952,518.0,92.0,0.898,visible_geometry_occluded_by_overlay,,,,,,not_extracted_needs_manual_review

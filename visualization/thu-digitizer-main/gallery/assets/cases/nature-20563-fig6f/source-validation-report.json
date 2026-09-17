@@ -1,0 +1,16 @@
+{
+  "status": "metric_absent_in_source_workbook",
+  "paired_bins": 0,
+  "visible_digitized_bins": 30,
+  "source_workbook": "official-source-data.xlsx",
+  "source_workbook_sha256": "a236a6b4bdc68d2aad2360b9d1e143350ec7bab3f6efe4e9ccbcabc449f062d5",
+  "source_data_url": "https://static-content.springer.com/esm/art%3A10.1038%2Fs41467-020-20563-9/MediaObjects/41467_2020_20563_MOESM14_ESM.xlsx",
+  "sheet_count": 60,
+  "figure_6f_sheet_present": false,
+  "nearby_sheets_present": [
+    "Figure 6d",
+    "Figure 6e"
+  ],
+  "mapping_evidence": "The official figure caption says Source Data for c-f are provided, but the downloaded workbook has Figure 6d and Figure 6e sheets and no Figure 6f sheet or documented polar-bin mapping.",
+  "digitized_values_modified_from_source": false
+}

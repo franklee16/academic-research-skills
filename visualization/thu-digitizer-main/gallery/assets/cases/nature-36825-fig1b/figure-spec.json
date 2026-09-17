@@ -1,0 +1,174 @@
+{
+  "schema_version": 1,
+  "status": "ready_for_assisted_extraction",
+  "source": {
+    "input_file": "figure1-official.png",
+    "sha256": "de9a9ac871de9b3d20a3a1c6fd4bf55a9c1cc947755e66c2efddfb01f5cbb134",
+    "media_kind": "raster",
+    "coordinate_space": "pixel",
+    "measurement_space": "original_raster_pixels",
+    "resampling_applied": false,
+    "width": 1959,
+    "height": 2040,
+    "page": null
+  },
+  "panels": [
+    {
+      "panel_id": "figure-1b",
+      "bounds": [
+        1250.0,
+        0.0,
+        1959.0,
+        600.0
+      ],
+      "bounds_verification": "verified",
+      "plot_bounds": [
+        1392.0,
+        78.0,
+        1696.0,
+        490.0
+      ],
+      "plot_bounds_verification": "verified",
+      "chart_type": "percent_stacked_bar",
+      "chart_type_verification": "verified",
+      "coordinate_model": "categorical_value",
+      "coordinate_model_verification": "verified",
+      "axes": [
+        {
+          "axis_id": "category",
+          "orientation": "category",
+          "scale": "categorical",
+          "verification": "verified",
+          "anchors": []
+        },
+        {
+          "axis_id": "value",
+          "orientation": "value",
+          "scale": "linear",
+          "verification": "verified",
+          "anchors": [
+            {
+              "pixel": 489.0,
+              "value": 0.0,
+              "display_label": "0"
+            },
+            {
+              "pixel": 78.0,
+              "value": 100.0,
+              "display_label": "100"
+            }
+          ]
+        }
+      ],
+      "series": [
+        {
+          "series_id": "Methanosarcina",
+          "color": "#a6cee3"
+        },
+        {
+          "series_id": "Methanocorpusculum",
+          "color": "#1f78b4"
+        },
+        {
+          "series_id": "Methanobrevibacter",
+          "color": "#b2df8a"
+        },
+        {
+          "series_id": "Methanocaldococcus",
+          "color": "#33a02c"
+        },
+        {
+          "series_id": "Methanospirillum",
+          "color": "#fb9a99"
+        },
+        {
+          "series_id": "Methanoculleus",
+          "color": "#e31a1c"
+        },
+        {
+          "series_id": "Methanosphaera",
+          "color": "#fdbf6f"
+        },
+        {
+          "series_id": "Methanohalophilus",
+          "color": "#ff7f00"
+        },
+        {
+          "series_id": "Methanococcoides",
+          "color": "#cab2d6"
+        },
+        {
+          "series_id": "Methanococcus",
+          "color": "#6a3d9a"
+        },
+        {
+          "series_id": "other",
+          "color": "#bebebe"
+        }
+      ],
+      "categories": [
+        {
+          "category_id": "G",
+          "center_pixel": 1438.0
+        },
+        {
+          "category_id": "K",
+          "center_pixel": 1544.5
+        },
+        {
+          "category_id": "L",
+          "center_pixel": 1650.5
+        }
+      ],
+      "orientation": "vertical",
+      "layout": "percent_stacked",
+      "legend_exclusions": [],
+      "legend_exclusion_note": "Legend lies wholly outside the verified plot ROI; no exclusion rectangle is needed.",
+      "mark_grammars": [
+        "rectangle",
+        "stack_segment",
+        "error_interval"
+      ],
+      "route": {
+        "route_id": "raster_bar_candidate",
+        "maturity": "candidate",
+        "implementation": "scripts/candidate_digitize_bar_chart.py",
+        "automated_extraction": true
+      },
+      "required_confirmations": [
+        "panel_roi",
+        "plot_bounds",
+        "value_axis",
+        "orientation",
+        "layout",
+        "category_centers",
+        "series_colors",
+        "legend_exclusions"
+      ],
+      "confirmations": {
+        "panel_roi": "verified",
+        "plot_bounds": "verified",
+        "value_axis": "verified",
+        "orientation": "verified",
+        "layout": "verified",
+        "category_centers": "verified",
+        "series_colors": "verified",
+        "legend_exclusions": "not_applicable"
+      },
+      "recoverable": "Visible rectangle endpoints/segments and separately visible error intervals.",
+      "non_recoverable": "Hidden samples, zero/occluded segments, and unverified SD/SEM/CI semantics."
+    }
+  ],
+  "evidence_contract": {
+    "required": [
+      "input_hash",
+      "panel_and_plot_bounds",
+      "calibration_anchors",
+      "immutable_extraction_csv",
+      "json_report",
+      "overlay_or_recreation",
+      "confidence_and_refusal_reasons"
+    ],
+    "source_data_role": "independent_validation_only"
+  }
+}

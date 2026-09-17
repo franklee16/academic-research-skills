@@ -1,0 +1,66 @@
+{
+  "skill": "pilot-protocol",
+  "version": "0.1.0",
+  "source_book": "Survey Curious? Start-Up Guide — Bergman, Chinco, Hartzmark, Sussman (2020)",
+  "darwin_compatible": true,
+  "test_cases": [
+    {
+      "id": "should-trigger-01",
+      "type": "should_trigger",
+      "prompt": "I have a survey draft. Should I run a pilot before full launch?",
+      "expected_behavior": "Activate pilot-protocol. Two-stage field test: pretest with 1-2 non-economist friends; pilot with 50-100 real participants before full 500 launch. Don't analyze pilot data on the target hypothesis; only check instrument.",
+      "notes": "Direct 'should I run a pilot' signal."
+    },
+    {
+      "id": "should-trigger-02",
+      "type": "should_trigger",
+      "prompt": "I just got my pilot data back with 80 respondents. Can I now ship the rest?",
+      "expected_behavior": "Activate pilot-protocol. Walk through the pilot-data inspection checklist: drop-out asymmetry, ceiling/floor, latency drops, right-most pileups, free-text response review. Decide if bugs are fixed before launching the remaining 400-450.",
+      "notes": "Post-pilot decision = primary signal."
+    },
+    {
+      "id": "should-trigger-03",
+      "type": "should_trigger",
+      "prompt": "I keep finding bugs in my survey after I launch — last time I had to scrap 200 responses because of a broken skip. How do I prevent this?",
+      "expected_behavior": "Activate pilot-protocol. Default: this would have been caught by a 50-respondent pilot before full launch. Recommend two-stage test discipline going forward.",
+      "notes": "Post-launch bug = primary signal."
+    },
+    {
+      "id": "should-trigger-04",
+      "type": "should_trigger",
+      "prompt": "Free-text 'what was confusing?' responses from my pilot — what am I looking for?",
+      "expected_behavior": "Activate pilot-protocol. Free-text is the canonical bug-discovery channel. Read every response. Categorize: wording, UI, instructions, condition-imbalance, treatment-subtlety. Then fix or launch.",
+      "notes": "Free-text-review = primary signal."
+    },
+    {
+      "id": "should-not-trigger-01",
+      "type": "should_not_trigger",
+      "prompt": "Should I add 5 more items to my survey to make it more reliable?",
+      "expected_behavior": "Do NOT activate pilot-protocol. This is an item-design question (add convergence evidence). Defer to converging-evidence-design.",
+      "notes": "Trap: 'items' adj to 'pilot'; this is design-stage, not pilot-stage."
+    },
+    {
+      "id": "should-not-trigger-02",
+      "type": "should_not_trigger",
+      "prompt": "Should I run my survey on MTurk or Prolific?",
+      "expected_behavior": "Do NOT activate pilot-protocol. Platform selection is upstream. Defer to platform-selection.",
+      "notes": "Trap: 'run my survey' is the pilot verb; but platform choice comes first."
+    },
+    {
+      "id": "should-not-trigger-03",
+      "type": "should_not_trigger",
+      "prompt": "My treatment arm has 30% drop-out, my control has 8%. Is this a problem?",
+      "expected_behavior": "Do NOT activate pilot-protocol. This is post-launch attrition diagnosis. Defer to selective-attrition-audit.",
+      "notes": "Trap: 'my survey has a problem' sounds like pilot; but the issue is asymmetric attrition, not instrument bugs."
+    },
+    {
+      "id": "edge-01",
+      "type": "edge_case",
+      "prompt": "I have 50 pilot responses. Can I analyze them to see if my hypothesis holds before launching the rest?",
+      "expected_behavior": "Edge: NO. Explicitly forbid hypothesis-testing on pilot. Recommend pre-registered cleaning rules and instrument-only inspection at pilot stage. Acknowledge the temptation; explain why it's a discipline that needs defending.",
+      "notes": "Edge: the canonical anti-pattern. Hold the line."
+    }
+  ],
+  "minimum_pass_rate": 0.85,
+  "notes": "Trap: 'my survey has a problem' is too vague — could mean design, pilot, attrition, or interpretation. Filter by timeline: if before full launch = pilot-protocol; if after full launch = selective-attrition-audit or relative-vs-absolute."
+}

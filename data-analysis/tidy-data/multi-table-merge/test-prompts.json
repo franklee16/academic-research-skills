@@ -1,0 +1,73 @@
+{
+  "skill": "multi-table-merge",
+  "version": "0.1.0",
+  "source_book": "Tidy Data — Hadley Wickham",
+  "darwin_compatible": true,
+  "test_cases": [
+    {
+      "id": "should-trigger-01",
+      "type": "should_trigger",
+      "prompt": "我下载了一组 CSV,每年一个文件(data_2019.csv, data_2020.csv, ..., data_2024.csv),列结构相同,需要合并成一张表",
+      "expected_behavior": "应激活 multi-table-merge, 执行三步合并: (1)列出文件, (2)从文件名提取年份作为新列, (3)纵向堆叠",
+      "notes": "正面场景: 经典的按年拆分文件合并"
+    },
+    {
+      "id": "should-trigger-02",
+      "type": "should_trigger",
+      "prompt": "我有一个 Excel 文件,里面 31 个 Sheet,每个 Sheet 是一个省份的数据。结构一样但有个别 Sheet 多了几列",
+      "expected_behavior": "应激活, 识别为结构基本一致但有细微差异的多表合并, 需要先检查差异再统一后堆叠",
+      "notes": "正面场景: 多 Sheet 合并, 结构有轻微漂移"
+    },
+    {
+      "id": "should-trigger-03",
+      "type": "should_trigger",
+      "prompt": "这个表里每行是一个订单,但客户信息(姓名、地址)在每行重复。我觉得应该把客户信息拆出来单独存",
+      "expected_behavior": "应激活, 识别为拆分方向: 同一表混合了订单和客户两种观察类型, 建议拆为 orders 表和 customers 表, 用 customer_id 关联",
+      "notes": "正面场景: 混合观察类型需要拆分"
+    },
+    {
+      "id": "should-trigger-04",
+      "type": "should_trigger",
+      "prompt": "我有 2010-2015 和 2016-2023 两批数据文件,前一批的列名叫 income_level,后一批叫 income_grp,实际是同一个变量",
+      "expected_behavior": "应激活, 识别为 schema drift 场景: 需要先统一列名(income_grp → income_level 或反过来), 再合并",
+      "notes": "正面场景: 格式不一致的多文件合并, 类似 fuel economy 案例"
+    },
+    {
+      "id": "should-not-trigger-01",
+      "type": "should_not_trigger",
+      "prompt": "我需要把订单表和产品表按 product_id 做 left join",
+      "expected_behavior": "不应激活, 这是标准数据库 join (两个已有整洁表的横向合并), 不是多文件合并或拆分",
+      "notes": "诱饵: '合并表'但实际是横向 join"
+    },
+    {
+      "id": "should-not-trigger-02",
+      "type": "should_not_trigger",
+      "prompt": "帮我把这个宽表 pivot 成长表格式",
+      "expected_behavior": "不应激活, 这是单表 reshape, 属于 messy-to-tidy-pipeline",
+      "notes": "诱饵: '表格式转换'但不是多表问题"
+    },
+    {
+      "id": "should-not-trigger-03",
+      "type": "should_not_trigger",
+      "prompt": "我有两个数据集,一个是用户行为日志(百万行),一个是用户画像(千行),需要关联分析",
+      "expected_behavior": "不应激活, 这是标准 join 操作 (日志 join 画像), 两个表都是整洁的, 不需要合并或拆分 skill",
+      "notes": "诱饵: '关联两个数据集'但实际是标准 join"
+    },
+    {
+      "id": "edge-01",
+      "type": "edge_case",
+      "prompt": "我有 50 个 CSV 文件结构相同,但其中 3 个是 2020 年的(同一年重复了),需要合并但要去重",
+      "expected_behavior": "应激活, 但合并步骤需要加入去重逻辑: 先检查重复文件/重复行, 合并时根据来源标识去重",
+      "notes": "边界: 标准合并流程 + 额外去重需求"
+    },
+    {
+      "id": "edge-02",
+      "type": "edge_case",
+      "prompt": "这个表既有订单信息又有订单明细(每行一个商品),一行订单对应多行明细。应该拆成两张表吗?",
+      "expected_behavior": "应激活并建议拆分: orders 表(order_id, customer_id, order_date) + order_items 表(order_id, product_id, quantity, price)。这是经典的主从表拆分, 对应 Wickham 的观察类型分离原则",
+      "notes": "边界: 主从表结构, 两种观察类型的典型拆分场景"
+    }
+  ],
+  "minimum_pass_rate": 0.8,
+  "notes": "4 条 should_trigger + 3 条 should_not_trigger + 2 条 edge_case。所有 should_not_trigger 必须通过 (诱饵容错为 0)。"
+}

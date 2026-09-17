@@ -1,0 +1,4 @@
+interface:
+  display_name: "CopyPlot 科研绘图复刻"
+  short_description: "识别科研图并生成 Excel 数据与 Python 复刻代码"
+  default_prompt: "Use $copyplot to analyze this scientific figure and produce a runnable Python recreation with Excel example data."

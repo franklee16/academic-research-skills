@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "source_policy": "taxonomy_only_local_truth",
+  "source": {
+    "name": "The R Graph Gallery",
+    "home": "https://r-graph-gallery.com/",
+    "catalogue": "https://r-graph-gallery.com/all-graphs"
+  },
+  "cases": [
+    {"id": "rgg-line-error", "phase": "P0", "family": "line_errorbar", "page": "https://r-graph-gallery.com/line-chart-several-groups-ggplot2.html", "truth": "points_and_error_endpoints", "status": "validated_local_line_baseline"},
+    {"id": "rgg-scatter-bubble", "phase": "P0", "family": "scatter_bubble", "page": "https://r-graph-gallery.com/scatter-plot.html", "truth": "centres_and_marker_area", "status": "validated_local_scatter_baseline"},
+    {"id": "rgg-bars", "phase": "P0", "family": "grouped_stacked_percent_bar", "page": "https://r-graph-gallery.com/48-grouped-barplot-with-ggplot2", "truth": "category_values_and_segments", "status": "candidate_dedicated_extractor", "evidence_directory": "D:\\Scratch\\thu-digitizer-bar-candidate-evidence-20260720-02", "evidence_date": "2026-07-20"},
+    {"id": "rgg-histogram", "phase": "P0", "family": "histogram", "page": "https://r-graph-gallery.com/histogram.html", "truth": "bin_edges_and_heights", "status": "validated_local_stable", "evidence_directory": "D:\\Scratch\\thu-digitizer-histogram-stable-promotion-20260717", "evidence_date": "2026-07-17"},
+    {"id": "rgg-area", "phase": "P0", "family": "area_stacked_area", "page": "https://r-graph-gallery.com/area-chart.html", "truth": "series_boundaries", "status": "planned"},
+    {"id": "rgg-heatmap", "phase": "P0", "family": "heatmap", "page": "https://r-graph-gallery.com/heatmap.html", "truth": "grid_and_calibrated_values", "status": "planned"},
+    {"id": "rgg-boxplot", "phase": "P0", "family": "boxplot", "page": "https://r-graph-gallery.com/boxplot.html", "truth": "five_number_summary_and_outliers", "status": "validated_local_stable", "evidence_directory": "D:\\Scratch\\thu-digitizer-boxplot-stable-promotion-20260717", "evidence_date": "2026-07-17"},
+    {"id": "rgg-density-violin", "phase": "P1", "family": "density_violin", "page": "https://r-graph-gallery.com/density-plot.html", "truth": "rendered_curve_or_envelope", "status": "planned"},
+    {"id": "rgg-pie-donut", "phase": "P1", "family": "pie_donut", "page": "https://r-graph-gallery.com/pie-plot.html", "truth": "sector_proportions", "status": "planned"},
+    {"id": "rgg-polar", "phase": "P1", "family": "radar_polar_bar", "page": "https://r-graph-gallery.com/spider-or-radar-chart.html", "truth": "spoke_values", "status": "planned"},
+    {"id": "rgg-treemap", "phase": "P1", "family": "treemap", "page": "https://r-graph-gallery.com/treemap.html", "truth": "visible_leaf_rectangles", "status": "planned"}
+  ]
+}

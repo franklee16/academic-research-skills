@@ -1,0 +1,148 @@
+{
+  "schema_version": 1,
+  "snapshot_date": "2026-07-20",
+  "source": {
+    "name": "SciFigureHub Gallery",
+    "home": "https://uu543493-83c1-74a94416.nma1.seetacloud.com:8448/",
+    "catalog": "https://uu543493-83c1-74a94416.nma1.seetacloud.com:8448/site-data/catalog.json",
+    "panel_count": 8385,
+    "subtype_count": 31,
+    "review_passed_count": 8328,
+    "average_gallery_quality": 9.0,
+    "computed_complexity": {
+      "minimum": 8.45,
+      "median": 45.07,
+      "maximum": 97.7,
+      "above_70_count": 776
+    }
+  },
+  "source_policy": {
+    "role": "taxonomy_and_visual_challenge_only",
+    "numeric_ground_truth": false,
+    "repository_assets": "metadata_urls_and_hashes_only",
+    "warning": "Public article-panel URLs do not imply permission to vendor copyrighted images or code."
+  },
+  "candidate_evidence": {
+    "family": "bar_chart_candidate",
+    "module": "scripts/candidate_digitize_bar_chart.py",
+    "benchmark": "scripts/run_bar_benchmark.py",
+    "evidence_directory": "D:\\Scratch\\thu-digitizer-bar-candidate-evidence-20260720-02",
+    "status": "passed_candidate_gates_not_promoted",
+    "webplotdigitizer_comparison": "not_compared"
+  },
+  "subtypes": [
+    {"name": "bar", "count": 647, "priority": "P0", "route_status": "candidate_bar"},
+    {"name": "box", "count": 637, "priority": "P0", "route_status": "stable_summary_limited"},
+    {"name": "bubble_plot", "count": 60, "priority": "P0", "route_status": "planned"},
+    {"name": "calibration_curve", "count": 1, "priority": "P0", "route_status": "planned_complex_line"},
+    {"name": "confusion_matrix", "count": 40, "priority": "P1", "route_status": "planned_grid"},
+    {"name": "density", "count": 108, "priority": "restricted", "route_status": "planned_visible_envelope"},
+    {"name": "dose_response", "count": 87, "priority": "P0", "route_status": "planned_nonlinear_axis"},
+    {"name": "dot_plot", "count": 363, "priority": "P0", "route_status": "planned_visible_points"},
+    {"name": "forest_plot", "count": 46, "priority": "P1", "route_status": "planned_interval"},
+    {"name": "geospatial_map", "count": 242, "priority": "P2", "route_status": "planned_geospatial"},
+    {"name": "grouped_bar", "count": 798, "priority": "P0", "route_status": "candidate_bar"},
+    {"name": "heatmap", "count": 716, "priority": "P1", "route_status": "planned_grid"},
+    {"name": "histogram", "count": 190, "priority": "P0", "route_status": "validated_local_stable_limited"},
+    {"name": "learning_curve", "count": 2, "priority": "P0", "route_status": "planned_complex_line"},
+    {"name": "line", "count": 235, "priority": "P0", "route_status": "stable_colour_distinct_linear_limited"},
+    {"name": "matrix_plot", "count": 15, "priority": "P1", "route_status": "planned_multi_encoding_grid"},
+    {"name": "multi_line", "count": 1340, "priority": "P0", "route_status": "planned_complex_line"},
+    {"name": "network_plot", "count": 22, "priority": "P2", "route_status": "planned_graph"},
+    {"name": "other_data_display", "count": 296, "priority": "unknown", "route_status": "refuse_without_reclassification"},
+    {"name": "pr_curve", "count": 5, "priority": "P0", "route_status": "planned_complex_line"},
+    {"name": "roc_curve", "count": 42, "priority": "P0", "route_status": "planned_complex_line"},
+    {"name": "sankey_alluvial", "count": 10, "priority": "P2", "route_status": "planned_flow"},
+    {"name": "scatter", "count": 727, "priority": "P0", "route_status": "stable_colour_distinct_cartesian_limited"},
+    {"name": "scatter_with_fit", "count": 487, "priority": "P0", "route_status": "planned_points_plus_curve"},
+    {"name": "stacked_bar", "count": 234, "priority": "P0", "route_status": "candidate_bar"},
+    {"name": "survival_curve", "count": 92, "priority": "P1", "route_status": "planned_step_curve"},
+    {"name": "table_like", "count": 55, "priority": "P2", "route_status": "planned_ocr_table"},
+    {"name": "time_series", "count": 309, "priority": "P0_or_P1", "route_status": "requires_mark_grammar_reclassification"},
+    {"name": "umap_tsne_pca", "count": 252, "priority": "P1", "route_status": "planned_embedding"},
+    {"name": "violin", "count": 213, "priority": "restricted", "route_status": "planned_visible_envelope"},
+    {"name": "volcano_plot", "count": 114, "priority": "P0", "route_status": "planned_dense_points"}
+  ],
+  "challenge_cases": [
+    {
+      "id": "sfh-grouped-horizontal-negative-error",
+      "subtype": "grouped_bar",
+      "doi": "10.1038/s41467-026-69560-4",
+      "panel_id": "10-1038-s41467-026-69560-4__fig05_a",
+      "panel_url": "https://uu543493-83c1-74a94416.nma1.seetacloud.com:8448/#/panel/geography/geography/grouped_bar/10-1038-s41467-026-69560-4__fig05_a",
+      "target_preview_sha256": "BE6E58E7C91B4AF77AE5B4D1E9D41A7AD01C595917958B7561C2E0D553AD9B04",
+      "stressors": ["horizontal", "negative_values", "error_bars", "multi_panel", "inset", "dense_labels"],
+      "benchmark_role": "challenge_only_no_numeric_truth"
+    },
+    {
+      "id": "sfh-stacked-faceted-composition",
+      "subtype": "stacked_bar",
+      "doi": "10.1038/s41467-026-70705-8",
+      "panel_id": "10-1038-s41467-026-70705-8__fig02_b",
+      "panel_url": "https://uu543493-83c1-74a94416.nma1.seetacloud.com:8448/#/panel/environment/environment/stacked_bar/10-1038-s41467-026-70705-8__fig02_b",
+      "target_preview_sha256": "A3225525C75A790D296F966E98A8D76D25697B718CAE1350DF56702FBEFBC64F",
+      "stressors": ["percent_stacked", "facets", "many_series", "hierarchical_legend", "thin_segments"],
+      "benchmark_role": "challenge_only_no_numeric_truth"
+    },
+    {
+      "id": "sfh-box-visible-points-significance",
+      "subtype": "box",
+      "doi": "10.1038/s41467-026-70335-0",
+      "panel_id": "10-1038-s41467-026-70335-0__fig04_b",
+      "panel_url": "https://uu543493-83c1-74a94416.nma1.seetacloud.com:8448/#/panel/geography/geography/box/10-1038-s41467-026-70335-0__fig04_b",
+      "target_preview_sha256": "E9F9B03791B9C6DD0729C37981450B8F59548A0B378EF641B8208B64C88065B6",
+      "stressors": ["grouped_boxes", "visible_points", "significance_brackets", "sample_counts", "clipped_neighbor"],
+      "benchmark_role": "challenge_only_no_raw_sample_truth"
+    },
+    {
+      "id": "sfh-annotated-block-heatmap",
+      "subtype": "heatmap",
+      "doi": "10.1038/s41467-026-68864-9",
+      "panel_id": "10-1038-s41467-026-68864-9__fig05_b",
+      "panel_url": "https://uu543493-83c1-74a94416.nma1.seetacloud.com:8448/#/panel/geography/geography/heatmap/10-1038-s41467-026-68864-9__fig05_b",
+      "target_preview_sha256": "CC7FB1796B34A57E7B352F7FC0FAD8FF66870BB0DD8D9298DE94F5D0714A6B78",
+      "stressors": ["disjoint_blocks", "nested_headers", "missing_cells", "text_symbols", "multiple_legends"],
+      "benchmark_role": "challenge_only_no_numeric_truth"
+    },
+    {
+      "id": "sfh-dual-triangle-matrix",
+      "subtype": "matrix_plot",
+      "doi": "10.1038/s41467-025-68174-6",
+      "panel_id": "10-1038-s41467-025-68174-6__fig04_a",
+      "panel_url": "https://uu543493-83c1-74a94416.nma1.seetacloud.com:8448/#/panel/geography/geography/matrix_plot/10-1038-s41467-025-68174-6__fig04_a",
+      "target_preview_sha256": "06944842512D8683C812C071127D179BF315CC1ED4D53603CF6D97F24B1873A2",
+      "stressors": ["34x34_grid", "dual_triangle", "two_colour_scales", "glyph_size", "significance_symbols"],
+      "benchmark_role": "challenge_only_no_numeric_truth"
+    },
+    {
+      "id": "sfh-projected-3d-multiline",
+      "subtype": "multi_line",
+      "doi": "10.1038/s41467-026-71221-5",
+      "panel_id": "10-1038-s41467-026-71221-5__fig03_b",
+      "panel_url": "https://uu543493-83c1-74a94416.nma1.seetacloud.com:8448/#/panel/geography/geography/multi_line/10-1038-s41467-026-71221-5__fig03_b",
+      "target_preview_sha256": "72B726022792FC4C9D4EECDB7FB89D661066957FB8CEFD15C13961F70457F113",
+      "stressors": ["projected_3d", "multiple_planes", "annotations", "perspective", "overlap"],
+      "benchmark_role": "must_refuse_xy_route"
+    },
+    {
+      "id": "sfh-event-raster-plus-analog-trace",
+      "subtype": "time_series",
+      "doi": "10.1038/s41593-025-02190-z",
+      "panel_id": "10-1038-s41593-025-02190-z__fig01_c",
+      "panel_url": "https://uu543493-83c1-74a94416.nma1.seetacloud.com:8448/#/panel/geography/geography/time_series/10-1038-s41593-025-02190-z__fig01_c",
+      "target_preview_sha256": "9244D8501FD85B2E69A33FEB6DF0A281FFBA4B7CF91AADD93E55174B7F5964A4",
+      "stressors": ["event_raster", "continuous_trace", "categorical_regions", "shaded_windows", "mixed_scales"],
+      "benchmark_role": "requires_multi_grammar_routing"
+    },
+    {
+      "id": "sfh-scatter-label-false-positive",
+      "subtype": "scatter",
+      "doi": "10.1038/s41467-025-62824-5",
+      "panel_id": "10-1038-s41467-025-62824-5__fig03_b",
+      "panel_url": "https://uu543493-83c1-74a94416.nma1.seetacloud.com:8448/#/panel/physics/AI_physics/scatter/10-1038-s41467-025-62824-5__fig03_b",
+      "target_preview_sha256": "DA569B1AF3765E849DD70A2254372E7C5151AA3EBF380BE039F813CC9B8EB838",
+      "stressors": ["no_cartesian_axes", "atomistic_rendering", "colour_scale", "occluded_spheres", "catalogue_label_drift"],
+      "benchmark_role": "classifier_false_positive_refusal"
+    }
+  ]
+}

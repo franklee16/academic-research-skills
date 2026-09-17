@@ -1,0 +1,33 @@
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+
+# Local and generated manuscript outputs
+paper_rewriting_output/
+tmp_*_artifacts/
+*.aux
+*.bbl
+*.blg
+*.fdb_latexmk
+*.fls
+*.lof
+*.log
+*.lot
+*.out
+*.synctex.gz
+*.toc
+
+# OS/editor noise
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# User/private manuscripts and large generated exports
+*.docx
+*.pptx
+*.xlsx
+*.pdf
+!tests/fixtures/*.pdf

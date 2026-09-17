@@ -1,0 +1,148 @@
+{
+  "schema_version": 1,
+  "status": "ready_for_assisted_extraction",
+  "source": {
+    "input_file": "source.png",
+    "sha256": "fd5fe57633c5535eedd61619cd4d60c7ca5136a523f08655a4b8c19ad8cb0078",
+    "media_kind": "raster",
+    "coordinate_space": "pixel",
+    "measurement_space": "original_raster_pixels",
+    "resampling_applied": false,
+    "width": 1495,
+    "height": 1278
+  },
+  "panels": [
+    {
+      "panel_id": "spontaneous_curvature",
+      "bounds": [149, 74, 1378, 437],
+      "bounds_verification": "verified",
+      "plot_bounds": [150, 75, 1377, 436],
+      "plot_bounds_verification": "verified",
+      "chart_type": "marker_line",
+      "coordinate_model": "cartesian_linear",
+      "axes": [
+        {
+          "axis_id": "x",
+          "orientation": "x",
+          "scale": "linear",
+          "verification": "verified",
+          "anchors": [
+            {"pixel": 150.0, "value": 0.0}, {"pixel": 239.5, "value": 10.0},
+            {"pixel": 328.0, "value": 20.0}, {"pixel": 417.0, "value": 30.0},
+            {"pixel": 505.5, "value": 40.0}, {"pixel": 594.5, "value": 50.0},
+            {"pixel": 683.5, "value": 60.0}, {"pixel": 772.5, "value": 70.0},
+            {"pixel": 861.5, "value": 80.0}, {"pixel": 950.5, "value": 90.0},
+            {"pixel": 1039.0, "value": 100.0}, {"pixel": 1128.0, "value": 110.0},
+            {"pixel": 1216.5, "value": 120.0}, {"pixel": 1305.5, "value": 130.0}
+          ]
+        },
+        {
+          "axis_id": "y",
+          "orientation": "y",
+          "scale": "linear",
+          "verification": "verified",
+          "anchors": [
+            {"pixel": 115.5, "value": 3.7}, {"pixel": 195.5, "value": 3.6},
+            {"pixel": 275.5, "value": 3.5}, {"pixel": 355.5, "value": 3.4},
+            {"pixel": 435.5, "value": 3.3}
+          ]
+        }
+      ],
+      "series": [{"name": "spontaneous_curvature", "marker_colors_rgb": [[251, 129, 119], [252, 106, 98]], "sample_values": "0:2.5:137.5"}],
+      "reference_lines": [3.556],
+      "extraction_parameters": {"color_tolerance": 12, "sample_radius": 8, "marker_radius_min": 3},
+      "mark_grammars": ["curve", "marker", "reference_line"],
+      "route": {"route_id": "raster_marker_line_candidate", "maturity": "candidate", "implementation": "scripts/candidate_digitize_marker_line.py"},
+      "required_confirmations": ["panel_roi", "plot_bounds", "x_axis", "y_axis", "axis_transform", "series_colors", "sample_positions", "compact_filled_marker_grammar", "reference_line_conflicts", "overlay_review", "anchor_residual_review"],
+      "confirmations": {"panel_roi": "verified", "plot_bounds": "verified", "x_axis": "verified", "y_axis": "verified", "axis_transform": "verified", "series_colors": "verified", "sample_positions": "verified", "compact_filled_marker_grammar": "verified", "reference_line_conflicts": "verified", "overlay_review": "verified", "anchor_residual_review": "verified"}
+    },
+    {
+      "panel_id": "surface_reconstruction",
+      "bounds": [149, 435, 1378, 797],
+      "bounds_verification": "verified",
+      "plot_bounds": [150, 437, 1377, 796],
+      "plot_bounds_verification": "verified",
+      "chart_type": "marker_line",
+      "coordinate_model": "cartesian_linear",
+      "axes": [
+        {
+          "axis_id": "x",
+          "orientation": "x",
+          "scale": "linear",
+          "verification": "verified",
+          "anchors": [
+            {"pixel": 150.0, "value": 0.0}, {"pixel": 239.5, "value": 10.0},
+            {"pixel": 328.0, "value": 20.0}, {"pixel": 417.0, "value": 30.0},
+            {"pixel": 505.5, "value": 40.0}, {"pixel": 594.5, "value": 50.0},
+            {"pixel": 683.5, "value": 60.0}, {"pixel": 772.5, "value": 70.0},
+            {"pixel": 861.5, "value": 80.0}, {"pixel": 950.5, "value": 90.0},
+            {"pixel": 1039.0, "value": 100.0}, {"pixel": 1128.0, "value": 110.0},
+            {"pixel": 1216.5, "value": 120.0}, {"pixel": 1305.5, "value": 130.0}
+          ]
+        },
+        {
+          "axis_id": "y",
+          "orientation": "y",
+          "scale": "linear",
+          "verification": "verified",
+          "anchors": [
+            {"pixel": 475.5, "value": 3.7}, {"pixel": 555.5, "value": 3.6},
+            {"pixel": 635.5, "value": 3.5}, {"pixel": 716.5, "value": 3.4},
+            {"pixel": 795.5, "value": 3.3}
+          ]
+        }
+      ],
+      "series": [{"name": "surface_reconstruction", "marker_color_rgb": [43, 163, 202], "sample_values": "0:2.5:137.5"}],
+      "reference_lines": [3.566],
+      "extraction_parameters": {"color_tolerance": 12, "sample_radius": 8, "marker_radius_min": 3},
+      "mark_grammars": ["curve", "marker", "reference_line"],
+      "route": {"route_id": "raster_marker_line_candidate", "maturity": "candidate", "implementation": "scripts/candidate_digitize_marker_line.py"},
+      "required_confirmations": ["panel_roi", "plot_bounds", "x_axis", "y_axis", "axis_transform", "series_colors", "sample_positions", "compact_filled_marker_grammar", "reference_line_conflicts", "overlay_review", "anchor_residual_review"],
+      "confirmations": {"panel_roi": "verified", "plot_bounds": "verified", "x_axis": "verified", "y_axis": "verified", "axis_transform": "verified", "series_colors": "verified", "sample_positions": "verified", "compact_filled_marker_grammar": "verified", "reference_line_conflicts": "verified", "overlay_review": "verified", "anchor_residual_review": "verified"}
+    },
+    {
+      "panel_id": "rigid",
+      "bounds": [149, 795, 1378, 1158],
+      "bounds_verification": "verified",
+      "plot_bounds": [150, 797, 1377, 1157],
+      "plot_bounds_verification": "verified",
+      "chart_type": "marker_line",
+      "coordinate_model": "cartesian_linear",
+      "axes": [
+        {
+          "axis_id": "x",
+          "orientation": "x",
+          "scale": "linear",
+          "verification": "verified",
+          "anchors": [
+            {"pixel": 150.0, "value": 0.0}, {"pixel": 239.5, "value": 10.0},
+            {"pixel": 328.0, "value": 20.0}, {"pixel": 417.0, "value": 30.0},
+            {"pixel": 505.5, "value": 40.0}, {"pixel": 594.5, "value": 50.0},
+            {"pixel": 683.5, "value": 60.0}, {"pixel": 772.5, "value": 70.0},
+            {"pixel": 861.5, "value": 80.0}, {"pixel": 950.5, "value": 90.0},
+            {"pixel": 1039.0, "value": 100.0}, {"pixel": 1128.0, "value": 110.0},
+            {"pixel": 1216.5, "value": 120.0}, {"pixel": 1305.5, "value": 130.0}
+          ]
+        },
+        {
+          "axis_id": "y",
+          "orientation": "y",
+          "scale": "linear",
+          "verification": "verified",
+          "anchors": [
+            {"pixel": 836.0, "value": 3.7}, {"pixel": 916.5, "value": 3.6},
+            {"pixel": 996.5, "value": 3.5}, {"pixel": 1076.5, "value": 3.4},
+            {"pixel": 1156.5, "value": 3.3}
+          ]
+        }
+      ],
+      "series": [{"name": "rigid", "marker_colors_rgb": [[128, 128, 128], [105, 105, 105]], "sample_values": "0:2.5:137.5"}],
+      "reference_lines": [3.48],
+      "extraction_parameters": {"color_tolerance": 8, "sample_radius": 8, "marker_radius_min": 3},
+      "mark_grammars": ["curve", "marker", "reference_line"],
+      "route": {"route_id": "raster_marker_line_candidate", "maturity": "candidate", "implementation": "scripts/candidate_digitize_marker_line.py"},
+      "required_confirmations": ["panel_roi", "plot_bounds", "x_axis", "y_axis", "axis_transform", "series_colors", "sample_positions", "compact_filled_marker_grammar", "reference_line_conflicts", "overlay_review", "anchor_residual_review"],
+      "confirmations": {"panel_roi": "verified", "plot_bounds": "verified", "x_axis": "verified", "y_axis": "verified", "axis_transform": "verified", "series_colors": "verified", "sample_positions": "verified", "compact_filled_marker_grammar": "verified", "reference_line_conflicts": "verified", "overlay_review": "verified", "anchor_residual_review": "verified"}
+    }
+  ]
+}

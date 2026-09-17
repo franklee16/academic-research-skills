@@ -1,0 +1,17 @@
+{
+  "skill_name": "extract-tables",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Extract all tables from Draft/CBAM_20260501.docx into a markdown file",
+      "expected_output": "A markdown file with 22 tables, properly handling merged cells, with no duplicate columns in Tables 1, 4, 5. Key coefficients like -0.073*** in Table 7 should be correctly captured.",
+      "files": ["Draft/CBAM_20260501.docx"]
+    },
+    {
+      "id": 2,
+      "prompt": "Pull the tables out of this Word document and put them in markdown: Draft/CBAM_20260501.docx",
+      "expected_output": "Same as eval 1 - should trigger the skill and produce the same output. Tests a casual phrasing of the request.",
+      "files": ["Draft/CBAM_20260501.docx"]
+    }
+  ]
+}

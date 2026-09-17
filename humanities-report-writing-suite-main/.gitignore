@@ -1,0 +1,14 @@
+# Operating system and editor files
+.DS_Store
+Thumbs.db
+Desktop.ini
+.idea/
+.vscode/
+
+# Temporary and generated validation files
+*.tmp
+*.temp
+*.log
+~$*.docx
+render-check/
+archive/

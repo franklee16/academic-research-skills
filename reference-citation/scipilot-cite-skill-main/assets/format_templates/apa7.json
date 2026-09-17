@@ -1,0 +1,26 @@
+{
+  "style_name": "APA 7th",
+  "in_text_format": "({first_author} et al., {year})",
+  "multiple_citations": "({citations_semicolon_separated})",
+  "consecutive_citations": "({first_author} et al., {year_start}-{year_end})",
+  "reference_entry": {
+    "journal": "{authors_last_initials}. ({year}). {title_sentence_case}. *{journal}*, {volume}({issue}), {pages}. https://doi.org/{doi}",
+    "conference": "{authors_last_initials}. ({year}, {month}). {title} [Conference presentation]. {conference}, {location}.",
+    "book": "{authors_last_initials}. ({year}). *{title}*. {publisher}."
+  },
+  "author_format": {
+    "max_display": 20,
+    "et_al_threshold": 21,
+    "separator": ", ",
+    "last_separator": ", & ",
+    "name_format": "last_initials",
+    "ampersand_for_last": true
+  },
+  "title_case": "sentence",
+  "language": "en",
+  "list_order": "alphabetical_by_first_author",
+  "examples": [
+    "Vaswani, A., Shazeer, N., & Parmar, N. (2017). Attention is all you need. *Advances in Neural Information Processing Systems*, 30, 5998–6008.",
+    "LeCun, Y., Bengio, Y., & Hinton, G. (2015). Deep learning. *Nature*, 521(7553), 436–444. https://doi.org/10.1038/nature14539"
+  ]
+}

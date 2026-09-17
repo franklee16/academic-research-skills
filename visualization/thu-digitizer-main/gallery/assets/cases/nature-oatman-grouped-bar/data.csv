@@ -1,0 +1,33 @@
+category,series,status,value,unit,confidence,category_center_pixel,bar_left_pixel,bar_top_pixel,bar_right_pixel,bar_bottom_pixel,baseline_pixel,end_pixel
+Active TSS,CER,extracted,14552.23880597015,visible rCpGm count,0.905,105.5,95.0,290.0,116.0,484.0,485.0,290.0
+Active TSS,TCX,extracted,15373.134328358208,visible rCpGm count,0.905,128.0,117.0,279.0,139.0,484.0,485.0,279.0
+Flanking TSS,CER,extracted,7761.194029850746,visible rCpGm count,0.905,155.0,144.0,381.0,166.0,484.0,485.0,381.0
+Flanking TSS,TCX,extracted,7686.567164179104,visible rCpGm count,0.905,177.5,167.0,382.0,188.0,484.0,485.0,382.0
+Transcription at 5' and 3',CER,extracted,223.88059701492537,visible rCpGm count,0.907,205.0,194.0,482.0,216.0,484.0,485.0,482.0
+Transcription at 5' and 3',TCX,extracted,223.88059701492537,visible rCpGm count,0.907,227.0,216.0,482.0,238.0,484.0,485.0,482.0
+Strong Transcription,CER,extracted,7164.179104477612,visible rCpGm count,0.905,254.5,244.0,389.0,265.0,484.0,485.0,389.0
+Strong Transcription,TCX,extracted,7164.179104477612,visible rCpGm count,0.905,277.0,266.0,389.0,288.0,484.0,485.0,389.0
+Weak Transcription,CER,extracted,22462.68656716418,visible rCpGm count,0.903,304.0,293.0,184.0,315.0,484.0,485.0,184.0
+Weak Transcription,TCX,extracted,22388.059701492537,visible rCpGm count,0.903,327.0,316.0,185.0,338.0,484.0,485.0,185.0
+Genic enhancers,CER,extracted,1567.1641791044776,visible rCpGm count,0.907,354.0,343.0,464.0,365.0,484.0,485.0,464.0
+Genic enhancers,TCX,extracted,1567.1641791044776,visible rCpGm count,0.907,376.0,365.0,464.0,387.0,484.0,485.0,464.0
+Enhancers,CER,extracted,9179.10447761194,visible rCpGm count,0.887,404.0,393.0,362.0,415.0,484.0,485.0,362.0
+Enhancers,TCX,extracted,9029.850746268658,visible rCpGm count,0.907,426.0,415.0,364.0,437.0,484.0,485.0,364.0
+ZNF genes & repeats,CER,extracted,223.88059701492537,visible rCpGm count,0.903,453.0,442.0,482.0,464.0,484.0,485.0,482.0
+ZNF genes & repeats,TCX,extracted,223.88059701492537,visible rCpGm count,0.903,476.0,465.0,482.0,487.0,484.0,485.0,482.0
+Heterochromatin,CER,extracted,1268.6567164179105,visible rCpGm count,0.907,503.0,492.0,468.0,514.0,484.0,485.0,468.0
+Heterochromatin,TCX,extracted,1194.0298507462687,visible rCpGm count,0.907,525.0,514.0,469.0,536.0,484.0,485.0,469.0
+Bivalent/poised TSS,CER,extracted,2462.686567164179,visible rCpGm count,0.905,552.5,542.0,452.0,563.0,484.0,485.0,452.0
+Bivalent/poised TSS,TCX,extracted,2462.686567164179,visible rCpGm count,0.905,575.0,564.0,452.0,586.0,484.0,485.0,452.0
+Flanking bivalent TSS/Enh,CER,extracted,1791.044776119403,visible rCpGm count,0.903,602.0,591.0,461.0,613.0,484.0,485.0,461.0
+Flanking bivalent TSS/Enh,TCX,extracted,1791.044776119403,visible rCpGm count,0.903,625.0,614.0,461.0,636.0,484.0,485.0,461.0
+Bivalent enhancer,CER,extracted,1417.910447761194,visible rCpGm count,0.907,652.0,641.0,466.0,663.0,484.0,485.0,466.0
+Bivalent enhancer,TCX,extracted,1492.5373134328358,visible rCpGm count,0.907,674.0,663.0,465.0,685.0,484.0,485.0,465.0
+Repressed Polycomb,CER,extracted,3208.955223880597,visible rCpGm count,0.905,701.5,691.0,442.0,712.0,484.0,485.0,442.0
+Repressed Polycomb,TCX,extracted,3134.3283582089553,visible rCpGm count,0.905,724.0,713.0,443.0,735.0,484.0,485.0,443.0
+Weak repressed Polycomb,CER,extracted,9701.492537313432,visible rCpGm count,0.903,751.0,740.0,355.0,762.0,484.0,485.0,355.0
+Weak repressed Polycomb,TCX,extracted,9552.23880597015,visible rCpGm count,0.903,774.0,763.0,357.0,785.0,484.0,485.0,357.0
+Quiescent/low,CER,extracted,33134.32835820896,visible rCpGm count,0.907,801.0,790.0,41.0,812.0,484.0,485.0,41.0
+Quiescent/low,TCX,extracted,32164.17910447761,visible rCpGm count,0.907,823.0,812.0,54.0,834.0,484.0,485.0,54.0
+Not Defined,CER,extracted,447.76119402985074,visible rCpGm count,0.905,850.5,840.0,479.0,861.0,484.0,485.0,479.0
+Not Defined,TCX,extracted,447.76119402985074,visible rCpGm count,0.905,873.0,862.0,479.0,884.0,484.0,485.0,479.0

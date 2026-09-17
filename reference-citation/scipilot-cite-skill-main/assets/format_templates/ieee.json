@@ -1,0 +1,24 @@
+{
+  "style_name": "IEEE",
+  "in_text_format": "[{number}]",
+  "multiple_citations": "[{numbers_comma_separated}]",
+  "consecutive_citations": "[{start}-{end}]",
+  "reference_entry": {
+    "journal": "[{number}] {authors_initials_first}, \"{title},\" *{journal}*, vol. {volume}, no. {issue}, pp. {pages}, {month} {year}, doi: {doi}.",
+    "conference": "[{number}] {authors_initials_first}, \"{title},\" in *{conference}*, {year}, pp. {pages}.",
+    "book": "[{number}] {authors_initials_first}, *{title}*. {publisher}, {year}."
+  },
+  "author_format": {
+    "max_display": 6,
+    "et_al_threshold": 7,
+    "separator": ", ",
+    "last_separator": ", and ",
+    "name_format": "initials_first"
+  },
+  "title_case": "preserve",
+  "language": "en",
+  "examples": [
+    "[1] A. Vaswani, N. Shazeer, and N. Parmar, \"Attention is all you need,\" in *Proc. NeurIPS*, 2017, pp. 5998–6008.",
+    "[2] Y. LeCun, Y. Bengio, and G. Hinton, \"Deep learning,\" *Nature*, vol. 521, no. 7553, pp. 436–444, 2015, doi: 10.1038/nature14539."
+  ]
+}

@@ -1,0 +1,58 @@
+record_id,kind,shape,set,value,value_status,guide_role,pixel_x,pixel_y,guide_left_px,guide_right_px,left_bar_left_px,left_bar_right_px,hit_x,hit_y,width,height,intersection,column_id,members,combination,count,member_count,bar_geometry_status,bar_left_x_px,bar_top_y_px,bar_right_x_px,bar_bottom_y_px,present,cell_status,foreground_fraction,radius
+1,set_total,rect,Direct Match,8786,derived_from_visible_intersections_and_memberships,row_bar,170.5,365.0,66,275,66,275,66.0,343.0,209.0,44.0,,,,,,,,,,,,,,,
+2,set_total,rect,Non-Synon,8767,derived_from_visible_intersections_and_memberships,row_bar,170.5,424.0,66,275,66,275,66.0,402.0,209.0,44.0,,,,,,,,,,,,,,,
+3,set_total,rect,Position-Specific,6251,derived_from_visible_intersections_and_memberships,row_bar,201.0,482.0,127,275,127,275,127.0,460.0,148.0,44.0,,,,,,,,,,,,,,,
+4,set_total,rect,Diagnosis Match,6219,derived_from_visible_intersections_and_memberships,row_bar,201.5,541.0,128,275,128,275,128.0,519.0,147.0,44.0,,,,,,,,,,,,,,,
+5,set_total,rect,AMP Tier I,3797,derived_from_visible_intersections_and_memberships,row_bar,230.5,599.5,186,275,186,275,186.0,577.0,89.0,45.0,,,,,,,,,,,,,,,
+6,intersection,rect,,,visible_printed_value_and_original_pixel_membership,membership_guides,306.0,179.44842857142854,,,,,283.5,32.89685714285707,45.0,293.1031428571429,1,I01,Direct Match;Non-Synon;Position-Specific;Diagnosis Match;AMP Tier I,Direct Match+Non-Synon+Position-Specific+Diagnosis Match+AMP Tier I,3219,5,calibrated_from_visible_value_axis_for_interaction,283.5,32.89685714285707,328.5,326.0,,,,
+7,intersection,rect,,,visible_printed_value_and_original_pixel_membership,membership_guides,366.0,238.23557142857138,,,,,343.5,150.47114285714275,45.0,175.52885714285725,2,I02,Direct Match;Non-Synon;Position-Specific;Diagnosis Match,Direct Match+Non-Synon+Position-Specific+Diagnosis Match,1929,4,calibrated_from_visible_value_axis_for_interaction,343.5,150.47114285714275,388.5,326.0,,,,
+8,intersection,rect,,,visible_printed_value_and_original_pixel_membership,membership_guides,426.0,264.7581428571428,,,,,403.5,203.51628571428557,45.0,122.48371428571443,3,I03,Direct Match;Non-Synon,Direct Match+Non-Synon,1347,2,calibrated_from_visible_value_axis_for_interaction,403.5,203.51628571428557,448.5,326.0,,,,
+9,intersection,rect,,,visible_printed_value_and_original_pixel_membership,membership_guides,486.5,286.1311428571428,,,,,464.0,246.26228571428555,45.0,79.73771428571445,4,I04,Direct Match;Non-Synon;Position-Specific,Direct Match+Non-Synon+Position-Specific,878,3,calibrated_from_visible_value_axis_for_interaction,464.0,246.26228571428555,509.0,326.0,,,,
+10,intersection,rect,,,visible_printed_value_and_original_pixel_membership,membership_guides,547.0,288.8654285714285,,,,,524.5,251.730857142857,45.0,74.26914285714301,5,I05,Direct Match;Non-Synon;Diagnosis Match,Direct Match+Non-Synon+Diagnosis Match,818,3,calibrated_from_visible_value_axis_for_interaction,524.5,251.730857142857,569.5,326.0,,,,
+11,intersection,rect,,,visible_printed_value_and_original_pixel_membership,membership_guides,607.0,314.79557142857135,,,,,584.5,303.5911428571427,45.0,22.4088571428573,6,I06,Direct Match;Non-Synon;Diagnosis Match;AMP Tier I,Direct Match+Non-Synon+Diagnosis Match+AMP Tier I,249,4,calibrated_from_visible_value_axis_for_interaction,584.5,303.5911428571427,629.5,326.0,,,,
+12,intersection,rect,,,visible_printed_value_and_original_pixel_membership,membership_guides,667.0,316.7551428571428,,,,,644.5,307.51028571428554,45.0,18.489714285714456,7,I07,Direct Match;Non-Synon;Position-Specific;AMP Tier I,Direct Match+Non-Synon+Position-Specific+AMP Tier I,206,4,calibrated_from_visible_value_axis_for_interaction,644.5,307.51028571428554,689.5,326.0,,,,
+13,intersection,rect,,,visible_printed_value_and_original_pixel_membership,membership_guides,727.0,320.6287142857142,,,,,704.5,315.2574285714284,45.0,10.74257142857158,8,I08,Direct Match;Non-Synon;AMP Tier I,Direct Match+Non-Synon+AMP Tier I,121,3,calibrated_from_visible_value_axis_for_interaction,704.5,315.2574285714284,749.5,326.0,,,,
+14,intersection,rect,,,visible_printed_value_and_original_pixel_membership,membership_guides,787.0,325.5048571428571,,,,,764.5,325.0097142857141,45.0,8.0,9,I09,Direct Match;Position-Specific,Direct Match+Position-Specific,14,2,calibrated_from_visible_value_axis_for_interaction,764.5,325.0097142857141,809.5,326.0,,,,
+15,intersection,rect,,,visible_printed_value_and_original_pixel_membership,membership_guides,847.5,326.0061428571428,,,,,825.0,326.01228571428555,45.0,8.0,10,I10,Direct Match;Position-Specific;Diagnosis Match,Direct Match+Position-Specific+Diagnosis Match,3,3,calibrated_from_visible_value_axis_for_interaction,825.0,326.01228571428555,870.0,326.0,,,,
+16,intersection,rect,,,visible_printed_value_and_original_pixel_membership,membership_guides,908.0,326.0972857142856,,,,,885.5,326.19457142857124,45.0,8.0,11,I11,Direct Match;Position-Specific;AMP Tier I,Direct Match+Position-Specific+AMP Tier I,1,3,calibrated_from_visible_value_axis_for_interaction,885.5,326.19457142857124,930.5,326.0,,,,
+17,intersection,rect,,,visible_printed_value_and_original_pixel_membership,membership_guides,968.0,326.0972857142856,,,,,945.5,326.19457142857124,45.0,8.0,12,I12,Direct Match;Position-Specific;Diagnosis Match;AMP Tier I,Direct Match+Position-Specific+Diagnosis Match+AMP Tier I,1,4,calibrated_from_visible_value_axis_for_interaction,945.5,326.19457142857124,990.5,326.0,,,,
+18,membership_cell,circle,Direct Match,,original_pixel_active_membership,,306.0,364.5,,,,,,,,,1,I01,,,,,,,,,,yes,active,0.721536,13
+19,membership_cell,circle,Non-Synon,,original_pixel_active_membership,,306.0,423.5,,,,,,,,,1,I01,,,,,,,,,,yes,active,0.717421,13
+20,membership_cell,circle,Position-Specific,,original_pixel_active_membership,,306.0,481.5,,,,,,,,,1,I01,,,,,,,,,,yes,active,0.721536,13
+21,membership_cell,circle,Diagnosis Match,,original_pixel_active_membership,,306.0,540.5,,,,,,,,,1,I01,,,,,,,,,,yes,active,0.721536,13
+22,membership_cell,circle,AMP Tier I,,original_pixel_active_membership,,306.0,599.0,,,,,,,,,1,I01,,,,,,,,,,yes,active,0.717421,13
+23,membership_cell,circle,Direct Match,,original_pixel_active_membership,,366.0,364.5,,,,,,,,,2,I02,,,,,,,,,,yes,active,0.718793,13
+24,membership_cell,circle,Non-Synon,,original_pixel_active_membership,,366.0,423.5,,,,,,,,,2,I02,,,,,,,,,,yes,active,0.721536,13
+25,membership_cell,circle,Position-Specific,,original_pixel_active_membership,,366.0,481.5,,,,,,,,,2,I02,,,,,,,,,,yes,active,0.72428,13
+26,membership_cell,circle,Diagnosis Match,,original_pixel_active_membership,,366.0,540.5,,,,,,,,,2,I02,,,,,,,,,,yes,active,0.718793,13
+27,membership_cell,circle,Direct Match,,original_pixel_active_membership,,426.0,364.5,,,,,,,,,3,I03,,,,,,,,,,yes,active,0.727023,13
+28,membership_cell,circle,Non-Synon,,original_pixel_active_membership,,426.0,423.5,,,,,,,,,3,I03,,,,,,,,,,yes,active,0.718793,13
+29,membership_cell,circle,Direct Match,,original_pixel_active_membership,,486.5,364.5,,,,,,,,,4,I04,,,,,,,,,,yes,active,0.728395,13
+30,membership_cell,circle,Non-Synon,,original_pixel_active_membership,,486.5,423.5,,,,,,,,,4,I04,,,,,,,,,,yes,active,0.722908,13
+31,membership_cell,circle,Position-Specific,,original_pixel_active_membership,,486.5,481.5,,,,,,,,,4,I04,,,,,,,,,,yes,active,0.718793,13
+32,membership_cell,circle,Direct Match,,original_pixel_active_membership,,547.0,364.5,,,,,,,,,5,I05,,,,,,,,,,yes,active,0.72428,13
+33,membership_cell,circle,Non-Synon,,original_pixel_active_membership,,547.0,423.5,,,,,,,,,5,I05,,,,,,,,,,yes,active,0.718793,13
+34,membership_cell,circle,Diagnosis Match,,original_pixel_active_membership,,547.0,540.5,,,,,,,,,5,I05,,,,,,,,,,yes,active,0.72428,13
+35,membership_cell,circle,Direct Match,,original_pixel_active_membership,,607.0,364.5,,,,,,,,,6,I06,,,,,,,,,,yes,active,0.720165,13
+36,membership_cell,circle,Non-Synon,,original_pixel_active_membership,,607.0,423.5,,,,,,,,,6,I06,,,,,,,,,,yes,active,0.721536,13
+37,membership_cell,circle,Diagnosis Match,,original_pixel_active_membership,,607.0,540.5,,,,,,,,,6,I06,,,,,,,,,,yes,active,0.720165,13
+38,membership_cell,circle,AMP Tier I,,original_pixel_active_membership,,607.0,599.0,,,,,,,,,6,I06,,,,,,,,,,yes,active,0.721536,13
+39,membership_cell,circle,Direct Match,,original_pixel_active_membership,,667.0,364.5,,,,,,,,,7,I07,,,,,,,,,,yes,active,0.721536,13
+40,membership_cell,circle,Non-Synon,,original_pixel_active_membership,,667.0,423.5,,,,,,,,,7,I07,,,,,,,,,,yes,active,0.720165,13
+41,membership_cell,circle,Position-Specific,,original_pixel_active_membership,,667.0,481.5,,,,,,,,,7,I07,,,,,,,,,,yes,active,0.721536,13
+42,membership_cell,circle,AMP Tier I,,original_pixel_active_membership,,667.0,599.0,,,,,,,,,7,I07,,,,,,,,,,yes,active,0.720165,13
+43,membership_cell,circle,Direct Match,,original_pixel_active_membership,,727.0,364.5,,,,,,,,,8,I08,,,,,,,,,,yes,active,0.718793,13
+44,membership_cell,circle,Non-Synon,,original_pixel_active_membership,,727.0,423.5,,,,,,,,,8,I08,,,,,,,,,,yes,active,0.721536,13
+45,membership_cell,circle,AMP Tier I,,original_pixel_active_membership,,727.0,599.0,,,,,,,,,8,I08,,,,,,,,,,yes,active,0.721536,13
+46,membership_cell,circle,Direct Match,,original_pixel_active_membership,,787.0,364.5,,,,,,,,,9,I09,,,,,,,,,,yes,active,0.72428,13
+47,membership_cell,circle,Position-Specific,,original_pixel_active_membership,,787.0,481.5,,,,,,,,,9,I09,,,,,,,,,,yes,active,0.721536,13
+48,membership_cell,circle,Direct Match,,original_pixel_active_membership,,847.5,364.5,,,,,,,,,10,I10,,,,,,,,,,yes,active,0.728395,13
+49,membership_cell,circle,Position-Specific,,original_pixel_active_membership,,847.5,481.5,,,,,,,,,10,I10,,,,,,,,,,yes,active,0.718793,13
+50,membership_cell,circle,Diagnosis Match,,original_pixel_active_membership,,847.5,540.5,,,,,,,,,10,I10,,,,,,,,,,yes,active,0.727023,13
+51,membership_cell,circle,Direct Match,,original_pixel_active_membership,,908.0,364.5,,,,,,,,,11,I11,,,,,,,,,,yes,active,0.725652,13
+52,membership_cell,circle,Position-Specific,,original_pixel_active_membership,,908.0,481.5,,,,,,,,,11,I11,,,,,,,,,,yes,active,0.720165,13
+53,membership_cell,circle,AMP Tier I,,original_pixel_active_membership,,908.0,599.0,,,,,,,,,11,I11,,,,,,,,,,yes,active,0.718793,13
+54,membership_cell,circle,Direct Match,,original_pixel_active_membership,,968.0,364.5,,,,,,,,,12,I12,,,,,,,,,,yes,active,0.717421,13
+55,membership_cell,circle,Position-Specific,,original_pixel_active_membership,,968.0,481.5,,,,,,,,,12,I12,,,,,,,,,,yes,active,0.72428,13
+56,membership_cell,circle,Diagnosis Match,,original_pixel_active_membership,,968.0,540.5,,,,,,,,,12,I12,,,,,,,,,,yes,active,0.718793,13
+57,membership_cell,circle,AMP Tier I,,original_pixel_active_membership,,968.0,599.0,,,,,,,,,12,I12,,,,,,,,,,yes,active,0.720165,13

@@ -1,0 +1,45 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/SuperJayLiu/research-defense-radar/assets/RADAR_STATE_SCHEMA.json",
+  "title": "Research Defense Radar state v1.1",
+  "type": "object",
+  "required": ["schema_version", "project", "last_attempted_scan_at", "last_successful_scan_at", "papers", "runs"],
+  "properties": {
+    "schema_version": {"const": "1.1"},
+    "project": {
+      "type": "object",
+      "required": ["slug"],
+      "properties": {
+        "slug": {"type": "string", "minLength": 1},
+        "fingerprint_path": {"type": ["string", "null"]},
+        "fingerprint_revision": {"type": ["string", "null"]},
+        "fingerprint_sha256": {"type": ["string", "null"]},
+        "fingerprint_updated_at": {"type": ["string", "null"]},
+        "public_disclosure_date": {"type": ["string", "null"], "format": "date"},
+        "public_disclosure_url": {"type": ["string", "null"], "format": "uri"},
+        "public_disclosure_provenance": {"enum": ["user_stated", "public_record", "unknown"]}
+      },
+      "additionalProperties": true
+    },
+    "last_attempted_scan_at": {"type": ["string", "null"]},
+    "last_successful_scan_at": {"type": ["string", "null"]},
+    "papers": {"type": "array", "items": {"type": "object"}},
+    "runs": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["run_id", "run_date", "run_status", "literature_cutoff_at", "coverage_complete", "coverage"],
+        "properties": {
+          "run_id": {"type": "string", "minLength": 1},
+          "run_date": {"type": "string", "format": "date"},
+          "run_status": {"enum": ["completed", "partial", "failed"]},
+          "literature_cutoff_at": {"type": "string", "format": "date"},
+          "coverage_complete": {"type": "boolean"},
+          "coverage": {"type": "array"}
+        },
+        "additionalProperties": true
+      }
+    }
+  },
+  "additionalProperties": true
+}

@@ -1,0 +1,126 @@
+# DRIL Research Instrument (Codebook) Template
+# Save as codebook.yaml in your project directory.
+# This file defines every variable the implementation agent will code.
+
+metadata:
+  title: "Research Instrument Title"
+  version: "1.0.0"
+  author: "Your Name"
+  date: "2026-05-17"
+  domain: "e.g., public finance / institutional economics"
+  notes: "Any global notes about the instrument"
+
+unit_space:
+  dimensions:
+    - name: country
+      description: "ISO 3166-1 alpha-3 country code"
+      type: categorical
+    - name: year
+      description: "Calendar year"
+      type: integer
+      range: [2000, 2023]
+
+variables:
+  # ---------------------------------------------------------------------------
+  # Example 1: Categorical variable
+  # ---------------------------------------------------------------------------
+  - id: v01
+    name: subnational_tax_autonomy
+    question: "Does the subnational government have independent tax-setting authority?"
+    value_type:
+      kind: categorical
+      values:
+        - code: full
+          label: "Full autonomy"
+          definition: "Subnational government can set tax rates and bases without central approval."
+        - code: limited
+          label: "Limited autonomy"
+          definition: "Subnational government can set some taxes or rates, subject to central constraints."
+        - code: none
+          label: "No autonomy"
+          definition: "All tax rates and bases are set by the central government."
+    coding_rules: |
+      1. Examine the national constitution and relevant fiscal frameworks.
+      2. Code "full" only if subnational governments can introduce new taxes or change rates/bases without central veto.
+      3. Code "limited" if they can adjust rates within bands, or if some tax types are delegated.
+      4. Code "none" if the central government controls all tax policy.
+      5. If the arrangement varies by level of subnational government (state vs. municipal), code the highest level with any autonomy.
+    field_kind: coded_scalar
+    evidence_requirement: |
+      A constitutional provision, statute, or official government report explicitly describing the subnational government's tax authority.
+    behavior_when_no_source: |
+      Create a data gap record with reason "not_found_after_search". Document which sources were consulted (constitution, ministry reports, IMF Article IV).
+    per_variable_source_overrides: null
+
+  # ---------------------------------------------------------------------------
+  # Example 2: Continuous variable
+  # ---------------------------------------------------------------------------
+  - id: v02
+    name: vat_revenue_forgone_pct_gdp
+    question: "What is the revenue forgone from VAT exemptions and reduced rates, as a percentage of GDP?"
+    value_type:
+      kind: continuous
+      units: "percent of GDP"
+      precision: 2
+      constraints:
+        min: 0
+        max: 100
+    coding_rules: |
+      1. Locate the most recent official tax expenditure report or budget documentation.
+      2. Extract the estimated revenue forgone from VAT exemptions, reduced rates, and zero-rating.
+      3. Convert to percentage of GDP using the GDP figure from the same report or the corresponding year.
+      4. If the report provides a range, use the midpoint.
+      5. If the report does not separate VAT from other consumption taxes, create a gap record.
+    field_kind: coded_scalar
+    evidence_requirement: |
+      An official tax expenditure report, ministry of finance publication, or IMF/World Bank diagnostic with explicit revenue forgone estimates.
+    behavior_when_no_source: |
+      Create a data gap record. Note whether partial data exists (e.g., exemptions only, no reduced rates).
+    per_variable_source_overrides: null
+
+  # ---------------------------------------------------------------------------
+  # Example 3: Narrative / qualitative field
+  # ---------------------------------------------------------------------------
+  - id: v03
+    name: legal_basis_notes
+    question: "Describe the legal basis for subnational borrowing rules."
+    value_type:
+      kind: text
+      max_length: 500
+    coding_rules: |
+      1. Identify the constitutional articles, national statutes, and regulations governing subnational debt.
+      2. Summarize the key restrictions (e.g., debt limits, central approval requirements, prohibited purposes).
+      3. Note any recent reforms or judicial interpretations that affect the rules.
+      4. Keep the summary factual and cite specific legal provisions.
+    field_kind: narrative_summary
+    evidence_requirement: |
+      Primary legal texts (constitution, statutes, regulations) or authoritative legal commentaries.
+    behavior_when_no_source: |
+      Create a data gap record. Do not summarize from secondary sources alone.
+    per_variable_source_overrides: null
+
+  # ---------------------------------------------------------------------------
+  # Add more variables below...
+  # ---------------------------------------------------------------------------
+
+cross_cutting_policies:
+  literal_match_absent: |
+    When a source does not contain a literal match for the variable's question,
+    search for related concepts or broader frameworks. If still no match,
+    document the search and create a gap record.
+  missing_data_documentation: |
+    Every missing value must have a corresponding gap record specifying:
+    (a) what was searched, (b) what was found, (c) why it was insufficient.
+  interpretive_notes: |
+    Add an interpretive note whenever:
+    - The source is ambiguous or contradicts itself
+    - The coding rule does not cleanly apply to the source
+    - The agent made a judgment call (explain the reasoning)
+  follow_up_flags: |
+    Flag for human review when:
+    - Sources directly contradict each other and conflict resolution rules do not resolve it
+    - The source is dated and a more recent source may exist
+    - The coding rule appears incomplete for the case at hand
+  source_detail_retention: |
+    Retain verbatim quotes of at least 100 characters for every factual claim.
+    Record the full citation (author, title, date, URL or document locator).

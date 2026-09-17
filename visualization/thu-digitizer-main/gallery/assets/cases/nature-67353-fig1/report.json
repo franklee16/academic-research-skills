@@ -1,0 +1,200 @@
+{
+  "schema_version": 1,
+  "case_id": "nature-67353-fig1",
+  "status": "source_mapped",
+  "family": "multi_panel_vertical_boxplot",
+  "article": {
+    "title": "The soil microbiome as an indicator of ecosystem multifunctionality in European soils",
+    "journal": "Nature Communications",
+    "year": 2025,
+    "doi": "10.1038/s41467-025-67353-9",
+    "figure": "Fig. 1",
+    "article_url": "https://www.nature.com/articles/s41467-025-67353-9",
+    "figure_url": "https://www.nature.com/articles/s41467-025-67353-9/figures/1",
+    "image_url": "https://media.springernature.com/full/springer-static/image/art%3A10.1038%2Fs41467-025-67353-9/MediaObjects/41467_2025_67353_Fig1_HTML.png",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/"
+  },
+  "input": {
+    "file": "original.png",
+    "sha256": "30d83f3adf494d698d16c510c4ca352ba18626d351b0fa91e608553e854fc3cc",
+    "dimensions": [
+      1750,
+      1482
+    ]
+  },
+  "source_data": {
+    "status": "official_figshare_source_mapped",
+    "url": "https://doi.org/10.6084/m9.figshare.28645625",
+    "download_url": "https://ndownloader.figshare.com/files/60135722",
+    "file": "source-data.xlsx",
+    "sha256": "be11c2ad6521d994b1c9142e1812ecb0e7c4a6258b9fada2e778ddade1c09693",
+    "sheet": "DATASET",
+    "source_rows": 484,
+    "mapped_fields": [
+      "EMF_weighted",
+      "LC_simpl_2018",
+      "Climate_zone_simpl",
+      "SOIL_TYPE_SIMPL",
+      "PH_Class"
+    ],
+    "semantic_evidence": "The article reports Fig. 1 land use, climate, texture and pH groupings and the published group means match EMF_weighted; the 484 source rows and all four group sample sizes match the figure."
+  },
+  "raster_calibration": {
+    "coordinate_status": "verified_from_retained_figure_ticks_and_grid",
+    "y_axis": {
+      "displayed_range": [
+        0.05,
+        0.55
+      ],
+      "top_grid_pixels": [
+        54,
+        826
+      ],
+      "bottom_pixels": [
+        604,
+        1376
+      ]
+    },
+    "panel_bounds": {
+      "A": [
+        145,
+        40,
+        690,
+        604
+      ],
+      "B": [
+        814,
+        40,
+        1356,
+        604
+      ],
+      "C": [
+        145,
+        812,
+        690,
+        1376
+      ],
+      "D": [
+        814,
+        812,
+        1356,
+        1376
+      ]
+    },
+    "visible_annotations": "Kruskal-Wallis statistics and a/b/c letters are retained as figure-level labels; source summaries are not reverse-engineered from their pixel positions."
+  },
+  "coverage": {
+    "panels": 4,
+    "boxplots": 12,
+    "source_observations": 484,
+    "visible_outliers": 5,
+    "summary_statistics_per_box": 5
+  },
+  "panel_statistics": {
+    "A": {
+      "grouping_field": "LC_simpl_2018",
+      "metric": "EMF_weighted",
+      "sample_count": 484,
+      "kruskal_wallis_chi_squared": 66.04160244467244,
+      "eta_squared": 0.13314262462509863,
+      "p_value": 4.562976594741069e-15,
+      "visible_annotation": {
+        "letters": [
+          "a",
+          "b",
+          "b"
+        ],
+        "letter_y_values": [
+          0.333,
+          0.402,
+          0.402
+        ],
+        "status": "raster_annotation_transcribed"
+      }
+    },
+    "B": {
+      "grouping_field": "Climate_zone_simpl",
+      "metric": "EMF_weighted",
+      "sample_count": 484,
+      "kruskal_wallis_chi_squared": 30.81938031506911,
+      "eta_squared": 0.05991555159058027,
+      "p_value": 2.030750630496877e-07,
+      "visible_annotation": {
+        "letters": [
+          "a",
+          "b",
+          "c"
+        ],
+        "letter_y_values": [
+          0.35,
+          0.35,
+          0.402
+        ],
+        "status": "raster_annotation_transcribed"
+      }
+    },
+    "C": {
+      "grouping_field": "SOIL_TYPE_SIMPL",
+      "metric": "EMF_weighted",
+      "sample_count": 484,
+      "kruskal_wallis_chi_squared": 30.834819237078136,
+      "eta_squared": 0.05994764914153459,
+      "p_value": 2.015134681097313e-07,
+      "visible_annotation": {
+        "letters": [
+          "a",
+          "a",
+          "b"
+        ],
+        "letter_y_values": [
+          0.382,
+          0.412,
+          0.342
+        ],
+        "status": "raster_annotation_transcribed"
+      }
+    },
+    "D": {
+      "grouping_field": "PH_Class",
+      "metric": "EMF_weighted",
+      "sample_count": 484,
+      "kruskal_wallis_chi_squared": 38.49532747912099,
+      "eta_squared": 0.07587386170295424,
+      "p_value": 4.373668354598123e-09,
+      "visible_annotation": {
+        "letters": [
+          "a",
+          "b",
+          "a"
+        ],
+        "letter_y_values": [
+          0.402,
+          0.302,
+          0.402
+        ],
+        "status": "raster_annotation_transcribed"
+      }
+    }
+  },
+  "source_validation": {
+    "status": "official_source_summary_replotted",
+    "mapped_boxplots": 12,
+    "mapped_observations": 484,
+    "summary_metrics": [
+      "Q1",
+      "median",
+      "Q3",
+      "1.5xIQR lower whisker",
+      "1.5xIQR upper whisker"
+    ],
+    "replot_summary_error": 0.0
+  },
+  "recreation_scope": "The recreation uses official observations to calculate the visible five-number summaries and visible fliers; source observations are not displayed as if the original chart plotted a raw swarm.",
+  "webplotdigitizer_comparison": "not_compared",
+  "limitations": [
+    "This is an official-source mapping case, not a claim that all 484 observations were recovered from raster pixels.",
+    "Post-hoc significance letters and their vertical positions are transcribed from the visible figure annotation; the multiple-comparison method is not inferred here.",
+    "The replot preserves the four panels, summaries, whiskers and visible outliers, while browser font rasterization may differ slightly from the publisher raster."
+  ]
+}

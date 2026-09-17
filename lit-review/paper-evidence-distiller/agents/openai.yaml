@@ -1,0 +1,7 @@
+interface:
+  display_name: "Paper Evidence Distiller"
+  short_description: "Turn paper MD/PDF into grounded evidence cards"
+  default_prompt: "Use $paper-evidence-distiller to distill this academic paper Markdown or PDF into an evidence-grounded card."
+
+policy:
+  allow_implicit_invocation: true

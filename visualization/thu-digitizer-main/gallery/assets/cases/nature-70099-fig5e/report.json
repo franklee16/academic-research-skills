@@ -1,0 +1,274 @@
+{
+  "schema_version": 1,
+  "case_contract_version": 2,
+  "case_id": "nature-70099-fig5e",
+  "status": "visible_geometry_candidate",
+  "route": "assisted_distance_transform_scatter_centres",
+  "input": {
+    "file": "tmp\\requested-20260720\\fig5-70099.png",
+    "sha256": "93a94352b89851af6dbeb7e6fde0462ae51918ba614dd96ad39a5f3289bea3f5",
+    "crop": [
+      0,
+      1445,
+      1010,
+      1805
+    ],
+    "canvas": [
+      1010,
+      360
+    ]
+  },
+  "visible_point_count": 48,
+  "visible_points_by_panel": [
+    17,
+    16,
+    15
+  ],
+  "fit_representation": "OLS refit from extracted visible points",
+  "ribbon_representation": "fitted line ± residual SD",
+  "correlation_validation_max_abs_difference": 0.00467985822728284,
+  "panels": [
+    {
+      "panel_id": "ab42_ab40_ratio",
+      "label": "Aβ42/Aβ40 ratio",
+      "visible_point_count": 17,
+      "plot_bounds": [
+        106,
+        91,
+        340,
+        304
+      ],
+      "detection_roi": [
+        110,
+        130,
+        336,
+        280
+      ],
+      "x_anchors": [
+        {
+          "pixel": 150.5,
+          "value": 0.04
+        },
+        {
+          "pixel": 207.5,
+          "value": 0.06
+        },
+        {
+          "pixel": 264.5,
+          "value": 0.08
+        },
+        {
+          "pixel": 321.5,
+          "value": 0.1
+        }
+      ],
+      "y_anchors": [
+        {
+          "pixel": 100.5,
+          "value": 3.0
+        },
+        {
+          "pixel": 149.0,
+          "value": 2.5
+        },
+        {
+          "pixel": 197.5,
+          "value": 2.0
+        },
+        {
+          "pixel": 245.5,
+          "value": 1.5
+        },
+        {
+          "pixel": 293.5,
+          "value": 1.0
+        }
+      ],
+      "x_calibration": {
+        "slope": 0.0003508771929824561,
+        "intercept": -0.012807017543859654,
+        "anchor_rmse": 1.3877787807814457e-17,
+        "anchor_max_abs_residual": 1.3877787807814457e-17
+      },
+      "y_calibration": {
+        "slope": -0.010362616404934528,
+        "intercept": 4.04350795505309,
+        "anchor_rmse": 0.0019386752973424189,
+        "anchor_max_abs_residual": 0.0031087849214794794
+      },
+      "annotated_r": -0.57,
+      "recomputed_r": -0.5665244861788382,
+      "absolute_r_difference": 0.0034755138211617354,
+      "residual_sd": 0.310823426298759,
+      "status": "validated_against_visible_correlation_annotation"
+    },
+    {
+      "panel_id": "moca",
+      "label": "MoCA",
+      "visible_point_count": 16,
+      "plot_bounds": [
+        403,
+        91,
+        638,
+        304
+      ],
+      "detection_roi": [
+        408,
+        130,
+        634,
+        280
+      ],
+      "x_anchors": [
+        {
+          "pixel": 424.0,
+          "value": 10
+        },
+        {
+          "pixel": 474.5,
+          "value": 15
+        },
+        {
+          "pixel": 525.5,
+          "value": 20
+        },
+        {
+          "pixel": 576.5,
+          "value": 25
+        },
+        {
+          "pixel": 627.0,
+          "value": 30
+        }
+      ],
+      "y_anchors": [
+        {
+          "pixel": 100.5,
+          "value": 3.0
+        },
+        {
+          "pixel": 149.0,
+          "value": 2.5
+        },
+        {
+          "pixel": 197.5,
+          "value": 2.0
+        },
+        {
+          "pixel": 245.5,
+          "value": 1.5
+        },
+        {
+          "pixel": 293.5,
+          "value": 1.0
+        }
+      ],
+      "x_calibration": {
+        "slope": 0.09842481545347093,
+        "intercept": -31.72224052079894,
+        "anchor_rmse": 0.013919397857644504,
+        "anchor_max_abs_residual": 0.01966558812704733
+      },
+      "y_calibration": {
+        "slope": -0.010362616404934528,
+        "intercept": 4.04350795505309,
+        "anchor_rmse": 0.0019386752973424189,
+        "anchor_max_abs_residual": 0.0031087849214794794
+      },
+      "annotated_r": -0.34,
+      "recomputed_r": -0.3353201417727172,
+      "absolute_r_difference": 0.00467985822728284,
+      "residual_sd": 0.3993007508003304,
+      "status": "validated_against_visible_correlation_annotation"
+    },
+    {
+      "panel_id": "p_tau_181",
+      "label": "p-Tau-181",
+      "visible_point_count": 15,
+      "plot_bounds": [
+        700,
+        91,
+        936,
+        304
+      ],
+      "detection_roi": [
+        706,
+        130,
+        932,
+        280
+      ],
+      "x_anchors": [
+        {
+          "pixel": 736.5,
+          "value": 50
+        },
+        {
+          "pixel": 790.5,
+          "value": 100
+        },
+        {
+          "pixel": 844.5,
+          "value": 150
+        },
+        {
+          "pixel": 898.5,
+          "value": 200
+        }
+      ],
+      "y_anchors": [
+        {
+          "pixel": 100.5,
+          "value": 3.0
+        },
+        {
+          "pixel": 149.0,
+          "value": 2.5
+        },
+        {
+          "pixel": 197.5,
+          "value": 2.0
+        },
+        {
+          "pixel": 245.5,
+          "value": 1.5
+        },
+        {
+          "pixel": 293.5,
+          "value": 1.0
+        }
+      ],
+      "x_calibration": {
+        "slope": 0.925925925925927,
+        "intercept": -631.9444444444457,
+        "anchor_rmse": 3.5040636720219573e-13,
+        "anchor_max_abs_residual": 4.547473508864641e-13
+      },
+      "y_calibration": {
+        "slope": -0.010362616404934528,
+        "intercept": 4.04350795505309,
+        "anchor_rmse": 0.0019386752973424189,
+        "anchor_max_abs_residual": 0.0031087849214794794
+      },
+      "annotated_r": 0.12,
+      "recomputed_r": 0.12383713539618915,
+      "absolute_r_difference": 0.0038371353961891563,
+      "residual_sd": 0.35389623832461986,
+      "status": "validated_against_visible_correlation_annotation"
+    }
+  ],
+  "outputs": {
+    "data": "data.csv",
+    "geometry": "geometry.json",
+    "recreated": "recreated.png",
+    "overlay": "overlay.png"
+  },
+  "comparison": {
+    "prior_gallery_candidate": "36 visible points; failed dense touching-marker clusters",
+    "webplotdigitizer": "not_compared"
+  },
+  "limitations": [
+    "Values are calibrated from visible raster marker centres, not author raw observations.",
+    "Perfectly coincident or fully occluded observations cannot be recovered.",
+    "The regression line is a new OLS refit from extracted points, not proof of the authors' hidden fit settings.",
+    "The ribbon is defined for this recreation as fitted line ± residual SD; the source author's interval definition is unknown."
+  ]
+}

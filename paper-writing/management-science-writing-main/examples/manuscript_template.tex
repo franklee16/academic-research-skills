@@ -1,0 +1,196 @@
+% ============================================================
+%  Example: INFORMS-Style Manuscript Template
+%  Uses informs3.cls (bundled with this skill)
+% ============================================================
+
+\documentclass[12pt,letterpaper]{article}
+
+% --- Replace with \documentclass{informs3} when using the bundled class ---
+
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[utf8]{inputenc}
+\usepackage[top=1in,bottom=1in,left=1.25in,right=1.25in]{geometry}
+\usepackage{setspace}\doublespacing
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{booktabs,array}
+\usepackage[round,authoryear]{natbib}
+\usepackage[colorlinks=true,linkcolor=black,citecolor=black,urlcolor=blue]{hyperref}
+
+% Theorem environments
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{assumption}{Assumption}[section]
+
+\bibliographystyle{plainnat}
+
+\title{\bfseries A Structural Model of [Your Topic]\\{\large Evidence from [Your Context]}}
+\author{Your Name\thanks{Email: you@university.edu}\\University Name}
+\date{}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+\noindent
+\textbf{Problem definition:} [1--2 sentences on the real-world problem.]
+
+\textbf{Methodology:} [2--3 sentences on your model/method.]
+
+\textbf{Results:} [2--3 sentences on key findings.]
+
+\textbf{Managerial implications:} [1--2 sentences on what practitioners should do differently.]
+\end{abstract}
+
+\vspace{1em}
+\noindent\textit{Key words:} keyword1; keyword2; keyword3
+
+\newpage
+
+% ============================================================
+\section{Introduction}
+% ============================================================
+
+[Write 3--5 pages covering: motivating example, literature gap, contribution statement (numbered), paper organization.]
+
+This paper makes the following contributions:
+
+\begin{enumerate}
+    \item \textbf{[Contribution 1]}: [One sentence.]
+    \item \textbf{[Contribution 2]}: [One sentence.]
+    \item \textbf{[Contribution 3]}: [One sentence.]
+\end{enumerate}
+
+% ============================================================
+\section{Literature Review}
+% ============================================================
+
+[Organize by research stream. End each stream with what's been done and what's missing. Use a positioning table:]
+
+\begin{table}[htbp]
+\centering
+\caption{Positioning of This Paper in the Literature}
+\label{tab:literature}
+\begin{tabular}{@{}lcccccc@{}}
+\toprule
+\textbf{Paper} & \textbf{Dim. 1} & \textbf{Dim. 2} & \textbf{Dim. 3} & \textbf{Dim. 4} & \textbf{Dim. 5} \\
+\midrule
+Author1 (Year) & $\checkmark$ & -- & $\checkmark$ & -- & -- \\
+Author2 (Year) & $\checkmark$ & $\checkmark$ & -- & $\checkmark$ & -- \\
+\midrule
+\textbf{This paper} & \textbf{$\checkmark$} & \textbf{$\checkmark$} & \textbf{$\checkmark$} & \textbf{$\checkmark$} & \textbf{$\checkmark$} \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+% ============================================================
+\section{Model}
+% ============================================================
+
+\subsection{Notation}
+
+[Use the three-tier notation system from \texttt{references/modeling-conventions.md}.]
+
+\begin{table}[htbp]
+\centering
+\caption{Summary of Notation}
+\begin{tabular}{@{}ll@{}}
+\toprule
+\textbf{Symbol} & \textbf{Description} \\
+\midrule
+\multicolumn{2}{l}{\textit{Sets and Indices}} \\
+$i \in \mathcal{I}$ & Set of [items] \\
+\multicolumn{2}{l}{\textit{Parameters}} \\
+$c_i$ & Unit cost of item $i$ \\
+\multicolumn{2}{l}{\textit{Decision Variables}} \\
+$x_i$ & Quantity of item $i$ \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Assumptions}
+
+\begin{assumption}[Assumption Name]
+\label{ass:example}
+[State the assumption clearly.]
+\end{assumption}
+
+This assumption is [defend: why it's reasonable, what literature supports it, what happens if relaxed].
+
+\subsection{Model Formulation}
+
+\begin{align}
+\min_{x} \quad & f(x) \label{eq:obj}\\
+\text{s.t.} \quad & g(x) \leq 0, \label{eq:constraints}\\
+& x \geq 0. \nonumber
+\end{align}
+
+% ============================================================
+\section{Analysis}
+% ============================================================
+
+\begin{lemma}[Structural Property]
+\label{lem:example}
+[Statement.]
+\end{lemma}
+
+\begin{proof}
+[Proof. Use the patterns from \texttt{references/proof-derivation-guide.md}.]
+\end{proof}
+
+\begin{theorem}[Main Result]
+\label{thm:main}
+[Statement of the paper's primary finding.]
+\end{theorem}
+
+% ============================================================
+\section{Numerical Experiments}
+% ============================================================
+
+\subsection{Parameter Settings}
+
+\begin{table}[htbp]
+\centering
+\caption{Parameter Settings}
+\begin{tabular}{@{}llll@{}}
+\toprule
+\textbf{Parameter} & \textbf{Base Value} & \textbf{Range} & \textbf{Source} \\
+\midrule
+$c$ (unit cost) & 10 & $\{5, 10, 15, 20\}$ & Industry report \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Results}
+
+[Use the experiment structure from \texttt{references/numerical-experiments.md}.]
+
+% ============================================================
+\section{Managerial Insights}
+% ============================================================
+
+\noindent\textbf{Insight 1: [One-line takeaway]}
+
+\textit{Setting:} [Context.]
+
+\textit{Finding:} [Analytical result in plain language.]
+
+\textit{Recommendation:} [Concrete action.]
+
+% ============================================================
+\section{Conclusion}
+% ============================================================
+
+[Summary + limitations + future directions.]
+
+% ============================================================
+\newpage
+\begin{thebibliography}{99}
+\bibitem[Author(Year)]{key}
+Author, A. Year. Title. \textit{Journal} \textbf{Vol}(Issue) Pages.
+\end{thebibliography}
+
+\end{document}

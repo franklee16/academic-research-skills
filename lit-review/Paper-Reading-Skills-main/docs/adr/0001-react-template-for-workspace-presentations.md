@@ -1,0 +1,7 @@
+# Use a React template for Workspace Presentations
+
+Workspace Presentations will use a shared React/Vite template plus workspace-specific generated metadata rather than the zero-build HTML report style used by Field Map Reports. Field Map Reports remain simple static summaries for one workflow, but Workspace Presentations need standardized, interactive presentation modules across all paper-reading workflows while still treating source artifacts as the facts of record. Generated presentations live under `workspace/presentations/{presentation-slug}/` and are read through a local development server rather than promising direct `file://` opening.
+
+Each presentation keeps source markdown files in place instead of copying them. A main `presentation-manifest.json` records the source workspace or source chain, page structure, and module ordering; `generated-summaries/*.json` stores agent-derived display summaries; and a `source-index.json` records source files that can be linked or previewed. The first screen is a Research State Overview, followed by Source Trace, Main Artifacts, Decisions & Evidence, Risks & Gaps, Next Actions, and Source Files.
+
+The `paper-reading-workspace-presentation` skill owns the shared React/Vite template and copies it into each generated presentation before writing the generated metadata. This keeps calls to the skill concrete: the user receives a runnable local presentation app, not only instructions for building one.

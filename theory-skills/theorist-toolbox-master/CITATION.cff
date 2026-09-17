@@ -1,0 +1,23 @@
+cff-version: 1.2.0
+message: "If you use this toolbox, please cite the paper below."
+title: "Theorist Toolbox (skills)"
+authors:
+  - family-names: Koren
+    given-names: Moran
+    affiliation: "Ben-Gurion University of the Negev"
+    email: korenmor@bgu.ac.il
+repository-code: "https://github.com/morankor/theorist-toolbox"
+license: MIT
+preferred-citation:
+  type: article
+  title: "Theorist Toolbox: Tools for Agent-Based LLM-Assisted Economic Theory Research"
+  authors:
+    - family-names: Koren
+      given-names: Moran
+      affiliation: "Ben-Gurion University of the Negev"
+  year: 2026
+  url: "https://arxiv.org/abs/2606.22337"
+  identifiers:
+    - type: other
+      value: "arXiv:2606.22337"
+      description: "arXiv preprint"

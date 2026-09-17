@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="thu-digitizer 图表提取能力画廊：按图表类型查看原图、提取覆盖、复现、交互式图和数据表。"
+    />
+    <meta name="theme-color" content="#ffffff" />
+    <title>图表提取能力 · thu-digitizer</title>
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23006d67'/%3E%3Cpath d='M7 22V10m0 12h18M10 19l4-5 4 3 6-8' fill='none' stroke='white' stroke-width='2'/%3E%3C/svg%3E" />
+    <link rel="stylesheet" href="home.css?v=20260723-transmission01" />
+    <script src="home.js?v=20260723-transmission01" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#types">跳到图表类型</a>
+
+    <header class="topbar">
+      <a class="wordmark" href="index.html" aria-label="thu-digitizer 画廊">
+        <span>thu-digitizer</span><b>画廊</b>
+      </a>
+      <nav aria-label="主导航">
+        <a href="#types">提取类型</a>
+        <a href="ATTRIBUTION.md">来源</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="catalog" id="types" aria-labelledby="types-title">
+        <div class="catalog-tools">
+          <h2 id="types-title">图形类型</h2>
+          <div class="filter-row" role="group" aria-label="筛选图形类型">
+            <button class="filter-button is-active" type="button" data-filter="all">全部</button>
+            <button class="filter-button" type="button" data-filter="scatter">散点图</button>
+            <button class="filter-button" type="button" data-filter="bar">柱与区间</button>
+            <button class="filter-button" type="button" data-filter="distribution">分布</button>
+            <button class="filter-button" type="button" data-filter="matrix">矩阵</button>
+          </div>
+          <span class="catalog-count" id="catalog-count">19 个案例</span>
+        </div>
+
+        <div id="type-grid" class="type-grid" aria-live="polite">
+          <p class="loading">正在装入提取案例…</p>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <span>thu-digitizer 画廊</span>
+      <p>原图 · 提取覆盖 · 复现 · 交互式图 · CSV</p>
+    </footer>
+
+    <dialog id="case-dialog" class="case-dialog" aria-labelledby="detail-title">
+      <article class="detail-shell">
+        <header class="detail-header">
+          <div>
+            <p id="detail-kicker" class="detail-kicker"></p>
+            <h2 id="detail-title"></h2>
+          </div>
+          <button class="close-button" type="button" aria-label="关闭详情">关闭 ×</button>
+        </header>
+
+        <div class="detail-content" aria-label="案例详情内容">
+          <section class="comparison-panel" aria-label="原图与提取复现对比">
+            <figure class="comparison-figure">
+              <div class="comparison-label">
+                <span>原图</span>
+                <div class="view-tabs" role="tablist" aria-label="原图视图">
+                  <button class="view-tab is-active" type="button" role="tab" data-view="original">原图</button>
+                  <button class="view-tab" type="button" role="tab" data-view="overlay">覆盖</button>
+                </div>
+              </div>
+              <div class="comparison-stage">
+                <img id="detail-original-image" src="" alt="" />
+              </div>
+              <a id="original-source" class="original-source" href="" target="_blank" rel="noreferrer" hidden></a>
+            </figure>
+            <figure class="comparison-figure">
+              <figcaption class="comparison-label">
+                <span id="interactive-title">复现</span>
+                <div id="recreation-tabs" class="view-tabs" role="tablist" aria-label="复现与交互式图">
+                  <button class="recreation-tab is-active" type="button" role="tab" data-recreation-view="recreated">复现</button>
+                  <button class="recreation-tab" type="button" role="tab" data-recreation-view="interactive">交互式图</button>
+                </div>
+                <span id="style-fidelity" class="fidelity-badge" hidden></span>
+              </figcaption>
+              <div class="comparison-stage">
+                <img id="detail-recreated-image" src="" alt="" />
+                <div id="interactive-chart" class="interactive-chart comparison-interactive" aria-live="polite" hidden>
+                  <svg id="data-chart" viewBox="0 0 920 500" role="img"></svg>
+                  <div id="chart-tooltip" class="chart-tooltip" role="status"></div>
+                </div>
+              </div>
+              <output id="interactive-readout" class="interactive-readout" aria-live="polite">\u79fb\u52a8\u5230\u6570\u636e\u6807\u8bb0\uff0c\u67e5\u770b\u7cbe\u786e\u63d0\u53d6\u503c</output>
+              <p id="interactive-note" hidden></p>
+              <span class="comparison-source-spacer" aria-hidden="true"></span>
+            </figure>
+          </section>
+
+          <aside class="case-summary">
+            <div class="summary-status" id="detail-status"></div>
+            <p id="detail-description" class="summary-description"></p>
+            <div id="metric-grid" class="metric-grid" aria-label="核验结果"></div>
+            <p id="metric-note" class="metric-note"></p>
+            <div id="detail-links" class="detail-links"></div>
+          </aside>
+
+          <section class="data-panel" aria-labelledby="data-title">
+            <div class="panel-heading">
+              <div>
+                <p class="panel-index">01 / DATA</p>
+                <h3 id="data-title">提取数据</h3>
+              </div>
+              <div class="table-actions">
+                <span id="row-count">—</span>
+                <a id="csv-download" class="action-button" href="" download>下载 CSV ↓</a>
+              </div>
+            </div>
+            <p class="drag-hint">拖动表格查看全部行列，也可以使用滚动条。</p>
+            <div id="data-table-viewport" class="data-table-viewport" tabindex="0" aria-label="可滚动提取数据表">
+              <table id="data-table"></table>
+            </div>
+          </section>
+
+        </div>
+      </article>
+    </dialog>
+
+    <noscript>此画廊需要 JavaScript 来载入数据表与交互图。</noscript>
+  </body>
+</html>

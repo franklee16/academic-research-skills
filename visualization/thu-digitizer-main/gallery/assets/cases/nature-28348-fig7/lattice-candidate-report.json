@@ -1,0 +1,1143 @@
+{
+  "schema_version": 1,
+  "extractor": "candidate_lattice_composite",
+  "algorithm_version": "lattice-composite-original-pixel-v2",
+  "deterministic_run_id": "2302f58fbcd3eb24",
+  "status": "candidate",
+  "geometry_output_authorized": true,
+  "numeric_output_authorized": true,
+  "reason": "all configured candidate gates passed",
+  "input": {
+    "file": "F:\\AI\\thu-digitizer\\gallery\\assets\\cases\\nature-28348-fig7\\original.png",
+    "sha256": "3cfc049bd37f8f7a00bec3c802d973e11cc1d5907aeee1dafb83be159bfb7a75",
+    "width": 1000,
+    "height": 768,
+    "coordinate_space": "original_raster_pixels",
+    "resampling_applied": false
+  },
+  "coordinate_provenance": {
+    "measurement_space": "original_raster_pixels",
+    "resampling_applied": false,
+    "x_origin": "left",
+    "y_origin": "top"
+  },
+  "configuration": {
+    "schema_version": 1,
+    "source": {
+      "sha256": "3cfc049bd37f8f7a00bec3c802d973e11cc1d5907aeee1dafb83be159bfb7a75",
+      "width": 1000,
+      "height": 768,
+      "coordinate_space": "original_raster_pixels",
+      "resampling_applied": false
+    },
+    "layers": {
+      "column_bars": {
+        "role": "membership_guides",
+        "roi": [
+          275,
+          350,
+          995,
+          380
+        ],
+        "color": [
+          217,
+          95,
+          2
+        ],
+        "color_verification": "verified",
+        "tolerance": 0,
+        "width_range": [
+          20,
+          30
+        ]
+      },
+      "row_bars": {
+        "role": "row_bar",
+        "roi": [
+          60,
+          327,
+          276,
+          638
+        ],
+        "colors": [
+          [
+            190,
+            99,
+            29
+          ],
+          [
+            101,
+            149,
+            47
+          ],
+          [
+            207,
+            65,
+            137
+          ],
+          [
+            124,
+            120,
+            171
+          ],
+          [
+            29,
+            170,
+            175
+          ]
+        ],
+        "color_verification": "verified",
+        "tolerance": 0,
+        "height_range": [
+          35,
+          55
+        ],
+        "min_area": 1000,
+        "min_row_pixels": 30
+      },
+      "membership": {
+        "colors": [
+          [
+            217,
+            95,
+            2
+          ],
+          [
+            102,
+            166,
+            30
+          ],
+          [
+            231,
+            41,
+            138
+          ],
+          [
+            117,
+            112,
+            179
+          ],
+          [
+            4,
+            193,
+            200
+          ]
+        ],
+        "color_verification": "verified",
+        "tolerance": 0,
+        "patch_radius": 13,
+        "active_fraction_min": 0.3,
+        "inactive_fraction_max": 0.02
+      }
+    },
+    "semantics": {
+      "verification": "verified",
+      "column_ids": [
+        "I01",
+        "I02",
+        "I03",
+        "I04",
+        "I05",
+        "I06",
+        "I07",
+        "I08",
+        "I09",
+        "I10",
+        "I11",
+        "I12"
+      ],
+      "column_values": [
+        3219,
+        1929,
+        1347,
+        878,
+        818,
+        249,
+        206,
+        121,
+        14,
+        3,
+        1,
+        1
+      ],
+      "row_ids": [
+        "Direct Match",
+        "Non-Synon",
+        "Position-Specific",
+        "Diagnosis Match",
+        "AMP Tier I"
+      ],
+      "row_types": []
+    },
+    "validation": {
+      "max_spacing_cv": 0.02,
+      "row_value_axis": [],
+      "row_bar_edge_offset_px": 0,
+      "row_total_max_abs_error": null,
+      "top_value_max_abs_error": null
+    }
+  },
+  "geometry": {
+    "column_bar_roi": [
+      275,
+      350,
+      995,
+      380
+    ],
+    "column_guide_role": "membership_guides",
+    "row_bar_roi": [
+      60,
+      327,
+      276,
+      638
+    ],
+    "row_guide_role": "row_bar",
+    "common_column_baseline_row": 372,
+    "column_count": 12,
+    "row_count": 5,
+    "cell_count": 60,
+    "active_cell_count": 40,
+    "inactive_cell_count": 20,
+    "ambiguous_cell_count": 0,
+    "column_spacing": {
+      "median": 60.0,
+      "coefficient_of_variation": 0.003996603188919322,
+      "max_relative_deviation": 0.008333333333333333
+    },
+    "row_spacing": {
+      "median": 58.75,
+      "coefficient_of_variation": 0.0070716946489454155,
+      "max_relative_deviation": 0.01276595744680851
+    }
+  },
+  "column_bars": [
+    {
+      "pixel_x": 306.0,
+      "left_px": 296,
+      "right_px": 317,
+      "top_px": 354,
+      "bottom_px": 373,
+      "width_px": 21,
+      "max_vertical_gap_px": 0,
+      "guide_role": "membership_guides",
+      "column_index": 1,
+      "column_id": "I01",
+      "value": 3219,
+      "member_count": 5,
+      "members": [
+        "Direct Match",
+        "Non-Synon",
+        "Position-Specific",
+        "Diagnosis Match",
+        "AMP Tier I"
+      ]
+    },
+    {
+      "pixel_x": 366.0,
+      "left_px": 356,
+      "right_px": 377,
+      "top_px": 354,
+      "bottom_px": 373,
+      "width_px": 21,
+      "max_vertical_gap_px": 0,
+      "guide_role": "membership_guides",
+      "column_index": 2,
+      "column_id": "I02",
+      "value": 1929,
+      "member_count": 4,
+      "members": [
+        "Direct Match",
+        "Non-Synon",
+        "Position-Specific",
+        "Diagnosis Match"
+      ]
+    },
+    {
+      "pixel_x": 426.0,
+      "left_px": 416,
+      "right_px": 437,
+      "top_px": 354,
+      "bottom_px": 373,
+      "width_px": 21,
+      "max_vertical_gap_px": 0,
+      "guide_role": "membership_guides",
+      "column_index": 3,
+      "column_id": "I03",
+      "value": 1347,
+      "member_count": 2,
+      "members": [
+        "Direct Match",
+        "Non-Synon"
+      ]
+    },
+    {
+      "pixel_x": 486.5,
+      "left_px": 477,
+      "right_px": 497,
+      "top_px": 353,
+      "bottom_px": 373,
+      "width_px": 20,
+      "max_vertical_gap_px": 0,
+      "guide_role": "membership_guides",
+      "column_index": 4,
+      "column_id": "I04",
+      "value": 878,
+      "member_count": 3,
+      "members": [
+        "Direct Match",
+        "Non-Synon",
+        "Position-Specific"
+      ]
+    },
+    {
+      "pixel_x": 547.0,
+      "left_px": 537,
+      "right_px": 558,
+      "top_px": 354,
+      "bottom_px": 373,
+      "width_px": 21,
+      "max_vertical_gap_px": 0,
+      "guide_role": "membership_guides",
+      "column_index": 5,
+      "column_id": "I05",
+      "value": 818,
+      "member_count": 3,
+      "members": [
+        "Direct Match",
+        "Non-Synon",
+        "Diagnosis Match"
+      ]
+    },
+    {
+      "pixel_x": 607.0,
+      "left_px": 597,
+      "right_px": 618,
+      "top_px": 354,
+      "bottom_px": 373,
+      "width_px": 21,
+      "max_vertical_gap_px": 0,
+      "guide_role": "membership_guides",
+      "column_index": 6,
+      "column_id": "I06",
+      "value": 249,
+      "member_count": 4,
+      "members": [
+        "Direct Match",
+        "Non-Synon",
+        "Diagnosis Match",
+        "AMP Tier I"
+      ]
+    },
+    {
+      "pixel_x": 667.0,
+      "left_px": 657,
+      "right_px": 678,
+      "top_px": 354,
+      "bottom_px": 373,
+      "width_px": 21,
+      "max_vertical_gap_px": 0,
+      "guide_role": "membership_guides",
+      "column_index": 7,
+      "column_id": "I07",
+      "value": 206,
+      "member_count": 4,
+      "members": [
+        "Direct Match",
+        "Non-Synon",
+        "Position-Specific",
+        "AMP Tier I"
+      ]
+    },
+    {
+      "pixel_x": 727.0,
+      "left_px": 717,
+      "right_px": 738,
+      "top_px": 354,
+      "bottom_px": 373,
+      "width_px": 21,
+      "max_vertical_gap_px": 0,
+      "guide_role": "membership_guides",
+      "column_index": 8,
+      "column_id": "I08",
+      "value": 121,
+      "member_count": 3,
+      "members": [
+        "Direct Match",
+        "Non-Synon",
+        "AMP Tier I"
+      ]
+    },
+    {
+      "pixel_x": 787.0,
+      "left_px": 777,
+      "right_px": 798,
+      "top_px": 354,
+      "bottom_px": 373,
+      "width_px": 21,
+      "max_vertical_gap_px": 0,
+      "guide_role": "membership_guides",
+      "column_index": 9,
+      "column_id": "I09",
+      "value": 14,
+      "member_count": 2,
+      "members": [
+        "Direct Match",
+        "Position-Specific"
+      ]
+    },
+    {
+      "pixel_x": 847.5,
+      "left_px": 838,
+      "right_px": 858,
+      "top_px": 353,
+      "bottom_px": 373,
+      "width_px": 20,
+      "max_vertical_gap_px": 0,
+      "guide_role": "membership_guides",
+      "column_index": 10,
+      "column_id": "I10",
+      "value": 3,
+      "member_count": 3,
+      "members": [
+        "Direct Match",
+        "Position-Specific",
+        "Diagnosis Match"
+      ]
+    },
+    {
+      "pixel_x": 908.0,
+      "left_px": 898,
+      "right_px": 919,
+      "top_px": 354,
+      "bottom_px": 373,
+      "width_px": 21,
+      "max_vertical_gap_px": 0,
+      "guide_role": "membership_guides",
+      "column_index": 11,
+      "column_id": "I11",
+      "value": 1,
+      "member_count": 3,
+      "members": [
+        "Direct Match",
+        "Position-Specific",
+        "AMP Tier I"
+      ]
+    },
+    {
+      "pixel_x": 968.0,
+      "left_px": 958,
+      "right_px": 979,
+      "top_px": 354,
+      "bottom_px": 373,
+      "width_px": 21,
+      "max_vertical_gap_px": 0,
+      "guide_role": "membership_guides",
+      "column_index": 12,
+      "column_id": "I12",
+      "value": 1,
+      "member_count": 4,
+      "members": [
+        "Direct Match",
+        "Position-Specific",
+        "Diagnosis Match",
+        "AMP Tier I"
+      ]
+    }
+  ],
+  "row_bars": [
+    {
+      "pixel_y": 364.5,
+      "top_px": 343,
+      "bottom_px": 387,
+      "left_px": 66,
+      "right_px": 275,
+      "height_px": 44,
+      "area_px": 9196,
+      "guide_role": "row_bar",
+      "row_index": 1,
+      "row_id": "Direct Match",
+      "row_type": null,
+      "derived_total": 8786.0
+    },
+    {
+      "pixel_y": 423.5,
+      "top_px": 402,
+      "bottom_px": 446,
+      "left_px": 66,
+      "right_px": 275,
+      "height_px": 44,
+      "area_px": 9196,
+      "guide_role": "row_bar",
+      "row_index": 2,
+      "row_id": "Non-Synon",
+      "row_type": null,
+      "derived_total": 8767.0
+    },
+    {
+      "pixel_y": 481.5,
+      "top_px": 460,
+      "bottom_px": 504,
+      "left_px": 127,
+      "right_px": 275,
+      "height_px": 44,
+      "area_px": 6512,
+      "guide_role": "row_bar",
+      "row_index": 3,
+      "row_id": "Position-Specific",
+      "row_type": null,
+      "derived_total": 6251.0
+    },
+    {
+      "pixel_y": 540.5,
+      "top_px": 519,
+      "bottom_px": 563,
+      "left_px": 128,
+      "right_px": 275,
+      "height_px": 44,
+      "area_px": 6468,
+      "guide_role": "row_bar",
+      "row_index": 4,
+      "row_id": "Diagnosis Match",
+      "row_type": null,
+      "derived_total": 6219.0
+    },
+    {
+      "pixel_y": 599.0,
+      "top_px": 577,
+      "bottom_px": 622,
+      "left_px": 186,
+      "right_px": 275,
+      "height_px": 45,
+      "area_px": 4005,
+      "guide_role": "row_bar",
+      "row_index": 5,
+      "row_id": "AMP Tier I",
+      "row_type": null,
+      "derived_total": 3797.0
+    }
+  ],
+  "cells": [
+    {
+      "column_index": 1,
+      "column_id": "I01",
+      "row_index": 1,
+      "row_id": "Direct Match",
+      "pixel_x": 306.0,
+      "pixel_y": 364.5,
+      "status": "active",
+      "foreground_fraction": 0.7215363511659808
+    },
+    {
+      "column_index": 1,
+      "column_id": "I01",
+      "row_index": 2,
+      "row_id": "Non-Synon",
+      "pixel_x": 306.0,
+      "pixel_y": 423.5,
+      "status": "active",
+      "foreground_fraction": 0.7174211248285323
+    },
+    {
+      "column_index": 1,
+      "column_id": "I01",
+      "row_index": 3,
+      "row_id": "Position-Specific",
+      "pixel_x": 306.0,
+      "pixel_y": 481.5,
+      "status": "active",
+      "foreground_fraction": 0.7215363511659808
+    },
+    {
+      "column_index": 1,
+      "column_id": "I01",
+      "row_index": 4,
+      "row_id": "Diagnosis Match",
+      "pixel_x": 306.0,
+      "pixel_y": 540.5,
+      "status": "active",
+      "foreground_fraction": 0.7215363511659808
+    },
+    {
+      "column_index": 1,
+      "column_id": "I01",
+      "row_index": 5,
+      "row_id": "AMP Tier I",
+      "pixel_x": 306.0,
+      "pixel_y": 599.0,
+      "status": "active",
+      "foreground_fraction": 0.7174211248285323
+    },
+    {
+      "column_index": 2,
+      "column_id": "I02",
+      "row_index": 1,
+      "row_id": "Direct Match",
+      "pixel_x": 366.0,
+      "pixel_y": 364.5,
+      "status": "active",
+      "foreground_fraction": 0.7187928669410151
+    },
+    {
+      "column_index": 2,
+      "column_id": "I02",
+      "row_index": 2,
+      "row_id": "Non-Synon",
+      "pixel_x": 366.0,
+      "pixel_y": 423.5,
+      "status": "active",
+      "foreground_fraction": 0.7215363511659808
+    },
+    {
+      "column_index": 2,
+      "column_id": "I02",
+      "row_index": 3,
+      "row_id": "Position-Specific",
+      "pixel_x": 366.0,
+      "pixel_y": 481.5,
+      "status": "active",
+      "foreground_fraction": 0.7242798353909465
+    },
+    {
+      "column_index": 2,
+      "column_id": "I02",
+      "row_index": 4,
+      "row_id": "Diagnosis Match",
+      "pixel_x": 366.0,
+      "pixel_y": 540.5,
+      "status": "active",
+      "foreground_fraction": 0.7187928669410151
+    },
+    {
+      "column_index": 2,
+      "column_id": "I02",
+      "row_index": 5,
+      "row_id": "AMP Tier I",
+      "pixel_x": 366.0,
+      "pixel_y": 599.0,
+      "status": "inactive",
+      "foreground_fraction": 0.0
+    },
+    {
+      "column_index": 3,
+      "column_id": "I03",
+      "row_index": 1,
+      "row_id": "Direct Match",
+      "pixel_x": 426.0,
+      "pixel_y": 364.5,
+      "status": "active",
+      "foreground_fraction": 0.7270233196159122
+    },
+    {
+      "column_index": 3,
+      "column_id": "I03",
+      "row_index": 2,
+      "row_id": "Non-Synon",
+      "pixel_x": 426.0,
+      "pixel_y": 423.5,
+      "status": "active",
+      "foreground_fraction": 0.7187928669410151
+    },
+    {
+      "column_index": 3,
+      "column_id": "I03",
+      "row_index": 3,
+      "row_id": "Position-Specific",
+      "pixel_x": 426.0,
+      "pixel_y": 481.5,
+      "status": "inactive",
+      "foreground_fraction": 0.0
+    },
+    {
+      "column_index": 3,
+      "column_id": "I03",
+      "row_index": 4,
+      "row_id": "Diagnosis Match",
+      "pixel_x": 426.0,
+      "pixel_y": 540.5,
+      "status": "inactive",
+      "foreground_fraction": 0.0
+    },
+    {
+      "column_index": 3,
+      "column_id": "I03",
+      "row_index": 5,
+      "row_id": "AMP Tier I",
+      "pixel_x": 426.0,
+      "pixel_y": 599.0,
+      "status": "inactive",
+      "foreground_fraction": 0.0
+    },
+    {
+      "column_index": 4,
+      "column_id": "I04",
+      "row_index": 1,
+      "row_id": "Direct Match",
+      "pixel_x": 486.5,
+      "pixel_y": 364.5,
+      "status": "active",
+      "foreground_fraction": 0.7283950617283951
+    },
+    {
+      "column_index": 4,
+      "column_id": "I04",
+      "row_index": 2,
+      "row_id": "Non-Synon",
+      "pixel_x": 486.5,
+      "pixel_y": 423.5,
+      "status": "active",
+      "foreground_fraction": 0.7229080932784636
+    },
+    {
+      "column_index": 4,
+      "column_id": "I04",
+      "row_index": 3,
+      "row_id": "Position-Specific",
+      "pixel_x": 486.5,
+      "pixel_y": 481.5,
+      "status": "active",
+      "foreground_fraction": 0.7187928669410151
+    },
+    {
+      "column_index": 4,
+      "column_id": "I04",
+      "row_index": 4,
+      "row_id": "Diagnosis Match",
+      "pixel_x": 486.5,
+      "pixel_y": 540.5,
+      "status": "inactive",
+      "foreground_fraction": 0.0
+    },
+    {
+      "column_index": 4,
+      "column_id": "I04",
+      "row_index": 5,
+      "row_id": "AMP Tier I",
+      "pixel_x": 486.5,
+      "pixel_y": 599.0,
+      "status": "inactive",
+      "foreground_fraction": 0.0
+    },
+    {
+      "column_index": 5,
+      "column_id": "I05",
+      "row_index": 1,
+      "row_id": "Direct Match",
+      "pixel_x": 547.0,
+      "pixel_y": 364.5,
+      "status": "active",
+      "foreground_fraction": 0.7242798353909465
+    },
+    {
+      "column_index": 5,
+      "column_id": "I05",
+      "row_index": 2,
+      "row_id": "Non-Synon",
+      "pixel_x": 547.0,
+      "pixel_y": 423.5,
+      "status": "active",
+      "foreground_fraction": 0.7187928669410151
+    },
+    {
+      "column_index": 5,
+      "column_id": "I05",
+      "row_index": 3,
+      "row_id": "Position-Specific",
+      "pixel_x": 547.0,
+      "pixel_y": 481.5,
+      "status": "inactive",
+      "foreground_fraction": 0.0
+    },
+    {
+      "column_index": 5,
+      "column_id": "I05",
+      "row_index": 4,
+      "row_id": "Diagnosis Match",
+      "pixel_x": 547.0,
+      "pixel_y": 540.5,
+      "status": "active",
+      "foreground_fraction": 0.7242798353909465
+    },
+    {
+      "column_index": 5,
+      "column_id": "I05",
+      "row_index": 5,
+      "row_id": "AMP Tier I",
+      "pixel_x": 547.0,
+      "pixel_y": 599.0,
+      "status": "inactive",
+      "foreground_fraction": 0.0
+    },
+    {
+      "column_index": 6,
+      "column_id": "I06",
+      "row_index": 1,
+      "row_id": "Direct Match",
+      "pixel_x": 607.0,
+      "pixel_y": 364.5,
+      "status": "active",
+      "foreground_fraction": 0.720164609053498
+    },
+    {
+      "column_index": 6,
+      "column_id": "I06",
+      "row_index": 2,
+      "row_id": "Non-Synon",
+      "pixel_x": 607.0,
+      "pixel_y": 423.5,
+      "status": "active",
+      "foreground_fraction": 0.7215363511659808
+    },
+    {
+      "column_index": 6,
+      "column_id": "I06",
+      "row_index": 3,
+      "row_id": "Position-Specific",
+      "pixel_x": 607.0,
+      "pixel_y": 481.5,
+      "status": "inactive",
+      "foreground_fraction": 0.0
+    },
+    {
+      "column_index": 6,
+      "column_id": "I06",
+      "row_index": 4,
+      "row_id": "Diagnosis Match",
+      "pixel_x": 607.0,
+      "pixel_y": 540.5,
+      "status": "active",
+      "foreground_fraction": 0.720164609053498
+    },
+    {
+      "column_index": 6,
+      "column_id": "I06",
+      "row_index": 5,
+      "row_id": "AMP Tier I",
+      "pixel_x": 607.0,
+      "pixel_y": 599.0,
+      "status": "active",
+      "foreground_fraction": 0.7215363511659808
+    },
+    {
+      "column_index": 7,
+      "column_id": "I07",
+      "row_index": 1,
+      "row_id": "Direct Match",
+      "pixel_x": 667.0,
+      "pixel_y": 364.5,
+      "status": "active",
+      "foreground_fraction": 0.7215363511659808
+    },
+    {
+      "column_index": 7,
+      "column_id": "I07",
+      "row_index": 2,
+      "row_id": "Non-Synon",
+      "pixel_x": 667.0,
+      "pixel_y": 423.5,
+      "status": "active",
+      "foreground_fraction": 0.720164609053498
+    },
+    {
+      "column_index": 7,
+      "column_id": "I07",
+      "row_index": 3,
+      "row_id": "Position-Specific",
+      "pixel_x": 667.0,
+      "pixel_y": 481.5,
+      "status": "active",
+      "foreground_fraction": 0.7215363511659808
+    },
+    {
+      "column_index": 7,
+      "column_id": "I07",
+      "row_index": 4,
+      "row_id": "Diagnosis Match",
+      "pixel_x": 667.0,
+      "pixel_y": 540.5,
+      "status": "inactive",
+      "foreground_fraction": 0.0
+    },
+    {
+      "column_index": 7,
+      "column_id": "I07",
+      "row_index": 5,
+      "row_id": "AMP Tier I",
+      "pixel_x": 667.0,
+      "pixel_y": 599.0,
+      "status": "active",
+      "foreground_fraction": 0.720164609053498
+    },
+    {
+      "column_index": 8,
+      "column_id": "I08",
+      "row_index": 1,
+      "row_id": "Direct Match",
+      "pixel_x": 727.0,
+      "pixel_y": 364.5,
+      "status": "active",
+      "foreground_fraction": 0.7187928669410151
+    },
+    {
+      "column_index": 8,
+      "column_id": "I08",
+      "row_index": 2,
+      "row_id": "Non-Synon",
+      "pixel_x": 727.0,
+      "pixel_y": 423.5,
+      "status": "active",
+      "foreground_fraction": 0.7215363511659808
+    },
+    {
+      "column_index": 8,
+      "column_id": "I08",
+      "row_index": 3,
+      "row_id": "Position-Specific",
+      "pixel_x": 727.0,
+      "pixel_y": 481.5,
+      "status": "inactive",
+      "foreground_fraction": 0.0
+    },
+    {
+      "column_index": 8,
+      "column_id": "I08",
+      "row_index": 4,
+      "row_id": "Diagnosis Match",
+      "pixel_x": 727.0,
+      "pixel_y": 540.5,
+      "status": "inactive",
+      "foreground_fraction": 0.0
+    },
+    {
+      "column_index": 8,
+      "column_id": "I08",
+      "row_index": 5,
+      "row_id": "AMP Tier I",
+      "pixel_x": 727.0,
+      "pixel_y": 599.0,
+      "status": "active",
+      "foreground_fraction": 0.7215363511659808
+    },
+    {
+      "column_index": 9,
+      "column_id": "I09",
+      "row_index": 1,
+      "row_id": "Direct Match",
+      "pixel_x": 787.0,
+      "pixel_y": 364.5,
+      "status": "active",
+      "foreground_fraction": 0.7242798353909465
+    },
+    {
+      "column_index": 9,
+      "column_id": "I09",
+      "row_index": 2,
+      "row_id": "Non-Synon",
+      "pixel_x": 787.0,
+      "pixel_y": 423.5,
+      "status": "inactive",
+      "foreground_fraction": 0.0
+    },
+    {
+      "column_index": 9,
+      "column_id": "I09",
+      "row_index": 3,
+      "row_id": "Position-Specific",
+      "pixel_x": 787.0,
+      "pixel_y": 481.5,
+      "status": "active",
+      "foreground_fraction": 0.7215363511659808
+    },
+    {
+      "column_index": 9,
+      "column_id": "I09",
+      "row_index": 4,
+      "row_id": "Diagnosis Match",
+      "pixel_x": 787.0,
+      "pixel_y": 540.5,
+      "status": "inactive",
+      "foreground_fraction": 0.0
+    },
+    {
+      "column_index": 9,
+      "column_id": "I09",
+      "row_index": 5,
+      "row_id": "AMP Tier I",
+      "pixel_x": 787.0,
+      "pixel_y": 599.0,
+      "status": "inactive",
+      "foreground_fraction": 0.0
+    },
+    {
+      "column_index": 10,
+      "column_id": "I10",
+      "row_index": 1,
+      "row_id": "Direct Match",
+      "pixel_x": 847.5,
+      "pixel_y": 364.5,
+      "status": "active",
+      "foreground_fraction": 0.7283950617283951
+    },
+    {
+      "column_index": 10,
+      "column_id": "I10",
+      "row_index": 2,
+      "row_id": "Non-Synon",
+      "pixel_x": 847.5,
+      "pixel_y": 423.5,
+      "status": "inactive",
+      "foreground_fraction": 0.0
+    },
+    {
+      "column_index": 10,
+      "column_id": "I10",
+      "row_index": 3,
+      "row_id": "Position-Specific",
+      "pixel_x": 847.5,
+      "pixel_y": 481.5,
+      "status": "active",
+      "foreground_fraction": 0.7187928669410151
+    },
+    {
+      "column_index": 10,
+      "column_id": "I10",
+      "row_index": 4,
+      "row_id": "Diagnosis Match",
+      "pixel_x": 847.5,
+      "pixel_y": 540.5,
+      "status": "active",
+      "foreground_fraction": 0.7270233196159122
+    },
+    {
+      "column_index": 10,
+      "column_id": "I10",
+      "row_index": 5,
+      "row_id": "AMP Tier I",
+      "pixel_x": 847.5,
+      "pixel_y": 599.0,
+      "status": "inactive",
+      "foreground_fraction": 0.0
+    },
+    {
+      "column_index": 11,
+      "column_id": "I11",
+      "row_index": 1,
+      "row_id": "Direct Match",
+      "pixel_x": 908.0,
+      "pixel_y": 364.5,
+      "status": "active",
+      "foreground_fraction": 0.7256515775034293
+    },
+    {
+      "column_index": 11,
+      "column_id": "I11",
+      "row_index": 2,
+      "row_id": "Non-Synon",
+      "pixel_x": 908.0,
+      "pixel_y": 423.5,
+      "status": "inactive",
+      "foreground_fraction": 0.0
+    },
+    {
+      "column_index": 11,
+      "column_id": "I11",
+      "row_index": 3,
+      "row_id": "Position-Specific",
+      "pixel_x": 908.0,
+      "pixel_y": 481.5,
+      "status": "active",
+      "foreground_fraction": 0.720164609053498
+    },
+    {
+      "column_index": 11,
+      "column_id": "I11",
+      "row_index": 4,
+      "row_id": "Diagnosis Match",
+      "pixel_x": 908.0,
+      "pixel_y": 540.5,
+      "status": "inactive",
+      "foreground_fraction": 0.0
+    },
+    {
+      "column_index": 11,
+      "column_id": "I11",
+      "row_index": 5,
+      "row_id": "AMP Tier I",
+      "pixel_x": 908.0,
+      "pixel_y": 599.0,
+      "status": "active",
+      "foreground_fraction": 0.7187928669410151
+    },
+    {
+      "column_index": 12,
+      "column_id": "I12",
+      "row_index": 1,
+      "row_id": "Direct Match",
+      "pixel_x": 968.0,
+      "pixel_y": 364.5,
+      "status": "active",
+      "foreground_fraction": 0.7174211248285323
+    },
+    {
+      "column_index": 12,
+      "column_id": "I12",
+      "row_index": 2,
+      "row_id": "Non-Synon",
+      "pixel_x": 968.0,
+      "pixel_y": 423.5,
+      "status": "inactive",
+      "foreground_fraction": 0.0
+    },
+    {
+      "column_index": 12,
+      "column_id": "I12",
+      "row_index": 3,
+      "row_id": "Position-Specific",
+      "pixel_x": 968.0,
+      "pixel_y": 481.5,
+      "status": "active",
+      "foreground_fraction": 0.7242798353909465
+    },
+    {
+      "column_index": 12,
+      "column_id": "I12",
+      "row_index": 4,
+      "row_id": "Diagnosis Match",
+      "pixel_x": 968.0,
+      "pixel_y": 540.5,
+      "status": "active",
+      "foreground_fraction": 0.7187928669410151
+    },
+    {
+      "column_index": 12,
+      "column_id": "I12",
+      "row_index": 5,
+      "row_id": "AMP Tier I",
+      "pixel_x": 968.0,
+      "pixel_y": 599.0,
+      "status": "active",
+      "foreground_fraction": 0.720164609053498
+    }
+  ],
+  "validation": {
+    "spacing_status": "passed",
+    "top_bars_vs_values": {
+      "status": "not_applicable_membership_derived_column_guides",
+      "reason": "column centres come from repeated membership glyphs, not value-bar edges"
+    },
+    "row_totals_vs_bars": {
+      "status": "not_applicable",
+      "rows": []
+    }
+  },
+  "required_review": [
+    "Open the overlay at original resolution and verify every bar box and active-cell ring.",
+    "Review every ambiguous cell; do not convert it to active or inactive from an expected count.",
+    "Verify semantic labels and printed values independently of detected geometry."
+  ],
+  "limitations": [
+    "This candidate supports repeated aligned column bars or membership-derived column guides, row bars or membership-derived row guides, and compact filled membership nodes.",
+    "A layer may combine multiple verified fill colours; colour lists do not supply semantic row identities.",
+    "It does not recover hidden records, occluded nodes, connector semantics, or unverified text.",
+    "Semantic labels and printed values are external verified inputs and never tune the geometry detector."
+  ]
+}

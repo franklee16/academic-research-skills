@@ -1,0 +1,258 @@
+<!doctype html>
+<html lang="zh-Hans">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>把回答写在明处 — Lieflat 报告模板 · 反色高亮</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+SC:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+  /* ═══════════════════════════════════════════════════════════════
+     LIEFLAT 报告模板 05 · 影响力故事（中文版）
+     场景：叙事型影响力报告（开源项目年度回顾、公益/社区项目汇报、
+           「一个故事 + 三组证据」式对外沟通页）
+     排版参考："Hope for Girls and Women in Tanzania"（标题关键词
+               反色高亮块、正文导语开场、大数 + 长条带、高峰叙事图、
+               结尾行动号召）—— 只学排版和字体。
+     中西混排：数字走 Inter，汉字走 Noto Sans SC。中文标题不用负字距。
+     色板正本 = mono-tokens.js 的 Mono 灰阶。反色高亮块 = 炭黑 INK
+     上纸色字，是 Mono 两极的合法用法，没有引入新色。
+     图表正本 = lieflat gallery：
+       图A  百 tick 分段条带 · 结构 = lupi-gallery "ballot tally"
+            的单行 100 tick 队列 + basics-gallery "tick donut" 的
+            灰阶 ladder 分段语法（同数据形状的直排版本）
+       图B  L3 barcode lollipop · lupi-gallery.html
+     ═══════════════════════════════════════════════════════════════ */
+  :root{
+    --bg:#F0EFEB; --ink:#1C1C1A; --muted:#8F8E88; --faint:#C6C5BF; --grid:#DEDDD6;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{background:var(--bg);color:var(--ink);font-family:'Inter','Noto Sans SC',sans-serif;
+    -webkit-font-smoothing:antialiased;font-variant-numeric:tabular-nums lining-nums;
+    display:flex;justify-content:center;padding:64px 24px}
+  .sheet{width:760px;max-width:760px}
+
+  /* ── 标题：关键词反色高亮（学参考图5）── */
+  h1{font-size:42px;font-weight:900;letter-spacing:.01em;line-height:1.3;max-width:560px}
+  h1 .hl{background:var(--ink);color:var(--bg);padding:0 12px;box-decoration-break:clone;
+    -webkit-box-decoration-break:clone}
+  .lede{font-size:13.5px;line-height:1.95;color:#4A4944;max-width:520px;margin-top:26px}
+  .lede b{font-weight:700;color:var(--ink)}
+  .lede .caps{font-weight:700;letter-spacing:.06em}
+
+  /* ── 大数 + 条带 ── */
+  .bignum{display:flex;align-items:baseline;gap:14px;margin-top:52px}
+  .bignum .v{font-size:54px;font-weight:800;letter-spacing:-.04em;line-height:1}
+  .bignum .l{font-size:12px;color:var(--muted);font-weight:500}
+  .fig{margin-top:10px}
+  .fig svg{width:100%;height:auto;display:block}
+  svg text{font-family:'Inter','Noto Sans SC',sans-serif}
+  .srcline{font-size:9px;font-weight:600;letter-spacing:.1em;
+    color:var(--faint);margin-top:8px}
+
+  /* ── 章节句：行内高亮块承接（学参考图5）── */
+  .storyline{font-size:22px;font-weight:700;letter-spacing:.01em;line-height:1.6;
+    margin-top:68px;max-width:600px}
+  .storyline .hl{background:var(--ink);color:var(--bg);padding:1px 12px 2px;
+    box-decoration-break:clone;-webkit-box-decoration-break:clone}
+  .sidenote{font-size:11.5px;line-height:1.85;color:var(--muted);max-width:260px;margin-top:20px}
+  .legendrow{display:flex;gap:8px;align-items:center;font-size:10px;font-weight:600;
+    color:var(--muted);margin-top:14px}
+  .legendrow .sw{width:14px;height:10px;background:
+    repeating-linear-gradient(-45deg,var(--ink) 0 1.5px,transparent 1.5px 4px)}
+
+  /* ── 结尾 ── */
+  .close{font-size:13px;line-height:1.95;color:#4A4944;max-width:560px;margin-top:56px}
+  .close b{color:var(--ink)}
+  .cta{margin-top:22px;font-size:13.5px;font-weight:700}
+  .cta .hl{background:var(--ink);color:var(--bg);padding:3px 14px 4px}
+
+  .foot{margin-top:64px;padding-top:14px;border-top:1px solid var(--grid);
+    display:flex;justify-content:space-between;font-size:9px;font-weight:600;
+    letter-spacing:.12em;color:var(--faint)}
+
+  /* ── 动画（mono-tokens MOTION.css 原样）── */
+  .pop{transform-box:fill-box;transform-origin:center;animation:pop .5s cubic-bezier(.2,.7,.3,1.3) both}
+  @keyframes pop{from{transform:scale(0)}to{transform:none}}
+  .fade{animation:fade .9s ease both}
+  @keyframes fade{from{opacity:0}}
+  .draw{stroke-dasharray:1;stroke-dashoffset:1;animation:draw 1s cubic-bezier(.4,0,.2,1) both}
+  @keyframes draw{to{stroke-dashoffset:0}}
+  @media(max-width:640px){body{padding:24px 10px}}
+  @media (prefers-reduced-motion:reduce){
+    .pop,.fade{animation:none}
+    .draw{animation:none;stroke-dasharray:none;stroke-dashoffset:0}
+  }
+</style>
+</head>
+<body>
+<div class="sheet">
+
+  <h1>把回答，<br>写在<span class="hl">明处</span></h1>
+
+  <p class="lede"><span class="caps">「公开答疑」</span>最初只是个实验：关于我们产品的每一个问题，
+    都在公开处回答——论坛、更新日志，或者一场任何人都能加入的通话。十二个月过去，这个习惯已经长得比实验大。
+    这一年共有 <b>1,204 个问题</b>被提出；大多数在公开处找到了答案，下一个遇到同样问题的人也能找到它。</p>
+
+  <!-- ══ 图A · 百 tick 分段条带 ══
+       结构 = lupi-gallery "ballot tally" 的单行 100 tick 队列，
+       分段语法 = basics-gallery "tick donut" 的灰阶 ladder。
+       1 tick = 1% ≈ 12 个问题。 -->
+  <div class="bignum"><div class="v">1,204</div><div class="l">个问题 · 2025 年 8 月至 2026 年 7 月</div></div>
+  <div class="fig"><svg id="strip" viewBox="0 0 400 84" preserveAspectRatio="xMidYMid meet"></svg></div>
+  <div class="srcline">TICK STRIP · 一格 = 1% ≈ 12 个问题 · 墨色 = 公开解答 · 中灰 = 私下解答 · 浅灰 = 仍待解</div>
+
+  <div class="storyline">大多数问题，出现在<span class="hl">发布</span>后的那一周。</div>
+  <p class="sidenote">发布周持续六天左右，提问量会冲到平静周基线的三到四倍。今年三次发布之后，这个规律一次没落空。</p>
+  <div class="legendrow"><span class="sw"></span> 发布周</div>
+
+  <!-- ══ 图B · L3 barcode lollipop ══
+       模板：lupi-gallery.html · "Ninety days as a barcode"
+       90 个工作日的提问量，发布周的日子加斜纹背景带。 -->
+  <div class="fig" style="margin-top:18px"><svg id="barcode" viewBox="0 0 400 300" preserveAspectRatio="xMidYMid meet"></svg></div>
+  <div class="srcline">BARCODE LOLLIPOP · 一根 = 一个工作日 · 空心头 = 周五 · 最高三天标数</div>
+
+  <div class="storyline" style="margin-top:60px">公开的回答，在我们<span class="hl">下线</span>之后还在工作。</div>
+
+  <p class="close">私下回复，帮到一个人一次。公开的回复会复利：已解答的帖子今年被重访了
+    <b>11,830 次</b>——几乎每个原始问题带来十次阅读。有 41 条回答长成了正式文档页。
+    <b>如果一个问题教会了我们什么，它就该教会所有人。</b>这就是全部的模式。</p>
+
+  <div class="cta"><span class="hl">ask.yourproduct.com —— 每一条回答，都在明处</span></div>
+
+  <div class="foot">
+    <span>影响力一页纸 · 2026 财年</span>
+    <span>来源 · 论坛 + 通话记录 · LIEFLAT CHARTS</span>
+  </div>
+</div>
+
+<script>
+/* ── mono-tokens 内联（色板 / 几何 / 工具函数与正本一致）── */
+const INK='#1C1C1A',PAPER='#F0EFEB',MUTED='#8F8E88',GRID='#DEDDD6';
+const NS='http://www.w3.org/2000/svg';
+const el=(p,t,a)=>{const n=document.createElementNS(NS,t);for(const k in a)n.setAttribute(k,a[k]);p.appendChild(n);return n};
+const txt=(p,a,s)=>{const n=el(p,'text',a);n.textContent=s;return n};
+const tip=(n,s)=>{const t=document.createElementNS(NS,'title');t.textContent=s;n.appendChild(t)};
+const rnd=(i,k)=>Math.abs(((i*73856093)^(k*19349663))%1000)/1000;
+const obsReveal=(id,fn)=>{
+  const n=document.getElementById(id);
+  const go=()=>{n.innerHTML='';fn(n)};
+  const io=new IntersectionObserver(es=>{if(es[0].isIntersecting){go();io.disconnect()}},{threshold:.3});
+  io.observe(n); n.style.cursor='pointer'; n.addEventListener('click',go);
+};
+
+/* ════ 图A · 百 tick 分段条带 ════
+   ballot tally 的单行队列 + tick donut 的 ladder 分段：
+   100 根 tick，前 68 根上墨（公开解答）、中 21 根中灰（私下解答）、
+   后 11 根淡灰（仍待解）。三段标签分别锚定首/中/尾。 */
+(()=>{
+const SEG=[['公开解答',68,INK],['私下',21,'#8F8E88'],['待解',11,'#C6C5BF']];
+obsReveal('strip',s=>{
+  const base=46,X0=14,PX=3.72;
+  el(s,'line',{x1:X0,y1:base,x2:X0+100*PX,y2:base,stroke:GRID,'stroke-width':.8,class:'fade'});
+  let k0=0;
+  SEG.forEach(([name,v,shade],si)=>{
+    for(let k=0;k<v;k++){
+      const idx=k0+k,x=X0+idx*PX+PX/2;
+      const h=12+rnd(idx+1,si+2)*7;
+      el(s,'line',{x1:x,y1:base,x2:x,y2:base-h,stroke:shade,
+        'stroke-width':si===2?.7:.9,opacity:si===2?.9:.6+rnd(idx+3,si+5)*.4,
+        class:'fade',style:`animation-delay:${idx*.008}s`});
+      if(idx%10===0)el(s,'circle',{cx:x,cy:base+4.5,r:.8,fill:'#C6C5BF',
+        class:'fade',style:`animation-delay:${idx*.008}s`});
+    }
+    // 三段标签分别锚定：首段左对齐、中段居中、末段右对齐，避免相互挤压
+    const anchors=[[X0,'start'],[X0+(k0+v/2)*PX,'middle'],[X0+100*PX,'end']];
+    const [lx,anchor]=anchors[si];
+    const lab=txt(s,{x:lx,y:base+18,'font-size':8,'font-weight':800,
+      fill:shade==='#C6C5BF'?'#8F8E88':shade,'text-anchor':anchor,'letter-spacing':'.04em',
+      class:'fade',style:`animation-delay:${.5+si*.12}s`},`${name} · ${v}`);
+    tip(lab,`${name} —— 占全部问题的 ${v}%`);
+    k0+=v;
+  });
+  txt(s,{x:200,y:78,'font-size':7,'font-weight':600,fill:'#B0AFA9','text-anchor':'middle',
+    'letter-spacing':'.1em',class:'fade',style:'animation-delay:.9s'},
+    '68 + 21 + 11 = 100 · 每十格一个圆点');
+});
+})();
+
+/* ════ 图B · L3 barcode lollipop ════
+   结构照搬 lupi-gallery "barcode lollipop"：90 根发丝日历 +
+   逐日 lollipop（周五空心头），top-3 标数保持 ≥6 天间距。
+   发布周（三段各 6 天）在日历带上以密纹发丝标出——
+   密度本身就是 Mono 的合法材质，没有新颜色。 */
+(()=>{
+const N=90;
+const RELEASE=[[18,23],[47,52],[76,81]];               // 三个发布周
+const inRel=d=>RELEASE.some(([a,b])=>d>=a&&d<=b);
+const val=d=>{
+  const base=28+10*Math.sin(d/8.5)+rnd(d+1,5)*14;
+  return inRel(d)?base*(2.6+rnd(d+2,7)*1.1):base;
+};
+obsReveal('barcode',s=>{
+  // 发布周：日历带背后加密发丝
+  RELEASE.forEach(([a,b],ri)=>{
+    for(let d=a;d<=b;d++){
+      const x=18+d*4.05;
+      for(let m=0;m<3;m++)
+        el(s,'line',{x1:x-1.2+m*1.2,y1:12,x2:x-1.2+m*1.2,y2:252,stroke:'#DCDAD2',
+          'stroke-width':.5,class:'fade',style:`animation-delay:${ri*.1}s`});
+    }
+  });
+  // 日历条码：一根发丝 = 一个工作日
+  for(let d=0;d<N;d++){
+    const x=18+d*4.05;
+    el(s,'line',{x1:x,y1:12,x2:x,y2:252,stroke:GRID,'stroke-width':.7,
+      class:'fade',style:`animation-delay:${d*.004}s`});
+  }
+  const vs=Array.from({length:N},(_,d)=>val(d));
+  const top3=[];
+  for(const d of [...vs.keys()].sort((a,b)=>vs[b]-vs[a])){
+    if(top3.every(t=>Math.abs(t-d)>=6))top3.push(d);
+    if(top3.length===3)break;
+  }
+  for(let d=0;d<N;d++){
+    const x=18+d*4.05,v=vs[d],y=246-v*1.12;
+    const friday=d%5===4;
+    const stemEnd=Math.min(250,y+14+rnd(d+1,9)*26);
+    el(s,'line',{x1:x,y1:y,x2:x,y2:stemEnd,stroke:INK,'stroke-width':1.1,
+      class:'fade',style:`animation-delay:${.3+d*.008}s`});
+    const big=top3.includes(d);
+    const dot=el(s,'circle',{cx:x,cy:y,r:big?4.4:2.4,
+      fill:friday?PAPER:INK,stroke:INK,'stroke-width':friday?1.2:0,
+      class:'pop',style:`animation-delay:${.3+d*.008}s`});
+    tip(dot,`第 ${d+1} 个工作日 —— ${Math.round(v)} 个问题`);
+    if(big)txt(s,{x,y:y-10,'font-size':9,'font-weight':800,fill:INK,'text-anchor':'middle',
+      style:`paint-order:stroke;stroke:${PAPER};stroke-width:3px;animation-delay:${.9+d*.004}s`,
+      class:'fade'},Math.round(v));
+  }
+  [[0,'8月'],[30,'10月'],[60,'1月'],[89,'3月']].forEach(([d,m])=>
+    txt(s,{x:18+d*4.05,y:272,'font-size':8,'font-weight':600,fill:MUTED,
+      'letter-spacing':'.08em',class:'fade'},m));
+  txt(s,{x:200,y:292,'font-size':7.5,'font-weight':600,fill:'#B0AFA9','text-anchor':'middle',
+    'letter-spacing':'.1em',class:'fade',style:'animation-delay:1.1s'},
+    '密纹带 = 发布周 · 一根 = 一个工作日');
+});
+})();
+
+</script>
+<script>
+/* ── fit-width：视口比版心窄时整页等比缩小，不重排 ──
+   报告是一张版面，不是响应式网页。窄屏塌成单栏会得到一个
+   设计时不存在的版式；等比缩小则保留构图，跟 PDF 的「适合宽度」一致。
+   机制同模板 11。 */
+(()=>{
+  const sheet=document.querySelector('.sheet');
+  const W=760;
+  const fit=()=>{
+    const cs=getComputedStyle(document.body);
+    const avail=document.documentElement.clientWidth
+      -parseFloat(cs.paddingLeft)-parseFloat(cs.paddingRight);
+    sheet.style.zoom=Math.min(1,avail/W);
+  };
+  fit();
+  addEventListener('resize',fit);
+})();
+</script>
+</body>
+</html>

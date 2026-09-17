@@ -1,0 +1,4 @@
+interface:
+  display_name: "Research Defense Radar / 研究防御雷达"
+  short_description: "Map competitors, priority-aware novelty, and method opportunities"
+  default_prompt: "Use $research-defense-radar to assess my project's competitor landscape, public-time novelty boundary, and method opportunities."

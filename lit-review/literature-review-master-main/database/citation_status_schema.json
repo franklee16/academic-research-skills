@@ -1,0 +1,197 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Academic Citation Evidence Gate Map",
+  "description": "Traceability map linking manuscript claims to citations, source-corpus evidence, internal tables, figures, appendices, proofs or simulation outputs.",
+  "type": "object",
+  "required": [
+    "metadata",
+    "claims",
+    "sources",
+    "verdict"
+  ],
+  "properties": {
+    "metadata": {
+      "type": "object",
+      "required": [
+        "generated_at",
+        "manuscript_scope",
+        "source_mode",
+        "total_claims"
+      ],
+      "properties": {
+        "generated_at": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "manuscript_scope": {
+          "type": "string"
+        },
+        "source_mode": {
+          "type": "string",
+          "enum": [
+            "external_search_allowed",
+            "source_only",
+            "mixed"
+          ]
+        },
+        "target_journal_family": {
+          "type": "string"
+        },
+        "total_claims": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "verified_count": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "unresolved_count": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "high_risk_count": {
+          "type": "integer",
+          "minimum": 0
+        }
+      }
+    },
+    "claims": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "claim_id",
+          "claim_text",
+          "claim_type",
+          "location",
+          "status"
+        ],
+        "properties": {
+          "claim_id": {
+            "type": "string"
+          },
+          "claim_text": {
+            "type": "string"
+          },
+          "claim_type": {
+            "type": "string"
+          },
+          "location": {
+            "type": "string"
+          },
+          "attached_evidence": {
+            "type": "string"
+          },
+          "verification_target": {
+            "type": "string",
+            "enum": [
+              "external_source",
+              "source_only_corpus",
+              "internal_evidence",
+              "manual_check"
+            ]
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "verified",
+              "verified_with_rounding",
+              "metadata_verified_only",
+              "partially_supported",
+              "misleading",
+              "overclaimed",
+              "citation_not_found",
+              "wrong_version_risk",
+              "numerical_error",
+              "not_in_corpus",
+              "contradicted",
+              "manual_check_required"
+            ]
+          },
+          "evidence_location": {
+            "type": "string"
+          },
+          "issue": {
+            "type": "string"
+          },
+          "required_action": {
+            "type": "string"
+          },
+          "safer_wording": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "sources": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "source_id",
+          "title",
+          "source_type"
+        ],
+        "properties": {
+          "source_id": {
+            "type": "string"
+          },
+          "title": {
+            "type": "string"
+          },
+          "authors": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "year": {
+            "type": "integer"
+          },
+          "source_type": {
+            "type": "string",
+            "enum": [
+              "journal",
+              "conference",
+              "working_paper",
+              "preprint",
+              "report",
+              "book",
+              "website",
+              "internal_table",
+              "internal_figure",
+              "appendix",
+              "proof",
+              "simulation_output",
+              "code_output"
+            ]
+          },
+          "venue": {
+            "type": "string"
+          },
+          "doi": {
+            "type": "string"
+          },
+          "url_or_identifier": {
+            "type": "string"
+          },
+          "version_note": {
+            "type": "string"
+          },
+          "retraction_or_correction_status": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "verdict": {
+      "type": "string",
+      "enum": [
+        "PASS",
+        "PASS WITH MINOR FIXES",
+        "MAJOR REPAIR REQUIRED",
+        "UNSAFE FOR SUBMISSION"
+      ]
+    }
+  }
+}

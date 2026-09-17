@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "status": "needs_verified_configuration",
+  "inspection": {
+    "input_file": "F:\\AI\\thu-digitizer\\gallery\\assets\\cases\\nature-67353-fig1\\original.png",
+    "input_sha256": "30d83f3adf494d698d16c510c4ca352ba18626d351b0fa91e608553e854fc3cc",
+    "file_size_bytes": 112630,
+    "media_kind": "raster",
+    "coordinate_space": "pixel",
+    "format": "PNG",
+    "mode": "RGB",
+    "width": 1750,
+    "height": 1482,
+    "appearance": {
+      "background_proposal": "light",
+      "border_median_luminance_0_255": 254.99999999999997,
+      "border_colour_span_median_0_255": 0.0,
+      "pixel_count": 2593500,
+      "role": "appearance proposal only; not chart classification or numeric evidence"
+    }
+  },
+  "route_selection": {
+    "chart_type": "box",
+    "primary": {
+      "route_id": "raster_boxplot_color",
+      "title": "Calibrated filled boxplot",
+      "chart_types": [
+        "box"
+      ],
+      "media_kinds": [
+        "raster"
+      ],
+      "coordinate_models": [
+        "categorical_value"
+      ],
+      "mark_grammars": [
+        "box_summary",
+        "outlier"
+      ],
+      "maturity": "validated_local_stable",
+      "implementation": "scripts/digitize_boxplot.py",
+      "required_confirmations": [
+        "panel_roi",
+        "plot_bounds",
+        "value_axis",
+        "orientation",
+        "box_line_outlier_colors"
+      ],
+      "recoverable": "Visible five-number summaries and separable visible outliers.",
+      "non_recoverable": "Raw samples and hidden/fused outliers.",
+      "automated_extraction": true
+    },
+    "fallback": null,
+    "decision": "needs_verified_configuration",
+    "reason": "A route is registered, but all required confirmations remain explicit before extraction."
+  },
+  "figure_spec_status": "valid_template_not_yet_verified",
+  "safety": {
+    "numeric_extraction_authorized": false,
+    "reason": "Preflight routing never converts proposed chart type, ROI, axes, or series into verified values."
+  }
+}

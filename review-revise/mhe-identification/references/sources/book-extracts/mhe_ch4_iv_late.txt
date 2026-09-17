@@ -1,0 +1,2625 @@
+--- PDF p99 ---
+Chapter 4
+Instrumental Variables in Action:
+Sometimes You Get What You Need
+Anything that happens, happens.
+Anything that, in happening, causes something else to happen,
+causes something else to happen.
+Anything that, in happening,
+causes itself to happen again, happens again.
+It doesn’t necessarily do it in chronological order, though.
+Douglas Adams, Mostly Harmless (1995)
+Two things distinguish the discipline of Econometrics from our older sister …eld of Statistics. One is a lack
+of shyness about causality. Causal inference has always been the name of the game in applied econometrics.
+Statistician Paul Holland (1986) cautions that there can be “no causation without manipulation,”a maxim
+that would seem to rule out causal inference from non-experimental data. Less thoughtful observers fall
+back on the truism that “correlation is not causality.” Like most people who work with data for a living,
+we believe that correlation can sometimes provide pretty good evidence of a causal relation, even when the
+variable of interest has not been manipulated by a researcher or experimenter. 1
+The second thing that distinguishes us from most statisticians— and indeed most other social scientists—
+is an arsenal of statistical tools that grew out of early econometric research on the problem of how to estimate
+the parameters in a system of linear simultaneous equations. The most powerful weapon in this arsenal is
+the method of Instrumental Variables (IV), the subject of this chapter. As it turns out, IV does more than
+allow us to consistently estimate the parameters in a system of simultaneous equations, though it allows us
+1Recent years have seen an increased willingness by statisticians to discuss statistical models for observational data in an
+explicitly causal framework; see, for example, Freedman’s (2005) review.
+83
+
+--- PDF p100 ---
+84
+CHAPTER 4. INSTRUMENTAL VARIABLES IN ACTION
+to do that as well.
+Studying agricultural markets in the 1920s, the father and son research team of Phillip and Sewall
+Wright were interested in a challenging problem of causal inference: how to estimate the slope of supply
+and demand curves when observed data on prices and quantities are determined by the intersection of these
+two curves. In other words, equilibrium prices and quantities— the only ones we get to observe— solve these
+two stochastic equations at the same time. Upon which curve, therefore, does the observed scatterplot of
+prices and quantities lie? The fact that population regression coe¢ cients do not capture the slope of any
+one equation in a set of simultaneous equations had been understood by Phillip Wright for some time. The
+IV method, …rst laid out in Wright (1928), solves the statistical simultaneous equations problem by using
+variables that appear in one equation to shift this equation and trace out the other. The variables that do
+the shifting came to be known as instrumental variables (Reiersol, 1941).
+In a separate line of inquiry, IV methods were pioneered to solve the problem of bias from measurement
+error in regression models2. One of the most important results in the statistical theory of linear models is
+that a regression coe¢ cient is biased towards zero when the regressor of interest is measured with random
+errors (to see why, imagine the regressor contains only random error; then it will be uncorrelated with the
+dependent variable, and hence the regression of yi on this variable will be zero). Instrumental variables
+methods can be used to eliminate this sort of bias.
+Simultaneous equations models (SEMs) have been enormously important in the history of econometric
+thought. At the same time, few of today’s most in‡uential applied papers rely on an orthodox SEM frame-
+work, though the technical language used to discuss IV still comes from this framework. Today, we are
+more likely to …nd IV used to address measurement error problems than to estimate the parameters of an
+SEM. Undoubtedly, however, the most important contemporary use of IV is to solve the problem of omitted
+variables bias. IV solves the problem of missing or unknown control variables, much as a randomized trial
+obviates the need for extensive controls in a regression.3
+4.1
+IV and causality
+We like to tell the IV story in two iterations, …rst in a restricted model with constant e¤ects, then in
+a framework with unrestricted heterogeneous potential outcomes, in which case causal e¤ects must also be
+heterogeneous. The introduction of heterogeneous e¤ects enriches the interpretation of IV estimands, without
+changing the mechanics of the core statistical methods we are most likely to use in practice (typically, two-
+stage least squares). An initial focus on constant e¤ects allows us to explain the mechanics of IV with a
+2Key historical references here are Wald (1940) and Durbin (1954), both discussed below.
+3See Angrist and Krueger (2001) for a brief exposition of the history and uses of IV; Stock and Trebbi (2003) for a detailed
+account of the birth of IV; and Morgan (1990) for an extended history of econometric ideas, including the simultaneous equations
+model.
+
+--- PDF p101 ---
+4.1. IV AND CAUSALITY
+85
+minimum of fuss.
+To motivate the constant-e¤ects setup as a framework for the causal link between schooling and wages,
+suppose, as before, that potential outcomes can be written
+ysi  fi (s) ;
+and that
+fi (s) = 0 + 1s + i;
+(4.1.1)
+as in the introduction to regression in Chapter 3. Also, as in the earlier discussion, imagine that there is a
+vector of control variables, Ai, called “ability”, that gives a selection-on-observables story:
+i = A0
+i + vi;
+where  is again a vector of population regression coe¢ cients, so that vi and Ai are uncorrelated by con-
+struction. For now, the variables Ai, are assumed to be the only reason why i and si are correlated, so
+that
+E[sivi] = 0:
+In other words if Ai were observed, we would be happy to include it in the regression of wages on schooling;
+thereby producing a long regression that can be written
+yi =  + si + A0
+i + vi:
+(4.1.2)
+Equation (4.1.2) is a version of the linear causal model, (3.2.9). The error term in this equation is the
+random part of potential outcomes, vi, left over after controlling for Ai. This error term is uncorrelated with
+schooling by assumption.
+If this assumption turns out to be correct, the population regression of yi on si
+and Ai produces the coe¢ cients in (4.1.2).
+The problem we initially want to tackle is how to estimate the long-regression coe¢ cient, , when Ai is
+unobserved. Instrumental variables methods can be used to accomplish this when the researcher has access
+to a variable (the instrument, which we’ll call zi), that is correlated with the causal variable of interest, si,
+but uncorrelated with any other determinants of the dependent variable. Here, the phrase "uncorrelated
+with any other determinants of the dependent variables" is like saying Cov(i;zi) = 0; or, equivalently, zi
+is uncorrelated with both Ai and vi. This statement is called an exclusion restriction since zi can be said
+to be excluded from the causal model of interest.
+The exclusion restriction is a version of the conditional
+independence assumption of the previous chapter, except that now it is the instrument which is independent
+of potential outcomes, instead of schooling itself (the "conditional" in conditional independence enters into
+
+--- PDF p102 ---
+86
+CHAPTER 4. INSTRUMENTAL VARIABLES IN ACTION
+the discussion when we consider IV models with covariates).
+Given the exclusion restriction, it follows from equation (4.1.2) that
+ = Cov(yi; zi)
+Cov(si; zi) = Cov(yi; zi)=V (zi)
+Cov(si; zi)=V (zi) :
+(4.1.3)
+The second equality in (4.1.3) is useful because it’s usually easier to think in terms of regression coe¢ cients
+than in terms of covariances. The coe¢ cient of interest, , is the ratio of the population regression of yi on zi
+(the reduced form) to the population regression of si on zi (the …rst stage). The IV estimator is the sample
+analog of expression (4.1.3).
+Note that the IV estimand is predicated on the notion that the …rst stage is
+not zero, but this is something you can check in the data.
+As a rule, if the …rst stage is only marginally
+signi…cantly di¤erent from zero, the resulting IV estimates are unlikely to be informative, a point we return
+to later.
+It’s worth recapping the assumptions needed for the ratio of covariances in (4.1.3) to equal the casual
+e¤ect, : First, the instrument must have a clear e¤ect on si.
+This is the …rst stage.
+Second, the only
+reason for the relationship between yi and zi is the …rst-stage.
+For the moment, we’re calling this second
+assumption the exclusion restriction, though as we’ll see in the discussion of models with heterogeneous
+e¤ects, this assumption really has two parts: the …rst is the statement that the instrument is as good as
+randomly assigned (i.e., independent of potential outcomes, conditional on covariates), while the second is
+that the instrument has no e¤ect on outcomes other than through the …rst-stage channel.
+So where can you …nd an instrumental variable? Good instruments come from institutional knowledge
+and your ideas about the processes determining the variable of interest. For example, the economic model
+of education suggests that educational attainment is determined by comparing the costs and bene…ts of
+alternative choices. Thus, one possible source of instruments for schooling is di¤erences in costs due, say,
+to loan policies or other subsidies that vary independently of ability or earnings potential. A second source
+of variation in schooling is institutional constraints. A set of institutional constraints relevant for schooling
+are compulsory schooling laws. Angrist and Krueger (1991) exploit the variation induced by compulsory
+schooling in a paper that typi…es the use of “natural experiments”to try to eliminate omitted variables bias
+The starting point for the Angrist and Krueger (1991) quarter-of-birth strategy is the observation that
+most states required students to enter school in the calendar year in which they turn 6. School start age is
+therefore a function of date of birth. Speci…cally, those born late in the year are young for their grade. In
+states with a December 31st birthday cuto¤, children born in the fourth quarter enter school shortly before
+they turn 6, while those born in the …rst quarter enter school at around age 6 1
+2. Furthermore, because
+compulsory schooling laws typically require students to remain in school only until their 16th birthday, these
+groups of students will be in di¤erent grades or through a given grade to di¤erent degree, when they reach
+the legal dropout age. In essence, the combination of school start age policies and compulsory schooling laws
+
+--- PDF p103 ---
+4.1. IV AND CAUSALITY
+87
+creates a natural experiment in which children are compelled to attend school for di¤erent lengths of time
+depending on their birthdays.
+Angrist and Krueger looked at the relationship between educational attainment and quarter of birth
+using US census data.
+Panel A of Figure 4.1.1 (adapted from Angrist and Krueger, 2001) displays the
+education-quarter-of-birth pattern for men in the 1980 Census who were born in the 1930s.
+The …gure
+clearly shows that men born earlier in the calendar year tend to have lower average schooling levels. Panel
+A of Figure 4.1.1 is a graphical representation of the …rst-stage. The …rst-stage in a general IV framework
+is the regression of the causal variable of interest on covariates and the instrument(s). The plot summarizes
+this regression because average schooling by year and quarter of birth is what you get for …tted values from
+a regression of schooling on a full set of year-of-birth and quarter-of-birth dummies.
+Panel B of Figure 4.1.1 displays average earnings by quarter of birth for the same sample used to
+construct panel A. This panel illustrates what econometricians call the “reduced form”relationship between
+the instruments and the dependent variable. The reduced form is the regression of the dependent variable
+on any covariates in the model and the instrument(s). Panel B shows that older cohorts tend to have higher
+earnings, because earnings rise with work experience. The …gure also shows that men born in early quarters
+almost always earned less, on average, than those born later in the year, even after adjusting for year of
+birth, which plays the role of an exogenous covariate in the Angrist and Krueger (1991) setup. Importantly,
+this reduced-form relation parallels the quarter-of-birth pattern in schooling, suggesting the two patterns
+are closely related. Because an individual’s date of birth is probably unrelated to his or her innate ability,
+motivation, or family connections, it seems credible to assert that the only reason for the up-and-down
+quarter-of-birth pattern in earnings is indeed the up-and-down quarter-of-birth pattern in schooling.
+This
+is the critical assumption that drives the quarter-of-birth IV story.4
+A mathematical representation of the story told by Figure 4.1.1 comes from the …rst-stage and reduced-
+form regression equations, spelled out below:
+si
+=
+X0
+i10 + 11zi + 1i
+(4.1.4a)
+yi
+=
+X0
+i20 + 21zi + 2i
+(4.1.4b)
+The parameter 11 in equation (4.1.4a) captures the …rst-stage e¤ect of zi on si, adjusting for covariates,
+4Other explanations are possible, the most likely being some sort of family background e¤ect associated with season of birth
+(see, e.g., Bound, Jaeger, and Baker, 1995).
+Weighing against the possibility of omitted family background e¤ects is the
+fact that the quarter of birth pattern in average schooling is much more pronounced at the schooling levels most a¤ected by
+compulsory attendance laws.
+Another possible concern is a pure age-at-entry e¤ect which operates through channels other
+than highest grade completed (e.g., achievement). The causal e¤ect of age-at-entry on learning is di¢ cult, if not impossible, to
+separate from pure age e¤ects, as noted in Chapter 1). A recent study by Elder and Lubotsky (2008) argues that the evolution
+of putative age-at-entry e¤ects over time is more consistent with e¤ects due to age di¤erences per se than to a within-school
+learning advantage for older students.
+
+--- PDF p104 ---
+88
+CHAPTER 4. INSTRUMENTAL VARIABLES IN ACTION
+A Average Education by Quarter of Birth (first stage)
+3
+3
+4
+3
+4
+1
+2
+3
+4
+1
+2
+3
+4
+12 9
+13
+13.1
+13.2
+A. Average Education by Quarter of Birth (first stage)
+A. Average Education by Quarter of Birth (first stage)
+2
+3
+4
+1
+2
+3
+4
+1
+2
+3
+4
+1
+2
+3
+4
+1
+2
+3
+4
+1
+2
+4
+1
+2
+1
+2
+1
+12.5
+12.6
+12.7
+12.8
+12.9
+Years of Education
+2
+1
+1
+2
+1
+12.2
+12.3
+12.4
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+Year of Birth
+5.94
+Year of Birth
+B. Average Weekly Wage by Quarter of Birth (reduced form)
+B. Average Weekly Wage by Quarter of Birth (reduced form)
+3
+4
+3
+4
+3
+2
+3
+4
+3
+4
+3
+4
+3
+4
+3
+4
+2
+3
+4
+2
+4
+5.91
+5.92
+5.93
+arnings
+2
+1
+1
+2
+1
+2
+4
+1
+2
+1
+2
+1
+2
+4
+1
+2
+1
+2
+1
+1
+3
+5.88
+5.89
+5.9
+Log Weekly Ea
+5.86
+5.87
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+Year of Birth
+Figure 4.1.1: Graphical depiction of …rst stage and reduced form for IV estimates of the economic return to
+schooling using quarter of birth (from Angrist and Krueger 1991).
+
+--- PDF p105 ---
+4.1. IV AND CAUSALITY
+89
+Xi. The parameter 21 in equation (4.1.4b) captures the reduced-form e¤ect of zi on yi, adjusting for these
+same covariates. In the language of the SEM, the dependent variables in these two equations are said to be
+the endogenous variables (where they are determined jointly within the system) while the variables on the
+right-hand side are said to be the exogenous variables (determined outside the system). The instruments, zi,
+are a subset of the exogenous variables.
+The exogenous variables that are not instruments are said to be
+exogenous covariates. Although we’re not estimating a traditional supply and demand system in this case,
+these SEM variable labels are still widely used in empirical practice.
+The covariate-adjusted IV estimator is the sample analog of the ratio 21
+11 . To see this, note that the
+denominators of the reduced-form and …rst-stage e¤ects are the same. Hence, their ratio is
+ = 21
+11
+= Cov(yi; ~zi)
+Cov(si; ~zi) ;
+(4.1.5)
+where ~zi is the residual from a regression of zi on the exogenous covariates, Xi. The right-hand side of
+(4.1.5) therefore swaps ~zi for zi in the general IV formula, (4.1.3). Econometricians call the sample analog
+of the left-hand side of equation (4.1.5) an Indirect Least Squares (ILS) estimator of  in the causal model
+with covariates,
+yi = 0Xi + si + i;
+(4.1.6)
+where i is the compound error term, A0
+i + vi5.
+It’s easy to use equation (4.1.6) to con…rm directly that
+Cov(yi; ~zi) = Cov(si; ~zi) since ~zi is uncorrelated with Xi by construction and with i by assumption. In
+Angrist and Krueger (1991), the instrument, zi, is quarter of birth (or dummies indicating quarters of birth)
+and the covariates are dummies for year of birth, state of birth, and race.
+4.1.1
+Two-Stage Least Squares
+The reduced-form equation, (4.1.4b), can be derived by substituting the …rst stage equation, (4.1.4a), into
+the causal relation of interest, (4.1.6), which is also called a “structural equation”in simultaneous equations
+language. We then have:
+yi
+=
+0Xi + [X0
+i10 + 11zi + 1i] + i
+(4.1.7)
+=
+X0
+i[ + 10] + 11zi + [1i + i]
+=
+X0
+i20 + 21zi + 2i;
+5For a direct proof that (4.1.5) equals  in (4.1.6), use (4.1.6) to substitute for yi in Cov(yi;~zi)
+Cov(si;~zi) .
+
+--- PDF p106 ---
+90
+CHAPTER 4. INSTRUMENTAL VARIABLES IN ACTION
+where 20   + 10, 21  11, and 2i  1i + i in equation (4.1.4b). Equation (4.1.7) again shows
+why  = 21
+11 . Note also that a slight re-arrangement of (4.1.7) gives
+yi = 0Xi + [X0
+i10 + 11zi] + 2i;
+(4.1.8)
+where [X0
+i10 + 11zi] is the population …tted value from the …rst-stage regression of si on Xi and zi.
+Because zi and Xi are uncorrelated with the reduced-form error, 2i, the coe¢ cient on [X0
+i10 + 11zi] in
+the population regression of yi on Xi and [X0
+i10 + 11zi] equals .
+In practice, of course, we almost always work with data from samples. Given a random sample, the
+…rst-stage …tted values in the population are consistently estimated by
+^si = X0
+i^10 + ^11zi;
+where ^10 and ^11 are OLS estimates from equation (4.1.4a). The coe¢ cient on ^si in the regression of yi
+on Xi and ^si is called the Two-Stage Least Squares (2SLS) estimator of . In other words, 2SLS estimates
+can be constructed by OLS estimation of the “second-stage equation,”
+yi = 0Xi + ^si + [i + (si   ^si)];
+(4.1.9)
+This is called 2SLS because it can be done in two steps, the …rst estimating ^si using equation (4.1.4a), and
+the second estimating equation (4.1.9). The resulting estimator is consistent for  because (a) …rst-stage
+estimates are consistent; and, (b) the covariates, Xi, and instruments, zi, are uncorrelated with both i and
+(si   ^si).
+The 2SLS name notwithstanding, we don’t usually construct 2SLS estimates in two-steps. For one thing,
+the resulting standard errors are wrong, as we discuss later. Typically, we let specialized software routines
+(such as are available in SAS or Stata) do the calculation for us.
+This gets the standard errors right and
+helps to avoid other mistakes (see Section 4.6.1, below).
+Still, the fact that the 2SLS estimator can be
+computed by a sequence of OLS regressions is one way to remember why it works. Intuitively, conditional
+on covariates, 2SLS retains only the variation in si that is generated by quasi-experimental variation, i.e.,
+generated by the instrument, zi.
+2SLS is a many-splendored thing. For one, it is an instrumental variables estimator: the 2SLS estimate
+of  in (4.1.9) is the sample analog of Cov(yi;^s
+i )
+Cov(si;^s
+i ) , where ^s
+i is the residual from a regression of ^si on Xi. This
+follows from the multivariate regression anatomy formula and the fact that Cov(si; ^s
+i ) = V (^s
+i ).
+It is also
+easy to show that, in a model with a single endogenous variable and a single instrument, the 2SLS estimator
+is the same as the corresponding ILS estimator.6
+6Note that ^s
+i = ~zi^11, where ~zi is the residual from a regression of zi on Xi, so that the 2SLS estimator is therefore the
+
+--- PDF p107 ---
+4.1. IV AND CAUSALITY
+91
+The link between 2SLS and IV warrants a bit more elaboration in the multi-instrument case. Assuming
+each instrument captures the same causal e¤ect (a strong assumption that is relaxed below), we might want
+to combine these alternative IV estimates into a single more precise estimate.
+In models with multiple
+instruments, 2SLS provides just such a linear combination by combining multiple instruments into a single
+instrument. Suppose, for example, we have three instrumental variables, z1i, z2i, and z3i. In the Angrist and
+Krueger (1991) application, these are dummies for …rst, second, and third-quarter births. The …rst-stage
+equation then becomes
+si = X0
+i10 + 11z1i + 12z2i + 13z3i + 1i;
+(4.1.10a)
+while the 2SLS second stage is the same as (4.1.9), except that the …tted values are from (4.1.10a) instead of
+(4.1.4a). The IV interpretation of this 2SLS estimator is the same as before: the instrument is the residual
+from a regression of …rst-stage …tted values on covariates. The exclusion restriction in this case is the claim
+that all of the quarter of birth dummies in (4.1.10a) are uncorrelated with i in equation equation (4.1.6).
+The results of 2SLS estimation of a schooling equation using three quarter-of-birth dummies, as well as
+other interactions, are shown in Table 4.1.1, which reports OLS and 2SLS estimates of models similar to
+those estimated by Angrist and Krueger (1991). Each column in the table contains OLS and 2SLS estimates
+of  from an equation like (4.1.6), estimated with di¤erent combinations of instruments and control variables.
+The OLS estimate in column 1 is from a regression of log wages with no control variables, while the OLS
+estimates in column 2 are from a model adding dummies for year of birth and state of birth as control
+variables. In both cases, the estimated return to schooling is around .075.
+sample analog of
+h Cov(yi;~zi)
+V (~zi)
+i
+^11
+. But the sample analog of the numerator, Cov(yi;~zi)
+V (~zi)
+, is the OLS estimate of 21 in the reduced
+form, (4.1.4b), while ^11 is the OLS estimate of the …rst-stage e¤ect, 11, in (4.1.4a). Hence, 2SLS with a single instrument is
+ILS, i.e., the ratio of the reduced form-e¤ect of the instrument to the corresponding …rst-stage e¤ect where both the …rst-stage
+and reduced-form include covariates.
+
+--- PDF p108 ---
+92
+CHAPTER 4. INSTRUMENTAL VARIABLES IN ACTION
+Table 4.1.1: 2SLS estimates of the economic returns to schooling
+OLS
+2SLS
+(1)
+(2)
+(3)
+(4)
+(5)
+(6)
+(7)
+(8)
+Years of education
+0.075
+0.072
+0.103
+0.112
+0.106
+0.108
+0.089
+0.061
+(0.0004)
+(0.0004)
+(0.024)
+(0.021)
+(0.026)
+(0.019)
+(0.016)
+(0.031)
+Covariates:
+Age (in quarters)
+X
+Age (in quarters) squared
+X
+9 year of birth dummies
+X
+X
+X
+X
+X
+50 state of birth dummies
+X
+X
+X
+X
+X
+Instruments:
+dummy
+for
+QOB=1
+dummy
+for
+QOB=1
+or
+QOB=2
+dummy
+for
+QOB=1
+full
+set
+of
+QOB
+dummies
+full
+set
+of
+QOB
+dummies
+int. with
+year
+of
+birth
+dummies
+full
+set
+of
+QOB
+dummies
+int. with
+year
+of
+birth
+dummies
+Notes: The table reports OLS and 2SLS estimates of the returns to schooling using the the Angrist and Krueger (1991) 1980
+Census sample. This sample includes native-born men, born 1930-1939, with positive earnings and non-allocated values for
+key variables. The sample size is 329,509. Robust standard errors are reported in parentheses.
+
+--- PDF p109 ---
+4.1. IV AND CAUSALITY
+93
+The …rst pair of IV estimates, reported in columns 3 and 4, are from models without controls. The
+instrument used to construct the estimates in column 1 is a single dummy for …rst quarter births, while the
+instruments used to construct the estimates in column 2 are a pair of dummies indicating …rst and second
+quarter births. The standard error estimates range from .10 –.11. The results from models including year
+of birth and state of birth dummies as control variables are similar, not surprisingly, since quarter of birth
+is not closely related to either of these controls. Overall, the 2SLS estimates are mostly a bit larger than the
+corresponding OLS estimates. This suggests that the observed associated between schooling and earnings is
+not driven by omitted variables like ability and family background.
+Column 7 in Table 4.1.1 shows the results of adding interaction terms to the instrument list. In particular,
+each speci…cation adds interaction with 9 dummies for year of birth (the sample includes cohorts born 1930-
+39), for a total of 30 excluded instruments. The …rst stage equation becomes
+si
+=
+X0
+i10 + 11z1i + 12z2i + 13z3i
+(4.1.10b)
++
+X
+j
+(bijz1i)1j +
+X
+j
+(bijz2i)2j +
+X
+j
+(bijz3i)3j + 1i
+where bij is a dummy equal to one if individual i was born in year j for j equal to 1931 –39. The coe¢ cients
+1j; 2j; 3j are the corresponding year-of-birth interactions. These interaction terms capture di¤erences in
+the relation between quarter-of-birth and schooling across cohorts. The rationale for adding these interaction
+terms is an increase in precision that comes from increasing the …rst-stage R2, which goes up because the
+quarter of birth pattern in schooling di¤ers across cohorts.
+In this example, the addition of interaction
+terms to the instrument list leads to a modest gain in precision; the standard error declines from .0194 to
+.0161.7
+The last 2SLS model reported in Table 4.1.1 includes controls for linear and quadratic terms in age-in-
+quarters in the list of covariates, Xi. In other words, someone who was born in the …rst quarter of 1930 is
+recorded as being 50 years old on census day (April 1), 1980, while someone born in the fourth quarter is
+recorded as being 49.25 years old. This …nely coded age variable, entered into the model with a linear and
+quadratic term, provides a partial control for the fact that small di¤erences age may be an omitted variable
+that confounds the quarter-of-birth identi…cation strategy. As long as the e¤ects of age are similarly smooth,
+the quadratic age-in-quarters model will pick them up.
+This variation in the 2SLS set-up illustrates the inter-play between identi…cation and estimation. For
+the 2SLS procedure to work, there must be some variation in the …rst-stage …tted values conditional on
+whatever control variables (covariates) are included in the model. If the …rst-stage …tted values are a linear
+combination of the included covariates, then the 2SLS estimate simply does not exist. In equation (4.1.9) this
+7This gain may not be without cost, as the use of many additional instruments opens up the possibility of increased bias,
+an issue discussed in Chapter 8, below.
+
+--- PDF p110 ---
+94
+CHAPTER 4. INSTRUMENTAL VARIABLES IN ACTION
+is manifest by perfect multicollinearity.
+2SLS estimates with quadratic age exist.
+But the variability “left
+over”in the …rst-stage …tted values is reduced when the covariates include variables like age in quarters, that
+are closely related to the instruments (quarter of birth dummies).
+Because this variability is the primary
+determinant of 2SLS standard errors, the estimate in column 8 is markedly less precise than that in column
+7, though it is still close to the corresponding OLS estimate.
+Recap of IV and 2SLS Lingo
+As we’ve seen, the endogenous variables are the dependent variable and the independent variable(s) to be
+instrumented; in a simultaneous equations model, endogenous variables are determined by solving a system
+of stochastic linear equations. To treat an independent variable as endogenous is to instrument it, i.e., to re-
+place it with …tted values in the second stage of a 2SLS procedure. The independent endogenous variable in
+the Angrist and Krueger (1991) study is schooling. The exogenous variables include the exogenous covariates
+that are not instrumented and the instruments themselves. In a simultaneous equations model, exogenous
+variables are determined outside the system.
+The exogenous covariates in the Angrist and Krueger (1991)
+study are dummies for year of birth and state of birth. We think of exogenous covariates as controls. 2SLS
+a…cionados live in a world of mutually exclusive labels: in any empirical study involving instrumental vari-
+ables, the random variables to be studied are either dependent variables, independent endogenous variables,
+instrumental variables, or exogenous covariates. Sometimes we shorten this to: dependent and endogenous
+variables, instruments and covariates (fudging the fact that the dependent variable is also endogenous in a
+traditional SEM).
+4.1.2
+The Wald Estimator
+The simplest IV estimator uses a single binary (0-1) instrument to estimate a model with one endogenous
+regressor and no covariates. Without covariates, the causal regression model is
+yi =  + si + i;
+(4.1.11)
+where i and si may be correlated. Given the further simpli…cation that zi is a dummy variable that equals
+1 with probability p, we can easily show that
+Cov(yi; zi) = fE[yijzi = 1]   E[yijzi = 0]gp(1   p);
+with an analogous formula for Cov(si;zi). It therefore follows that
+ = E[yijzi = 1]   E[yijzi = 0]
+E[sijzi = 1]   E[sijzi = 0] :
+(4.1.12)
+
+--- PDF p111 ---
+4.1. IV AND CAUSALITY
+95
+A direct route to this result uses (4.1.11) and the fact that E[ijzi] = 0, so we have
+E[yijzi] =  + E[sijzi]:
+(4.1.13)
+Solving this equation for  produces (4.1.12).
+Equation (4.1.12) is the population analog of the landmark Wald (1940) estimator for a bivariate regres-
+sion with mismeasured regressors.8 The Wald estimator is the sample analog of this expression.
+In our
+context, the Wald formula provides an appealingly transparent implementation of the IV strategy for the
+elimination of omitted variables bias. The principal claim that motivates IV estimation of causal e¤ects is
+that the only reason for any relation between the dependent variable and the instrument is the e¤ect of the
+instrument on the causal variable of interest. In the context of a binary instrument, it therefore seems nat-
+ural to divide— or rescale— the reduced-form di¤erence in means by the corresponding …rst-stage di¤erence
+in means.
+The Angrist and Krueger (1991) study using quarter of birth to estimate the economic returns to schooling
+shows the Wald estimator in action. Table 4.1.2 displays the ingredients behind a Wald estimate constructed
+using the 1980 census. The di¤erence in earnings between men born in the …rst and second halves of the
+year is -.01349 (s.e.=.00337), while the corresponding di¤erence in schooling is -.1514. The ratio of these two
+di¤erences is a Wald estimate of the economic value of schooling in per-year terms. This comes out to be
+.0891 (s.e.=.021). Not surprisingly, this estimate is not too di¤erent from the 2SLS estimates in Table 4.1.1.
+The reason we should expect the Wald and 2SLS estimates to be similar is that they are both constructed
+from the same information: di¤erences in earnings by season of birth.
+The Angrist (1990) study of the e¤ects of Vietnam-era military service on the earnings of veterans also
+shows the Wald estimator in action. In the 1960s and early 1970s, young men were at risk of being drafted for
+military service. Concerns about the fairness of US conscription policy led to the institution of a draft lottery
+in 1970 that was used to determine priority for conscription. A promising instrumental variable for Vietnam
+veteran status is therefore draft-eligibility, since this was determined by a lottery over birthdays. Speci…cally,
+in each year from 1970 to 1972, random sequence numbers (RSNs) were randomly assigned to each birth date
+in cohorts of 19-year-olds. Men with lottery numbers below an eligibility ceiling were eligible for the draft,
+while men with numbers above the ceiling could not be drafted. In practice, many draft-eligible men were
+still exempted from service for health or other reasons, while many men who were draft-exempt nevertheless
+volunteered for service. So veteran status was not completely determined by randomized draft-eligibility,
+8As noted in the introduction to this chapter, measurement error in regressors tends to shrink regression coe¢ cients towards
+zero. To eliminate this bias, Wald (1940) suggested that the data be divided in a manner independent of the measurement
+error, and the coe¢ cient of interest estimated as a ratio of di¤erences in means as in (4.1.12). Durbin (1954) showed that
+Wald’s method of …tting straight lines is an IV estimator where the instrument is a dummy marking Wald’s division of the
+data. Hausman (2001) provides an overview of econometric strategies for dealing with measurement error.
+
+--- PDF p112 ---
+96
+CHAPTER 4. INSTRUMENTAL VARIABLES IN ACTION
+Table 4.1.2: Wald estimates of the returns to schooling using quarter of birth instruments
+(1)
+(2)
+(3)
+Born in the 1st
+or 2nd quarter of
+year
+Born in the 3rd
+or 4th quarter of
+year
+Di¤erence
+(std. error)
+(1)-(2)
+ln (weekly wage)
+5.8916
+5.9051
+-0.01349
+(0.00337)
+Years of education
+12.6881
+12.8394
+-0.1514
+(0.0162)
+Wald estimate of
+return to education
+0.0891
+(0.0210)
+OLS estimate of
+return to education
+0.0703
+(0.0005)
+Notes: Adapted from a re-analysis of Angrist and Krueger (1991) by Angrist and
+Imbens (1995). The sample includes native-born men with positive earnings from
+the 1930-39 birth cohorts in the 1980 Census 5 percent …le. The sample size is
+329,509.
+but draft-eligibility provides a binary instrument highly correlated with Vietnam-era veteran status.
+For white men who were at risk of being drafted in the 1970 draft lottery, draft-eligibility is clearly
+associated with lower earnings in years after the lottery. This is documented in Table 4.1.3, which reports the
+e¤ect of randomized draft-eligibility status on average Social Security-taxable earnings in column 2. column
+1 shows average annual earnings for purposes of comparison. For men born in 1950, there are signi…cant
+negative e¤ects of eligibility status on earnings in 1971, when these men were mostly just beginning their
+military service, and, perhaps more surprisingly, in 1981, ten years later. In contrast, there is no evidence
+of an association between draft-eligibility status and earnings in 1969, the year the lottery drawing for men
+born in 1950 was held but before anyone born in 1950 was actually drafted.
+Because eligibility status was randomly assigned, the claim that the estimates in column 2 represent
+the e¤ect of draft-eligibility on earnings seems uncontroversial. The information required to go from draft-
+eligibility e¤ects to veteran-status e¤ects is the denominator of the Wald estimator, which is the e¤ect of
+draft-eligibility on the probability of serving in the military. This information is reported in column 3 of
+Table 4.1.3, which shows that draft-eligible men were almost 16 percentage points more likely to have served
+in the Vietnam era. The Wald estimate of the e¤ect of military service on 1981 earnings, reported in column
+4, amounts to about 15 percent of the mean. E¤ects were even larger in 1971 (in percentage terms), when
+a¤ected soldiers were still in the army.
+An important feature of the Wald/IV estimator is that the identifying assumptions are easy to assess and
+
+--- PDF p113 ---
+4.1. IV AND CAUSALITY
+97
+Table 4.1.3: Wald estimates of the e¤ects of military service on the earnings of white men born in 1950
+Earnings
+Veteran Status
+Wald
+Estimate of
+Veteran
+E¤ect
+Earnings year
+Mean
+Eligibility
+E¤ect
+Mean
+Eligibility
+E¤ect
+(1)
+(2)
+(3)
+(4)
+(5)
+1981
+16,461
+-435.8
+0.267
+0.159
+-2,741
+(210.5)
+(0.040)
+(1,324)
+1971
+3,338
+-325.9
+-2050
+(46.6)
+(293)
+1969
+2,299
+-2.0
+(34.5)
+Notes: Adapted from Angrist (1990), Tables 2 and 3. Standard errors are shown
+in parentheses. Earnings data are from Social Security administrative records. Fig-
+ures are in nominal dollars. Veteran status data are from the Survey of Program
+Participation. There are about 13,500 individuals in the sample.
+interpret. Suppose di denotes Vietnam-era veteran status and zi indicates draft-eligibility. The fundamental
+claim justifying our interpretation of the Wald estimator as capturing the causal e¤ect of di is that the only
+reason why E[yijzi] changes as zi changes is the variation in E[dijzi]. A simple check on this is to look for
+an association between zi and personal characteristics that should not be a¤ected by di, for example, age,
+race, sex, or any other characteristic that was determined before di was determined. Another useful check
+is to look for an association between the instrument and outcomes in samples where there is no relationship
+between di and zi. If the only reason for draft-eligibility a¤ects on earnings is veteran status, then draft-
+eligibility e¤ects on earnings should be zero in samples where draft-eligibility status is unrelated to veteran
+status.
+This idea is illustrated in the Angrist (1990) study of the draft lottery by looking at 1969 earnings,
+an estimate repeated in the last row of Table 4.1.3.
+It’s comforting that the draft-eligibility treatment
+e¤ect on 1969 earnings is zero since 1969 earnings predate the 1970 draft lottery.
+A second variation on
+this idea looks at the cohort of men born in 1953. Although there was a lottery drawing which assigned
+RSNs to the 1953 birth cohort in February of 1972, no one born in 1953 was actually drafted (the draft
+o¢ cially ended in July of 1973). The …rst-stage relationship between draft-eligibility and veteran status for
+men born in 1953 (de…ned using the 1952 lottery cuto¤ of 95) therefore shows only a small di¤erence in
+the probability of serving by eligibility status. Importantly, there is also no signi…cant relationship between
+earnings and draft-eligibility status for men born in 1953, a result that supports the claim that the only
+reason for draft-eligibility e¤ects is military service.
+
+--- PDF p114 ---
+98
+CHAPTER 4. INSTRUMENTAL VARIABLES IN ACTION
+We conclude the discussion of Wald estimators with a set of IV estimates of the e¤ect of family size on
+mothers’employment and work. Like the schooling and military service studies, these estimates are used
+for illustration elsewhere in the book. The relationship between fertility and labor supply has long been of
+interest to labor economists, while the case for omitted variables bias in this context is clear: mothers with
+weak labor force attachment or low earnings potential may be more likely to have children than mothers
+with strong labor force attachment or high earnings potential. This makes the observed association between
+family size and employment hard to interpret since mothers who have big families may have worked less
+anyway.
+Angrist and Evans (1998) solve this omitted-variables problem using two instrumental variables,
+both of which lend themselves to Wald-type estimation strategies.
+The …rst Wald estimator uses multiple births, an identi…cation strategy for the e¤ects of family size
+pioneered by Rosenzweig and Wolpin (1980).
+The twins instrument in Angrist and Evans (1998) is a
+dummy for a multiple third birth in a sample of mothers with at least two children.
+The twins …rst-stage
+is .625, an estimate reported in column 3 of Table 4.1.4.
+This means that 37.5 percent of mothers with
+two or more children would have had a third birth anyway; a multiple third birth increases this proportion
+to 1.
+The twins instrument rests on the idea that the occurrence of a multiple birth is essentially random,
+unrelated to potential outcomes or demographic characteristics.
+The second Wald estimator in Table 4.1.4 uses sibling sex composition, an instrument motivated by the
+fact that American parents with two children are much more likely to have a third child if the …rst two
+are same-sex than if the sex-composition is mixed.
+This is illustrated in column 5 of Table 4.1.4, which
+shows that parents of same-sex sibling birth are 6.7 percentage points more likely to have a third birth (the
+probability of a third birth among parents with a mixed-sex sibship is .38).
+The same-sex instrument is
+based on the claim that sibling sex composition is essentially random and a¤ects family labor supply solely
+by increasing fertility.
+Twins and sex-composition instruments both suggest that the birth of a third child has a large e¤ect
+on employment rates and on weeks and hours worked.
+Wald estimates using twins instruments show a
+precisely-estimate employment reduction of about .08, while weeks worked fall by 3.8 and hours per week
+fall by 3.4.
+These results, which appear in column 4 of Table 4.1.4, are smaller in absolute value than the
+corresponding OLS estimates reported in column 2.
+This suggests the latter are exaggerated by selection
+bias.
+Interestingly, the Wald estimates constructed using a same-sex dummy, reported in column 6, are
+larger than the twins estimates. The juxtaposition of twins and sex-composition instruments in Table 4.1.4
+suggests that di¤erent instruments need not generate similar estimates of causal e¤ects even if both are
+valid. We expand on this important point in Section 4.4. For now, however, we stick with a constant-e¤ects
+framework.
+
+--- PDF p115 ---
+4.1. IV AND CAUSALITY
+99
+Table 4.1.4: Wald estimates of labor supply e¤ects
+IV Estimates using:
+Twins
+Sex-composition
+Dependent
+Mean
+OLS
+First stage
+Wald estimates
+First stage
+Wald estimates
+variable
+(1)
+(2)
+(3)
+(4)
+(5)
+(6)
+Employment
+0.528
+-0.167
+0.625
+-0.083
+0.067
+-0.135
+(0.002)
+(0.011)
+(0.017)
+(0.002)
+(0.029)
+Weeks worked
+19.0
+-8.05
+"
+-3.83
+"
+-6.23
+(0.09)
+"
+(0.758)
+"
+(1.29)
+Hours/week
+16.7
+-6.02
+"
+-3.39
+"
+-5.54
+(0.08)
+"
+(0.637)
+"
+(1.08)
+Note: The table reports OLS and Wald estimates of the e¤ects of a third birth on labor supply
+using twins and sex-composition instruments. Data are from the Angrist and Evans (1998) extract
+including married women aged 21-35 with at least two children in the 1980 Census. OLS models
+include controls for mother’s age, age at …rst birth, dummies for the sex of …rst and second births,
+and dummies for race.
+
+--- PDF p116 ---
+100
+CHAPTER 4. INSTRUMENTAL VARIABLES IN ACTION
+4.1.3
+Grouped Data and 2SLS
+The Wald estimator is the mother of all instrumental variables estimators because more complicated 2SLS
+estimators can typically be constructed from an underlying set of Wald estimators. The link between Wald
+and 2SLS is grouped-data: 2SLS using dummy instruments is the same thing as GLS on a set of group
+means. GLS in turn can be understood as a linear combination of all the Wald estimators that can be
+constructed from pairs of means. The generality of this link might appear to be limited by the presumption
+that the instruments at hand are dummies. Not all instrumental variables are dummies, or even discrete,
+but this is not really important. For one thing, many credible instruments can be thought of as de…ning
+categories, such as quarter of birth. Moreover, instrumental variables that appear more continuous (such as
+draft lottery numbers, which range from 1-365) can usually be grouped without much loss of information
+(for example, a single dummy for draft-eligibility status, or dummies for groups of 25 lottery numbers).9
+To explain the Wald/grouping/2SLS nexus more fully, we stick with the draft-lottery study. Earlier we
+noted that draft-eligibility is a promising instrument for Vietnam-era veteran status. The draft-eligibility
+ceilings were RSN 195 for men born in 1950, RSN 125 for men born in 1951, and RSN 95 for men born in
+1952.
+In practice, however, there is a richer link between draft lottery numbers (which we’ll call ri, short
+for RSN) and veteran status (di) than draft-eligibility status alone. Although men with numbers above the
+eligibility ceiling were not drafted, the ceiling was unknown in advance. Some men therefore volunteered
+in the hope of serving under better terms and gaining some control over the timing of their service. The
+pressure to become a draft-induced volunteer was high for men with low lottery numbers, but low for men
+with high numbers. As a result, there is variation in P[di = 1jri] even for values strictly above or below the
+draft-eligibility cuto¤. For example, men born in 1950 with lottery numbers 200 –225 were more likely to
+serve than those with lottery numbers 226 –250, though ultimately no one in either group was drafted.
+The Wald estimator using draft-eligibility as an instrument for men born in 1950 compares the earnings
+of men with ri < 195 to the earnings of men with ri > 195. But the previous discussion suggests the
+possibility of many more comparisons, for example men with ri  25 vs. men with ri 2 [26   50]; men
+with ri 2 [51   75] vs. men with ri 2 [76   100], and so on, until these 25-number intervals are exhausted.
+We might also make the intervals …ner, comparing, say, men in 5-number or single-number intervals instead
+of 25-number intervals. The result of this expansion in the set of comparisons is a set of Wald estimators.
+These sets are complete in that the intervals partition the support of the underlying instrument, while the
+individual estimators are linearly independent in the sense that their numerators are linearly independent.
+Finally, each of these Wald estimators consistently estimates the same causal e¤ect, assumed here to be
+constant, as long as ri is independent of potential outcomes and correlated with veteran status (i.e., the
+Wald denominators are not zero).
+9An exception is the classical measurement error model, where both the variable to be instrument and the instrument are
+assumed to be continuous.
+Here, we have in mind IV scenarios involving omitted variables bias.
+
+--- PDF p125 ---
+4.3. TWO-SAMPLE IV AND SPLIT-SAMPLE IVF
+109
+hand, in cases where the underlying IV estimates are quite precise, the fact that the over-ID statistic rejects
+need not point to an identi…cation failure. Rather, this may be evidence of treatment e¤ect heterogeneity, a
+possibility we discuss further below. On the conceptual side, however, an understanding of the anatomy of
+the 2SLS minimand is invaluable, for it once again highlights the important link between grouped data and
+IV. This link takes the mystery out of estimation and testing with instrumental variables and forces us to
+confront the raw moments that are the foundation for causal inference.
+4.3
+Two-Sample IV and Split-Sample IVF
+The GMM interpretation of 2SLS highlights the fact that the IV estimator can be constructed from sample
+moments alone, with no micro data. Returning to the sample moment condition, (4.2.3), and re-arranging
+slightly produces a regression-like equation involving second moments:
+Z0y
+N
+= Z0W
+N
+  + Z0
+N
+(4.3.1)
+GLS estimates of   in (4.3.1) are consistent because E
+h
+Z0y
+N
+i
+= E
+h
+Z0W
+N
+i
+ .
+The 2SLS minimand can be thought of as GLS applied to equation (4.3.1), after multiplying by
+p
+N to
+keep the residual from disappearing as the sample size gets large. In other words, 2SLS minimizes a quadratic
+form in the residuals from (4.3.1) with a (possibly non-diagonal) weighting matrix.18 An important insight
+that comes from writing the 2SLS problem in this way is that we do not need the individual observations
+in our sample to estimate (4.3.1). Just as with the OLS coe¢ cient vector, which can be constructed from
+the sample conditional mean function, IV estimators can also be constructed from sample moments. The
+moments needed for IV are Z0y
+N
+and Z0W
+N . The dependent variable, Z0y
+N , is a vector of dimension [k+q]  1.
+The regressor matrix, Z0W
+N , is of dimension [k+q]  [k+1]. The second-moment equation cannot be solved
+exactly unless q= 1 so it makes sense to make the …t as good as possible by minimizing a quadratic form in
+the residuals. The most e¢ cient weighting matrix for this purpose is the asymptotic covariance matrix of
+Z0
+p
+N . This again produces the 2SLS minimand, ^JN(^g).
+A related insight is the fact that the moment matrices on the left and right hand side of the equals sign
+in equation (4.3.1) need not come from the same data sets provided these data sets are drawn from the
+same population. This observation leads to the two-sample instrumental variables (TSIV) estimator used
+by Angrist (1990) and developed formally in Angrist and Krueger (1992)19. Brie‡y, let Z1 and y1 denote
+18A quadratic form is the matrix-weighted product, x0Ax, where x is a random vector of, say, dimension k and A is a kk
+matrix of constants.
+19Applications of TSIV include Bjorklund and Jantti (1997), Jappelli, Pischke, and Souleles (1998), Currie and Yelowitz
+(2000), and Dee and Evans (2003).
+In a recent paper, Inoue and Solon (2005) compare the asymptotic distributions of
+alternative TSIV estimators, and introduce a maximum likelihood (LIML-type) version of TSIV. They also correct a mistake
+in the distribution theory in Angrist and Krueger (1995), discussed further, below.
+
+--- PDF p126 ---
+110
+CHAPTER 4. INSTRUMENTAL VARIABLES IN ACTION
+the instrument/covariate matrix and dependent variable vector in data set 1 of size N1 and let Z2 and W2
+denote the instrument /covariate matrix and endogenous variable/covariate matrix in data set 2 of size N2.
+Assuming plim
+
+Z0
+2W2
+N2
+
+= plim
+
+Z0
+1W1
+N1
+
+, GLS estimates of the two-sample moment equation
+Z0
+1y1
+N1
+= Z0
+2W2
+N2
+  +
+Z0
+1W1
+N1
+  Z0
+2W2
+N2
+
+  + Z0
+11
+N1
+
+are also consistent for  . The limiting distribution of this estimator is obtained by normalizing by pN1 and
+assuming plim
+
+N2
+N1
+
+is a constant.
+The utility of TSIV comes from the fact that it widens the scope for IV estimation to situations where
+observations on dependent variables, instruments, and the endogenous variable of interest are hard to …nd
+in a single sample. It may be easier to …nd one data set that has information on outcomes and instruments,
+with which the reduced form can be estimated, and another data set which has information on endogenous
+variables and instruments, with which the …rst stage can be estimated. For example, in Angrist (1990),
+administrative records from the Social Security Administration (SSA) provide information on the dependent
+variable (annual earnings) and the instruments (draft lottery numbers coded from dates of birth, as well as
+covariates for race and year of birth). The SSA, however, does not track participants’veteran status. This
+information was taken from military records, which also contain dates of birth that can used to code lottery
+numbers. Angrist (1990) used these military records to construct Z0
+2W2
+N2 , the …rst-stage correlation between
+lottery numbers and veteran status conditional on race and year of birth, while the SSA data were used to
+construct Z0
+1y1
+N1 .
+Two further simpli…cations make TSIV especially easy to use.
+First, as noted previously, when the
+instruments consist of a full set of mutually exclusive dummy variables, as in Angrist (1990) and Angrist
+and Krueger (1992), the second moment equation, (4.3.1), simpli…es to a model for conditional means. In
+particular, the 2SLS minimand for the two-sample problem becomes
+^JN(^g) =
+X
+j
+!j
+ y1j   ^g0 W2j
+2 ;
+(4.3.2)
+where y1j is the mean of the dependent variable at instrument/covariate value j in one sample, W2j is the
+mean of endogenous variables and covariates at instrument/covariate value j in a second sample, and !j is
+an appropriate weight. This amounts to weighted least squares estimation of the VIV equation, except that
+the dependent and independent variables do not come from the same sample. Again, Angrist (1990) and
+Angrist and Krueger (1992) provide illustrations. The optimal weights for asymptotically e¢ cient TSIV are
+given by variance of y1j   ^g0 W2j. This variance is a¤ected by the fact that moments come from di¤erent
+samples, as are the TSIV standard errors, which are easy to compute in the dummy-instrument case since
+the estimator is equivalent to weighted least squares.
+
+--- PDF p127 ---
+4.4. IV WITH HETEROGENEOUS POTENTIAL OUTCOMES
+111
+Second, Angrist and Krueger (1995) introduced a computationally attractive TSIV-type estimator that
+requires no matrix manipulation and can be implemented with ordinary regression software. This estimator,
+called Split-Sample IV (SSIV), works as follows.20 The …rst-stage estimates in data set two are given by
+(Z0
+2Z2) 1Z0
+2W2.
+These …tted values can be carried over to data set 1 by constructing the cross-sample
+…tted value, ^W12  Z1(Z0
+2Z2) 1Z0
+2W2. The SSIV second stage is a regression of y1 on ^W12. The correct
+limiting distribution for this estimator is derived in Inoue and Solon (2005), who show that the limiting
+distribution presented in Angrist and Krueger (1992) requires the assumption that Z0
+1Z1 = Z0
+2Z2 (as would
+be true if the marginal distribution of the instruments and covariates is …xed in repeated samples). It’s
+worth noting, however, that the limiting distributions of SSIV and 2SLS are the same when the coe¢ cient
+on the endogenous variable is zero. The standard errors for this special case are simple to construct and
+probably provide a reasonably good approximation to the general case.21
+4.4
+IV with Heterogeneous Potential Outcomes
+The discussion of IV up to this point postulates a constant causal e¤ect. In the case of a dummy variable
+like veteran status, this means y1i y0i =  for all i, while with a multi-valued treatment like schooling,
+this means Ysi   Ys 1;i =  for all s and all i.
+Both are highly stylized views of the world, especially the
+multi-valued case which imposes linearity as well as homogeneity. To focus on one thing at a time in a
+heterogeneous-e¤ects model, we start with a zero-one causal variable. In this context, we’d like to allow for
+treatment-e¤ect heterogeneity, in other words, a distribution of causal e¤ects across individuals.
+Why is treatment-e¤ect heterogeneity important?
+The answer lies in the distinction between the two
+types of validity that characterize a research design. Internal validity is the question of whether a given design
+successfully uncovers causal e¤ects for the population being studied. A randomized clinical trial or, for that
+matter, a good IV study, has a strong claim to internal validity.
+External validity is the predictive value
+of the study’s …ndings in a di¤erent context. For example, if the study population in a randomized trial is
+especially likely to bene…t from treatment, the resulting estimates may have little external validity. Likewise,
+20Angrist and Krueger called this estimator SSIV because they were concerned with a scenario where a single data set is
+deliberately split in two. As discussed in Section (4.6.4), the resulting estimator may have less bias than conventional 2SLS.
+Inoue and Solon (2005) refer to the estimator Angrist and Krueger (1995) called SSIV as Two-sample 2SLS or TS2SLS.
+21This shortcut formula uses the standard errors from the manual SSIV second stage.
+The correct asymptotic covariance
+matrix formula, from Inoue and Solon (2005), is
+fB[(11 +  022 )A] 1Bg 1
+where B=plim
+ Z0
+2W2
+N2
+
+= plim
+ Z0
+1W1
+N1
+
+; A = plim
+ Z0
+1Z1
+N1
+
+= plim
+
+Z2Z2
+N2
+
+,
+plim
+
+N2
+N1
+
+= ; 11 is the variance of the
+reduced-form residual in data set 1, and 22 is the variance of the …rst-stage residual in data set 2.
+In principle, these pieces
+are easy enough to calculate.
+Other approaches to SSIV inference include those of Dee and Evans (2003), who calculate
+standard errors for just-identi…ed models using the delta-method, and Bjorklund and Jantti (1997), who use a bootstrap.
+
+--- PDF p128 ---
+112
+CHAPTER 4. INSTRUMENTAL VARIABLES IN ACTION
+draft-lottery estimates of the e¤ects of conscription for service in the Vietnam era need not be a good measure
+of the consequences of voluntary military service. An econometric framework with heterogeneous treatment
+e¤ects helps us to assess both the internal and external validity of IV estimates.22
+4.4.1
+Local Average Treatment E¤ects
+In an IV framework, the engine that drives causal inference is the instrument, zi, but the variable of interest
+is still di. This feature of the IV setup leads us to adopt a generalized potential-outcomes concept, indexed
+against both instruments and treatment status. Let yi(d; z) denote the potential outcome of individual i
+were this person to have treatment status di = d and instrument value zi = z. This tells us, for example,
+what the earnings of i would be given alternative combinations of veteran status and draft-eligibility status.
+The causal e¤ect of veteran status given i’s realized draft-eligibility status is yi(1;zi) yi(0;zi), while the
+causal e¤ect of draft-eligibility status given i’s veteran status is yi(di; 1) yi(di; 0).
+We can think of instrumental variables as initiating a causal chain where the instrument, zi, a¤ects the
+variable of interest, di, which in turn a¤ects outcomes, yi. To make this precise, we need notation to express
+the idea that the instrument has a causal e¤ect on di.
+Let d1i be i’s treatment status when zi = 1, while
+d0i is i’s treatment status when zi = 0: Observed treatment status is therefore
+di = d0i + (d1i   d0i)zi = 0 + 1izi + i:
+(4.4.1)
+In random-coe¢ cients notation, 0  E[d0i] and 1i  (d1i d0i), so 1i is the heterogeneous causal e¤ect
+of the instrument on di. As with potential outcomes, only one of the potential treatment assignments, d1i
+and d0i, is ever observed for any one person. In the draft lottery example, d0i tells us whether i would serve
+in the military if he draws a high (draft-ineligible) lottery number, while d1i tells us whether i would serve if
+he draws a low (draft-eligible) lottery number. We get to see one or the other of these potential assignments
+depending on zi. The average causal e¤ect of zi on di is E[1i].
+The …rst assumption in the heterogeneous framework is that the instrument is as good as randomly as-
+signed: it is independent of the vector of potential outcomes and potential treatment assignments. Formally,
+this can be written
+[fyi(d; z); 8 d; zg; d1i; d0i] q zi;
+(4.4.2)
+Independence is su¢ cient for a causal interpretation of the reduced form, i.e., the regression of yi on zi.
+22The distinction between internal and external validity is relatively new to applied econometrics but has a long history in
+social science.
+See, for example, the chapter-length discussion in Shadish, Cook, and Campbell (2002), the successor to a
+classic text on research methods by Campbell and Stanley (1963).
+
+--- PDF p129 ---
+4.4. IV WITH HETEROGENEOUS POTENTIAL OUTCOMES
+113
+Speci…cally,
+E [yijzi = 1]   E [yijzi = 0]
+=
+E [yi(d1i; 1)jzi = 1]   E [yi(d0i; 0)jzi = 0]
+=
+E [yi(d1i; 1)   yi(d0i; 0)] ;
+the causal e¤ect of the instrument on yi.
+Independence also means that
+E [dijzi = 1]   E [dijzi = 0]
+=
+E [d1ijzi = 1]   E [d0ijzi = 0]
+=
+E [d1i   d0i] ;
+in other words, the …rst-stage from our earlier discussion of 2SLS captures the causal e¤ect of zi on di:
+The second key assumption in the heterogeneous-outcomes framework is the presumption that yi(d; z)
+is only a function of d.23 To be speci…c, while draft-eligibility clearly a¤ects veteran status, an individual’s
+potential earnings as a veteran are assumed to be unchanged by draft-eligibility status; while potential
+earnings as a nonveteran are similarly una¤ected. In general, the claim that an instrument operates through
+a single known causal channel is called an exclusion restriction. In a linear model with constant e¤ects, the
+exclusion restriction is expressed by the omission of the instrument from the causal equation of interest, or,
+equivalently, E[zii] = 0 in equation (4.1.14).
+It’s worth noting that the traditional error-term notation
+used for simultaneous equations models doesn’t lend itself to a clear distinction between independence and
+exclusion.
+We need zi and i to be uncorrelated in this equation, but the reasoning that lies behind this
+assumption is unclear until we consider both the independence and exclusion restrictions.
+The exclusion restriction fails for draft-lottery instruments if men with low draft lottery numbers were
+a¤ected in some way other than through an increased likelihood of service.
+For example, Angrist and
+Krueger (1992) looked for an association between draft lottery numbers and schooling. Their idea was that
+educational draft deferments would have led men with low lottery numbers to stay in college longer than
+they would have otherwise desired. If so, draft lottery numbers are correlated with earnings for at least two
+reasons: an increased likelihood of military service and an increased likelihood of college attendance.
+The
+fact that the lottery number is randomly assigned (and therefore satis…es the independence assumption) does
+not make this possibility less likely.
+The exclusion restriction is distinct from the claim that the instrument
+is (as good as) randomly assigned.
+Rather, it is a claim about a unique channel for causal e¤ects of the
+instrument.24
+Using the exclusion restriction, we can de…ne potential outcomes indexed solely against treatment status
+23Hirano, Imbens, Rubin and Zhou (2000) note that the exclusion restriction that yi(d; z) equals yi(d; z0) can be weakened
+to require only that the distributions of yi(d; z) and yi(d; z0) be the same.
+24As it turns out, there is not much of a relationship between schooling and lottery numbers in the Angrist and Krueger
+(1992) data, probably because educational deferments were phased out during the lottery period.
+
+--- PDF p130 ---
+114
+CHAPTER 4. INSTRUMENTAL VARIABLES IN ACTION
+using the single-index (y1i;y0i) notation we have been using all along. In particular,
+y1i
+
+yi(1; 1) = yi(1; 0);
+y0i
+
+yi(0; 1) = yi(0; 0):
+(4.4.3)
+The observed outcome, yi, can therefore be written in terms of potential outcomes as:
+yi
+=
+yi(0; zi) + [yi(1; zi)   yi(0; zi)]di
+(4.4.4)
+=
+y0i + (y1i   y0i)di:
+A random-coe¢ cients notation for this is
+yi = 0 + idi + i;
+a compact version of (4.4.4) with 0  E[y0i] and i y1i y0i.
+A …nal assumption needed for heterogeneous IV models is that either 1i  0 for all i or 1i  0 for all i.
+This monotonicity assumption, introduced by Imbens and Angrist (1994), means that while the instrument
+may have no e¤ect on some people, all of those who are a¤ected are a¤ected in the same way. In other words,
+either d1i d0i or d1i d0i for all i. In what follows, we assume monotonicity holds with d1i d0i. In the
+draft-lottery example, this means that although draft-eligibility may have had no e¤ect on the probability
+of military service for some men, there is no one who was actually kept out of the military by being draft-
+eligible. Without monotonicity, instrumental variables estimators are not guaranteed to estimate a weighted
+average of the underlying individual causal e¤ects, y1i y0i.
+Given the exclusion restriction, the independence of instruments and potential outcomes, the existence
+of a …rst stage, and monotonicity, the Wald estimand can be interpreted as the e¤ect of veteran status on
+those whose treatment status can be changed by the instrument. This parameter is called the local average
+treatment e¤ect ((LATE); Imbens and Angrist, 1994). Here is a formal statement:
+Theorem 4.4.1 THE LATE THEOREM. Suppose
+(A1, Independence) fyi(d1i; 1);y0i(d0i; 0);d1i;d0igqzi;
+(A2, Exclusion) yi(d; 0) =yi(d; 1) ydi for d = 0; 1;
+(A3, First-stage), E[d1i d0i] 6= 0
+(A4, Monotonicity) d1i d0i  08i, or vice versa;
+Then
+E[yijzi = 1]   E[yijzi = 0]
+E[dijzi = 1]   E[dijzi = 0] = E[y1i   y0ijd1i > d0i] = E[ij1i > 0]:
+Proof. Use the exclusion restriction to write E[yijzi = 1] = E[y0i + (y1i y0i)dijzi = 1], which equals
+
+--- PDF p131 ---
+4.4. IV WITH HETEROGENEOUS POTENTIAL OUTCOMES
+115
+E[y0i + (y1i y0i)d1i] by independence. Likewise E[yijzi = 0] = E[y0i + (y1i y0i)d0i], so the numerator of
+the Wald estimator is E[(y1i y0i)(d1i d0i)]. Monotonicity means d1i d0i equals one or zero, so
+E[(y1i   y0i)(d1i   d0i)] = E[y1i   y0ijd1i > d0i]P[d1i > d0i]:
+A similar argument shows
+E[dijzi = 1]   E[dijzi = 0] = E[d1i   d0i] = P[d1i > d0i]:
+This theorem says that an instrument which is as good as randomly assigned, a¤ects the outcome through
+a single known channel, has a …rst-stage, and a¤ects the causal channel of interest only in one direction, can
+be used to estimate the average causal e¤ect on the a¤ected group. Thus, IV estimates of e¤ects of military
+service using the draft lottery estimate the e¤ect of military service on men who served because they were
+draft-eligible, but would not otherwise have served. This obviously excludes volunteers and men who were
+exempted from military service for medical reasons, but it includes men for whom draft policy was binding.
+How useful is LATE? No theorem answers this question, but it’s always worth discussing.
+Part of the
+interest in the e¤ects of Vietnam-era service revolves around the question of whether veterans (especially,
+conscripts) were adequately compensated for their service.
+Internally valid draft lottery estimates answer
+this question.
+Draft lottery estimates of the e¤ects of Vietnam-era conscription may also be relevant for
+discussions of any future conscription policy. On the other hand, while draft lottery instruments produce
+internally valid estimates of the causal e¤ect of Vietnam-era conscription, the external validity - i.e., the
+predictive value of these estimates for military service in other times and places - is not directly addressed
+by the IV framework. There is nothing in IV formulas to explain why Vietnam-era service a¤ects earnings;
+for that, you need a theory.25
+You might wonder why we need monotonicity for the LATE theorem, an assumption that plays no role
+in the traditional simultaneous-equations framework with constant e¤ects. A failure of monotonicity means
+the instrument pushes some people into treatment while pushing others out.
+Angrist, Imbens, and Rubin
+(1996) call the latter group de…ers.
+De…ers complicate the link between LATE and the reduced form.
+To
+see why, go back to the step in the proof of the LATE theorem which shows the reduced form is
+E[yijzi = 1]   E[yijzi = 0] = E[(y1i   y0i)(d1i   d0i)]:
+25Angrist (1990) interprets draft lottery estimates as the penalty for lost labor market experience. This suggests draft lottery
+estimates should have external validity for the e¤ects of conscription in other periods, a conjecture born out by the results for
+WWII draftees in Angrist and Krueger (1994).
+
+--- PDF p132 ---
+116
+CHAPTER 4. INSTRUMENTAL VARIABLES IN ACTION
+Without monotonicity, this is equal to
+E[y1i   y0ijd1i > d0i]P[d1i > d0i]   E[y1i   y0ijd1i < d0i]P[d1i < d0i]:
+We might therefore have a scenario where treatment e¤ects are positive for everyone yet the reduced form
+is zero because e¤ects on compliers are canceled out by e¤ects on de…ers.
+This doesn’t come up in a
+constant-e¤ects model because the reduced form is always the constant e¤ect times the …rst stage regardless
+of whether the …rst stage includes de…ant behavior.26
+A deeper understanding of LATE can be had by linking it to a workhorse of contemporary econometrics,
+the latent-index model for "dummy endogenous variables" like assignment to treatment.
+These models
+describe individual choices as determined by a comparison of partly observed and partly unknown (“latent”)
+utilities and costs (see, e.g., Heckman, 1978). Typically, these unobservables are thought of as being related
+to outcomes, in which case the treatment variable is said to be endogenous (though it is not really endogenous
+in a simultanenous-equations sense). For example (ignoring covariates), we might model veteran status as
+di =
+8
+>
+<
+>
+:
+1
+if 0 + 1zi > vi
+0
+otherwise
+;
+where vi is a random factor involving unobserved costs and bene…ts of military service assumed to be
+independent of zi. This latent-index model characterizes potential treatment assignments as:
+d0i = 1[0 > vi] and d1i = 1[0 + 1 > vi]:
+Note that in this model, monotonicity is automatically satis…ed since 1 is a constant. Assuming 1 > 0,
+LATE can be written
+E[y1i   y0ijd1i > d0i] = E[y1i   y0ij0 + 1 > vi > 0];
+which is a function of the latent …rst-stage parameters, 0 and 1, as well as the joint distribution of y1i y0i
+and vi.
+This is not, in general, the same as the population average treatment e¤ect, E[y1i y0i], or the
+26With a constant e¤ect, ;
+E[y1i   y0ijd1i
+>
+d0i]P[d1i > d0i]
+ E[y1i   y0ijd1i
+<
+d0i]P[d1i < d0i]:
+=
+fP[d1i > d0i]   P[d1i < d0i]g
+=
+fE[d1i   d0i]g:
+So a zero reduced form e¤ect means either the …rst stage is zero or  = 0.
+
+--- PDF p133 ---
+4.4. IV WITH HETEROGENEOUS POTENTIAL OUTCOMES
+117
+e¤ect on the treated, E[y1i y0ijdi = 1]. We explore the distinction between di¤erent average causal e¤ects
+in Section 4.4.2.
+4.4.2
+The Compliant Subpopulation
+The LATE framework partitions any population with an instrument into a set of three instrument-dependent
+subgroups, de…ned by the manner in which members of the population react to the instrument:
+De…nition 4.4.1 Compliers. The subpopulation with d1i = 1 and d0i = 0:
+Always-takers. The subpopulation with d1i =d0i = 1:
+Never-takers. The subpopulation with d1i =d0i = 0:
+LATE is the e¤ect of treatment on the population of compliers.
+The term "compliers" comes from
+an analogy with randomized trials where some experimental subjects comply with the randomly assigned
+treatment protocol (e.g., take their medicine) but some do not, while some control subjects obtain access to
+the experimental treatment even though they were not supposed to.
+Those who don’t take their medicine
+when randomly assigned to do so are never-takers while those who take the medicine even when put into the
+control group are always-takers. Without adding further assumptions (e.g., constant causal e¤ects), LATE
+is not informative about e¤ects on never-takers and always-takers because, by de…nition, treatment status
+for these two groups is unchanged by the instrument (random assignment). The analogy between IV and a
+randomized trial with partial compliance is more than allegorical - IV solves the problem of causal inference
+in a randomized trial with partial compliance. This important point merits a separate subsection, below.
+Before turning to this important special case, we make a few general points.
+First, the average causal
+e¤ect on compliers is not usually the same as the average treatment e¤ect on the treated. From the simple
+fact that di =d0i +(d1i d0i)zi, we learn that the treated population consists of two non-overlapping groups.
+By monotonicity, we cannot have both d0i = 1 and d1i d0i = 1 since d0i = 1 implies d1i = 1: The treated
+therefore have either d0i = 1 or d1i d0i = 1 and zi = 1, and hence di can be written as the sum of two
+mutually-exclusive dummies, di0 and (d1i d0i)zi.
+The treated consist of either always-takers or compliers
+with the instrument switched on. Since the instrument is as good as randomly assigned, compliers with the
+instrument switched on are representative of all compliers. From here we get
+E [y1i   y0ijdi = 1]
+|
+{z
+}
+e¤ect on the treated
+(4.4.5)
+=
+E[y1i   y0ijd0i = 1]P[d0i = 1jdi = 1]
++E [y1i   y0ijd1i > d0i; zi = 1] P [d1i > d0i; zi = 1jdi = 1]
+=
+E[y1i   y0ijd0i = 1]
+|
+{z
+}
+e¤ect on always-takers
+P[d0i = 1jdi = 1]
++E [y1i   y0ijd1i > d0i]
+|
+{z
+}
+e¤ect on compliers
+P [d1i > d0i; zi = 1jdi = 1]
+
+--- PDF p134 ---
+118
+CHAPTER 4. INSTRUMENTAL VARIABLES IN ACTION
+Since P[d0i = 1jdi = 1] and P[d1i >d0i;zi = 1jdi = 1] add up to one, this means that the e¤ect of treatment
+on the treated is a weighted average of e¤ects on always-takers and compliers.
+Likewise, LATE is not the average causal e¤ect of treatment on the non-treated, E[y1i y0ijdi = 0]. In
+the draft-lottery example, the average e¤ect on the non-treated is the average causal e¤ect of military service
+on the population of non-veterans from the Vietnam-era cohorts.
+The average e¤ect of treatment on the
+non-treated is a weighted average of e¤ects on never-takers and compliers. In particular,
+E [y1i   y0ijdi = 0]
+|
+{z
+}
+e¤ect on the non-treated
+(4.4.6)
+=
+E [y1i   y0ijd1i = 0]
+|
+{z
+}
+e¤ect on never-takers
+P [d1i = 0jdi = 0]
++E [y1i   y0ijd1i > d0i]
+|
+{z
+}
+e¤ect on compliers
+P [d1i > d0i; zi = 0jdi = 0] ;
+where we use the fact that, by monotonicity, those with d1i = 0 must be never-takers.
+Finally, averaging (4.4.5) and (4.4.6) using
+E[y1i   y0i] = E[y1i   y0ijdi = 1]P[di = 1] + E[y1i   y0ijdi = 0]P[di = 0]
+shows the overall population average treatment e¤ect to be a weighted average of e¤ects on compliers, always-
+takers, and never-takers. Of course, this is a conclusion we could have reached directly given monotonicity
+and the de…nition at the beginning of this subsection.
+Because an instrumental variable is not directly informative about e¤ects on always-takers and never-
+takers, instruments do not usually capture the average causal e¤ect on all of the treated or on all of the
+non-treated.
+There are important exceptions to this rule, however: instrumental variables that allow no
+always-takers or no never-takers. Although this scenario is not typical, it is an important special case. One
+example is the twins instrument for fertility, used by Rosenzweig and Wolpin (1980), Bronars and Grogger
+(1994), Angrist and Evans (1998), and Angrist, Lavy, and Schlosser (2006). Another is Oreopoulos’(2006)
+recent study using changes in compulsory attendance laws as instruments for schooling in Britain.
+To see how this special case works with twins instruments, let ti be a dummy variable indicating multiple
+second births. Angrist and Evans (1998) used this instrument to estimate the causal e¤ect of having three
+children on earnings in the population of women with at least two children.
+The third child is especially
+interesting because reduced fertility for American wives in the 1960s and 1970s meant a switch from three
+children to two. Multiple second births provide quasi-experimental variation on this margin. Let y0i denote
+potential earnings if a woman has only two children while y1i denotes her potential earnings if she has three,
+an event indicated by di. Assuming that ti is randomly assigned, i.e., that fertility increases by at most one
+child in response to a multiple birth, and that multiple births a¤ect outcomes only by increasing fertility,
+
+--- PDF p135 ---
+4.4. IV WITH HETEROGENEOUS POTENTIAL OUTCOMES
+119
+LATE using the twins instrument, ti, is also E[y1i y0ijdi = 0], the average causal e¤ect on women who
+are not treated (i.e., have two children only).
+This is because all women who have a multiple second birth
+end up with three children, i.e., there are no never-takers in response to the twins instrument.
+Oreopoulos (2006) also uses IV to estimate an average causal e¤ect of treatment on the non-treated. His
+study estimates the economic returns to schooling using an increase in the British compulsory attendance
+age from 14 to 15. Compliance with the Britain’s new compulsory attendance law was near perfect, though
+many teens would previously have dropped out of school at age 14. The causal e¤ect of interest in this case
+is the earnings premium for an additional year of high-school. Finishing this year can be thought of as the
+treatment.
+Since everybody in Oreopoulos’British sample …nishes the additional year when compulsory
+schooling laws are made stricter, Oreopoulos’IV strategy captures the average causal e¤ect of obtaining one
+more year of high school on all those who leave school at 14.
+This turns on the fact that British teens are
+remarkably law-abiding people - Oreopoulos’IV strategy wouldn’t estimate the e¤ect of treatment on the
+non-treated in, say, Israel, where teenagers get more leeway when it comes to compulsory school attendance.
+Israeli econometricians using changes in compulsory attendance laws as instruments must therefore make do
+with LATE.
+4.4.3
+IV in Randomized Trials
+The language of the LATE framework is based on an analogy between IV and randomized trials. But some
+instruments really come from randomized trials. If the instrument is a randomly assigned o¤er of treatment,
+then LATE is the e¤ect of treatment on those who comply with the o¤er but are not treated otherwise. An
+especially important case is when the instrument is generated by a randomized trial with one-sided non-
+compliance. In many randomized trials, participation is voluntary among those randomly assigned to receive
+treatment.
+On the other hand, no one in the control group has access to the experimental intervention.
+Since the group that receives (i.e., complies with) the assigned treatment is a self-selected subset of those
+o¤ered treatment, a comparison between those actually treated and the control group is misleading.
+The
+selection bias in this case is almost always positive: those who take their medicine in a randomized trial
+tend to be healthier; those who take advantage of randomly assigned economic interventions like training
+programs tend to earn more anyway.
+IV using the randomly assigned treatment intended as an instrumental variable for treatment received
+solves this sort of compliance problem. Moreover, LATE is the e¤ect of treatment on the treated in this case.
+Suppose the instrument, zi, is a dummy variable indicating random assignment to a treatment group, while
+di is a dummy indicating whether treatment was actually received. In practice, because of non-compliance,
+di is not equal to zi. An example is the randomized evaluation of the JTPA training program, where only
+60 percent of those assigned to be trained received training, while roughly 2 percent of those assigned to the
+control group received training anyway (Bloom, et al., 1997). Non-compliance in the JTPA arose from lack
+
+--- PDF p136 ---
+120
+CHAPTER 4. INSTRUMENTAL VARIABLES IN ACTION
+of interest among participants and the failure of program operators to encourage participation.
+Since the
+compliance problem in this case is largely con…ned to the treatment group, LATE using random assignment,
+zi, as an instrument for treatment received, di, is the e¤ect of treatment on the treated.
+This use of IV to solve the compliance problems is illustrated in Table 4.4.1, which presents results
+from the JTPA experiment.
+The outcome variable of primary interest in the JTPA experiment is total
+earnings in the 30-month period after random assignment.
+Columns 1-2 of the table show the di¤erence
+in earnings between those who were trained and those who were not (the estimates in column 2 are from
+a regression model that adjusts for a number of individual characteristics measured at the beginning of the
+experiment. The contrast reported in columns 1-2 is on the order of $4,000 for men and $2,200 for women,
+in both cases a large treatment e¤ect that amounts to about 20 percent of average earnings.
+But these
+estimates are misleading because they compare individuals according to di, the actual treatment received.
+Since individuals assigned to the treatment group were free to decline (and 40% did so), this comparison
+throws away the random assignment unless the decision to accept treatment is itself independent of potential
+outcomes. This seems unlikely.
+
+--- PDF p137 ---
+4.4. IV WITH HETEROGENEOUS POTENTIAL OUTCOMES
+121
+Table 4.4.1: Results from the JTPA experiment: OLS and IV estimates of training impacts
+Comparisons by
+Comparisons by
+Instrumental Variable
+Training Status
+Assignment Status
+Estimates
+Without
+With
+Without
+With
+Without
+With
+Covariates
+Covariates
+Covariates
+Covariates
+Covariates
+Covariates
+(1)
+(2)
+(3)
+(4)
+(5)
+(6)
+A. Men
+3,970
+3,754
+1,117
+970
+1,825
+1,593
+(555)
+(536)
+(569)
+(546)
+(928)
+(895)
+B. Women
+2,133
+2,215
+1,243
+1,139
+1,942
+1,780
+(345)
+(334)
+(359)
+(341)
+(560)
+(532)
+Notes: The table reports OLS, reduced-form, and IV estimates of the e¤ect of subsidized training on earnings in
+the JTPA experiment. Columns (1) and (2) show di¤erences in earnings by training status; columns (3) and (4)
+show di¤erences by random-assignment status. Columns (5) and (6) report the result of using random-assignment
+status as an instrument for training. The covariates used in columns (2), (5) and (6) are High school or GED,
+Black, Hispanic, Married, Worked less than 13 weeks in past year, AFDC (for women), plus indicators for the service
+strategy recommended, age group and second follow-up survey. Robust standard errors are shown in parenthesis.
+
+--- PDF p138 ---
+122
+CHAPTER 4. INSTRUMENTAL VARIABLES IN ACTION
+Columns 3 and 4 of Table 4.4.1. compare individuals according to whether they were o¤ered treatment.
+In other words, this comparison is based on randomly assigned zi: In the language of clinical trials, the
+contrast in columns 3-4 is known as the intention-to-treat (ITT) e¤ect. The intention-to-treat e¤ects in the
+table are on the order $1,200 (somewhat less with covariates).
+Since zi was randomly assigned, the ITT
+e¤ect have a causal interpretation: they tell us the causal e¤ect of the o¤er of treatment, building in the fact
+that many of those o¤ered will decline.
+For this reason, the ITT e¤ect is too small relative to the average
+causal e¤ect on those who were in fact treated.
+Columns 5 and 6 put the pieces together and give us the
+most interesting e¤ect: intention-to-treat divided by the di¤erence in compliance rates between treatment
+and control groups as originally assigned (about .6).
+These …gures, roughly $1,800, estimate the e¤ect of
+treatment on the treated.
+How do we know the that ITT-divided-by-compliance is the e¤ect of treatment on the treated? We can
+recognize ITT as the reduced-form e¤ect of the randomly assigned o¤er of treatment, our instrument in this
+case.
+The compliance rate is the …rst stage associated with this instrument, and the Wald estimand, as
+always, is the reduced-form divided by the …rst-stage.
+In general this equals LATE, but because we have
+(almost) no always-takers, the treated population consists (almost) entirely of compliers. The IV estimates
+in column 5 and 6 of Table 4.4.1 are therefore consistent estimates of the e¤ect of treatment on the treated.
+This conclusion is important enough that it warrants an alternative derivation.
+To the best of our
+knowledge the …rst person to point out that the IV formula can be used to estimate the e¤ect of treatment
+on the treated in a randomized trial with one-sided non-compliance was Howard Bloom (1984).
+Here is
+Bloom’s result with a simple direct proof.
+Theorem 4.4.2 THE BLOOM RESULT. Suppose the assumptions of the LATE theorem hold, and E[dijzi =
+0] = 0: Then
+E[yijzi = 1]   E[yijzi = 0]
+E[dijzi = 1]
+= E[y1i   y0ijdi = 1]:
+Proof. E[yijzi = 1] = E[yi0 + (y1i y0i)dijzi = 1], while E[yijzi = 0] = E[yi0jzi = 0] because E[dijzi =
+0] = 0: Therefore
+E[yijzi = 1]   E[yijzi = 0] = E[(y1i   y0i)dijzi = 1]
+by independence. But
+E[(y1i   y0i)dijzi = 1] = E[y1i   y0ijdi = 1; zi = 1]P[di = 1jzi = 1]
+while E[dijzi = 0] = 0 means di = 1 implies zi = 1: Hence, E[y1i y0ijdi = 1;zi = 1] = E[y1i y0ijdi = 1]
+In addition to telling us how to analyze randomized trials with non-compliance, the LATE framework
+
+--- PDF p166 ---
+150
+CHAPTER 4. INSTRUMENTAL VARIABLES IN ACTION
+while the average e¤ect on the treated is
+E[y1i   y0ijdi = 1] = Ef1[X0
+i0 + 1 > "i]   1[X0
+i0 > "i]jX0
+i0 + 1zi > vig:
+Given alterative distributional assumptions for vi and "i, these can be anything (If the error terms are
+heteroskedastic then even the sign is indeterminate).
+Under normality, the average causal e¤ects generated by the bivariate Probit model are easy to evaluate.
+The average causal e¤ect is
+E
+
+1
+
+X0
+i0 + 1 > "i
+
+  1
+
+X0
+i0 > "i
+	
+(4.6.15)
+=
+E
+
+
+X0
+i0 + 1
+
+
+  
+X0
+i0
+
+
+;
+where [] is the normal CDF. The e¤ect on the treated is a little more complicated since it involves the
+bivariate normal CDF
+E [y1i   y0ijdi = 1]
+(4.6.16)
+=
+E
+8
+<
+:
+b
+
+X0
+i0+1
+"
+; X0
+i0+1zi
+
+; "
+
+  b
+
+X0
+i0
+" ; X0
+i0+1zi
+
+; "
+
+
+
+X0
+i0+1zi
+
+
+:
+9
+=
+;
+Since the bivariate normal CDF is a canned function in many software packages, this is easy enough to
+calculate in practice.
+Bivariate Probit probably quali…es as harmless in the sense that it’s not very complicated, and easy
+to get right using packaged software routines.
+Still, it shares the disadvantages of nonlinear latent-index
+modeling discussed in the previous chapter.
+First, some researchers become distracted by an e¤ort to
+identify index coe¢ cients instead of average causal e¤ects.
+For example, a large literature in econometrics
+is concerned with the identi…cation of index coe¢ cients without the need for distributional assumptions.
+Applied researchers interested in causal e¤ects can safely ignore this work.39
+A second vice in this context is also a virtue. Bivariate Probit and other models of this sort can be
+used to identify population average causal e¤ects and/or e¤ects on the treated. 2SLS does not promise you
+average causal e¤ects, only local average causal e¤ects. But it should be clear from (4.6.15) that the assumed
+normality of the latent index error terms is essential for this.
+As always, the best you can do without a
+distributional assumption is LATE, the average causal e¤ect for compliers.
+For bivariate Probit, we can
+39Suppose the latent error term has an unknown distribution, with CDF []: The average causal e¤ect in this case is
+E
+
+
+
+X0
+i0 + 1
+
+  
+
+X0
+i0
+	
+= 0[X0
+i0 + ~1]1;
+where ~1 is in [0; 1].
+This always depends on the shape of []:
+
+--- PDF p167 ---
+4.6. IV DETAILS
+151
+write LATE as
+E [y1i   y0ijd1i > d0i]
+=
+Ef1[X0
+i0 + 1 > "i]   1[X0
+i0 > "i]jX0
+i0 + 1 > vi > X0
+i0g;
+which, like (4.6.16), can be evaluated using joint normality of vi and "i: But you needn’t bother using
+normality to evaluate E[y1i y0ijd1i >d0i], since LATE can be estimated by IV for each Xi and averaged
+using the histogram of the covariates.
+Alternately, do 2SLS and settle for a variance-weighted average of
+covariate-speci…c LATEs.
+You might be wondering whether LATE is enough.
+Perhaps you would like to estimate the average
+treatment e¤ect or the e¤ect of treatment on the treated and are willing to make a few extra assumptions to
+do so.
+That’s all well and good, but in our experience, you can’t get blood from a stone, even with heroic
+assumptions. Since local information is all that’s in the data, in practice the average causal e¤ects produced
+by bivariate Probit are likely to be similar to 2SLS estimates provided the model for covariates is su¢ ciently
+‡exible. This is illustrated in Table 4.6.1, which reports 2SLS and bivariate Probit estimates of the e¤ects
+of a third child on female labor supply using the Angrist-Evans (1998) same-sex instruments and the same
+1980 census sample of married women with 2 or more children used in their paper.
+The dependent variable
+is a dummy for having worked the previous year; the endogenous variable is a dummy for having a third
+child.
+The …rst stage e¤ect of a same-sex sibship on the probability of a third birth is about 7 percentage
+points.
+Panel A of Table 4.6.1 reports estimates from a model with no covariates. The 2SLS estimate of -.138 in
+column 1 is numerically identical to the Abadie causal e¤ect estimated using a linear model in column 2, as it
+should be in this case. Without covariates, the 2SLS slope coe¢ cient provides the best linear approximation
+to the complier causal response function as does Abadie’s kappa-weighting procedure.
+The marginal e¤ect
+changes little if, instead of a linear approximation, we use nonlinear least squares with a Probit CEF. The
+marginal e¤ect estimated by minimizing
+E
+(
+i
+
+yi   
+0 + 1di
+"
+2)
+is -.137, reported in column 3. This is not surprising since the model without covariates imposes no functional
+form assumptions.
+Perhaps more surprising is the fact that marginal e¤ects and the average treatment e¤ects calculated
+using (4.6.15) and (4.6.16) are also the same as the 2SLS and Abadie estimates. These results are reported
+in columns 4-6. The marginal e¤ect calculated using a derivative to approximate to the …nite di¤erence in
+(4.6.15) is -.138 (in column 4, labelled MFX for marginal e¤ects), while both average treatment e¤ects are
+-.139 in columns 5 and 6. Adding a few covariates has little e¤ect on the estimates, as can be seen in Panel
+
+--- PDF p168 ---
+152
+CHAPTER 4. INSTRUMENTAL VARIABLES IN ACTION
+Table 4.6.1: 2SLS, Abadie, and bivariate probit estimates of the e¤ects of a third child on female labor
+supply
+2SLS
+Abadie Estimates
+Bivariate probit
+Linear
+Probit
+MFX
+ATE
+TOT
+(1)
+(2)
+(3)
+(4)
+(5)
+(6)
+A. No Covariates
+Employment
+-0.138
+-0.138
+-0.137
+-0.138
+-0.139
+-0.139
+(0.029)
+(0.030)
+(0.030)
+(0.029)
+(0.029)
+(0.029)
+B. Some covariates (no age controls)
+Employment
+-0.132
+-0.132
+-0.131
+-0.135
+-0.135
+-0.135
+(0.029)
+(0.029)
+(0.028)
+(0.028)
+(0.028)
+(0.028)
+C. Some covariates plus age at …rst birth
+Employment
+-0.129
+-0.129
+-0.129
+-0.133
+-0.133
+-0.133
+(0.028)
+(0.028)
+(0.028)
+(0.026)
+(0.026)
+(0.026)
+D. Some covariates plus age at …rst birth and a dummy for age>30
+Employment
+-0.124
+-0.125
+-0.125
+-0.131
+-0.131
+-0.131
+(0.028)
+(0.029)
+(0.029)
+(0.025)
+(0.025)
+(0.025)
+E. Some covariates plus age at …rst birth and age
+Employment
+-0.120
+-0.121
+-0.121
+-0.171
+-0.171
+-0.171
+(0.028)
+(0.026)
+(0.026)
+(0.023)
+(0.023)
+(0.023)
+Notes: Adapted from Angrist (2001). The table compares 2SLS estimates to alternative IV-
+type estimates of the e¤ect of childbearing on labor supply using nonlinear models. Standard
+errors for the Abadie estimates were bootstrapped using 100 replications of subsamples of
+size 20,000.
+MFX denotes marginal e¤ects; ATE is the average treatment e¤ect; TOT is
+the average e¤ect of treatment on the treated.
+B. In this case, the covariates are all dummy variables, three for race (black, Hispanic, and other), and two
+indicating …rst and second-born boys (the excluded instrument is the interaction of these two).
+Panels C
+and D show that adding a linear term in age at …rst birth and a dummy for maternal age also leaves the
+estimates unchanged.
+The invariance to covariates seems desirable: since the same-sex instrument is essentially independent of
+the covariates, control for covariates is unnecessary to eliminate bias and should primarily a¤ect precision.
+Yet, as Panel E shows, the marginal e¤ects generated by bivariate Probit are sensitive to the list of covariates.
+Swapping a dummy indicating mothers over 30 with a linear age term increases the bivariate Probit estimates
+markedly, to -.171, while leaving 2SLS and the Abadie estimators unchanged. This probably re‡ects the fact
+that the linear age change induces an extrapolation into cells where there is little data. Although there is no
+harm in reporting the results in Panel E, it’s hard to see why the more robust 2SLS and Abadie estimators
+should not be featured as most likely more reliable.40
+40Angrist (2001) makes the same point using twins instruments, and reports a similar pattern in a comparison of 2SLS,
+
+--- PDF p169 ---
+4.6. IV DETAILS
+153
+4.6.4
+The Bias of 2SLSF
+It is a fortunate fact that the OLS estimator is not only consistent, it is also unbiased. This means that in a
+sample of any size, the estimated OLS coe¢ cient vector has a distribution that is centered on the population
+coe¢ cient vector.41 The 2SLS estimator, in contrast, is consistent, but biased.
+This means that the 2SLS
+estimator only promises to be close the causal e¤ect of interest in large samples. In small samples, the 2SLS
+estimator can di¤er systematically from the population estimand.
+For many years, applied researchers have lived with the knowledge that 2SLS is biased without losing
+too much sleep. Neither of us heard much about the bias of 2SLS in our graduate econometrics classes. A
+series of papers in the early 1990s changed this, however. These papers show that 2SLS estimates can be
+highly misleading in cases relevant for empirical practice.42
+The 2SLS estimator is most biased when the instruments are “weak,” meaning the correlation with
+endogenous regressors is low, and when there are many over-identifying restrictions. When the instruments
+are both many and weak, the 2SLS estimator is biased towards the probability limit of the corresponding
+OLS estimate. In the worst-case scenario for many weak instruments, when the instruments are so weak that
+there really is no …rst-stage in the population, the 2SLS sampling distribution is centered on the probability
+limit of OLS. The theory behind this result is a little technical but the basic idea is easy to see. The source
+of the bias in 2SLS estimates is the randomness in estimates of the …rst-stage …tted values. In practice, the
+…rst-stage estimates re‡ect some of the randomness in the endogenous variable since the …rst-stage coe¢ cients
+come from a regression of the endogenous variable on the instruments. If the population …rst-stage is zero,
+then all of the randomness in the …rst stage is due to the endogenous variable. This randomness turns into
+…nite-sample correlation between …rst-stage …tted values and the second-stage errors, since the endogenous
+variable is correlated with the second-stage errors (or else you wouldn’t be instrumenting in the …rst place).
+A more formal derivation of 2SLS bias goes like this. To streamline the discussion we use matrices and
+vectors and a simple constant-e¤ects model (it’s di¢ cult to discuss bias in a heterogeneous e¤ects world,
+since the target parameter may be variable across estimators). Suppose you are interested in estimating the
+e¤ect of a single endogenous regressor, stored in a vector x, on a dependent variable, stored in the vector y,
+with no other covariates. The causal model of interest can then be written
+y = x + :
+(4.6.17)
+Abadie, and nonlinear structural estimates of models for hours worked.
+Angrist (1991) compares 2SLS and bivariate Probit
+estimates in sampling experiments.
+41A more precise statement is that OLS is unbiased when, either (a) the CEF is linear or, (b) the regressors are non-stochastic,
+i.e., …xed in repeated samples. In practice, these quali…cations do not seem to matter much. As a rule, the sampling distribution
+of ^ =
+P
+i XiX0
+i
+ 1 P
+iXiyi; tends to be centered on the population analog,  = E[XiX0
+i] 1E[Xiyi] in samples of any size;
+whether or not the CEF is linear or the regressors are stochastic.
+42Key references are Nelson and Startz, (1990a,b); Buse (1992), Bekker (1994); and especially Bound, Jaeger, and Baker
+(1995).
+
+--- PDF p170 ---
+154
+CHAPTER 4. INSTRUMENTAL VARIABLES IN ACTION
+The Nq matrix of instrumental variables is Z, with the associated …rst-stage equation
+x = Z + :
+(4.6.18)
+OLS estimates of (4.6.17) are biased because i is correlated with i. The instruments, Zi are uncorrelated
+with i by construction and uncorrelated with i by assumption.
+The 2SLS estimator is
+b2SLS = (x0PZx) 1 x0PZy =  + (x0PZx) 1 x0PZ:
+where PZ = Z(Z0Z) 1Z0 is the projection matrix that produces …tted values from a regression of x on Z.
+Substituting for x in x0PZ, we get
+b2SLS    = (x0PZx) 1  0Z0 + 0
+PZ = (x0PZx) 1 0Z0 + (x0PZx) 1 0PZ
+(4.6.19)
+The bias in 2SLS comes from the nonzero expectation of terms on the right hand side.
+The expectation of (4.6.19) is hard to evaluate because the expectation operator does not pass through
+the inverse (x0PZx) 1, a nonlinear function. It’s possible to show, however, that the expectation of the ratios
+on the right hand side of (4.6.19) can be closely approximated by the ratio of expectations. In other words,
+E[b2SLS   ]  (E[x0PZx]) 1 E[0Z0] + (E[x0PZx]) 1 E[0PZ]:
+This approximation is much better than the usual …rst-order asymptotic approximation invoked in large-
+sample theory, so we think of it as giving us a good measure of the …nite-sample behavior of the 2SLS
+estimator.43
+Furthermore, because E[0Z0] = 0 and E[0Z0] = 0, we have
+E[b2SLS   ] 
+
+E (0Z0Z) + E(0PZ)
+ 1 E
+ 0PZ
+
+:
+(4.6.20)
+The approximate bias of 2SLS therefore comes from the fact that E
+ 0PZ
+
+is not zero unless i and i are
+uncorrelated. But correlation between i and i is what led us to use IV in the …rst place.
+Further manipulation of (4.6.20) generates an expression that is especially useful:
+E[b2SLS   ]  
+2
+
+"
+E (0Z0Z) =q
+2
+
++ 1
+# 1
+43See Bekker (1994) and Angrist and Krueger (1995).
+This is also called a group-asymptotic approximation because it can
+be derived from an an asymptotic sequence that lets the number instruments go to in…nity at the same time as the number of
+observations goes to in…nity, thereby keeping the number of observations per instrument constant.
+
+--- PDF p171 ---
+4.6. IV DETAILS
+155
+(see the appendix for a derivation). The term (1=2
+)E (0Z0Z) =q is the F-statistic for the joint signi…cance
+of all regressors in the …rst stage regression.44 Call this statistic F, so that we can write
+E[b2SLS   ]  
+2
+
+1
+F + 1:
+(4.6.21)
+From this we see that as the …rst stage F-statistic gets small, the bias of 2SLS approaches 
+2
+ . The bias of
+the OLS estimator is 
+2
+x , which also equals 
+2
+ if  = 0: Thus, we have shown that 2SLS is centered on
+the same point as OLS when the …rst stage is zero. More generally, we can say 2SLS estimates are "biased
+towards" OLS estimates when there isn’t much of a …rst stage. On the other hand, the bias of 2SLS vanishes
+when F gets large, as it should happen in large samples when  6= 0:
+When the instruments are weak, the F-statistic itself varies inversely with the number of instruments.
+To see why, consider adding useless instruments to your 2SLS model, that is, instruments with no e¤ect on
+the …rst-stage R-squared.
+The model sum of squares, E (0Z0Z), and the residual variance, 2
+, will both
+stay the same while q goes up. The F-statistic becomes smaller as a result. From this we learn that the
+addition of many weak instruments increases bias.
+Intuitively, the bias in 2SLS is a consequence of the fact that the …rst stage is estimated.
+If the …rst
+stage coe¢ cients were known, we could use bxpop = Z for the …rst-stage …tted values.
+These …tted values
+are uncorrelated with the second stage error.
+In practice, however, we use bx = PZx = Z + PZ, which
+di¤ers from bxpop by the term PZ.
+The bias in 2SLS arises from the fact that PZ is correlated with , so
+some of the correlation between errors in the …rst and second stages seeps in to our 2SLS estimates through
+the sampling variability in b. Asymptotically, this correlation is negligible, but real life does not play out in
+"asymptopia".
+The bias formula, (4.6.21), shows that the bias in 2SLS is an increasing function of the number of
+instruments, so clearly bias is least in the just-identi…ed case when the number of instruments is as low as it
+can get. It turns out, however, that just-identi…ed 2SLS (say, the simple Wald estimator) is approximately
+unbiased.
+This is hard to show formally because just-identi…ed 2SLS has no moments (i.e., the sampling
+distribution has fat tails). Nevertheless, even with weak instruments, just-identi…ed 2SLS is approximately
+centered where it should be (we therefore say that just-identi…ed 2SLS is median-unbiased).
+This is not
+to say that you can happily use weak instruments in just-identi…ed models.
+With a weak instrument,
+just-identi…ed IV estimates tend to be highly unstable and imprecise.
+The LIML estimator is approximately median-unbiased for over-identi…ed constant-e¤ects models, and
+therefore provides an attractive alternative to just-identi…ed estimation using one instrument at a time (see,
+e.g., Davidson and MacKinnon, 1993, and Mariano, 2001).
+LIML has the advantage of having the same
+44Sort of; the actual F-statistic is (1=^2
+)^0Z0Z^=q, where hats denote estimates. (1=2
+)E (0Z0Z) =q is therefore sometimes
+called the population F-statistic since it’s the F-statistic we’d get in an in…nitely large sample.
+In practice, the distinction
+between population and sample F matters little in this context.
+
+--- PDF p172 ---
+156
+CHAPTER 4. INSTRUMENTAL VARIABLES IN ACTION
+large-sample distribution as 2SLS (under constant e¤ects) while providing …nite-sample bias reduction. A
+number of estimators reduce the bias in overidenti…ed 2SLS models. But an extensive Monte Carlo study
+by Flores-Lagunes (2007) suggests that LIML does at least as well as the alternatives in a wide range of
+circumstances (in terms of bias, mean absolute error, and the empirical rejection rates for t-tests). Another
+advantage of LIML is that many statistical packages compute it while other estimators typically require
+some programming.45
+We use a small Monte Carlo experiment to illustrate some of the theoretical results from the discussion
+above. The simulated data are drawn from the following model,
+yi
+=
+xi + i
+xi
+=
+q
+X
+j=1
+jzij + i
+with  = 1, 1 = 0:1, j = 0 8j > 1,
+0
+B
+@
+i
+i
+1
+C
+A
+
+Z  N
+0
+B
+@
+0
+B
+@
+0
+0
+1
+C
+A ;
+0
+B
+@
+1
+0:8
+0:8
+1
+1
+C
+A
+1
+C
+A ;
+where the zij are independent, normally distributed random variables with mean zero and unit variance.
+The sample size is 1000:
+Figure 4.6.1 shows the Monte Carlo distributions of four estimators: OLS, just identi…ed IV (i.e. 2SLS
+with q= 1, labeled IV), 2SLS with two instruments (for q= 2, labeled 2SLS), and LIML with q= 2. The OLS
+estimator is biased and centered around a value of about 1.79. IV is centered around 1, the value of . 2SLS
+with one weak and one uninformative instrument is moderately biased towards OLS (the median is 1.07).
+The distribution function for LIML with q= 2 is basically indistinguishable from that for just-identi…ed IV,
+even though the LIML estimator uses a completely uninformative instrument.
+Figure 4.6.2 reports simulation results where we set q= 20.
+Thus, in addition to the one informative
+but weak instrument, we added 19 worthless instruments.
+The …gure again shows OLS, 2SLS, and LIML
+distributions.
+The bias in 2SLS is now much worse (the median is 1.53, close to the OLS median). The
+sampling distribution of the 2SLS estimator is also much tighter than in the q= 2 case. LIML continues to
+45LIML is available in SAS and in STATA 10. With weak instruments, LIML standard errors are not quite right, but Bekker
+(1994) gives a simple …x for this. Why is LIML unbiased?
+Expression (4.6.21) shows that the approximate bias of 2SLS is
+proportional to the bias of OLS. From this we conclude that there is a linear combination of OLS and 2SLS that is approximately
+unbiased.
+LIML turns out to be just such a "combination estimator".
+Like the bias of 2SLS, the approximate unbiasedness
+of LIML can be shown using a Bekker-style group-asymptotic sequence that …xes the ratio of instruments to sample size.
+Its
+worth mentioning, however, that LIML is biased in models with a certain type of heteroskedasticity; See Hausman, Newey, and
+Wouterson (2006) for details.
+
+--- PDF p173 ---
+4.6. IV DETAILS
+157
+perform well and is centered around  = 1, with a bit more dispersion than in the q= 2 case.
+Finally, Figure 4.6.3 reports simulation results from a model that is truly unidenti…ed.
+In this case, we
+set j = 0; j = 1; :::; 20. Not surprisingly, all the sampling distributions are centered around the same value
+as OLS. On the other hand, the 2SLS sampling distribution is much tighter than the LIML distribution. We
+would say advantage-LIML in this case because the widely dispersed LIML sampling distribution correctly
+re‡ects the fact that the sample is uninformative about the parameter of interest.
+What does this mean in practice?
+Besides retaining a vague sense of worry about your …rst stage, we
+recommend the following:
+1. Report the …rst stage and think about whether it makes sense.
+Are the magnitude and sign as you
+would expect, or are the estimates too big or large but wrong-signed? If so, perhaps your hypothesized
+…rst-stage mechanism isn’t really there, rather, you simply got lucky.
+2. Report the F-statistic on the excluded instruments.
+The bigger this is, the better.
+Stock, Wright,
+and Yogo (2002) suggest that F-statistics above about 10 put you in the safe zone though obviously
+this cannot be a theorem.
+3. Pick your best single instrument and report just-identi…ed estimates using this one only. Just-identi…ed
+IV is median-unbiased and therefore unlikely to be subject to a weak-instruments critique.
+4. Check over-identi…ed 2SLS estimates with LIML. LIML is less precise than 2SLS but also less biased.
+If the results come out similar, be happy. If not, worry, and try to …nd stronger instruments.
+5. Look at the coe¢ cients, t-statistics, and F-statistics for excluded instruments in the reduced-form
+regression of dependent variables on instruments. Remember that the reduced form is proportional to
+the causal e¤ect of interest.
+Most importantly, the reduced-form estimates, since they are OLS, are
+unbiased.
+As Angrist and Krueger (2001) note, if you can’t see the causal relation of interest in the
+reduced form, it’s probably not there.46
+We illustrate some of this reasoning in a re-analysis of the Angrist and Krueger (1991) quarter-of-birth
+study.
+Bound, Jaeger, and Baker (1995) argued that bias is a major concern when using quarter birth
+as an instrument for schooling, in spite of the fact that sample size exceeds 300,000.
+“Small sample” is
+clearly relative. Earlier in the chapter, we saw that the QOB pattern in schooling is clearly re‡ected in the
+reduced form, so there would seem to be little cause for concern.
+On the other hand, Bound, Jaeger, and
+Baker (1995) argue that the most relevant models have additional controls not included in these reduced
+forms.
+Table 4.6.2 reproduces some of the speci…cations from Angrist and Krueger (1991) as well as other
+speci…cations in the spirit of Bound, Jaeger, and Baker (1995).
+46A recent paper by Chernozhukov and Hansen (2007) formalizes this maxim.
+
+--- PDF p174 ---
+158
+CHAPTER 4. INSTRUMENTAL VARIABLES IN ACTION
+Table 4.6.2: Alternative IV estimates of the economic returns to schooling
+(1)
+(2)
+(3)
+(4)
+(5)
+(6)
+2SLS
+0.105
+0.435
+0.089
+0.076
+0.093
+0.091
+(0.020)
+(0.450)
+(0.016)
+(0.029)
+(0.009)
+(0.011)
+LIML
+0.106
+0.539
+0.093
+0.081
+0.106
+0.110
+(0.020)
+(0.627)
+(0.018)
+(0.041)
+(0.012)
+(0.015)
+F-statistic (excluded instruments)
+32.27
+0.42
+4.91
+1.61
+2.58
+1.97
+Controls
+Year of birth
+X
+X
+X
+X
+X
+X
+State of birth
+X
+X
+Age, Age squared
+X
+X
+X
+Excluded Instruments
+Quarter of birth
+X
+X
+Quarter of birth*year of birth
+X
+X
+X
+X
+Quarter of birth*state of birth
+X
+X
+Number of excluded instruments
+3
+2
+30
+28
+180
+178
+Notes: The table compares 2SLS and LIML estimates using alternative sets of
+instruments and controls. The OLS estimate corresponding to the models reported
+in columns 1-4 is .071; the OLS estimate corresponding to the models reported in
+columns 5-6 is .067. Data are from the Angrist and Krueger (1991) 1980 Census
+sample. The sample size is 329,509. Standard errors are reported in parentheses.
+
+--- PDF p175 ---
+4.6. IV DETAILS
+159
+The …rst column in the table reports 2SLS and LIML estimates of a model using three quarter of birth
+dummies as instruments with year of birth dummies as covariates. The OLS estimate for this speci…cation
+is 0.071, while the 2SLS estimate is a bit higher at 0.105. The …rst-stage F-statistic is over 32, well above
+the danger zone. Not surprisingly, the LIML estimate is almost identical to 2SLS in this case.
+Angrist and Krueger (1991) experimented with models that include age and age squared measured in
+quarters as additional controls. These controls are meant to pick up omitted age e¤ects that might confound
+the quarter-of-birth instruments.
+The addition of age and age squared reduces the number of instruments
+to two, since age in quarters, year of birth, and quarter of birth are linearly dependent. As shown in column
+2, the …rst stage F-statistic drops to 0.4 when age and age squared are included as controls, a sure sign of
+trouble.
+But the 2SLS standard error is high enough that we would not draw any substantive conclusions
+from this estimate. The LIML estimate is even less precise. This model is e¤ectively unidenti…ed.
+Columns 3 and 4 report the results of adding interactions between quarter of birth dummies and year of
+birth dummies to the instrument list, so that there are 30 instruments, or 28 when the age and age squared
+variables are included.
+The …rst stage F-statistics are 4.9 and 1.6 in these two speci…cations.
+The 2SLS
+estimates are a bit lower than in column 1 and hence closer to OLS. But LIML is not too far away from
+2SLS. Although the LIML standard error is pretty big in column 4, it is not so large that the estimate is
+uninformative.
+On balance, there seems to be little cause for worry about weak instruments, even with the
+age quadratic included.
+The most worrisome speci…cations are those reported in columns 5 and 6. These estimates were produced
+by adding 150 interactions between quarter of birth and state of birth to the 30 interactions between quarter
+of birth and year of birth. The rationale for the inclusion of state-of-birth interactions in the instrument list
+is to exploit di¤erences in compulsory schooling laws across states.
+But this leads to highly over-identi…ed
+models with 180 (or 178) instruments, many of which are weak. The …rst stage F-statistics for these models
+are 2.6 and 2.0, well into the discomfort zone. On the plus side, the LIML estimates again look fairly similar
+to 2SLS. Moreover, the LIML standard errors di¤er little from the 2SLS standard errors in this case. This
+suggests that you can’t always determine instrument relevance using a mechanical rule such as "F>10". In
+some cases, a low F may not be fatal.47
+Finally, it’s worth noting that in applications with multiple endogenous variables, the conventional …rst-
+stage F is no longer appropriate.
+To see why, suppose there are two instruments for two endogenous
+variables and that the …rst instrument is strong and predicts both endogenous variables well while the
+second instrument is weak. The …rst-stage F-statistics in each of the two …rst stage equations are likely to be
+high but the model is weakly identi…ed because one instrument is not enough to capture two causal e¤ects.
+A simple modi…cation of the …rst-stage F for this case is given in the appendix.
+47Cruz and Moreira (2005) similarly conclude that, low F-statistics notwithstanding, there is little bias in the Angrist and
+Krueger (1991) 180-instrument speci…cations.
+
+--- PDF p176 ---
+160
+CHAPTER 4. INSTRUMENTAL VARIABLES IN ACTION
+0
+.25
+.5
+.75
+1
+0
+.5
+1
+1.5
+2
+2.5
+x
+OLS
+IV
+2SLS
+LIML
+Figure 4.6.1: Distribution of the OLS, IV, 2SLS, and LIML estimators. IV uses one instrument, while 2SLS
+and LIML use two instruments.
+4.7
+Appendix
+Derivation of Equation (4.6.8)
+Rewrite equation (4.6.7) as follows
+Yij =  + 0 i + (0 + 1)Sj + i;
+where  i si   Sj: Since  i and Sj are uncorrelated by construction, we have:
+1
+=
+0 + 1:
+0
+=
+C( i; Yij)
+V ( i)
+:
+Simplifying the second line,
+0
+=
+C[(si   Sj); Yij]
+[V (si)   V (Sj)]
+=
+C(si; Yij)
+V (si)
+ 
+V (si)
+V (si)   V (Sj)
+
+ C(Sj; Yij)
+V (Sj)
+ 
+V (Sj)
+V (si)   V (Sj)
+
+=
+0 + 1(1   ) = 1 + (0   1)
+where  
+V (si)
+V (si) V (Sj): Solving for 1, we have
+1 = 1   0 = (1   0):
+
+--- PDF p177 ---
+4.7. APPENDIX
+161
+0
+.25
+.5
+.75
+1
+0
+.5
+1
+1.5
+2
+2.5
+x
+OLS
+2SLS
+LIML
+Figure 4.6.2: Distribution of the OLS, 2SLS, and LIML estimators with 20 instruments
+0
+.25
+.5
+.75
+1
+0
+.5
+1
+1.5
+2
+2.5
+x
+OLS
+2SLS
+LIML
+Figure 4.6.3: Distribution of the OLS, 2SLS, and LIML estimators with 20 worthless instruments
+
+--- PDF p178 ---
+162
+CHAPTER 4. INSTRUMENTAL VARIABLES IN ACTION
+Derivation of the approximate bias of 2SLS
+Start from the last equality in (4.6.20):
+E[b2SLS   ] 
+
+E (0Z0Z) + E
+ 0PZ
+ 1 E
+ 0PZ
+
+:
+The magic of linear algebra helps us simplify this expression: The term 0PZ is a scalar and therefore
+equal to its trace; the trace is a linear operator which passes through expectations and is invariant to cyclic
+permutations; …nally, the trace of PZ, an idempotent matrix, is equal to it’s rank, q. Using these facts, we
+have
+E
+ 0PZ
+
+=
+E
+
+tr
+ 0PZ
+
+=
+E
+
+tr
+ PZ0
+=
+tr
+ PZE
+
+0
+=
+tr
+ PZ2
+I
+
+=
+2
+tr (PZ)
+=
+2
+q;
+where we have assumed that i is homoskedastic. Similarly, applying the trace trick to 0PZ shows that
+this term is equal to q. Therefore,
+E[b2SLS   ]
+
+
+E (0Z0Z) + 2
+q
+ 1 E
+
+tr
+ 0PZ
+
+=
+q
+
+E (0Z0Z) + 2
+q
+ 1
+=
+
+2
+
+"
+E (0Z0Z) =q
+2
+
++ 1
+# 1
+:
+Multivariate …rst-stage F-statistics
+Assume any exogenous covariates have been partialled out of the instrument list and that there are two
+endogenous variables, x1 and x2 with coe¢ cients 1 and 2. We are interested in the bias of the 2SLS
+estimator of 2 when x1 is also treated as endogenous. The second stage equation is
+y = PZx11 + PZx22 + [ + (x1   PZx1)1 + (x2   PZx2)2]:
+(4.7.1)
+where PZx1 and PZx2 are the …rst-stage …tted values from regressions of x1 and x2 on Z.
+By the usual
+anatomy formula for multivariate regression, 2 in (4.7.1) is the bivariate regression of y on the residual from
+
+--- PDF p179 ---
+4.7. APPENDIX
+163
+a regression of PZx2 on PZx1. This residual is
+[I   PZx1(x0
+1PZx1) 1x0
+1PZ]PZx2 = M1zPZx2;
+where M1z = [I   PZx1(x0
+1PZx1) 1x0
+1PZ] is the relevant residual-maker matrix.
+In addition, note that
+M1zPZx2 = PZ[M1zx2]:
+From here we conclude that the 2SLS estimator of 2 is the OLS regression on PZ[M1zx2]; in other words,
+OLS on the …tted values from a regression of M1zx2 on Z. This is the same as 2SLS using PZ to instrument
+M1zx2. So the 2SLS estimator of 2 can be written
+[x0
+2M1zPZM1zx2] 1x0
+2M1zPZy = 2 + [x0
+2M1zPZM1zx2] 1x0
+2M1zPZ:
+The explained sum of squares (numerator of the F-statistic) that determines the bias of the 2SLS estimator of
+2 is therefore the expectation of [x0
+2M1zPZM1zx2], while the bias comes from the fact that the expectation
+E[0M1zPZ] is non-zero when  and  are correlated.
+Here’s how to compute this F-statistic in practice: (a) Regress the …rst stage …tted values for the regressor
+of interest, PZx2, on the other …rst-stage …tted values and any exogenous covariates. Save the residuals from
+this step; (b) Construct the F-statistic for excluded instruments in a …rst-stage regression of the residuals
+from (a) on the excluded instruments.
+Note that you should get the 2SLS coe¢ cient of interest in a 2SLS
+procedure where the residuals from (a) are instrumented using Z, with no other covariates or endogenous
+variables. Use this fact to check your calculation.
+
+--- PDF p180 ---
+164
+CHAPTER 4. INSTRUMENTAL VARIABLES IN ACTION
+

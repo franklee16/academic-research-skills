@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%231C1C1A'/%3E%3Ccircle cx='16' cy='16' r='6' fill='%23F0EFEB'/%3E%3C/svg%3E">
+  <title>Research Brief Card — Lieflat Report Template · Mono Fixed Frame</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4"></script>
+  <script src="https://cdn.jsdelivr.net/npm/echarts@6/dist/echarts.min.js"></script>
+  <style>
+    /* ═══════════════════════════════════════════════════════════════
+       LIEFLAT 报告模板 11 · 研究简报卡（灰阶定尺）· 英文版
+       场景：600×1000 定宽定高卡片，专为截图发社媒设计——单一决定性
+             结论 + 两张证据图 + 一条 takeaway，读者三秒扫完，不响应式
+             重排，只整卡等比缩放（见页尾 fit() 脚本）。
+       依赖说明：这是模板库里第二张挂 CDN 依赖的模板（第一张见模板 12）。
+             库里其余模板都是纯 SVG，离线可开；这张卡的两张图来自
+             Chart.js 和 ECharts，脚本标签原样照抄模板 12 / glance-
+             gallery.html，没有联网时图表区会是空白。
+       图表正本 = templates/glance-gallery.html：
+         图A  G3  Chunky Bars       （Chart.js，柱顶大字 + 按名次染色）
+         图B  G18 Draw-in + Counter （ECharts，一笔画折线 + 计数器）
+       色板正本：只用文件已有 :root 变量（纸灰/炭黑/中间灰阶），
+         不新增色值；面积渐变直接照抄 gallery 里 INK 的 rgba 写法。
+       动效：沿用 gallery 的 obsReveal（滚入播 + 点击重播），新增
+         prefers-reduced-motion 降级——原文件没有任何动画代码，现在
+         挂了两张动态图，降级开关补齐，降级时两张图直接给终态。
+       与中文版结构一致，仅可见文案换成英文；正文字号不放大以保持
+       版式不溢出（见 SKILL.md 英文视觉宽度约束）。
+       数据说明：全部为虚构演示数据，仅用于验证版式。
+       ═══════════════════════════════════════════════════════════════ */
+    :root{--paper:#F0EFEB;--ink:#1C1C1A;--muted:#8F8E88;--faint:#C6C5BF;--grid:#DEDDD6;--soft:#D8D7D1;--dark:#1C1C1A;--scale:1}
+    *{box-sizing:border-box;margin:0;padding:0} html,body{min-height:100%;background:#272725}
+    body{display:flex;justify-content:center;padding:24px;font-family:Inter,Arial,sans-serif;color:var(--ink);-webkit-font-smoothing:antialiased}
+    .stage{width:600px;height:1000px}.report{width:600px;height:1000px;overflow:hidden;background:var(--paper);transform:scale(var(--scale));transform-origin:top left}
+    .inner{height:100%;padding:30px 34px 24px;display:grid;grid-template-rows:auto auto 164px 1fr auto;gap:18px}
+    .mast{display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--ink);padding-bottom:10px;font-size:9px;letter-spacing:.08em;text-transform:uppercase;font-weight:700}.mast strong{letter-spacing:0;font-size:15px}
+    h1{font-size:39px;line-height:1.05;letter-spacing:-.02em;font-weight:800;max-width:440px}.dek{font-size:12px;line-height:1.55;color:var(--muted);margin-top:10px;max-width:390px}.meta{float:right;margin-top:-34px;text-align:right;font-size:9px;line-height:1.7;color:var(--muted)}.meta b{font-size:12px;color:var(--ink)}
+    .hero{display:grid;grid-template-columns:170px 1fr;gap:22px;align-items:stretch}.hero-stat{background:var(--dark);color:var(--paper);border-radius:24px;padding:21px 22px;display:flex;flex-direction:column;justify-content:space-between}.hero-stat strong{font-size:67px;line-height:.86;font-weight:800;letter-spacing:-.04em}.hero-stat span{font-size:11px;line-height:1.45;color:#C6C5BF}.hero-copy{border-top:1px solid var(--ink);border-bottom:1px solid var(--ink);padding:19px 0 15px;display:flex;flex-direction:column;justify-content:space-between}.hero-copy h2{font-size:22px;line-height:1.25;font-weight:800;max-width:320px}.hero-copy p{font-size:11px;line-height:1.55;color:var(--muted);max-width:310px}.labels{display:flex;gap:16px;font-size:8px;letter-spacing:.08em;color:var(--muted);text-transform:uppercase}
+    .content{display:grid;grid-template-columns:1.05fr .95fr;gap:18px;min-height:0}.panel{min-height:0}.panel-title{display:flex;justify-content:space-between;align-items:baseline;border-top:1px solid var(--ink);padding-top:11px;margin-bottom:10px}.panel-title h3{font-size:18px;line-height:1.25;font-weight:800}.panel-title span{font-size:8px;color:var(--muted);letter-spacing:.08em;text-transform:uppercase;white-space:nowrap;padding-left:8px}
+    .chart-wrap{height:218px;border-bottom:1px solid var(--grid);position:relative}.chart-wrap canvas{cursor:pointer}.note{font-size:10px;line-height:1.55;color:var(--muted);margin-top:12px}
+    .signals{display:grid;grid-template-columns:1fr 1fr;gap:2px;background:var(--grid);border-radius:16px;overflow:hidden}.signal{background:var(--paper);min-height:84px;padding:12px}.signal b{display:block;font-size:21px;line-height:1;margin-bottom:7px}.signal span{display:block;font-size:9px;line-height:1.4;color:var(--muted)}
+    .trend{margin-top:21px;background:#E5E4DE;border-radius:16px;padding:12px 13px 8px}.trend-head{display:flex;justify-content:space-between;align-items:baseline;font-size:9px;color:var(--muted);margin-bottom:8px}.trend-chart{display:block;width:100%;height:104px;cursor:pointer}.fatigue-count{font-size:11px;font-weight:800;color:var(--ink)}.fatigue-count small{font-size:8px;font-weight:600;color:var(--muted);margin-left:1px}
+    .takeaway{border-top:1px solid var(--ink);padding-top:14px;display:grid;grid-template-columns:124px 1fr;gap:18px}.takeaway-label{font-size:8px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}.takeaway p{font-size:15px;line-height:1.35;font-weight:800}
+    .footer{border-top:1px solid var(--grid);padding-top:10px;display:flex;justify-content:space-between;gap:20px;font-size:8px;line-height:1.5;color:var(--muted)}.demo{color:var(--ink);font-weight:700}
+    @media(max-width:640px){body{padding:0}.stage{margin:0}}
+  </style>
+</head>
+<body><div class="stage" id="stage"><main class="report"><div class="inner">
+  <header class="mast"><strong>Lieflat Charts / Mono</strong><span>Research brief · 01</span></header>
+  <section><h1>Skipping time off is becoming routine</h1><p class="dek">Why people skip earned leave, and what happens when they never disconnect.</p><p class="meta"><b>2026 SAMPLE</b><br>1,200 people · 4 markets<br>Demo</p></section>
+  <section class="hero"><div class="hero-stat"><strong>68%</strong><span>of respondents delayed a planned vacation</span></div><div class="hero-copy"><h2>Work always looks more urgent than rest.</h2><p>When leave requires nonstop coordinating, handoffs, and explaining, it's easy to push it back.</p><div class="labels"><span>availability</span><span>guilt</span><span>handover</span></div></div></section>
+  <section class="content"><div class="panel"><div class="panel-title"><h3>Average unused leave</h3><span>G3 · Chunky bars</span></div><div class="chart-wrap"><canvas id="leaveChart"></canvas></div><p class="note">A leave balance isn't rest capacity. The most unused days also mean the most trouble unplugging.</p></div><div class="panel"><div class="panel-title"><h3>Friction signals</h3><span>G18 · Draw-in</span></div><div class="signals"><div class="signal"><b>42%</b><span>still check messages while on leave</span></div><div class="signal"><b>37%</b><span>worry leave affects how others see them</span></div><div class="signal"><b>31%</b><span>cut leave short over handover costs</span></div><div class="signal"><b>26%</b><span>no 5 straight days off all year</span></div></div><div class="trend"><div class="trend-head"><span>Fatigue rises without a break</span><span class="fatigue-count"><b id="fatigueCount">0</b><small>/100</small></span></div><div class="trend-chart" id="stroke"></div></div></div></section>
+  <section class="takeaway"><div class="takeaway-label">One-page takeaway</div><p>Policy grants leave. Habits decide who feels safe taking it. Make handover and logging off routine.</p></section>
+  <footer class="footer"><span><span class="demo">Demo data, not a real survey result.</span><br>Built to test the Lieflat Charts one-page research brief template.<br>Runs on Chart.js / ECharts, blank offline.</span><span>MONO / PAPER GREY<br>RESEARCH BRIEF</span></footer>
+</div></main></div><script>
+/* ── PALETTE：直接照抄 templates/glance-gallery.html 顶部同名常量，不新增色值 ── */
+const INK='#1C1C1A',PAPER='#F0EFEB',MUTED='#8F8E88',GRID='#DEDDD6',FAINT='#C6C5BF';
+const DPR=window.devicePixelRatio||1;
+const REDUCED=matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+/* ── 统一 reveal 机制（滚入播 + 点击重播，逐字照抄 gallery 的 obsReveal/cReveal/eReveal） ── */
+const timers={};
+const obsReveal=(id,fn)=>{
+  const el=document.getElementById(id);
+  const go=()=>{(timers[id]||[]).forEach(clearInterval);timers[id]=[];fn(el)};
+  const io=new IntersectionObserver(es=>{
+    if(es[0].isIntersecting){go();io.disconnect()}
+  },{threshold:.35});
+  io.observe(el);
+  el.style.cursor='pointer';
+  el.addEventListener('click',go);
+};
+const keep=(id,t)=>{(timers[id]=timers[id]||[]).push(t)};
+const eReveal=(id,opt)=>obsReveal(id,el=>{
+  const g=echarts.getInstanceByDom(el)||echarts.init(el,null,{devicePixelRatio:DPR});
+  g.clear();g.setOption(opt);
+});
+const cjs={};
+const cReveal=(id,mkCfg)=>obsReveal(id,el=>{
+  cjs[id]?.destroy();
+  cjs[id]=new Chart(el,mkCfg());
+});
+
+Chart.defaults.color=MUTED;
+Chart.defaults.font.family='Inter,Arial,sans-serif';
+Chart.defaults.font.size=10.5;
+Chart.defaults.borderColor=GRID;
+Chart.defaults.devicePixelRatio=DPR;
+Chart.defaults.plugins.legend.display=false;
+Chart.defaults.plugins.tooltip.backgroundColor=INK;
+Chart.defaults.plugins.tooltip.titleColor='#F0EFEB';
+Chart.defaults.plugins.tooltip.bodyColor='#A5A49E';
+Chart.defaults.plugins.tooltip.padding=12;
+Chart.defaults.plugins.tooltip.cornerRadius=12;
+Chart.defaults.plugins.tooltip.displayColors=false;
+
+/* ════ 图A · G3 Chunky Bars（移植自 glance-gallery.html "Revenue by plan"） ════
+   柱端胶囊圆角 + 分段延迟入场 + 柱顶大字插件全部照搬，只把
+   $K 的取值方式换成天数，颜色按名次二值分配（前两高=INK，后两低=FAINT）。 */
+(()=>{
+const LABELS=['China','US','France','Japan'];
+const VALUES=[7,11,8,5];
+const rankOf=a=>{const r=[...a].map((v,i)=>[v,i]).sort((x,y)=>y[0]-x[0]).map(d=>d[1]);return i=>r.indexOf(i)};
+const rk=rankOf(VALUES);
+cReveal('leaveChart',()=>({
+  type:'bar',
+  data:{labels:LABELS,
+    datasets:[{data:VALUES,
+      backgroundColor:VALUES.map((_,i)=>rk(i)<2?INK:FAINT),
+      borderRadius:{topLeft:99,topRight:99},borderSkipped:false,barPercentage:.52}]},
+  options:{
+    maintainAspectRatio:false,
+    animation:REDUCED?{duration:0}:{duration:900,easing:'easeOutQuart',delay:c=>c.type==='data'?c.dataIndex*110:0},
+    plugins:{tooltip:{callbacks:{label:i=>i.raw+' unused days'}}},
+    scales:{
+      x:{grid:{display:false},border:{display:false},ticks:{padding:8,font:{size:9,weight:600}}},
+      y:{display:false,suggestedMax:16},
+    },
+  },
+  plugins:[{
+    id:'topValues',
+    afterDatasetsDraw(chart){
+      const {ctx}=chart;
+      chart.getDatasetMeta(0).data.forEach((bar,i)=>{
+        ctx.save();ctx.font='700 13px Inter,Arial,sans-serif';ctx.fillStyle=INK;ctx.textAlign='center';
+        ctx.fillText(chart.data.datasets[0].data[i],bar.x,bar.y-10);ctx.restore();
+      });
+    },
+  }],
+}));
+})();
+
+/* ════ 图B · G18 Draw-in + Counter（移植自 glance-gallery.html "H1 revenue, drawn in one stroke"） ════
+   一笔画折线 + 渐变面积 + performance.now() 计数器全部照搬，只把
+   累计营收换成疲惫指数，累计终值就是计数器要数到的那个数。 */
+(()=>{
+const DAYS=Array.from({length:91},(_,i)=>String(i));
+const FATIGUE=DAYS.map(d=>Math.round(6+90*Math.pow(Number(d)/90,1.35)));
+const TOTAL=FATIGUE[FATIGUE.length-1];
+const DUR=2000;
+let gen=0;
+const countEl=document.getElementById('fatigueCount');
+obsReveal('stroke',el=>{
+  const g=echarts.getInstanceByDom(el)||echarts.init(el,null,{devicePixelRatio:DPR});
+  g.clear();
+  gen++;const my=gen;
+  g.setOption({
+    animationDuration:REDUCED?0:DUR,animationEasing:'cubicOut',
+    tooltip:{show:false},
+    grid:{left:4,right:14,top:6,bottom:20},
+    xAxis:{type:'category',data:DAYS,boundaryGap:false,
+      axisLine:{show:false},axisTick:{show:false},splitLine:{show:false},
+      axisLabel:{color:MUTED,fontFamily:'Inter',fontSize:8,fontWeight:600,
+        interval:(i,v)=>[0,30,60,90].includes(Number(v)),
+        formatter:v=>{const n=Number(v);return n===0?'0':n===30?'30':n===60?'60':n===90?'90D':''}}},
+    yAxis:{show:false,max:TOTAL*1.08},
+    series:[{
+      type:'line',data:FATIGUE,smooth:.2,symbol:'none',
+      lineStyle:{color:INK,width:2.2},
+      areaStyle:{color:{type:'linear',x:0,y:0,x2:0,y2:1,
+        colorStops:[{offset:0,color:'rgba(28,28,26,.22)'},{offset:1,color:'rgba(28,28,26,0)'}]}},
+    }],
+  });
+  if(REDUCED){if(countEl)countEl.textContent=TOTAL;return}
+  const t0=performance.now();
+  const tick=()=>{
+    if(my!==gen)return;
+    const p=Math.min(1,(performance.now()-t0)/DUR);
+    const eased=1-Math.pow(1-p,3);
+    if(countEl)countEl.textContent=Math.round(TOTAL*eased);
+    if(p<1)requestAnimationFrame(tick);
+  };
+  requestAnimationFrame(tick);
+});
+})();
+
+addEventListener('resize',()=>{
+  echarts.getInstanceByDom(document.getElementById('stroke'))?.resize();
+});
+</script>
+<script>function fit(){const scale=Math.min(1,innerWidth/600);document.documentElement.style.setProperty('--scale',scale);stage.style.width=600*scale+'px';stage.style.height=1000*scale+'px'}fit();addEventListener('resize',fit)</script></body></html>

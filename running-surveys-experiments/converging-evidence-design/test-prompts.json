@@ -1,0 +1,59 @@
+{
+  "skill": "converging-evidence-design",
+  "version": "0.1.0",
+  "source_book": "Survey Curious? Start-Up Guide — Bergman, Chinco, Hartzmark, Sussman (2020)",
+  "darwin_compatible": true,
+  "test_cases": [
+    {
+      "id": "should-trigger-01",
+      "type": "should_trigger",
+      "prompt": "I'm using one item to measure investor risk preference. Is that enough?",
+      "expected_behavior": "Activate converging-evidence-design. Default: no. Recommend at least two items using different elicitation methods. State-vs-revealed, recall-vs-infer are common pairs.",
+      "notes": "Direct signal: 'one item ... enough?'"
+    },
+    {
+      "id": "should-trigger-02",
+      "type": "should_trigger",
+      "prompt": "How do I make my survey result more robust to wording concerns?",
+      "expected_behavior": "Activate converging-evidence-design. Convergence via re-elicit using a different method. State-vs-choice, abstract-vs-concrete, recall-vs-infer.",
+      "notes": "Robustness-via-multi-item = primary signal."
+    },
+    {
+      "id": "should-trigger-03",
+      "type": "should_trigger",
+      "prompt": "I want to ask the same thing two different ways to see if respondents answer consistently.",
+      "expected_behavior": "Activate converging-evidence-design. Recommend two items using DIFFERENT elicitation methods (not two slightly-different wordings). The point is method diversity, not redundancy. Specify state-vs-choice or recall-vs-infer pattern.",
+      "notes": "Direct signal: 'same thing two ways'."
+    },
+    {
+      "id": "should-not-trigger-01",
+      "type": "should_not_trigger",
+      "prompt": "I want to make my Likert-agreement item shorter.",
+      "expected_behavior": "Do NOT activate converging-evidence-design. This is a brevity question, not a multi-item one. Defer to clarity-concreteness or experimental-design.",
+      "notes": "Trap: 'one item' could conceivably trigger 'add another'; but if the question is brevity, skip."
+    },
+    {
+      "id": "should-not-trigger-02",
+      "type": "should_not_trigger",
+      "prompt": "Should I run a pilot before launching my survey?",
+      "expected_behavior": "Do NOT activate converging-evidence-design. This is operational flow. Defer to pilot-protocol.",
+      "notes": "Trap: 'pilot' might intersect with multi-item testing; but pilot is the operational vehicle, not item design."
+    },
+    {
+      "id": "should-not-trigger-03",
+      "type": "should_not_trigger",
+      "prompt": "How do I interpret my survey result, given I have only one item per construct?",
+      "expected_behavior": "Do NOT activate converging-evidence-design as the primary response. The user already has data; the right skill is relative-vs-absolute (interpretation). converging-evidence-design can advise 'add another item next time' as a fix-forward comment, but the immediate question is interpretation.",
+      "notes": "Trap: 'one item per construct' phrasing pulls in this skill; but post-collection, the user needs interpretation help."
+    },
+    {
+      "id": "edge-01",
+      "type": "edge_case",
+      "prompt": "I'm measuring investor attention with two Likert-agreement scales that say the same thing in slightly different words. Is this converging evidence?",
+      "expected_behavior": "Edge: NO. Two same-method items with similar wording are redundancy, not convergence. Push back: the second item needs a *different elicitation method* (e.g., a recall task, an inference question, a behavioral measure). Explain the principle.",
+      "notes": "Edge: well-intentioned but wrong application of the principle."
+    }
+  ],
+  "minimum_pass_rate": 0.85,
+  "notes": "Trickiest false-fire: when the user says 'one item per construct', the post-collection version is an interpretation problem (relative-vs-absolute), not a design problem. Filter on 'designing vs. interpreting'."
+}

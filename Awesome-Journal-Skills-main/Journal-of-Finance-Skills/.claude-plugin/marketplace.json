@@ -1,0 +1,52 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-marketplace.json",
+  "name": "jf-skills",
+  "version": "0.2.0",
+  "description": "Twelve JF-specific skills for The Journal of Finance (JF), the American Finance Association flagship (est. 1946, Wiley-Blackwell): the AFA portal and tiered submission fee, the 60-page limit, the bundled Internet Appendix, the Data and Code Sharing Policy, and general-interest positioning across the finance top-3.",
+  "owner": {
+    "name": "Bryce Wang",
+    "email": "brycew6m@stanford.edu"
+  },
+  "metadata": {
+    "pluginRoot": "./"
+  },
+  "plugins": [
+    {
+      "name": "jf-skills",
+      "version": "0.2.0",
+      "source": "./",
+      "description": "Twelve-skill bundle covering the The Journal of Finance (JF) manuscript lifecycle, with JF-specific mechanics (AFA portal, tiered submission fee, 60-page limit, bundled Internet Appendix, Data and Code Sharing Policy).",
+      "author": {
+        "name": "Bryce Wang",
+        "email": "brycew6m@stanford.edu"
+      },
+      "license": "MIT",
+      "homepage": "https://github.com/brycewang-stanford/jf-skills",
+      "repository": "https://github.com/brycewang-stanford/jf-skills",
+      "keywords": [
+        "journal-of-finance",
+        "american-finance-association",
+        "asset-pricing",
+        "corporate-finance",
+        "empirical-finance",
+        "multiple-testing",
+        "academic-writing"
+      ],
+      "category": "academic",
+      "skills": [
+        "skills/jf-workflow",
+        "skills/jf-topic-selection",
+        "skills/jf-literature-positioning",
+        "skills/jf-identification",
+        "skills/jf-empirical-design",
+        "skills/jf-robustness",
+        "skills/jf-tables-figures",
+        "skills/jf-internet-appendix",
+        "skills/jf-writing-style",
+        "skills/jf-submission",
+        "skills/jf-referee-strategy",
+        "skills/jf-rebuttal"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,451 @@
+{
+  "schema_version": 1,
+  "role": "independent vector-geometry validation; not raster extraction truth replacement",
+  "source_url": "https://ora.ox.ac.uk/objects/uuid%3Aea675125-e2a0-409a-8288-31c37c1fe9cf/files/r9593tx374",
+  "source_sha256": "d9275a57628269c90962a7a36d0aafb281013d0a9b9742586dd04bf030d2805a",
+  "page_number_1_based": 4,
+  "panel": "Fig. 2b",
+  "panel_bounds_pt": [
+    330.0,
+    45.0,
+    540.0,
+    180.0
+  ],
+  "value_axis": [
+    165.113,
+    0.0,
+    68.742,
+    30000.0
+  ],
+  "axis_anchors": [
+    {
+      "pixel_y_pt": 165.113,
+      "value": 0.0,
+      "label": "0"
+    },
+    {
+      "pixel_y_pt": 68.742,
+      "value": 30000.0,
+      "label": "30000"
+    }
+  ],
+  "legend_exclusion_rule": "accept only 4.5-6.2 pt rectangles meeting the 0 baseline at y=165.113 pt",
+  "bars": [
+    {
+      "category": "Active TSS",
+      "series": "CER",
+      "drawing_index": 51883,
+      "rect_pt": {
+        "x0": 342.1260070800781,
+        "y0": 118.22003173828125,
+        "x1": 347.4900207519531,
+        "y1": 165.113037109375
+      },
+      "value": 14597.638790212435,
+      "status": "vector_rectangle_extracted"
+    },
+    {
+      "category": "Active TSS",
+      "series": "TCX",
+      "drawing_index": 51899,
+      "rect_pt": {
+        "x0": 347.489990234375,
+        "y0": 115.56201171875,
+        "x1": 352.85699462890625,
+        "y1": 165.113037109375
+      },
+      "value": 15425.072360331429,
+      "status": "vector_rectangle_extracted"
+    },
+    {
+      "category": "Flanking TSS",
+      "series": "CER",
+      "drawing_index": 51884,
+      "rect_pt": {
+        "x0": 354.04998779296875,
+        "y0": 140.11004638671875,
+        "x1": 359.41497802734375,
+        "y1": 165.113037109375
+      },
+      "value": 7783.343624103076,
+      "status": "vector_rectangle_extracted"
+    },
+    {
+      "category": "Flanking TSS",
+      "series": "TCX",
+      "drawing_index": 51900,
+      "rect_pt": {
+        "x0": 359.4150085449219,
+        "y0": 140.39605712890625,
+        "x1": 364.781005859375,
+        "y1": 165.113037109375
+      },
+      "value": 7694.309347550742,
+      "status": "vector_rectangle_extracted"
+    },
+    {
+      "category": "Transcription at 5' and 3'",
+      "series": "CER",
+      "drawing_index": 51885,
+      "rect_pt": {
+        "x0": 365.9750061035156,
+        "y0": 164.4560546875,
+        "x1": 371.3390197753906,
+        "y1": 165.113037109375
+      },
+      "value": 204.5050832200557,
+      "status": "vector_rectangle_extracted"
+    },
+    {
+      "category": "Transcription at 5' and 3'",
+      "series": "TCX",
+      "drawing_index": 51901,
+      "rect_pt": {
+        "x0": 371.3389892578125,
+        "y0": 164.46600341796875,
+        "x1": 376.702880859375,
+        "y1": 165.113037109375
+      },
+      "value": 201.40807360033088,
+      "status": "vector_rectangle_extracted"
+    },
+    {
+      "category": "Strong Transcription",
+      "series": "CER",
+      "drawing_index": 51886,
+      "rect_pt": {
+        "x0": 377.8940124511719,
+        "y0": 141.967041015625,
+        "x1": 383.2580261230469,
+        "y1": 165.113037109375
+      },
+      "value": 7205.266828519472,
+      "status": "vector_rectangle_extracted"
+    },
+    {
+      "category": "Strong Transcription",
+      "series": "TCX",
+      "drawing_index": 51902,
+      "rect_pt": {
+        "x0": 383.26300048828125,
+        "y0": 141.95703125,
+        "x1": 388.62701416015625,
+        "y1": 165.113037109375
+      },
+      "value": 7208.382838198214,
+      "status": "vector_rectangle_extracted"
+    },
+    {
+      "category": "Weak Transcription",
+      "series": "CER",
+      "drawing_index": 51887,
+      "rect_pt": {
+        "x0": 389.81500244140625,
+        "y0": 92.821044921875,
+        "x1": 395.1820068359375,
+        "y1": 165.113037109375
+      },
+      "value": 22504.26634925185,
+      "status": "vector_rectangle_extracted"
+    },
+    {
+      "category": "Weak Transcription",
+      "series": "TCX",
+      "drawing_index": 51903,
+      "rect_pt": {
+        "x0": 395.1820068359375,
+        "y0": 93.18804931640625,
+        "x1": 400.5460205078125,
+        "y1": 165.113037109375
+      },
+      "value": 22390.018994384332,
+      "status": "vector_rectangle_extracted"
+    },
+    {
+      "category": "Genic enhancers",
+      "series": "CER",
+      "drawing_index": 51888,
+      "rect_pt": {
+        "x0": 401.739990234375,
+        "y0": 160.03802490234375,
+        "x1": 407.10589599609375,
+        "y1": 165.113037109375
+      },
+      "value": 1579.8243551450905,
+      "status": "vector_rectangle_extracted"
+    },
+    {
+      "category": "Genic enhancers",
+      "series": "TCX",
+      "drawing_index": 51904,
+      "rect_pt": {
+        "x0": 407.1059875488281,
+        "y0": 160.17401123046875,
+        "x1": 412.4700012207031,
+        "y1": 165.113037109375
+      },
+      "value": 1537.4922236558457,
+      "status": "vector_rectangle_extracted"
+    },
+    {
+      "category": "Enhancers",
+      "series": "CER",
+      "drawing_index": 51889,
+      "rect_pt": {
+        "x0": 413.66400146484375,
+        "y0": 135.5240478515625,
+        "x1": 419.031005859375,
+        "y1": 165.113037109375
+      },
+      "value": 9210.951058442115,
+      "status": "vector_rectangle_extracted"
+    },
+    {
+      "category": "Enhancers",
+      "series": "TCX",
+      "drawing_index": 51905,
+      "rect_pt": {
+        "x0": 419.0299987792969,
+        "y0": 136.03704833984375,
+        "x1": 424.3940124511719,
+        "y1": 165.113037109375
+      },
+      "value": 9051.255562406612,
+      "status": "vector_rectangle_extracted"
+    },
+    {
+      "category": "ZNF genes & repeats",
+      "series": "CER",
+      "drawing_index": 51890,
+      "rect_pt": {
+        "x0": 425.5880126953125,
+        "y0": 164.42706298828125,
+        "x1": 430.9549255371094,
+        "y1": 165.113037109375
+      },
+      "value": 213.53011125299608,
+      "status": "vector_rectangle_extracted"
+    },
+    {
+      "category": "ZNF genes & repeats",
+      "series": "TCX",
+      "drawing_index": 51906,
+      "rect_pt": {
+        "x0": 430.9549865722656,
+        "y0": 164.45001220703125,
+        "x1": 436.3190002441406,
+        "y1": 165.113037109375
+      },
+      "value": 206.38608906271062,
+      "status": "vector_rectangle_extracted"
+    },
+    {
+      "category": "Heterochromatin",
+      "series": "CER",
+      "drawing_index": 51891,
+      "rect_pt": {
+        "x0": 437.5119934082031,
+        "y0": 161.07904052734375,
+        "x1": 442.8789978027344,
+        "y1": 165.113037109375
+      },
+      "value": 1255.7593485559712,
+      "status": "vector_rectangle_extracted"
+    },
+    {
+      "category": "Heterochromatin",
+      "series": "TCX",
+      "drawing_index": 51907,
+      "rect_pt": {
+        "x0": 442.8789978027344,
+        "y0": 161.216064453125,
+        "x1": 448.2430114746094,
+        "y1": 165.113037109375
+      },
+      "value": 1213.1042160634422,
+      "status": "vector_rectangle_extracted"
+    },
+    {
+      "category": "Bivalent/poised TSS",
+      "series": "CER",
+      "drawing_index": 51892,
+      "rect_pt": {
+        "x0": 449.43701171875,
+        "y0": 157.15411376953125,
+        "x1": 454.8030090332031,
+        "y1": 165.113037109375
+      },
+      "value": 2477.577143684952,
+      "status": "vector_rectangle_extracted"
+    },
+    {
+      "category": "Bivalent/poised TSS",
+      "series": "TCX",
+      "drawing_index": 51908,
+      "rect_pt": {
+        "x0": 454.8030090332031,
+        "y0": 157.166015625,
+        "x1": 460.1670227050781,
+        "y1": 165.113037109375
+      },
+      "value": 2473.8721321766925,
+      "status": "vector_rectangle_extracted"
+    },
+    {
+      "category": "Flanking bivalent TSS/Enh",
+      "series": "CER",
+      "drawing_index": 51893,
+      "rect_pt": {
+        "x0": 461.3609924316406,
+        "y0": 159.31805419921875,
+        "x1": 466.7250061035156,
+        "y1": 165.113037109375
+      },
+      "value": 1803.94905130628,
+      "status": "vector_rectangle_extracted"
+    },
+    {
+      "category": "Flanking bivalent TSS/Enh",
+      "series": "TCX",
+      "drawing_index": 51909,
+      "rect_pt": {
+        "x0": 466.7250061035156,
+        "y0": 159.3330078125,
+        "x1": 472.09100341796875,
+        "y1": 165.113037109375
+      },
+      "value": 1799.2940368471843,
+      "status": "vector_rectangle_extracted"
+    },
+    {
+      "category": "Bivalent enhancer",
+      "series": "CER",
+      "drawing_index": 51894,
+      "rect_pt": {
+        "x0": 473.2799987792969,
+        "y0": 160.44403076171875,
+        "x1": 478.6440124511719,
+        "y1": 165.113037109375
+      },
+      "value": 1453.4359625658913,
+      "status": "vector_rectangle_extracted"
+    },
+    {
+      "category": "Bivalent enhancer",
+      "series": "TCX",
+      "drawing_index": 51910,
+      "rect_pt": {
+        "x0": 478.6440124511719,
+        "y0": 160.43402099609375,
+        "x1": 484.0110168457031,
+        "y1": 165.113037109375
+      },
+      "value": 1456.551972244633,
+      "status": "vector_rectangle_extracted"
+    },
+    {
+      "category": "Repressed Polycomb",
+      "series": "CER",
+      "drawing_index": 51895,
+      "rect_pt": {
+        "x0": 485.2040100097656,
+        "y0": 154.862060546875,
+        "x1": 490.5679016113281,
+        "y1": 165.113037109375
+      },
+      "value": 3191.086359939712,
+      "status": "vector_rectangle_extracted"
+    },
+    {
+      "category": "Repressed Polycomb",
+      "series": "TCX",
+      "drawing_index": 51911,
+      "rect_pt": {
+        "x0": 490.5679931640625,
+        "y0": 154.9730224609375,
+        "x1": 495.93499755859375,
+        "y1": 165.113037109375
+      },
+      "value": 3156.5442526473216,
+      "status": "vector_rectangle_extracted"
+    },
+    {
+      "category": "Weak repressed Polycomb",
+      "series": "CER",
+      "drawing_index": 51896,
+      "rect_pt": {
+        "x0": 497.1289978027344,
+        "y0": 133.84600830078125,
+        "x1": 502.4930114746094,
+        "y1": 165.113037109375
+      },
+      "value": 9733.319680988705,
+      "status": "vector_rectangle_extracted"
+    },
+    {
+      "category": "Weak repressed Polycomb",
+      "series": "TCX",
+      "drawing_index": 51912,
+      "rect_pt": {
+        "x0": 502.49200439453125,
+        "y0": 134.38702392578125,
+        "x1": 507.8590087890625,
+        "y1": 165.113037109375
+      },
+      "value": 9564.90315786453,
+      "status": "vector_rectangle_extracted"
+    },
+    {
+      "category": "Quiescent/low",
+      "series": "CER",
+      "drawing_index": 51897,
+      "rect_pt": {
+        "x0": 509.0530090332031,
+        "y0": 58.66204833984375,
+        "x1": 514.4169921875,
+        "y1": 165.113037109375
+      },
+      "value": 33137.85837860651,
+      "status": "vector_rectangle_extracted"
+    },
+    {
+      "category": "Quiescent/low",
+      "series": "TCX",
+      "drawing_index": 51913,
+      "rect_pt": {
+        "x0": 514.4169921875,
+        "y0": 61.718017578125,
+        "x1": 519.7838745117188,
+        "y1": 165.113037109375
+      },
+      "value": 32186.54442369852,
+      "status": "vector_rectangle_extracted"
+    },
+    {
+      "category": "Not Defined",
+      "series": "CER",
+      "drawing_index": 51898,
+      "rect_pt": {
+        "x0": 520.9769897460938,
+        "y0": 163.633056640625,
+        "x1": 526.3410034179688,
+        "y1": 165.113037109375
+      },
+      "value": 460.70187900146294,
+      "status": "vector_rectangle_extracted"
+    },
+    {
+      "category": "Not Defined",
+      "series": "TCX",
+      "drawing_index": 51914,
+      "rect_pt": {
+        "x0": 526.3410034179688,
+        "y0": 163.6640625,
+        "x1": 531.7080078125,
+        "y1": 165.113037109375
+      },
+      "value": 451.0498490209709,
+      "status": "vector_rectangle_extracted"
+    }
+  ]
+}

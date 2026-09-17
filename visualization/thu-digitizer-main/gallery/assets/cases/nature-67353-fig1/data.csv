@@ -1,0 +1,25 @@
+panel,grouping_field,category,plot_label,source_category,n,metric,source_status,q1,median,q3,lower_whisker,upper_whisker,lower_fence,upper_fence,visible_outlier_count,visible_outliers,category_center_pixel,box_left_pixel,box_right_pixel,q1_pixel,median_pixel,q3_pixel,lower_whisker_pixel,upper_whisker_pixel,fill_color,significance_letter,letter_y,letter_y_pixel,visible_geometry_status
+A,LC_simpl_2018,Cropland (n = 227),"Cropland
+(n = 227)",Cropland,227,EMF_weighted,official_figshare_source_mapped,0.204305639,0.257247619,0.306998639,0.051974965,0.413590813,0.050266139,0.461038139,0,,246.000,179.000,313.000,434.264,376.028,321.301,601.828,204.050,#f2b04e,a,0.333,292.700,raster_calibrated_source_summary
+A,LC_simpl_2018,Grassland (n = 92),"Grassland
+(n = 92)",Grassland,92,EMF_weighted,official_figshare_source_mapped,0.280341403,0.341468424,0.384626556,0.132883375,0.490944425,0.123913674,0.541054285,0,,426.000,359.000,493.000,350.624,283.385,235.911,512.828,118.961,#f2b04e,b,0.402,216.800,raster_calibrated_source_summary
+A,LC_simpl_2018,Woodland (n = 165),"Woodland
+(n = 165)",Woodland,165,EMF_weighted,official_figshare_source_mapped,0.245607433,0.314553849,0.384707405,0.065235084,0.538450971,0.036957475,0.593357363,0,,604.000,537.000,671.000,388.832,312.991,235.822,587.241,66.704,#f2b04e,b,0.402,216.800,raster_calibrated_source_summary
+B,Climate_zone_simpl,Continental (n = 113),"Continental
+(n = 113)",Continental,113,EMF_weighted,official_figshare_source_mapped,0.221915340,0.279031491,0.339736776,0.065235084,0.464965219,0.045183186,0.516468930,0,,913.000,847.000,979.000,414.893,352.065,285.290,587.241,147.538,#20908f,a,0.350,274.000,raster_calibrated_source_summary
+B,Climate_zone_simpl,Temperate dry (n = 122),"Temperate
+dry (n = 122)",Temperate_dry,122,EMF_weighted,official_figshare_source_mapped,0.174414220,0.247347104,0.325726463,0.051974965,0.538450971,-0.052554146,0.552694829,0,,1092.000,1026.000,1158.000,467.144,386.918,300.701,601.828,66.704,#20908f,b,0.350,274.000,raster_calibrated_source_summary
+B,Climate_zone_simpl,Temperate humid (n = 249),"Temperate
+humid (n = 249)",Temperate_humid,249,EMF_weighted,official_figshare_source_mapped,0.254743107,0.307078877,0.360503198,0.099620612,0.513912923,0.096102970,0.519143335,1,0.529803125,1271.000,1205.000,1337.000,378.783,321.213,262.446,549.417,93.696,#20908f,c,0.402,216.800,raster_calibrated_source_summary
+C,SOIL_TYPE_SIMPL,Clay (n = 129),"Clay
+(n = 129)",CLAY,129,EMF_weighted,official_figshare_source_mapped,0.218001234,0.293570908,0.354500935,0.051974965,0.529803125,0.013251683,0.559250486,0,,246.000,179.000,313.000,1191.199,1108.072,1041.049,1373.828,848.217,#6f0026,a,0.382,1010.800,raster_calibrated_source_summary
+C,SOIL_TYPE_SIMPL,Loam (n = 179),"Loam
+(n = 179)",LOAM,179,EMF_weighted,official_figshare_source_mapped,0.257306297,0.316232881,0.376921902,0.099620612,0.502585929,0.077882889,0.556345310,0,,426.000,359.000,493.000,1147.963,1083.144,1016.386,1321.417,878.155,#6f0026,a,0.412,977.800,raster_calibrated_source_summary
+C,SOIL_TYPE_SIMPL,Sand (n = 176),"Sand
+(n = 176)",SAND,176,EMF_weighted,official_figshare_source_mapped,0.210016921,0.252920482,0.311696998,0.065235084,0.459157476,0.057496805,0.464217113,2,0.053526100;0.538450971,604.000,537.000,671.000,1199.981,1152.787,1088.133,1359.241,925.927,#6f0026,b,0.342,1054.800,raster_calibrated_source_summary
+D,PH_Class,Acidic (n = 290),"Acidic
+(n = 290)",Acidic,290,EMF_weighted,official_figshare_source_mapped,0.245634845,0.305658450,0.367401770,0.065235084,0.538450971,0.062984456,0.550052159,0,,913.000,847.000,979.000,1160.802,1094.776,1026.858,1359.241,838.704,#6c6c6c,a,0.402,988.800,raster_calibrated_source_summary
+D,PH_Class,Alkaline (n = 131),"Alkaline
+(n = 131)",Alkaline,131,EMF_weighted,official_figshare_source_mapped,0.171265376,0.249895350,0.302719138,0.051974965,0.465581125,-0.025915267,0.499899780,1,0.502585929,1092.000,1026.000,1158.000,1242.608,1156.115,1098.009,1373.828,918.861,#6c6c6c,b,0.302,1098.800,raster_calibrated_source_summary
+D,PH_Class,Neutral (n = 63),"Neutral
+(n = 63)",Neutral,63,EMF_weighted,official_figshare_source_mapped,0.247734505,0.283337953,0.355639403,0.141115896,0.482965745,0.085877159,0.517496750,1,0.529803125,1271.000,1205.000,1337.000,1158.492,1119.328,1039.797,1275.773,899.738,#6c6c6c,a,0.402,988.800,raster_calibrated_source_summary

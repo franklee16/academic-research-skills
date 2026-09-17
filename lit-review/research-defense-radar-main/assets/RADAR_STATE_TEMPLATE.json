@@ -1,0 +1,20 @@
+{
+  "schema_version": "1.1",
+  "project": {
+    "slug": "replace-me",
+    "fingerprint_path": "fingerprint.md",
+    "fingerprint_revision": null,
+    "fingerprint_sha256": null,
+    "fingerprint_updated_at": null,
+    "public_disclosure_date": null,
+    "public_disclosure_url": null,
+    "public_disclosure_provenance": "unknown",
+    "report_language": "en",
+    "search_languages": ["en"],
+    "timezone": "Area/City"
+  },
+  "last_attempted_scan_at": null,
+  "last_successful_scan_at": null,
+  "papers": [],
+  "runs": []
+}

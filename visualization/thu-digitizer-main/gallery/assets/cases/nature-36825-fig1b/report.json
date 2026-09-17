@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "case_id": "nature-36825-fig1b",
+  "status": "low_confidence",
+  "route": "raster_bar_candidate",
+  "expected_detection_count_passed": false,
+  "source_data_role": "independent_validation_only",
+  "measurement": {
+    "file": "measurement-source.png",
+    "sha256": "de9a9ac871de9b3d20a3a1c6fd4bf55a9c1cc947755e66c2efddfb01f5cbb134",
+    "size": [
+      1959,
+      2040
+    ],
+    "gallery_crop": [
+      1250,
+      0,
+      1959,
+      600
+    ],
+    "resampling_applied": false
+  },
+  "coverage": {
+    "requested_slots": 33,
+    "visible_segment_candidates": 29,
+    "not_extracted": 4
+  },
+  "numeric_output_authorized": false,
+  "validation": {
+    "status": "not_comparable_css_normalization_not_reproduced",
+    "filled_from_external_data": 0
+  },
+  "limitations": [
+    "The report-level low-confidence gate applies to all candidate values.",
+    "Four absent or unsupported series/category slots remain not_extracted and are not treated as zero.",
+    "One-pixel white separators prevent the visible fills from passing the strict percent-stack total gate."
+  ]
+}

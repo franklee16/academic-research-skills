@@ -1,0 +1,124 @@
+{
+  "schema_version": 1,
+  "source": {
+    "sha256": "e7c1dbef62958ed5a8ceb035c0ba3020052e6dcd8248ff7af96c2236ecfb05f8",
+    "width": 1200,
+    "height": 645,
+    "coordinate_space": "original_raster_pixels",
+    "resampling_applied": false
+  },
+  "layers": {
+    "column_bars": {
+      "role": "column_bar",
+      "roi": [
+        185,
+        70,
+        1080,
+        501
+      ],
+      "color": [
+        59,
+        59,
+        59
+      ],
+      "color_verification": "verified",
+      "tolerance": 0,
+      "width_range": [
+        30,
+        40
+      ]
+    },
+    "row_bars": {
+      "role": "membership_guides",
+      "roi": [
+        190,
+        503,
+        1080,
+        607
+      ],
+      "colors": [
+        [
+          229,
+          229,
+          229
+        ],
+        [
+          232,
+          232,
+          232
+        ]
+      ],
+      "color_verification": "verified",
+      "tolerance": 0,
+      "height_range": [
+        7,
+        15
+      ],
+      "min_area": 100,
+      "min_row_pixels": 20
+    },
+    "membership": {
+      "color": [
+        59,
+        59,
+        59
+      ],
+      "color_verification": "verified",
+      "tolerance": 2,
+      "patch_radius": 7,
+      "active_fraction_min": 0.25,
+      "inactive_fraction_max": 0.18
+    }
+  },
+  "semantics": {
+    "verification": "verified",
+    "column_ids": [
+      "I01",
+      "I02",
+      "I03",
+      "I04",
+      "I05",
+      "I06",
+      "I07",
+      "I08",
+      "I09",
+      "I10",
+      "I11",
+      "I12",
+      "I13",
+      "I14",
+      "I15"
+    ],
+    "column_values": [
+      1857,
+      709,
+      565,
+      495,
+      458,
+      444,
+      355,
+      308,
+      298,
+      273,
+      249,
+      207,
+      178,
+      158,
+      121
+    ],
+    "row_ids": [
+      "FunC-2",
+      "FunC-4",
+      "FunC-3",
+      "FunC-1"
+    ],
+    "row_types": []
+  },
+  "validation": {
+    "max_spacing_cv": 0.02,
+    "row_value_axis": [],
+    "row_bar_edge_offset_px": 0,
+    "row_total_max_abs_error": null,
+    "top_value_max_abs_error": 8
+  }
+}
