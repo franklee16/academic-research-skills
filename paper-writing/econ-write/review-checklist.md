@@ -72,7 +72,7 @@ Signs that writing sounds AI-generated -- avoid all of these:
 - Perfect parallel structure in every list (real academics are messier)
 - No qualifying hedges (real researchers write "This likely reflects..." or "One interpretation is...")
 - No field-specific jargon used naturally (e.g., "extensive margin" in labor, "pass-through" in IO)
-- No parenthetical asides or em-dashes -- real writers use these
+- Frequent em-dashes or en-dashes as parenthetical interrupters -- LLMs overuse dashes, so their presence is itself an AI tell. Flag any em/en-dash and rewrite with a period, comma, parentheses, colon, or semicolon
 - Transitions that are too smooth; real papers have some roughness between sections
 
 **Structural tells**:
