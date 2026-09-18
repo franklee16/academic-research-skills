@@ -253,7 +253,7 @@ Common dependencies across skills: Python 3.8+, R with relevant packages, Stata 
 
 ## Author
 
-Weikai Li — Professor of Finance, City University of Hong Kong
+Weikai Li — Associate Professor of Finance, City University of Hong Kong
 
 ## Repository
 
